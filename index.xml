@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Chinese Test</title><link>https://youkoucoding.github.io/p/test-chinese/</link><pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate><guid>https://youkoucoding.github.io/p/test-chinese/</guid><description>&lt;img src="https://youkoucoding.github.io/p/test-chinese/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post Chinese Test" />&lt;h2 id="正文测试">正文测试&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 07 Sep 2021 23:46:37 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Install Go on Mac with Homebrew</title><link>https://youkoucoding.github.io/p/golang-config/</link><pubDate>Tue, 07 Sep 2021 23:46:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/golang-config/</guid><description>&lt;img src="https://youkoucoding.github.io/p/golang-config/cover.jpg" alt="Featured image of post Install Go on Mac with Homebrew" />&lt;blockquote>
+&lt;p>Precondition: macOS Big Sur 11.5.2&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="golangs-installation-and-configuration-with-homebrew-in-fish-shell">Golang&amp;rsquo;s installation and configuration with homebrew in Fish shell&lt;/h2>
+&lt;h3 id="1-install-golang-with-homebrew">1. Install golang with homebrew&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fish" data-lang="fish">&lt;span class="nf">brew&lt;/span> update
+&lt;span class="nf">brew&lt;/span> search golang
+&lt;span class="nf">brew&lt;/span> info golang &lt;span class="c"># show the information of golang
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">brew&lt;/span> install golang
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="2-setup-the-workspace">2. Setup the workspace:&lt;/h3>
+&lt;h4 id="add-environment-variables">Add environment variables:&lt;/h4>
+&lt;p>First, we&amp;rsquo;ll need to tell Go the location of our workspace.&lt;/p>
+&lt;p>We&amp;rsquo;ll add some environment variables into shell config.&lt;/p>
+&lt;h5 id="bash-or-zsh">&lt;code>bash or zsh&lt;/code>&lt;/h5>
+&lt;p>The config files is located at home directory:&lt;/p>
+&lt;p>&lt;code>.bash_profile, bashrc, or zshrc&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="nb">export&lt;/span> &lt;span class="nv">GOPATH&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$HOME&lt;/span>/project/go-workspace &lt;span class="c1"># don&amp;#39;t forget to change the path correctly&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">GOROOT&lt;/span>&lt;span class="o">=&lt;/span>/usr/local/opt/go/libexec
+&lt;span class="c1"># export GOROOT=/usr/local/Cellar/go/1.17/libexec&lt;/span>
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">PATH&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$PATH&lt;/span>:&lt;span class="nv">$GOPATH&lt;/span>/bin
+&lt;span class="nb">export&lt;/span> &lt;span class="nv">PATH&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nv">$PATH&lt;/span>:&lt;span class="nv">$GOROOT&lt;/span>/bin
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;code>GOPATH&lt;/code> is the place where we get, build and install packages outside the standard Go tree(AND it&amp;rsquo;s not where the executables are), so it is customizable and thus you can get &lt;code>GOPATH&lt;/code> wherever you want.&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;code>GOROOT&lt;/code>, however, is the place where the Go binary distributions (In linux, it&amp;rsquo;s normally in &lt;code>/usr/local/go&lt;/code>; but for macOs, the Go and the tools are installed in &lt;code>/usr/local/Cellar/go/1.17/libexec&lt;/code> by default as well as a soft link to &lt;code>/usr/local/opt/go/libexec&lt;/code> will be created at the same time), so on Linux normally we don’t have to set this variable, but on MacOS, we have to change it as brew installs Go tools to a different path.&lt;/p>
+&lt;/blockquote>
+&lt;h5 id="fish-shell">&lt;code>fish shell&lt;/code>&lt;/h5>
+&lt;p>Add the code to home directory&amp;rsquo;s &lt;code>~/.config/fish/config.fish&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fish" data-lang="fish">&lt;span class="k">set&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="nv">GOPATH&lt;/span> &lt;span class="nv">$HOME&lt;/span>/project/go&lt;span class="na">-workspace&lt;/span>
+&lt;span class="k">set&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="nv">GOROOT&lt;/span> /usr/local/opt/go/libexec
+&lt;span class="k">set&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="nv">PATH&lt;/span> &lt;span class="nv">$PATH&lt;/span>:&lt;span class="nv">$GOPATH&lt;/span>/bin
+&lt;span class="k">set&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="nv">PATH&lt;/span> &lt;span class="nv">$PATH&lt;/span>:&lt;span class="nv">$GOROOT&lt;/span>/bin
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="create-our-own-workspace">Create our own workspace:&lt;/h4>
+&lt;p>&lt;code>mkdir -p $GOPATH $GOPATH/src $GOPATH/pkg $GOPATH/bin&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>$GOPATH/src&lt;/code>: where we put the go projects source code&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>$GOPATH/pkg&lt;/code>: contains every package objects&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>$GOPATH/bin&lt;/code>: The compiled binaries&amp;rsquo;s home.&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>Chinese Test</title><link>https://youkoucoding.github.io/p/test-chinese/</link><pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate><guid>https://youkoucoding.github.io/p/test-chinese/</guid><description>&lt;img src="https://youkoucoding.github.io/p/test-chinese/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post Chinese Test" />&lt;h2 id="正文测试">正文测试&lt;/h2>
 &lt;p>而这些并不是完全重要，更加重要的问题是， 带着这些问题，我们来审视一下学生会退会。 既然如何， 对我个人而言，学生会退会不仅仅是一个重大的事件，还可能会改变我的人生。 我们不得不面对一个非常尴尬的事实，那就是， 可是，即使是这样，学生会退会的出现仍然代表了一定的意义。 学生会退会，发生了会如何，不发生又会如何。 经过上述讨论， 生活中，若学生会退会出现了，我们就不得不考虑它出现了的事实。 学生会退会，到底应该如何实现。 这样看来， 在这种困难的抉择下，本人思来想去，寝食难安。 对我个人而言，学生会退会不仅仅是一个重大的事件，还可能会改变我的人生。 就我个人来说，学生会退会对我的意义，不能不说非常重大。 莎士比亚曾经提到过，人的一生是短的，但如果卑劣地过这一生，就太长了。这似乎解答了我的疑惑。 莫扎特说过一句富有哲理的话，谁和我一样用功，谁就会和我一样成功。这启发了我， 对我个人而言，学生会退会不仅仅是一个重大的事件，还可能会改变我的人生。 学生会退会，到底应该如何实现。 一般来说， 从这个角度来看， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 在这种困难的抉择下，本人思来想去，寝食难安。 了解清楚学生会退会到底是一种怎么样的存在，是解决一切问题的关键。 一般来说， 生活中，若学生会退会出现了，我们就不得不考虑它出现了的事实。 问题的关键究竟为何？ 而这些并不是完全重要，更加重要的问题是。&lt;/p>
 &lt;p>奥斯特洛夫斯基曾经说过，共同的事业，共同的斗争，可以使人们产生忍受一切的力量。　带着这句话，我们还要更加慎重的审视这个问题： 一般来讲，我们都必须务必慎重的考虑考虑。 既然如此， 这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。 带着这些问题，我们来审视一下学生会退会。 我认为， 我认为， 在这种困难的抉择下，本人思来想去，寝食难安。 问题的关键究竟为何？ 每个人都不得不面对这些问题。 在面对这种问题时， 要想清楚，学生会退会，到底是一种怎么样的存在。 我认为， 既然如此， 每个人都不得不面对这些问题。 在面对这种问题时， 那么， 我认为， 学生会退会因何而发生。&lt;/p>
 &lt;h2 id="引用">引用&lt;/h2>
