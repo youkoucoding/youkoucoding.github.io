@@ -61,7 +61,8 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 
   --base-font-family: 'Lato', var(--sys-font-family), var(--zh-font-family),
     sans-serif;
-  --code-font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --code-font-family: Menlo, 'Fira Code', Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 /*
@@ -131,11 +132,11 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
   --link-background-opacity: 0.5;
   --link-background-opacity-hover: 0.7;
 
-  --pre-background-color: #272822;
+  --pre-background-color: #5d5f50;
   --pre-text-color: #f8f8f2;
 
   --code-background-color: rgba(0, 0, 0, 0.12);
-  --code-text-color: #808080;
+  --code-text-color: #414040;
 
   --table-border-color: #dadada;
   --tr-even-background-color: #efefee;
