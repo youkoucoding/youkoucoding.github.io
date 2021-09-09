@@ -1,4 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 07 Sep 2021 23:46:37 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Install Go on Mac with Homebrew</title><link>https://youkoucoding.github.io/p/golang-config/</link><pubDate>Tue, 07 Sep 2021 23:46:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/golang-config/</guid><description>&lt;img src="https://youkoucoding.github.io/p/golang-config/cover.jpg" alt="Featured image of post Install Go on Mac with Homebrew" />&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 08 Sep 2021 23:50:49 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（一）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</link><pubDate>Wed, 08 Sep 2021 23:50:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/react-jira-cover.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（一）" />&lt;h1 id="第一章">第一章&lt;/h1>
+&lt;h3 id="知识点一-用-create-react-app-初始化项目">知识点一： 用 &lt;code>create-react-app&lt;/code> 初始化项目：&lt;/h3>
+&lt;h4 id="1-quick-start">1. Quick Start&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">npx create-react-app react-jira --template typescript
+&lt;span class="c1"># or&lt;/span>
+npm init react-app react-jira
+&lt;span class="c1"># or&lt;/span>
+yarn create react-app react-jira
+npx create-react-app my-app --use-npm &lt;span class="c1"># if you prefer to use npm&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="2-folder-structure">2. Folder Structure&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>For faster rebuilds, only files inside src are processed by webpack. You need to put any JS and CSS files inside src, otherwise webpack won’t see them.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>字体，图片等也同样应置于 scr 目录中&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Only files inside public can be used from public/index.html.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">import&lt;/span> &lt;span class="nx">React&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">Component&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;react&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">import&lt;/span> &lt;span class="s1">&amp;#39;./Button.css&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// Tell webpack that Button.js uses these styles
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">Button&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Component&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">render&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// You can use them as regular CSS styles
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">div&lt;/span> &lt;span class="nx">className&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;Button&amp;#39;&lt;/span> &lt;span class="o">/&amp;gt;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-analizing-the-bundle-size">3. Analizing the Bundle Size&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fish" data-lang="fish">&lt;span class="nf">npm&lt;/span> install &lt;span class="na">--save&lt;/span> &lt;span class="nb">source&lt;/span>&lt;span class="na">-map-explorer&lt;/span>
+&lt;span class="k">or&lt;/span>
+&lt;span class="nf">yarn&lt;/span> add &lt;span class="nb">source&lt;/span>&lt;span class="na">-map-explorer&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">//&lt;/span> &lt;span class="err">package.json&lt;/span>
+&lt;span class="s2">&amp;#34;scripts&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="err">+&lt;/span> &lt;span class="nt">&amp;#34;analyze&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;source-map-explorer &amp;#39;build/static/js/*.js&amp;#39;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;start&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;react-scripts start&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;build&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;react-scripts build&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;test&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;react-scripts test&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="知识点二-用-prettier-统一代码格式化风格">知识点二： 用 Prettier 统一代码格式化风格&lt;/h3>
+&lt;h4 id="1-quick-start-1">1. Quick Start&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fish" data-lang="fish">&lt;span class="nf">yarn&lt;/span> add &lt;span class="na">--dev&lt;/span> &lt;span class="na">--exact&lt;/span> prettier
+&lt;span class="k">echo&lt;/span> &lt;span class="o">{}&amp;gt;&lt;/span> .prettierrc.json
+&lt;span class="c"># then create a .prettierignore file to let the Prettier CLI and editors know which files to not format.
+&lt;/span>&lt;span class="c">&lt;/span>
+&lt;span class="c"># Ignore artifacts:
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">build&lt;/span>
+&lt;span class="nf">coverage&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="2-usage">2. Usage&lt;/h4>
+&lt;h5 id="in-command-line">In Command line&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fish" data-lang="fish">&lt;span class="nf">npx&lt;/span> prettier &lt;span class="na">--write&lt;/span> .
+&lt;span class="c"># or
+&lt;/span>&lt;span class="c">&lt;/span>&lt;span class="nf">yarn&lt;/span> prettier &lt;span class="na">--write&lt;/span> .
+&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="setup-in-editor">Setup In Editor&lt;/h5>
+&lt;p>&lt;a class="link" href="https://prettier.io/docs/en/install.html#set-up-your-editor" target="_blank" rel="noopener"
+>Prettier set up in editor&lt;/a>&lt;/p>
+&lt;h5 id="git-hook-pre-commit-hook">Git Hook (Pre-commit Hook)&lt;/h5>
+&lt;p>&lt;a class="link" href="https://prettier.io/docs/en/precommit.html" target="_blank" rel="noopener"
+>Pre-commit Hook · Prettier&lt;/a>&lt;/p>
+&lt;h5 id="git-commitlint">Git Commitlint&lt;/h5>
+&lt;p>&lt;a class="link" href="https://commitlint.js.org/#/?id=getting-started" target="_blank" rel="noopener"
+>commitlint - Lint commit messages&lt;/a>&lt;/p>
+&lt;p>commitlint checks if your commit messages meet the conventional commit format.&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" rel="noopener"
+>Conventional Commits&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 常用类型 type
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">[&lt;/span>
+&lt;span class="s1">&amp;#39;build&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;chore&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;ci&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;docs&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;feat&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;fix&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;perf&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;refactor&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;revert&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;style&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;test&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">];&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>type(scope?): subject #scope is optional; multiple scopes are supported (current delimiter options: &amp;quot;/&amp;quot;, &amp;quot;\&amp;quot; and &amp;quot;,&amp;quot;) &lt;/code>&lt;/p>
+&lt;p>以上： 一个项目开始阶段的规范化配置。重点： Conventional Commits&lt;/p>
+&lt;h3 id="知识点三-json-server">知识点三： Json-server&lt;/h3>
+&lt;p>&lt;a class="link" href="https://github.com/typicode/json-server#table-of-contents" target="_blank" rel="noopener"
+>typicode/json-server: Get a full fake REST API with zero coding&lt;/a>&lt;/p></description></item><item><title>Install Go on Mac with Homebrew</title><link>https://youkoucoding.github.io/p/golang-config/</link><pubDate>Tue, 07 Sep 2021 23:46:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/golang-config/</guid><description>&lt;img src="https://youkoucoding.github.io/p/golang-config/cover.jpg" alt="Featured image of post Install Go on Mac with Homebrew" />&lt;blockquote>
 &lt;p>Precondition: macOS Big Sur 11.5.2&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="golangs-installation-and-configuration-with-homebrew-in-fish-shell">Golang&amp;rsquo;s installation and configuration with homebrew in Fish shell&lt;/h2>
