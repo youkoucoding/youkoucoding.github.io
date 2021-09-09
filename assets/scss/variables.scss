@@ -136,14 +136,14 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
   --pre-text-color: #f8f8f2;
 
   --code-background-color: rgba(0, 0, 0, 0.12);
-  --code-text-color: #414040;
+  --code-text-color: #1f1e1e;
 
   --table-border-color: #dadada;
   --tr-even-background-color: #efefee;
 
   &[data-scheme='dark'] {
-    --code-background-color: #272822;
-    --code-text-color: rgba(255, 255, 255, 0.9);
+    --code-background-color: #1d1f13;
+    --code-text-color: rgba(179, 174, 174, 0.9);
 
     --table-border-color: #717171;
     --tr-even-background-color: #545454;
