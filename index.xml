@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 08 Sep 2021 23:50:49 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（一）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</link><pubDate>Wed, 08 Sep 2021 23:50:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/react-jira-cover.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（一）" />&lt;h1 id="第一章">第一章&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Sep 2021 20:17:16 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（二）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/</link><pubDate>Thu, 09 Sep 2021 20:17:16 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/cover-api.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（二）" />&lt;h1 id="关键知识点四-restful-api">关键知识点四： Restful API&lt;/h1>
+&lt;h2 id="what-is-rest">What is REST&lt;/h2>
+&lt;p>REST is acronym for REpresentational State Transfer. It is architectural style for distributed hyermedia systems and was first presented by Roy Fielding in 2000 in his famous dissertation.&lt;/p>
+&lt;h2 id="principles-of-rest">Principles of REST&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Client-server&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>By separating the user interface concerns from the data storage concerns, we improve the portability of the user interface across multiple platforms and improve scalability by simplifying the server components.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Stateless&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Each request from client to server must contain all of the information necessary to understand the request, and cannot take advatage of any stored context on the server. Session state is therefore kept entirely on the client.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Cacheable&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Cache constraints require that the data within a response to a request be implicitly or explicitly labeled as cacheable or non-cacheable. If a response is cacheable, then a client cache is given the right to reuse that response data for later, equivalent requests.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Uniform interface&lt;/strong>（统一接口）&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>By applying the software engineering principle of generality to the component interface, the overall system architecture is simplified and the visibility of interactions is improved. In order to obtain a uniform inerface, multiple architectural constraints are needed to guide the behavior of components. REST is defined by four interface constraints: &lt;em>identification of resources&lt;/em>; &lt;em>manipulation of resources through representations&lt;/em>; &lt;em>self-descriptive messages&lt;/em>; and, &lt;em>hypermedia as the engine of application state&lt;/em>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>identification of resources :使用&lt;code>URI&lt;/code>作为资源标识符；客户端和服务器之间，传递这种资源的某种表现层（representation）; 资源本身与返回给 client 的 representation 分开(理解为：URI 只代表资源的实体或资源的位置， 不代表其形式，比如一段文本，可以是 json，HTML，etc)。例如，服务器不直接发送其数据库内容，而是发送一些表示某些数据库记录的 HTML，XML 或 JSON。
+&lt;em>具体表现形式，应该在 HTTP 请求头信息中用 Accept 和 Content-Type 字段指定，这两个字段才是对&amp;quot;表现层&amp;quot;的描述&lt;/em>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>manipulation of the resources through representations: 当客户端持有资源的表示（包括附加的任何元数据）时，它有足够的信息来修改或删除服务器上的资源&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Self-descriptive Messages （自描述信息）： 每条消息都包含足够的信息来描述如何处理该消息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>hypermedia as the engine of application state: client 通过 body/header/query_params/uri_name 来提供状态，服务器收到这些内容，通过 HTTP 响应状态码和响应头向服务端提供状态，成为超链接。且，在必要时，链接包含在返回的正文（或标题）中，以提供用于检索对象本身或相关对象的 URI。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Layered system&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>The layered system style allows an architecture to be composed of hierarchical layers by constraining component behavior such that each component cannot &amp;ldquo;see&amp;rdquo; beyond the immedite layer with which they are interacting.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>客户端通常无法判断它是直接连接到终端服务器，还是中间服务器。 中间服务器可以通过启用负载平衡和提供共享缓存来提高系统可伸缩性。 Layers 也可以实施安全策略。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Code on demand(optional)&lt;/strong>(唯一一个可选约束，其他约束必须实现)&lt;/p>
+&lt;ul>
+&lt;li>REST allows client functionality to be extended by downloading and executing code in the form of applets or scripts(JS etc). This simplifies clients by reducing the number of features required to be pre-implemented.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="resource">Resource&lt;/h2>
+&lt;blockquote>
+&lt;p>The key abstraction of information in REST is a resource.&lt;/p>
+&lt;/blockquote>
+&lt;p>Any information that can be named can be a resource. REST uses a &lt;strong>resource indentifier&lt;/strong> to identify the particular resource involved in an interaction between comonents.&lt;/p>
+&lt;p>REST 的名称&amp;quot;表现层状态转化&amp;quot;中，省略了主语。&amp;ldquo;表现层&amp;quot;其实指的是&amp;quot;资源&amp;rdquo;（Resources）的&amp;quot;表现层&amp;quot;。&lt;/p>
+&lt;p>所谓&amp;quot;资源&amp;quot;，就是网络上的一个实体，或者说是网络上的一个具体信息。它可以是一段文本、一张图片、一首歌曲、一种服务，总之就是一个具体的实在。你可以用一个 URI（统一资源定位符）指向它，每种资源对应一个特定的 URI。要获取这个资源，访问它的 URI 就可以，因此 URI 就成了每一个资源的地址或独一无二的识别符。&lt;/p>
+&lt;h2 id="representation">Representation&lt;/h2>
+&lt;p>&amp;ldquo;资源&amp;quot;是一种信息实体，它可以有多种外在表现形式。我们把&amp;quot;资源&amp;quot;具体呈现出来的形式，叫做它的&amp;quot;表现层&amp;rdquo;（Representation）。&lt;/p>
+&lt;h2 id="state-transfer">State Transfer&lt;/h2>
+&lt;p>互联网通信协议 HTTP 协议，是一个无状态协议。这意味着，所有的状态都保存在服务器端。因此，如果客户端想要操作服务器，必须通过某种手段，让服务器端发生&amp;quot;状态转化&amp;quot;（State Transfer）。而这种转化是建立在表现层之上的，所以就是&amp;quot;表现层状态转化&amp;quot;。具体如下：&lt;/p>
+&lt;h3 id="resource-method">Resource Method&lt;/h3>
+&lt;blockquote>
+&lt;p>Another important thing associated with REST is resource methods to be used to perform the desired transition. A large number of people wrongly relate resource methods to HTTP GET/PUT/POST/DELETE methods.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;strong>GET&lt;/strong> 用来获取资源&lt;/li>
+&lt;li>&lt;strong>POST&lt;/strong> 用来新建资源（也可以用于更新资源）&lt;/li>
+&lt;li>PUT 用来更新资源&lt;/li>
+&lt;li>DELETE 用来删除资源&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>In simplest words, in the REST architectural style, data and functionality are considered resources and are accessed using Uniform Resource Identifiers (URIs). The resources are acted upon by using a set of simple, well-defined operations. The clients and servers exchange representations of resources by using a standardized interface and protocol – typically HTTP.&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>Resources are decoupled from their representation so that their content can be accessed in a variety of formats, such as HTML, XML, plain text, PDF, JPEG, JSON, and others. Metadata about the resource is available and used, for example, to control caching, detect transmission errors, negotiate the appropriate representation format, and perform authentication or access control. And most importantly, every interaction with a resource is stateless.&lt;/p>
+&lt;/blockquote></description></item><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（一）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</link><pubDate>Wed, 08 Sep 2021 23:50:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/react-jira-cover.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（一）" />&lt;h1 id="第一章">第一章&lt;/h1>
 &lt;h3 id="知识点一-用-create-react-app-初始化项目">知识点一： 用 &lt;code>create-react-app&lt;/code> 初始化项目：&lt;/h3>
 &lt;h4 id="1-quick-start">1. Quick Start&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">npx create-react-app react-jira --template typescript
