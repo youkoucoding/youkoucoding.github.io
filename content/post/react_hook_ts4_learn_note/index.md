@@ -104,25 +104,47 @@ yarn prettier --write .
 commitlint checks if your commit messages meet the conventional commit format.
 
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+[约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)
 
 ```js
 // 常用类型 type
-[
-  'build',
-  'chore',
-  'ci',
-  'docs',
-  'feat',
-  'fix',
-  'perf',
-  'refactor',
-  'revert',
-  'style',
-  'test',
-];
+{
+  "build": "Changes that affect the build system or external dependencies"
+  "ci": "Changes to our CI configuration files and scripts"
+  // "chore": "updating grunt tasks etc; no production code change",
+  "docs": "Documentation only changes",
+  "feat": "new feature for the user, not a new feature for build script",
+  "fix": "A bug fix for user, not a fix to a build script",
+  "perf": "A code change that impoves performance",
+  "refactor": "A code change that neither fixes a bug nor adds a feature",
+  "revert": "If the commit reverts a previous commit, it should begin with revert",
+  "style": "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons,etc)",
+  "test": "Adding missing tests or correcting existing tests",
+  "BREAKING CHANGE:"
+};
 ```
 
 `type(scope?): subject #scope is optional; multiple scopes are supported (current delimiter options: "/", "\" and ",") `
+
+> scope
+
+Example <scope> values: #
+
+- init
+- runner
+- watcher
+- config
+- web-server
+- proxy
+- etc
+
+> why use conventional commits
+
+- Automatically generating CHANGELOGS
+- Automatically determining a semantic version bump(base on the types of commits landed)
+- Communicating the nature of changes to teammates, the public, and other stakeholders
+- Triggering build and publish processes
+- Making it easier for people to contribute to you projects, by allowing them to explore a more structured commit history
 
 以上： 一个项目开始阶段的规范化配置。重点： Conventional Commits
 
