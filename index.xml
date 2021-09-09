@@ -68,22 +68,48 @@ npx create-react-app my-app --use-npm &lt;span class="c1"># if you prefer to use
 >commitlint - Lint commit messages&lt;/a>&lt;/p>
 &lt;p>commitlint checks if your commit messages meet the conventional commit format.&lt;/p>
 &lt;p>&lt;a class="link" href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" rel="noopener"
->Conventional Commits&lt;/a>&lt;/p>
+>Conventional Commits&lt;/a>
+&lt;a class="link" href="https://www.conventionalcommits.org/zh-hans/v1.0.0/" target="_blank" rel="noopener"
+>约定式提交&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 常用类型 type
-&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">[&lt;/span>
-&lt;span class="s1">&amp;#39;build&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;chore&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;ci&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;docs&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;feat&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;fix&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;perf&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;refactor&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;revert&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;style&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="s1">&amp;#39;test&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;span class="s2">&amp;#34;build&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;Changes that affect the build system or external dependencies&amp;#34;&lt;/span>
+&lt;span class="s2">&amp;#34;ci&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;Changes to our CI configuration files and scripts&amp;#34;&lt;/span>
+&lt;span class="c1">// &amp;#34;chore&amp;#34;: &amp;#34;updating grunt tasks etc; no production code change&amp;#34;,
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s2">&amp;#34;docs&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;Documentation only changes&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;feat&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;new feature for the user, not a new feature for build script&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;fix&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;A bug fix for user, not a fix to a build script&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;perf&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;A code change that impoves performance&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;refactor&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;A code change that neither fixes a bug nor adds a feature&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;revert&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;If the commit reverts a previous commit, it should begin with revert&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;style&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons,etc)&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;test&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;Adding missing tests or correcting existing tests&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;BREAKING CHANGE:&amp;#34;&lt;/span>
+&lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>type(scope?): subject #scope is optional; multiple scopes are supported (current delimiter options: &amp;quot;/&amp;quot;, &amp;quot;\&amp;quot; and &amp;quot;,&amp;quot;) &lt;/code>&lt;/p>
+&lt;blockquote>
+&lt;p>scope&lt;/p>
+&lt;/blockquote>
+&lt;p>Example &lt;!-- raw HTML omitted --> values: #&lt;/p>
+&lt;ul>
+&lt;li>init&lt;/li>
+&lt;li>runner&lt;/li>
+&lt;li>watcher&lt;/li>
+&lt;li>config&lt;/li>
+&lt;li>web-server&lt;/li>
+&lt;li>proxy&lt;/li>
+&lt;li>etc&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>why use conventional commits&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>Automatically generating CHANGELOGS&lt;/li>
+&lt;li>Automatically determining a semantic version bump(base on the types of commits landed)&lt;/li>
+&lt;li>Communicating the nature of changes to teammates, the public, and other stakeholders&lt;/li>
+&lt;li>Triggering build and publish processes&lt;/li>
+&lt;li>Making it easier for people to contribute to you projects, by allowing them to explore a more structured commit history&lt;/li>
+&lt;/ul>
 &lt;p>以上： 一个项目开始阶段的规范化配置。重点： Conventional Commits&lt;/p>
 &lt;h3 id="知识点三-json-server">知识点三： Json-server&lt;/h3>
 &lt;p>&lt;a class="link" href="https://github.com/typicode/json-server#table-of-contents" target="_blank" rel="noopener"

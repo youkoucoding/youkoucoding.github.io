@@ -50,7 +50,7 @@ TypeScript
 </div>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>
-阅读时长: 2 分钟
+阅读时长: 3 分钟
 </time>
 </div>
 </footer>
@@ -128,22 +128,47 @@ npx create-react-app my-app --use-npm <span class=c1># if you prefer to use npm<
 <h5 id=git-commitlint>Git Commitlint</h5>
 <p><a class=link href="https://commitlint.js.org/#/?id=getting-started" target=_blank rel=noopener>commitlint - Lint commit messages</a></p>
 <p>commitlint checks if your commit messages meet the conventional commit format.</p>
-<p><a class=link href=https://www.conventionalcommits.org/en/v1.0.0/ target=_blank rel=noopener>Conventional Commits</a></p>
+<p><a class=link href=https://www.conventionalcommits.org/en/v1.0.0/ target=_blank rel=noopener>Conventional Commits</a>
+<a class=link href=https://www.conventionalcommits.org/zh-hans/v1.0.0/ target=_blank rel=noopener>约定式提交</a></p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// 常用类型 type
-</span><span class=c1></span><span class=p>[</span>
-  <span class=s1>&#39;build&#39;</span><span class=p>,</span>
-  <span class=s1>&#39;chore&#39;</span><span class=p>,</span>
-  <span class=s1>&#39;ci&#39;</span><span class=p>,</span>
-  <span class=s1>&#39;docs&#39;</span><span class=p>,</span>
-  <span class=s1>&#39;feat&#39;</span><span class=p>,</span>
-  <span class=s1>&#39;fix&#39;</span><span class=p>,</span>
-  <span class=s1>&#39;perf&#39;</span><span class=p>,</span>
-  <span class=s1>&#39;refactor&#39;</span><span class=p>,</span>
-  <span class=s1>&#39;revert&#39;</span><span class=p>,</span>
-  <span class=s1>&#39;style&#39;</span><span class=p>,</span>
-  <span class=s1>&#39;test&#39;</span><span class=p>,</span>
-<span class=p>];</span>
+</span><span class=c1></span><span class=p>{</span>
+  <span class=s2>&#34;build&#34;</span><span class=o>:</span> <span class=s2>&#34;Changes that affect the build system or external dependencies&#34;</span>
+  <span class=s2>&#34;ci&#34;</span><span class=o>:</span> <span class=s2>&#34;Changes to our CI configuration files and scripts&#34;</span>
+  <span class=c1>// &#34;chore&#34;: &#34;updating grunt tasks etc; no production code change&#34;,
+</span><span class=c1></span>  <span class=s2>&#34;docs&#34;</span><span class=o>:</span> <span class=s2>&#34;Documentation only changes&#34;</span><span class=p>,</span>
+  <span class=s2>&#34;feat&#34;</span><span class=o>:</span> <span class=s2>&#34;new feature for the user, not a new feature for build script&#34;</span><span class=p>,</span>
+  <span class=s2>&#34;fix&#34;</span><span class=o>:</span> <span class=s2>&#34;A bug fix for user, not a fix to a build script&#34;</span><span class=p>,</span>
+  <span class=s2>&#34;perf&#34;</span><span class=o>:</span> <span class=s2>&#34;A code change that impoves performance&#34;</span><span class=p>,</span>
+  <span class=s2>&#34;refactor&#34;</span><span class=o>:</span> <span class=s2>&#34;A code change that neither fixes a bug nor adds a feature&#34;</span><span class=p>,</span>
+  <span class=s2>&#34;revert&#34;</span><span class=o>:</span> <span class=s2>&#34;If the commit reverts a previous commit, it should begin with revert&#34;</span><span class=p>,</span>
+  <span class=s2>&#34;style&#34;</span><span class=o>:</span> <span class=s2>&#34;Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons,etc)&#34;</span><span class=p>,</span>
+  <span class=s2>&#34;test&#34;</span><span class=o>:</span> <span class=s2>&#34;Adding missing tests or correcting existing tests&#34;</span><span class=p>,</span>
+  <span class=s2>&#34;BREAKING CHANGE:&#34;</span>
+<span class=p>};</span>
 </code></pre></div><p><code>type(scope?): subject #scope is optional; multiple scopes are supported (current delimiter options: "/", "\" and ",") </code></p>
+<blockquote>
+<p>scope</p>
+</blockquote>
+<p>Example values: #</p>
+<ul>
+<li>init</li>
+<li>runner</li>
+<li>watcher</li>
+<li>config</li>
+<li>web-server</li>
+<li>proxy</li>
+<li>etc</li>
+</ul>
+<blockquote>
+<p>why use conventional commits</p>
+</blockquote>
+<ul>
+<li>Automatically generating CHANGELOGS</li>
+<li>Automatically determining a semantic version bump(base on the types of commits landed)</li>
+<li>Communicating the nature of changes to teammates, the public, and other stakeholders</li>
+<li>Triggering build and publish processes</li>
+<li>Making it easier for people to contribute to you projects, by allowing them to explore a more structured commit history</li>
+</ul>
 <p>以上： 一个项目开始阶段的规范化配置。重点： Conventional Commits</p>
 <h3 id=知识点三-json-server>知识点三： Json-server</h3>
 <p><a class=link href=https://github.com/typicode/json-server#table-of-contents target=_blank rel=noopener>typicode/json-server: Get a full fake REST API with zero coding</a></p>
