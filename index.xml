@@ -1,4 +1,86 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Sep 2021 20:17:16 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（二）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/</link><pubDate>Thu, 09 Sep 2021 20:17:16 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/cover-api.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（二）" />&lt;h1 id="关键知识点四-restful-api">关键知识点四： Restful API&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 10 Sep 2021 18:02:49 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（三）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/</link><pubDate>Fri, 10 Sep 2021 18:02:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/restful-design.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（三）" />&lt;h1 id="知识点五-restful-api-设计">知识点五： Restful API 设计&lt;/h1>
+&lt;h2 id="1-endpoint">1. Endpoint&lt;/h2>
+&lt;p>表示 &lt;code>API&lt;/code> 的具体地址&lt;/p>
+&lt;p>在 RESTful 架构中，每个网址代表一种资源（resource），所以网址中 &lt;strong>不能有动词，只能有名词&lt;/strong>，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的&amp;quot;集合&amp;quot;（collection），所以 API 中的名词也应该使用复数。&lt;/p>
+&lt;pre tabindex="0">&lt;code># Example 应使用 HTTPs 协议
+https://api.example.com/v1/books
+https://api.example.com/v1/movies
+&lt;/code>&lt;/pre>&lt;h2 id="2-http-method">2. HTTP METHOD&lt;/h2>
+&lt;p>对于资源的具体操作，应由 HTTP 动词表示。&lt;/p>
+&lt;pre tabindex="0">&lt;code># 常用方法, (对应 SQL 语句)
+GET（SELECT）：从服务器取出资源（一项或多项）。
+POST（CREATE）：在服务器新建一个资源。
+PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）。
+PATCH（UPDATE）：在服务器更新资源（客户端提供改变的属性）。
+DELETE（DELETE）：从服务器删除资源。
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code># 具体的使用实例
+GET /zoos：列出所有动物园
+POST /zoos：新建一个动物园
+GET /zoos/ID：获取某个指定动物园的信息
+PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）
+PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）
+DELETE /zoos/ID：删除某个动物园
+GET /zoos/ID/animals：列出某个指定动物园的所有动物
+DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物
+&lt;/code>&lt;/pre>&lt;h2 id="3-filtering">3. Filtering&lt;/h2>
+&lt;p>如果记录数量很大，服务器不可能将全部数据返回，此时，&lt;code>API&lt;/code> 应提供参数，用于过滤返回结果。&lt;/p>
+&lt;pre tabindex="0">&lt;code># 以下是一些常用参数
+?limit=10：指定返回记录的数量
+?offset=10：指定返回记录的开始位置。
+?page=2&amp;amp;per_page=100：指定第几页，以及每页的记录数。
+?sortby=name&amp;amp;order=asc：指定返回结果按照哪个属性排序，以及排序顺序。
+?animal_type_id=1：指定筛选条件
+&lt;/code>&lt;/pre>&lt;blockquote>
+&lt;p>参数的设计允许存在冗余，例如：&lt;code>GET /zoo/ID/animals&lt;/code> 等价于 &lt;code>GET /animals?zoo_id=ID&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="4-status-code">4. Status Code&lt;/h2>
+&lt;pre tabindex="0">&lt;code># 服务器向用户返回的状态码和提示信息,常用状态码如下：
+200 OK - [GET]：服务器成功返回用户请求的数据，该操作是幂等的（Idempotent）。
+201 CREATED - [POST/PUT/PATCH]：用户新建或修改数据成功。
+202 Accepted - [*]：表示一个请求已经进入后台排队（异步任务）
+204 NO CONTENT - [DELETE]：用户删除数据成功。
+400 INVALID REQUEST - [POST/PUT/PATCH]：用户发出的请求有错误，服务器没有进行新建或修改数据的操作，该操作是幂等的。
+401 Unauthorized - [*]：表示用户没有权限（令牌、用户名、密码错误）。
+403 Forbidden - [*] 表示用户得到授权（与401错误相对），但是访问是被禁止的。
+404 NOT FOUND - [*]：用户发出的请求针对的是不存在的记录，服务器没有进行操作，该操作是幂等的。
+406 Not Acceptable - [GET]：用户请求的格式不可得（比如用户请求JSON格式，但是只有XML格式）。
+410 Gone -[GET]：用户请求的资源被永久删除，且不会再得到的。
+422 Unprocesable entity - [POST/PUT/PATCH] 当创建一个对象时，发生一个验证错误。
+500 INTERNAL SERVER ERROR - [*]：服务器发生错误，用户将无法判断发出的请求是否成功。
+&lt;/code>&lt;/pre>&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Glossary/Idempotent" target="_blank" rel="noopener"
+>幂等 - 术语表 | MDN&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank" rel="noopener"
+>HTTP response status codes - HTTP | MDN&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="5-error-handling">5. Error Handling&lt;/h2>
+&lt;pre tabindex="0">&lt;code># 如果状态码是4xx，就应该向用户返回出错信息。
+{
+error: &amp;quot;Invalid API key&amp;quot;
+}
+&lt;/code>&lt;/pre>&lt;h2 id="6-返回结果的规范">6. 返回结果的规范&lt;/h2>
+&lt;pre tabindex="0">&lt;code>GET /collection：返回资源对象的列表（数组）
+GET /collection/resource：返回单个资源对象
+POST /collection：返回新生成的资源对象
+PUT /collection/resource：返回完整的资源对象
+PATCH /collection/resource：返回完整的资源对象
+DELETE /collection/resource：返回一个空文档
+&lt;/code>&lt;/pre>&lt;h2 id="7-hypermedia-api-hateoas">7. Hypermedia API (HATEOAS)&lt;/h2>
+&lt;p>RESTful API 最好做到 Hypermedia，即返回结果中提供链接，连向其他 API 方法，使得用户不查文档，也知道下一步应该做什么。&lt;/p>
+&lt;pre tabindex="0">&lt;code># 比如，当用户向api.example.com的根目录发出请求，会得到这样一个文档。
+{&amp;quot;link&amp;quot;: {
+&amp;quot;rel&amp;quot;: &amp;quot;collection https://www.example.com/zoos&amp;quot;,
+&amp;quot;href&amp;quot;: &amp;quot;https://api.example.com/zoos&amp;quot;,
+&amp;quot;title&amp;quot;: &amp;quot;List of zoos&amp;quot;,
+&amp;quot;type&amp;quot;: &amp;quot;application/vnd.yourformat+json&amp;quot;
+}}
+&lt;/code>&lt;/pre>&lt;p>Hypermedia API 的设计被称为 HATEOAS。Github 的 API 就是这种设计，访问 &lt;a class="link" href="https://api.github.com/" target="_blank" rel="noopener"
+>https://api.github.com&lt;/a> 会得到一个所有可用 API 的网址列表。&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.ruanyifeng.com/blog/2014/05/restful_api.html" target="_blank" rel="noopener"
+>RESTful API 设计指南&lt;/a>&lt;/p></description></item><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（二）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/</link><pubDate>Thu, 09 Sep 2021 20:17:16 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/cover-api.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（二）" />&lt;h1 id="关键知识点四-restful-api">关键知识点四： Restful API&lt;/h1>
 &lt;h2 id="what-is-rest">What is REST&lt;/h2>
 &lt;p>REST is acronym for REpresentational State Transfer. It is architectural style for distributed hyermedia systems and was first presented by Roy Fielding in 2000 in his famous dissertation.&lt;/p>
 &lt;h2 id="principles-of-rest">Principles of REST&lt;/h2>
