@@ -1,4 +1,416 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 10 Sep 2021 18:02:49 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（三）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/</link><pubDate>Fri, 10 Sep 2021 18:02:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/restful-design.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（三）" />&lt;h1 id="知识点五-restful-api-设计">知识点五： Restful API 设计&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 Sep 2021 15:14:04 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（四）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/</link><pubDate>Sat, 11 Sep 2021 15:14:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/cover-for-bestpractise.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（四）" />&lt;h1 id="关键知识点四-restful-api-设计的几个最佳实践">关键知识点四： Restful API 设计的几个最佳实践&lt;/h1>
+&lt;h2 id="steps-toward-the-glory-of-rest">steps toward the glory of REST&lt;/h2>
+&lt;p>&lt;a class="link" href="https://martinfowler.com/articles/richardsonMaturityModel.html#level0" target="_blank" rel="noopener"
+>Richardson Maturity Model&lt;/a>&lt;/p>
+&lt;h3 id="level-0">Level 0&lt;/h3>
+&lt;p>The Starting point for the model is using HTTP as a transport system for remote interactions, but without using any of the mechanisms of the web.If you use SOAP or XML-RPC it&amp;rsquo;s basically the same mechanism, the only difference is that you wrap the XML messages in some kind of envelope.&lt;/p>
+&lt;h3 id="level-1---resources">Level 1 - Resources&lt;/h3>
+&lt;p>At level One, rather than making all the requests to s singular service endpoint, we start talking to &lt;strong>individual resources&lt;/strong>.&lt;/p>
+&lt;h3 id="level-2---http-verbs-method">Level 2 - Http Verbs (Method)&lt;/h3>
+&lt;p>Level 2 moves away from being used as tunneling mechanisms allowing you to tunnel your interactions through HTTP, using the &lt;code>http verbs&lt;/code> as closely as possible to how they are used in Http itself.&lt;/p>
+&lt;p>HTTP defines &lt;code>GET&lt;/code> as a safe operation, that is it doesn&amp;rsquo;t make any significant changes to the state of anything.&amp;mdash; This allows us to invoke GETs safely any number of times in any order and get the same results each time.(&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Glossary/Idempotent" target="_blank" rel="noopener"
+>幂等 - 术语表 | MDN&lt;/a>)&lt;/p>
+&lt;p>THE KEY elements that are supported by the existence of the web are the strong separation between safe (eg: GET) and non-safe operations, together with using status codes to help communicate the kinds of errors we run into.&lt;/p>
+&lt;h3 id="level-3---hypermedia-controls">Level 3 - Hypermedia Controls&lt;/h3>
+&lt;p>THE &lt;em>Highest&lt;/em> and final level introduces something that you often hear referred to under the おかしい acronym of HATEOAS (Hypertext As The Engine Of Application State).&lt;/p>
+&lt;p>Each response has a link element which contains a URI to tell us how to do next, and the URI of the resource we need to manipulate to do it.&lt;/p>
+&lt;p>One obvious benefit of hypermedia controls is that it allows the server to change its URI scheme without breaking clients. As long as clients look up the &amp;ldquo;add-test&amp;rdquo; link URI then the server can juggle all URIs other than the initial entrypoint.&lt;/p>
+&lt;p>A further benefit is that it helps client developers explore the protocal. The links give client developers a hint as to what may be possible next. AND simillarly it also allows the server team tp advertise new capabilities by putting new links in the responses.&lt;/p>
+&lt;p>So as a frontend developer, if we can keeping an eye out for unknown links, these links can be a trgger for further exploration.&lt;/p>
+&lt;h2 id="best-practise-最佳实践">Best Practise 最佳实践&lt;/h2>
+&lt;h3 id="一-一类资源两个-url---use-two-urls-per-resource">一， 一类资源两个 URL - Use Two URLs per Resource&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="c1"># 资源集合：&lt;/span>
+/epics
+&lt;span class="c1"># 资源元素：&lt;/span>
+/epics/5
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="二-使用一致的复数名词---use-consistently-plural-nouns">二， 使用一致的复数名词 - Use Consistently Plural Nouns&lt;/h3>
+&lt;p>只应该使用统一的&lt;strong>复数名词&lt;/strong>来表达资源&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">GET /stories
+GET /stories/3
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="三-资源-uri-使用名词而不是动词---use-nouns-instead-of-verbs-for-resources">三， 资源 URI 使用名词而不是动词 - Use Nouns instead of Verbs for Resources&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="c1"># wrong&lt;/span>
+/getAllEpics
+/getAllFinishedEpics
+/createEpic
+/updateEpic
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a class="link" href="https://phauer.com/2015/restful-api-design-best-practices/#http-methods" target="_blank" rel="noopener"
+>RESTful API Design.HTTP METHOD&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="c1"># right&lt;/span>
+GET /epics
+GET /epics?state&lt;span class="o">=&lt;/span>finished
+POST /epics
+PUT /epics/5
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="四-将实际数据包装在-data-字段中">四， 将实际数据包装在 data 字段中&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">//&lt;/span> &lt;span class="err">GET&lt;/span> &lt;span class="err">/epics在数据字段中返回epic资源列表&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;epic1&amp;#34;&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;epic2&amp;#34;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">//&lt;/span> &lt;span class="err">GET&lt;/span> &lt;span class="err">/epic/&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="err">在数据字段中返回id为&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="err">的epic对象&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;epic1&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>PUT，POST 和 PATCH 请求的有效负荷(payload)还应包含实际对象的数据字段。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://jsonapi.org/" target="_blank" rel="noopener"
+>JSON:API — A specification for building APIs in JSON&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="五-对可选及复杂参数使用查询字符串">五， 对可选及复杂参数使用查询字符串&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="c1"># 保持URL简单, 使用基本URL，将复杂或可选参数移动到查询字符串。&lt;/span>
+GET /employees?state&lt;span class="o">=&lt;/span>internal&lt;span class="p">&amp;amp;&lt;/span>&lt;span class="nv">title&lt;/span>&lt;span class="o">=&lt;/span>senior
+GET /employees?id&lt;span class="o">=&lt;/span>1,2
+&lt;span class="c1"># 还可以使用JSON API方式过滤&lt;/span>
+GET /employees?filter&lt;span class="o">[&lt;/span>state&lt;span class="o">]=&lt;/span>internal&lt;span class="p">&amp;amp;&lt;/span>filter&lt;span class="o">[&lt;/span>title&lt;span class="o">]=&lt;/span>senior
+GET /employees?filter&lt;span class="o">[&lt;/span>id&lt;span class="o">]=&lt;/span>1,2
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="六-使用-http-状态码-status-codes">六， 使用 HTTP 状态码 status codes&lt;/h3>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank" rel="noopener"
+>HTTP response status codes - HTTP | MDN&lt;/a>&lt;/p>
+&lt;p>状态码的使用要尽量精确。如果资源可用，但禁止用户访问，则返回 403。如果资源曾经存在但现已被删除或停用，请使用 410。&lt;/p>
+&lt;h3 id="七-提供有用的错误消息">七， 提供有用的错误消息&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">//&lt;/span> &lt;span class="err">request&lt;/span>
+&lt;span class="err">GET&lt;/span> &lt;span class="err">/epics?state=unknow&lt;/span>
+&lt;span class="err">//&lt;/span> &lt;span class="err">response&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;errors&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;status&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">400&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;detail&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Invalid state. Valid values are &amp;#39;biz&amp;#39; or &amp;#39;tech&amp;#39;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;code&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">352&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;links&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;about&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://www.jira.com/rest/errorcode/352&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="八hateoas---provide-links-for-navigating-through-your-api">八，HATEOAS - Provide Links for Navigating through your API&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">//&lt;/span> &lt;span class="err">request&lt;/span>
+&lt;span class="err">GET&lt;/span> &lt;span class="err">/epic&lt;/span>
+&lt;span class="err">//&lt;/span> &lt;span class="err">好的做法是在响应中提供客户可以跟进的链接&lt;/span>
+&lt;span class="err">//&lt;/span> &lt;span class="err">response&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;epic1&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;links&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;story&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://www.domain.com/epics/21/stories&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>优点：&lt;/p>
+&lt;ol>
+&lt;li>如果 API 被更改，客户端依旧会获取有效的 URL（只要保证在 URL 更改时更新链接）&lt;/li>
+&lt;li>API 变得更具自描述性，客户端不必经常查找文档&lt;/li>
+&lt;/ol>
+&lt;h3 id="九-恰当地设计关系">九， 恰当地设计关系&lt;/h3>
+&lt;p>在 API 中设计关系基本上有三种常用选项：链接，侧载和嵌入。&lt;/p>
+&lt;p>There are basically three common options to design relationships within an API: &lt;strong>Links&lt;/strong>, &lt;strong>Sideloading&lt;/strong> and &lt;strong>Embedding&lt;/strong>.&lt;/p>
+&lt;p>Basically, you should design the relationships depending on the &lt;strong>client&amp;rsquo;s access schema&lt;/strong> and the &lt;strong>tolerable request amount&lt;/strong> and &lt;strong>payload size&lt;/strong>.&lt;/p>
+&lt;h4 id="links">Links:&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Larry&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;relationships&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;manager&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://www.domain.com/employees/1/manager&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;teamMembers&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="s2">&amp;#34;http://www.domain.com/employees/12&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s2">&amp;#34;http://www.domain.com/employees/13&amp;#34;&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="err">//or&lt;/span> &lt;span class="s2">&amp;#34;teamMembers&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://www.domain.com/employees/1/teamMembers&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>&lt;em>Small payload size.&lt;/em> : It&amp;rsquo;s &lt;strong>good&lt;/strong>, if the client doesn&amp;rsquo;t need the manager and the teamManager every time.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>Many Request&lt;/em>. : It&amp;rsquo;s &lt;strong>bad&lt;/strong>, if nearly every client needs this data. MANY additional requests may be required; in the worse case for every employee.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The client has to stitch the data together in order to get the big picture.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="sideloading">Sideloading:&lt;/h4>
+&lt;p>We can refer to the relationship with a foreign key and put the referred entitiese also in the payload but under the dedicated field &lt;code>included.&lt;/code> This approach also called &amp;ldquo;Compound Documents&amp;rdquo;.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Larry&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;relationships&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;manager&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;teamMembers&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">12&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">13&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">],&lt;/span>
+&lt;span class="nt">&amp;#34;included&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;manager&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Kevin&amp;#34;&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nt">&amp;#34;teamMembers&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Albert&amp;#34;&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">13&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Tom&amp;#34;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The client may also control the sideloaded entities by a query parameter like &lt;code>GET /employee?include=manager,teamMembers&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>One singel request.&lt;/li>
+&lt;li>Tailored payload size. No duplication (e.g. you only deliver a manager once even if he is referenced by many employees).&lt;/li>
+&lt;li>The client still has to stitch the data together(拼接数据) in order to resolve the relationships. which can be very cumbersome.&lt;/li>
+&lt;/ul>
+&lt;h4 id="embedding">Embedding:&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Larry&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;manager&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Kev&amp;#34;&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nt">&amp;#34;teamMembers&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Albert&amp;#34;&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">13&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Tom&amp;#34;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>Most conveninet for the client. It&amp;rsquo;s can directly follow the relationships to get the actual data.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Relationships may be loaded in vain if the client does not need it.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Increased payload size and duplications. Referenced entities may be embedded multiple times.(not so good)&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="十-小驼峰法命名属性---use-camelcase-for-attribute-names">十， 小驼峰法命名属性 - Use CamelCase for Attribute Names&lt;/h3>
+&lt;p>&lt;code>{&amp;quot;yearOfBirth&amp;quot;: 1970}&lt;/code>&lt;/p>
+&lt;p>Don not use underscores or capitalize (year_of_birth or YearOfBirth). Often the RESTful api will be consumed by a client written in JS. Typically the client wil convert the JSON response to a JS object( &lt;code>var person = JSON.parse(response)&lt;/code> ) and call its attributes. Therefore, it&amp;rsquo;s a good idea to stick to the JS convention which makes the js code more readable and intuitive.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// Don&amp;#39;t
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">year_of_birth&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// violates JavaScript convention
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">YearOfBirth&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// suggests constructor method
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// Do
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">yearOfBirth&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="十一用动词表示操作---use-verbs-for-operations">十一，用动词表示操作 - Use Verbs for Operations&lt;/h3>
+&lt;p>有时对 API 调用的响应不涉及资源（如计算，转义或变换）。&lt;/p>
+&lt;p>Sometimes a response to an API call does not involve resources (like calculate, translate, or convert)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">//Reading
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">GET&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="nx">translate&lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nx">de_DE&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">to&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nx">en_US&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nx">Hallo&lt;/span>
+&lt;span class="nx">GET&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="nx">calculate&lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="nx">para2&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">23&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nx">para2&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">432&lt;/span>
+&lt;span class="c1">//Trigger an operation that changes the server-side state
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">POST&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="nx">restartServer&lt;/span>
+&lt;span class="c1">//no body
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">POST&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="nx">banUserFromChannel&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="s2">&amp;#34;user&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;123&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;channel&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;serious-chat-channel&amp;#34;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>In this case, no resource are involved. Instead, the server executes an operation and returns the result to the client.&lt;/p>
+&lt;p>Hence, we shoud use verbs instead of nouns in our URL to distinguish clearly the operations (RPC-style API) from the RESTful endpoints(resources for modelling the domain.)&lt;/p>
+&lt;p>Creating those RPC-style API instead of REST is appropriate for operations. Usualy, it&amp;rsquo;s simpler and more intuitive than trying to be REST for operations (e.g. PATCH /server with &lt;code>{&amp;quot;restart&amp;quot;: true}&lt;/code>). &lt;em>AS the rule of thumb&lt;/em>, REST is nice for interacting with domain models and RPC is suitable for operations.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://www.smashingmagazine.com/2016/09/understanding-rest-and-rpc-for-http-apis/" target="_blank" rel="noopener"
+>Understanding RPC Vs REST For HTTP APIs — Smashing Magazine&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="十二-分页-provide-pagination">十二， 分页 Provide Pagination&lt;/h3>
+&lt;p>It is almost never a good idea to return the whole data of your db at once.&lt;/p>
+&lt;p>Consequently, you should provide a pagination mechanism. There are TWO popular approaches below:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Offset-based Pagination&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Keyset-based Pagination (Continuation Token) aka CURSOR&amp;mdash;&amp;ndash; recommended.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="offset-based">Offset-based&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fish" data-lang="fish">&lt;span class="c"># use the parameters offset and limit, which are well-known from database
+&lt;/span>&lt;span class="c">&lt;/span>
+/employees?&lt;span class="nv">offset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">30&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nv">limit&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">15&lt;/span> &lt;span class="c"># returns the employees 30 to 45
+&lt;/span>&lt;span class="c">&lt;/span>
+&lt;span class="c"># when the client omits the parameter, the server team should use default(like offset=0 and limit=100)
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>Never return all resources.&lt;/p>
+&lt;/blockquote>
+&lt;p>You can provide links for getting the next or previous page. Just construct URLs with the appropriate offset and limit.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">GET /employees?offset&lt;span class="o">=&lt;/span>20&lt;span class="p">&amp;amp;&lt;/span>&lt;span class="nv">limit&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;pagination&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;offset&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;limit&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;total&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">3465&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="err">//...&lt;/span>
+&lt;span class="p">],&lt;/span>
+&lt;span class="nt">&amp;#34;links&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;next&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://www.domain.com/employees?offset=30&amp;amp;limit=10&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;prev&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://www.domain.com/employees?offset=10&amp;amp;limit=10&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="keyset-based-pagination-aka-continuation-token-cursor-recommend">Keyset-based Pagination aka continuation TOKEN, CURSOR (recommend)&lt;/h4>
+&lt;p>The presented offset-based pagination is easy to implement but comes with drawbacks. &lt;em>They are slow (SQL’s OFFSET clause becomes very slow for large numbers) and unsafe (it’s easy to miss elements when changes are happening during pagination).&lt;/em>&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>SQL’s OFFSET clause becomes very slow for large numbers&lt;/li>
+&lt;li>it’s easy to miss elements when changes are happening during pagination&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="c1"># That’s why it’s better to use an indexed column.&lt;/span>
+&lt;span class="c1"># Let’s assume that our employees have an indexed column data_created and the collection resource /employees?pageSize=100 returns the oldest 100 employees sorted by this column.&lt;/span>
+&lt;span class="c1"># Client only has to take the dateCreated timestamp of the last employee and uses the query parameter createdSince to continue at this point.&lt;/span>
+GET /employees?pageSize&lt;span class="o">=&lt;/span>&lt;span class="m">100&lt;/span>
+&lt;span class="c1"># The client receives the oldest 100 employees sorted by `data_created`&lt;/span>
+&lt;span class="c1"># The last employee of the page has the `dataCreated` field with 1504224000000 (= Sep 1, 2017 12:00:00 AM)&lt;/span>
+GET /employees?pageSize&lt;span class="o">=&lt;/span>100&lt;span class="p">&amp;amp;&lt;/span>&lt;span class="nv">createdSince&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1504224000000&lt;/span>
+&lt;span class="c1"># The client receives the next 100 employees since 1504224000000.&lt;/span>
+&lt;span class="c1"># The last employee of the page was created on 1506816000000. And so on.&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>This solves already many of the disadvantages of offset-based pagination, but it’s still not perfect and not very convenient for the client.&lt;/p>
+&lt;ul>
+&lt;li>It’s better to create a so-called continuation token by adding additional information (like the id) to the date in order to improve the reliability and efficiency.&lt;/li>
+&lt;li>Moreover, you should provide a dedicated field in the payload for that token so the client doesn’t have to figure it out by looking at the elements. You can even go further and provide a next link.&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://phauer.com/2018/web-api-pagination-timestamp-id-continuation-token/" target="_blank" rel="noopener"
+>Web API Pagination with the &amp;lsquo;Timestamp_ID&amp;rsquo; Continuation Token&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">//&lt;/span> &lt;span class="err">request&lt;/span>
+&lt;span class="err">GET&lt;/span> &lt;span class="err">/employees?pageSize=&lt;/span>&lt;span class="mi">100&lt;/span>
+&lt;span class="err">//&lt;/span> &lt;span class="err">response&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;pagination&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;continuationToken&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;1504224000000_10&amp;#34;&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="err">//&lt;/span> &lt;span class="err">...&lt;/span>
+&lt;span class="err">//&lt;/span> &lt;span class="err">last&lt;/span> &lt;span class="err">element:&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;dateCreated&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1504224000000&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">],&lt;/span>
+&lt;span class="nt">&amp;#34;links&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;next&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://www.domain.com/employees?pageSize=100&amp;amp;continue=1504224000000_10&amp;#34;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>next&lt;/code> link makes the API RESTful as the client can page through the collection simply by following these links(HATEOAS). No need to construct URLs manually. Moreover, we can simply change the URL structure without breaking clients( called evolvability)&lt;/p>
+&lt;h3 id="十三-check-out-jsonapi">十三， Check out JSON:API&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://jsonapi.org/" target="_blank" rel="noopener"
+>JSON:API — A specification for building APIs in JSON&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>Just for Inspiration. Feel free to make up your own mind about JSON:API.&lt;/p>
+&lt;h3 id="十四-确保-api-的可演进-ensure-evolvability-of-the-apis">十四， 确保 API 的可演进 Ensure Evolvability of the APIs&lt;/h3>
+&lt;h4 id="avoid-breaking-changes">Avoid Breaking Changes&lt;/h4>
+&lt;p>Ideally, APIs should be stable. Basically, breaking changes should not happen.(like change the whole payload format or the URL scheme). SO how can we still evolve our API without breaking the clients:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>保持向后兼容 Make backward-compatible changes.Adding field is no problem, as long as the clients are tolerant.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>复制和弃用。Duplication and Deprecation. In order to cahnge an existing field, you can add the new one next to the old field and deprecated the old one in the documentation. After a while, you can remove the old field.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>超媒体和 HATEOAS。Utilize Hypermedia and HATEOAS. As long as the API client uses the links in the response to navigate through the API (and doesn’t craft the URLs manually), you can safely change the URLs without breaking the clients.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>使用新名称创建新资源。Create new resources with new names. If new business requirements lead to a completely new domain model and workflows, you can create new resources. That’s often quite intuitive as the domain model has a new name anyway (derived from the business name). Example: A rental service now also rents bikes and segways. So the old concept car with the resource /cars doesn’t cut it anymore. A new domain model vehicle with a new resource /vehicles is introduced. It’s provided along with the old /cars resource.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="keep-bussiness-logic-on-the-server-side">Keep Bussiness Logic on the Server-Side&lt;/h4>
+&lt;p>DO not let our service become &lt;em>a dump data access layer&lt;/em> which provides CRUD functionality by directly exposing your databaes model. &lt;strong>THIS creates HIGH COUPLING.&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>The bussiness logic is shifted to the client and is often replicated between the client and the server (just think about validation.). We have to keep both in sync.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The client will be coupling to the server&amp;rsquo;s database model. This is not good.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>The business workflows are getting distributed between the client and the server. IN TURN, that makes it likely that new business requirements require a change in both the client and the server and to break API. So the API/system is not that evolvable.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>因此，我们应该构建高层次/基于工作流的 API 而不是低级 API。 So we should build high-level/workflow-based APIs instead of low-level APIs. EXAMPLE:&lt;/p>
+&lt;p>&lt;strong>Don’t provide a simple CRUD service for the order entities in the database.&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Don’t require the clients to know that to cancel an order, the client has to PUT an order to the generic /order/1 resource with a certain cancelation payload (reflecting the database model) in it. This leads to high coupling (business logic and domain knowledge on the client-side; exposed database model).&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Instead, provide a dedicated resource /order/1/cancelation and add a link to it in the payload of the order resource. The client can navigate to the cancelation URL and send a tailored cancelation payload. The business logic for mapping this payload to the database model is done in the server.&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Moreover, the server can easily change the URL without breaking the client, because the client simply follows links. Besides, the decision logic, if an order can be canceled or not is now in the server: If a cancelation a possible the server adds the link to the cancelation resource in the order payload. So the client only has to check if the cancelation links are present (for example to know if he should draw the cancelation button). So we moved domain knowledge away from the client back to the server. Changes to the cancelation conditions can be easily applied by only touching the server, which in turn make the system evolvable. No API change is required.&lt;/strong>&lt;/p>
+&lt;h3 id="十五版本化-consider-api-versioning">十五，版本化 Consider API Versioning&lt;/h3>
+&lt;p>Nevertheless, you might end up in situations where the above approaches don’t work and you really have to provide different versions of your API.&lt;/p>
+&lt;p>Nevertheless, here are the two most popular approaches for versioning:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Versioning via URLs: &lt;code>/v1/&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Versioning via the &lt;code>Accept&lt;/code> HTTP Header:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell"> Accept:
+application/vnd.myapi.v1+json
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;h4 id="versioning-via-urls">Versioning via URLs&lt;/h4>
+&lt;p>Just put the version number of your API in the URL of every resource. &lt;code>/v1/books&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Pros:&lt;/p>
+&lt;ul>
+&lt;li>Extremely simple for API developers.&lt;/li>
+&lt;li>Extremely simple for API clients.&lt;/li>
+&lt;li>URLs can be copied and pasted.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Cons:&lt;/p>
+&lt;ul>
+&lt;li>Not RESTful&lt;/li>
+&lt;li>Breaking URLs. clients have to maintain and update the URLs.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Strictly speaking, this approach is not RESTful because URLs should never change.The question is, how much effort would it take the clients to update the URLs? If the answer is “only a little” then URL versioning might be fine.&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="versioning-via-accept-http-header-content-negotiation">Versioning via &lt;code>Accept&lt;/code> HTTP Header (Content Negotiation)&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>Pros:&lt;/p>
+&lt;ul>
+&lt;li>URLs keep the same&lt;/li>
+&lt;li>Considered as RESTful&lt;/li>
+&lt;li>HATEOAS-friendly&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Cons:&lt;/p>
+&lt;ul>
+&lt;li>Slightly more difficult to use. Clients have to pay attention to the headers.&lt;/li>
+&lt;li>URLs can’t be copied and pasted anymore.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://martinfowler.com/articles/richardsonMaturityModel.html#level0" target="_blank" rel="noopener"
+>Richardson Maturity Model&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://kaelzhang81.github.io/2019/05/24/Restful-API%E8%AE%BE%E8%AE%A1%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" target="_blank" rel="noopener"
+>Restful API 设计最佳实践 - Tech For Fun&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://phauer.com/2015/restful-api-design-best-practices/" target="_blank" rel="noopener"
+>RESTful API Design. Best Practices in a Nutshell.&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.youtube.com/watch?v=mQkf85S9UoQ&amp;amp;t=1s" target="_blank" rel="noopener"
+>REST beyond the obvious – API design for ever evolving systems by Oliver Gierke @ Spring I/O 2018 - YouTube&lt;/a>&lt;/p></description></item><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（三）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/</link><pubDate>Fri, 10 Sep 2021 18:02:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/restful-design.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（三）" />&lt;h1 id="知识点五-restful-api-设计">知识点五： Restful API 设计&lt;/h1>
 &lt;h2 id="1-endpoint">1. Endpoint&lt;/h2>
 &lt;p>表示 &lt;code>API&lt;/code> 的具体地址&lt;/p>
 &lt;p>在 RESTful 架构中，每个网址代表一种资源（resource），所以网址中 &lt;strong>不能有动词，只能有名词&lt;/strong>，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的&amp;quot;集合&amp;quot;（collection），所以 API 中的名词也应该使用复数。&lt;/p>
