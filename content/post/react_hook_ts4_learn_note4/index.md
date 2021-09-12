@@ -9,7 +9,7 @@ categories:
   - RESTful API
 ---
 
-# 关键知识点四： Restful API 设计的几个最佳实践
+# 关键知识点六： Restful API 设计的几个最佳实践
 
 ## steps toward the glory of REST
 
