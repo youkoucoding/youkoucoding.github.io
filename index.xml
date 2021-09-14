@@ -1,4 +1,204 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 13 Sep 2021 17:34:37 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（六）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/</link><pubDate>Mon, 13 Sep 2021 17:34:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/liftup-cover.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（六）" />&lt;h1 id="what-is-lifting-state-up-and-why-we-need-it">What is &amp;ldquo;Lifting State up&amp;rdquo; and Why we need it?&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 14 Sep 2021 11:58:23 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　1</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/</link><pubDate>Tue, 14 Sep 2021 11:58:23 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/frontend-1-cover.jpg" alt="Featured image of post 毎日のフロントエンド　1" />&lt;h1 id="第一天">第一天&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 页面导入样式时，使用 link 和@import 有什么区别？&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;link&amp;gt;&lt;/code> 是&lt;code>HTML&lt;/code>的标签。 The &lt;code>@import&lt;/code> is used to import style rules from other style sheets.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="o">&amp;lt;!&lt;/span>&lt;span class="nt">--&lt;/span> &lt;span class="p">@&lt;/span>&lt;span class="k">import&lt;/span> &lt;span class="nt">Syntax&lt;/span> &lt;span class="nt">--&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="p">@&lt;/span>&lt;span class="k">import&lt;/span> &lt;span class="nt">url&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">@&lt;/span>&lt;span class="k">import&lt;/span> &lt;span class="nt">url&lt;/span> &lt;span class="nt">list-of-media-queries&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">@&lt;/span>&lt;span class="k">import&lt;/span> &lt;span class="nt">url&lt;/span> &lt;span class="nt">supports&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="nt">supports-query&lt;/span>&lt;span class="o">)&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">@&lt;/span>&lt;span class="k">import&lt;/span> &lt;span class="nt">url&lt;/span> &lt;span class="nt">supports&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="nt">supports-query&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="nt">list-of-media-queries&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;link&amp;gt;&lt;/code> 引入的样式，在页面加载时，&lt;strong>同时加载&lt;/strong>。 @import 引入的样式需要等页面加载完成之后再加载。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;link&amp;gt;&lt;/code> 不存在兼容性问题，&lt;code>@import&lt;/code> 不兼容 ie5 以下&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;link&amp;gt;&lt;/code> 可通过 &lt;code>js&lt;/code> 操作 &lt;code>DOM&lt;/code> 动态引入样式， &lt;code>@import&lt;/code> 不可以&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 圣杯布局和双飞翼布局的理解和区别，并用代码实现&lt;/p>
+&lt;p>即 css 三栏布局&amp;mdash;改变 viewpoint 宽度，两个边栏的宽度不变(左右定宽)，只会中间的区域变化， 且 中间部分优先渲染&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 176;
+flex-basis: 423px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/illustrator-.png" data-size="1418x804">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/illustrator-.png"
+width="1418"
+height="804"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/illustrator-_hu85a3f2dcdbb3e5c89ceadc0c42243a5f_415659_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/illustrator-_hu85a3f2dcdbb3e5c89ceadc0c42243a5f_415659_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h3 id="圣杯布局---holy-grail-layout">圣杯布局 - Holy Grail Layout&lt;/h3>
+&lt;p>&lt;a class="link" href="https://codepen.io/youkoucoding/pen/WNOEqGJ" target="_blank" rel="noopener"
+>HolyGrailLayout - codepen&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>利用 float 和 margin 负值 并列&lt;/li>
+&lt;li>利用 父容器设置&lt;code>padding&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>Point:&lt;/p>
+&lt;ol>
+&lt;li>添加 left center right&lt;/li>
+&lt;li>left right 设置各自宽度 (三个部分的外容器的&lt;code>padding&lt;/code>)&lt;/li>
+&lt;li>center 宽度设置为 100%&lt;/li>
+&lt;li>给 left main right 设置 &lt;code>position: relative;&lt;/code> 以及，&lt;code>left:-100px;&lt;/code> 或者 &lt;code>right:-100px;&lt;/code>&lt;/li>
+&lt;li>给三个部分分别添加 &lt;code>{float: left}&lt;/code> 使其脱离文档流&amp;mdash;&amp;gt; 此时，footer 会被 这三部分覆盖&lt;/li>
+&lt;li>left 区域 设置：&lt;code>margin-left: -100%;&lt;/code> right 区域 设置： &lt;code>margin-left: -100px;&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">header&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>HEADER&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">header&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;main&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- center 优先加载，因此放在第一个 --&amp;gt;&lt;/span>
+#center-one; center-two; center-three 中间宽度自适应
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;left&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>left&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;right&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>right&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">footer&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>FOOTER&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">footer&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="o">*&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">lightgray&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">container&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">container&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">after&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c">/* 清除浮动塌陷*/&lt;/span>
+&lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">clear&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">both&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">main&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">orange&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">float&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">left&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">left&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">brown&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">margin-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">-100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">float&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">left&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">relative&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">-100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">right&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">green&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">margin-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">-100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">float&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">left&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">relative&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">-100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">header&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="nt">footer&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">60&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">60&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">green&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">font-weight&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">bolder&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">footer&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">lightcoral&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="双飞翼">双飞翼&lt;/h3>
+&lt;p>&lt;a class="link" href="https://codepen.io/youkoucoding/pen/qBjPEqX?editors=1100" target="_blank" rel="noopener"
+>shuangfeiyi&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>头部&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;wrapper&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;center&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>主要区域&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;left&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>左侧&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;right&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>右侧&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;footer&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>底部&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">wrapper&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">float&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">left&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">center&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">coral&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/*为主区域设置 左右 外边距 压缩主区域，并被包裹*/&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">left&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">yellow&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">float&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">left&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">margin-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">-100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">right&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">lightblue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">float&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">left&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">margin-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">-100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">footer&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">clear&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">both&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">header&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">footer&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">60&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">60&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">green&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">font-weight&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">bolder&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">Javascript&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 用递归算法实现，数组长度为 5 且元素的随机数在 2-32 间不重复的值&lt;/p>
+&lt;p>Description:&lt;/p>
+&lt;ol>
+&lt;li>生成一个长度为 5 的空数组 arr&lt;/li>
+&lt;li>生成一个（2－32）之间的随机整数 rand&lt;/li>
+&lt;li>把随机数 rand 插入到数组 arr 内，如果数组 arr 内已存在与 rand 相同的数字，则重新生成随机数 rand 并插入到 arr 内[需要使用递归实现，不能使用 for/while 等循环]&lt;/li>
+&lt;li>最终输出一个长度为 5，且内容不重复的数组 arr&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">var&lt;/span> &lt;span class="nx">arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">num&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">randomNum&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">randomArr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">num&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">randomNum&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">30&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">randomArr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">num&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">indexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">num&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">num&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">randomNum&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">randomArr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">num&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ul>
+&lt;li>Getting a random Number between two values&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// The returned value is no lower than (and may possibly equal) min, and is less than (and not equal) max
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">getRandomArbitrary&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">max&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">max&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">min&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">min&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values" target="_blank" rel="noopener"
+>Math.random() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（六）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/</link><pubDate>Mon, 13 Sep 2021 17:34:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/liftup-cover.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（六）" />&lt;h1 id="what-is-lifting-state-up-and-why-we-need-it">What is &amp;ldquo;Lifting State up&amp;rdquo; and Why we need it?&lt;/h1>
 &lt;p>Lifting state up is a common pattern that is essential for React developer to know. It helps us avoid more complex pattern for managing our state.&lt;/p>
 &lt;p>Often there will be a need to share state between different components. The common approach to share state between two components is to move the state to common parent of the two compenont.&lt;/p>
 &lt;p>我们可以很清楚的明白 React 状态提升主要就是用来处理父组件和子组件的数据传递的；他可以让我们的数据流动的形式是自顶向下单向流动的，所有组件的数据都是来自于他们的父辈组件，也都是由父辈组件来统一存储和修改，再传入子组件当中。&lt;/p>

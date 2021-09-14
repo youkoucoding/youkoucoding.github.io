@@ -1,0 +1,346 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　1</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　1">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-09-14T11:58:23+09:00"><meta property="article:modified_time" content="2021-09-14T11:58:23+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/frontend-1-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　1">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/frontend-1-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/frontend-1-cover_hu830c213ec70e85d51f3a935207ace467_2278723_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/frontend-1-cover_hu830c213ec70e85d51f3a935207ace467_2278723_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/frontend-1-cover_hu830c213ec70e85d51f3a935207ace467_2278723_1600x0_resize_q75_box.jpg 1600w" width=800 height=530 loading=lazy alt="Featured image of post 毎日のフロントエンド　1">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/>毎日のフロントエンド　1</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Sep 14, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 3 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第一天>第一天</h1>
+<h2 id=html>HTML</h2>
+<p><strong>#Question:</strong> 页面导入样式时，使用 link 和@import 有什么区别？</p>
+<ol>
+<li>
+<p><code>&lt;link></code> 是<code>HTML</code>的标签。 The <code>@import</code> is used to import style rules from other style sheets.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=o>&lt;!</span><span class=nt>--</span> <span class=p>@</span><span class=k>import</span> <span class=nt>Syntax</span> <span class=nt>--</span><span class=o>&gt;</span>
+<span class=p>@</span><span class=k>import</span> <span class=nt>url</span><span class=p>;</span>
+<span class=p>@</span><span class=k>import</span> <span class=nt>url</span> <span class=nt>list-of-media-queries</span><span class=p>;</span>
+<span class=p>@</span><span class=k>import</span> <span class=nt>url</span> <span class=nt>supports</span><span class=o>(</span><span class=nt>supports-query</span><span class=o>)</span><span class=p>;</span>
+<span class=p>@</span><span class=k>import</span> <span class=nt>url</span> <span class=nt>supports</span><span class=o>(</span><span class=nt>supports-query</span><span class=o>)</span> <span class=nt>list-of-media-queries</span><span class=p>;</span>
+</code></pre></div></li>
+<li>
+<p><code>&lt;link></code> 引入的样式，在页面加载时，<strong>同时加载</strong>。 @import 引入的样式需要等页面加载完成之后再加载。</p>
+</li>
+<li>
+<p><code>&lt;link></code> 不存在兼容性问题，<code>@import</code> 不兼容 ie5 以下</p>
+</li>
+<li>
+<p><code>&lt;link></code> 可通过 <code>js</code> 操作 <code>DOM</code> 动态引入样式， <code>@import</code> 不可以</p>
+</li>
+</ol>
+<h2 id=css>CSS</h2>
+<p><strong>#Question:</strong> 圣杯布局和双飞翼布局的理解和区别，并用代码实现</p>
+<p>即 css 三栏布局&mdash;改变 viewpoint 宽度，两个边栏的宽度不变(左右定宽)，只会中间的区域变化， 且 中间部分优先渲染</p>
+<p><figure class=gallery-image style=flex-grow:176;flex-basis:423px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/illustrator-.png data-size=1418x804>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/illustrator-.png width=1418 height=804 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/illustrator-_hu85a3f2dcdbb3e5c89ceadc0c42243a5f_415659_480x0_resize_box_3.png 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/illustrator-_hu85a3f2dcdbb3e5c89ceadc0c42243a5f_415659_1024x0_resize_box_3.png 1024w" loading=lazy>
+</a>
+</figure></p>
+<h3 id=圣杯布局---holy-grail-layout>圣杯布局 - Holy Grail Layout</h3>
+<p><a class=link href=https://codepen.io/youkoucoding/pen/WNOEqGJ target=_blank rel=noopener>HolyGrailLayout - codepen</a></p>
+<blockquote>
+<ul>
+<li>利用 float 和 margin 负值 并列</li>
+<li>利用 父容器设置<code>padding</code></li>
+</ul>
+</blockquote>
+<p>Point:</p>
+<ol>
+<li>添加 left center right</li>
+<li>left right 设置各自宽度 (三个部分的外容器的<code>padding</code>)</li>
+<li>center 宽度设置为 100%</li>
+<li>给 left main right 设置 <code>position: relative;</code> 以及，<code>left:-100px;</code> 或者 <code>right:-100px;</code></li>
+<li>给三个部分分别添加 <code>{float: left}</code> 使其脱离文档流&mdash;> 此时，footer 会被 这三部分覆盖</li>
+<li>left 区域 设置：<code>margin-left: -100%;</code> right 区域 设置： <code>margin-left: -100px;</code></li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>header</span><span class=p>&gt;</span>HEADER<span class=p>&lt;/</span><span class=nt>header</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;container&#34;</span><span class=p>&gt;</span>
+  <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;main&#34;</span><span class=p>&gt;</span>
+    <span class=c>&lt;!-- center 优先加载，因此放在第一个 --&gt;</span>
+    #center-one; center-two; center-three 中间宽度自适应
+  <span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+  <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;left&#34;</span><span class=p>&gt;</span>left<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+  <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;right&#34;</span><span class=p>&gt;</span>right<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=nt>footer</span><span class=p>&gt;</span>FOOTER<span class=p>&lt;/</span><span class=nt>footer</span><span class=p>&gt;</span>
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=o>*</span> <span class=p>{</span>
+  <span class=k>background</span><span class=p>:</span> <span class=kc>lightgray</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=p>.</span><span class=nc>container</span> <span class=p>{</span>
+  <span class=k>padding</span><span class=p>:</span> <span class=mi>0</span> <span class=mi>100</span><span class=kt>px</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=p>.</span><span class=nc>container</span><span class=p>::</span><span class=nd>after</span> <span class=p>{</span>
+  <span class=c>/* 清除浮动塌陷*/</span>
+  <span class=k>content</span><span class=p>:</span> <span class=s1>&#39;&#39;</span><span class=p>;</span>
+  <span class=k>display</span><span class=p>:</span> <span class=kc>block</span><span class=p>;</span>
+  <span class=k>clear</span><span class=p>:</span> <span class=kc>both</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=p>.</span><span class=nc>main</span> <span class=p>{</span>
+  <span class=k>background</span><span class=p>:</span> <span class=kc>orange</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>100</span><span class=kt>%</span><span class=p>;</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>100</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>float</span><span class=p>:</span> <span class=kc>left</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=p>.</span><span class=nc>left</span> <span class=p>{</span>
+  <span class=k>background</span><span class=p>:</span> <span class=kc>brown</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>100</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>100</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>margin-left</span><span class=p>:</span> <span class=mi>-100</span><span class=kt>%</span><span class=p>;</span>
+  <span class=k>float</span><span class=p>:</span> <span class=kc>left</span><span class=p>;</span>
+  <span class=k>position</span><span class=p>:</span> <span class=kc>relative</span><span class=p>;</span>
+  <span class=k>left</span><span class=p>:</span> <span class=mi>-100</span><span class=kt>px</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=p>.</span><span class=nc>right</span> <span class=p>{</span>
+  <span class=k>background</span><span class=p>:</span> <span class=kc>green</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>100</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>100</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>margin-left</span><span class=p>:</span> <span class=mi>-100</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>float</span><span class=p>:</span> <span class=kc>left</span><span class=p>;</span>
+  <span class=k>position</span><span class=p>:</span> <span class=kc>relative</span><span class=p>;</span>
+  <span class=k>right</span><span class=p>:</span> <span class=mi>-100</span><span class=kt>px</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=nt>header</span><span class=o>,</span>
+<span class=nt>footer</span> <span class=p>{</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>60</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>line-height</span><span class=p>:</span> <span class=mi>60</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>background-color</span><span class=p>:</span> <span class=kc>green</span><span class=p>;</span>
+  <span class=k>text-align</span><span class=p>:</span> <span class=kc>center</span><span class=p>;</span>
+  <span class=k>font-size</span><span class=p>:</span> <span class=mi>30</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>font-weight</span><span class=p>:</span> <span class=kc>bolder</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=nt>footer</span> <span class=p>{</span>
+  <span class=k>background-color</span><span class=p>:</span> <span class=kc>lightcoral</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><h3 id=双飞翼>双飞翼</h3>
+<p><a class=link href="https://codepen.io/youkoucoding/pen/qBjPEqX?editors=1100" target=_blank rel=noopener>shuangfeiyi</a></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;header&#34;</span><span class=p>&gt;</span>头部<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;wrapper&#34;</span><span class=p>&gt;</span>
+  <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;center&#34;</span><span class=p>&gt;</span>主要区域<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;left&#34;</span><span class=p>&gt;</span>左侧<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;right&#34;</span><span class=p>&gt;</span>右侧<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;footer&#34;</span><span class=p>&gt;</span>底部<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=p>.</span><span class=nc>wrapper</span> <span class=p>{</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>100</span><span class=kt>%</span><span class=p>;</span>
+  <span class=k>float</span><span class=p>:</span> <span class=kc>left</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=p>.</span><span class=nc>center</span> <span class=p>{</span>
+  <span class=k>background-color</span><span class=p>:</span> <span class=kc>coral</span><span class=p>;</span>
+  <span class=k>margin</span><span class=p>:</span> <span class=mi>0</span> <span class=mi>100</span><span class=kt>px</span><span class=p>;</span> <span class=c>/*为主区域设置 左右 外边距 压缩主区域，并被包裹*/</span>
+<span class=p>}</span>
+
+<span class=p>.</span><span class=nc>left</span> <span class=p>{</span>
+  <span class=k>background-color</span><span class=p>:</span> <span class=kc>yellow</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>100</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>float</span><span class=p>:</span> <span class=kc>left</span><span class=p>;</span>
+  <span class=k>margin-left</span><span class=p>:</span> <span class=mi>-100</span><span class=kt>%</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=p>.</span><span class=nc>right</span> <span class=p>{</span>
+  <span class=k>background-color</span><span class=p>:</span> <span class=kc>lightblue</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>100</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>float</span><span class=p>:</span> <span class=kc>left</span><span class=p>;</span>
+  <span class=k>margin-left</span><span class=p>:</span> <span class=mi>-100</span><span class=kt>px</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=p>.</span><span class=nc>footer</span> <span class=p>{</span>
+  <span class=k>clear</span><span class=p>:</span> <span class=kc>both</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=p>.</span><span class=nc>header</span><span class=o>,</span>
+<span class=p>.</span><span class=nc>footer</span> <span class=p>{</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>60</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>line-height</span><span class=p>:</span> <span class=mi>60</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>background-color</span><span class=p>:</span> <span class=kc>green</span><span class=p>;</span>
+  <span class=k>text-align</span><span class=p>:</span> <span class=kc>center</span><span class=p>;</span>
+  <span class=k>font-size</span><span class=p>:</span> <span class=mi>30</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>font-weight</span><span class=p>:</span> <span class=kc>bolder</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><h2 id=javascript>Javascript</h2>
+<p><strong>#Question:</strong> 用递归算法实现，数组长度为 5 且元素的随机数在 2-32 间不重复的值</p>
+<p>Description:</p>
+<ol>
+<li>生成一个长度为 5 的空数组 arr</li>
+<li>生成一个（2－32）之间的随机整数 rand</li>
+<li>把随机数 rand 插入到数组 arr 内，如果数组 arr 内已存在与 rand 相同的数字，则重新生成随机数 rand 并插入到 arr 内[需要使用递归实现，不能使用 for/while 等循环]</li>
+<li>最终输出一个长度为 5，且内容不重复的数组 arr</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>var</span> <span class=nx>arr</span> <span class=o>=</span> <span class=k>new</span> <span class=nb>Array</span><span class=p>(</span><span class=mi>5</span><span class=p>);</span>
+<span class=kd>var</span> <span class=nx>num</span> <span class=o>=</span> <span class=nx>randomNum</span><span class=p>();</span>
+<span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+<span class=nx>randomArr</span><span class=p>(</span><span class=nx>arr</span><span class=p>,</span> <span class=nx>num</span><span class=p>);</span>
+
+<span class=kd>function</span> <span class=nx>randomNum</span><span class=p>()</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=nb>Math</span><span class=p>.</span><span class=nx>floor</span><span class=p>(</span><span class=nb>Math</span><span class=p>.</span><span class=nx>random</span><span class=p>()</span> <span class=o>*</span> <span class=mi>30</span> <span class=o>+</span> <span class=mi>2</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>randomArr</span><span class=p>(</span><span class=nx>arr</span><span class=p>,</span> <span class=nx>num</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>arr</span><span class=p>.</span><span class=nx>indexOf</span><span class=p>(</span><span class=nx>num</span><span class=p>)</span> <span class=o>===</span> <span class=o>-</span><span class=mi>1</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>arr</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=o>=</span> <span class=nx>num</span><span class=p>;</span>
+    <span class=nx>i</span><span class=o>++</span><span class=p>;</span>
+  <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+    <span class=nx>num</span> <span class=o>=</span> <span class=nx>randomNum</span><span class=p>();</span>
+  <span class=p>}</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>i</span> <span class=o>&gt;</span> <span class=mi>5</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>arr</span><span class=p>);</span>
+    <span class=k>return</span><span class=p>;</span>
+  <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+    <span class=nx>randomArr</span><span class=p>(</span><span class=nx>arr</span><span class=p>,</span> <span class=nx>num</span><span class=p>);</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><hr>
+<ul>
+<li>Getting a random Number between two values</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// The returned value is no lower than (and may possibly equal) min, and is less than (and not equal) max
+</span><span class=c1></span><span class=kd>function</span> <span class=nx>getRandomArbitrary</span><span class=p>(</span><span class=nx>min</span><span class=p>,</span> <span class=nx>max</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=nb>Math</span><span class=p>.</span><span class=nx>random</span><span class=p>()</span> <span class=o>*</span> <span class=p>(</span><span class=nx>max</span> <span class=o>-</span> <span class=nx>min</span><span class=p>)</span> <span class=o>+</span> <span class=nx>min</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><p><a class=link href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values target=_blank rel=noopener>Math.random() - JavaScript | MDN</a></p>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=http://www.h-camel.com/index.html target=_blank rel=noopener>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a></li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#圣杯布局---holy-grail-layout>圣杯布局 - Holy Grail Layout</a></li>
+<li><a href=#双飞翼>双飞翼</a></li>
+</ol>
+</li>
+<li><a href=#javascript>Javascript</a></li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

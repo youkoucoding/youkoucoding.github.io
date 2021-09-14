@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HTML on 技術の手帳</title><link>https://youkoucoding.github.io/categories/html/</link><description>Recent content in HTML on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 14 Sep 2021 11:58:23 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/categories/html/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　1</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/</link><pubDate>Tue, 14 Sep 2021 11:58:23 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/</guid><description>第一天 HTML #Question: 页面导入样式时，使用 link 和@import 有什么区别？
+&amp;lt;link&amp;gt; 是HTML的标签。 The @import is used to import style rules from other style sheets.
+&amp;lt;!-- @import Syntax --&amp;gt; @import url; @import url list-of-media-queries; @import url supports(supports-query); @import url supports(supports-query) list-of-media-queries; &amp;lt;link&amp;gt; 引入的样式，在页面加载时，同时加载。 @import 引入的样式需要等页面加载完成之后再加载。
+&amp;lt;link&amp;gt; 不存在兼容性问题，@import 不兼容 ie5 以下
+&amp;lt;link&amp;gt; 可通过 js 操作 DOM 动态引入样式， @import 不可以
+CSS #Question: 圣杯布局和双飞翼布局的理解和区别，并用代码实现
+即 css 三栏布局&amp;mdash;改变 viewpoint 宽度，两个边栏的宽度不变(左右定宽)，只会中间的区域变化， 且 中间部分优先渲染</description></item></channel></rss>
