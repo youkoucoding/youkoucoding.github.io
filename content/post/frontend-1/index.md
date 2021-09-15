@@ -48,12 +48,13 @@ categories:
 
 Point:
 
-1. 添加 left center right
-2. left right 设置各自宽度 (三个部分的外容器的`padding`)
-3. center 宽度设置为 100%
-4. 给 left main right 设置 `position: relative;` 以及，`left:-100px;` 或者 `right:-100px;`
-5. 给三个部分分别添加 `{float: left}` 使其脱离文档流---> 此时，footer 会被 这三部分覆盖
-6. left 区域 设置：`margin-left: -100%;` right 区域 设置： `margin-left: -100px;`
+1. 添加 `center left right`, 并为三个部分设置 `float: left; position: relative;`(脱离文档流)
+2. `center` 区域设置 `width: 100%;`, 使 `center` 占满一整行
+3. `center` 在最上面，此时需要为 `left` 区域 设置 `margin-left: -100%;` 将`left`移动到`center`左侧
+4. 此时 `left` 部分会覆盖 `center` 的左侧部分，因此 给三个部分统一的 `container` 设置 `padding: 0 100px;` (左右两部分的宽度)
+
+5. 为总的 `container` 添加 `padding` 之后，`left` 部分同样受影响，此时 需要使用 `relative` 负值 向左移动一个 `left` 宽度： `left: -100px;`
+6. 同理需要为 `right` 区域 设置： `margin-left: -100px; right: -100px`
 
 ```html
 <header>HEADER</header>
@@ -129,6 +130,16 @@ footer {
 ### 双飞翼
 
 [shuangfeiyi](https://codepen.io/youkoucoding/pen/qBjPEqX?editors=1100)
+
+point:
+
+1. `wrapper left right`为三部分设置 `float: left`
+
+2. `center` 部分的 外层 `wrapper` 设置 `width: 100%;` 占满一整行
+
+3. `left` 区域 `margin-left: -100%;` `right` 区域`margin-left: -100px;` 使左右翼分置两侧
+
+4. 此时`center`的内容被覆盖，除了使用圣杯法的外围 container 的 padding， 双飞翼使用了： 在`center`区域添加内层 `div` 并给内层 添加 `margin: 0 100px;` 压缩中心区域
 
 ```html
 <div class="header">头部</div>
