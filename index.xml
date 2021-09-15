@@ -212,12 +212,24 @@ loading="lazy"
 &lt;/blockquote>
 &lt;p>Point:&lt;/p>
 &lt;ol>
-&lt;li>添加 left center right&lt;/li>
-&lt;li>left right 设置各自宽度 (三个部分的外容器的&lt;code>padding&lt;/code>)&lt;/li>
-&lt;li>center 宽度设置为 100%&lt;/li>
-&lt;li>给 left main right 设置 &lt;code>position: relative;&lt;/code> 以及，&lt;code>left:-100px;&lt;/code> 或者 &lt;code>right:-100px;&lt;/code>&lt;/li>
-&lt;li>给三个部分分别添加 &lt;code>{float: left}&lt;/code> 使其脱离文档流&amp;mdash;&amp;gt; 此时，footer 会被 这三部分覆盖&lt;/li>
-&lt;li>left 区域 设置：&lt;code>margin-left: -100%;&lt;/code> right 区域 设置： &lt;code>margin-left: -100px;&lt;/code>&lt;/li>
+&lt;li>
+&lt;p>添加 &lt;code>center left right&lt;/code>, 并为三个部分设置 &lt;code>float: left; position: relative;&lt;/code>(脱离文档流)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>center&lt;/code> 区域设置 &lt;code>width: 100%;&lt;/code>, 使 &lt;code>center&lt;/code> 占满一整行&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>center&lt;/code> 在最上面，此时需要为 &lt;code>left&lt;/code> 区域 设置 &lt;code>margin-left: -100%;&lt;/code> 将&lt;code>left&lt;/code>移动到&lt;code>center&lt;/code>左侧&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>此时 &lt;code>left&lt;/code> 部分会覆盖 &lt;code>center&lt;/code> 的左侧部分，因此 给三个部分统一的 &lt;code>container&lt;/code> 设置 &lt;code>padding: 0 100px;&lt;/code> (左右两部分的宽度)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>为总的 &lt;code>container&lt;/code> 添加 &lt;code>padding&lt;/code> 之后，&lt;code>left&lt;/code> 部分同样受影响，此时 需要使用 &lt;code>relative&lt;/code> 负值 向左移动一个 &lt;code>left&lt;/code> 宽度： &lt;code>left: -100px;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>同理需要为 &lt;code>right&lt;/code> 区域 设置： &lt;code>margin-left: -100px; right: -100px&lt;/code>&lt;/p>
+&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">header&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>HEADER&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">header&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -280,6 +292,21 @@ loading="lazy"
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="双飞翼">双飞翼&lt;/h3>
 &lt;p>&lt;a class="link" href="https://codepen.io/youkoucoding/pen/qBjPEqX?editors=1100" target="_blank" rel="noopener"
 >shuangfeiyi&lt;/a>&lt;/p>
+&lt;p>point:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>wrapper left right&lt;/code>为三部分设置 &lt;code>float: left&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>center&lt;/code> 部分的 外层 &lt;code>wrapper&lt;/code> 设置 &lt;code>width: 100%;&lt;/code> 占满一整行&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>left&lt;/code> 区域 &lt;code>margin-left: -100%;&lt;/code> &lt;code>right&lt;/code> 区域&lt;code>margin-left: -100px;&lt;/code> 使左右翼分置两侧&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>此时&lt;code>center&lt;/code>的内容被覆盖，除了使用圣杯法的外围 container 的 padding， 双飞翼使用了： 在&lt;code>center&lt;/code>区域添加内层 &lt;code>div&lt;/code> 并给内层 添加 &lt;code>margin: 0 100px;&lt;/code> 压缩中心区域&lt;/p>
+&lt;/li>
+&lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;header&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>头部&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;wrapper&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;center&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>主要区域&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
