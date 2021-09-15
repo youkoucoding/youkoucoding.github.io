@@ -1,4 +1,167 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 14 Sep 2021 11:58:23 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　1</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/</link><pubDate>Tue, 14 Sep 2021 11:58:23 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/frontend-1-cover.jpg" alt="Featured image of post 毎日のフロントエンド　1" />&lt;h1 id="第一天">第一天&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 15 Sep 2021 19:48:33 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　2</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-2/</link><pubDate>Wed, 15 Sep 2021 19:48:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-2/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-2/frontend-1-cover.jpg" alt="Featured image of post 毎日のフロントエンド　2" />&lt;h1 id="第二天">第二天&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> &lt;code>HTML&lt;/code> 的元素有哪些（包含 &lt;code>HTML5&lt;/code>）？&lt;/p>
+&lt;p>块级元素 Block&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>Block&lt;/code> elements are meant to &lt;strong>structure&lt;/strong> the main parts of your page, by dividing your content in coherent blocks.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>常用：div、p、ul、li、ol&lt;/li>
+&lt;li>定义页面结构（Structure elements）: aside、footer、header、nav、section、main&lt;/li>
+&lt;li>文章：address、article、figure、figcaption、h1、h2、h3、h4、h5、h6、pre&lt;/li>
+&lt;li>表格：table、thead、tbody、tfoot、th、td、caption&lt;/li>
+&lt;li>表单：form&lt;/li>
+&lt;li>其他：canvas&lt;/li>
+&lt;/ul>
+&lt;p>行内元素 Inline&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>Inline&lt;/code> elements are meant to differentiate part of a text, to give it a oarticular function or meaning. Inline elements usually comprise a single or few words.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>常用：a、img、span&lt;/li>
+&lt;li>文本：em、i、strong、small&lt;/li>
+&lt;li>表单：button、input、label、option、progress、select、textarea&lt;/li>
+&lt;li>媒体：audio、video&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;code>Block&lt;/code> elements can contain either block or inline elements. However, &lt;code>inline&lt;/code> elements can only contain other inline elements.&lt;/p>
+&lt;/blockquote>
+&lt;p>HTML5 新增&lt;/p>
+&lt;ul>
+&lt;li>audio：音频&lt;/li>
+&lt;li>video：视频&lt;/li>
+&lt;li>header：头部&lt;/li>
+&lt;li>section：内容块&lt;/li>
+&lt;li>footer：底部&lt;/li>
+&lt;li>aslide：侧边&lt;/li>
+&lt;li>nav：导航&lt;/li>
+&lt;li>address：地址&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;p>边框(borders):&lt;/p>
+&lt;ul>
+&lt;li>border-radius 圆角&lt;/li>
+&lt;li>box-shadow 盒阴影&lt;/li>
+&lt;li>border-image 边框图像&lt;/li>
+&lt;/ul>
+&lt;p>背景:&lt;/p>
+&lt;ul>
+&lt;li>background-size 背景图片的尺寸&lt;/li>
+&lt;li>background_origin 背景图片的定位区域&lt;/li>
+&lt;li>background-clip 背景图片的绘制区域&lt;/li>
+&lt;/ul>
+&lt;p>渐变：&lt;/p>
+&lt;ul>
+&lt;li>linear-gradient 线性渐变&lt;/li>
+&lt;li>radial-gradient 径向渐变&lt;/li>
+&lt;/ul>
+&lt;p>文本效果;&lt;/p>
+&lt;ul>
+&lt;li>word-break&lt;/li>
+&lt;li>word-wrap&lt;/li>
+&lt;li>text-overflow&lt;/li>
+&lt;li>text-shadow&lt;/li>
+&lt;li>text-wrap&lt;/li>
+&lt;li>text-outline&lt;/li>
+&lt;li>text-justify&lt;/li>
+&lt;/ul>
+&lt;p>转换：&lt;/p>
+&lt;ul>
+&lt;li>2D 转换属性&lt;/li>
+&lt;li>transform&lt;/li>
+&lt;li>transform-origin&lt;/li>
+&lt;/ul>
+&lt;p>2D 转换方法&lt;/p>
+&lt;ul>
+&lt;li>translate(x,y)&lt;/li>
+&lt;li>translateX(n)&lt;/li>
+&lt;li>translateY(n)&lt;/li>
+&lt;li>rotate(angle)&lt;/li>
+&lt;li>scale(n)&lt;/li>
+&lt;li>scaleX(n)&lt;/li>
+&lt;li>scaleY(n)&lt;/li>
+&lt;li>rotate(angle)&lt;/li>
+&lt;li>matrix(n,n,n,n,n,n)&lt;/li>
+&lt;/ul>
+&lt;p>3D 转换：
+*3D 转换属性：&lt;/p>
+&lt;ul>
+&lt;li>transform&lt;/li>
+&lt;li>transform-origin&lt;/li>
+&lt;li>transform-style&lt;/li>
+&lt;/ul>
+&lt;p>3D 转换方法&lt;/p>
+&lt;ul>
+&lt;li>translate3d(x,y,z)&lt;/li>
+&lt;li>translateX(x)&lt;/li>
+&lt;li>translateY(y)&lt;/li>
+&lt;li>translateZ(z)&lt;/li>
+&lt;li>scale3d(x,y,z)&lt;/li>
+&lt;li>scaleX(x)&lt;/li>
+&lt;li>scaleY(y)&lt;/li>
+&lt;li>scaleZ(z)&lt;/li>
+&lt;li>rotate3d(x,y,z,angle)&lt;/li>
+&lt;li>rotateX(x)&lt;/li>
+&lt;li>rotateY(y)&lt;/li>
+&lt;li>rotateZ(z)&lt;/li>
+&lt;li>perspective(n)&lt;/li>
+&lt;/ul>
+&lt;p>过渡&lt;/p>
+&lt;ul>
+&lt;li>transition&lt;/li>
+&lt;/ul>
+&lt;p>动画&lt;/p>
+&lt;ul>
+&lt;li>@Keyframes 规则&lt;/li>
+&lt;li>animation&lt;/li>
+&lt;/ul>
+&lt;p>弹性盒子(flexbox)
+多媒体查询@media&lt;/p>
+&lt;p>&lt;strong>#Question:&lt;/strong> &lt;code>CSS3&lt;/code> 有哪些新增的特性？&lt;/p>
+&lt;h2 id="javascript">Javascript&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 写一个方法去掉字符串中的空格&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39; s t r &amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// A frozen object can no longer be changed
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">POSITION&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">freeze&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="nx">left&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">Symbol&lt;/span>&lt;span class="p">(),&lt;/span>
+&lt;span class="nx">right&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">Symbol&lt;/span>&lt;span class="p">(),&lt;/span>
+&lt;span class="nx">both&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">Symbol&lt;/span>&lt;span class="p">(),&lt;/span>
+&lt;span class="nx">center&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">Symbol&lt;/span>&lt;span class="p">(),&lt;/span>
+&lt;span class="nx">all&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">Symbol&lt;/span>&lt;span class="p">(),&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">trim&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">position&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">POSITION&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">both&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!!&lt;/span>&lt;span class="nx">POSITION&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">position&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;unexpected position value&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">switch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">position&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="nx">POSITION&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">left&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/^\s+/&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="nx">POSITION&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">right&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/\s+$/&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="nx">POSITION&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">both&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/^\s+/&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/\s+$/&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="nx">POSITION&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">center&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">match&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/\w\s+\w/&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/(\w)(\s+)(\w)/&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="sb">`$1$3`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="nx">POSITION&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">all&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/\s/g&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">default&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">trim&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`|&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">result&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">|`&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// |s t r|
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">Regex&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">string&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/\s/g&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">join&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">string&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://marksheet.io/html-block-inline.html" target="_blank" rel="noopener"
+>HTML - Free tutorial to learn HTML and CSS&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　1</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/</link><pubDate>Tue, 14 Sep 2021 11:58:23 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/frontend-1-cover.jpg" alt="Featured image of post 毎日のフロントエンド　1" />&lt;h1 id="第一天">第一天&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;p>&lt;strong>#Question:&lt;/strong> 页面导入样式时，使用 link 和@import 有什么区别？&lt;/p>
 &lt;ol>
