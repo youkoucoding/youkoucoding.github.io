@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 15 Sep 2021 19:48:33 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　2</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-2/</link><pubDate>Wed, 15 Sep 2021 19:48:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-2/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-2/frontend-1-cover.jpg" alt="Featured image of post 毎日のフロントエンド　2" />&lt;h1 id="第二天">第二天&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 16 Sep 2021 17:39:42 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　3</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-3/</link><pubDate>Thu, 16 Sep 2021 17:39:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-3/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-3/frontend-1-cover.jpg" alt="Featured image of post 毎日のフロントエンド　3" />&lt;h1 id="第三天">第三天&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> &lt;code>HTML&lt;/code> 全局属性&lt;code>(global attribute)&lt;/code>有哪些（包含&lt;code>HTML5&lt;/code>）?&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes" target="_blank" rel="noopener"
+>Global attributes - HTML: HyperText Markup Language | MDN&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>&lt;code>Global attributes&lt;/code>&lt;/strong> are attributes common to &lt;strong>all&lt;/strong> &lt;code>HTML&lt;/code> elements; they can be used on all elements, though they may have no effect on some elements.&lt;/p>
+&lt;p>&lt;strong>&lt;code>document.body.__proto__&lt;/code>&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>accesskey&lt;/code>: 生成键盘快捷键提示。Provides a hint for generating a keyboard shortcut for the current element.&lt;/li>
+&lt;li>&lt;code>autocapitalize&lt;/code>: 控制用户的文本输入 是否 如何 自动大写。 Controls whether and how text input is automatically capitalized as it is entered/edited by user.&lt;/li>
+&lt;li>&lt;code>autofocus&lt;/code>: 标识一个元素是否在页面加载时候聚焦。 Indicates that an element is to be focused on page load, or as soon as the &lt;code>&amp;lt;dialog&amp;gt;&lt;/code> it is part of is displayed. Boolean, initially false.&lt;/li>
+&lt;li>&lt;code>class&lt;/code>: 一个以空格分隔的元素的类名（&lt;code>classes&lt;/code> ）列表，它允许 CSS 和 Javascript 通过类选择器 (&lt;code>class selectors&lt;/code>) 或 DOM 方法( &lt;code>document.getElementsByClassName&lt;/code>)来选择和访问特定的元素。&lt;/li>
+&lt;li>&lt;code>contenteditable&lt;/code>: 指定元素内容是否可编辑。 An enumerated attribute indicating if the element should be editable by the user.&lt;/li>
+&lt;li>&lt;code>data-*&lt;/code>: 一类自定义数据属性，它赋予我们在所有 HTML 元素上嵌入自定义数据属性的能力。 Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between &lt;code>HTML&lt;/code> and its &lt;code>DOM&lt;/code> representation that may be used by scripts.&lt;/li>
+&lt;li>&lt;code>dir&lt;/code>: 设置元素文本方向（默认 ltr；rtl）。An enumberated attribute indicating the directionality of the element&amp;rsquo;s text. It can have the following values.&lt;/li>
+&lt;li>&lt;code>draggable&lt;/code>: 设置元素是否可拖拽。 An enumerated attribute indicating whether the element can be dragged, using the &lt;code>Drag and Drop API&lt;/code>.&lt;/li>
+&lt;li>&lt;code>enterkeyhint&lt;/code>: Hints what action label (or icon) to present for the enter key on virtual keyboards.&lt;/li>
+&lt;li>&lt;code>hidden&lt;/code>: 布尔属性表示该元素尚未或不再相关。例如，它可用于隐藏在登录过程完成之前无法使用的页面元素。A Boolean attribute indicates that the element is not yet, or is no longer, relevant. For example, it can be used to hide elements of the page tha can&amp;rsquo;t be used until the login process has been completed. The broweser won&amp;rsquo;t render such elements. This attribute must not be used to hide content that could legitimately be shown.&lt;/li>
+&lt;li>&lt;code>id&lt;/code>: 元素 id，文档内唯一。 Defines a uniwue identifier which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling(with CSS).&lt;/li>
+&lt;li>&lt;code>inputmode&lt;/code>: 向浏览器提供有关在编辑此元素或其内容时要使用的虚拟键盘配置类型的提示。主要用于 &lt;code>&amp;lt;input&amp;gt;&lt;/code>元素。 Provides a hint to browesers as to the type of virtual keyboard configuration to use when editing this element or its contents. Used primarily on &lt;code>&amp;lt;input&amp;gt;&lt;/code> elements.&lt;/li>
+&lt;li>&lt;code>is&lt;/code>, &lt;code>itemid&lt;/code>, &lt;code>itemprop&lt;/code>, &lt;code>itemref&lt;/code>, &lt;code>itemscope&lt;/code>, &lt;code>itemtype&lt;/code>, &lt;code>lang&lt;/code>, &lt;code>part&lt;/code>, &lt;code>slot&lt;/code>, &lt;code>spellcheck&lt;/code>, &lt;code>style&lt;/code>, &lt;code>tabindex&lt;/code>, &lt;code>title&lt;/code>, &lt;code>translate&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 在页面上隐藏元素的方法有哪些？&lt;/p>
+&lt;p>占位：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>visibility: hidden;&lt;/code> 页面会渲染只是不限显示&lt;/li>
+&lt;li>&lt;code>margin-left: -100%;&lt;/code>&lt;/li>
+&lt;li>&lt;code>opacity: 0;&lt;/code>&lt;/li>
+&lt;li>&lt;code>transform: scale(0);&lt;/code>&lt;/li>
+&lt;li>&lt;code>z-index: -9999;&lt;/code> (置于最下层)&lt;/li>
+&lt;li>&lt;code>ransform: skew(90deg, -90deg);&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>不占位：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>display: none;&lt;/code> 页面不会渲染，可以减少首屏渲染的时间，但是会引起回流和重绘&lt;/li>
+&lt;li>&lt;code>width: 0; height:0; overflow: hidden;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>仅针对 块内&lt;em>文本&lt;/em>元素：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>text-indent: -9999px;&lt;/code>&lt;/li>
+&lt;li>&lt;code>font-size: 0;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JAVASCRIPT&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 去除字符串中最后一个指定的字符&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// regExp
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">deleteLastStr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">target&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">target&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">str&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;string&amp;#39;&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">target&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;string&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">reg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">RegExp&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">(?=([^&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">]*)$)`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">reg&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　2</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-2/</link><pubDate>Wed, 15 Sep 2021 19:48:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-2/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-2/frontend-1-cover.jpg" alt="Featured image of post 毎日のフロントエンド　2" />&lt;h1 id="第二天">第二天&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;p>&lt;strong>#Question:&lt;/strong> &lt;code>HTML&lt;/code> 的元素有哪些（包含 &lt;code>HTML5&lt;/code>）？&lt;/p>
 &lt;p>块级元素 Block&lt;/p>
