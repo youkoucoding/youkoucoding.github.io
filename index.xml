@@ -1,4 +1,175 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 16 Sep 2021 17:39:42 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　3</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-3/</link><pubDate>Thu, 16 Sep 2021 17:39:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-3/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-3/frontend-1-cover.jpg" alt="Featured image of post 毎日のフロントエンド　3" />&lt;h1 id="第三天">第三天&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 18 Sep 2021 13:33:07 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　4</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-4/</link><pubDate>Sat, 18 Sep 2021 13:33:07 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-4/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-4/frontend-1-cover.jpg" alt="Featured image of post 毎日のフロントエンド　4" />&lt;h1 id="第四天">第四天&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> HTML5 的文件离线储存怎么使用，工作原理是什么？&lt;/p>
+&lt;p>TL;DR &amp;ndash; &lt;code>HTML5&lt;/code> local storage is an alternative to &lt;code>cookies&lt;/code>, allowing web applications to store user information in their browser.&lt;/p>
+&lt;p>With web storagem web applications can store data locally within the user&amp;rsquo;s browser.&lt;/p>
+&lt;p>Before HTML5, application data had to be stored in cookies, included in every server request. Web storage is more secure, and large amounts of data can be stored locally, without affecting website performance.&lt;/p>
+&lt;p>Web storage is per origin (per domain and protocal). All pages, from one origin, can store and access the same data.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>window.localStorage&lt;/code> - stores data with no expiration date.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>window.sessionStorage&lt;/code> - stores data for one session (data is lost when the browser tab is closed)&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="cookies-vs-local-storage-vs-session-storage">Cookies VS. Local Storage VS. Session Storage&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>Cookies&lt;/th>
+&lt;th>Local Storage&lt;/th>
+&lt;th>Session Storage&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Capacity&lt;/td>
+&lt;td>4kb&lt;/td>
+&lt;td>10mb&lt;/td>
+&lt;td>5mb&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Browsers&lt;/td>
+&lt;td>HTML4/HTML5&lt;/td>
+&lt;td>HTML5&lt;/td>
+&lt;td>HTML5&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Accessible form&lt;/td>
+&lt;td>Any window&lt;/td>
+&lt;td>Any window&lt;/td>
+&lt;td>Same tab&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Expires&lt;/td>
+&lt;td>Manually set&lt;/td>
+&lt;td>Never&lt;/td>
+&lt;td>On tab close&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Storage Location&lt;/td>
+&lt;td>Browser and Server&lt;/td>
+&lt;td>Browser only&lt;/td>
+&lt;td>Browser only&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Sent with Request&lt;/td>
+&lt;td>Yes&lt;/td>
+&lt;td>No&lt;/td>
+&lt;td>No&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector" target="_blank" rel="noopener"
+>Storage Inspector - Firefox Developer Tools | MDN&lt;/a>&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> CSS 选择器有哪些？哪些属性可以继承？&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="_blank" rel="noopener"
+>CSS selectors - CSS: Cascading Style Sheets | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;strong>&lt;em>&lt;code>CSS Selectors&lt;/code>&lt;/em>&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>&lt;code>Basic selectors&lt;/code>:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>universal selector&lt;/code>通用选择器： &lt;code>*&lt;/code> will match all the elements of the document.&lt;/li>
+&lt;li>&lt;code>Type selector&lt;/code> 元素选择器： Syntax: &lt;code>element name&lt;/code> input -&amp;gt; &lt;code>&amp;lt;input&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>Class selector&lt;/code> 类选择器具： Syntax: &lt;code>.classname&lt;/code>, &lt;code>.index&lt;/code> will match any element that has a class of &amp;ldquo;index&amp;rdquo;.&lt;/li>
+&lt;li>&lt;code>ID selector&lt;/code>： Syntax: &lt;code>#idname&lt;/code>, &lt;code>#toc&lt;/code> will match the element that has the ID &amp;ldquo;toc&amp;rdquo;.&lt;/li>
+&lt;li>&lt;code>Attribute selector&lt;/code> 属性选择器： Syntax: &lt;code>[attr]``[attr=value]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>&lt;code>Grouping selectors&lt;/code>:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Selector list&lt;/code>: Syntax: A, B Example: &lt;code>div&lt;/code>, &lt;code>span&lt;/code> will match both &lt;code>&amp;lt;span&amp;gt;&lt;/code> and &lt;code>&amp;lt;div&amp;gt;&lt;/code> elements.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>&lt;code>Combinators&lt;/code>:&lt;/strong> 组合器&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Descendant combinator&lt;/code> 后代组合器&lt;/li>
+&lt;li>&lt;code>Child combinator&lt;/code> 直接子代组合器&lt;/li>
+&lt;li>&lt;code>General sibling combinator&lt;/code> 一般兄弟组合器&lt;/li>
+&lt;li>&lt;code>Adjacent sibling combinator&lt;/code> 紧邻组合器&lt;/li>
+&lt;li>&lt;code>Column combinator&lt;/code> 列组合器&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>&lt;code>Pseudo&lt;/code>:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Pseudo classes&lt;/code> 伪类： &lt;code>:&lt;/code> The &lt;code>:&lt;/code> pseudo allow the selection of elements based on state information that is not contained in the document tree. &lt;em>Example&lt;/em>: &lt;code>a::visited&lt;/code> will match all &lt;code>&amp;lt;a&amp;gt;&lt;/code> elements that have been visited by the user.&lt;/li>
+&lt;li>&lt;code>Psendo elements&lt;/code> 伪元素： The &lt;code>::&lt;/code> pseudo represent entities that are not included in HTML. &lt;em>Example&lt;/em>: &lt;code>p::first-line&lt;/code> will match the first line of all &lt;code>&amp;lt;p&amp;gt;&lt;/code> elements.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>&lt;em>Inherit : yes&lt;/em>&lt;/strong> 可继承属性：&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.jianshu.com/p/fbfc6c751e34" target="_blank" rel="noopener"
+>css 有哪些属性可以继承？&lt;/a>
+&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance" target="_blank" rel="noopener"
+>层叠与继承 - 学习 Web 开发 | MDN&lt;/a>&lt;/p>
+&lt;h4 id="cascade">&lt;strong>&lt;code>Cascade&lt;/code>&lt;/strong>&lt;/h4>
+&lt;p>Stylesheets cascade - at a very simple level, this means that the order of CSS rules matter; whjen two rules apply that have equal specificity the one that comes last in the CSS is the one that will be used.&lt;/p>
+&lt;p>当两条同样级别的规则应用到同一个元素上时， 生效的是 后一个。&lt;/p>
+&lt;h4 id="inheritance">&lt;strong>&lt;code>Inheritance&lt;/code>&lt;/strong>&lt;/h4>
+&lt;p>Some css property values set on parent elements are inherited by their child elements, and some aren&amp;rsquo;t.&lt;/p>
+&lt;h5 id="可继承的css属性">可继承的`CSS``属性：&lt;/h5>
+&lt;ol>
+&lt;li>字体相关： &lt;code>font&lt;/code> &lt;code>font-family&lt;/code> &amp;hellip;&amp;hellip;&lt;/li>
+&lt;li>文本相关属性： &lt;code>text-indent&lt;/code>, &lt;code>text--align&lt;/code>, &lt;code>color&lt;/code>&amp;hellip;&amp;hellip;&lt;/li>
+&lt;li>元素可见性： &lt;code>visibility&lt;/code>&lt;/li>
+&lt;li>表格布局属性： &lt;code>caption-side, border-collapse, border-spacing,empty-cells, table-layout&lt;/code>&lt;/li>
+&lt;li>列表属性： &lt;code>list-style-type&lt;/code> &amp;hellip;&amp;hellip;&lt;/li>
+&lt;li>生成内容属性： &lt;code>quotes&lt;/code>&lt;/li>
+&lt;li>光标属性： &lt;code>cursor&lt;/code>&lt;/li>
+&lt;li>页面样式属性： &lt;code>page, page-break-inside, windows, orphans&lt;/code>&amp;hellip;&amp;hellip;&lt;/li>
+&lt;li>声音样式属性： &lt;code>speak&lt;/code>&amp;hellip;&amp;hellip;&lt;/li>
+&lt;/ol>
+&lt;h5 id="无继承性的属性">无继承性的属性&lt;/h5>
+&lt;ol>
+&lt;li>&lt;code>display&lt;/code>&lt;/li>
+&lt;li>文本属性： &lt;code>vertical-align&lt;/code> &lt;code>text-decoration&lt;/code> &lt;code>text-shadow&lt;/code> &lt;code>white-space&lt;/code> &lt;code>unicode-bidi&lt;/code>&lt;/li>
+&lt;li>盒子模型的属性:宽度、高度、内外边距、边框等&lt;/li>
+&lt;li>背景属性：背景图片、颜色、位置等&lt;/li>
+&lt;li>定位属性：浮动、清除浮动、定位 &lt;code>position&lt;/code> 等&lt;/li>
+&lt;li>生成内容属性: &lt;code>content&lt;/code> &lt;code>counter-reset&lt;/code> &lt;code>counter-increment&lt;/code>&lt;/li>
+&lt;li>轮廓样式属性: &lt;code>outline-style&lt;/code> &lt;code>outline-width&lt;/code> &lt;code>outline-color&lt;/code> &lt;code>outline&lt;/code>&lt;/li>
+&lt;li>页面样式属性: &lt;code>size&lt;/code> &lt;code>page-break-before&lt;/code> &lt;code>page-break-after&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h5 id="继承中比较特殊的几点">继承中比较特殊的几点&lt;/h5>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>a&lt;/code> 标签的字体颜色不能被继承&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>h1-h6&lt;/code> 标签字体的大下也是不能被继承的 ,因为它们都有一个默认值&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 写一个方法把下划线命名转成大驼峰命名&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">toCamel&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/(\w)/&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">match&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">$1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="sb">`&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">$1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toUpperCase&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">match&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/\w_\w/&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="sr">/(\w)(_)(\w)/&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">(&lt;/span>&lt;span class="nx">match&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">$1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">$2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">$3&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="sb">`&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">$1&lt;/span>&lt;span class="si">}${&lt;/span>&lt;span class="nx">$3&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toUpperCase&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">toCamel&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;a_c_def&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// ACDef
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">toCamelCase&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">str&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;string&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">str&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;_&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">s&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="o">!!&lt;/span>&lt;span class="nx">s&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// 验证是否存在
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">charAt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">toUpperCase&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">substr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>毎日のフロントエンド　3</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-3/</link><pubDate>Thu, 16 Sep 2021 17:39:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-3/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-3/frontend-1-cover.jpg" alt="Featured image of post 毎日のフロントエンド　3" />&lt;h1 id="第三天">第三天&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;p>&lt;strong>#Question:&lt;/strong> &lt;code>HTML&lt;/code> 全局属性&lt;code>(global attribute)&lt;/code>有哪些（包含&lt;code>HTML5&lt;/code>）?&lt;/p>
 &lt;blockquote>
@@ -1538,7 +1709,7 @@ cursor: pointer;
 &lt;/style>
 &lt;div class="s_video_simple __h_video">
 &lt;a href="https://vimeo.com/4.8912912e&amp;#43;07" rel="noopener" target="_blank">
-&lt;img src="https://i.vimeocdn.com/video/337401969_640" srcset="https://i.vimeocdn.com/video/337401969_640 1x, https://i.vimeocdn.com/video/337401969_640 2x" alt="Sing Jan Swing - Kinetic Type">
+&lt;img src="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640" srcset="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 1x, https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 2x" alt="Sing Jan Swing - Kinetic Type">
 &lt;div class="play">&lt;svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61">&lt;circle cx="30.5" cy="30.5" r="30.5" opacity=".8" fill="#000">&lt;/circle>&lt;path d="M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z" fill="#fff">&lt;/path>&lt;/svg>&lt;/div>&lt;/a>&lt;/div></description></item><item><title>Placeholder Text</title><link>https://youkoucoding.github.io/p/placeholder-text/</link><pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate><guid>https://youkoucoding.github.io/p/placeholder-text/</guid><description>&lt;img src="https://youkoucoding.github.io/p/placeholder-text/matt-le-SJSpo9hQf7s-unsplash.jpg" alt="Featured image of post Placeholder Text" />&lt;p>Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p>
 &lt;p>Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p>
 &lt;ol>
