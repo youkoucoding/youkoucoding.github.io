@@ -1,4 +1,156 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 19 Sep 2021 12:16:31 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 5</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-5/</link><pubDate>Sun, 19 Sep 2021 12:16:31 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-5/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-5/frontend-1-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 5" />&lt;p>#　第五日&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 20 Sep 2021 16:14:06 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　6</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/</link><pubDate>Mon, 20 Sep 2021 16:14:06 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/frontend-6-cover.jpg" alt="Featured image of post 毎日のフロントエンド　6" />&lt;h1 id="第六日">第六日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> label 都有哪些作用？并举相应的例子说明&lt;/p>
+&lt;p>The &lt;code>&amp;lt;label&amp;gt;&lt;/code> HTML element represents a caption for an item in a user interface.&lt;/p>
+&lt;p>表示用户界面中某个元素的说明。&lt;/p>
+&lt;p>Associating a &lt;code>&amp;lt;label&amp;gt;&lt;/code> with an &lt;code>&amp;lt;input&amp;gt;&lt;/code> element offers some major advantages:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>A screen reader will read out the label when the user is focused on the form &lt;code>&amp;lt;input&amp;gt;&lt;/code>, making it easier for an assistive technology user to understand what data should be entered.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>When a user clicks or touches a label, the browser passes the focus to its associated input.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>&lt;strong>Attribute&lt;/strong>&lt;/em>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>for&lt;/code>: The value of the for attritue must be a single &lt;code>id&lt;/code> for a &lt;code>labelable&lt;/code> form-related element in the same document as the &lt;code>&amp;lt;label&amp;gt;&lt;/code> element.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a class="link" href="https://demo.cssworld.cn/6/4-3.php" target="_blank" rel="noopener"
+>focus 锚点定位和 overflow 的选项卡切换效果 » CSS 世界 demo 演示&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://codepen.io/mts123/pen/EzqdbM" target="_blank" rel="noopener"
+>100dayscss-051&lt;/a>&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 用 css 创建一个三角形，并简述原理&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 101;
+flex-basis: 242px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/css-box.png" data-size="499x494">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/css-box.png"
+width="499"
+height="494"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/css-box_hudbcf341c124358461fa3650f2ccd774f_15606_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/css-box_hudbcf341c124358461fa3650f2ccd774f_15606_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="css - 盒子模型">
+&lt;/a>
+&lt;figcaption>css - 盒子模型&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>一个盒子包括: margin+border+padding+content&lt;/li>
+&lt;li>上下左右边框交界处出呈现平滑的斜线. 利用这个特点, 通过设置不同的上下左右边框宽度或者颜色可以得到小三角, 小梯形等&lt;/li>
+&lt;li>调整宽度大小可以调节三角形形状&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>设置盒子的宽高度, 及上下左右边框, 会如下图：
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 102;
+flex-basis: 247px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-1.gif" data-size="69x67">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-1.gif"
+width="69"
+height="67"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-1_hud2412fbd19246be69c29834d1e9c23c9_465_480x0_resize_box.gif 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-1_hud2412fbd19246be69c29834d1e9c23c9_465_1024x0_resize_box.gif 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">#&lt;/span>&lt;span class="nn">test1&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#ff9600&lt;/span> &lt;span class="mh">#3366ff&lt;/span> &lt;span class="mh">#12ad2a&lt;/span> &lt;span class="mh">#f0eb7a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c">/* border-style: solid; */&lt;/span>
+&lt;span class="c">/* border-width: 20px; */&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>在上面基础上, 我们把宽高度都设为 0 时, 会呈现上述的边界斜线
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 100;
+flex-basis: 240px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-2.gif" data-size="50x50">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-2.gif"
+width="50"
+height="50"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-2_hua34d33cbee86f18e78e19ed046d4dd54_362_480x0_resize_box.gif 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-2_hua34d33cbee86f18e78e19ed046d4dd54_362_1024x0_resize_box.gif 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">#&lt;/span>&lt;span class="nn">test2&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">overflow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">hidden&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/* 这里设置overflow, font-size, line-height */&lt;/span>
+&lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/*是因为, 虽然宽高度为0, 但在IE6下会具有默认的 */&lt;/span>
+&lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/* 字体大小和行高, 导致盒子呈现被撑开的长矩形 */&lt;/span>
+&lt;span class="k">border-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#ff9600&lt;/span> &lt;span class="mh">#3366ff&lt;/span> &lt;span class="mh">#12ad2a&lt;/span> &lt;span class="mh">#f0eb7a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c">/* border-style: solid; */&lt;/span>
+&lt;span class="c">/* border-width: 20px; */&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>只保留上面的橙色
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 143;
+flex-basis: 343px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-3.gif" data-size="53x37">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-3.gif"
+width="53"
+height="37"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-3_hu8a9ac48df02f8ca02cc1508a8615f158_144_480x0_resize_box.gif 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-3_hu8a9ac48df02f8ca02cc1508a8615f158_144_1024x0_resize_box.gif 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">#&lt;/span>&lt;span class="nn">test3&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c">/* overflow: hidden; */&lt;/span>
+&lt;span class="c">/* font-size: 0; */&lt;/span>
+&lt;span class="c">/* line-height: 0; */&lt;/span>
+&lt;span class="k">border-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#ff9600&lt;/span> &lt;span class="kc">transparent&lt;/span> &lt;span class="kc">transparent&lt;/span> &lt;span class="kc">transparent&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c">/* border-style: solid; */&lt;/span>
+&lt;span class="c">/* border-width: 20px; */&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 写一个去除制表符和换行符的方法&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * \f 匹配 换页字符。
+&lt;/span>&lt;span class="cm"> * \n 匹配 换行字符。
+&lt;/span>&lt;span class="cm"> * \r 匹配 回车符字符。
+&lt;/span>&lt;span class="cm"> * \t 匹配 制表字符。
+&lt;/span>&lt;span class="cm"> * \v 匹配 垂直制表符。
+&lt;/span>&lt;span class="cm"> * @param str
+&lt;/span>&lt;span class="cm"> * @returns {void | string}
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">removeEmpty&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/[\t\n\v\r\f]/g&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="nx">removeEmpty&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`|
+&lt;/span>&lt;span class="sb">
+&lt;/span>&lt;span class="sb">|`&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="http://caibaojian.com/css-border-triangle.html" target="_blank" rel="noopener"
+>CSS 三角形的实现原理及运用-前端开发博客&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.jianshu.com/p/9a463d50e441" target="_blank" rel="noopener"
+>CSS 绘制三角形—border 法 - 简书&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　5</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-5/</link><pubDate>Sun, 19 Sep 2021 12:16:31 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-5/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-5/frontend-1-cover.jpg" alt="Featured image of post 毎日のフロントエンド　5" />&lt;h1 id="第五日">第五日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;p>&lt;strong>#Question:&lt;/strong> 简述超链接 target 属性的取值和作用&lt;/p>
 &lt;p>&lt;code>target&lt;/code> Where to display the linked URL. The following keywords have special meanings for where load the URL&lt;/p>

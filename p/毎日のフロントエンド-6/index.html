@@ -1,0 +1,304 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　6</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　6">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-09-20T16:14:06+09:00"><meta property="article:modified_time" content="2021-09-20T16:14:06+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/frontend-6-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　6">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/frontend-6-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/frontend-6-cover_hu6fb94db3450be5959357d7afb44e190b_2444740_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/frontend-6-cover_hu6fb94db3450be5959357d7afb44e190b_2444740_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/frontend-6-cover_hu6fb94db3450be5959357d7afb44e190b_2444740_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド　6">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/>毎日のフロントエンド　6</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Sep 20, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 2 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第六日>第六日</h1>
+<h2 id=html>HTML</h2>
+<p><strong>#Question:</strong> label 都有哪些作用？并举相应的例子说明</p>
+<p>The <code>&lt;label></code> HTML element represents a caption for an item in a user interface.</p>
+<p>表示用户界面中某个元素的说明。</p>
+<p>Associating a <code>&lt;label></code> with an <code>&lt;input></code> element offers some major advantages:</p>
+<ul>
+<li>
+<p>A screen reader will read out the label when the user is focused on the form <code>&lt;input></code>, making it easier for an assistive technology user to understand what data should be entered.</p>
+</li>
+<li>
+<p>When a user clicks or touches a label, the browser passes the focus to its associated input.</p>
+</li>
+</ul>
+<p><em><strong>Attribute</strong></em></p>
+<ul>
+<li><code>for</code>: The value of the for attritue must be a single <code>id</code> for a <code>labelable</code> form-related element in the same document as the <code>&lt;label></code> element.</li>
+</ul>
+<p><a class=link href=https://demo.cssworld.cn/6/4-3.php target=_blank rel=noopener>focus 锚点定位和 overflow 的选项卡切换效果 » CSS 世界 demo 演示</a></p>
+<p><a class=link href=https://codepen.io/mts123/pen/EzqdbM target=_blank rel=noopener>100dayscss-051</a></p>
+<h2 id=css>CSS</h2>
+<p><strong>#Question:</strong> 用 css 创建一个三角形，并简述原理</p>
+<p><figure class=gallery-image style=flex-grow:101;flex-basis:242px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/css-box.png data-size=499x494>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/css-box.png width=499 height=494 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/css-box_hudbcf341c124358461fa3650f2ccd774f_15606_480x0_resize_box_3.png 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/css-box_hudbcf341c124358461fa3650f2ccd774f_15606_1024x0_resize_box_3.png 1024w" loading=lazy alt="css - 盒子模型">
+</a>
+<figcaption>css - 盒子模型</figcaption>
+</figure></p>
+<ul>
+<li>一个盒子包括: margin+border+padding+content</li>
+<li>上下左右边框交界处出呈现平滑的斜线. 利用这个特点, 通过设置不同的上下左右边框宽度或者颜色可以得到小三角, 小梯形等</li>
+<li>调整宽度大小可以调节三角形形状</li>
+</ul>
+<ol>
+<li>设置盒子的宽高度, 及上下左右边框, 会如下图：
+<figure class=gallery-image style=flex-grow:102;flex-basis:247px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-1.gif data-size=69x67>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-1.gif width=69 height=67 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-1_hud2412fbd19246be69c29834d1e9c23c9_465_480x0_resize_box.gif 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-1_hud2412fbd19246be69c29834d1e9c23c9_465_1024x0_resize_box.gif 1024w" loading=lazy>
+</a>
+</figure></li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=p>#</span><span class=nn>test1</span> <span class=p>{</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>20</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>20</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>border-color</span><span class=p>:</span> <span class=mh>#ff9600</span> <span class=mh>#3366ff</span> <span class=mh>#12ad2a</span> <span class=mh>#f0eb7a</span><span class=p>;</span>
+  <span class=c>/* border-style: solid; */</span>
+  <span class=c>/* border-width: 20px; */</span>
+  <span class=k>border</span><span class=p>:</span> <span class=mi>20</span><span class=kt>px</span> <span class=kc>solid</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><ol start=2>
+<li>在上面基础上, 我们把宽高度都设为 0 时, 会呈现上述的边界斜线
+<figure class=gallery-image style=flex-grow:100;flex-basis:240px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-2.gif data-size=50x50>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-2.gif width=50 height=50 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-2_hua34d33cbee86f18e78e19ed046d4dd54_362_480x0_resize_box.gif 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-2_hua34d33cbee86f18e78e19ed046d4dd54_362_1024x0_resize_box.gif 1024w" loading=lazy>
+</a>
+</figure></li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=p>#</span><span class=nn>test2</span> <span class=p>{</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+  <span class=k>overflow</span><span class=p>:</span> <span class=kc>hidden</span><span class=p>;</span> <span class=c>/* 这里设置overflow, font-size, line-height */</span>
+  <span class=k>font-size</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span> <span class=c>/*是因为, 虽然宽高度为0, 但在IE6下会具有默认的 */</span>
+  <span class=k>line-height</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span> <span class=c>/* 字体大小和行高, 导致盒子呈现被撑开的长矩形 */</span>
+  <span class=k>border-color</span><span class=p>:</span> <span class=mh>#ff9600</span> <span class=mh>#3366ff</span> <span class=mh>#12ad2a</span> <span class=mh>#f0eb7a</span><span class=p>;</span>
+  <span class=c>/* border-style: solid; */</span>
+  <span class=c>/* border-width: 20px; */</span>
+  <span class=k>border</span><span class=p>:</span> <span class=mi>20</span><span class=kt>px</span> <span class=kc>solid</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><ol start=3>
+<li>只保留上面的橙色
+<figure class=gallery-image style=flex-grow:143;flex-basis:343px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-3.gif data-size=53x37>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-3.gif width=53 height=37 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-3_hu8a9ac48df02f8ca02cc1508a8615f158_144_480x0_resize_box.gif 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/box-3_hu8a9ac48df02f8ca02cc1508a8615f158_144_1024x0_resize_box.gif 1024w" loading=lazy>
+</a>
+</figure></li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=p>#</span><span class=nn>test3</span> <span class=p>{</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+  <span class=c>/* overflow: hidden; */</span>
+  <span class=c>/* font-size: 0; */</span>
+  <span class=c>/* line-height: 0; */</span>
+  <span class=k>border-color</span><span class=p>:</span> <span class=mh>#ff9600</span> <span class=kc>transparent</span> <span class=kc>transparent</span> <span class=kc>transparent</span><span class=p>;</span>
+  <span class=c>/* border-style: solid; */</span>
+  <span class=c>/* border-width: 20px; */</span>
+  <span class=k>border</span><span class=p>:</span> <span class=mi>20</span><span class=kt>px</span> <span class=kc>solid</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><h2 id=javascript>JavaScript</h2>
+<p><strong>#Question:</strong> 写一个去除制表符和换行符的方法</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=cm>/**
+</span><span class=cm> * \f  匹配 换页字符。
+</span><span class=cm> * \n  匹配 换行字符。
+</span><span class=cm> * \r  匹配 回车符字符。
+</span><span class=cm> * \t  匹配 制表字符。
+</span><span class=cm> * \v  匹配 垂直制表符。
+</span><span class=cm> * @param str
+</span><span class=cm> * @returns {void | string}
+</span><span class=cm> */</span>
+<span class=kr>const</span> <span class=nx>removeEmpty</span> <span class=o>=</span> <span class=p>(</span><span class=nx>str</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>str</span><span class=p>.</span><span class=nx>replace</span><span class=p>(</span><span class=sr>/[\t\n\v\r\f]/g</span><span class=p>,</span> <span class=s1>&#39;&#39;</span><span class=p>);</span>
+
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span>
+  <span class=nx>removeEmpty</span><span class=p>(</span><span class=sb>`|
+</span><span class=sb>     
+</span><span class=sb>|`</span><span class=p>)</span>
+<span class=p>);</span>
+</code></pre></div><h2 id=reference>Reference</h2>
+<p><a class=link href=http://caibaojian.com/css-border-triangle.html target=_blank rel=noopener>CSS 三角形的实现原理及运用-前端开发博客</a></p>
+<p><a class=link href=https://www.jianshu.com/p/9a463d50e441 target=_blank rel=noopener>CSS 绘制三角形—border 法 - 简书</a></p>
+<p><a class=link href=http://www.h-camel.com/index.html target=_blank rel=noopener>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-5/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-5/frontend-1-cover.46974207cb2c1d593a7691cbdf5aca6c_hu830c213ec70e85d51f3a935207ace467_2278723_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-RpdCB8ssHVk6dpHL31rKbA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　5</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-4/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-4/frontend-1-cover.46974207cb2c1d593a7691cbdf5aca6c_hu830c213ec70e85d51f3a935207ace467_2278723_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-RpdCB8ssHVk6dpHL31rKbA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　4</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-3/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-3/frontend-1-cover.46974207cb2c1d593a7691cbdf5aca6c_hu830c213ec70e85d51f3a935207ace467_2278723_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-RpdCB8ssHVk6dpHL31rKbA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　3</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-2/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-2/frontend-1-cover.46974207cb2c1d593a7691cbdf5aca6c_hu830c213ec70e85d51f3a935207ace467_2278723_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-RpdCB8ssHVk6dpHL31rKbA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　2</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-1/frontend-1-cover.46974207cb2c1d593a7691cbdf5aca6c_hu830c213ec70e85d51f3a935207ace467_2278723_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-RpdCB8ssHVk6dpHL31rKbA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　1</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a></li>
+<li><a href=#css>CSS</a></li>
+<li><a href=#javascript>JavaScript</a></li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
