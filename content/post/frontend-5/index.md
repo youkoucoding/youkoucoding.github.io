@@ -1,5 +1,5 @@
 ---
-title: '毎日のフロントエンド　 5'
+title: '毎日のフロントエンド　5'
 date: 2021-09-19T12:16:31+09:00
 description: frontend 每日一练
 image: frontend-1-cover.jpg
@@ -9,7 +9,7 @@ categories:
   - Javascript
 ---
 
-#　第五日
+# 第五日
 
 ## HTML
 
