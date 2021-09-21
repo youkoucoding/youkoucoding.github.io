@@ -1,4 +1,115 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 20 Sep 2021 16:14:06 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　6</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/</link><pubDate>Mon, 20 Sep 2021 16:14:06 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/frontend-6-cover.jpg" alt="Featured image of post 毎日のフロントエンド　6" />&lt;h1 id="第六日">第六日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 21 Sep 2021 10:52:54 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　7</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-7/</link><pubDate>Tue, 21 Sep 2021 10:52:54 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-7/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-7/frontend-7-cover.jpg" alt="Featured image of post 毎日のフロントエンド　7" />&lt;h1 id="第七日">第七日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> iframe 框架都有哪些优缺点？&lt;/p>
+&lt;p>The &lt;code>&amp;lt;iframe&amp;gt;&lt;/code> HTML element represents a nested browsing context, embedding another HTML page into the current one.&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;iframe&amp;gt;&lt;/code>: The Inline Frame element - HTML: HyperText Markup Language | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://medium.com/slices-of-bread/iframe-a-love-story-3dbe4e519b86" target="_blank" rel="noopener"
+>iFrame — A love story. by Max Rafferty | Slices of Bread | Medium&lt;/a>&lt;/p>
+&lt;p>Advantages of &lt;code>&amp;lt;iframe&amp;gt;&lt;/code>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>iframe&lt;/code> can display the embedded web page &lt;em>intact&lt;/em>.&lt;/li>
+&lt;li>If there are multiple pages referencing iframe, you only need to modify the content of iframe, and then you can change the content of every page you call, which is convenient and fast.&lt;/li>
+&lt;li>If the header and version of a web page are the same in order to unify the style, it can be written as a page, nested with iframe, which can increase code reusability.&lt;/li>
+&lt;li>If you encounter slow loading third-party content such as icons and advertisements, these problems can be solved by iframe.&lt;/li>
+&lt;li>可以实现跨域，每个 iframe 的源都可以不相同（方便引入第三方内容）&lt;/li>
+&lt;/ul>
+&lt;p>Disadvantages of &lt;code>&amp;lt;iframe&amp;gt;&lt;/code>:&lt;/p>
+&lt;ul>
+&lt;li>Many pages will be generated, which is not easy to manage.&lt;/li>
+&lt;li>Iframe frame structure sometimes makes people feel confused. If there are many frames, there may be up and down, left and right scrollbars, which will distract visitor&amp;rsquo;s attention and lead to poor user experience.&lt;/li>
+&lt;li>The code is complex and can&amp;rsquo;t be indexed by some search engines, which is very important.&lt;/li>
+&lt;li>Many mobile devices can not fully display the frame, and the device compatibility is poor.&lt;/li>
+&lt;li>Iframe framework pages will increase the HTTP requests of the server, which is not advisable for large websites.&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 简述你对 &lt;strong>&lt;em>&lt;code>BFC&lt;/code>&lt;/em>&lt;/strong> 规范的理解&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context" target="_blank" rel="noopener"
+>Block formatting context - Developer guides | MDN&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>A &lt;strong>Block formatting Context&lt;/strong> is a part of a visual CSS rendering of a web page. It&amp;rsquo;s the region in which the layout of block boxesx occurs and in which floats intreract with other elements.&lt;/p>
+&lt;p>A block formatting context is created bt at least one of the following:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>The root element of the document &amp;mdash;- &lt;code>&amp;lt;html&amp;gt;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Floats (elements where &lt;code>float&lt;/code> &lt;em>isn&amp;rsquo;t&lt;/em> &lt;code>none&lt;/code>)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Absolutely positioned elements (&lt;code>postion&lt;/code> is &lt;code>absolute&lt;/code> of &lt;code>fixed&lt;/code>)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Inline-blocks (&lt;code>display: inline-block;&lt;/code>)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Table cells (element with &lt;code>display: table-cell&lt;/code>, which is the default for HTML table cell.)&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="是什么">是什么？&lt;/h3>
+&lt;p>常见的&lt;code>Formatting Context&lt;/code>有 BFC、IFC（行级格式化上下文），还有 GFC（网格布局格式化上下文）和 FFC（自适应格式化上下文）&lt;/p>
+&lt;p>&lt;code>BFC&lt;/code>是 &lt;strong>&lt;em>一个独立渲染区&lt;/em>&lt;/strong> 只有&lt;code>Block-level box&lt;/code>参与， 它规定了内部的&lt;code>Block-level Box&lt;/code>如何布局，并且与这个区域外部毫不相干。&lt;/p>
+&lt;p>&lt;code>BFC&lt;/code> 是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面元素，反之亦然。&lt;/p>
+&lt;h3 id="解决了什么问题有什么作用">解决了什么问题(有什么作用)：&lt;/h3>
+&lt;ul>
+&lt;li>解决了 盒子内外的元素布局的相互影响，干扰。&lt;/li>
+&lt;li>解决了 自适应两栏布局&lt;/li>
+&lt;li>阻止父元素 高度坍塌（子元素都为 float 时，子元素脱离文档流 父元素不能被子元素撑开）（参考下文规则 6）&lt;/li>
+&lt;li>可以阻止元素被浮动元素覆盖&lt;/li>
+&lt;li>可以包含浮动元素——清除内部浮动&lt;/li>
+&lt;li>分属于不同的 BFC 时可以阻止 margin 重叠&lt;/li>
+&lt;/ul>
+&lt;h3 id="如何触发-bfc">如何触发 &lt;code>BFC&lt;/code>&lt;/h3>
+&lt;p>常用的四种方法：&lt;/p>
+&lt;ol>
+&lt;li>float &lt;code>is not&lt;/code> none&lt;/li>
+&lt;li>position &lt;code>is not&lt;/code> static and relative (is fixed or absolute)&lt;/li>
+&lt;li>overflow &lt;code>is&lt;/code> auto scroll and hidden&lt;/li>
+&lt;li>display &lt;code>is&lt;/code> table-cell or inline-block&lt;/li>
+&lt;/ol>
+&lt;h3 id="bfc-的-布局规则">&lt;code>BFC&lt;/code> 的 布局规则&lt;/h3>
+&lt;ol>
+&lt;li>内部的 &lt;code>Box&lt;/code> 会在垂直方向，一个接一个地放置。&lt;/li>
+&lt;li>&lt;code>Box&lt;/code> 垂直方向的距离由 &lt;code>margin&lt;/code> 决定。属于同一个 &lt;code>BFC&lt;/code> 的两个相邻 &lt;code>Box&lt;/code> 的 &lt;code>margin&lt;/code> 会发生重叠&lt;/li>
+&lt;li>每个元素的 &lt;code>margin box&lt;/code> 的左边， 与包含块 &lt;code>border box&lt;/code> 的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。&lt;/li>
+&lt;li>&lt;code>BFC&lt;/code> 的区域不会与 &lt;code>float box&lt;/code> 重叠。&lt;/li>
+&lt;li>&lt;code>BFC&lt;/code> 就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。&lt;/li>
+&lt;li>计算 &lt;code>BFC&lt;/code> 的高度时，浮动元素也参与计算， 相当于清除了内部浮动。&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 统计某一字符或字符串在另一个字符串中出现的次数&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">substrCount&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">target&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">count&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">count&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">match&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">count&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">count&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">strCount&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;abcdef abcdef a&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;abc&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">substrCount&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">target&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">count&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">includes&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">index&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">indexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">count&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">substring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">index&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">target&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">count&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">substrCount&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">target&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://developpaper.com/what-are-the-advantages-and-disadvantages-of-iframe/" target="_blank" rel="noopener"
+>What are the advantages and disadvantages of iframe? | Develop Paper&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903476774830094" target="_blank" rel="noopener"
+>[布局概念] 关于 CSS-BFC 深入理解 - 掘金&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.youtube.com/watch?v=Onhu2DlmHAk" target="_blank" rel="noopener"
+>[Jelly College] CSS tutorial lesson8:How to understand BFC quickly - YouTube&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　6</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/</link><pubDate>Mon, 20 Sep 2021 16:14:06 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/frontend-6-cover.jpg" alt="Featured image of post 毎日のフロントエンド　6" />&lt;h1 id="第六日">第六日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;p>&lt;strong>#Question:&lt;/strong> label 都有哪些作用？并举相应的例子说明&lt;/p>
 &lt;p>The &lt;code>&amp;lt;label&amp;gt;&lt;/code> HTML element represents a caption for an item in a user interface.&lt;/p>
