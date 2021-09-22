@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 21 Sep 2021 10:52:54 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　7</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-7/</link><pubDate>Tue, 21 Sep 2021 10:52:54 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-7/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-7/frontend-7-cover.jpg" alt="Featured image of post 毎日のフロントエンド　7" />&lt;h1 id="第七日">第七日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 22 Sep 2021 16:40:32 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　8</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-8/</link><pubDate>Wed, 22 Sep 2021 16:40:32 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-8/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-8/frontend-8-cover.jpg" alt="Featured image of post 毎日のフロントエンド　8" />&lt;h1 id="第八日">第八日&lt;/h1>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 清除浮动的方式有哪些及优缺点？&lt;/p>
+&lt;ul>
+&lt;li>现阶段 较多使用&lt;code>Flex&lt;/code> 布局&lt;/li>
+&lt;li>浮动带来的问题是盒子塌陷问题&lt;/li>
+&lt;/ul>
+&lt;h4 id="什么是盒子塌陷">什么是盒子塌陷？&lt;/h4>
+&lt;p>外部盒子本应该包裹住内部的浮动盒子，结果却没有&lt;/p>
+&lt;h4 id="原因">原因&lt;/h4>
+&lt;p>父元素只包含浮动元素，那么它的高度就会塌缩为零, 前提是没有设置高度&lt;code>height&lt;/code>属性，或者设置为 &lt;code>auto&lt;/code>，就会出现盒子塌陷，如果父元素不包含任何的可见背景，这个问题会很难被注意到。
+因为子元素设置了 &lt;code>float&lt;/code> 属性，而 float 属性会把元素从标准文档流中抽离，直接结果就是外部盒子丢了两个孩子，因为内部没有其它盒子了，所以外部盒子只包裹文本节点内容，却把两个内部盒子扔在外面了。&lt;/p>
+&lt;h4 id="解决方案">解决方案&lt;/h4>
+&lt;ol>
+&lt;li>
+&lt;p>把外部盒子也从标准文档流中抽离&lt;/p>
+&lt;ul>
+&lt;li>缺点是： 父元素加上 &lt;code>float&lt;/code> 有可能影响整个页面&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>在外部盒子内最下方添上带 clear 属性的空盒子： 把 &lt;code>&amp;lt;div style=&amp;quot;clear:both;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code>放在盒内底部&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>给外部盒子添加： &lt;code>overflow:hidden&lt;/code> 清除浮动&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>用&lt;code>after&lt;/code>伪元素清除浮动&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">clearfix&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="err">\*&lt;/span>&lt;span class="n">zoom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">clearfix&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">before&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">clearfix&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">after&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">table&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">clearfix&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">after&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">clear&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">both&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>当然，还有前文提到的 &lt;code>BFC&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 写一个加密字符串的方法&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">encodeStr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">str&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">charCodeAt&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">key&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;#&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">decodeStr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">str&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;#&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fromCharCode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="nx">item&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="nx">key&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">decodeStr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">encodeStr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;hello world&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">665&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="mi">665&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　7</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-7/</link><pubDate>Tue, 21 Sep 2021 10:52:54 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-7/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-7/frontend-7-cover.jpg" alt="Featured image of post 毎日のフロントエンド　7" />&lt;h1 id="第七日">第七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;p>&lt;strong>#Question:&lt;/strong> iframe 框架都有哪些优缺点？&lt;/p>
 &lt;p>The &lt;code>&amp;lt;iframe&amp;gt;&lt;/code> HTML element represents a nested browsing context, embedding another HTML page into the current one.&lt;/p>
