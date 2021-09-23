@@ -1,4 +1,121 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 22 Sep 2021 16:40:32 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　8</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-8/</link><pubDate>Wed, 22 Sep 2021 16:40:32 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-8/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-8/frontend-8-cover.jpg" alt="Featured image of post 毎日のフロントエンド　8" />&lt;h1 id="第八日">第八日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 23 Sep 2021 16:48:11 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　9</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/</link><pubDate>Thu, 23 Sep 2021 16:48:11 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/frontend-9-cover.jpg" alt="Featured image of post 毎日のフロントエンド　9" />&lt;h1 id="第九日">第九日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 浏览器内多个标签页之间的通信方式有哪些？(网页间 消息 通讯)&lt;/p>
+&lt;h3 id="是什么">是什么？&lt;/h3>
+&lt;p>在浏览器中，两个不同页面（A 页面的 window ！= B 页面的 window）网页之间的消息传递&lt;/p>
+&lt;h3 id="消息传递方式">消息传递方式&lt;/h3>
+&lt;h4 id="1-websocket---可跨域">1. WebSocket - 可跨域&lt;/h4>
+&lt;blockquote>
+&lt;p>WebSocket 是 HTML5 开始提供的一种在单个 TCP 连接上进行全双工通讯的协议。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;strong>&lt;a class="link" href="https://www.ruanyifeng.com/blog/2017/05/websocket.html" target="_blank" rel="noopener"
+>WebSocket 教程&lt;/a>&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="2-postmessage---可跨域">2. postMessage - 可跨域&lt;/h4>
+&lt;p>&lt;code>window.postMessage()&lt;/code> 方法安全地启用 Window 对象之间的跨源通信&lt;/p>
+&lt;p>对将接收消息的窗口的引用，获得此类引用的方法包括：&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>&amp;lt;iframe&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>Window.open&lt;/code> （生成一个新窗口然后引用它）&lt;/li>
+&lt;li>&lt;code>Window.opener&lt;/code> （引用产生这个的窗口）&lt;/li>
+&lt;/ol>
+&lt;h4 id="3-worker-之-shareworker">3. Worker 之 ShareWorker&lt;/h4>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>webworker&lt;/code>，作为浏览器的一个新特性，可以提供一个额外的线程来执行一些 js 代码（真正的多线程），并且不会影响到浏览器用户界面，但是不能 DOM 操作。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>SharedWorker&lt;/code> 可以被多个 window 共同使用，所以可以用来跨页面传输数据，但必须保证这些标签页都是同源的(相同的协议，主机和端口号)。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="4-server-sent-events">4. Server-Sent Events&lt;/h4>
+&lt;p>&lt;code>HTML5&lt;/code> 服务器发送事件（&lt;code>server-sent event&lt;/code>）允许网页获得来自服务器的更新。
+&lt;code>Server-Sent&lt;/code> 事件指的是网页自动获取来自服务器的更新。&lt;/p>
+&lt;h4 id="5-localstorage">5. localStorage&lt;/h4>
+&lt;p>localstorage 是浏览器多个标签共用的存储空间，所以可以用来实现多标签之间的通信(ps：session 是会话级的存储空间，每个标签页都是单独的）。 直接在 window 对象上添加监听即可。&lt;/p>
+&lt;h4 id="6-cookies">6. Cookies&lt;/h4>
+&lt;p>Cookies 在同一个域名内，并且目录也得相同，可以参考第三方库&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://github.com/js-cookie/js-cookie" target="_blank" rel="noopener"
+>js-cookie/js-cookie: A simple, lightweight JavaScript API for handling browser cookies&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="7-broadcastchannel">7. BroadcastChannel&lt;/h4>
+&lt;p>只要是在同一原始域和用户代理下，所有窗口、iframe 之间都可以进行交互&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 简述下你理解的优雅降级和渐进增强&lt;/p>
+&lt;h3 id="背景">背景&lt;/h3>
+&lt;p>渐进增强和优雅降级这两个概念是在 CSS3 出现之后火起来的。由于低级浏览器不支持 CSS3，但是 CSS3 特效太优秀不忍放弃，所以在高级浏览器中使用 CSS3，而在低级浏览器只保证最基本的功能。二者的目的都是关注不同浏览器下的不同体验，但是它们侧重点不同，所以导致了工作流程上的不同。&lt;/p>
+&lt;h3 id="渐进增强">渐进增强&lt;/h3>
+&lt;p>渐进增强 &lt;code>（Progressive Enhancement）&lt;/code>：一开始就针对低版本浏览器进行构建页面，完成基本的功能，然后再针对高级浏览器进行效果、交互、追加功能达到更好的体验。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>应关注于内容本身&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h3 id="优雅降级">优雅降级&lt;/h3>
+&lt;p>优雅降级&lt;code>（Graceful Degradation）&lt;/code>：一开始就构建站点的完整功能，然后再针对低版本浏览器进行兼容。比如一开始使用 CSS3 的特性构建了一个应用，然后逐步针对各大浏览器进行 hack 使其可以在低版本浏览器上正常浏览。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>应针对最高级、最完善的浏览器来开发网站&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h3 id="用法简介">用法简介&lt;/h3>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 130;
+flex-basis: 313px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/frontend-9-inner.png" data-size="392x300">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/frontend-9-inner.png"
+width="392"
+height="300"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/frontend-9-inner_huc9c5c2ba690f77a4ed8157d24bf28ea8_26485_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/frontend-9-inner_huc9c5c2ba690f77a4ed8157d24bf28ea8_26485_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;ol>
+&lt;li>很久以前：浏览器前缀 CSS3 和正常 CSS3 都不支持&lt;/li>
+&lt;li>不久之前：浏览器只支持前缀 CSS3，不支持正常 CSS3&lt;/li>
+&lt;li>现在：浏览器既支持前缀 CSS3，又支持正常 CSS3&lt;/li>
+&lt;li>未来：浏览器不支持前缀 CSS3，仅支持正常 CSS3&lt;/li>
+&lt;/ol>
+&lt;h3 id="如何选择">如何选择&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>若&lt;em>低版本&lt;/em>用户居多，则优先采用&lt;strong>渐进增强&lt;/strong>的开发流程&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>若&lt;em>高版本&lt;/em>用户居多，则为了提高大多数用户的使用体验，那当然优先采用&lt;strong>优雅降级&lt;/strong>的开发流程&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>多数大公司采用渐进增强的方式（通常业务优先）&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 写一个判断数据类型的方法&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">testType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/^.{8}(.+)]$/&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">m&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">$1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">$1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toLowerCase&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// typeof 只能判断 《基本类型》 string,number,boolean, undefined,object
+&lt;/span>&lt;span class="c1">// null 会被判断成 object
+&lt;/span>&lt;span class="c1">// toString()
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">([]);&lt;/span> &lt;span class="c1">//&amp;#34;[object Array]&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">({});&lt;/span> &lt;span class="c1">//&amp;#34;[object Object]&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">testType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/\[object\s|\]/g&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">testType&lt;/span>&lt;span class="p">([]));&lt;/span> &lt;span class="c1">//&amp;#34;Array&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">testType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">//&amp;#34;Number&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://xv700.gitee.io/message-communication-for-web/" target="_blank" rel="noopener"
+>网页消息通信&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000013818745" target="_blank" rel="noopener"
+>前端面试题-渐进增强和优雅降级 - SegmentFault 思否&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　8</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-8/</link><pubDate>Wed, 22 Sep 2021 16:40:32 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-8/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-8/frontend-8-cover.jpg" alt="Featured image of post 毎日のフロントエンド　8" />&lt;h1 id="第八日">第八日&lt;/h1>
 &lt;h2 id="css">CSS&lt;/h2>
 &lt;p>&lt;strong>#Question:&lt;/strong> 清除浮动的方式有哪些及优缺点？&lt;/p>
 &lt;ul>
