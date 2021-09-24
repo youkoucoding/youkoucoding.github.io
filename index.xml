@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 23 Sep 2021 16:48:11 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　9</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/</link><pubDate>Thu, 23 Sep 2021 16:48:11 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/frontend-9-cover.jpg" alt="Featured image of post 毎日のフロントエンド　9" />&lt;h1 id="第九日">第九日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 23 Sep 2021 23:39:38 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　10</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-10/</link><pubDate>Thu, 23 Sep 2021 23:39:38 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-10/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-10/frontend-10-cover.jpg" alt="Featured image of post 毎日のフロントエンド　10" />&lt;h1 id="第十日">第十日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> viewport 常见设置都有哪些？&lt;/p>
+&lt;p>&lt;code>viewport&lt;/code> 就是视区窗口，也就是浏览器中显示网页的部分。PC 端上基本等于设备显示区域，但在移动端上&lt;code>viewport&lt;/code> 会超出设备的显示区域 (即会有横向滚动条出现)。设备默认的 &lt;code>viewport&lt;/code> 在 &lt;code>980 - 1024&lt;/code> 之间。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>设置&lt;/th>
+&lt;th>解释&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>width&lt;/td>
+&lt;td>设置 layout viewport 的宽度，为一个正整数，或字符串&amp;quot;width-device&amp;quot;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>initial-scale&lt;/td>
+&lt;td>设置页面的初始缩放值，为一个数字，可以带小数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>minimum-scale&lt;/td>
+&lt;td>允许用户的最小缩放值，为一个数字，可以带小数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>maximum-scale&lt;/td>
+&lt;td>允许用户的最大缩放值，为一个数字，可以带小数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>height&lt;/td>
+&lt;td>设置 layout viewport 的高度，这个属性对我们并不重要，很少使用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>user-scalable&lt;/td>
+&lt;td>是否允许用户进行缩放，值为&amp;quot;no&amp;quot;或&amp;quot;yes&amp;quot;, no 代表不允许，yes 代表允许&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">// width=device-width, initial-scale=1.0 是为了兼容不同浏览器
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span>
+&lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span>
+&lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&amp;#34;&lt;/span>
+&lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>dpr 与 CSS 像素。CSS 像素的 1px 在 PC 端上与设备的物理像素基本一致，而到手机端就会有两个物理像素对应一个 CSS 像素的情况出现（如 iPhone 的视网膜屏）。 所以 iPhone 上的 dpr = 2 即 2 个物理像素 / 一个 CSS 像素（独立像素）&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 对比下 px、em、rem 有什么不同？&lt;/p>
+&lt;p>&lt;code>px&lt;/code>、&lt;code>em&lt;/code>、&lt;code>rem&lt;/code> 都是计量单位，都能表示&lt;em>尺寸&lt;/em>，但是有有所不同，而且其各有各的优缺点。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>px&lt;/code>表示“绝对尺寸”（并非真正的绝对），实际上就是 css 中定义的像素（此像素与设备的物理像素有一定的区别，后续详细说明见文末说明 1），利用 px 设置字体大小及元素宽高等比较稳定和精确。Px 的缺点是其不能适应浏览器缩放时产生的变化，因此一般不用于响应式网站。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>em&lt;/code>表示&lt;strong>相对尺寸&lt;/strong>, 其相对于当前对象内文本的 &lt;code>font-size&lt;/code>（如果当前对象内文本的 &lt;code>font-size&lt;/code> 计量单位也是 &lt;code>em&lt;/code>，则当前对象内文本的 &lt;code>font-size&lt;/code> 的参考对象为&lt;strong>父元素文本&lt;/strong> &lt;code>font-size&lt;/code>）。使用 &lt;code>em&lt;/code> 可以较好的相应设备屏幕尺寸的变化，但是在进行元素设置时都需要知道父元素文本的 &lt;code>font-size&lt;/code> 及当前对象内文本的 &lt;code>font-size&lt;/code>，如有遗漏可能会导致错误。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>rem&lt;/code>也表示相对尺寸，其参考对象为&lt;strong>根元素 root&lt;/strong>的 &lt;code>font-size&lt;/code>，因此只需要确定这一个 &lt;code>font-size&lt;/code>。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>&lt;em>推荐使用 &lt;code>px&lt;/code> 或 &lt;code>rem&lt;/code>， em 容易出错&lt;/em>&lt;/strong>&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;p>&lt;strong>Question:&lt;/strong> 简要描述下什么是回调函数并写一个例子出来&lt;/p>
+&lt;p>回调是把一个函数作为参数传递给另一个函数，当该函数满足某个条件时触发该参数函数。&lt;/p>
+&lt;p>主要用于异步操作 例如网络请求 防止页面同步代码阻塞导致渲染线程停止&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">longTask&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">callback&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">timeout&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">callback&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">timeout&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">longTask&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;回调任务被执行了&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="mi">2000&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;我是同步代码 不会阻塞我&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.cnblogs.com/2050/p/3877280.html" target="_blank" rel="noopener"
+>移动前端开发之 viewport 的深入理解&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　9</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/</link><pubDate>Thu, 23 Sep 2021 16:48:11 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-9/frontend-9-cover.jpg" alt="Featured image of post 毎日のフロントエンド　9" />&lt;h1 id="第九日">第九日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;p>&lt;strong>#Question:&lt;/strong> 浏览器内多个标签页之间的通信方式有哪些？(网页间 消息 通讯)&lt;/p>
 &lt;h3 id="是什么">是什么？&lt;/h3>
