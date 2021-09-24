@@ -1233,38 +1233,173 @@ alt="devbounce-throttle">
 &lt;/figure>&lt;/p>
 &lt;h2 id="debouncing-防抖">Debouncing 防抖&lt;/h2>
 &lt;p>用来实现高频触发函数调用时，实际只调用最后一次函数执行。&lt;/p>
+&lt;p>即： 触发事件后过一段时间才执行函数， 如果在这段时间内再次触发，则重新计时。&lt;/p>
 &lt;p>用于可能出现高频调用的 DOM 或 样式修改， 这种高频调用会导致页面高频重排重绘，DOM 闪烁抖动，影响页面性能。&lt;/p>
+&lt;h4 id="implementing-debounce">Implementing Debounce:&lt;/h4>
+&lt;ol>
+&lt;li>Start with o timeout&lt;/li>
+&lt;li>If the debounced function is called again, reset the timer to the speccial delay&lt;/li>
+&lt;li>In case of timeout, call the debounced function.&lt;/li>
+&lt;/ol>
+&lt;p>Thus every call to a debounce function resets the timer and delays the call.&lt;/p>
+&lt;p>Debounce is higher-order function, which is a function that returns anotehr function. This is done to form a closure around the &lt;code>handler&lt;/code> and &lt;code>delay&lt;/code> function parameters and the &lt;code>timer&lt;/code> variable so that their values are preserved.&lt;/p>
+&lt;p>&lt;strong>If we are invoking for the first time, our function will execute at the end of our delay&lt;/strong>. If we invoke and then invoke again before the end of our delay, the delay restarts.&lt;/p>
+&lt;blockquote>
+&lt;p>调用 &lt;code>setTimeout&lt;/code> 会返回一个 &lt;code>timeoutId&lt;/code> , 然后通过调用 &lt;code>clearTimeout&lt;/code> 清除 制定的 &lt;code>timeoutId&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="self-和-apply">&lt;code>self&lt;/code> 和 &lt;code>apply&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>在 &lt;code>apply&lt;/code> 中 会将调用的函数（&lt;code>handler&lt;/code>）， 绑定到 &lt;code>this&lt;/code> 中， 所以如果 不用 之前创建的 &lt;code>self&lt;/code> 而是直接使用 &lt;code>this&lt;/code>, 可能会产生问题，比如： 需要防抖的&lt;code>handler&lt;/code>是在全局环境中调用时， &lt;code>this&lt;/code> 执行上下文是 &lt;code>window&lt;/code>， 不能指向绑定事件的元素上。 因此，使用 &lt;code>apply&lt;/code> 显式地 将当前的执行上下文的&lt;code>this&lt;/code> 绑定到 &lt;code>handler&lt;/code> 上，以使元素上的&lt;code>handler&lt;/code>生效。&lt;/li>
+&lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// Debounce
-&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">debouce&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">interval&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kd">let&lt;/span> &lt;span class="nx">lastDate&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="kd">let&lt;/span> &lt;span class="nx">time&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">debounce&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">delay&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="k">return&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="kd">let&lt;/span> &lt;span class="nx">self&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="kd">let&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="nx">clearTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">time&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="nx">time&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="nx">handler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="p">},&lt;/span> &lt;span class="nx">interval&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// arguments 是一个类数组对象， 指向传入的参数。
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">timer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nx">clearTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">timer&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 清除前一个需要debounce 的函数
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// apply 会将调用的函数, 绑定到 apply第一个参数指向的上下文中(此处的 self)， 并且可以接受一个数组或类数组对象作为后续参数
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">handler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="nx">delay&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="p">};&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="throttling-节流">Throttling 节流&lt;/h2>
-&lt;p>用来实现阻止在短时间内重复多次触发同一个函数。&lt;/p>
-&lt;p>用途： 防止使用脚本 循环触发网络请求的函数，确保请求的合理和真实性&lt;/p>
+&lt;span class="c1">//test
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">testDebounce&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;this is a test.&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onmousemove&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">debounce&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">testDebounce&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="用箭头函数简化">用箭头函数简化&lt;/h4>
+&lt;ul>
+&lt;li>箭头函数的 &lt;code>this&lt;/code> 指向函数定义时 上下文&lt;code>this&lt;/code>&lt;/li>
+&lt;li>使用扩展运算符，避免定义 &lt;code>arguments&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">debounce&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">delay&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">(...&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">timer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nx">clearTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">timer&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">handler&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="nx">delay&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h2 id="throttling-节流">Throttling 节流&lt;/h2>
+&lt;p>Throttling or sometimes is also called throttle function is a practise used in websites. To throttle a function means to ensure that the function is called at most once in a specified time period. This means throttling will prevent a function from running if it has run &amp;ldquo;recently&amp;rdquo;. Throttling also ensures a function is run regularly at a fixed rate.&lt;/p>
+&lt;p>Throttlig is used to call a function after every millisecond or a particular interval of time only the first click is executed immediately.&lt;/p>
+&lt;p>用来实现**_阻止_**在短时间内重复多次触发同一个函数。&lt;/p>
+&lt;p>即： 每一个时间间隔内， 只执行一次函数, &lt;code>timer&lt;/code> 存在的时候 直接返回，不存在的时候，执行&lt;code>setTimeout&lt;/code>(执行完，会清空&lt;code>timer&lt;/code>)&lt;/p>
+&lt;h4 id="implementing-throttle">Implementing Throttle:&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// Throttle
-&lt;/span>&lt;span class="c1">&lt;/span>
-&lt;span class="kd">function&lt;/span> &lt;span class="nx">throttle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">wait&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kd">let&lt;/span> &lt;span class="nx">lastDate&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">throttle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">delay&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="k">return&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="kd">var&lt;/span> &lt;span class="nx">newDate&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">getTime&lt;/span>&lt;span class="p">();&lt;/span>
-&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">newDate&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">lastDate&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="nx">wait&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="nx">handler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
-&lt;span class="p">}&lt;/span>
-&lt;span class="nx">lastDate&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">newDate&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">self&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">timer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">handler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="nx">delay&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="p">};&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;span class="c1">// test
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">testThrottle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">content&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">content&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">testThrottleHandler&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">throttle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">testThrottle&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onmousemove&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">testThrottleHandler&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;throttle&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="使用-箭头函数-优化">使用 箭头函数 优化&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">throttle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">delay&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">(...&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">timer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">handler&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="nx">delay&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// example in reference
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">throttle&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">func&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">limit&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">lastFunc&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">lastRan&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">context&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">lastRan&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">func&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">lastRan&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">now&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">clearTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">lastFunc&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">lastFunc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">Date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">now&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">lastRan&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="nx">limit&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">func&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">lastRan&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">now&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="nx">limit&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">Date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">now&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">lastRan&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The first call to the function will execute and sets the limit period &lt;code>delay&lt;/code>. We can call the function during this period but it will not fire until the &lt;code>throttle&lt;/code> period has passed. Once is has passed, the next invocation will fire and the process repeats.&lt;/p>
+&lt;h2 id="compare-debounce-and-throttle">Compare Debounce and Throttle&lt;/h2>
+&lt;h3 id="similarities">Similarities&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>都使用了 &lt;code>setTimeout&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>目的都是降低回调函数的执行频率， 节省资源。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="difference">Difference&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>Debounce&lt;/code> 防抖关注的是：一定时间段内，连续触发的事件，只在最后一次触发的时候 执行。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Throttle&lt;/code> 节流关注的是：侧重一个时间间隔内，只执行一次。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="使用场景-use-cases">使用场景 &lt;code>use cases&lt;/code>&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>Debounce&lt;/code> &lt;strong>防抖的使用场景：&lt;/strong> 连续的事件，只需要触发一次的场景， 例如：&lt;/p>
+&lt;ul>
+&lt;li>搜索框 输入搜索内容，最后输入完成后，再发送请求；&lt;/li>
+&lt;li>号码， 邮箱的输入验证；&lt;/li>
+&lt;li>窗口大小的调整： 在调整完成后再计算窗口大小，防止重复渲染。&lt;/li>
+&lt;li>&lt;em>Autocomplete&lt;/em>: Often times, search boxes offer dropdowns that provide autocomplete options for the user&amp;rsquo;s current input. Sometimes the items suggested are fetched from the backend API. Here, debouncing can be applied in implementing suggestive text where we wait for the user to stop typing for a few seconds before suggesting the text. Thus, on every keystrokem, we wait for some seconds before giving out suggestions.&lt;/li>
+&lt;li>Debouncing a &lt;code>resize&lt;/code> event handler.&lt;/li>
+&lt;li>Debouncing a save function in an autosave feature.&lt;/li>
+&lt;li>Don&amp;rsquo;t do anything whiule the user drags and drops.&lt;/li>
+&lt;li>Don&amp;rsquo;t make any Axios requests until the user stops typing.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Throttle&lt;/code> &lt;strong>节流的使用场景：&lt;/strong> 间隔一段时间之行一次回调函数的场景：&lt;/p>
+&lt;ul>
+&lt;li>滚动加载 或者 加载更多的场景&lt;/li>
+&lt;li>表单的多次点击提交&lt;/li>
+&lt;li>&lt;em>Gaming&lt;/em>&lt;/li>
+&lt;li>&lt;em>Scroll event handler&lt;/em>&lt;/li>
+&lt;li>Throttling a button cliock so er can&amp;rsquo;t spam click&lt;/li>
+&lt;li>Throttling an API call&lt;/li>
+&lt;li>Throttling a &lt;code>mousemove/touchmove&lt;/code> event handler.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
 &lt;p>&lt;a class="link" href="https://www.huaweicloud.com/articles/289941d93ba2f7dc048d790d1697f80d.html" target="_blank" rel="noopener"
->javaScript 节流与防抖&lt;/a>&lt;/p></description></item><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（四）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/</link><pubDate>Sat, 11 Sep 2021 15:14:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/cover-for-bestpractise.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（四）" />&lt;h1 id="关键知识点六-restful-api-设计的几个最佳实践">关键知识点六： Restful API 设计的几个最佳实践&lt;/h1>
+>javaScript 节流与防抖&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.youtube.com/watch?v=KviNB_deCaI&amp;amp;t=202s" target="_blank" rel="noopener"
+>JavaScript 防抖与节流 - YouTube&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://towardsdev.com/debouncing-and-throttling-in-javascript-8862efe2b563" target="_blank" rel="noopener"
+>Debouncing and Throttling in JavaScript: Comprehensive Guide | by Ayush Verma | Towards Dev&lt;/a>&lt;/p></description></item><item><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（四）</title><link>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/</link><pubDate>Sat, 11 Sep 2021 15:14:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react17-reacthook-ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/cover-for-bestpractise.jpg" alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（四）" />&lt;h1 id="关键知识点六-restful-api-设计的几个最佳实践">关键知识点六： Restful API 设计的几个最佳实践&lt;/h1>
 &lt;h2 id="steps-toward-the-glory-of-rest">steps toward the glory of REST&lt;/h2>
 &lt;p>&lt;a class="link" href="https://martinfowler.com/articles/richardsonMaturityModel.html#level0" target="_blank" rel="noopener"
 >Richardson Maturity Model&lt;/a>&lt;/p>
