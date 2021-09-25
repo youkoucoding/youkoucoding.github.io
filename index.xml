@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 23 Sep 2021 23:39:38 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　10</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-10/</link><pubDate>Thu, 23 Sep 2021 23:39:38 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-10/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-10/frontend-10-cover.jpg" alt="Featured image of post 毎日のフロントエンド　10" />&lt;h1 id="第十日">第十日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 25 Sep 2021 23:02:39 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　11</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/</link><pubDate>Sat, 25 Sep 2021 23:02:39 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/frontend-11-cover.jpg" alt="Featured image of post 毎日のフロントエンド　11" />&lt;h1 id="第十一日">第十一日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 你对标签语义化的理解是什么？&lt;/p>
+&lt;h3 id="什么是-html-语义化标签">什么是 HTML 语义化标签&lt;/h3>
+&lt;p>语义化的标签，旨在让标签有自己的含义。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>一行文字&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>一行文字&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>如上代码，&lt;code>p&lt;/code> 标签与 &lt;code>span&lt;/code> 标签都区别之一就是，&lt;code>p&lt;/code> 标签的含义是：段落。而 &lt;code>span&lt;/code> 标签责没有独特的含义。&lt;/p>
+&lt;h3 id="语义化标签的优势">语义化标签的优势&lt;/h3>
+&lt;ul>
+&lt;li>语义化更具有可读性，便于团队开发维护&lt;/li>
+&lt;li>在没有 css 的情况下，页面也可以呈现出也很好的内容结构和代码结构&lt;/li>
+&lt;li>&lt;code>SEO&lt;/code>，搜索引擎能更好的理解页面中各部分的关系，可更快更准确的搜索到信息&lt;/li>
+&lt;/ul>
+&lt;h3 id="常见的语义化标签">常见的语义化标签&lt;/h3>
+&lt;blockquote>
+&lt;p>因此我们在写页面结构时，应尽量使用有 语义的 HTML 标签&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;title&amp;gt;&lt;/code>：页面主体内容。&lt;/li>
+&lt;li>&lt;code>&amp;lt;hn&amp;gt;&lt;/code>：h1~h6，分级标题，&lt;!-- raw HTML omitted --> 与 &lt;!-- raw HTML omitted --> 协调有利于搜索引擎优化。&lt;/li>
+&lt;li>&lt;code>&amp;lt;ul&amp;gt;&lt;/code>：无序列表。&lt;/li>
+&lt;li>&lt;code>&amp;lt;li&amp;gt;&lt;/code>：有序列表。&lt;/li>
+&lt;li>&lt;code>&amp;lt;header&amp;gt;&lt;/code>：页眉通常包括网站标志、主导航、全站链接以及搜索框。&lt;/li>
+&lt;li>&lt;code>&amp;lt;nav&amp;gt;&lt;/code>：标记导航，仅对文档中重要的链接群使用。&lt;/li>
+&lt;li>&lt;code>&amp;lt;main&amp;gt;&lt;/code>：页面主要内容，一个页面只能使用一次。如果是 web 应用，则包围其主要功能。&lt;/li>
+&lt;li>&lt;code>&amp;lt;article&amp;gt;&lt;/code>：定义外部的内容，其中的内容独立于文档的其余部分。&lt;/li>
+&lt;li>&lt;code>&amp;lt;section&amp;gt;&lt;/code>：定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。&lt;/li>
+&lt;li>&lt;code>&amp;lt;aside&amp;gt;&lt;/code>：定义其所处内容之外的内容。如侧栏、文章的一组链接、广告、友情链接、相关产品列表等。&lt;/li>
+&lt;li>&lt;code>&amp;lt;footer&amp;gt;&lt;/code>：页脚，只有当父级是 body 时，才是整个页面的页脚。&lt;/li>
+&lt;li>&lt;code>&amp;lt;small&amp;gt;&lt;/code>：呈现小号字体效果，指定细则，输入免责声明、注解、署名、版权。&lt;/li>
+&lt;li>&lt;code>&amp;lt;strong&amp;gt;&lt;/code>：和 em 标签一样，用于强调文本，但它强调的程度更强一些。&lt;/li>
+&lt;li>&lt;code>&amp;lt;em&amp;gt;&lt;/code>：将其中的文本表示为强调的内容，表现为斜体。&lt;/li>
+&lt;li>&lt;code>&amp;lt;mark&amp;gt;&lt;/code>：使用黄色突出显示部分文本。&lt;/li>
+&lt;li>&lt;code>&amp;lt;figure&amp;gt;&lt;/code>：规定独立的流内容（图像、图表、照片、代码等等）（默认有 40px 左右 margin）。&lt;/li>
+&lt;li>&lt;code>&amp;lt;figcaption&amp;gt;&lt;/code>：定义 figure 元素的标题，应该被置于 figure 元素的第一个或最后一个子元素的位置。&lt;/li>
+&lt;li>&lt;code>&amp;lt;cite&amp;gt;&lt;/code>：表示所包含的文本对某个参考文献的引用，比如书籍或者杂志的标题。&lt;/li>
+&lt;li>&lt;code>&amp;lt;blockquoto&amp;gt;&lt;/code>：定义块引用，块引用拥有它们自己的空间。&lt;/li>
+&lt;li>&lt;code>&amp;lt;q&amp;gt;&lt;/code>：短的引述（跨浏览器问题，尽量避免使用）。&lt;/li>
+&lt;li>&lt;code>&amp;lt;time&amp;gt;&lt;/code>：datetime 属性遵循特定格式，如果忽略此属性，文本内容必须是合法的日期或者时间格式。&lt;/li>
+&lt;li>&lt;code>&amp;lt;abbr&amp;gt;&lt;/code>：简称或缩写。&lt;/li>
+&lt;li>&lt;code>&amp;lt;dfn&amp;gt;&lt;/code>：定义术语元素，与定义必须紧挨着，可以在描述列表 dl 元素中使用。&lt;/li>
+&lt;li>&lt;code>&amp;lt;address&amp;gt;&lt;/code>：作者、相关人士或组织的联系信息（电子邮件地址、指向联系信息页的链接）。&lt;/li>
+&lt;li>&lt;code>&amp;lt;del&amp;gt;&lt;/code>：移除的内容。&lt;/li>
+&lt;li>&lt;code>&amp;lt;ins&amp;gt;&lt;/code>：添加的内容。&lt;/li>
+&lt;li>&lt;code>&amp;lt;code&amp;gt;&lt;/code>：标记代码。&lt;/li>
+&lt;li>&lt;code>&amp;lt;meter&amp;gt;&lt;/code>：定义已知范围或分数值内的标量测量。（Internet Explorer 不支持 meter 标签）&lt;/li>
+&lt;li>&lt;code>&amp;lt;progress&amp;gt;&lt;/code>：定义运行中的进度（进程）。&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> css 常用的布局方式有哪些？&lt;/p>
+&lt;ul>
+&lt;li>流式布局: 最基本的布局，就是顺着 html 像流水一样流下来&lt;/li>
+&lt;li>绝对定位: 利用 position: absolute 进行绝对定位的布局&lt;/li>
+&lt;li>&lt;code>float&lt;/code> 布局: 最初用来解决多栏布局的问题。比如 圣杯、双飞翼 的布局都可以用 float 来实现&lt;/li>
+&lt;li>珊格布局: bootstrap 用的布局，把页面分为 24 分，通过 row 和 col 进行布局&lt;/li>
+&lt;li>&lt;code>flex&lt;/code> 布局: css3 的布局可以非常灵活地进行布局和排版&lt;/li>
+&lt;li>&lt;code>grid&lt;/code> 布局: 网格布局&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;p>&lt;strong>#Question:&lt;/strong> 简要描述下 JS 有哪些内置的对象 &lt;code>built-in objects&lt;/code>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects" target="_blank" rel="noopener"
+>JavaScript 标准内置对象 - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000011467723" target="_blank" rel="noopener"
+>JS 所有内置对象属性和方法汇总 - SegmentFault 思否&lt;/a>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000011467723" target="_blank" rel="noopener"
+>JS 所有内置对象属性和方法汇总&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects" target="_blank" rel="noopener"
+>JavaScript 标准内置对象 - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　10</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-10/</link><pubDate>Thu, 23 Sep 2021 23:39:38 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-10/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-10/frontend-10-cover.jpg" alt="Featured image of post 毎日のフロントエンド　10" />&lt;h1 id="第十日">第十日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;p>&lt;strong>#Question:&lt;/strong> viewport 常见设置都有哪些？&lt;/p>
 &lt;p>&lt;code>viewport&lt;/code> 就是视区窗口，也就是浏览器中显示网页的部分。PC 端上基本等于设备显示区域，但在移动端上&lt;code>viewport&lt;/code> 会超出设备的显示区域 (即会有横向滚动条出现)。设备默认的 &lt;code>viewport&lt;/code> 在 &lt;code>980 - 1024&lt;/code> 之间。&lt;/p>
