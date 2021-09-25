@@ -124,12 +124,67 @@
 &lt;/li>
 &lt;li>
 &lt;p>&lt;code>em&lt;/code>表示&lt;strong>相对尺寸&lt;/strong>, 其相对于当前对象内文本的 &lt;code>font-size&lt;/code>（如果当前对象内文本的 &lt;code>font-size&lt;/code> 计量单位也是 &lt;code>em&lt;/code>，则当前对象内文本的 &lt;code>font-size&lt;/code> 的参考对象为&lt;strong>父元素文本&lt;/strong> &lt;code>font-size&lt;/code>）。使用 &lt;code>em&lt;/code> 可以较好的相应设备屏幕尺寸的变化，但是在进行元素设置时都需要知道父元素文本的 &lt;code>font-size&lt;/code> 及当前对象内文本的 &lt;code>font-size&lt;/code>，如有遗漏可能会导致错误。&lt;/p>
-&lt;/li>
+&lt;ul>
+&lt;li>&lt;code>em&lt;/code>子元素字体大小&lt;code>font-size&lt;/code> 的 &lt;code>em&lt;/code> 是 相对于 父元素的 &lt;code>font-size&lt;/code>&lt;/li>
+&lt;li>子元素的 &lt;code>height width padding margin&lt;/code> 的 &lt;code>em&lt;/code> 值 是相对于 &lt;em>本元素&lt;/em>的&lt;code>font-size&lt;/code> 值&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+我是父元素div
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+我是子元素p
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>我是孙元素span&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="nt">div&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">40&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/* 400px */&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">black&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">p&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/* 20px */&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/* 200px */&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">red&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">span&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">blue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;li>
-&lt;p>&lt;code>rem&lt;/code>也表示相对尺寸，其参考对象为&lt;strong>根元素 root&lt;/strong>的 &lt;code>font-size&lt;/code>，因此只需要确定这一个 &lt;code>font-size&lt;/code>。&lt;/p>
+&lt;p>&lt;code>rem&lt;/code> 其参考对象为&lt;strong>根元素 root&lt;/strong>的 &lt;code>font-size&lt;/code> 即 &lt;code>&amp;lt;html&amp;gt;&lt;/code>元素。通常做法是给 &lt;code>html&lt;/code> 元素设置一个字体大小，然后其他元素的长度单位就为 &lt;code>rem&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="nt">html&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">div&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">rem&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/* 40px */&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">rem&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/* 300px */&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="kt">rem&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">black&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">p&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">rem&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/* 20px */&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">rem&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">rem&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">red&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">span&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">rem&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">rem&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">rem&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">blue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>当用 &lt;code>rem&lt;/code> 做响应式页面，直接在媒体中改变 &lt;code>html&lt;/code> 的 &lt;code>font-size&lt;/code> 那么用 &lt;code>rem&lt;/code> 作为单位的元素的大小都会相应改变，很方便。&lt;/li>
+&lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>&lt;em>推荐使用 &lt;code>px&lt;/code> 或 &lt;code>rem&lt;/code>， em 容易出错&lt;/em>&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>&lt;em>&lt;code>px&lt;/code>用于元素的边框或定位。 推荐使用 &lt;code>rem&lt;/code>(只有一个参照，方便管理)， em 容易出错&lt;/em>&lt;/strong>&lt;/p>
 &lt;h2 id="javascript">JavaScript&lt;/h2>
 &lt;p>&lt;strong>Question:&lt;/strong> 简要描述下什么是回调函数并写一个例子出来&lt;/p>
 &lt;p>回调是把一个函数作为参数传递给另一个函数，当该函数满足某个条件时触发该参数函数。&lt;/p>

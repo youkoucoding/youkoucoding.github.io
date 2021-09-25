@@ -53,7 +53,7 @@ frontend 每日一练
 </div>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>
-阅读时长: 1 分钟
+阅读时长: 2 分钟
 </time>
 </div>
 </footer>
@@ -115,12 +115,67 @@ frontend 每日一练
 </li>
 <li>
 <p><code>em</code>表示<strong>相对尺寸</strong>, 其相对于当前对象内文本的 <code>font-size</code>（如果当前对象内文本的 <code>font-size</code> 计量单位也是 <code>em</code>，则当前对象内文本的 <code>font-size</code> 的参考对象为<strong>父元素文本</strong> <code>font-size</code>）。使用 <code>em</code> 可以较好的相应设备屏幕尺寸的变化，但是在进行元素设置时都需要知道父元素文本的 <code>font-size</code> 及当前对象内文本的 <code>font-size</code>，如有遗漏可能会导致错误。</p>
-</li>
+<ul>
+<li><code>em</code>子元素字体大小<code>font-size</code> 的 <code>em</code> 是 相对于 父元素的 <code>font-size</code></li>
+<li>子元素的 <code>height width padding margin</code> 的 <code>em</code> 值 是相对于 <em>本元素</em>的<code>font-size</code> 值</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;</span>
+  我是父元素div
+  <span class=p>&lt;</span><span class=nt>p</span><span class=p>&gt;</span>
+    我是子元素p
+    <span class=p>&lt;</span><span class=nt>span</span><span class=p>&gt;</span>我是孙元素span<span class=p>&lt;/</span><span class=nt>span</span><span class=p>&gt;</span>
+  <span class=p>&lt;/</span><span class=nt>p</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=nt>div</span> <span class=p>{</span>
+  <span class=k>font-size</span><span class=p>:</span> <span class=mi>40</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>10</span><span class=kt>em</span><span class=p>;</span> <span class=c>/* 400px */</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>10</span><span class=kt>em</span><span class=p>;</span>
+  <span class=k>border</span><span class=p>:</span> <span class=kc>solid</span> <span class=mi>1</span><span class=kt>px</span> <span class=kc>black</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=nt>p</span> <span class=p>{</span>
+  <span class=k>font-size</span><span class=p>:</span> <span class=mf>0.5</span><span class=kt>em</span><span class=p>;</span> <span class=c>/* 20px */</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>10</span><span class=kt>em</span><span class=p>;</span> <span class=c>/* 200px */</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>10</span><span class=kt>em</span><span class=p>;</span>
+  <span class=k>border</span><span class=p>:</span> <span class=kc>solid</span> <span class=mi>1</span><span class=kt>px</span> <span class=kc>red</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=nt>span</span> <span class=p>{</span>
+  <span class=k>font-size</span><span class=p>:</span> <span class=mf>0.5</span><span class=kt>em</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>10</span><span class=kt>em</span><span class=p>;</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>10</span><span class=kt>em</span><span class=p>;</span>
+  <span class=k>border</span><span class=p>:</span> <span class=kc>solid</span> <span class=mi>1</span><span class=kt>px</span> <span class=kc>blue</span><span class=p>;</span>
+  <span class=k>display</span><span class=p>:</span> <span class=kc>block</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div></li>
 <li>
-<p><code>rem</code>也表示相对尺寸，其参考对象为<strong>根元素 root</strong>的 <code>font-size</code>，因此只需要确定这一个 <code>font-size</code>。</p>
+<p><code>rem</code> 其参考对象为<strong>根元素 root</strong>的 <code>font-size</code> 即 <code>&lt;html></code>元素。通常做法是给 <code>html</code> 元素设置一个字体大小，然后其他元素的长度单位就为 <code>rem</code>。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=nt>html</span> <span class=p>{</span>
+  <span class=k>font-size</span><span class=p>:</span> <span class=mi>10</span><span class=kt>px</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=nt>div</span> <span class=p>{</span>
+  <span class=k>font-size</span><span class=p>:</span> <span class=mi>4</span><span class=kt>rem</span><span class=p>;</span> <span class=c>/* 40px */</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>30</span><span class=kt>rem</span><span class=p>;</span> <span class=c>/* 300px */</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>30</span><span class=kt>rem</span><span class=p>;</span>
+  <span class=k>border</span><span class=p>:</span> <span class=kc>solid</span> <span class=mi>1</span><span class=kt>px</span> <span class=kc>black</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=nt>p</span> <span class=p>{</span>
+  <span class=k>font-size</span><span class=p>:</span> <span class=mi>2</span><span class=kt>rem</span><span class=p>;</span> <span class=c>/* 20px */</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>15</span><span class=kt>rem</span><span class=p>;</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>15</span><span class=kt>rem</span><span class=p>;</span>
+  <span class=k>border</span><span class=p>:</span> <span class=kc>solid</span> <span class=mi>1</span><span class=kt>px</span> <span class=kc>red</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=nt>span</span> <span class=p>{</span>
+  <span class=k>font-size</span><span class=p>:</span> <span class=mf>1.5</span><span class=kt>rem</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>10</span><span class=kt>rem</span><span class=p>;</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>10</span><span class=kt>rem</span><span class=p>;</span>
+  <span class=k>border</span><span class=p>:</span> <span class=kc>solid</span> <span class=mi>1</span><span class=kt>px</span> <span class=kc>blue</span><span class=p>;</span>
+  <span class=k>display</span><span class=p>:</span> <span class=kc>block</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><ul>
+<li>当用 <code>rem</code> 做响应式页面，直接在媒体中改变 <code>html</code> 的 <code>font-size</code> 那么用 <code>rem</code> 作为单位的元素的大小都会相应改变，很方便。</li>
+</ul>
 </li>
 </ul>
-<p><strong><em>推荐使用 <code>px</code> 或 <code>rem</code>， em 容易出错</em></strong></p>
+<p><strong><em><code>px</code>用于元素的边框或定位。 推荐使用 <code>rem</code>(只有一个参照，方便管理)， em 容易出错</em></strong></p>
 <h2 id=javascript>JavaScript</h2>
 <p><strong>Question:</strong> 简要描述下什么是回调函数并写一个例子出来</p>
 <p>回调是把一个函数作为参数传递给另一个函数，当该函数满足某个条件时触发该参数函数。</p>
