@@ -46,9 +46,71 @@ categories:
 
 - `em`表示**相对尺寸**, 其相对于当前对象内文本的 `font-size`（如果当前对象内文本的 `font-size` 计量单位也是 `em`，则当前对象内文本的 `font-size` 的参考对象为**父元素文本** `font-size`）。使用 `em` 可以较好的相应设备屏幕尺寸的变化，但是在进行元素设置时都需要知道父元素文本的 `font-size` 及当前对象内文本的 `font-size`，如有遗漏可能会导致错误。
 
-- `rem`也表示相对尺寸，其参考对象为**根元素 root**的 `font-size`，因此只需要确定这一个 `font-size`。
+  - `em`子元素字体大小`font-size` 的 `em` 是 相对于 父元素的 `font-size`
+  - 子元素的 `height width padding margin` 的 `em` 值 是相对于 *本元素*的`font-size` 值
 
-**_推荐使用 `px` 或 `rem`， em 容易出错_**
+  ```html
+  <div>
+    我是父元素div
+    <p>
+      我是子元素p
+      <span>我是孙元素span</span>
+    </p>
+  </div>
+  ```
+
+  ```css
+  div {
+    font-size: 40px;
+    width: 10em; /* 400px */
+    height: 10em;
+    border: solid 1px black;
+  }
+  p {
+    font-size: 0.5em; /* 20px */
+    width: 10em; /* 200px */
+    height: 10em;
+    border: solid 1px red;
+  }
+  span {
+    font-size: 0.5em;
+    width: 10em;
+    height: 10em;
+    border: solid 1px blue;
+    display: block;
+  }
+  ```
+
+- `rem` 其参考对象为**根元素 root**的 `font-size` 即 `<html>`元素。通常做法是给 `html` 元素设置一个字体大小，然后其他元素的长度单位就为 `rem`。
+
+  ```css
+  html {
+    font-size: 10px;
+  }
+  div {
+    font-size: 4rem; /* 40px */
+    width: 30rem; /* 300px */
+    height: 30rem;
+    border: solid 1px black;
+  }
+  p {
+    font-size: 2rem; /* 20px */
+    width: 15rem;
+    height: 15rem;
+    border: solid 1px red;
+  }
+  span {
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 10rem;
+    border: solid 1px blue;
+    display: block;
+  }
+  ```
+
+  - 当用 `rem` 做响应式页面，直接在媒体中改变 `html` 的 `font-size` 那么用 `rem` 作为单位的元素的大小都会相应改变，很方便。
+
+**_`px`用于元素的边框或定位。 推荐使用 `rem`(只有一个参照，方便管理)， em 容易出错_**
 
 ## JavaScript
 
