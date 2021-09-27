@@ -59,6 +59,9 @@ alt="IE盒子模型">
 &lt;p>&lt;code>CSS&lt;/code>盒模型， 有内外两个部分。 外部属性 控制盒子本体是否占满一整行； 内部则控制：内部元素的属性。 例如：&lt;code>display: inline-block&lt;/code>,外部是，&lt;code>inline&lt;/code> 不占据整行； 内部是 &lt;code>block&lt;/code>则表明内部遵循块状特性。 因此， &lt;code>display: inline;&lt;/code> 可理解为 &lt;code>display: inline-inline;&lt;/code>， &lt;code>display: block;&lt;/code> 可理解为 &lt;code>display: block-block;&lt;/code>&lt;/p>
 &lt;/li>
 &lt;li>
+&lt;p>&lt;code>display: inline-block&lt;/code> 简单来说就是将对象呈现为 &lt;code>inline&lt;/code> 对象，但是&lt;strong>对象的内容&lt;/strong>作为 &lt;code>block&lt;/code> 对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个 link（a 元素）inline-block 属性值，使其既具有 block 的宽度高度特性又具有 inline 的同行特性&lt;/p>
+&lt;/li>
+&lt;li>
 &lt;p>&lt;code>width/height, padding, border, margin&lt;/code> 这几个控制盒子大小的属性。 其中 &lt;code>width/height&lt;/code> 控制元素内容大小； &lt;code>margin&lt;/code> 控制元素与其他元素的距离（&lt;code>margin&lt;/code>的背景色透明， 元素 background-color，只影响到 border）； &lt;code>border&lt;/code> 是元素外围边框； &lt;code>padding&lt;/code> 控制元素内容到 border 的距离&lt;/p>
 &lt;/li>
 &lt;/ul>
@@ -97,6 +100,8 @@ alt="IE盒子模型">
 &lt;h2 id="reference">Reference&lt;/h2>
 &lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000015235886" target="_blank" rel="noopener"
 >面试官：谈谈你对 CSS 盒模型的认识?&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.cnblogs.com/keithwang/p/3139517.html" target="_blank" rel="noopener"
+>block，inline 和 inline-block 概念和区别&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
 >前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　11</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/</link><pubDate>Sat, 25 Sep 2021 23:02:39 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/frontend-11-cover.jpg" alt="Featured image of post 毎日のフロントエンド　11" />&lt;h1 id="第十一日">第十一日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
