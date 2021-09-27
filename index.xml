@@ -1,12 +1,104 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 26 Sep 2021 23:36:48 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　12</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/</link><pubDate>Sun, 26 Sep 2021 23:36:48 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/frontend-12-cover.jpg" alt="Featured image of post 毎日のフロントエンド　12" />&lt;h1 id="第十二日">第十二日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
-&lt;p>&lt;strong>#Question:&lt;/strong> 常见的浏览器内核都有哪些？并介绍下你对内核的理解&lt;/p>
+&lt;h3 id="question-常见的浏览器内核都有哪些并介绍下你对内核的理解">&lt;strong>#Question:&lt;/strong> 常见的浏览器内核都有哪些？并介绍下你对内核的理解&lt;/h3>
+&lt;p>内核主要分为&lt;em>渲染引擎&lt;/em>和 &lt;em>JS 引擎&lt;/em>。前者负责页面的渲染，后者负责执行解析 JavaScript。之后，由于 JS 引擎越来越独立，现在所说的&lt;strong>浏览器内核大都指渲染引擎&lt;/strong>&lt;/p>
+&lt;p>目前主流的内核有以下 4 个：&lt;/p>
+&lt;ul>
+&lt;li>Trident: 由微软开发，即我们熟知的 IE 内核&lt;/li>
+&lt;li>Gecko: 使用 C++ 开发的渲染引擎，包括了 SpiderMonkey 即我们熟悉的 FireFox&lt;/li>
+&lt;li>Presto: Opera 使用的内核&lt;/li>
+&lt;li>&lt;strong>&lt;code>Webkit&lt;/code>&lt;/strong>: &lt;code>Safari&lt;/code> 使用的内核&lt;/li>
+&lt;li>&lt;strong>Chrome 浏览器内核：&lt;/strong> 统称为 &lt;code>Chromium&lt;/code> 内核，以前是 &lt;code>Webkit&lt;/code> 内核，现在是&lt;code>Blink&lt;/code>内核&lt;/li>
+&lt;/ul>
 &lt;h2 id="css">CSS&lt;/h2>
-&lt;p>&lt;strong>#Question:&lt;/strong> 说说你对 css 盒子模型的理解&lt;/p>
+&lt;h3 id="question-说说你对-css-盒子模型的理解">&lt;strong>#Question:&lt;/strong> 说说你对 css 盒子模型的理解&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>基本概念&lt;/p>
+&lt;ul>
+&lt;li>标准(W3C)盒子模型(&lt;code>box-sizing: content-box;&lt;/code>)：包括 &lt;code>margin&lt;/code>,&lt;code>border&lt;/code>,&lt;code>padding&lt;/code>,&lt;code>content&lt;/code>,并且 &lt;code>content&lt;/code> 部分不包括其他部分
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 164;
+flex-basis: 393px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/standard-box.png" data-size="732x446">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/standard-box.png"
+width="732"
+height="446"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/standard-box_hu0fdd56d10e50bdee27486adb335d3555_196883_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/standard-box_hu0fdd56d10e50bdee27486adb335d3555_196883_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="标准盒子模型">
+&lt;/a>
+&lt;figcaption>标准盒子模型&lt;/figcaption>
+&lt;/figure>&lt;/li>
+&lt;li>IE 盒子模型(&lt;code>box-sizing: border-box;&lt;/code>)：包括 &lt;code>margin&lt;/code>,&lt;code>border&lt;/code>,&lt;code>padding&lt;/code>,&lt;code>content&lt;/code>，&lt;code>content&lt;/code>包含了&lt;code>border&lt;/code>和&lt;code>padding&lt;/code>
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 171;
+flex-basis: 410px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/IE-box.png" data-size="732x428">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/IE-box.png"
+width="732"
+height="428"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/IE-box_huc487061706811e53eb58476d1bb0f4ce_169367_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/IE-box_huc487061706811e53eb58476d1bb0f4ce_169367_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="IE盒子模型">
+&lt;/a>
+&lt;figcaption>IE盒子模型&lt;/figcaption>
+&lt;/figure>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>补充说明：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>CSS&lt;/code>盒模型， 有内外两个部分。 外部属性 控制盒子本体是否占满一整行； 内部则控制：内部元素的属性。 例如：&lt;code>display: inline-block&lt;/code>,外部是，&lt;code>inline&lt;/code> 不占据整行； 内部是 &lt;code>block&lt;/code>则表明内部遵循块状特性。 因此， &lt;code>display: inline;&lt;/code> 可理解为 &lt;code>display: inline-inline;&lt;/code>， &lt;code>display: block;&lt;/code> 可理解为 &lt;code>display: block-block;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>width/height, padding, border, margin&lt;/code> 这几个控制盒子大小的属性。 其中 &lt;code>width/height&lt;/code> 控制元素内容大小； &lt;code>margin&lt;/code> 控制元素与其他元素的距离（&lt;code>margin&lt;/code>的背景色透明， 元素 background-color，只影响到 border）； &lt;code>border&lt;/code> 是元素外围边框； &lt;code>padding&lt;/code> 控制元素内容到 border 的距离&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
 &lt;h2 id="javascript">JavaScript&lt;/h2>
-&lt;p>&lt;strong>#Question:&lt;/strong> 写一个获取当前 url 查询字符串中的参数的方法&lt;/p>
-&lt;h2 id="soft-skills">Soft Skills&lt;/h2>
-&lt;p>&lt;strong>#Question:&lt;/strong> 网页应用从服务器主动推送到客户端有那些方式&lt;/p></description></item><item><title>毎日のフロントエンド　11</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/</link><pubDate>Sat, 25 Sep 2021 23:02:39 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/frontend-11-cover.jpg" alt="Featured image of post 毎日のフロントエンド　11" />&lt;h1 id="第十一日">第十一日&lt;/h1>
+&lt;h3 id="question-写一个获取当前-url-查询字符串中的参数的方法">&lt;strong>#Question:&lt;/strong> 写一个获取当前 url 查询字符串中的参数的方法&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">urlParams&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">search&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">location&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">search&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">search&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">search&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">substr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">search&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">search&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">res&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">search&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;amp;&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;=&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">res&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">decodeURIComponent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">res&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">urlParam&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="nx">location&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">search&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/([^&amp;amp;=?]+)=([^&amp;amp;]+)/g&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">m&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">c1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">c2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">res&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">c1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">c2&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">res&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="soft-skills">Soft Skills&lt;/h2>
+&lt;h3 id="question-网页应用从服务器主动推送到客户端有那些方式">&lt;strong>#Question:&lt;/strong> 网页应用从服务器主动推送到客户端有那些方式&lt;/h3>
+&lt;p>&lt;strong>&lt;code>WebSocket&lt;/code>&lt;/strong>&lt;/p>
+&lt;p>WebSocket 是一种在单个 TCP 连接上进行全双工通信的协议&lt;/p>
+&lt;p>WebSocket 使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据。在 WebSocket API 中，浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输。&lt;/p>
+&lt;p>&lt;strong>&lt;code>eventsource(SSE)&lt;/code>&lt;/strong>&lt;/p>
+&lt;p>&lt;code>EventSource&lt;/code> 接口是 Web 内容与服务器发送的事件的接口。一个 &lt;code>EventSource&lt;/code> 实例打开一个持久连接 &lt;code>HTTP&lt;/code> 服务器，它发送事件的 &lt;code>text/event-stream&lt;/code> 格式。连接保持打开状态，直到通过调用关闭 &lt;code>EventSource.close()&lt;/code>。&lt;/p>
+&lt;p>与 &lt;code>WebSocket&lt;/code> 不同，服务器发送的事件是单向的。也就是说，数据消息是从服务器到客户端（例如用户的 Web 浏览器）沿一个方向传递的&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.cnblogs.com/goloving/p/9196066.html" target="_blank" rel="noopener"
+>SSE 技术详解：使用 HTTP 做服务端数据推送应用的技术&lt;/a>&lt;/p>
+&lt;p>&lt;strong>&lt;code>Web Push&lt;/code>&lt;/strong>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000015235886" target="_blank" rel="noopener"
+>面试官：谈谈你对 CSS 盒模型的认识?&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　11</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/</link><pubDate>Sat, 25 Sep 2021 23:02:39 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/frontend-11-cover.jpg" alt="Featured image of post 毎日のフロントエンド　11" />&lt;h1 id="第十一日">第十一日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;p>&lt;strong>#Question:&lt;/strong> 你对标签语义化的理解是什么？&lt;/p>
 &lt;h3 id="什么是-html-语义化标签">什么是 HTML 语义化标签&lt;/h3>
