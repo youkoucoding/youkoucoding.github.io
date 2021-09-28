@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 27 Sep 2021 21:33:31 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　13</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-13/</link><pubDate>Mon, 27 Sep 2021 21:33:31 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-13/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-13/frontend-13-cover.jpg" alt="Featured image of post 毎日のフロントエンド　13" />&lt;h1 id="第十三日">第十三日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 28 Sep 2021 15:34:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　14</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/</link><pubDate>Tue, 28 Sep 2021 15:34:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/frontend-14-cover.jpg" alt="Featured image of post 毎日のフロントエンド　14" />&lt;h1 id="第十四日">第十四日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-为什么-html5-只需要写-doctype-html-就可以">&lt;strong>#Question:&lt;/strong> 为什么 HTML5 只需要写 &lt;code>&amp;lt;!DOCTYPE HTML&amp;gt;&lt;/code> 就可以？&lt;/h3>
+&lt;blockquote>
+&lt;p>The html document type declaration, also known as &lt;code>DOCTYPE&lt;/code>, is the first line of code required in every HTML or xHTML document. The &lt;code>DOCTYPE&lt;/code> declaration us an instruction to the web browser about what version of HTML the page is written in. This ensures that the web page is parsed the same way by different web browsers.&lt;/p>
+&lt;/blockquote>
+&lt;p>The declaration of &lt;code>HTML5&lt;/code> &lt;code>DOCTYPE&lt;/code> is much simpler: it no longer requires a reference to &lt;strong>DTDs&lt;/strong> as it is &lt;strong>no longer based on &lt;code>SGML&lt;/code>&lt;/strong>.&lt;/p>
+&lt;p>Doctype syntax for HTML5 and beyond:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>HTML5 与 HTML4 基于的基准不同。HTML4 基于 &lt;code>SGML&lt;/code> 因此需要除了 DOCTYPE 外还需要引入 &lt;code>DTD&lt;/code> 来告诉浏览器用什么标准进行渲染。DTD 还分为 &lt;em>标准模式、严格模式。&lt;/em>&lt;/p>
+&lt;p>HTML5 不基于 SGML，因此后面就不要跟 DTD，但是需要 DOCTYPE 来规范浏览器的渲染行为。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>SGML&lt;/code> 是通用标记语言的集合。其中有 HTML、XML，因此需要用 DTD 来指定使用那种规范。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-positionfixed-在-ios-下无效该怎么办">&lt;strong>#Question:&lt;/strong> &lt;code>position:fixed;&lt;/code> 在 ios 下无效该怎么办？&lt;/h3>
+&lt;p>移动端业务开发，iOS 下经常会有 fixed 元素和输入框(input 元素)同时存在的情况。 但是 fixed 元素在有软键盘唤起的情况下，会出现许多莫名其妙的问题。&lt;/p>
+&lt;p>现象： 当采用 fixed 做吸底、吸顶布局时，如果触发键盘弹出事件则 fixed 属性会失效，布局就会被扰乱。其原因解释如下：&lt;/p>
+&lt;p>软键盘唤起后，页面的 fixed 元素将失效（即无法浮动，也可以理解为变成了 absolute 定位），所以当页面超过一屏且滚动时，失效的 fixed 元素就会跟随滚动了。&lt;/p>
+&lt;ul>
+&lt;li>第三方库 &lt;strong>&lt;code>isScroll.js&lt;/code>&lt;/strong> 可以解决此问题。&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-什么是闭包优缺点分别是什么-what-is-a-closure">&lt;strong>#Question:&lt;/strong> 什么是闭包？优缺点分别是什么？ What is a Closure?&lt;/h3>
+&lt;blockquote>
+&lt;p>Closures is are frequently &lt;strong>used in JavaScript for object data privacy&lt;/strong>, in evently handlers and callback functions, and in partial application, currying(柯里化)，and other functional programming patterns.&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="what-is-closure">What is Closure?&lt;/h4>
+&lt;p>A closure is the combination of a function bundled together with references to &lt;strong>its surrounding state&lt;/strong> (the &lt;strong>lexical environment&lt;/strong>). In other words, &lt;strong>a closure gives you access to an outer function&amp;rsquo;s scope from an inner one.&lt;/strong>&lt;/p>
+&lt;p>IN JavaScript, closures are created every time a function is created, at function creation time.&lt;/p>
+&lt;p>To use a closure, define a function inside another function and expose it. To expose a function, return it or pass it to another function.&lt;/p>
+&lt;p>The inner function will have access to the variables in the outer one&amp;rsquo;s scope, even after the outer function has returned.&lt;/p>
+&lt;h4 id="examples">Examples&lt;/h4>
+&lt;p>Data privacy is an essential property that helps us &lt;strong>program to an interface, not an implementation.&lt;/strong> And among other things, closures are commonly used to give objects data privacy.&lt;/p>
+&lt;p>This is an important concept that helps us build more robust software because implementation details are more likely to change in breaking ways than interface contracts.&lt;/p>
+&lt;p>In javascript, closures are the primary mechanism used to enable data privacy. When you use closures for data privacy, the enclosed varibles are only in scope within the containing (outer) function. You can&amp;rsquo;t get at the data from an outside scope except through the object&amp;rsquo;s provileged methods.&lt;/p>
+&lt;p>闭包是可以访问另一个函数作用域的函数。由于 javascript 的特性，外层的函数无法访问内部函数的变量；而内部函数可以访问外部函数的变量（即作用域链）。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">b&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// 这个函数就是个闭包，可以访问外层 a 函数的变量
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">d&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">b&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">c&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">d&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">e&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>使用闭包可以&lt;strong>隐藏变量&lt;/strong>以及&lt;strong>防止变量被篡改和作用域的污染&lt;/strong>，从而实现封装&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>缺点就是由于保留了作用域链，会增加内存的开销。因此需要注意内存的使用，并且防止内存泄露的问题。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.freecodecamp.org/news/what-is-the-doctype-declaration-in-html/" target="_blank" rel="noopener"
+>What is the DOCTYPE Declaration in HTML?&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://efe.baidu.com/blog/mobile-fixed-layout/" target="_blank" rel="noopener"
+>Web 移动端 Fixed 布局的解决方案 | EFE Tech&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://cnodejs.org/topic/5d39c5259969a529571d73a8" target="_blank" rel="noopener"
+>关于闭包 - CNode 技术社区&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　13</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-13/</link><pubDate>Mon, 27 Sep 2021 21:33:31 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-13/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-13/frontend-13-cover.jpg" alt="Featured image of post 毎日のフロントエンド　13" />&lt;h1 id="第十三日">第十三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5-中的-form-怎么关闭自动完成">&lt;strong>#Question:&lt;/strong> html5 中的 &lt;code>form&lt;/code> 怎么关闭自动完成？&lt;/h3>
 &lt;p>操作表单 &lt;code>form&lt;/code> 的 &lt;code>autocomplete&lt;/code> 属性值, 默认是开启的。&lt;/p>
