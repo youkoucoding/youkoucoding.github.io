@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 28 Sep 2021 15:34:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　14</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/</link><pubDate>Tue, 28 Sep 2021 15:34:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/frontend-14-cover.jpg" alt="Featured image of post 毎日のフロントエンド　14" />&lt;h1 id="第十四日">第十四日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 29 Sep 2021 00:28:55 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>React HooksのUseState</title><link>https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/</link><pubDate>Wed, 29 Sep 2021 00:28:55 +0900</pubDate><guid>https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/hooks-cover.jpg" alt="Featured image of post React HooksのUseState" />&lt;h1 id="usestate-让函数组建具有维持状态的能力">useState: 让函数组建具有维持状态的能力&lt;/h1>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">import&lt;/span> &lt;span class="nx">React&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">useState&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;react&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">Example&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">count&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">setCount&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useState&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">div&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">p&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">count&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/p&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">button&lt;/span> &lt;span class="nx">onClick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="p">{()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">setCount&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">count&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)}&lt;/span>&lt;span class="o">&amp;gt;+&amp;lt;&lt;/span>&lt;span class="err">/button&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/div&amp;gt;&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="usage">Usage&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>useState(initialState)&lt;/code> 参数 &lt;code>initialState&lt;/code> 是创建 state 的初始值， 它可以是&lt;strong>任意类型&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>useState()&lt;/code>的返回值是一个有着两个元素的数组。 第一个数组元素用来读取 &lt;code>state&lt;/code> 的值， 第二个则是用来设置这个 state 的值的函数。 &lt;code>state&lt;/code>为只读变量， 且必须通过&lt;code>setCount&lt;/code>来设置 &lt;code>state&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>如果要创建多个 state， 需要多次调用&lt;code>useState&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">setAge&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useState&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">99&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">fruit&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">setFruit&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useState&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;banana&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">todos&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">setTodos&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">useState&lt;/span>&lt;span class="p">([{&lt;/span> &lt;span class="nx">text&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;react hooks&amp;#39;&lt;/span> &lt;span class="p">}]);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="principles">Principles&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>useState&lt;/code>中的 set 与 &lt;code>class&lt;/code> 组件中 &lt;code>setState&lt;/code> 类似， 但是 class 组件中的 state 只有一个，因此在类组件中，一般采用&lt;strong>对象作为一个 state&lt;/strong>； &lt;code>useState&lt;/code>可以多次创建，更加语义化。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>state&lt;/code>中&lt;strong>永远不要保存可以通过计算得到的值。&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>从 props 传递过来的值&lt;/strong>。 sometimes props 传递过来的值无法直接使用，而是需要通过一定的计算后再在 UI 上展示， 比如排序等。 此时， 在需要使用此数据的时候都重新排序，或者， 利用缓存机制， 而不是将结果直接置入&lt;code>state&lt;/code>&lt;/li>
+&lt;li>&lt;strong>从&lt;code>URL&lt;/code>中读取的值&lt;/strong>。 例如，有时需要读取 url 中的参数，作为组件的一部分状态。 此时， 应在需要的时候读取，而不是存入 state&lt;/li>
+&lt;li>&lt;strong>&lt;code>cookies&lt;/code> &lt;code>localStorage&lt;/code>中读取的值&lt;/strong>，应每次都去读取。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol></description></item><item><title>毎日のフロントエンド　14</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/</link><pubDate>Tue, 28 Sep 2021 15:34:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/frontend-14-cover.jpg" alt="Featured image of post 毎日のフロントエンド　14" />&lt;h1 id="第十四日">第十四日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-为什么-html5-只需要写-doctype-html-就可以">&lt;strong>#Question:&lt;/strong> 为什么 HTML5 只需要写 &lt;code>&amp;lt;!DOCTYPE HTML&amp;gt;&lt;/code> 就可以？&lt;/h3>
 &lt;blockquote>
