@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 29 Sep 2021 00:28:55 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>React HooksのUseState</title><link>https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/</link><pubDate>Wed, 29 Sep 2021 00:28:55 +0900</pubDate><guid>https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/hooks-cover.jpg" alt="Featured image of post React HooksのUseState" />&lt;h1 id="usestate-让函数组建具有维持状态的能力">useState: 让函数组建具有维持状态的能力&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 29 Sep 2021 09:49:10 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　15</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/</link><pubDate>Wed, 29 Sep 2021 09:49:10 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/frontend-15-cover.jpg" alt="Featured image of post 毎日のフロントエンド　15" />&lt;h1 id="第十五日">第十五日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-title-与-h1-的区别b-与-strong-的区别i-与-em-的区别">&lt;strong>#Question:&lt;/strong> &lt;code>title&lt;/code> 与 &lt;code>h1&lt;/code> 的区别、&lt;code>b&lt;/code> 与 &lt;code>strong&lt;/code> 的区别、&lt;code>i&lt;/code> 与 &lt;code>em&lt;/code> 的区别&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>title&lt;/code>: 网页的标题，tag 标签标题。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>h1&lt;/code>： 网页内部的标题&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Attention:&lt;/strong> 如果 title 为空，但是页面存在 h1,b,strong 标签，搜索引擎会默认页面 title 为 h1 内的内容，所以 得出结论 h1 是在没有外界干扰下除 title 以外第二个能强调页面主旨的标记，在一个页面中应该使用且&lt;strong>只使用一次 h1 标记。&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>b&lt;/code>： 加粗(bold)，是实体标签， 应当使用 CSS 而不是 &lt;code>&amp;lt;b&amp;gt;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>strong&lt;/code>: 语义化的 b， 属于逻辑标签。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Attention:&lt;/strong> 尽量使用 &lt;code>strong&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>i&lt;/code>： 斜体，是实体标签，应当使用 CSS 而不是 &lt;code>&amp;lt;i&amp;gt;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>em&lt;/code>: 语义化的&lt;code>i&lt;/code>，逻辑标签， &lt;code>i&lt;/code>, &lt;code>em&lt;/code> 同样表示强调，但是成都没有 &lt;code>strong&lt;/code> 高&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Attention:&lt;/strong> 物理元素是告诉浏览器我应该以何种格式显示文字，逻辑元素告诉浏览器这些文字有怎么样的重要性。对于搜索引擎来说&lt;code>em&lt;/code>和&lt;code>strong&lt;/code>比 i 和 b 要重视。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-style标签写在-body前和-body后的区别是什么">&lt;strong>#Question:&lt;/strong> &lt;code>style&lt;/code>标签写在 body&lt;em>前&lt;/em>和 body&lt;em>后&lt;/em>的区别是什么？&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>写在 body 标签前利于浏览器逐步渲染&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>写在 body 标签后：由于浏览器以逐行方式对 html 文档进行解析；当解析到写在尾部的样式表（外联或写在 style 标签）会导致浏览器停止之前的渲染，等待加载且解析样式表完成之后重新渲染； 在 windows 的 IE 下可能会出现 FOUC 现象（即样式失效导致的页面闪烁问题）；&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>加载和执行的一些优化点&lt;/p>
+&lt;ul>
+&lt;li>CSS 样式表置顶 （阻塞页面渲染）&lt;/li>
+&lt;li>用 &lt;code>&amp;lt;link&amp;gt;&lt;/code> 代替&lt;code>@import&lt;/code> （&lt;code>@import&lt;/code> 是 CSS，不会触发浏览器并发机制；在 CSS 加载完成后进行的引入。 但现代浏览器&lt;code>@import&lt;/code> 和 &lt;code>link&lt;/code> 在表现上已经没有上述区别了）&lt;/li>
+&lt;li>js 脚本置底（因为浏览器有并发限制，所以把 js 放到下边，减少占用的并发数，使得页面能够更快的渲染出来）合理使用 js 的异步加载能力&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-写一个数组去重的方法支持多维数组">&lt;strong>#Question:&lt;/strong> 写一个数组去重的方法（支持多维数组）&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">flatArr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">target&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isArray&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">flatArr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">target&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">target&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">midArr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">flatArr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">uniqueArr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">Set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">midArr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">))];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">uniqueArr&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">]]]);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">result&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 1,2,3,4,6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">uniqueArr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">Set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">flat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">Infinity&lt;/span>&lt;span class="p">))];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
+&lt;li>
+&lt;p>&lt;code>flat()&lt;/code> method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>flat()&lt;/code> has two alternatives: &lt;code>reduce&lt;/code> and &lt;code>concat&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://webtan.impress.co.jp/e/2013/09/06/15972" target="_blank" rel="noopener"
+>title タグと h1 タグは完全同一がいい? 違ってもいい? どう使い分ける? など 10+4 記事&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://nandemo-nobiru.com/2096/" target="_blank" rel="noopener"
+>文字を強調するタグ strong・b・em・i の違いと SEO 効果&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat" target="_blank" rel="noopener"
+>Array.prototype.flat() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>React HooksのUseState</title><link>https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/</link><pubDate>Wed, 29 Sep 2021 00:28:55 +0900</pubDate><guid>https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/hooks-cover.jpg" alt="Featured image of post React HooksのUseState" />&lt;h1 id="usestate-让函数组建具有维持状态的能力">useState: 让函数组建具有维持状态的能力&lt;/h1>
 &lt;h2 id="example">Example&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">import&lt;/span> &lt;span class="nx">React&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">useState&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;react&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="kr">const&lt;/span> &lt;span class="nx">Example&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>

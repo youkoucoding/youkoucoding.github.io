@@ -1,0 +1,301 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　15</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　15">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-09-29T09:49:10+09:00"><meta property="article:modified_time" content="2021-09-29T09:49:10+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/frontend-15-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　15">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/frontend-15-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/frontend-15-cover_huf555d4919df0c5c666476d0acfb3b927_2217728_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/frontend-15-cover_huf555d4919df0c5c666476d0acfb3b927_2217728_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/frontend-15-cover_huf555d4919df0c5c666476d0acfb3b927_2217728_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド　15">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/>毎日のフロントエンド　15</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Sep 29, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 2 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第十五日>第十五日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-title-与-h1-的区别b-与-strong-的区别i-与-em-的区别><strong>#Question:</strong> <code>title</code> 与 <code>h1</code> 的区别、<code>b</code> 与 <code>strong</code> 的区别、<code>i</code> 与 <code>em</code> 的区别</h3>
+<ul>
+<li>
+<p><code>title</code>: 网页的标题，tag 标签标题。</p>
+</li>
+<li>
+<p><code>h1</code>： 网页内部的标题</p>
+</li>
+<li>
+<p><strong>Attention:</strong> 如果 title 为空，但是页面存在 h1,b,strong 标签，搜索引擎会默认页面 title 为 h1 内的内容，所以 得出结论 h1 是在没有外界干扰下除 title 以外第二个能强调页面主旨的标记，在一个页面中应该使用且<strong>只使用一次 h1 标记。</strong></p>
+</li>
+<li>
+<p><code>b</code>： 加粗(bold)，是实体标签， 应当使用 CSS 而不是 <code>&lt;b></code></p>
+</li>
+<li>
+<p><code>strong</code>: 语义化的 b， 属于逻辑标签。</p>
+</li>
+<li>
+<p><strong>Attention:</strong> 尽量使用 <code>strong</code></p>
+</li>
+<li>
+<p><code>i</code>： 斜体，是实体标签，应当使用 CSS 而不是 <code>&lt;i></code></p>
+</li>
+<li>
+<p><code>em</code>: 语义化的<code>i</code>，逻辑标签， <code>i</code>, <code>em</code> 同样表示强调，但是成都没有 <code>strong</code> 高</p>
+</li>
+<li>
+<p><strong>Attention:</strong> 物理元素是告诉浏览器我应该以何种格式显示文字，逻辑元素告诉浏览器这些文字有怎么样的重要性。对于搜索引擎来说<code>em</code>和<code>strong</code>比 i 和 b 要重视。</p>
+</li>
+</ul>
+<h2 id=css>CSS</h2>
+<h3 id=question-style标签写在-body前和-body后的区别是什么><strong>#Question:</strong> <code>style</code>标签写在 body<em>前</em>和 body<em>后</em>的区别是什么？</h3>
+<ul>
+<li>
+<p>写在 body 标签前利于浏览器逐步渲染</p>
+</li>
+<li>
+<p>写在 body 标签后：由于浏览器以逐行方式对 html 文档进行解析；当解析到写在尾部的样式表（外联或写在 style 标签）会导致浏览器停止之前的渲染，等待加载且解析样式表完成之后重新渲染； 在 windows 的 IE 下可能会出现 FOUC 现象（即样式失效导致的页面闪烁问题）；</p>
+</li>
+<li>
+<p>加载和执行的一些优化点</p>
+<ul>
+<li>CSS 样式表置顶 （阻塞页面渲染）</li>
+<li>用 <code>&lt;link></code> 代替<code>@import</code> （<code>@import</code> 是 CSS，不会触发浏览器并发机制；在 CSS 加载完成后进行的引入。 但现代浏览器<code>@import</code> 和 <code>link</code> 在表现上已经没有上述区别了）</li>
+<li>js 脚本置底（因为浏览器有并发限制，所以把 js 放到下边，减少占用的并发数，使得页面能够更快的渲染出来）合理使用 js 的异步加载能力</li>
+</ul>
+</li>
+</ul>
+<h2 id=javascript>JavaScript</h2>
+<h3 id=question-写一个数组去重的方法支持多维数组><strong>#Question:</strong> 写一个数组去重的方法（支持多维数组）</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>flatArr</span><span class=p>(</span><span class=nx>arr</span><span class=p>,</span> <span class=nx>target</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>arr</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>item</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=nb>Array</span><span class=p>.</span><span class=nx>isArray</span><span class=p>(</span><span class=nx>item</span><span class=p>))</span> <span class=p>{</span>
+      <span class=nx>flatArr</span><span class=p>(</span><span class=nx>item</span><span class=p>,</span> <span class=nx>target</span><span class=p>);</span>
+    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+      <span class=nx>target</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>item</span><span class=p>);</span>
+    <span class=p>}</span>
+  <span class=p>});</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>midArr</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kd>let</span> <span class=nx>result</span> <span class=o>=</span> <span class=p>[];</span>
+
+  <span class=nx>flatArr</span><span class=p>(</span><span class=nx>arr</span><span class=p>,</span> <span class=nx>result</span><span class=p>);</span>
+
+  <span class=k>return</span> <span class=nx>result</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>uniqueArr</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=p>[...</span><span class=k>new</span> <span class=nx>Set</span><span class=p>(</span><span class=nx>midArr</span><span class=p>(</span><span class=nx>arr</span><span class=p>))];</span>
+<span class=p>}</span>
+
+<span class=kr>const</span> <span class=nx>result</span> <span class=o>=</span> <span class=nx>uniqueArr</span><span class=p>([</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=p>[</span><span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=p>[</span><span class=mi>4</span><span class=p>,</span> <span class=mi>6</span><span class=p>]]]);</span>
+
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>result</span><span class=p>);</span> <span class=c1>// 1,2,3,4,6
+</span></code></pre></div><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>uniqueArr</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=p>[...</span><span class=k>new</span> <span class=nx>Set</span><span class=p>(</span><span class=nx>arr</span><span class=p>.</span><span class=nx>flat</span><span class=p>(</span><span class=kc>Infinity</span><span class=p>))];</span>
+<span class=p>}</span>
+</code></pre></div><ol>
+<li>
+<p><code>flat()</code> method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.</p>
+</li>
+<li>
+<p><code>flat()</code> has two alternatives: <code>reduce</code> and <code>concat</code></p>
+</li>
+</ol>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=https://webtan.impress.co.jp/e/2013/09/06/15972 target=_blank rel=noopener>title タグと h1 タグは完全同一がいい? 違ってもいい? どう使い分ける? など 10+4 記事</a></p>
+<p><a class=link href=https://nandemo-nobiru.com/2096/ target=_blank rel=noopener>文字を強調するタグ strong・b・em・i の違いと SEO 効果</a></p>
+<p><a class=link href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat target=_blank rel=noopener>Array.prototype.flat() - JavaScript | MDN</a></p>
+<p><a class=link href=http://www.h-camel.com/index.html target=_blank rel=noopener>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/frontend-14-cover.ebec1c203003132eecdee35c8413ed40_huf633675efa550b3936c0f24944c6beb4_1720619_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-6+wcIDADEy7s3uNchBPtQA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　14</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-13/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-13/frontend-13-cover.ebec1c203003132eecdee35c8413ed40_huf633675efa550b3936c0f24944c6beb4_1720619_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-6+wcIDADEy7s3uNchBPtQA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　13</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-12/frontend-12-cover.d035e1cfab3f4e41158c0eb5a782899f_huf603ea210b60b02f272d6d9dbb2ff177_175148_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-0DXhz6s/TkEVjA61p4KJnw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　12</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-11/frontend-11-cover.d035e1cfab3f4e41158c0eb5a782899f_huf603ea210b60b02f272d6d9dbb2ff177_175148_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-0DXhz6s/TkEVjA61p4KJnw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　11</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-10/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-10/frontend-10-cover.e652c66095dac402aa75ebde7fde3e41_hu5b7d4b744859a935611e2eb6b463cb76_1822006_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-5lLGYJXaxAKqdevef94+QQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　10</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-title-与-h1-的区别b-与-strong-的区别i-与-em-的区别><strong>#Question:</strong> <code>title</code> 与 <code>h1</code> 的区别、<code>b</code> 与 <code>strong</code> 的区别、<code>i</code> 与 <code>em</code> 的区别</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-style标签写在-body前和-body后的区别是什么><strong>#Question:</strong> <code>style</code>标签写在 body<em>前</em>和 body<em>后</em>的区别是什么？</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-写一个数组去重的方法支持多维数组><strong>#Question:</strong> 写一个数组去重的方法（支持多维数组）</a></li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
