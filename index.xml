@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 29 Sep 2021 09:49:10 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　15</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/</link><pubDate>Wed, 29 Sep 2021 09:49:10 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/frontend-15-cover.jpg" alt="Featured image of post 毎日のフロントエンド　15" />&lt;h1 id="第十五日">第十五日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 30 Sep 2021 09:55:33 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　16</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-16/</link><pubDate>Thu, 30 Sep 2021 09:55:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-16/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-16/frontend-16-cover.jpg" alt="Featured image of post 毎日のフロントエンド　16" />&lt;h1 id="第十六日">第十六日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-元素的-alt-和-title-有什么区别title-属性alt属性の役割と違う使い分け">&lt;strong>##Question:&lt;/strong> 元素的 &lt;code>alt&lt;/code> 和 &lt;code>title&lt;/code> 有什么区别；&lt;code>title&lt;/code> 属性,&lt;code>alt&lt;/code>属性の役割と違う・使い分け&lt;/h3>
+&lt;p>&lt;code>&amp;lt;head&amp;gt;&lt;/code>内に書き込む要素としての title タグではない。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;画像だよ&amp;#34;&lt;/span> &lt;span class="na">title&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;こっちのtitleだよ&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>alt&lt;/code> &lt;strong>属性&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>最常见用于 &lt;code>&amp;lt;img&amp;gt;&lt;/code>标签上，alt 属性是一个必需的属性，它规定在图像无法显示时的替代文本。&lt;/p>
+&lt;p>推荐您在文档的&lt;strong>每个图像中都使用这个属性(SEO 需要)。&lt;/strong> 这样即使图像无法显示，用户还是可以看到关于丢失了什么东西的一些信息。而且对于残疾人来说，alt 属性通常是他们了解图像内容的唯一方式。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>title&lt;/code> &lt;strong>属性&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>title&lt;/code> 属性规定关于元素的额外信息。&lt;/p>
+&lt;p>这些信息通常会在鼠标移到元素上时显示一段工具提示文本（&lt;code>tooltip text&lt;/code>）。&lt;/p>
+&lt;p>&lt;code>title&lt;/code> 属性有一个很好的用途，即为链接添加描述性文字，特别是当连接本身并不是十分清楚的表达了链接的目的。这样就使得访问者知道那些链接将会带他们到什么地方。另外一个潜在的应用就是为图像提供额外的说明信息，比如日期或者其他非本质的信息。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>title&lt;/code> 属性常与 &lt;code>form&lt;/code> 以及 &lt;code>a&lt;/code> 元素一同使用，以提供关于输入格式和链接目标的信息。同时它也是 abbr 和 acronym 元素的必需属性。当然 title 属性是比较广泛使用的，可以用在除了 base，basefont，head，html，meta，param，script 和 title 之外的所有标签。但是并不是必须的。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>title 属性と alt 属性の違い&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>title&lt;/code> 属性はマウスオーバー時にツールチップで表示されるテキストを入力する。&lt;/li>
+&lt;li>&lt;code>title&lt;/code> 属性は img 以外に a タグや link タグなどあらゆる要素に指定していい。&lt;/li>
+&lt;li>&lt;code>alt&lt;/code> 属性は画像の代替テキストを指定するタグで、画像リンク切れ時や音声読み上げブラウザで使われる。&lt;/li>
+&lt;li>&lt;code>alt&lt;/code> 属性が使われるのは img タグのみで、内容がカラでも存在は必須。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;title&amp;gt;&lt;/code> &lt;strong>标签&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>&amp;lt;title&amp;gt;&lt;/code> 元素可定义文档的标题。&lt;/p>
+&lt;p>浏览器会以特殊的方式来使用标题，并且通常把它放置在浏览器窗口的标题栏或状态栏上。同样，当把文档加入用户的链接列表或者收藏夹或书签列表时，标题将成为该文档链接的默认名称。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>&amp;lt;title&amp;gt;&lt;/code> 标签是 &lt;code>&amp;lt;head&amp;gt;&lt;/code> 标签中唯一要求包含的东西&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>一定要选择一个正确的标题(一个好的描述性的标题)，这对于定义文档并确保它能够在 Web 上有效利用来说是十分重要的。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-请描述-margin-边界叠加是什么及解决方案">&lt;strong>##Question:&lt;/strong> 请描述 &lt;code>margin&lt;/code> 边界叠加是什么及解决方案&lt;/h3>
+&lt;p>问题： 当两个垂直边界相遇时，它们将形成一个边界。这个边界的高度等于两个发生叠加的边界的高度中的较大者。&lt;/p>
+&lt;p>&lt;code>margin&lt;/code> 边界叠加只会出现在普通文档流中，所以可以触发 &lt;code>BFC&lt;/code> 来解决&lt;/p>
+&lt;p>除此之外，也可以使用 &lt;code>padding&lt;/code> 来代替 &lt;code>margin&lt;/code> 或者增加 &lt;code>border&lt;/code> 的值&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-返回到顶部的方法有哪些-写出其中一个">&lt;strong>##Question:&lt;/strong> 返回到顶部的方法有哪些？ 写出其中一个&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>利用 &lt;code>a&lt;/code> 标签的锚点。在顶部放一个 &lt;code>a&lt;/code> 标签 &lt;code>&amp;lt;a name=&amp;quot;top&amp;quot;&amp;gt;顶部&amp;lt;/a&amp;gt;&lt;/code>，在需要回到顶部的位置放置一个 &lt;code>a&lt;/code> 标签，地址为 &lt;code>top&lt;/code>。 &lt;code>&amp;lt;a href=&amp;quot;#top&amp;quot;&amp;gt;回到顶部&amp;lt;/a&amp;gt;&lt;/code>。要做成隐藏的锚点，可以把内部的内容去掉，&lt;code>name&lt;/code> 是必须的。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>利用 &lt;code>#&lt;/code>，&lt;strong>在 url 后增加 # 不会让页面刷新，并且可以回到顶部。&lt;/strong> 可以对 &lt;code>location.href&lt;/code> 进行设置 &lt;code>location.href += '#'&lt;/code>。当这个方法执行多次即有多个 # 时，页面不会有响应。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>利用 &lt;code>js&lt;/code> 设置 &lt;code>scrollTop = 0&lt;/code>，一般设置在最外层，即 &lt;code>document.documentElement.scrollTop = 0&lt;/code> 就可以返回顶部。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://jill-tone.com/html_title_alt/" target="_blank" rel="noopener"
+>知らないと恥ずかしい？ title 属性と alt 属性の役割と違い・使い分け方【HTML】 – Jill Tone Blog&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　15</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/</link><pubDate>Wed, 29 Sep 2021 09:49:10 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/frontend-15-cover.jpg" alt="Featured image of post 毎日のフロントエンド　15" />&lt;h1 id="第十五日">第十五日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-title-与-h1-的区别b-与-strong-的区别i-与-em-的区别">&lt;strong>#Question:&lt;/strong> &lt;code>title&lt;/code> 与 &lt;code>h1&lt;/code> 的区别、&lt;code>b&lt;/code> 与 &lt;code>strong&lt;/code> 的区别、&lt;code>i&lt;/code> 与 &lt;code>em&lt;/code> 的区别&lt;/h3>
 &lt;ul>
