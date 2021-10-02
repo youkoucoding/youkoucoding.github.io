@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 30 Sep 2021 14:24:15 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>React HooksのUseEffect</title><link>https://youkoucoding.github.io/p/react-hooks%E3%81%AEuseeffect/</link><pubDate>Thu, 30 Sep 2021 14:24:15 +0900</pubDate><guid>https://youkoucoding.github.io/p/react-hooks%E3%81%AEuseeffect/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react-hooks%E3%81%AEuseeffect/hooks-cover.jpg" alt="Featured image of post React HooksのUseEffect" />&lt;h1 id="usestate-执行副作用">useState: 执行副作用&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 02 Oct 2021 23:10:17 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　18</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/</link><pubDate>Sat, 02 Oct 2021 23:10:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/frontend-18-cover.jpg" alt="Featured image of post 毎日のフロントエンド　18" />&lt;h1 id="第十八日">第十八日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-怎样在页面上实现一个圆形的可点击区域">&lt;strong>#Question:&lt;/strong> 怎样在页面上实现一个圆形的可点击区域？&lt;/h3>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-什么是fouc你是如何避免fouc的">&lt;strong>#Question:&lt;/strong> 什么是FOUC？你是如何避免FOUC的？&lt;/h3>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-你理解的use-strict-是什么使用它有什么优缺点">&lt;strong>#Question:&lt;/strong> 你理解的&lt;code>use strict&lt;/code>, 是什么?使用它有什么优缺点？&lt;/h3></description></item><item><title>毎日のフロントエンド　17</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/</link><pubDate>Fri, 01 Oct 2021 23:29:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/frontend-17-cover.jpg" alt="Featured image of post 毎日のフロントエンド　17" />&lt;h1 id="第十七日">第十七日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-你认为-table-的作用和优缺点是什么呢">&lt;strong>#Question:&lt;/strong> 你认为 table 的作用和优缺点是什么呢？&lt;/h3>
+&lt;ul>
+&lt;li>优点：特定的布局时，可以很块完成布局，样式好控制，特别是居中、对齐。&lt;/li>
+&lt;li>缺点：结构比较繁杂，非常多的 DOM 节点，会导致页面加载变慢、不利于 SEO，相对于目前比较流行的布局来讲。如 &lt;code>flex&lt;/code>，&lt;code>div+css&lt;/code>，&lt;code>grid&lt;/code> 等&lt;/li>
+&lt;li>作用：以前用来布局和展示表格，现在一般只用来展示表格&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-解释下-css-sprites-的原理和优缺点分别是什么">&lt;strong>#Question:&lt;/strong> 解释下 CSS sprites 的原理和优缺点分别是什么？&lt;/h3>
+&lt;ol>
+&lt;li>简介&lt;/li>
+&lt;/ol>
+&lt;p>&lt;code>CSS Sprites&lt;/code> 是一种网页图片应用处理方式。它允许将一个页面涉及到的所有零星图片都包含到一张大图中， 利用 CSS 的&lt;code>background-image&lt;/code>，&lt;code>background- repeat&lt;/code>，&lt;code>background-position&lt;/code>的组合进行背景定位， 访问页面时避免图片载入缓慢的现象。&lt;/p>
+&lt;ol start="2">
+&lt;li>优点&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>CSS Sprites&lt;/code>能很好地减少网页的 http 请求，从而大大的提高页面的性能，这是 CSS Sprites 最大的优点，也是其被广泛传播和应用的主要原因；&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>CSS Sprites&lt;/code>能减少图片的字节；&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>CSS Sprites&lt;/code>解决了网页设计师在图片命名上的困扰，只需对一张集合的图片命名，不需要对每一个小图片进行命名，从而提高了网页制作效率。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>CSS Sprites&lt;/code>只需要修改一张或少张图片的颜色或样式来改变整个网页的风格。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;ol start="3">
+&lt;li>缺点&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>图片合并麻烦：图片合并时，需要把多张图片有序的合理的合并成一张图片，并留好足够的空间防止版块出现不必要的背景。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>图片适应性差：在高分辨的屏幕下自适应页面，若图片不够宽会出现背景断裂。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>图片定位繁琐：开发时需要通过工具测量计算每个背景单元的精确位置。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>可维护性差：页面背景需要少许改动，可能要修改部分或整张已合并的图片，进而要改动 css。在避免改动图片的前提下，又只能（最好）往下追加图片，但这样增加了图片字节。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-typeofabc-和-typeof-abc都是-string-那么-typeof-是操作符还是函数">&lt;strong>#Question:&lt;/strong> &lt;code>typeof('abc')&lt;/code> 和 &lt;code>typeof 'abc'&lt;/code>都是 &lt;code>string&lt;/code>, 那么 &lt;code>typeof&lt;/code> 是操作符还是函数？&lt;/h3>
+&lt;p>&lt;code>typeof&lt;/code> 是操作符，不是函数。可以添加括号，但是括号的作用是进行分组而非函数的调用。 作用是对后方表达式的返回做类型定义。在后面添加括号其实是改变计算优先级，和四则运算中的括号可以等效理解。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="k">typeof&lt;/span> &lt;span class="mi">123&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//&amp;#34;number&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="mi">123&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;abc&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// &amp;#34;numberabc&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">123&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;abc&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#34;string&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>React HooksのUseEffect</title><link>https://youkoucoding.github.io/p/react-hooks%E3%81%AEuseeffect/</link><pubDate>Thu, 30 Sep 2021 14:24:15 +0900</pubDate><guid>https://youkoucoding.github.io/p/react-hooks%E3%81%AEuseeffect/</guid><description>&lt;img src="https://youkoucoding.github.io/p/react-hooks%E3%81%AEuseeffect/hooks-cover.jpg" alt="Featured image of post React HooksのUseEffect" />&lt;h1 id="usestate-执行副作用">useState: 执行副作用&lt;/h1>
 &lt;h3 id="副作用的定义">副作用的定义&lt;/h3>
 &lt;p>通常，副作用是指一段和当前执行结果无关的代码。比如说要修改函数外部的某个变凉，或者发起一个请求等。 在函数组建本次执行中，useEffect 中代码的执行是不影响渲染出来的 UI。&lt;/p>
 &lt;p>Side effects are all the operations that affect your componet and can&amp;rsquo;t be done during rendering. Things like fetching data, subscriptions or manually changing the DOM are all examples of side effects.&lt;/p>
