@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 02 Oct 2021 23:10:17 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　18</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/</link><pubDate>Sat, 02 Oct 2021 23:10:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/frontend-18-cover.jpg" alt="Featured image of post 毎日のフロントエンド　18" />&lt;h1 id="第十八日">第十八日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 04 Oct 2021 15:37:26 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　19</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/</link><pubDate>Mon, 04 Oct 2021 15:37:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/frontend-19-cover.jpg" alt="Featured image of post 毎日のフロントエンド　19" />&lt;h1 id="第十九日">第十九日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-说说你对html中的置换元素和非置换元素的理解">&lt;strong>#Question:&lt;/strong> 说说你对&lt;code>HTML&lt;/code>中的置换元素和非置换元素的理解&lt;/h3>
+&lt;h4 id="置换元素replaced-element">置换元素（&lt;code>Replaced Element&lt;/code>）&lt;/h4>
+&lt;blockquote>
+&lt;p>简单来说，置换元素可以设置宽 高,他们有自己的属性，和 &lt;code>inline-block&lt;/code> 有一样的属性&lt;/p>
+&lt;/blockquote>
+&lt;ol>
+&lt;li>
+&lt;p>主要是指 &lt;code>img&lt;/code>、&lt;code>input&lt;/code>、&lt;code>textarea&lt;/code>、&lt;code>select&lt;/code>、&lt;code>object&lt;/code> 等这类默认就有 &lt;code>CSS&lt;/code> 格式化外表范围的元素。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>浏览器根据元素的标签和属性，来决定元素的具体显示内容&lt;/p>
+&lt;ul>
+&lt;li>如：浏览器根据标签的 &lt;code>src&lt;/code> 属性显示图片。根据 &lt;code>type&lt;/code> 属性决定显示输入框还是按钮&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="非置换元素non-replaced-element">非置换元素（&lt;code>non-Replaced Element&lt;/code>）&lt;/h4>
+&lt;ol>
+&lt;li>
+&lt;p>就是除了 img、input、textarea、select、object 等置换元素以外的元素&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>内容直接展示给浏览器。例如标签，标签里的内容会被浏览器直接显示给用户&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-css的属性content有什么作用呢有哪些场景可以用到">&lt;strong>#Question:&lt;/strong> &lt;code>CSS&lt;/code>的属性&lt;code>content&lt;/code>有什么作用呢？有哪些场景可以用到&lt;/h3>
+&lt;h4 id="before-和-after">&lt;code>:before&lt;/code> 和 &lt;code>:after&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>默认 &lt;code>display: inline;&lt;/code>&lt;/li>
+&lt;li>必须设置 &lt;code>content&lt;/code> 属性，否则一切都是无用功， content 属性也只能应用在 &lt;code>:before&lt;/code> 和 &lt;code>:after&lt;/code> &lt;strong>伪元素&lt;/strong>上&lt;/li>
+&lt;li>默认 &lt;code>user-select: none;&lt;/code>，就是 &lt;code>:before&lt;/code> 和 &lt;code>:after&lt;/code> 的内容无法被用户选中&lt;/li>
+&lt;li>伪元素可以和伪类结合使用形如：&lt;code>.target:hover:after&lt;/code>&lt;/li>
+&lt;li>:before 和 :after 是在 CSS2 中提出来的，所以兼容 IE8&lt;/li>
+&lt;li>&lt;code>::before&lt;/code> 和 &lt;code>::after&lt;/code> 是 CSS3 中的写法，为了将&lt;strong>伪类&lt;/strong>和伪元素区分开&lt;/li>
+&lt;li>不可通过 DOM 使用，它只是纯粹的表象。在特殊情况下，从一个访问的角度来看，当前屏幕阅读不支持生成的内容&lt;/li>
+&lt;/ul>
+&lt;h4 id="content-定义用法">&lt;code>content&lt;/code> 定义用法&lt;/h4>
+&lt;p>&lt;code>content&lt;/code> 属性与 &lt;code>:before&lt;/code> 及 &lt;code>:after&lt;/code> &lt;strong>伪元素&lt;/strong>配合使用，在元素头或尾部来插入生成内容&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="nt">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">normal&lt;/span> &lt;span class="c">/* Keywords that cannot be combined with other values */&lt;/span>
+&lt;span class="nt">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">none&lt;/span>
+&lt;span class="nt">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;prefix&amp;#39;&lt;/span> &lt;span class="c">/* &amp;lt;string&amp;gt; value, non-latin characters must be encoded e.g. \00A0 for &amp;amp;nbsp; */&lt;/span>
+&lt;span class="nt">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">url&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="nt">http&lt;/span>&lt;span class="o">://&lt;/span>&lt;span class="nt">www&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">example&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">com&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nt">test&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">html&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="c">/* &amp;lt;uri&amp;gt; value */&lt;/span>
+&lt;span class="nt">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">chapter_counter&lt;/span> &lt;span class="c">/* &amp;lt;counter&amp;gt; values */&lt;/span>
+&lt;span class="nt">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">attr&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="nt">value&lt;/span> &lt;span class="nt">string&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="c">/* attr() value linked to the HTML attribute value */&lt;/span>
+&lt;span class="nt">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">open-quote&lt;/span> &lt;span class="c">/* Language- and position-dependant keywords */&lt;/span>
+&lt;span class="nt">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">close-quote&lt;/span>
+&lt;span class="nt">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">no-open-quote&lt;/span>
+&lt;span class="nt">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">no-close-quote&lt;/span>
+&lt;span class="nt">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">open-quote&lt;/span> &lt;span class="nt">chapter_counter&lt;/span> &lt;span class="c">/* Except for normal and none, several values can be used simultaneously */&lt;/span>
+&lt;span class="nt">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">inherit&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-attribute-和-property-有什么不同">&lt;strong>#Question:&lt;/strong> &lt;code>attribute&lt;/code> 和 &lt;code>property&lt;/code> 有什么不同&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>property&lt;/code>是 &lt;code>DOM&lt;/code> 中的属性，是 JavaScript 里的对象&lt;/p>
+&lt;ul>
+&lt;li>JavaScript の世界の住人&lt;/li>
+&lt;li>扱いやすいようにパースされている&lt;/li>
+&lt;li>動的（なこともある）&lt;/li>
+&lt;li>&lt;code>element.property&lt;/code> 例：&lt;code>p.className&lt;/code>&lt;/li>
+&lt;li>&lt;code>$().prop&lt;/code>&lt;/li>
+&lt;li>可以读取标签自带属性，包括没有写出来的&lt;/li>
+&lt;li>不能读取 &lt;code>attribute&lt;/code> 设置的属性&lt;/li>
+&lt;li>是元素（对象）的属性&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>attribute&lt;/code> 是 &lt;code>HTML&lt;/code> 标签上的特性，它的值&lt;strong>只能是字符串&lt;/strong>,直接在 html 标签添加的都是&lt;code>attribute&lt;/code>属性&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>HTML&lt;/code> の世界の住人&lt;/li>
+&lt;li>&lt;code>HTML&lt;/code> に書いたものがそのまま出る&lt;/li>
+&lt;li>静的&lt;/li>
+&lt;li>&lt;code>get/setAttribute()&lt;/code> 例如：&lt;code>a.getAttribute('href')&lt;/code>&lt;/li>
+&lt;li>&lt;code>$().attr&lt;/code>&lt;/li>
+&lt;li>不能读取 &lt;code>property&lt;/code> 设置的属性&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://qiita.com/jkr_2255/items/66a16bd969454ee8b114" target="_blank" rel="noopener"
+>Attribute と Property - Qiita&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　18</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/</link><pubDate>Sat, 02 Oct 2021 23:10:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/frontend-18-cover.jpg" alt="Featured image of post 毎日のフロントエンド　18" />&lt;h1 id="第十八日">第十八日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-怎样在页面上实现一个圆形的可点击区域">&lt;strong>#Question:&lt;/strong> 怎样在页面上实现一个圆形的可点击区域？&lt;/h3>
 &lt;ol>

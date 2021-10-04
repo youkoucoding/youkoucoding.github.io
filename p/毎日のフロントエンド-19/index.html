@@ -1,0 +1,305 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　19</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　19">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-10-04T15:37:26+09:00"><meta property="article:modified_time" content="2021-10-04T15:37:26+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/frontend-19-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　19">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/frontend-19-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/frontend-19-cover_hu09694cb8c91ec91d790cd17efc7e5c81_1496438_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/frontend-19-cover_hu09694cb8c91ec91d790cd17efc7e5c81_1496438_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/frontend-19-cover_hu09694cb8c91ec91d790cd17efc7e5c81_1496438_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド　19">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/>毎日のフロントエンド　19</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 04, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 1 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第十九日>第十九日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-说说你对html中的置换元素和非置换元素的理解><strong>#Question:</strong> 说说你对<code>HTML</code>中的置换元素和非置换元素的理解</h3>
+<h4 id=置换元素replaced-element>置换元素（<code>Replaced Element</code>）</h4>
+<blockquote>
+<p>简单来说，置换元素可以设置宽 高,他们有自己的属性，和 <code>inline-block</code> 有一样的属性</p>
+</blockquote>
+<ol>
+<li>
+<p>主要是指 <code>img</code>、<code>input</code>、<code>textarea</code>、<code>select</code>、<code>object</code> 等这类默认就有 <code>CSS</code> 格式化外表范围的元素。</p>
+</li>
+<li>
+<p>浏览器根据元素的标签和属性，来决定元素的具体显示内容</p>
+<ul>
+<li>如：浏览器根据标签的 <code>src</code> 属性显示图片。根据 <code>type</code> 属性决定显示输入框还是按钮</li>
+</ul>
+</li>
+</ol>
+<h4 id=非置换元素non-replaced-element>非置换元素（<code>non-Replaced Element</code>）</h4>
+<ol>
+<li>
+<p>就是除了 img、input、textarea、select、object 等置换元素以外的元素</p>
+</li>
+<li>
+<p>内容直接展示给浏览器。例如标签，标签里的内容会被浏览器直接显示给用户</p>
+</li>
+</ol>
+<h2 id=css>CSS</h2>
+<h3 id=question-css的属性content有什么作用呢有哪些场景可以用到><strong>#Question:</strong> <code>CSS</code>的属性<code>content</code>有什么作用呢？有哪些场景可以用到</h3>
+<h4 id=before-和-after><code>:before</code> 和 <code>:after</code></h4>
+<ul>
+<li>默认 <code>display: inline;</code></li>
+<li>必须设置 <code>content</code> 属性，否则一切都是无用功， content 属性也只能应用在 <code>:before</code> 和 <code>:after</code> <strong>伪元素</strong>上</li>
+<li>默认 <code>user-select: none;</code>，就是 <code>:before</code> 和 <code>:after</code> 的内容无法被用户选中</li>
+<li>伪元素可以和伪类结合使用形如：<code>.target:hover:after</code></li>
+<li>:before 和 :after 是在 CSS2 中提出来的，所以兼容 IE8</li>
+<li><code>::before</code> 和 <code>::after</code> 是 CSS3 中的写法，为了将<strong>伪类</strong>和伪元素区分开</li>
+<li>不可通过 DOM 使用，它只是纯粹的表象。在特殊情况下，从一个访问的角度来看，当前屏幕阅读不支持生成的内容</li>
+</ul>
+<h4 id=content-定义用法><code>content</code> 定义用法</h4>
+<p><code>content</code> 属性与 <code>:before</code> 及 <code>:after</code> <strong>伪元素</strong>配合使用，在元素头或尾部来插入生成内容</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=nt>content</span><span class=o>:</span> <span class=nt>normal</span>                                <span class=c>/* Keywords that cannot be combined with other values */</span>
+<span class=nt>content</span><span class=o>:</span> <span class=nt>none</span>
+
+<span class=nt>content</span><span class=o>:</span> <span class=s1>&#39;prefix&#39;</span>                              <span class=c>/* &lt;string&gt; value, non-latin characters must be encoded e.g. \00A0 for &amp;nbsp; */</span>
+<span class=nt>content</span><span class=o>:</span> <span class=nt>url</span><span class=o>(</span><span class=nt>http</span><span class=o>://</span><span class=nt>www</span><span class=p>.</span><span class=nc>example</span><span class=p>.</span><span class=nc>com</span><span class=o>/</span><span class=nt>test</span><span class=p>.</span><span class=nc>html</span><span class=o>)</span> <span class=c>/* &lt;uri&gt; value */</span>
+<span class=nt>content</span><span class=o>:</span> <span class=nt>chapter_counter</span>                       <span class=c>/* &lt;counter&gt; values */</span>
+<span class=nt>content</span><span class=o>:</span> <span class=nt>attr</span><span class=o>(</span><span class=nt>value</span> <span class=nt>string</span><span class=o>)</span>                    <span class=c>/* attr() value linked to the HTML attribute value */</span>
+<span class=nt>content</span><span class=o>:</span> <span class=nt>open-quote</span>                            <span class=c>/* Language- and position-dependant keywords */</span>
+<span class=nt>content</span><span class=o>:</span> <span class=nt>close-quote</span>
+<span class=nt>content</span><span class=o>:</span> <span class=nt>no-open-quote</span>
+<span class=nt>content</span><span class=o>:</span> <span class=nt>no-close-quote</span>
+
+<span class=nt>content</span><span class=o>:</span> <span class=nt>open-quote</span> <span class=nt>chapter_counter</span>            <span class=c>/* Except for normal and none, several values can be used simultaneously */</span>
+
+<span class=nt>content</span><span class=o>:</span> <span class=nt>inherit</span>
+
+</code></pre></div><h2 id=javascript>JavaScript</h2>
+<h3 id=question-attribute-和-property-有什么不同><strong>#Question:</strong> <code>attribute</code> 和 <code>property</code> 有什么不同</h3>
+<ul>
+<li>
+<p><code>property</code>是 <code>DOM</code> 中的属性，是 JavaScript 里的对象</p>
+<ul>
+<li>JavaScript の世界の住人</li>
+<li>扱いやすいようにパースされている</li>
+<li>動的（なこともある）</li>
+<li><code>element.property</code> 例：<code>p.className</code></li>
+<li><code>$().prop</code></li>
+<li>可以读取标签自带属性，包括没有写出来的</li>
+<li>不能读取 <code>attribute</code> 设置的属性</li>
+<li>是元素（对象）的属性</li>
+</ul>
+</li>
+<li>
+<p><code>attribute</code> 是 <code>HTML</code> 标签上的特性，它的值<strong>只能是字符串</strong>,直接在 html 标签添加的都是<code>attribute</code>属性</p>
+<ul>
+<li><code>HTML</code> の世界の住人</li>
+<li><code>HTML</code> に書いたものがそのまま出る</li>
+<li>静的</li>
+<li><code>get/setAttribute()</code> 例如：<code>a.getAttribute('href')</code></li>
+<li><code>$().attr</code></li>
+<li>不能读取 <code>property</code> 设置的属性</li>
+</ul>
+</li>
+</ul>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=http://www.h-camel.com/index.html target=_blank rel=noopener>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！</a></p>
+<p><a class=link href=https://qiita.com/jkr_2255/items/66a16bd969454ee8b114 target=_blank rel=noopener>Attribute と Property - Qiita</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/frontend-18-cover.979f2c40ea72af7fcc555ede271165d3_hub96c76990577e7009ecebb4d858ed434_3670530_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-l58sQOpyr3/MVV7eJxFl0w==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　18</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/frontend-17-cover.979f2c40ea72af7fcc555ede271165d3_hub96c76990577e7009ecebb4d858ed434_3670530_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-l58sQOpyr3/MVV7eJxFl0w==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　17</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-16/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-16/frontend-16-cover.046c06e402783fcf0ad9b34efeea6339_huf555d4919df0c5c666476d0acfb3b927_2217728_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-BGwG5AJ4P88K2bNO/upjOQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　16</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-15/frontend-15-cover.046c06e402783fcf0ad9b34efeea6339_huf555d4919df0c5c666476d0acfb3b927_2217728_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-BGwG5AJ4P88K2bNO/upjOQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　15</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-14/frontend-14-cover.ebec1c203003132eecdee35c8413ed40_huf633675efa550b3936c0f24944c6beb4_1720619_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-6+wcIDADEy7s3uNchBPtQA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　14</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-说说你对html中的置换元素和非置换元素的理解><strong>#Question:</strong> 说说你对<code>HTML</code>中的置换元素和非置换元素的理解</a>
+<ol>
+<li><a href=#置换元素replaced-element>置换元素（<code>Replaced Element</code>）</a></li>
+<li><a href=#非置换元素non-replaced-element>非置换元素（<code>non-Replaced Element</code>）</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-css的属性content有什么作用呢有哪些场景可以用到><strong>#Question:</strong> <code>CSS</code>的属性<code>content</code>有什么作用呢？有哪些场景可以用到</a>
+<ol>
+<li><a href=#before-和-after><code>:before</code> 和 <code>:after</code></a></li>
+<li><a href=#content-定义用法><code>content</code> 定义用法</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-attribute-和-property-有什么不同><strong>#Question:</strong> <code>attribute</code> 和 <code>property</code> 有什么不同</a></li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
