@@ -1,10 +1,74 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 02 Oct 2021 23:10:17 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　18</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/</link><pubDate>Sat, 02 Oct 2021 23:10:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/frontend-18-cover.jpg" alt="Featured image of post 毎日のフロントエンド　18" />&lt;h1 id="第十八日">第十八日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-怎样在页面上实现一个圆形的可点击区域">&lt;strong>#Question:&lt;/strong> 怎样在页面上实现一个圆形的可点击区域？&lt;/h3>
-&lt;h2 id="css">CSS&lt;/h2>
-&lt;h3 id="question-什么是fouc你是如何避免fouc的">&lt;strong>#Question:&lt;/strong> 什么是FOUC？你是如何避免FOUC的？&lt;/h3>
+&lt;ol>
+&lt;li>用 &lt;code>canvas&lt;/code> 画布，弧线画圆，然后计算鼠标的坐标是否落在圆内&lt;/li>
+&lt;li>利用 &lt;code>SVG&lt;/code> 作出圆形，然后添加点击事件&lt;/li>
+&lt;li>用一个 &lt;code>div&lt;/code>,给 &lt;code>div&lt;/code> 添加圆角属性&lt;code>50%&lt;/code>，在 div 上添加点击事件&lt;/li>
+&lt;li>利用 &lt;code>&amp;lt;map&amp;gt;&lt;/code> 和 &lt;code>&amp;lt;area&amp;gt;&lt;/code> 标签设置圆形点击区域&lt;!-- raw HTML omitted -->&lt;code>&amp;lt;area&amp;gt; &amp;amp; &amp;lt;map&amp;gt;&lt;/code> &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;!-- raw HTML omitted -->&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="c">&amp;lt;!-- svg 圆 --&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">svg&lt;/span>
+&lt;span class="na">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;100%&amp;#34;&lt;/span>
+&lt;span class="na">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;100%&amp;#34;&lt;/span>
+&lt;span class="na">version&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;1.1&amp;#34;&lt;/span>
+&lt;span class="na">xmlns&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://www.w3.org/2000/svg&amp;#34;&lt;/span>
+&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">circle&lt;/span>
+&lt;span class="na">cx&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;100&amp;#34;&lt;/span>
+&lt;span class="na">cy&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;50&amp;#34;&lt;/span>
+&lt;span class="na">r&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;40&amp;#34;&lt;/span>
+&lt;span class="na">stroke&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;black&amp;#34;&lt;/span>
+&lt;span class="na">stroke-width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;2&amp;#34;&lt;/span>
+&lt;span class="na">fill&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;red&amp;#34;&lt;/span>
+&lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;alert(3)&amp;#34;&lt;/span>
+&lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">svg&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-什么是-fouc-如何避免-fouc-的">&lt;strong>#Question:&lt;/strong> 什么是 &lt;code>FOUC&lt;/code>？ 如何避免 &lt;code>FOUC&lt;/code> 的？&lt;/h3>
+&lt;p>&lt;strong>FOUC 浏览器样式闪烁&lt;/strong>&lt;/p>
+&lt;p>&lt;code>FOUC&lt;/code> 即 &lt;code>Flash of Unstyled Content&lt;/code>，是指页面一开始以样式 A（或无样式）的渲染，突然变成样式 B。原因是样式表的晚于 HTML 加载导致页面重新进行绘制。&lt;/p>
+&lt;p>产生原因&lt;/p>
+&lt;ul>
+&lt;li>通过 @import 方式导入CSS&lt;/li>
+&lt;li>&lt;code>style&lt;/code> 标签在 &lt;code>body&lt;/code> 中或底部&lt;/li>
+&lt;li>有几个样式表，放在html结构的不同位置&lt;/li>
+&lt;/ul>
+&lt;p>解决方案： &lt;strong>把 &lt;code>link&lt;/code> 标签将样式放在 &lt;code>head&lt;/code> 中&lt;/strong>&lt;/p>
 &lt;h2 id="javascript">JavaScript&lt;/h2>
-&lt;h3 id="question-你理解的use-strict-是什么使用它有什么优缺点">&lt;strong>#Question:&lt;/strong> 你理解的&lt;code>use strict&lt;/code>, 是什么?使用它有什么优缺点？&lt;/h3></description></item><item><title>毎日のフロントエンド　17</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/</link><pubDate>Fri, 01 Oct 2021 23:29:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/frontend-17-cover.jpg" alt="Featured image of post 毎日のフロントエンド　17" />&lt;h1 id="第十七日">第十七日&lt;/h1>
+&lt;h3 id="question-你理解的use-strict-是什么使用它有什么优缺点">&lt;strong>#Question:&lt;/strong> 你理解的&lt;code>use strict&lt;/code>, 是什么?使用它有什么优缺点？&lt;/h3>
+&lt;p>由于历史原因 &lt;code>JavaScript&lt;/code> 在错误提示方面做的并不完善。比如允许定义未声明的变量、不允许使用八进制数字、不允许函数参数重名、不允许删除不可删除的属性。&lt;/p>
+&lt;p>Pros:&lt;/p>
+&lt;ul>
+&lt;li>消除 Javascript 语法的一些不合理、不严谨之处，减少一些怪异行为&lt;/li>
+&lt;li>消除代码运行的一些不安全之处，保证代码运行的安全&lt;/li>
+&lt;li>提高编译器效率，增加运行速度&lt;/li>
+&lt;li>为未来新版本的 Javascript 做好铺垫 &lt;!-- raw HTML omitted -->&lt;code>use strict&lt;/code> &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;!-- raw HTML omitted -->&lt;/li>
+&lt;/ul>
+&lt;p>Strict mode makes several changes to normal JavaScript semantics:&lt;/p>
+&lt;ul>
+&lt;li>Eliminates some JavaScript silent errors by changing them to throw errors.&lt;/li>
+&lt;li>Fixes mistakes that make it difficult for JavaScript engines to perform optimizations: &lt;strong>strict mode code can sometimes be made to run faster than identical code that&amp;rsquo;s not strict mode.&lt;/strong>&lt;/li>
+&lt;li>Prohibits some syntax likely to be defined in future version of ECMAscript.&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode" target="_blank" rel="noopener"
+>Strict mode - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://www.zhangxinxu.com/wordpress/2017/05/html-area-map/" target="_blank" rel="noopener"
+>HTML area map 标签及在实际开发中的应用&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://www.runoob.com/js/js-strict.html" target="_blank" rel="noopener"
+>JavaScript 严格模式(use strict) | 菜鸟教程&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド　17</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/</link><pubDate>Fri, 01 Oct 2021 23:29:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/frontend-17-cover.jpg" alt="Featured image of post 毎日のフロントエンド　17" />&lt;h1 id="第十七日">第十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-你认为-table-的作用和优缺点是什么呢">&lt;strong>#Question:&lt;/strong> 你认为 table 的作用和优缺点是什么呢？&lt;/h3>
 &lt;ul>
