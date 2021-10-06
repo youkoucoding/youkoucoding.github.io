@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Oct 2021 11:27:36 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　20</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/</link><pubDate>Tue, 05 Oct 2021 11:27:36 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/frontend-20-cover.jpg" alt="Featured image of post 毎日のフロントエンド　20" />&lt;h1 id="第二十日">第二十日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 06 Oct 2021 12:26:28 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　21</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/</link><pubDate>Wed, 06 Oct 2021 12:26:28 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/frontend-21-cover.jpg" alt="Featured image of post 毎日のフロントエンド　21" />&lt;h1 id="第二十一日">第二十一日&lt;/h1>
+&lt;h2 id="html">HTMl&lt;/h2>
+&lt;h3 id="question-谈谈对input元素中readonly和disabled属性的理解">&lt;strong>#Question:&lt;/strong> 谈谈对&lt;code>input&lt;/code>元素中&lt;code>readonly&lt;/code>和&lt;code>disabled&lt;/code>属性的理解&lt;/h3>
+&lt;p>相同点：&lt;/p>
+&lt;ul>
+&lt;li>都会使文本框变成只读，不可编辑&lt;/li>
+&lt;/ul>
+&lt;p>不同点：&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>disabled&lt;/code> 属性在将 &lt;code>input&lt;/code> 文本框变成只读不可编辑的同时，还会使文本框变灰, 不允许填写和使用,但是&lt;code>readonly&lt;/code>不会&lt;/li>
+&lt;li>&lt;code>disabled&lt;/code> 属性修饰后的文本框内容，在不可编辑的同时，通过 &lt;strong>js 也是获取不到的&lt;/strong>。但是用 readonly 修饰后的文本框内容，是可以通过 js 获取到的，也就只是简单的不可编辑而已&lt;/li>
+&lt;li>&lt;code>disabled&lt;/code> 属性对 &lt;code>input&lt;/code> 文本框，单选 &lt;code>radio&lt;/code>, 多选 &lt;code>checkbox&lt;/code> 都适用，但是 &lt;code>readonly&lt;/code> 就不适用，用它修饰后的单选以及多选按钮仍然是可以编辑状态的。(&lt;code>readonly&lt;/code>只针对&lt;code>input&lt;/code>和&lt;code>textarea&lt;/code>有效，而 disabled 对于所有的表单元素都有效)&lt;/li>
+&lt;li>&lt;code>readonly&lt;/code> 直译为 “只读”，一般用于只允许用户填写一次的信息，提交过一次之后，就不允许再次修改了&lt;/li>
+&lt;li>&lt;code>disabled&lt;/code> 的数据是不会被获取和上传，&lt;code>readonly&lt;/code> 的数据会被获取和上传&lt;/li>
+&lt;/ol>
+&lt;p>Summary：&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>readonly&lt;/code>：不可编辑、可复制、可选择、可以接收焦点但不能被修改，后台会接收到传值&lt;/li>
+&lt;li>&lt;code>disabled&lt;/code>：不可编辑、不可复制、不可选择、不能接收焦点，后台也不会接收到传值&lt;/li>
+&lt;/ol>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-说说对line-height是如何理解的">&lt;strong>#Question:&lt;/strong> 说说对&lt;code>line-height&lt;/code>是如何理解的？&lt;/h3>
+&lt;p>&lt;code>line-height&lt;/code>&lt;/p>
+&lt;p>The &lt;code>line-height&lt;/code> CSS property sets the height of a line box. It&amp;rsquo;s commonly used to set the distance between lines of text. On block-level elements, it specifies the &lt;strong>minimum height of line boxes&lt;/strong> within the element. On ono-replaced inline elements, it specifies the height that is used to calculate line box height&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>&lt;code>line-height&lt;/code> 在日常用的最多的是让单行文字垂直居中（其实不需要设置 height，一个 line-height 即可）。&lt;/p>
+&lt;p>&lt;code>line-height - font-size&lt;/code> 为行距，一般会近似平分到文字的上下两边，使文字看上去垂直居中。如果需要多行文字的垂直居中，还需要加上 &lt;code>vertical-align: middle;&lt;/code>&lt;/p>
+&lt;p>&lt;code>line-height&lt;/code> 可以&lt;strong>不设置单位&lt;/strong>，表示 &lt;code>font-size&lt;/code> 的倍数&lt;/p>
+&lt;p>对于非替换元素的纯内联元素，其高度是由 &lt;code>line-height&lt;/code> 所决定的&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-写一个方法验证是否为中文2">&lt;strong>#Question:&lt;/strong> 写一个方法验证是否为中文&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">//使用的Unicode 编码 4e00 和 9fa5 分别表示第一个汉字和最后一个汉字的编码
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">isChinese&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">reg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sr">/^[\u4e00-\u9fa5]+$/&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">reg&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">test&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903721025929223" target="_blank" rel="noopener"
+>CSS 深入理解之 line-height&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#values" target="_blank" rel="noopener"
+>line-height - CSS: Cascading Style Sheets | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/issues/72#issuecomment-544332674" target="_blank" rel="noopener"
+>中文字符对应编写正则&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド　20</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/</link><pubDate>Tue, 05 Oct 2021 11:27:36 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/frontend-20-cover.jpg" alt="Featured image of post 毎日のフロントエンド　20" />&lt;h1 id="第二十日">第二十日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-请描述-html-元素的显示优先级">&lt;strong>#Question:&lt;/strong> 请描述 HTML 元素的显示优先级&lt;/h3>
 &lt;p>在 html 中，帧元素（&lt;code>frameset&lt;/code>）的优先级最高(已不提倡使用)，表单元素比非表单元素的优先级要高。&lt;/p>
