@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 04 Oct 2021 15:37:26 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　19</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/</link><pubDate>Mon, 04 Oct 2021 15:37:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/frontend-19-cover.jpg" alt="Featured image of post 毎日のフロントエンド　19" />&lt;h1 id="第十九日">第十九日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Oct 2021 11:27:36 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　20</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/</link><pubDate>Tue, 05 Oct 2021 11:27:36 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/frontend-20-cover.jpg" alt="Featured image of post 毎日のフロントエンド　20" />&lt;h1 id="第二十日">第二十日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-请描述-html-元素的显示优先级">&lt;strong>#Question:&lt;/strong> 请描述 HTML 元素的显示优先级&lt;/h3>
+&lt;p>在 html 中，帧元素（&lt;code>frameset&lt;/code>）的优先级最高(已不提倡使用)，表单元素比非表单元素的优先级要高。&lt;/p>
+&lt;p>&lt;code>frameset &amp;gt; 表单元素 &amp;gt; 非表单元素&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>表单元素:
+&lt;ul>
+&lt;li>文本输入框，密码输入框，单选框，复选框，文本输入域，列表框等等&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>非表单元素:
+&lt;ul>
+&lt;li>&lt;code>a&lt;/code>，&lt;code>div&lt;/code>, &lt;code>table&lt;/code>, &lt;code>span&lt;/code> 等等&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>有窗口元素比无窗口元素的优先级高&lt;/p>
+&lt;ul>
+&lt;li>有窗口元素:
+&lt;ul>
+&lt;li>select 元素，object 元素，以及 frames 元素等等&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>无窗口元素:
+&lt;ul>
+&lt;li>大部分 html 元素都是无窗口元素&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-要让-chrome-支持小于-12px-的文字怎么做">&lt;strong>#Question:&lt;/strong> 要让 Chrome 支持小于 12px 的文字怎么做？&lt;/h3>
+&lt;p>Chrome 中有最小字号的限制，一般为 &lt;code>12px&lt;/code>。原因是 Chrome 认为小于这个字号会影响阅读。&lt;/p>
+&lt;p>当需要小于 12px 字体的时候，有以下几个方法可以使用。&lt;/p>
+&lt;p>&lt;code>-webkit-text-size-adjust:none;&lt;/code> 这个属性&lt;strong>在高版本的 Chrome 中已经被废除。&lt;/strong>&lt;/p>
+&lt;p>使用 &lt;code>transform: scale(0.5, 0.5);&lt;/code>，但使用 transform 需要注意下面几点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>transform&lt;/code> 对行内元素无效，因此要么使用 &lt;code>display: block;&lt;/code> 要么使用 &lt;code>display: inline-block;&lt;/code>&lt;/li>
+&lt;li>&lt;code>transform&lt;/code> 即使进行了缩放，原来元素还是会占据对应的位置。因此需要做调整，最好是在外面再包一层元素，以免影响其他元素&lt;/li>
+&lt;li>使用图片&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>最方便是切图&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-写一个验证身份证号的方法">&lt;strong>#Question:&lt;/strong> 写一个验证身份证号的方法&lt;/h3>
+&lt;blockquote>
+&lt;p>身份证号码的组成：地址码 6 位+年份码 4 位+月份码 2 位+日期码 2 位+顺序码 3 位+校验码 1 位&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">check&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">reg&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;span class="sr">/^[1-9]\d{5}(19|20)\d{2}((0[1-9])|(1[0-2]))(([0-2][1-9])|(10|20|30|31))\d{3}[0-9Xx]$/&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">reg&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">test&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// regexObj.test(str) return a boolean
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.jianshu.com/p/868a7d16fb68" target="_blank" rel="noopener"
+>HTML 元素的显示优先级 - 简书&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/issues/68" target="_blank" rel="noopener"
+>Issue #68 haizlin/fe-interview&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　19</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/</link><pubDate>Mon, 04 Oct 2021 15:37:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/frontend-19-cover.jpg" alt="Featured image of post 毎日のフロントエンド　19" />&lt;h1 id="第十九日">第十九日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说说你对html中的置换元素和非置换元素的理解">&lt;strong>#Question:&lt;/strong> 说说你对&lt;code>HTML&lt;/code>中的置换元素和非置换元素的理解&lt;/h3>
 &lt;h4 id="置换元素replaced-element">置换元素（&lt;code>Replaced Element&lt;/code>）&lt;/h4>
