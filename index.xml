@@ -1,4 +1,130 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 06 Oct 2021 12:26:28 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　21</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/</link><pubDate>Wed, 06 Oct 2021 12:26:28 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/frontend-21-cover.jpg" alt="Featured image of post 毎日のフロントエンド　21" />&lt;h1 id="第二十一日">第二十一日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Oct 2021 11:06:55 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　22</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-22/</link><pubDate>Thu, 07 Oct 2021 11:06:55 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-22/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-22/frontend-22-cover.jpg" alt="Featured image of post 毎日のフロントエンド　22" />&lt;h1 id="第二十二日">第二十二日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-js放在html的body和head有什么区别">&lt;strong>#Question:&lt;/strong> &lt;code>js&lt;/code>放在&lt;code>html&lt;/code>的&lt;code>&amp;lt;body&amp;gt;&lt;/code>和&lt;code>&amp;lt;head&amp;gt;&lt;/code>有什么区别&lt;/h3>
+&lt;blockquote>
+&lt;p>在浏览器渲染页面之前，它需要通过解析&lt;code>HTML&lt;/code>标记然后构建&lt;code>DOM&lt;/code>树。在这个过程中，如果解析器遇到了一个脚本(script)，它就会停下来，并且执行这个脚本，然后才会继续解析 HTML。如果遇到了一个引用外部资源的脚本(script)，它就必须停下来等待这个脚本资源的下载，而这个行为会导致一个或者多个的网络往返，并且会延迟页面的首次渲染时间&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>外部引入的脚本(script)会阻塞浏览器的并行下载&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>浏览器解析&lt;code>HTML&lt;/code>顺序&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;/blockquote>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>js&lt;/code> 放在 &lt;code>&amp;lt;head&amp;gt;&lt;/code> 中，如果不添加 &lt;code>async&lt;/code> 或者 &lt;code>defer&lt;/code> 时，当浏览器遇到 script 时，会阻塞 DOM 树的构建，进而影响页面的加载。当 js 文件较多时，页面白屏的时间也会变长。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>把 js 放到 &lt;code>&amp;lt;body&amp;gt;&lt;/code> 里（一般在 &lt;code>&amp;lt;/body&amp;gt;&lt;/code> 的上面）时，由于 DOM 是顺序解析的，因此 js 不会阻塞 DOM 的解析。对于必须要在 DOM 解析前就要加载的 js，我们需要放在 &lt;code>&amp;lt;head&amp;gt;&lt;/code> 中。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>一般情况下是在网站中，同步在 &lt;code>&amp;lt;head&amp;gt;&lt;/code> 加载的脚本通常是业务必须的，比如说我要注册一个 window 对象，或者用 document.write 写入一些内容，或者是业务需求，我们可以用 head 来做加载:&lt;strong>头部给 script 标签加入 async 的属性，表示它是异步加载的脚本，不会对 html 进行阻塞，这也是大部分网站的做法&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="conclusion">Conclusion&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>对于必须要在 &lt;code>DOM&lt;/code> 加载之前运行的 &lt;code>JavaScript&lt;/code> 脚本，我们需要把这些脚本放置在页面的 &lt;code>head&lt;/code> 中，而不是通过外部引用的方式，因为外部的引用增加了网络的请求次数；并且我们要确保内敛的这些 &lt;code>JavaScript&lt;/code> 脚本是很小的，最好是压缩过的，并且执行的速度很快，不会造成浏览器渲染的阻塞&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>对于支持使用 &lt;code>script&lt;/code> 标签的 &lt;code>async&lt;/code> 和 &lt;code>defer&lt;/code> 属性的浏览器，我们可以使用这两个属性；其中需要注意的点就是，&lt;code>async&lt;/code> 表示的意思是异步加载 &lt;code>JavaScript&lt;/code> 文件，它的下载过程可以在 HTML 的解析过程中进行，加载完成之后立即执行这个文件的代码，执行文件代码的过程中会阻塞 HTML 的解析，它不保证文件加载的顺序。&lt;code>defer&lt;/code> 表示的意思是在 &lt;code>HTML&lt;/code> 文档解析之后在执行加载完成的 JavaScript 文件，JavaScript 文件的下载过程可以在 HTML 的解析过程中进行，它是按照 script 标签的先后顺序来加载文件的。更多详细的解释可以参考 async vs defer attributes&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-说说浏览器解析-css-选择器的过程">&lt;strong>#Question:&lt;/strong> 说说浏览器解析 CSS 选择器的过程&lt;/h3>
+&lt;p>&lt;strong>从上到下，从右到左&lt;/strong>&lt;/p>
+&lt;p>因为从左到右，首先浏览器会遍历你最左边的选择器，可能是&lt;code>div&lt;/code>，可能是&lt;code>span&lt;/code>，我需要在整个页面去把匹配成功的 dom 找出来，可以说是海底捞针，但是从右到左不一样了，它通过具体的遍历条件去寻找一个最匹配的值，查找之后在向上查询，是否符合自己的选择器规则，才最后匹配成功；&lt;/p>
+&lt;p>前者会浪费大量的遍历时间，造成大量错误的匹配结果&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">class&lt;/span> &lt;span class="nt">ul&lt;/span> &lt;span class="nt">li&lt;/span> &lt;span class="nt">span&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="err">//&lt;/span> &lt;span class="err">css&lt;/span> &lt;span class="err">属性&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c">/* 从右向左开始解析。因为一般来说，最右侧的节点范围反而会比较大，越向左限定的条件就越多。也因此 CSS 的选择器设计上不宜嵌套过多，会带来性能上的问题。 */&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-你对-new-操作符的理解是什么手动实现一个-new-方法">&lt;strong>#Question:&lt;/strong> 你对 new 操作符的理解是什么？手动实现一个 new 方法&lt;/h3>
+&lt;h4 id="new-operator">new operator&lt;/h4>
+&lt;p>The &lt;code>new&lt;/code> operator lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function.&lt;/p>
+&lt;blockquote>
+&lt;p>new 运算符创建一个用户定义的对象类型的实例 或 具有构造函数的内置对象类型&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>new constructor[([arguments])]&lt;/code>&lt;/p>
+&lt;h4 id="description">Description&lt;/h4>
+&lt;p>The new keyword does the following things:&lt;/p>
+&lt;ol>
+&lt;li>Creates a blank, plain JavaScript object (&lt;code>{}&lt;/code>)&lt;/li>
+&lt;li>Adds a property to the new object &lt;code>__proto__&lt;/code> that links to the constructor function&amp;rsquo;s &lt;strong>prototype&lt;/strong> object&lt;/li>
+&lt;li>Blinds the newly created object instance as the &lt;code>this&lt;/code> context( all references to &lt;code>this&lt;/code> in the constructor function now refer to the object created in the first step).&lt;/li>
+&lt;li>Returns &lt;code>this&lt;/code> if the doesn&amp;rsquo;t return an object&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;ol>
+&lt;li>创建一个新对象，即 &lt;code>{}&lt;/code>&lt;/li>
+&lt;li>把新对象的原型指向构造函数的 prototype&lt;/li>
+&lt;li>把构造函数里的 this 指向新对象&lt;/li>
+&lt;li>返回这个新对象&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">Foo&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">bar1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">bar2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">bar1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">bar1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">bar2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">bar2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">myFoo&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Foo&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Bar 1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2021&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>When the code &lt;code>new Foo(...)&lt;/code> is executed, the following things happen:&lt;/p>
+&lt;ol>
+&lt;li>A new object is created, inheriting from &lt;code>Foo.prototype&lt;/code>&lt;/li>
+&lt;li>the constructor function &lt;code>Foo&lt;/code> is called with specified arguments, and with &lt;code>this&lt;/code> bound to newly created object. &lt;code>new Foo&lt;/code> is &lt;strong>equivalent&lt;/strong> to &lt;code>new Foo()&lt;/code>, if no argument list is specified, &lt;code>Foo&lt;/code> is called without argument.&lt;/li>
+&lt;li>The object &lt;strong>(not null, false 123 or other primitive types)&lt;/strong> returned by the constructor function becomes the result of the whole &lt;code>new &lt;/code> expression. If the constructor function doesn&amp;rsquo;t explicitly return an object, the object created in step one is used instead &lt;strong>(normally constructors don&amp;rsquo;t return a value, but they can choose to do so if they want to override the normal object creation process.)&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;h4 id="simulation-new-operator">Simulation &lt;code>new&lt;/code> operator&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 1. 创建一个新对象
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">newObj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="c1">// 得到构造函数, 并调用 shift 得到数组的第一个参数，并且会改变元数组
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">Con&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[].&lt;/span>&lt;span class="nx">shift&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 2. 把新对象的原型指向构造函数的prototype
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">newObj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mi">__&lt;/span>&lt;span class="nx">proto__&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Con&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// 3. 把构造函数里的this指向新对象
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Con&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">newObj&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 4. 返回新对象
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">res&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;object&amp;#39;&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">res&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">newObj&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">constructorFunction&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;willian&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">18&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//&amp;#39;willian&amp;#39;, 18
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">say&lt;/span>&lt;span class="p">());&lt;/span> &lt;span class="c1">//Hello willian
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>arguments&lt;/code> 对象来获取传入的所有参数&lt;/li>
+&lt;li>&lt;code>arguments&lt;/code> 对象是所有（&lt;strong>非箭头&lt;/strong>）函数中都可用的局部变量&lt;/li>
+&lt;li>可以使用 &lt;code>arguments&lt;/code> 对象在函数中引用函数的参数&lt;/li>
+&lt;li>The &lt;code>shift()&lt;/code> method removes the first element from an array and returns that removed element. This method changes the length of the array.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// method Two
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fn&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="nx">arg&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">//将创建的对象的原型指向构造函数的原型 ==&amp;gt; 新对象.__proto__(原型) == fn.prototype
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fn&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 将this指向新对象
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">ret&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">fn&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">arg&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">//判断返回值 （如果构造函数本身有返回值且是对象类型，就返回本身的返回值，如果没有才返回新对象）
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">ret&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nb">Object&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">ret&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://developers.google.com/speed/docs/insights/BlockingJS" target="_blank" rel="noopener"
+>移除会阻止内容呈现的 JavaScript  |  PageSpeed Insights  |  Google Developers&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://levelup.gitconnected.com/all-about-script-87fea475b976" target="_blank" rel="noopener"
+>All about &lt;!-- raw HTML omitted -->. In this article, you’ll learn about… | by Oussema Miled | Level Up Coding&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/issues/74#issuecomment-643983992" target="_blank" rel="noopener"
+>只谈 js 文件和 html dom 标签&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html" target="_blank" rel="noopener"
+>async vs defer attributes - Growing with the Web&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド　21</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/</link><pubDate>Wed, 06 Oct 2021 12:26:28 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/frontend-21-cover.jpg" alt="Featured image of post 毎日のフロントエンド　21" />&lt;h1 id="第二十一日">第二十一日&lt;/h1>
 &lt;h2 id="html">HTMl&lt;/h2>
 &lt;h3 id="question-谈谈对input元素中readonly和disabled属性的理解">&lt;strong>#Question:&lt;/strong> 谈谈对&lt;code>input&lt;/code>元素中&lt;code>readonly&lt;/code>和&lt;code>disabled&lt;/code>属性的理解&lt;/h3>
 &lt;p>相同点：&lt;/p>
