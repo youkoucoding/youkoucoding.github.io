@@ -1,0 +1,366 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　23</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　23">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-10-08T22:28:15+09:00"><meta property="article:modified_time" content="2021-10-08T22:28:15+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/frontend-23-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　23">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/frontend-23-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/frontend-23-cover_hu222858ab530288e88b08f54051c87ec5_5986659_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/frontend-23-cover_hu222858ab530288e88b08f54051c87ec5_5986659_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/frontend-23-cover_hu222858ab530288e88b08f54051c87ec5_5986659_1600x0_resize_q75_box.jpg 1600w" width=800 height=512 loading=lazy alt="Featured image of post 毎日のフロントエンド　23">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/>毎日のフロントエンド　23</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 08, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 2 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第二十三日>第二十三日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-关于form标签的-enctype-属性你有哪些了解><strong>#Question:</strong> 关于<code>&lt;form></code>标签的 <code>enctype</code> 属性你有哪些了解</h3>
+<p><code>form</code> 标签的 <code>enctype</code>(是表单提交属性之一) 属性指定将数据回发到服务器时浏览器如果对表单数据进行编码，其有三种编码形式</p>
+<p>当 <code>method</code> 属性值为 <code>post</code> 时，<code>enctype</code> 就是将表单的内容提交给服务器的 <code>MIME</code><sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> 类型 。可能的取值有：</p>
+<ol>
+<li>
+<p><code>application/x-www-form-urlencoded</code>：未指定属性时的默认值</p>
+<ul>
+<li><code>application/x-www-form-urlencoded</code> 编码类型会将表单中发送到服务器之前都会进行编码(空格转换为 &ldquo;<code>+</code>&rdquo; 加号，特殊符号转换为 <code>ASCII HEX</code> 值)，数据编码成键值对的形式，当表单的 <code>action</code> 为 <code>post</code> 时，它会把 <code>form</code> 数据封装到 <code>http body</code> 中，然后发送到服务器；</li>
+<li>当表单的 <code>action</code> 为 <code>get</code> 时，它会把表单中发送的数据转换成一个字符串(如：<code>a=1&b=2&c=3</code>)并使用?连接到 <code>url</code> 后面。在不指定 <code>enctype</code> 属性时 <code>application/x-www-form-urlencoded</code> 是默认属性</li>
+</ul>
+</li>
+<li>
+<p><code>multipart/form-data</code>: <strong>不对字符进行编码</strong>，在使用包含文件(如图片、mp4 等文件)上传控件的表单时必须使用该值</p>
+</li>
+<li>
+<p><code>text/plain</code>: <strong>数据以纯文本格式进行编码</strong>，空格转换为 &ldquo;<code>+</code>&rdquo; 加号，但不对特殊字符编码</p>
+</li>
+</ol>
+<p>Example:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>body</span><span class=p>&gt;</span>
+  <span class=p>&lt;</span><span class=nt>form</span> <span class=na>action</span><span class=o>=</span><span class=s>&#34;&#34;</span> <span class=na>enctype</span><span class=o>=</span><span class=s>&#34;application/x-www-form-urlencoded&#34;</span><span class=p>&gt;</span>
+    First name: <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;fname&#34;</span> <span class=p>/&gt;</span> Last name:
+    <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;text&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;lname&#34;</span> <span class=p>/&gt;</span>
+    <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;submit&#34;</span> <span class=na>value</span><span class=o>=</span><span class=s>&#34;提交&#34;</span> <span class=p>/&gt;</span>
+  <span class=p>&lt;/</span><span class=nt>form</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>body</span><span class=p>&gt;</span>
+</code></pre></div><p>以上代码说明如下：</p>
+<ol>
+<li><code>form</code> 的提交行为需要通过 <code>type=submit</code> 实现</li>
+<li><code>form</code> 中的 <code>method</code> 属性不指定时，默认的提交方式为 <code>get</code> 请求，那么也就是说如果不指定 <code>method</code> 为 <code>post</code>，那么是不会使用 <code>enctype</code> 属性的。</li>
+<li><code>form</code> 表单的 <code>enctype</code> 属性是 <code>application/x-www-form-urlencoded</code></li>
+</ol>
+<h2 id=css>CSS</h2>
+<h3 id=question-说说-css-的优先级是如何计算的><strong>#Question:</strong> 说说 CSS 的优先级是如何计算的</h3>
+<h4 id=选择器种类>选择器种类</h4>
+<p>严格来讲，选择器的种类可以分为三种：<strong>标签名选择器</strong>、<strong>类选择器</strong> 和 <strong>ID 选择器</strong>。而所谓的后代选择器和群组选择器只不过是对前三种选择器的扩展应用。而 在标签内写入 <strong>style=""</strong> 的方式，应该是<strong>CSS</strong>的一种引入方式，而不是选择器，因为根本就没有用到选择器。而一般人们将上面这几种方式结合在一起，所 以就有了 5 种或 6 种选择器了。</p>
+<p>三种基本的选择器类型</p>
+<ul>
+<li>标签名选择器，如：<code>p{}</code>，即直接使用 <code>HTML</code> 标签作为选择器</li>
+<li>类选择器，如 <code>.polaris{}</code></li>
+<li><code>ID</code> 选择器，如 <code>#polaris{}</code></li>
+</ul>
+<hr>
+<ul>
+<li><em>伪类，属性选择器特指度等同于类</em></li>
+<li><em>伪元素特指度等同于标签名选择器</em></li>
+</ul>
+<hr>
+<p>扩展选择器</p>
+<ul>
+<li>后代选择器，如 <code>.polaris span img{}</code>，后代选择器实际上是使用多个选择器加上<strong>中间的空格</strong>来找到具体的要控制标签。</li>
+<li>群组选择器，如 <code>div,span,img{}</code>，群组选择器实际上是对 CSS 的<strong>一种简化写法</strong>，只不过把有相同定义的不同选择器放在一起，省了很多代码</li>
+</ul>
+<h4 id=特指度-优先级计算>特指度-优先级计算</h4>
+<p>特指度（<code>specificity</code>）。特指度表示一个 css 选择器表达式的重要程度，可以通过一个公式来计算出一个数值，数越大，越重要。这个计算叫做“I-C-E”计算公式，</p>
+<pre tabindex=0><code>I——Id; 100
+C——Class; 10
+E——Element; 1
+</code></pre><p>即，针对一个 css 选择器表达式，遇到一个<strong>id</strong>就往特指度数值中加<strong>100</strong>，遇到一个<strong>class</strong>就往特指度数值中加<strong>10</strong>，遇到一个<strong>element</strong>就往特指度数值中加<strong>1</strong></p>
+<p><figure class=gallery-image style=flex-grow:83;flex-basis:199px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/css-specificity.jpg data-size=292x351>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/css-specificity.jpg width=292 height=351 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/css-specificity_hu9e4dfce7146b625b75057fc17e02e545_12087_480x0_resize_q75_box.jpg 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/css-specificity_hu9e4dfce7146b625b75057fc17e02e545_12087_1024x0_resize_q75_box.jpg 1024w" loading=lazy alt=result-specificity>
+</a>
+<figcaption>result-specificity</figcaption>
+</figure></p>
+<p><strong><code>!important</code> 优先级最高，高于上面一切。<code>*</code> 选择器最低，低于一切。</strong></p>
+<h4 id=后代选择器的定位原则>后代选择器的定位原则</h4>
+<p>浏览器 CSS 匹配不是从左到右进行查找，而是<strong>从右到左进行查找</strong>。比如 <code>div #div Box p span.red{color:red;}</code>，浏览器的查找顺序如下：</p>
+<ol>
+<li>先查找 html 中所有 class=&lsquo;red&rsquo; 的 span 元素</li>
+<li>找到后，再查找其父辈元素中是否有 p 元素，再判断 p 的父元素中是否有 id 为 divBox 的 div 元素，如果都存在则匹配上。</li>
+</ol>
+<p>浏览器<strong>从右到左进行查找的好处</strong>是为了尽早过滤掉一些无关的样式规则和元素。</p>
+<h4 id=简洁高效的-css>简洁、高效的 CSS</h4>
+<p>所谓高效的 CSS 就是让浏览器在查找 style 匹配的元素的时候尽量进行少的查找</p>
+<p>下面列出一些常见问题：</p>
+<ol>
+<li>
+<p>不要在<code>ID选择器</code>前使用标签名</p>
+<ul>
+<li>一般写法：<code>div #div Box</code></li>
+<li>更好写法：<code>#div Box</code></li>
+<li>解释： 因为<code>ID</code>选择器是唯一的，加上 <code>div</code> 反而增加不必要的匹配。</li>
+</ul>
+</li>
+<li>
+<p>不要在 <code>class选择器</code> 前使用标签名</p>
+<ul>
+<li>
+<p>一般写法：<code>span.red</code></p>
+</li>
+<li>
+<p>更好写法：<code>.red</code></p>
+</li>
+<li>
+<p>解释：同第一条，但如果你定义了多个<code>.red</code>，而且在不同的元素下是样式不一样，则不能去掉，比如你 css 文件中定义如下：</p>
+<ul>
+<li><code>p.red{color:red;}</code></li>
+<li><code>span.red{color:#ff00ff}</code></li>
+<li>如果是这样定义的就不要去掉，去掉后就会混淆，不过建议最好不要这样写。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>尽量少使用层级关系</p>
+<ul>
+<li>一般写法：<code>#divBox p .red{color:red;}</code></li>
+<li>更好写法：<code>.red{..}</code></li>
+</ul>
+</li>
+<li>
+<p>使用 <code>class</code> 代替层级关系</p>
+<ul>
+<li>一般写法：<code>#divBox ul li a{display:block;}</code></li>
+<li>更好写法：<code>.block{display:block;}</code></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><code>!important>id>class>tag>*</code></p>
+</blockquote>
+<h2 id=javascript>JavaScript</h2>
+<h3 id=question-01--0201--03-和-01--02-分别等于多少并解释下为什么><strong>#Question:</strong> <code>0.1 + 0.2</code>、<code>0.1 + 0.3</code> 和 <code>0.1 \* 0.2</code> 分别等于多少？并解释下为什么</h3>
+<p><code>EcmaScrpt</code>规范定义 Number 的类型遵循了 IEEE754-2008 中的 64 位浮点数规则定义的小数后的有效位数至多为 52 位导致计算出现精度丢失问题</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=mf>0.1</span> <span class=o>+</span> <span class=mf>0.2</span> <span class=o>!=</span> <span class=mf>0.3</span><span class=p>;</span>
+</code></pre></div><p>解决这个问题；使用原生最简单的方法:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nb>parseFloat</span><span class=p>((</span><span class=mf>0.1</span> <span class=o>+</span> <span class=mf>0.2</span><span class=p>).</span><span class=nx>toFixed</span><span class=p>(</span><span class=mi>10</span><span class=p>))</span> <span class=o>===</span> <span class=mf>0.3</span><span class=p>;</span> <span class=c1>//true
+</span></code></pre></div><ol>
+<li>
+<p><code>parseFloat(string)</code> function parses an argument(converting it to a string first if needed) and returns a floating point number or <code>NaN</code> when the first non-whitespace character cannot be converted to a number.</p>
+</li>
+<li>
+<p>The <code>numObj.toFixed(digits)</code> method formats a number using fixed-point notation.</p>
+<ul>
+<li><strong>Parameter</strong>:<code>digits (Optional)</code> :The number of digits to appear after the decimal point; this may be a value between 0 and 20, inclusive, and implementations may optionally support a larger range of values. If this argument is omitted, it is treated as 0.</li>
+<li><strong>RETURN VALUE</strong>:A string representing the given number using fixed-point notation.</li>
+</ul>
+</li>
+</ol>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=http://www.h-camel.com/index.html target=_blank rel=noopener>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！</a></p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p><a class=link href=https://en.wikipedia.org/wiki/Media_type target=_blank rel=noopener>Media type - Wikipedia</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-22/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-22/frontend-22-cover.a9993465e7b690ba747e2b357a817f1e_huc48bd7c2810154bf160cdacfc9e33827_11234475_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-qZk0Zee2kLp0fis1eoF/Hg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　22</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/frontend-21-cover.a9993465e7b690ba747e2b357a817f1e_huc48bd7c2810154bf160cdacfc9e33827_11234475_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-qZk0Zee2kLp0fis1eoF/Hg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　21</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/frontend-20-cover.ca24b96cd54c5b4102bf80250b6af1c8_hu09694cb8c91ec91d790cd17efc7e5c81_1496438_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-yiS5bNVMW0ECv4AlC2rxyA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　20</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-19/frontend-19-cover.ca24b96cd54c5b4102bf80250b6af1c8_hu09694cb8c91ec91d790cd17efc7e5c81_1496438_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-yiS5bNVMW0ECv4AlC2rxyA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　19</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-18/frontend-18-cover.979f2c40ea72af7fcc555ede271165d3_hub96c76990577e7009ecebb4d858ed434_3670530_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-l58sQOpyr3/MVV7eJxFl0w==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　18</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-关于form标签的-enctype-属性你有哪些了解><strong>#Question:</strong> 关于<code>&lt;form></code>标签的 <code>enctype</code> 属性你有哪些了解</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-说说-css-的优先级是如何计算的><strong>#Question:</strong> 说说 CSS 的优先级是如何计算的</a>
+<ol>
+<li><a href=#选择器种类>选择器种类</a></li>
+<li><a href=#特指度-优先级计算>特指度-优先级计算</a></li>
+<li><a href=#后代选择器的定位原则>后代选择器的定位原则</a></li>
+<li><a href=#简洁高效的-css>简洁、高效的 CSS</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-01--0201--03-和-01--02-分别等于多少并解释下为什么><strong>#Question:</strong> <code>0.1 + 0.2</code>、<code>0.1 + 0.3</code> 和 <code>0.1 \* 0.2</code> 分别等于多少？并解释下为什么</a></li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
