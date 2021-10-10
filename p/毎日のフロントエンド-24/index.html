@@ -63,12 +63,60 @@ frontend 每日一练
 <h1 id=第二十四日>第二十四日</h1>
 <h2 id=html>HTML</h2>
 <h3 id=question-说说你对属性-data-的理解><strong>#Question:</strong> 说说你对属性 data-的理解</h3>
+<p><code>data-*</code><sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> 是<code>HTML5</code>新增的自定义属性，可以用来页面间跳转时携带数据</p>
+<p><code>data-*</code> 便是 <code>HTML5</code> 中用来存放数据的标签。使用 <code>data-*</code> 时，<code>data-</code> 之后的单词<strong>必须是小写的</strong>，但是可以用多个 - 连接。而在对应的 <code>DOM</code> 方法中，我们可以通过 <code>element.dataset[属性名]</code> 进行访问。在这里的属性名可以使用驼峰（转换规则和 <code>vue</code> 的组件名称转换一样）。</p>
+<p>相比之前的自定义属性存放数据，使用 <code>data-*</code> 的方法，在数据的获取上会比较方便</p>
 <h2 id=css>CSS</h2>
 <h3 id=question-有用过-css-预处理器吗喜欢用哪个原理是什么><strong>#Question:</strong> 有用过 <em>CSS 预处理器</em>吗？喜欢用哪个？原理是什么？</h3>
+<p><code>CSS</code>预处理器 可使<code>CSS</code>具备更加简洁、适应性更强、可读性更强、层级关系更加明显、更易于代码的维护等诸多好处。
+CSS 预处理器种类繁多，目前<code>Sass</code>、<code>Less</code>、用的比较多:</p>
+<ol>
+<li>嵌套：反映层级和约束</li>
+<li>变量和计算： 减少重复代码</li>
+<li><code>Extend</code> 和 <code>Mixin</code> 代码片段 (用的少)</li>
+<li>循环：适用于复杂有规律的样式</li>
+<li><code>import css</code> 文件模块化</li>
+</ol>
 <h2 id=javascript>JavaScript</h2>
 <h3 id=question-如何快速让一个数组乱序写出来><strong>#Question:</strong> 如何快速让一个数组乱序，写出来</h3>
+<blockquote>
+<p>使用<code>array.sort()</code>进行乱序存在一定问题，增大样本进行实验之后可以发现这种乱序方案并不是完全随机的（所有元素会大概率停留在自己的初始位置）（v8 处理排序是小于 10 个是插入排序，大于 10 个是快排，排序算法复杂度介于 O(n)与 O(n2)之间，也就是存在两个元素都没有比较的机会，因此不是完全随机），这里可以使用<strong>Fisher–Yates shuffle</strong>（洗牌算法）</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>let</span> <span class=nx>arr</span> <span class=o>=</span> <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>,</span> <span class=mi>7</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>9</span><span class=p>,</span> <span class=mi>10</span><span class=p>];</span>
+<span class=nx>arr</span><span class=p>.</span><span class=nx>map</span><span class=p>((</span><span class=nx>item</span><span class=p>,</span> <span class=nx>index</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=kd>let</span> <span class=nx>random</span> <span class=o>=</span> <span class=nb>Math</span><span class=p>.</span><span class=nx>floor</span><span class=p>(</span><span class=nb>Math</span><span class=p>.</span><span class=nx>random</span><span class=p>()</span> <span class=o>*</span> <span class=nx>arr</span><span class=p>.</span><span class=nx>length</span><span class=p>);</span>
+  <span class=p>[</span><span class=nx>arr</span><span class=p>[</span><span class=nx>index</span><span class=p>],</span> <span class=nx>arr</span><span class=p>[</span><span class=nx>random</span><span class=p>]]</span> <span class=o>=</span> <span class=p>[</span><span class=nx>arr</span><span class=p>[</span><span class=nx>random</span><span class=p>],</span> <span class=nx>arr</span><span class=p>[</span><span class=nx>index</span><span class=p>]];</span>
+<span class=p>});</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>arr</span><span class=p>);</span>
+
+<span class=c1>// or
+</span><span class=c1>// return a new Array
+</span><span class=c1></span><span class=kr>const</span> <span class=nx>swap</span> <span class=o>=</span> <span class=p>(</span><span class=nx>arr</span><span class=p>,</span> <span class=nx>index1</span><span class=p>,</span> <span class=nx>index2</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=p>[</span><span class=nx>arr</span><span class=p>[</span><span class=nx>index1</span><span class=p>],</span> <span class=nx>arr</span><span class=p>[</span><span class=nx>index2</span><span class=p>]]</span> <span class=o>=</span> <span class=p>[</span><span class=nx>arr</span><span class=p>[</span><span class=nx>index2</span><span class=p>],</span> <span class=nx>arr</span><span class=p>[</span><span class=nx>index1</span><span class=p>]];</span>
+<span class=p>};</span>
+
+<span class=kd>function</span> <span class=nx>shuffle</span><span class=p>(</span><span class=nx>arr</span> <span class=o>=</span> <span class=p>[])</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nb>Array</span><span class=p>.</span><span class=nx>isArray</span><span class=p>(</span><span class=nx>arr</span><span class=p>))</span> <span class=k>return</span><span class=p>;</span>
+  <span class=kd>let</span> <span class=nx>index</span> <span class=o>=</span> <span class=nx>arr</span><span class=p>.</span><span class=nx>length</span> <span class=o>-</span> <span class=mi>1</span><span class=p>;</span>
+  <span class=k>for</span> <span class=p>(;</span> <span class=nx>index</span> <span class=o>&gt;=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>index</span><span class=o>--</span><span class=p>)</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>randomIndex</span> <span class=o>=</span> <span class=nb>Math</span><span class=p>.</span><span class=nx>floor</span><span class=p>(</span><span class=nb>Math</span><span class=p>.</span><span class=nx>random</span><span class=p>()</span> <span class=o>*</span> <span class=p>(</span><span class=nx>index</span> <span class=o>+</span> <span class=mi>1</span><span class=p>));</span>
+    <span class=nx>swap</span><span class=p>(</span><span class=nx>arr</span><span class=p>,</span> <span class=nx>index</span><span class=p>,</span> <span class=nx>randomIndex</span><span class=p>);</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p>补充知识： js <code>AST</code><sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup></p>
 <h2 id=reference>Reference</h2>
 <p><a class=link href=http://www.h-camel.com/index.html target=_blank rel=noopener>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！</a></p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes target=_blank rel=noopener>使用数据属性 | MDN</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:2 role=doc-endnote>
+<p><a class=link href=https://segmentfault.com/a/1190000016231512 target=_blank rel=noopener> AST 抽象语法树——最基础的 javascript 重点知识 </a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 </section>
 <footer class=article-footer>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>

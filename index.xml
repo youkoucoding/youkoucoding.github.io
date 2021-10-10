@@ -1,13 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 09 Oct 2021 23:29:09 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　24</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-24/</link><pubDate>Sat, 09 Oct 2021 23:29:09 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-24/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-24/frontend-24-cover.jpg" alt="Featured image of post 毎日のフロントエンド　24" />&lt;h1 id="第二十四日">第二十四日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说说你对属性-data-的理解">&lt;strong>#Question:&lt;/strong> 说说你对属性 data-的理解&lt;/h3>
+&lt;p>&lt;code>data-*&lt;/code>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> 是&lt;code>HTML5&lt;/code>新增的自定义属性，可以用来页面间跳转时携带数据&lt;/p>
+&lt;p>&lt;code>data-*&lt;/code> 便是 &lt;code>HTML5&lt;/code> 中用来存放数据的标签。使用 &lt;code>data-*&lt;/code> 时，&lt;code>data-&lt;/code> 之后的单词&lt;strong>必须是小写的&lt;/strong>，但是可以用多个 - 连接。而在对应的 &lt;code>DOM&lt;/code> 方法中，我们可以通过 &lt;code>element.dataset[属性名]&lt;/code> 进行访问。在这里的属性名可以使用驼峰（转换规则和 &lt;code>vue&lt;/code> 的组件名称转换一样）。&lt;/p>
+&lt;p>相比之前的自定义属性存放数据，使用 &lt;code>data-*&lt;/code> 的方法，在数据的获取上会比较方便&lt;/p>
 &lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="question-有用过-css-预处理器吗喜欢用哪个原理是什么">&lt;strong>#Question:&lt;/strong> 有用过 &lt;em>CSS 预处理器&lt;/em>吗？喜欢用哪个？原理是什么？&lt;/h3>
+&lt;p>&lt;code>CSS&lt;/code>预处理器 可使&lt;code>CSS&lt;/code>具备更加简洁、适应性更强、可读性更强、层级关系更加明显、更易于代码的维护等诸多好处。
+CSS 预处理器种类繁多，目前&lt;code>Sass&lt;/code>、&lt;code>Less&lt;/code>、用的比较多:&lt;/p>
+&lt;ol>
+&lt;li>嵌套：反映层级和约束&lt;/li>
+&lt;li>变量和计算： 减少重复代码&lt;/li>
+&lt;li>&lt;code>Extend&lt;/code> 和 &lt;code>Mixin&lt;/code> 代码片段 (用的少)&lt;/li>
+&lt;li>循环：适用于复杂有规律的样式&lt;/li>
+&lt;li>&lt;code>import css&lt;/code> 文件模块化&lt;/li>
+&lt;/ol>
 &lt;h2 id="javascript">JavaScript&lt;/h2>
 &lt;h3 id="question-如何快速让一个数组乱序写出来">&lt;strong>#Question:&lt;/strong> 如何快速让一个数组乱序，写出来&lt;/h3>
+&lt;blockquote>
+&lt;p>使用&lt;code>array.sort()&lt;/code>进行乱序存在一定问题，增大样本进行实验之后可以发现这种乱序方案并不是完全随机的（所有元素会大概率停留在自己的初始位置）（v8 处理排序是小于 10 个是插入排序，大于 10 个是快排，排序算法复杂度介于 O(n)与 O(n2)之间，也就是存在两个元素都没有比较的机会，因此不是完全随机），这里可以使用&lt;strong>Fisher–Yates shuffle&lt;/strong>（洗牌算法）&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">random&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="p">]];&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// or
+&lt;/span>&lt;span class="c1">// return a new Array
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">swap&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">index1&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">index2&lt;/span>&lt;span class="p">]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">index2&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">index1&lt;/span>&lt;span class="p">]];&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">shuffle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[])&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isArray&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="k">return&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">index&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(;&lt;/span> &lt;span class="nx">index&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">randomIndex&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">index&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="nx">swap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">randomIndex&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>补充知识： js &lt;code>AST&lt;/code>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
 &lt;h2 id="reference">Reference&lt;/h2>
 &lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
->前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>Currying in JavaScript (カリー化 &amp; 柯里化)</title><link>https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/</link><pubDate>Sat, 09 Oct 2021 15:24:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/</guid><description>&lt;img src="https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/currying-cover.png" alt="Featured image of post Currying in JavaScript (カリー化 &amp; 柯里化)" />&lt;h1 id="currying-in-javasctipt">Currying in JavaSctipt&lt;/h1>
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes" target="_blank" rel="noopener"
+>使用数据属性 | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000016231512" target="_blank" rel="noopener"
+> AST 抽象语法树——最基础的 javascript 重点知识 &lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>Currying in JavaScript (カリー化 &amp; 柯里化)</title><link>https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/</link><pubDate>Sat, 09 Oct 2021 15:24:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/</guid><description>&lt;img src="https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/currying-cover.png" alt="Featured image of post Currying in JavaScript (カリー化 &amp; 柯里化)" />&lt;h1 id="currying-in-javasctipt">Currying in JavaSctipt&lt;/h1>
 &lt;p>Functional programming is a style of programming that attempts to pass functions as arguments(callbacks) and return functions without side-effects(changes to the program&amp;rsquo;s state).&lt;/p>
 &lt;p>So many languages adopted this programming style. &lt;code>Javascript&lt;/code>, &lt;code>Haskell&lt;/code>, &lt;code>Erlang&lt;/code>, &lt;code>Clojure&lt;/code>, and &lt;code>Scala&lt;/code> are the most popular among them.&lt;/p>
 &lt;p>And with its ability to pass the return functions, it brought so many conscepts: &lt;strong>Pure Functions&lt;/strong>, &lt;strong>Currying&lt;/strong>, &lt;strong>Higher-Order functions&lt;/strong>.&lt;/p>
