@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 09 Oct 2021 23:29:09 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　24</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-24/</link><pubDate>Sat, 09 Oct 2021 23:29:09 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-24/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-24/frontend-24-cover.jpg" alt="Featured image of post 毎日のフロントエンド　24" />&lt;h1 id="第二十四日">第二十四日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Oct 2021 16:07:37 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　25</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/</link><pubDate>Mon, 11 Oct 2021 16:07:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/frontend-25-cover.jpg" alt="Featured image of post 毎日のフロントエンド　25" />&lt;h1 id="第二十五日">第二十五日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-请说说scriptscript-async和script-defer的区别">&lt;strong>#Question:&lt;/strong> 请说说&lt;code>&amp;lt;script&amp;gt;&lt;/code>、&lt;code>&amp;lt;script async&amp;gt;&lt;/code>和&lt;code>&amp;lt;script defer&amp;gt;&lt;/code>的区别&lt;/h3>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 98;
+flex-basis: 236px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/script-explanation.png" data-size="801x814">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/script-explanation.png"
+width="801"
+height="814"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/script-explanation_hu2c488d3cb9c590adb6551005aa71eb5c_53713_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/script-explanation_hu2c488d3cb9c590adb6551005aa71eb5c_53713_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="script deference">
+&lt;/a>
+&lt;figcaption>script deference&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;script&amp;gt;&lt;/code> : 加载的时候是同步的会阻塞后面代码的执行，加载立即执行&lt;/li>
+&lt;li>&lt;code>&amp;lt;script async&amp;gt;&lt;/code>: 异步加载，加载和执行是并行的&lt;/li>
+&lt;li>&lt;code>&amp;lt;script defer&amp;gt;&lt;/code>: 异步加载，需等到所有文档加载完才执行&lt;/li>
+&lt;li>&lt;code>async&lt;/code> &lt;code>defer&lt;/code>这两个属性无法应用于内联&lt;code>script&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The modern websites, scripts are often &amp;ldquo;heavier&amp;rdquo; than HTML: their download size is larger, anb processing time is also longer.&lt;/p>
+&lt;ul>
+&lt;li>Scripts with &lt;code>defer&lt;/code> never block the page&lt;/li>
+&lt;li>Scripts with &lt;code>defer&lt;/code> always execute when the DOM is ready(but before &lt;code>DOMContentLoaded&lt;/code> event).&lt;/li>
+&lt;/ul>
+&lt;p>The &lt;code>async&lt;/code> attribute means that a script is completely independent:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>The browser doesn&amp;rsquo;t block on &lt;code>async&lt;/code> script like &lt;code>defer&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Other scripts don&amp;rsquo;t wait for &lt;code>async&lt;/code> scripts, and &lt;code>async&lt;/code> scripts don&amp;rsquo;t wait for them.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>DOMContentLoaded&lt;/code> and async scripts don&amp;rsquo;t wait for each other:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>DOMContentLoaded&lt;/code> may happen both before an async script (if an async script finishes loading after the page is complete)&lt;/li>
+&lt;li>&amp;hellip; or after an async script(if an async script is short or was in HTTP-cache)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>In other words, &lt;code>async&lt;/code> scripts load in the background and run when ready. The DOM and other scripts don&amp;rsquo;t wait for them, and they don&amp;rsquo;t wait for anything. A fully independent script that runs when loaded.&lt;/p>
+&lt;h4 id="summary">Summary&lt;/h4>
+&lt;p>Both &lt;code>async&lt;/code> and &lt;code>defer&lt;/code> have one commmon thing: &lt;strong>donwloading of such scripts don&amp;rsquo;t block page rendering.&lt;/strong>&lt;/p>
+&lt;p>So the user can read page content and get acquainted with the page immediately.&lt;/p>
+&lt;p>In practice:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>defer&lt;/code> is used for scripts that need the whole DOM and/or their relative execution order is important.&lt;/li>
+&lt;li>&lt;code>Async&lt;/code> is used for independent scripts, like &lt;strong>counters or ads.&lt;/strong> And their relative execution order does not matter.&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-在页面中的应该使用奇数还是偶数的字体为什么呢">&lt;strong>#Question:&lt;/strong> 在页面中的应该使用奇数还是偶数的字体？为什么呢？&lt;/h3>
+&lt;ol>
+&lt;li>尽量使用偶数字号&lt;/li>
+&lt;li>偶数字号容易和页面其他标签的其他属性形成比例关系&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-写一个判断设备来源的方法">&lt;strong>#Question:&lt;/strong> 写一个判断设备来源的方法&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://github.com/matthewhudson/current-device" target="_blank" rel="noopener"
+>current-device: The easiest way to write conditional CSS and/or JavaScript based on device operating system&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>navigator.userAgent&lt;/code>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://javascript.info/script-async-defer" target="_blank" rel="noopener"
+>Scripts: async, defer&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　24</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-24/</link><pubDate>Sat, 09 Oct 2021 23:29:09 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-24/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-24/frontend-24-cover.jpg" alt="Featured image of post 毎日のフロントエンド　24" />&lt;h1 id="第二十四日">第二十四日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说说你对属性-data-的理解">&lt;strong>#Question:&lt;/strong> 说说你对属性 data-的理解&lt;/h3>
 &lt;p>&lt;code>data-*&lt;/code>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> 是&lt;code>HTML5&lt;/code>新增的自定义属性，可以用来页面间跳转时携带数据&lt;/p>
