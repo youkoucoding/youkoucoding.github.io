@@ -1,4 +1,137 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Oct 2021 16:07:37 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　25</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/</link><pubDate>Mon, 11 Oct 2021 16:07:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/frontend-25-cover.jpg" alt="Featured image of post 毎日のフロントエンド　25" />&lt;h1 id="第二十五日">第二十五日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 12 Oct 2021 17:18:24 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　26</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/</link><pubDate>Tue, 12 Oct 2021 17:18:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/frontend-26-cover.jpg" alt="Featured image of post 毎日のフロントエンド　26" />&lt;h1 id="第二十六日">第二十六日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-解释下你对-gbk-和-utf-8-的理解并说说页面上产生乱码的可能原因">&lt;strong>#Question:&lt;/strong> 解释下你对 GBK 和 UTF-8 的理解？并说说页面上产生乱码的可能原因&lt;/h3>
+&lt;p>GBK 与 UTF-8 之区别&lt;/p>
+&lt;ul>
+&lt;li>GBK 编码：是指中国的中文字符，其它它包含了简体中文与繁体中文字符&lt;/li>
+&lt;li>UTF-8 编码：它是一种全国家通过的一种编码，如果你的网站涉及到多个国家的语言&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>&amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=utf-8&amp;quot; /&amp;gt;&lt;/code>&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-说说对-z-index-的理解">&lt;strong>#Question:&lt;/strong> 说说对 z-index 的理解&lt;/h3>
+&lt;p>帧元素（&lt;code>frameset&lt;/code>) 优先级最高 &amp;raquo;&amp;gt; 表单元素 &amp;gt; 非表单元素，即 &lt;code>input type=&amp;quot;radio&amp;quot;&lt;/code> 之类的表单控件 &amp;gt; 普通的如 &lt;code>a&lt;/code>,&lt;code>div&lt;/code> 等元素。&lt;/p>
+&lt;p>从有窗口和无窗口元素来分，有窗口元素 &amp;gt; 无窗口元素。有窗口元素如 Select 元素、Object 元素。&lt;/p>
+&lt;p>&lt;code>z-index&lt;/code> 属性也可以改变显示优先级，但只对同种类型的元素才有效。&lt;/p>
+&lt;h4 id="z-index">z-index&lt;/h4>
+&lt;p>&lt;code>z&lt;/code> 表示三维坐标的 Z 轴。&lt;/p>
+&lt;p>&lt;code>CSS&lt;/code>允许我们对&lt;code>z-index&lt;/code>属性设置三种值(&lt;strong>绝对定位方案将一个元素从常规流中移除的情况下&lt;/strong>)&lt;/p>
+&lt;ol>
+&lt;li>auto (自动，默认值)&lt;/li>
+&lt;li>整数: 数值越大，元素也就越靠近观察者。 数值越小，元素看起来也就越远
+&lt;ul>
+&lt;li>如果有两个元素放在了一起，占据了二维平面上一块共同的区域，那么有着较大 &lt;code>z-index&lt;/code> 值的元素就会掩盖或者阻隔有着较低 &lt;code>z-index&lt;/code> 值的元素在共同区域的那一部分&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>inherit&lt;/li>
+&lt;/ol>
+&lt;h4 id="problem">Problem&lt;/h4>
+&lt;ul>
+&lt;li>当一个设置了 &lt;code>z-index&lt;/code> 值的定位元素与常规文档流中的元素相互重叠的时候，谁会被置于上方？&lt;/li>
+&lt;li>当定位元素与浮动元素相互重叠的时候，谁会被置于上方？&lt;/li>
+&lt;li>当定位元素被嵌套在其他定位元素中时会发生什么？&lt;/li>
+&lt;/ul>
+&lt;h4 id="explanation">Explanation&lt;/h4>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 166;
+flex-basis: 400px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/z-index.png" data-size="600x360">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/z-index.png"
+width="600"
+height="360"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/z-index_hu954daca1308c380e9687beae41fcf26b_6493_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/z-index_hu954daca1308c380e9687beae41fcf26b_6493_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="层叠上下文中的七种层叠等级">
+&lt;/a>
+&lt;figcaption>层叠上下文中的七种层叠等级&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>在一个层叠上下文中一共可以有 7 种层叠等级，列举如下：&lt;/p>
+&lt;ol>
+&lt;li>背景和边框 —— 形成层叠上下文的元素的背景和边框。 层叠上下文中的最低等级&lt;/li>
+&lt;li>负 &lt;code>z-index&lt;/code> 值 —— 层叠上下文内有着负 &lt;code>z-index&lt;/code> 值的子元素&lt;/li>
+&lt;li>块级盒 —— 文档流中非行内非定位子元素&lt;/li>
+&lt;li>浮动盒 —— 非定位浮动元素&lt;/li>
+&lt;li>行内盒 —— 文档流中行内级别非定位子元素&lt;/li>
+&lt;li>&lt;code>z-index: 0&lt;/code> —— 定位元素。 这些元素形成了新的层叠上下文&lt;/li>
+&lt;li>正 &lt;code>z-index&lt;/code> 值 —— 定位元素。 层叠上下文中的最高等级&lt;/li>
+&lt;/ol>
+&lt;p>这七个层叠等级构成了层叠次序的规则。 在层叠等级七上的元素会比在等级一至六上的元素显示地更上方（更靠近观察者）&lt;/p>
+&lt;p>&lt;strong>事实上，大多数的一切都比 z-index 为 0 的层叠等级低&lt;/strong>&lt;/p>
+&lt;h4 id="summary">Summary&lt;/h4>
+&lt;p>当将除了&lt;code>auto&lt;/code>以外的&lt;code>z-index&lt;/code>值赋给一个元素，你就创建了一个&lt;strong>新的层叠上下文，它独立于其他的层叠上下文&lt;/strong>&lt;/p>
+&lt;p>层叠上下文、层叠层和确定哪个元素在上哪个元素在下的层叠次序规则。&lt;/p>
+&lt;p>定位元素(&lt;strong>绝对定位方案将一个元素从常规流中移除的情况下&lt;/strong>)还会产生新的层叠上下文，而这整一个层叠层会显示在另一个层叠上下文中的所有层叠层的上面或者下面&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-说说-bindcallapply-的区别并手写实现一个-bind-的方法">&lt;strong>#Question:&lt;/strong> 说说 bind、call、apply 的区别？并手写实现一个 bind 的方法&lt;/h3>
+&lt;p>Basic rules worth remembering:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>this&lt;/code> always refers to an object.&lt;/li>
+&lt;li>&lt;code>this&lt;/code> refers to an object which calls the function it contains.&lt;/li>
+&lt;li>In the global context &lt;code>this&lt;/code> refers to either window object or is undefined if the &lt;code>strict mode&lt;/code> is used.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>call&lt;/code> 和 &lt;code>apply&lt;/code> 都是为了解决改变 &lt;code>this&lt;/code> 的指向, 同时执行函数。作用都是相同的，只是传参的方式不同。&lt;/p>
+&lt;p>除了第一个参数外，call 可以接收一个参数列表，apply 只接受一个参数数组。
+&lt;code>bind&lt;/code>绑定完之后返回一个新的函数，不执行。&lt;/p>
+&lt;p>js 函数是一个 &lt;code>Function&lt;/code> 的对象，因此存在&lt;code>Function&lt;/code>的构造函数, 和原型对象:&lt;/p>
+&lt;h4 id="custom-call">custom call&lt;/h4>
+&lt;p>The basic principle of a call function:&lt;/p>
+&lt;ol>
+&lt;li>Calling the prototype function call changes the pointing of this.&lt;/li>
+&lt;li>Whatever arguments we have passed to &lt;code>func.call&lt;/code> should be passed to orginal &lt;code>func&lt;/code> as &lt;code>arg1, arg2, ...&lt;/code>&lt;/li>
+&lt;li>Does not cause side effect to &lt;code>obj&lt;/code>(original object) and &lt;code>func&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// Our custom newCall will be also be attached to the Function prototype
+&lt;/span>&lt;span class="c1">// null or undefined should be replaced with the global object(or window)
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Function&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">newCall&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">context&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// this &amp;#34;this&amp;#34; is the function we want to use (on the chain of Function.prototype)
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fn&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// got the func&amp;#39;s arguments by delete the first argument, context(the context we want to refer), it is a array right now
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// This &amp;#39;context&amp;#39; is the obj our want to refer
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fn&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 执行完后,删除 should delete this property after execution
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">delete&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fn&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// 返回函数执行后的结果
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="custom-apply">custom apply&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nb">Function&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">newApply&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">context&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fn&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">result&lt;/span>
+&lt;span class="c1">// 判断 arguments[1] 是不是 undefined
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fn&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fn&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">delete&lt;/span> &lt;span class="nx">context&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fn&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="custom-bind">custom bind&lt;/h4>
+&lt;p>The bind method creates and returns a &lt;code>new function&lt;/code>, called a bound function. This bound function wraps the original function object.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nb">Function&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">newBind&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">context&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="k">this&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">TypeError&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Error&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="k">this&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 返回一个函数
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">F&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 因为返回了一个函数，我们可以 new F()，所以需要判断
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nx">F&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">concat&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://webdesign.tutsplus.com/zh-hans/articles/what-you-may-not-know-about-the-z-index-property--webdesign-16892" target="_blank" rel="noopener"
+>关于 z-index 那些你不知道的事&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://medium.com/@ankur_anand/implement-your-own-call-apply-and-bind-method-in-javascript-42cc85dba1b" target="_blank" rel="noopener"
+>Implement your own — call(), apply() and bind() method in JavaScript | by Ankur Anand | Medium&lt;/a>&lt;/p>
+&lt;p>:point_up: &lt;a class="link" href="https://medium.com/@vinodron/for-everyone-reading-this-article-authors-code-is-bad-in-terms-of-readability-and-performance-9fb74faa26d9" target="_blank" rel="noopener"
+>For everyone reading this article — authors code is bad in terms of readability and performance. | by Андрей Виноградов | Medium&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　25</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/</link><pubDate>Mon, 11 Oct 2021 16:07:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/frontend-25-cover.jpg" alt="Featured image of post 毎日のフロントエンド　25" />&lt;h1 id="第二十五日">第二十五日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-请说说scriptscript-async和script-defer的区别">&lt;strong>#Question:&lt;/strong> 请说说&lt;code>&amp;lt;script&amp;gt;&lt;/code>、&lt;code>&amp;lt;script async&amp;gt;&lt;/code>和&lt;code>&amp;lt;script defer&amp;gt;&lt;/code>的区别&lt;/h3>
 &lt;p>&lt;figure

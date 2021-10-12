@@ -1,0 +1,346 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　26</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　26">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-10-12T17:18:24+09:00"><meta property="article:modified_time" content="2021-10-12T17:18:24+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/frontend-26-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　26">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/frontend-26-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/frontend-26-cover_hub2b0e0a9b3d3e969559f0b0b95e29f5a_1225540_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/frontend-26-cover_hub2b0e0a9b3d3e969559f0b0b95e29f5a_1225540_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/frontend-26-cover_hub2b0e0a9b3d3e969559f0b0b95e29f5a_1225540_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド　26">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/>毎日のフロントエンド　26</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 12, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 3 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第二十六日>第二十六日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-解释下你对-gbk-和-utf-8-的理解并说说页面上产生乱码的可能原因><strong>#Question:</strong> 解释下你对 GBK 和 UTF-8 的理解？并说说页面上产生乱码的可能原因</h3>
+<p>GBK 与 UTF-8 之区别</p>
+<ul>
+<li>GBK 编码：是指中国的中文字符，其它它包含了简体中文与繁体中文字符</li>
+<li>UTF-8 编码：它是一种全国家通过的一种编码，如果你的网站涉及到多个国家的语言</li>
+</ul>
+<p><code>&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></code></p>
+<h2 id=css>CSS</h2>
+<h3 id=question-说说对-z-index-的理解><strong>#Question:</strong> 说说对 z-index 的理解</h3>
+<p>帧元素（<code>frameset</code>) 优先级最高 &#187;> 表单元素 > 非表单元素，即 <code>input type="radio"</code> 之类的表单控件 > 普通的如 <code>a</code>,<code>div</code> 等元素。</p>
+<p>从有窗口和无窗口元素来分，有窗口元素 > 无窗口元素。有窗口元素如 Select 元素、Object 元素。</p>
+<p><code>z-index</code> 属性也可以改变显示优先级，但只对同种类型的元素才有效。</p>
+<h4 id=z-index>z-index</h4>
+<p><code>z</code> 表示三维坐标的 Z 轴。</p>
+<p><code>CSS</code>允许我们对<code>z-index</code>属性设置三种值(<strong>绝对定位方案将一个元素从常规流中移除的情况下</strong>)</p>
+<ol>
+<li>auto (自动，默认值)</li>
+<li>整数: 数值越大，元素也就越靠近观察者。 数值越小，元素看起来也就越远
+<ul>
+<li>如果有两个元素放在了一起，占据了二维平面上一块共同的区域，那么有着较大 <code>z-index</code> 值的元素就会掩盖或者阻隔有着较低 <code>z-index</code> 值的元素在共同区域的那一部分</li>
+</ul>
+</li>
+<li>inherit</li>
+</ol>
+<h4 id=problem>Problem</h4>
+<ul>
+<li>当一个设置了 <code>z-index</code> 值的定位元素与常规文档流中的元素相互重叠的时候，谁会被置于上方？</li>
+<li>当定位元素与浮动元素相互重叠的时候，谁会被置于上方？</li>
+<li>当定位元素被嵌套在其他定位元素中时会发生什么？</li>
+</ul>
+<h4 id=explanation>Explanation</h4>
+<p><figure class=gallery-image style=flex-grow:166;flex-basis:400px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/z-index.png data-size=600x360>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/z-index.png width=600 height=360 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/z-index_hu954daca1308c380e9687beae41fcf26b_6493_480x0_resize_box_3.png 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/z-index_hu954daca1308c380e9687beae41fcf26b_6493_1024x0_resize_box_3.png 1024w" loading=lazy alt=层叠上下文中的七种层叠等级>
+</a>
+<figcaption>层叠上下文中的七种层叠等级</figcaption>
+</figure></p>
+<p>在一个层叠上下文中一共可以有 7 种层叠等级，列举如下：</p>
+<ol>
+<li>背景和边框 —— 形成层叠上下文的元素的背景和边框。 层叠上下文中的最低等级</li>
+<li>负 <code>z-index</code> 值 —— 层叠上下文内有着负 <code>z-index</code> 值的子元素</li>
+<li>块级盒 —— 文档流中非行内非定位子元素</li>
+<li>浮动盒 —— 非定位浮动元素</li>
+<li>行内盒 —— 文档流中行内级别非定位子元素</li>
+<li><code>z-index: 0</code> —— 定位元素。 这些元素形成了新的层叠上下文</li>
+<li>正 <code>z-index</code> 值 —— 定位元素。 层叠上下文中的最高等级</li>
+</ol>
+<p>这七个层叠等级构成了层叠次序的规则。 在层叠等级七上的元素会比在等级一至六上的元素显示地更上方（更靠近观察者）</p>
+<p><strong>事实上，大多数的一切都比 z-index 为 0 的层叠等级低</strong></p>
+<h4 id=summary>Summary</h4>
+<p>当将除了<code>auto</code>以外的<code>z-index</code>值赋给一个元素，你就创建了一个<strong>新的层叠上下文，它独立于其他的层叠上下文</strong></p>
+<p>层叠上下文、层叠层和确定哪个元素在上哪个元素在下的层叠次序规则。</p>
+<p>定位元素(<strong>绝对定位方案将一个元素从常规流中移除的情况下</strong>)还会产生新的层叠上下文，而这整一个层叠层会显示在另一个层叠上下文中的所有层叠层的上面或者下面</p>
+<h2 id=javascript>JavaScript</h2>
+<h3 id=question-说说-bindcallapply-的区别并手写实现一个-bind-的方法><strong>#Question:</strong> 说说 bind、call、apply 的区别？并手写实现一个 bind 的方法</h3>
+<p>Basic rules worth remembering:</p>
+<ul>
+<li><code>this</code> always refers to an object.</li>
+<li><code>this</code> refers to an object which calls the function it contains.</li>
+<li>In the global context <code>this</code> refers to either window object or is undefined if the <code>strict mode</code> is used.</li>
+</ul>
+<p><code>call</code> 和 <code>apply</code> 都是为了解决改变 <code>this</code> 的指向, 同时执行函数。作用都是相同的，只是传参的方式不同。</p>
+<p>除了第一个参数外，call 可以接收一个参数列表，apply 只接受一个参数数组。
+<code>bind</code>绑定完之后返回一个新的函数，不执行。</p>
+<p>js 函数是一个 <code>Function</code> 的对象，因此存在<code>Function</code>的构造函数, 和原型对象:</p>
+<h4 id=custom-call>custom call</h4>
+<p>The basic principle of a call function:</p>
+<ol>
+<li>Calling the prototype function call changes the pointing of this.</li>
+<li>Whatever arguments we have passed to <code>func.call</code> should be passed to orginal <code>func</code> as <code>arg1, arg2, ...</code></li>
+<li>Does not cause side effect to <code>obj</code>(original object) and <code>func</code></li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// Our custom newCall will be also be attached to the Function prototype
+</span><span class=c1>// null or undefined should be replaced with the global object(or window)
+</span><span class=c1></span><span class=nb>Function</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>newCall</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>context</span> <span class=o>=</span> <span class=nb>window</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// this &#34;this&#34; is the function we want to use (on the chain of Function.prototype)
+</span><span class=c1></span>  <span class=nx>context</span><span class=p>.</span><span class=nx>fn</span> <span class=o>=</span> <span class=k>this</span><span class=p>;</span>
+
+  <span class=c1>// got the func&#39;s arguments by delete the first argument, context(the context we want to refer), it is a array right now
+</span><span class=c1></span>  <span class=kd>let</span> <span class=nx>args</span> <span class=o>=</span> <span class=p>[...</span><span class=nx>arguments</span><span class=p>].</span><span class=nx>slice</span><span class=p>(</span><span class=mi>1</span><span class=p>);</span>
+
+  <span class=c1>// This &#39;context&#39; is the obj our want to refer
+</span><span class=c1></span>  <span class=kd>let</span> <span class=nx>result</span> <span class=o>=</span> <span class=nx>context</span><span class=p>.</span><span class=nx>fn</span><span class=p>(...</span><span class=nx>args</span><span class=p>);</span>
+  <span class=c1>// 执行完后,删除 should delete this property after execution
+</span><span class=c1></span>  <span class=k>delete</span> <span class=nx>context</span><span class=p>.</span><span class=nx>fn</span><span class=p>;</span>
+  <span class=c1>// 返回函数执行后的结果
+</span><span class=c1></span>  <span class=k>return</span> <span class=nx>result</span><span class=p>;</span>
+<span class=p>};</span>
+</code></pre></div><h4 id=custom-apply>custom apply</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nb>Function</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>newApply</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>context</span> <span class=o>=</span> <span class=nb>window</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>context</span><span class=p>.</span><span class=nx>fn</span> <span class=o>=</span> <span class=k>this</span><span class=p>;</span>
+
+  <span class=kd>var</span> <span class=nx>result</span>
+  <span class=c1>// 判断 arguments[1] 是不是 undefined
+</span><span class=c1></span>  <span class=k>if</span> <span class=p>(</span><span class=nx>arguments</span><span class=p>[</span><span class=mi>1</span><span class=p>])</span> <span class=p>{</span>
+    <span class=nx>result</span> <span class=o>=</span> <span class=nx>context</span><span class=p>.</span><span class=nx>fn</span><span class=p>(...</span><span class=nx>arguments</span><span class=p>[</span><span class=mi>1</span><span class=p>])</span>
+  <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+    <span class=nx>result</span> <span class=o>=</span> <span class=nx>context</span><span class=p>.</span><span class=nx>fn</span><span class=p>()</span>
+  <span class=p>}</span>
+
+  <span class=k>delete</span> <span class=nx>context</span><span class=p>.</span><span class=nx>fn</span>
+  <span class=k>return</span> <span class=nx>result</span><span class=p>;</span>
+
+</code></pre></div><h4 id=custom-bind>custom bind</h4>
+<p>The bind method creates and returns a <code>new function</code>, called a bound function. This bound function wraps the original function object.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nb>Function</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>newBind</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>context</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=k>typeof</span> <span class=k>this</span> <span class=o>!==</span> <span class=s1>&#39;function&#39;</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>throw</span> <span class=k>new</span> <span class=nx>TypeError</span><span class=p>(</span><span class=s1>&#39;Error&#39;</span><span class=p>);</span>
+  <span class=p>}</span>
+  <span class=kd>var</span> <span class=mi>_</span><span class=k>this</span> <span class=o>=</span> <span class=k>this</span><span class=p>;</span>
+  <span class=kd>var</span> <span class=nx>args</span> <span class=o>=</span> <span class=p>[...</span><span class=nx>arguments</span><span class=p>].</span><span class=nx>slice</span><span class=p>(</span><span class=mi>1</span><span class=p>);</span>
+  <span class=c1>// 返回一个函数
+</span><span class=c1></span>  <span class=k>return</span> <span class=kd>function</span> <span class=nx>F</span><span class=p>()</span> <span class=p>{</span>
+    <span class=c1>// 因为返回了一个函数，我们可以 new F()，所以需要判断
+</span><span class=c1></span>    <span class=k>if</span> <span class=p>(</span><span class=k>this</span> <span class=k>instanceof</span> <span class=nx>F</span><span class=p>)</span> <span class=p>{</span>
+      <span class=k>return</span> <span class=k>new</span> <span class=mi>_</span><span class=k>this</span><span class=p>(...</span><span class=nx>args</span><span class=p>,</span> <span class=p>...</span><span class=nx>arguments</span><span class=p>);</span>
+    <span class=p>}</span>
+    <span class=k>return</span> <span class=mi>_</span><span class=k>this</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=nx>context</span><span class=p>,</span> <span class=nx>args</span><span class=p>.</span><span class=nx>concat</span><span class=p>(...</span><span class=nx>arguments</span><span class=p>));</span>
+  <span class=p>};</span>
+<span class=p>};</span>
+</code></pre></div><h2 id=reference>Reference</h2>
+<p><a class=link href=https://webdesign.tutsplus.com/zh-hans/articles/what-you-may-not-know-about-the-z-index-property--webdesign-16892 target=_blank rel=noopener>关于 z-index 那些你不知道的事</a></p>
+<p><a class=link href=https://medium.com/@ankur_anand/implement-your-own-call-apply-and-bind-method-in-javascript-42cc85dba1b target=_blank rel=noopener>Implement your own — call(), apply() and bind() method in JavaScript | by Ankur Anand | Medium</a></p>
+<p>:point_up: <a class=link href=https://medium.com/@vinodron/for-everyone-reading-this-article-authors-code-is-bad-in-terms-of-readability-and-performance-9fb74faa26d9 target=_blank rel=noopener>For everyone reading this article — authors code is bad in terms of readability and performance. | by Андрей Виноградов | Medium</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-25/frontend-25-cover.0d466d9249237a565f000cf82277e885_hub2b0e0a9b3d3e969559f0b0b95e29f5a_1225540_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-DUZtkkkjelZfAAz4InfohQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　25</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-24/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-24/frontend-24-cover.3c34518718d0a164312b5b6abae42c42_hu222858ab530288e88b08f54051c87ec5_5986659_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-PDRRhxjQoWQxK1tquuQsQg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　24</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/frontend-23-cover.3c34518718d0a164312b5b6abae42c42_hu222858ab530288e88b08f54051c87ec5_5986659_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-PDRRhxjQoWQxK1tquuQsQg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　23</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-22/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-22/frontend-22-cover.a9993465e7b690ba747e2b357a817f1e_huc48bd7c2810154bf160cdacfc9e33827_11234475_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-qZk0Zee2kLp0fis1eoF/Hg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　22</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/frontend-21-cover.a9993465e7b690ba747e2b357a817f1e_huc48bd7c2810154bf160cdacfc9e33827_11234475_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-qZk0Zee2kLp0fis1eoF/Hg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　21</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-解释下你对-gbk-和-utf-8-的理解并说说页面上产生乱码的可能原因><strong>#Question:</strong> 解释下你对 GBK 和 UTF-8 的理解？并说说页面上产生乱码的可能原因</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-说说对-z-index-的理解><strong>#Question:</strong> 说说对 z-index 的理解</a>
+<ol>
+<li><a href=#z-index>z-index</a></li>
+<li><a href=#problem>Problem</a></li>
+<li><a href=#explanation>Explanation</a></li>
+<li><a href=#summary>Summary</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-说说-bindcallapply-的区别并手写实现一个-bind-的方法><strong>#Question:</strong> 说说 bind、call、apply 的区别？并手写实现一个 bind 的方法</a>
+<ol>
+<li><a href=#custom-call>custom call</a></li>
+<li><a href=#custom-apply>custom apply</a></li>
+<li><a href=#custom-bind>custom bind</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
