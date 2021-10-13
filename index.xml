@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 12 Oct 2021 17:18:24 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　26</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/</link><pubDate>Tue, 12 Oct 2021 17:18:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/frontend-26-cover.jpg" alt="Featured image of post 毎日のフロントエンド　26" />&lt;h1 id="第二十六日">第二十六日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 13 Oct 2021 11:09:57 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　27</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/</link><pubDate>Wed, 13 Oct 2021 11:09:57 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/frontend-27-cover.jpg" alt="Featured image of post 毎日のフロントエンド　27" />&lt;h1 id="第二十七日">第二十七日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-说说对影子shadowdom-的了解">&lt;strong>#Question:&lt;/strong> 说说对影子&lt;code>(Shadow)DOM&lt;/code> 的了解&lt;/h3>
+&lt;p>&lt;strong>Shadow DOM&lt;/strong>: A set of JavaScript APIs for attaching an encapsulated &amp;ldquo;shadow&amp;rdquo; DOM tree to an element &amp;mdash; which is rendered separately from the main document DOM &amp;mdash; and controlling associated functionality.In this way, you can keep an element&amp;rsquo;s features private, so they can be scripted and styled without the fear of collision with other parts of the document.&lt;/p>
+&lt;p>&lt;figure
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/shadowdom.svg" >
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/shadowdom.svg"
+loading="lazy"
+alt="shadowdom">
+&lt;/a>
+&lt;figcaption>shadowdom&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>There are some bits of shadow DOM terminology to be aware of:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Shadow host&lt;/strong>: The regular DOM node that the shadow DOM is attached to.&lt;/li>
+&lt;li>&lt;strong>Shadow tree&lt;/strong>: The DOM tree inside the shadow DOM&lt;/li>
+&lt;li>&lt;strong>Shadow boundary&lt;/strong>: The place where the shadow DOM ends, and the regular DOM begins&lt;/li>
+&lt;li>&lt;strong>Shadow root&lt;/strong>: the root node of shadow tree&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>shadow Dom&lt;/code>是&lt;code>html&lt;/code>给出的一个用来封装的虚拟 DOM 与普通的 DOM 不相同，他更像伪类元素，去修饰 DOM，或者说，他是一个 DOM 的 HTML 组件，常见标签为 video 等媒体标签（这些已经封装好的标签，有对应样式）&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-怎样修改-chrome-记住密码后自动填充表单的黄色背景">&lt;strong>#Question:&lt;/strong> 怎样修改 chrome 记住密码后自动填充表单的黄色背景&lt;/h3>
+&lt;p>当记住用户名和密码后，下次填写表单时，被记住的部分会被填充为淡黄色&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="nt">input&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="err">&amp;amp;:&lt;/span>&lt;span class="kp">-webkit-&lt;/span>&lt;span class="err">autofill&lt;/span> &lt;span class="err">{&lt;/span>
+&lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kc">inset&lt;/span> &lt;span class="cp">!important&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kp">-webkit-&lt;/span>&lt;span class="n">text-fill-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#000&lt;/span> &lt;span class="cp">!important&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">transition&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="k">background-color&lt;/span> &lt;span class="mi">5000&lt;/span>&lt;span class="kt">s&lt;/span> &lt;span class="kc">ease-in-out&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">14&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="err">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-说说对arguments的理解它是数组吗">&lt;strong>#Question:&lt;/strong> 说说对&lt;code>arguments&lt;/code>的理解，它是数组吗&lt;/h3>
+&lt;h4 id="the-arguments-object">THE arguments object&lt;/h4>
+&lt;p>&lt;code>arguments&lt;/code> is an &lt;code>Array&lt;/code>-like object accessible inside &lt;code>functions&lt;/code> that contains the values of the arguments passed to that function.&lt;/p>
+&lt;blockquote>
+&lt;p>ES6 compatible code, the &lt;code>rest parameters&lt;/code> should be preferred.&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&amp;ldquo;Array-like&amp;rdquo; means that &lt;code>arguments&lt;/code> has a &lt;code>length&lt;/code> property and properties indexed from zero, but it doesn&amp;rsquo;t have &lt;code>Array&lt;/code>&amp;rsquo;s built-in methods like &lt;code>forEach()&lt;/code> or &lt;code>map()&lt;/code>.&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>arguments&lt;/code>是一个对象。&lt;/p>
+&lt;p>&lt;code>js&lt;/code>不能像&lt;code>Java&lt;/code>一样实现重载，&lt;code>arguments&lt;/code> 对象可以模拟重载。&lt;/p>
+&lt;p>&lt;code>js&lt;/code>中每个函数都会有&lt;code>arguments&lt;/code>这个实例，它引用着函数的实参，可以用数组下标的方式&amp;quot;&lt;code>[]&lt;/code>&amp;ldquo;引用&lt;code>arguments&lt;/code>的元素。&lt;code>arguments.length&lt;/code>为函数实参个数，&lt;code>arguments.callee&lt;/code>引用函数自身。&lt;/p>
+&lt;p>Feature：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>arguments&lt;/code>对象和&lt;code>Function&lt;/code>是分不开的。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>因为&lt;code>arguments&lt;/code>这个对象不能显式创建。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>arguments&lt;/code>对象只有函数开始时才可用。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>Usage：&lt;/p>
+&lt;p>虽然&lt;code>arguments&lt;/code>对象并不是一个数组，但是访问单个参数的方式与访问数组元素的方式相同: &lt;code>arguments[0], arguments[1]...&lt;/code>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://polymer-library.polymer-project.org/2.0/docs/devguide/shadow-dom" target="_blank" rel="noopener"
+>Shadow DOM concepts - Polymer Project&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank" rel="noopener"
+>Web Components | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments" target="_blank" rel="noopener"
+>The arguments object - JavaScript | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　26</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/</link><pubDate>Tue, 12 Oct 2021 17:18:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-26/frontend-26-cover.jpg" alt="Featured image of post 毎日のフロントエンド　26" />&lt;h1 id="第二十六日">第二十六日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-解释下你对-gbk-和-utf-8-的理解并说说页面上产生乱码的可能原因">&lt;strong>#Question:&lt;/strong> 解释下你对 GBK 和 UTF-8 的理解？并说说页面上产生乱码的可能原因&lt;/h3>
 &lt;p>GBK 与 UTF-8 之区别&lt;/p>
