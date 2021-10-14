@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 13 Oct 2021 11:09:57 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　27</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/</link><pubDate>Wed, 13 Oct 2021 11:09:57 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/frontend-27-cover.jpg" alt="Featured image of post 毎日のフロントエンド　27" />&lt;h1 id="第二十七日">第二十七日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Oct 2021 17:36:17 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　28</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-28/</link><pubDate>Thu, 14 Oct 2021 17:36:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-28/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-28/frontend-28-cover.jpg" alt="Featured image of post 毎日のフロントエンド　28" />&lt;h1 id="第二十八日">第二十八日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-说说你对meta标签的理解">&lt;strong>#Question:&lt;/strong> 说说你对&lt;code>&amp;lt;meta&amp;gt;&lt;/code>标签的理解&lt;/h3>
+&lt;p>&lt;code>meta&lt;/code>标签 **元数据(Metadata)**是&lt;code>HTML&lt;/code>语言&lt;code>&amp;lt;head&amp;gt;&lt;/code>区的一个辅助性标签，它位于 HTML 文档头部的&lt;code>head&lt;/code>和&lt;code>title&lt;/code>之间，它提供用户不可见的信息。&lt;/p>
+&lt;p>元数据可以被使用浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他 Web 服务调用&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>属性&lt;/th>
+&lt;th>值&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>charset (HTML5)&lt;/code>&lt;/td>
+&lt;td>&lt;code>character_set&lt;/code>&lt;/td>
+&lt;td>定义文档的字符编码。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>content&lt;/code>&lt;/td>
+&lt;td>&lt;code>text&lt;/code>&lt;/td>
+&lt;td>定义与 &lt;code>http-equiv&lt;/code> 或 &lt;code>name&lt;/code> 性相关的元信息。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>http-equiv&lt;/code>&lt;/td>
+&lt;td>&lt;code>content-type、default-style、refresh&lt;/code>&lt;/td>
+&lt;td>把 &lt;code>content&lt;/code> 属性关联到 HTTP 头部。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>name&lt;/code>&lt;/td>
+&lt;td>&lt;code>application-name、author、description、generator、keywords&lt;/code>&lt;/td>
+&lt;td>把&lt;code> content&lt;/code> 属性关联到一个名称&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scheme &lt;/code>&lt;/td>
+&lt;td>&lt;code>format/URI &lt;/code>&lt;/td>
+&lt;td>HTML5 不支持。 定义用于翻译 content 属性值的格式。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-rgba-和-opacity-这两个的透明效果有什么区别呢">&lt;strong>#Question:&lt;/strong> &lt;code>rgba()&lt;/code> 和 &lt;code>opacity&lt;/code> 这两个的透明效果有什么区别呢&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>rgba&lt;/code> 只对颜色有影响。如果放在 &lt;code>background&lt;/code> 上的话，只对背景颜色有影响。不会影响元素中的其他内容以及子元素内容&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>opacity&lt;/code> 的透明效果是作用整个元素以及其子元素上的&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-解释下列段代码的意思">&lt;strong>#Question:&lt;/strong> 解释下列段代码的意思&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// $$(&amp;#39;*&amp;#39;) 为获取所有 dom 元素，返回数组
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">[].&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">$$&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;*&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// forEach 的回调函数，这里的 a 是数组中每个 dom 元素，不是 a 标签
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">outline&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;span class="c1">// ～～是取整 1&amp;lt;&amp;lt;24 是位运算 结果为 16777216
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 之后的 toString(16) 为进行 16 进制的转换 即颜色
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;1px solid #&amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">~~&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="mi">24&lt;/span>&lt;span class="p">))).&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">16&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="作用">作用&lt;/h4>
+&lt;blockquote>
+&lt;p>在你的 Chrome 浏览器的控制台中输入这段代码，你会发现不同 &lt;code>HTML&lt;/code> 层都被使用不同的颜色添加了一个高亮的边框。简单来说，这段代码只是首先获取了所有的页面元素，然后使用一个不同的颜色为它们添加了一个 &lt;code>1px&lt;/code> 的边框。&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="解析">解析&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>[].forEach.call()&lt;/code> =&amp;gt; 调用引用数组的 forEach 方法&lt;/li>
+&lt;li>&lt;code>$$('*')&lt;/code> =&amp;gt; &lt;code>document.querySelectorAll('*')&lt;/code>&lt;/li>
+&lt;li>&lt;code>~~a&lt;/code> =&amp;gt; &lt;code>parseInt(a)&lt;/code>&lt;/li>
+&lt;li>&lt;code>1&amp;lt;&amp;lt;24&lt;/code> =&amp;gt; 对二进数 1 小数点右移 24 位&lt;/li>
+&lt;li>&lt;code>(parseInt(Math.random()\*(1&amp;lt;&amp;lt;24)).toString(16))&lt;/code> =&amp;gt; 获得了一个位于 0-16777216 之间的随机整数，也就是随机颜色，再使用 &lt;code>toString(16)&lt;/code>将它转化为十六进制数。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="p">[].&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelectorAll&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;*&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">outline&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;span class="s1">&amp;#39;1px solid #&amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nb">parseInt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;lt;&amp;lt;&lt;/span> &lt;span class="mi">24&lt;/span>&lt;span class="p">)).&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">16&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000004279791" target="_blank" rel="noopener"
+>HTML meta 标签总结与属性使用介绍 - SegmentFault 思否&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta" target="_blank" rel="noopener"
+>&lt;!-- raw HTML omitted -->：文档级元数据元素 - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://my.oschina.net/l3ve/blog/330358" target="_blank" rel="noopener"
+>从一行代码里面学点 JavaScript - L3ve 的绝对领域 - OSCHINA - 中文开源技术交流社区&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://dailc.github.io/2018/03/12/whenyouenteraurl.html" target="_blank" rel="noopener"
+>从输入 URL 到页面加载的过程？如何由一道题完善自己的前端知识体系！ | Dailc 的个人主页&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　27</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/</link><pubDate>Wed, 13 Oct 2021 11:09:57 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/frontend-27-cover.jpg" alt="Featured image of post 毎日のフロントエンド　27" />&lt;h1 id="第二十七日">第二十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说说对影子shadowdom-的了解">&lt;strong>#Question:&lt;/strong> 说说对影子&lt;code>(Shadow)DOM&lt;/code> 的了解&lt;/h3>
 &lt;p>&lt;strong>Shadow DOM&lt;/strong>: A set of JavaScript APIs for attaching an encapsulated &amp;ldquo;shadow&amp;rdquo; DOM tree to an element &amp;mdash; which is rendered separately from the main document DOM &amp;mdash; and controlling associated functionality.In this way, you can keep an element&amp;rsquo;s features private, so they can be scripted and styled without the fear of collision with other parts of the document.&lt;/p>
