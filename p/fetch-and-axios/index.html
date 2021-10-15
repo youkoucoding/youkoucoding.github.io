@@ -1,0 +1,429 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Which should be used? Axios or fetch()"><title>fetch and Axios</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/fetch-and-axios/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="fetch and Axios">
+<meta property="og:description" content="Which should be used? Axios or fetch()">
+<meta property="og:url" content="https://youkoucoding.github.io/p/fetch-and-axios/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-10-14T15:41:59+09:00"><meta property="article:modified_time" content="2021-10-14T15:41:59+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/fetch-and-axios/fetch-axios-cover.jpg">
+<meta name=twitter:title content="fetch and Axios">
+<meta name=twitter:description content="Which should be used? Axios or fetch()"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/fetch-and-axios/fetch-axios-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/fetch-and-axios/>
+<img src=/p/fetch-and-axios/fetch-axios-cover_hu271f897c313eb7e69e7ce19981555f26_1979892_800x0_resize_q75_box.jpg srcset="/p/fetch-and-axios/fetch-axios-cover_hu271f897c313eb7e69e7ce19981555f26_1979892_800x0_resize_q75_box.jpg 800w, /p/fetch-and-axios/fetch-axios-cover_hu271f897c313eb7e69e7ce19981555f26_1979892_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post fetch and Axios">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/frontend/>
+Frontend
+</a>
+<a href=/categories/foundation/>
+Foundation
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/fetch-and-axios/>fetch and Axios</a>
+</h2>
+<h3 class=article-subtitle>
+Which should be used? Axios or fetch()
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 14, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 7 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=which-should-be-used-axios-or-fetch>Which should be used? Axios or fetch()</h1>
+<h2 id=difference-between-fetch-and-axios-for-making-http-requests>Difference between Fetch and Axios for making http requests</h2>
+<h3 id=general>General</h3>
+<p>One the fundamental tasks of any web application is to communicate with servers through the http protocol. This can be easily achieved using Fetch or Axios.</p>
+<ul>
+<li><code>fetch()</code> The Fetch API provides a <code>fetch()</code> method defined on the window object. It also provides a JavaScript interface for accessing and manipulating parts of the Http pipeline(requests and responses). The fetch method has <strong>one mandatory argument</strong> - URL of the resource to be fetched. The method retuirns a <strong>Promise</strong> that can be used to retrieve the response of the request.</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// fetch
+</span><span class=c1></span><span class=nx>fetch</span><span class=p>(</span><span class=s1>&#39;api&#39;</span><span class=p>)</span>
+  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>response</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=c1>// Code for handling the response
+</span><span class=c1></span>  <span class=p>})</span>
+  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>error</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=c1>// Code for handling the error
+</span><span class=c1></span>  <span class=p>});</span>
+</code></pre></div><ul>
+<li><code>Axios</code>: Axios is JavaScript library used to make HTTP requests from <strong>nodejs or XMLHttpRequests</strong> from the browser and it supports the Promise API that is native to JS ES6. It can be used intercept HTTP requests and respones and enables client-side protection against XSRF. It also has the ability to cancel requests.</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// Axios
+</span><span class=c1></span><span class=nx>axios</span>
+  <span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;url&#39;</span><span class=p>)</span>
+  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>response</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=c1>// Code for handling the response
+</span><span class=c1></span>  <span class=p>})</span>
+  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>error</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=c1>// Code for handling the error
+</span><span class=c1></span>  <span class=p>});</span>
+</code></pre></div><table>
+<thead>
+<tr>
+<th>Axios</th>
+<th>Fetch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Axios has url in request object.</td>
+<td>Fetch has no url in request object.</td>
+</tr>
+<tr>
+<td>Axios is a stand-alone third party package that can be easily installed.</td>
+<td>Fetch is built into most modern browsers; no installation is required as such.</td>
+</tr>
+<tr>
+<td>Axios enjoys built-in XSRF protection.</td>
+<td>Fetch does not.</td>
+</tr>
+<tr>
+<td>Axios uses the data property.</td>
+<td>Fetch uses the body property.</td>
+</tr>
+<tr>
+<td>Axios’ data contains the object.</td>
+<td>Fetch’s body has to be stringified.</td>
+</tr>
+<tr>
+<td>Axios request is ok when status is 200 and statusText is ‘OK’.</td>
+<td>Fetch request is ok when response object contains the ok property.</td>
+</tr>
+<tr>
+<td>Axios performs <strong>automatic transforms of JSON data.</strong></td>
+<td>Fetch is a two-step process when handling JSON data- first, to make the actual request; second, to call the .json() method on the response.</td>
+</tr>
+<tr>
+<td>Axios allows cancelling request and request timeout.</td>
+<td>Fetch does not.</td>
+</tr>
+<tr>
+<td>Axios has the ability to intercept HTTP requests.</td>
+<td>Fetch, by default, doesn’t provide a way to intercept requests.</td>
+</tr>
+<tr>
+<td>Axios has built-in support for download progress.</td>
+<td>Fetch does not support upload progress.</td>
+</tr>
+<tr>
+<td>Axios has wide browser support.</td>
+<td>Fetch only supports Chrome 42+, Firefox 39+, Edge 14+, and Safari 10.1+ (This is known as Backward Compatibility).</td>
+</tr>
+</tbody>
+</table>
+<h3 id=details>Details</h3>
+<h4 id=1-syntax-differences>1. Syntax Differences</h4>
+<p>Both Axios and Fetch API returns Promises when you make an HTTP request.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// POST in axios
+</span><span class=c1></span><span class=kr>const</span> <span class=nx>options</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=nx>url</span><span class=o>:</span> <span class=s1>&#39;http://localhost:3000/api/home&#39;</span><span class=p>,</span>
+  <span class=nx>method</span><span class=o>:</span> <span class=s1>&#39;POST&#39;</span><span class=p>,</span>
+  <span class=nx>headers</span><span class=o>:</span> <span class=p>{</span>
+    <span class=nx>Accept</span><span class=o>:</span> <span class=s1>&#39;application/json&#39;</span><span class=p>,</span>
+    <span class=s1>&#39;Content-Type&#39;</span><span class=o>:</span> <span class=s1>&#39;application/json;charset=UTF-8&#39;</span><span class=p>,</span>
+  <span class=p>},</span>
+  <span class=nx>data</span><span class=o>:</span> <span class=p>{</span>
+    <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;David&#39;</span><span class=p>,</span>
+    <span class=nx>age</span><span class=o>:</span> <span class=mi>45</span><span class=p>,</span>
+  <span class=p>},</span>
+<span class=p>};</span>
+
+<span class=nx>axios</span><span class=p>(</span><span class=nx>options</span><span class=p>).</span><span class=nx>then</span><span class=p>((</span><span class=nx>response</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>response</span><span class=p>.</span><span class=nx>status</span><span class=p>);</span>
+<span class=p>});</span>
+</code></pre></div><p>With Axios, we can create a config object using specified parameters like baseUrl, params, headers, auth, responseType to send with the request. It will return a Promise that resolves with either a response object or an error object. Besides, the following can be found in the returned object from the Promise.</p>
+<ul>
+<li><code>data</code>:- the actual response body</li>
+<li><code>status</code>:- HTTP status of the call, like 200 or 404</li>
+<li><code>statusText</code>:- HTTP status returned as a text message</li>
+<li><code>headers</code>:- the server sends headers back</li>
+<li><code>config</code>:- request configuration</li>
+<li><code>request</code>:- XMLHttpRequest object</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// POST in fetch()
+</span><span class=c1></span><span class=kr>const</span> <span class=nx>url</span> <span class=o>=</span> <span class=s1>&#39;http://localhost:3000/api/home&#39;</span><span class=p>;</span>
+<span class=kr>const</span> <span class=nx>options</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=nx>method</span><span class=o>:</span> <span class=s1>&#39;POST&#39;</span><span class=p>,</span>
+  <span class=nx>headers</span><span class=o>:</span> <span class=p>{</span>
+    <span class=nx>Accept</span><span class=o>:</span> <span class=s1>&#39;application/json&#39;</span><span class=p>,</span>
+    <span class=s1>&#39;Content-Type&#39;</span><span class=o>:</span> <span class=s1>&#39;application/json;charset=UTF-8&#39;</span><span class=p>,</span>
+  <span class=p>},</span>
+  <span class=nx>body</span><span class=o>:</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>({</span>
+    <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;David&#39;</span><span class=p>,</span>
+    <span class=nx>age</span><span class=o>:</span> <span class=mi>45</span><span class=p>,</span>
+  <span class=p>}),</span>
+<span class=p>};</span>
+
+<span class=c1>// The url (path to the resource you want to fetch) argument is mandatory
+</span><span class=c1></span><span class=nx>fetch</span><span class=p>(</span><span class=nx>url</span><span class=p>,</span> <span class=nx>options</span><span class=p>).</span><span class=nx>then</span><span class=p>((</span><span class=nx>response</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>response</span><span class=p>.</span><span class=nx>status</span><span class=p>);</span>
+<span class=p>});</span>
+</code></pre></div><p>Similar to Axios, it returns a Promise that the response object can resolve. We can optionally pass options in the second argument in the <code>fetch()</code> method.</p>
+<ul>
+<li><strong>Key Differences:</strong>
+<ul>
+<li>With Axios, the <code>data</code> is sent through the data property of the options, but Fetch API uses the <code>body</code> property.</li>
+<li>Fetch response requires additional validation as it always returns a response object no matter whether it is successful or not.</li>
+<li>The data in fetch() has been serialized to a String (Stringified).</li>
+<li>The URL is provided to fetch() as an argument. But, in Axios, it is set in the options object.</li>
+</ul>
+</li>
+</ul>
+<h4 id=2-json-data-conversion>2. JSON Data Conversion</h4>
+<p>With <strong>Fetch API</strong>, handling JSON data is a 2 step process. First, you must make the request and then call the <code>.json()</code> function on the response since Fetch API sends data with the body property.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nx>fetch</span><span class=p>(</span><span class=s1>&#39;localhost:3000/api&#39;</span><span class=p>)</span> <span class=c1>// first step
+</span><span class=c1></span>  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>response</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>())</span> <span class=c1>// second step
+</span><span class=c1></span>  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+  <span class=p>})</span>
+  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>error</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>(</span><span class=nx>error</span><span class=p>));</span>
+</code></pre></div><p>With <strong>Axios</strong>, the data is sent through the data property of the options, and it automatically stringifies the data in the response.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nx>axios</span>
+  <span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;localhost:3000/api/home&#39;</span><span class=p>)</span>
+  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>response</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>response</span><span class=p>.</span><span class=nx>data</span><span class=p>);</span>
+  <span class=p>})</span>
+  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>error</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>error</span><span class=p>);</span>
+  <span class=p>});</span>
+</code></pre></div><h4 id=3-error-handling>3. Error Handling</h4>
+<p>Error handling with <strong>Axios</strong> is easy because bad responses (such as 404 or 500) will end up causing the Promise to be rejected by throwing an exception. Therefore, to handle 404 or 400 errors with Axios, you need to use the catch() block as shown below.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nx>axios</span>
+  <span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;localhost:3000/api/home&#39;</span><span class=p>)</span>
+  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>response</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;response&#39;</span><span class=p>,</span> <span class=nx>response</span><span class=p>);</span>
+  <span class=p>})</span>
+  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>error</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=nx>error</span><span class=p>.</span><span class=nx>response</span><span class=p>)</span> <span class=p>{</span>
+      <span class=c1>// The request was made and the server responded with a status code that falls out of the range of 200
+</span><span class=c1></span>      <span class=c1>// Something like 4xx or 500
+</span><span class=c1></span>      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>error</span><span class=p>.</span><span class=nx>response</span><span class=p>.</span><span class=nx>data</span><span class=p>);</span>
+    <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=nx>error</span><span class=p>.</span><span class=nx>request</span><span class=p>)</span> <span class=p>{</span>
+      <span class=c1>// The request was made but no response was received
+</span><span class=c1></span>      <span class=c1>// `error.request` is an instance of XMLHttpRequest in the browser and an instance of http.ClientRequest in node.js
+</span><span class=c1></span>      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>error</span><span class=p>.</span><span class=nx>request</span><span class=p>);</span>
+    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+      <span class=c1>// Something happened in setting up the request that triggered an Error
+</span><span class=c1></span>      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;Error&#39;</span><span class=p>,</span> <span class=nx>error</span><span class=p>.</span><span class=nx>message</span><span class=p>);</span>
+    <span class=p>}</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>error</span><span class=p>.</span><span class=nx>config</span><span class=p>);</span>
+  <span class=p>});</span>
+</code></pre></div><p>When using fetch(), you need to read the response object since bad responses are still resolved using the then() method. A Fetch API Promise will be <strong>rejected only if the request cannot be completed in a scenario like a network failure</strong>.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nx>fetch</span><span class=p>(</span><span class=s1>&#39;localhost:3000/api/home&#39;</span><span class=p>)</span>
+  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>response</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nx>response</span><span class=p>.</span><span class=nx>ok</span><span class=p>)</span> <span class=p>{</span>
+      <span class=k>throw</span> <span class=nb>Error</span><span class=p>(</span><span class=nx>response</span><span class=p>.</span><span class=nx>statusText</span><span class=p>);</span>
+    <span class=p>}</span>
+    <span class=k>return</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+  <span class=p>})</span>
+  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+  <span class=p>})</span>
+  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>error</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>(</span><span class=nx>error</span><span class=p>));</span>
+</code></pre></div><h4 id=4-simultaneous-requests>4. Simultaneous Requests</h4>
+<p>Both <strong>Axios</strong> and Fetch API can handle multiple requests in parallel. Axios uses the <code>axios.all()</code> method that allows passing an array of requests. Then assign the properties of the response array to distinct variables using <code>axios.spread()</code> as shown here.</p>
+<p>With <strong>Fetch API</strong>, you can use the built-in <code>Promise.all()</code> method to accomplish the same by passing all fetch requests to <code>Promise.all()</code> as an array. Next, you can use an async function to handle the response as follows.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// axios
+</span><span class=c1></span><span class=nx>axios</span>
+  <span class=p>.</span><span class=nx>all</span><span class=p>([</span>
+    <span class=nx>axios</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;http://localhost:3000/api/home&#39;</span><span class=p>),</span>
+    <span class=nx>axios</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;http://localhost:3000/api/page&#39;</span><span class=p>),</span>
+  <span class=p>])</span>
+  <span class=p>.</span><span class=nx>then</span><span class=p>(</span>
+    <span class=nx>axios</span><span class=p>.</span><span class=nx>spread</span><span class=p>((</span><span class=nx>obj</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+      <span class=c1>// Both requests are now complete
+</span><span class=c1></span>      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>obj</span><span class=p>[</span><span class=mi>0</span><span class=p>].</span><span class=nx>data</span><span class=p>.</span><span class=nx>login</span><span class=p>);</span>
+      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>obj</span><span class=p>[</span><span class=mi>1</span><span class=p>].</span><span class=nx>data</span><span class=p>.</span><span class=nx>login</span><span class=p>);</span>
+    <span class=p>})</span>
+  <span class=p>);</span>
+
+<span class=c1>// fetch
+</span><span class=c1></span><span class=nb>Promise</span><span class=p>.</span><span class=nx>all</span><span class=p>([</span>
+  <span class=nx>fetch</span><span class=p>(</span><span class=s1>&#39;http://localhost:3000/api/home&#39;</span><span class=p>),</span>
+  <span class=nx>fetch</span><span class=p>(</span><span class=s1>&#39;http://localhost:3000/api/page&#39;</span><span class=p>),</span>
+<span class=p>])</span>
+  <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=kr>async</span> <span class=p>([</span><span class=nx>res1</span><span class=p>,</span> <span class=nx>res2</span><span class=p>])</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>obj1</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>res1</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+    <span class=kr>const</span> <span class=nx>obj2</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>res2</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>obj1</span><span class=p>.</span><span class=nx>login</span><span class=p>);</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>obj2</span><span class=p>.</span><span class=nx>login</span><span class=p>);</span>
+  <span class=p>})</span>
+  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>error</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>error</span><span class=p>);</span>
+  <span class=p>});</span>
+</code></pre></div><h4 id=5-response-timeout>5. Response timeout</h4>
+<p>If you make a request without defining a timeout it will cause the request to hang and slow down the application. So, we need to set a response timeout for HTTP requests.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nx>axios</span><span class=p>({</span>
+  <span class=nx>method</span><span class=o>:</span> <span class=s1>&#39;post&#39;</span><span class=p>,</span>
+  <span class=nx>url</span><span class=o>:</span> <span class=s1>&#39;localhost:3000/api/home&#39;</span><span class=p>,</span>
+  <span class=nx>timeout</span><span class=o>:</span> <span class=mi>3000</span><span class=p>,</span> <span class=c1>// 3 seconds timeout
+</span><span class=c1></span>  <span class=nx>data</span><span class=o>:</span> <span class=p>{</span>
+    <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;David&#39;</span><span class=p>,</span>
+    <span class=nx>age</span><span class=o>:</span> <span class=mi>45</span><span class=p>,</span>
+  <span class=p>},</span>
+<span class=p>})</span>
+  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>response</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=cm>/* handle the response */</span>
+  <span class=p>})</span>
+  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>error</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>(</span><span class=s1>&#39;timeout exceeded&#39;</span><span class=p>));</span>
+</code></pre></div><blockquote>
+<p>Axios sets the timeout to 0 by default. So, always remember to specify a timeout for each request. You may also use a request interceptor to set the request timeout automatically.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// fetch
+</span><span class=c1></span>
+<span class=kr>const</span> <span class=nx>controller</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>AbortController</span><span class=p>();</span>
+<span class=kr>const</span> <span class=nx>options</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=nx>method</span><span class=o>:</span> <span class=s1>&#39;POST&#39;</span><span class=p>,</span>
+  <span class=nx>signal</span><span class=o>:</span> <span class=nx>controller</span><span class=p>.</span><span class=nx>signal</span><span class=p>,</span>
+  <span class=nx>body</span><span class=o>:</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>({</span>
+    <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;David&#39;</span><span class=p>,</span>
+    <span class=nx>age</span><span class=o>:</span> <span class=mi>45</span><span class=p>,</span>
+  <span class=p>}),</span>
+<span class=p>};</span>
+<span class=kr>const</span> <span class=nx>promise</span> <span class=o>=</span> <span class=nx>fetch</span><span class=p>(</span><span class=s1>&#39;http://localhost:3000/api/home&#39;</span><span class=p>,</span> <span class=nx>options</span><span class=p>);</span>
+<span class=kr>const</span> <span class=nx>timeoutId</span> <span class=o>=</span> <span class=nx>setTimeout</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=nx>controller</span><span class=p>.</span><span class=nx>abort</span><span class=p>(),</span> <span class=mi>3000</span><span class=p>);</span>
+
+<span class=nx>promise</span>
+  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>response</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=cm>/* handle the response */</span>
+  <span class=p>})</span>
+  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>error</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>error</span><span class=p>(</span><span class=s1>&#39;timeout exceeded&#39;</span><span class=p>));</span>
+</code></pre></div><p>From the above example, you can see that <code>fetch()</code> response timeout functionality through <code>AbortController</code> interface. In addition, the read-only signal property of <code>AbortController</code> allows you to interact with or abort a request.</p>
+<p>If the server doesn&rsquo;t respond within the specified time(3 seconds), <code>controller.abort()</code> is invoked, and the request is aborted.</p>
+<h4 id=6-intercepting-requests-and-responses>6. Intercepting Requests and Responses</h4>
+<blockquote>
+<p>Fetch API doesn’t offer a way to intercept requests by default.</p>
+</blockquote>
+<h4 id=7-request-uploaddownload-progress>7. Request Upload/Download Progress</h4>
+<p>If your HTTP request takes a significant time to complete, using a progress indicator will surely help to improve the user experience.
+If you use Axios, you can easily use the <strong>Axios Progress Bar module</strong> to implement a nice progress indicator.</p>
+<blockquote>
+<p>But Fetch API doesn’t have in-built support for progress bars.</p>
+</blockquote>
+<hr>
+<h2 id=conclusion>Conclusion</h2>
+<p>This comparison demonstrates that Axios keeps the code minimal for applications that require efficient error handling or HTTP interceptions. it supports almost all modern browsers and NodeJS environments.</p>
+<p>On the other hand, Fetch API isn’t far off either as a native method supported by all the major browsers (it doesn’t support IE).</p>
+<p>However, we can not stick to a single aspect in choosing the best option. Instead, you need to evaluate all these features and decide what’s best for your project based on its requirements.</p>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=https://blog.logrocket.com/axios-or-fetch-api/ target=_blank rel=noopener>Axios or fetch(): Which should you use? - LogRocket Blog</a></p>
+<p><a class=link href=https://blog.bitsrc.io/performing-http-requests-fetch-vs-axios-b62b44fed10d target=_blank rel=noopener>Performing HTTP Requests: Fetch Vs Axios | by Piumi Liyana Gunawardhana</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#difference-between-fetch-and-axios-for-making-http-requests>Difference between Fetch and Axios for making http requests</a>
+<ol>
+<li><a href=#general>General</a></li>
+<li><a href=#details>Details</a>
+<ol>
+<li><a href=#1-syntax-differences>1. Syntax Differences</a></li>
+<li><a href=#2-json-data-conversion>2. JSON Data Conversion</a></li>
+<li><a href=#3-error-handling>3. Error Handling</a></li>
+<li><a href=#4-simultaneous-requests>4. Simultaneous Requests</a></li>
+<li><a href=#5-response-timeout>5. Response timeout</a></li>
+<li><a href=#6-intercepting-requests-and-responses>6. Intercepting Requests and Responses</a></li>
+<li><a href=#7-request-uploaddownload-progress>7. Request Upload/Download Progress</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#conclusion>Conclusion</a></li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

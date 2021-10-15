@@ -83,7 +83,282 @@
 &lt;p>&lt;a class="link" href="https://my.oschina.net/l3ve/blog/330358" target="_blank" rel="noopener"
 >从一行代码里面学点 JavaScript - L3ve 的绝对领域 - OSCHINA - 中文开源技术交流社区&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://dailc.github.io/2018/03/12/whenyouenteraurl.html" target="_blank" rel="noopener"
->从输入 URL 到页面加载的过程？如何由一道题完善自己的前端知识体系！ | Dailc 的个人主页&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　27</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/</link><pubDate>Wed, 13 Oct 2021 11:09:57 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/frontend-27-cover.jpg" alt="Featured image of post 毎日のフロントエンド　27" />&lt;h1 id="第二十七日">第二十七日&lt;/h1>
+>从输入 URL 到页面加载的过程？如何由一道题完善自己的前端知识体系！ | Dailc 的个人主页&lt;/a>&lt;/p></description></item><item><title>fetch and Axios</title><link>https://youkoucoding.github.io/p/fetch-and-axios/</link><pubDate>Thu, 14 Oct 2021 15:41:59 +0900</pubDate><guid>https://youkoucoding.github.io/p/fetch-and-axios/</guid><description>&lt;img src="https://youkoucoding.github.io/p/fetch-and-axios/fetch-axios-cover.jpg" alt="Featured image of post fetch and Axios" />&lt;h1 id="which-should-be-used-axios-or-fetch">Which should be used? Axios or fetch()&lt;/h1>
+&lt;h2 id="difference-between-fetch-and-axios-for-making-http-requests">Difference between Fetch and Axios for making http requests&lt;/h2>
+&lt;h3 id="general">General&lt;/h3>
+&lt;p>One the fundamental tasks of any web application is to communicate with servers through the http protocol. This can be easily achieved using Fetch or Axios.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>fetch()&lt;/code> The Fetch API provides a &lt;code>fetch()&lt;/code> method defined on the window object. It also provides a JavaScript interface for accessing and manipulating parts of the Http pipeline(requests and responses). The fetch method has &lt;strong>one mandatory argument&lt;/strong> - URL of the resource to be fetched. The method retuirns a &lt;strong>Promise&lt;/strong> that can be used to retrieve the response of the request.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// fetch
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">fetch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;api&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Code for handling the response
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Code for handling the error
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>Axios&lt;/code>: Axios is JavaScript library used to make HTTP requests from &lt;strong>nodejs or XMLHttpRequests&lt;/strong> from the browser and it supports the Promise API that is native to JS ES6. It can be used intercept HTTP requests and respones and enables client-side protection against XSRF. It also has the ability to cancel requests.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// Axios
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">axios&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;url&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Code for handling the response
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Code for handling the error
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Axios&lt;/th>
+&lt;th>Fetch&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Axios has url in request object.&lt;/td>
+&lt;td>Fetch has no url in request object.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Axios is a stand-alone third party package that can be easily installed.&lt;/td>
+&lt;td>Fetch is built into most modern browsers; no installation is required as such.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Axios enjoys built-in XSRF protection.&lt;/td>
+&lt;td>Fetch does not.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Axios uses the data property.&lt;/td>
+&lt;td>Fetch uses the body property.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Axios’ data contains the object.&lt;/td>
+&lt;td>Fetch’s body has to be stringified.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Axios request is ok when status is 200 and statusText is ‘OK’.&lt;/td>
+&lt;td>Fetch request is ok when response object contains the ok property.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Axios performs &lt;strong>automatic transforms of JSON data.&lt;/strong>&lt;/td>
+&lt;td>Fetch is a two-step process when handling JSON data- first, to make the actual request; second, to call the .json() method on the response.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Axios allows cancelling request and request timeout.&lt;/td>
+&lt;td>Fetch does not.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Axios has the ability to intercept HTTP requests.&lt;/td>
+&lt;td>Fetch, by default, doesn’t provide a way to intercept requests.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Axios has built-in support for download progress.&lt;/td>
+&lt;td>Fetch does not support upload progress.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Axios has wide browser support.&lt;/td>
+&lt;td>Fetch only supports Chrome 42+, Firefox 39+, Edge 14+, and Safari 10.1+ (This is known as Backward Compatibility).&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="details">Details&lt;/h3>
+&lt;h4 id="1-syntax-differences">1. Syntax Differences&lt;/h4>
+&lt;p>Both Axios and Fetch API returns Promises when you make an HTTP request.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// POST in axios
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">url&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;http://localhost:3000/api/home&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">method&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;POST&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">headers&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">Accept&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;application/json&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;Content-Type&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;application/json;charset=UTF-8&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;David&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">age&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">45&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">axios&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>With Axios, we can create a config object using specified parameters like baseUrl, params, headers, auth, responseType to send with the request. It will return a Promise that resolves with either a response object or an error object. Besides, the following can be found in the returned object from the Promise.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>data&lt;/code>:- the actual response body&lt;/li>
+&lt;li>&lt;code>status&lt;/code>:- HTTP status of the call, like 200 or 404&lt;/li>
+&lt;li>&lt;code>statusText&lt;/code>:- HTTP status returned as a text message&lt;/li>
+&lt;li>&lt;code>headers&lt;/code>:- the server sends headers back&lt;/li>
+&lt;li>&lt;code>config&lt;/code>:- request configuration&lt;/li>
+&lt;li>&lt;code>request&lt;/code>:- XMLHttpRequest object&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// POST in fetch()
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;http://localhost:3000/api/home&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">method&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;POST&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">headers&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">Accept&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;application/json&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;Content-Type&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;application/json;charset=UTF-8&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nx">body&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;David&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">age&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">45&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">}),&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="c1">// The url (path to the resource you want to fetch) argument is mandatory
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">fetch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">options&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Similar to Axios, it returns a Promise that the response object can resolve. We can optionally pass options in the second argument in the &lt;code>fetch()&lt;/code> method.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Key Differences:&lt;/strong>
+&lt;ul>
+&lt;li>With Axios, the &lt;code>data&lt;/code> is sent through the data property of the options, but Fetch API uses the &lt;code>body&lt;/code> property.&lt;/li>
+&lt;li>Fetch response requires additional validation as it always returns a response object no matter whether it is successful or not.&lt;/li>
+&lt;li>The data in fetch() has been serialized to a String (Stringified).&lt;/li>
+&lt;li>The URL is provided to fetch() as an argument. But, in Axios, it is set in the options object.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-json-data-conversion">2. JSON Data Conversion&lt;/h4>
+&lt;p>With &lt;strong>Fetch API&lt;/strong>, handling JSON data is a 2 step process. First, you must make the request and then call the &lt;code>.json()&lt;/code> function on the response since Fetch API sends data with the body property.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">fetch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;localhost:3000/api&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// first step
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">response&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">json&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="c1">// second step
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>With &lt;strong>Axios&lt;/strong>, the data is sent through the data property of the options, and it automatically stringifies the data in the response.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">axios&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;localhost:3000/api/home&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="3-error-handling">3. Error Handling&lt;/h4>
+&lt;p>Error handling with &lt;strong>Axios&lt;/strong> is easy because bad responses (such as 404 or 500) will end up causing the Promise to be rejected by throwing an exception. Therefore, to handle 404 or 400 errors with Axios, you need to use the catch() block as shown below.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">axios&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;localhost:3000/api/home&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;response&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">response&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// The request was made and the server responded with a status code that falls out of the range of 200
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// Something like 4xx or 500
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">request&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// The request was made but no response was received
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// `error.request` is an instance of XMLHttpRequest in the browser and an instance of http.ClientRequest in node.js
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">request&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Something happened in setting up the request that triggered an Error
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Error&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">error&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">config&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>When using fetch(), you need to read the response object since bad responses are still resolved using the then() method. A Fetch API Promise will be &lt;strong>rejected only if the request cannot be completed in a scenario like a network failure&lt;/strong>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">fetch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;localhost:3000/api/home&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ok&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="nb">Error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">statusText&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">response&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">json&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="4-simultaneous-requests">4. Simultaneous Requests&lt;/h4>
+&lt;p>Both &lt;strong>Axios&lt;/strong> and Fetch API can handle multiple requests in parallel. Axios uses the &lt;code>axios.all()&lt;/code> method that allows passing an array of requests. Then assign the properties of the response array to distinct variables using &lt;code>axios.spread()&lt;/code> as shown here.&lt;/p>
+&lt;p>With &lt;strong>Fetch API&lt;/strong>, you can use the built-in &lt;code>Promise.all()&lt;/code> method to accomplish the same by passing all fetch requests to &lt;code>Promise.all()&lt;/code> as an array. Next, you can use an async function to handle the response as follows.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// axios
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">axios&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">all&lt;/span>&lt;span class="p">([&lt;/span>
+&lt;span class="nx">axios&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;http://localhost:3000/api/home&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="nx">axios&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;http://localhost:3000/api/page&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="p">])&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="nx">axios&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">spread&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Both requests are now complete
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">login&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">login&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// fetch
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Promise&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">all&lt;/span>&lt;span class="p">([&lt;/span>
+&lt;span class="nx">fetch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;http://localhost:3000/api/home&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="nx">fetch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;http://localhost:3000/api/page&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="p">])&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">([&lt;/span>&lt;span class="nx">res1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">res2&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">obj1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">res1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">json&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">obj2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">res2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">json&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">login&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">login&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="5-response-timeout">5. Response timeout&lt;/h4>
+&lt;p>If you make a request without defining a timeout it will cause the request to hang and slow down the application. So, we need to set a response timeout for HTTP requests.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">axios&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="nx">method&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;post&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">url&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;localhost:3000/api/home&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">timeout&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3000&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// 3 seconds timeout
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;David&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">age&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">45&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="cm">/* handle the response */&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;timeout exceeded&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>Axios sets the timeout to 0 by default. So, always remember to specify a timeout for each request. You may also use a request interceptor to set the request timeout automatically.&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// fetch
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">controller&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AbortController&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">method&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;POST&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">signal&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">controller&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">signal&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">body&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;David&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">age&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">45&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">}),&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">promise&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">fetch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;http://localhost:3000/api/home&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">options&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">timeoutId&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">controller&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">abort&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="mi">3000&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">promise&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="cm">/* handle the response */&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;timeout exceeded&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>From the above example, you can see that &lt;code>fetch()&lt;/code> response timeout functionality through &lt;code>AbortController&lt;/code> interface. In addition, the read-only signal property of &lt;code>AbortController&lt;/code> allows you to interact with or abort a request.&lt;/p>
+&lt;p>If the server doesn&amp;rsquo;t respond within the specified time(3 seconds), &lt;code>controller.abort()&lt;/code> is invoked, and the request is aborted.&lt;/p>
+&lt;h4 id="6-intercepting-requests-and-responses">6. Intercepting Requests and Responses&lt;/h4>
+&lt;blockquote>
+&lt;p>Fetch API doesn’t offer a way to intercept requests by default.&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="7-request-uploaddownload-progress">7. Request Upload/Download Progress&lt;/h4>
+&lt;p>If your HTTP request takes a significant time to complete, using a progress indicator will surely help to improve the user experience.
+If you use Axios, you can easily use the &lt;strong>Axios Progress Bar module&lt;/strong> to implement a nice progress indicator.&lt;/p>
+&lt;blockquote>
+&lt;p>But Fetch API doesn’t have in-built support for progress bars.&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>This comparison demonstrates that Axios keeps the code minimal for applications that require efficient error handling or HTTP interceptions. it supports almost all modern browsers and NodeJS environments.&lt;/p>
+&lt;p>On the other hand, Fetch API isn’t far off either as a native method supported by all the major browsers (it doesn’t support IE).&lt;/p>
+&lt;p>However, we can not stick to a single aspect in choosing the best option. Instead, you need to evaluate all these features and decide what’s best for your project based on its requirements.&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://blog.logrocket.com/axios-or-fetch-api/" target="_blank" rel="noopener"
+>Axios or fetch(): Which should you use? - LogRocket Blog&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.bitsrc.io/performing-http-requests-fetch-vs-axios-b62b44fed10d" target="_blank" rel="noopener"
+>Performing HTTP Requests: Fetch Vs Axios | by Piumi Liyana Gunawardhana&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　27</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/</link><pubDate>Wed, 13 Oct 2021 11:09:57 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-27/frontend-27-cover.jpg" alt="Featured image of post 毎日のフロントエンド　27" />&lt;h1 id="第二十七日">第二十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说说对影子shadowdom-的了解">&lt;strong>#Question:&lt;/strong> 说说对影子&lt;code>(Shadow)DOM&lt;/code> 的了解&lt;/h3>
 &lt;p>&lt;strong>Shadow DOM&lt;/strong>: A set of JavaScript APIs for attaching an encapsulated &amp;ldquo;shadow&amp;rdquo; DOM tree to an element &amp;mdash; which is rendered separately from the main document DOM &amp;mdash; and controlling associated functionality.In this way, you can keep an element&amp;rsquo;s features private, so they can be scripted and styled without the fear of collision with other parts of the document.&lt;/p>
