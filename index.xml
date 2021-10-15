@@ -1,4 +1,149 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Oct 2021 17:36:17 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　28</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-28/</link><pubDate>Thu, 14 Oct 2021 17:36:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-28/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-28/frontend-28-cover.jpg" alt="Featured image of post 毎日のフロントエンド　28" />&lt;h1 id="第二十八日">第二十八日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 15 Oct 2021 22:05:17 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　29</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/</link><pubDate>Fri, 15 Oct 2021 22:05:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/frontend-29-cover.jpg" alt="Featured image of post 毎日のフロントエンド　29" />&lt;h1 id="第二十九日">第二十九日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="quesion-了解什么是无障碍-webwai吗在开发过程中要怎么做呢">&lt;strong>#Quesion:&lt;/strong> 了解什么是无障碍 web（WAI）吗？在开发过程中要怎么做呢&lt;/h3>
+&lt;p>无障碍 &lt;code>Web&lt;/code> == 有良好访问性的 &lt;code>Web&lt;/code>&lt;/p>
+&lt;ol>
+&lt;li>页面的内容结构&lt;/li>
+&lt;/ol>
+&lt;p>应该让标题、段落、列表等各司其职，让整个页面内容结构清晰，比如：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">article&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">h2&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="nx">静夜思&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/h2&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">p&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">唐&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="nx">李白&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/p&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">div&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="nx">床前明月光&lt;/span>&lt;span class="err">，&lt;/span>&lt;span class="nx">疑是地上霜&lt;/span>&lt;span class="err">。&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">br&lt;/span> &lt;span class="o">/&amp;gt;&lt;/span>
+&lt;span class="nx">举头望明月&lt;/span>&lt;span class="err">，&lt;/span>&lt;span class="nx">低头思故乡&lt;/span>&lt;span class="err">。&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/div&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">ul&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">li&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="nx">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;#&amp;#39;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="nx">译文&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/a&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/li&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">li&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="nx">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;#&amp;#39;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="nx">注释&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/a&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/li&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">li&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="nx">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;#&amp;#39;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="nx">作者介绍&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/a&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/li&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/ul&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/article&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>好的语义，屏幕阅读器会：&lt;/p>
+&lt;ul>
+&lt;li>在你浏览内容时，读取每个标题，通知标题是什么，段落是什么等&lt;/li>
+&lt;li>它会在每个元素之后停止，让你有个短暂的停歇&lt;/li>
+&lt;li>你可以跳转到上一个/下一个标题&lt;/li>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>简写和缩写&lt;/li>
+&lt;li>&lt;code>form&lt;/code> 表单&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">form&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">div&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">label&lt;/span> &lt;span class="k">for&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="nx">姓名&lt;/span>&lt;span class="err">：&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/label&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">input&lt;/span> &lt;span class="nx">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;text&amp;#34;&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;name&amp;#34;&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/div&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">div&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">label&lt;/span> &lt;span class="k">for&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;age&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="nx">年龄&lt;/span>&lt;span class="err">：&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/label&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">input&lt;/span> &lt;span class="nx">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;text&amp;#34;&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;age&amp;#34;&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;age&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/div&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">div&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">label&lt;/span> &lt;span class="k">for&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;gender&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="nx">性别&lt;/span>&lt;span class="err">：&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/label&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">select&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;gender&amp;#34;&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;gender&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">option&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="nx">男&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/option&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">option&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="nx">女&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/option&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/select&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/div&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/form&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>&amp;lt;label&amp;gt;&lt;/code> 标签可以让提示文本和输入框完美的对应起来，还可以扩大激活输入框的范围，方便用户选择和输入&lt;/p>
+&lt;ol start="4">
+&lt;li>键盘可访问性&lt;/li>
+&lt;/ol>
+&lt;p>键盘可访问包括按 tab 键能让页面中的元素获得焦点、按 Return/Enter 键能激活该元素、表单元素 &lt;code>&amp;lt;select&amp;gt;&lt;/code> 在获得焦点时按方向键可以上下切换选项。自带键盘可访问性的标签有&lt;code>&amp;lt;a&amp;gt;&lt;/code>、&lt;code>&amp;lt;button&amp;gt;&lt;/code>、&lt;code>&amp;lt;label&amp;gt;&lt;/code>以及表单元素&lt;/p>
+&lt;ol start="5">
+&lt;li>&lt;code>alt&lt;/code> 属性&lt;/li>
+&lt;/ol>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="quesion-请描述-css-的权重计算规则">&lt;strong>#Quesion:&lt;/strong> 请描述 css 的权重计算规则&lt;/h3>
+&lt;p>权重值计算&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>选择器&lt;/th>
+&lt;th>例&lt;/th>
+&lt;th>权重值&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>!important&lt;/code>&lt;/td>
+&lt;td>&lt;code>!important&lt;/code>&lt;/td>
+&lt;td>&lt;code>Infinity&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>内联样式&lt;/td>
+&lt;td>&lt;code>style=&amp;quot;..&amp;quot;&lt;/code>&lt;/td>
+&lt;td>1000&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ID&lt;/td>
+&lt;td>&lt;code>#id&lt;/code>&lt;/td>
+&lt;td>100&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>class&lt;/td>
+&lt;td>&lt;code>.class&lt;/code>&lt;/td>
+&lt;td>10&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>属性&lt;/td>
+&lt;td>&lt;code>[type='text']&lt;/code>&lt;/td>
+&lt;td>10&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>伪类&lt;/td>
+&lt;td>&lt;code>:hover&lt;/code>&lt;/td>
+&lt;td>10&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>标签&lt;/td>
+&lt;td>&lt;code>p&lt;/code>&lt;/td>
+&lt;td>1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>伪元素&lt;/td>
+&lt;td>&lt;code>::first-line&lt;/code>&lt;/td>
+&lt;td>1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>相邻选择器、子代选择器、通配符&lt;/td>
+&lt;td>&lt;code>\* &amp;gt; +&lt;/code>&lt;/td>
+&lt;td>0&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>1000&amp;gt;100。也就是说从左往右逐个等级比较，前一等级相等才往后比&lt;/li>
+&lt;li>在权重相同的情况下，后面的样式会覆盖掉前面的样式&lt;/li>
+&lt;li>继承属性没有权重&lt;/li>
+&lt;li>通配符、子选择器、相邻选择器等的。虽然权值为 0，但是也比继承的样式优先&lt;/li>
+&lt;li>ie6 以上才支持 important，并且尽量少用&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="quesion-写一个获取数组的最大值最小值的方法">&lt;strong>#Quesion:&lt;/strong> 写一个获取数组的最大值、最小值的方法&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">max&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">25&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">62&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">91&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">78&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">34&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">62&lt;/span>&lt;span class="p">]);&lt;/span> &lt;span class="c1">// 91
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">27&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">64&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">90&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">78&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">34&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">62&lt;/span>&lt;span class="p">]);&lt;/span> &lt;span class="c1">// 27
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// or
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">maxValue&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">max&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">minValue&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">//es6
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">max&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/anjia/blog/issues/44" target="_blank" rel="noopener"
+>CSS 是怎样确定图像大小的？ · Issue #44 · anjia/blog&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　28</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-28/</link><pubDate>Thu, 14 Oct 2021 17:36:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-28/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-28/frontend-28-cover.jpg" alt="Featured image of post 毎日のフロントエンド　28" />&lt;h1 id="第二十八日">第二十八日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说说你对meta标签的理解">&lt;strong>#Question:&lt;/strong> 说说你对&lt;code>&amp;lt;meta&amp;gt;&lt;/code>标签的理解&lt;/h3>
 &lt;p>&lt;code>meta&lt;/code>标签 **元数据(Metadata)**是&lt;code>HTML&lt;/code>语言&lt;code>&amp;lt;head&amp;gt;&lt;/code>区的一个辅助性标签，它位于 HTML 文档头部的&lt;code>head&lt;/code>和&lt;code>title&lt;/code>之间，它提供用户不可见的信息。&lt;/p>
