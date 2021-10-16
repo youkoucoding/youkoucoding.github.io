@@ -1,4 +1,137 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 15 Oct 2021 22:05:17 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　29</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/</link><pubDate>Fri, 15 Oct 2021 22:05:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/frontend-29-cover.jpg" alt="Featured image of post 毎日のフロントエンド　29" />&lt;h1 id="第二十九日">第二十九日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 16 Oct 2021 10:26:51 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　30</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/</link><pubDate>Sat, 16 Oct 2021 10:26:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/frontend-30-cover.jpg" alt="Featured image of post 毎日のフロントエンド　30" />&lt;h1 id="第三十日">第三十日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-网页上的验证码是为了解决什么问题说说了解的验证码种类有哪些">&lt;strong>Question:&lt;/strong> 网页上的验证码是为了解决什么问题？说说了解的验证码种类有哪些&lt;/h3>
+&lt;ol>
+&lt;li>图形验证码&lt;/li>
+&lt;li>字符验证码 文字+混淆 如早期的 7456 这种结果的验证码&lt;/li>
+&lt;li>复杂字符验证码 复杂文字+混淆 如加入中文等本土化的增加识别难度&lt;/li>
+&lt;li>计算验证码 数字+运算符+混淆 如 1+2=? 需要识别表达式增加识别难度&lt;/li>
+&lt;li>精确识别 文字+混淆文字 如选出 优贝在线 中的 贝字，或者选出所有的筷子，所有的红绿灯（12306）&lt;/li>
+&lt;li>滑动拼图验证 图像+滑块+图像凹槽 如常见的滑动拼图，提供商有易盾之类的&lt;/li>
+&lt;li>拼图验证 图像+打乱 需要用户去拼合完成。teamviewer 和 google&lt;/li>
+&lt;li>物理验证&lt;/li>
+&lt;li>手机短信验证码&lt;/li>
+&lt;li>手机语音验证码&lt;/li>
+&lt;/ol>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-描述下了解的图片格式及使用场景">&lt;strong>Question:&lt;/strong> 描述下了解的图片格式及使用场景&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>格式&lt;/th>
+&lt;th>优点&lt;/th>
+&lt;th>缺点&lt;/th>
+&lt;th>适用场景&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>gif&lt;/td>
+&lt;td>文件小，支持动画、透明，无兼容性问题&lt;/td>
+&lt;td>只支持 256 种颜色&lt;/td>
+&lt;td>色彩简单的 logo、icon、动图&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>jpg&lt;/td>
+&lt;td>色彩丰富，文件小&lt;/td>
+&lt;td>有损压缩，反复保存图片质量下降明显&lt;/td>
+&lt;td>色彩丰富的图片/渐变图像&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>png&lt;/td>
+&lt;td>无损压缩，支持透明，简单图片尺寸小&lt;/td>
+&lt;td>不支持动画，色彩丰富的图片尺寸大&lt;/td>
+&lt;td>logo/icon/透明图&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>webp&lt;/td>
+&lt;td>文件小，支持有损和无损压缩，支持动画、透明&lt;/td>
+&lt;td>浏览器兼容性不好&lt;/td>
+&lt;td>支持 webp 格式的 app 和 webview&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>▍PNG&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>优点：PNG 格式图片是无损压缩的图片，能在保证最不失真的情况下尽可能压缩图像文件的大小；图片质量高；色彩表现好；支持透明效果；提供锋利的线条和边缘，所以做出的 logo 等小图标效果会更好；更好地展示文字、颜色相近的图片。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>缺点：占内存大,会导致网页加载速度慢；对于需要高保真的较复杂的图像，PNG 虽然能无损压缩，但图片文件较大，不适合应用在 Web 页面上。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>适用场景：主要用于小图标或颜色简单对比强烈的小的背景图。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>▍JPG&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>优点：占用内存小，网页加载速度快。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>缺点：JPG 格式图片是有损压缩的图片，有损压缩会使原始图片数据质量下降，即 JPG 会在压缩图片时降低品质。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>适用场景：由于这种格式图片对色彩表现比较好，所以适用于色彩丰富的图片。主要用于摄影作品或者大的背景图等。不合适文字比较多的图片。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>▍SVG&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>优点：SVG 是矢量图形，不受像素影响，在不同平台上都表现良好；可以通过 JS 控制实现动画效果。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>缺点：DOM 比正常的图形慢，而且如果其结点多而杂，就更慢；不能与 HTML 内容集成。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>适用场景：主要用于设计模型的展示等。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>▍WebP&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>优点：WebP 格式，谷歌（google）开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有 JPEG 的 2/3，并能节省大量的服务器宽带资源和数据空间。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>缺点：相较编码 JPEG 文件，编码同样质量的 WebP 文件需要占用更多的计算资源。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>适用场景：WebP 既支持有损压缩也支持无损压缩。将来可能是 JPEG 的代替品。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-写一个方法判断字符串是否为回文字符串">&lt;strong>Question:&lt;/strong> 写一个方法判断字符串是否为回文字符串&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://leetcode-cn.com/problems/valid-palindrome/" target="_blank" rel="noopener"
+>Loading Question&amp;hellip; - 力扣（LeetCode）&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>给定一个字符串，验证它是否是回文串，只考虑字母和数字字符，可以忽略字母的大小写。
+说明：本题中，我们将空字符串定义为有效的回文串。&lt;/p>
+&lt;p>示例 1:&lt;/p>
+&lt;p>输入: &amp;ldquo;A man, a plan, a canal: Panama&amp;rdquo;
+输出: true
+示例 2:&lt;/p>
+&lt;p>输入: &amp;ldquo;race a car&amp;rdquo;
+输出: false&lt;/p>
+&lt;h4 id="solution">Solution&lt;/h4>
+&lt;ul>
+&lt;li>获取有效的字符串，我们利用正则去匹配字母和数字，因为忽略大小写，所以我们转成小写&lt;/li>
+&lt;li>然后利用 &lt;code>split('')&lt;/code> 把字符串分割成数组，再用数组的 &lt;code>reverse()&lt;/code> 去反转，再用 &lt;code>join(‘’)&lt;/code> 去拼接&lt;/li>
+&lt;li>最后进行比较&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * @param {string} s
+&lt;/span>&lt;span class="cm"> * @return {boolean}
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">isPalindrome&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/[^a-zA-Z0-9]/g&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">toLowerCase&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">strReverse&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">reverse&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">str&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">strReverse&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/issues/107" target="_blank" rel="noopener"
+>[css] 描述下你所了解的图片格式及使用场景 · haizlin/fe-interview&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　29</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/</link><pubDate>Fri, 15 Oct 2021 22:05:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/frontend-29-cover.jpg" alt="Featured image of post 毎日のフロントエンド　29" />&lt;h1 id="第二十九日">第二十九日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="quesion-了解什么是无障碍-webwai吗在开发过程中要怎么做呢">&lt;strong>#Quesion:&lt;/strong> 了解什么是无障碍 web（WAI）吗？在开发过程中要怎么做呢&lt;/h3>
 &lt;p>无障碍 &lt;code>Web&lt;/code> == 有良好访问性的 &lt;code>Web&lt;/code>&lt;/p>
