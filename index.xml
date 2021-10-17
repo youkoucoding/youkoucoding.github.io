@@ -1,4 +1,105 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 16 Oct 2021 10:26:51 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　30</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/</link><pubDate>Sat, 16 Oct 2021 10:26:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/frontend-30-cover.jpg" alt="Featured image of post 毎日のフロントエンド　30" />&lt;h1 id="第三十日">第三十日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Oct 2021 16:01:03 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　31</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/</link><pubDate>Sun, 17 Oct 2021 16:01:03 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/frontend-31-cover.jpg" alt="Featured image of post 毎日のフロントエンド　31" />&lt;h1 id="第三十一日">第三十一日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-dom-和-bom-有什么区别">&lt;strong>Question:&lt;/strong>　 &lt;code>DOM&lt;/code> 和 &lt;code>BOM&lt;/code> 有什么区别&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;code>BOM&lt;/code> 是 &lt;code>Browser Object Model&lt;/code> 的缩写，即浏览器对象模型。&lt;code>DOM&lt;/code> 是 &lt;code>Document Object Model&lt;/code> 的缩写，即文档对象模型。都是浏览器提供给 JavaScript 的 API 接口&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 165;
+flex-basis: 397px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/bom_dom.jpeg" data-size="663x400">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/bom_dom.jpeg"
+width="663"
+height="400"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/bom_dom_hu0f440bc4148fb20e12b68ac0e5bdfe3a_47335_480x0_resize_q75_box.jpeg 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/bom_dom_hu0f440bc4148fb20e12b68ac0e5bdfe3a_47335_1024x0_resize_q75_box.jpeg 1024w"
+loading="lazy"
+alt="BOM-DOM">
+&lt;/a>
+&lt;figcaption>BOM-DOM&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h4 id="bom-指-浏览器对象模型">BOM 指 浏览器对象模型&lt;/h4>
+&lt;p>提供了独立于内容而与浏览器窗口进行交互的对象。描述了与浏览器进行交互的方法和接口，可以对浏览器窗口进行访问和操作，譬如可以弹出新的窗口，改变状态栏中的文本。&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 309;
+flex-basis: 741px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/bom.jpeg" data-size="847x274">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/bom.jpeg"
+width="847"
+height="274"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/bom_hu90620aca69e6a91e51217c5b7eb90702_11597_480x0_resize_q75_box.jpeg 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/bom_hu90620aca69e6a91e51217c5b7eb90702_11597_1024x0_resize_q75_box.jpeg 1024w"
+loading="lazy"
+alt="BOM">
+&lt;/a>
+&lt;figcaption>BOM&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h4 id="dom-指-文档对象模型">DOM 指 文档对象模型&lt;/h4>
+&lt;p>DOM 是针对 HTML 的基于树的 API。描述了处理网页内容的方法和接口，是 HTML 的 API，DOM 把整个页面规划成由节点层级构成的文档。
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 137;
+flex-basis: 329px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/dom.jpeg" data-size="665x485">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/dom.jpeg"
+width="665"
+height="485"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/dom_hu3699dad03004dc9539a3595d222ffbe7_6463_480x0_resize_q75_box.jpeg 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/dom_hu3699dad03004dc9539a3595d222ffbe7_6463_1024x0_resize_q75_box.jpeg 1024w"
+loading="lazy"
+alt="DOM">
+&lt;/a>
+&lt;figcaption>DOM&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>&lt;strong>只有 JS 的宿主环境是浏览器的时候才有 DOM 和 BOM ，在 Node 中是没有这两个对象的&lt;/strong>&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question让网页的字体变得清晰变细用-css-怎么做">&lt;strong>Question:&lt;/strong>　让网页的字体变得清晰，变细用 CSS 怎么做&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>font-weight&lt;/code> + &lt;code>font-family&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>font-weight&lt;/code> 来控制粗细还需要对应的字体有没有对应的变种字体。因此这就和 font-family 相关。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>-webkit-font-smoothing: antialiased;&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>这个属性是 Chrome 的抗锯齿属性。加上后会显得细一些，但是只针对 webkit 内核的浏览器才有效。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question写一个方法把-0-和-1-互转0-置-11-置-0">&lt;strong>Question:&lt;/strong>　写一个方法把 0 和 1 互转（0 置 1，1 置 0）&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">change&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">val&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;number&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">val&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">newStrArr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">val&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">item&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="s1">&amp;#39;0&amp;#39;&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">newStr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">newStrArr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nb">parseInt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">newStr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">val&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="s1">&amp;#39;0&amp;#39;&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;10101&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">change&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">//01010
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">num&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">10101&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">change&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">//1010
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.javascripttutorial.net/javascript-bom/" target="_blank" rel="noopener"
+>JavaScript Browser Object Model (BOM)&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.javascripttutorial.net/javascript-dom/" target="_blank" rel="noopener"
+>JavaScript DOM Tutorial&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>fe-interview/history.md haizlin/fe-interview&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　30</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/</link><pubDate>Sat, 16 Oct 2021 10:26:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/frontend-30-cover.jpg" alt="Featured image of post 毎日のフロントエンド　30" />&lt;h1 id="第三十日">第三十日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-网页上的验证码是为了解决什么问题说说了解的验证码种类有哪些">&lt;strong>Question:&lt;/strong> 网页上的验证码是为了解决什么问题？说说了解的验证码种类有哪些&lt;/h3>
 &lt;ol>
