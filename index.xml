@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Oct 2021 16:01:03 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　31</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/</link><pubDate>Sun, 17 Oct 2021 16:01:03 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/frontend-31-cover.jpg" alt="Featured image of post 毎日のフロントエンド　31" />&lt;h1 id="第三十一日">第三十一日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 18 Oct 2021 17:44:05 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　32</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/</link><pubDate>Mon, 18 Oct 2021 17:44:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/frontend-31-cover.jpg" alt="Featured image of post 毎日のフロントエンド　32" />&lt;h1 id="第三十二日">第三十二日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-说说对-html-元素的显示优先级的理解">&lt;strong>Question:&lt;/strong> 说说对 &lt;code>HTML&lt;/code> 元素的显示优先级的理解&lt;/h3>
+&lt;p>Day20 类似。&lt;/p>
+&lt;p>帧元素（&lt;code>frameset&lt;/code>) 优先级最高 &lt;code>&amp;gt;&amp;gt;&amp;gt;&lt;/code> 表单元素 &lt;code>&amp;gt;&lt;/code> 非表单元素，即 &lt;code>input type=&amp;quot;radio&amp;quot;&lt;/code> 之类的表单控件 &lt;code>&amp;gt;&lt;/code> 普通的如 &lt;code>a,div&lt;/code> 等元素。&lt;/p>
+&lt;p>从有窗口和无窗口元素来分，有窗口元素 &amp;gt; 无窗口元素。有窗口元素如 &lt;code>Select&lt;/code> 元素、&lt;code>Object&lt;/code> 元素。&lt;/p>
+&lt;p>&lt;code>z-index&lt;/code> 属性也可以改变显示优先级，但只对同种类型的元素才有效。&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-line-height三种赋值方式有何区别">&lt;strong>Question:&lt;/strong> &lt;code>line-height&lt;/code>三种赋值方式有何区别&lt;/h3>
+&lt;p>&lt;code>line-height&lt;/code> 可以有带单位及不带单位的写法&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="nt">div&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">24&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">150&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>由于 &lt;code>line-height&lt;/code> 有继承性，直接在某个元素上使用 line-height，以下这三种写法是没有区别的，比如给所有的 p 标签添加行高属性：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="nt">p&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">p&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">1.5&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">p&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">150&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>三种方式的区别在于，给父元素设置行高的时候子元素的继承方式:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>带有单位的 &lt;code>line-height&lt;/code> 会被计算成 &lt;code>px&lt;/code> 后继承。子元素的 &lt;code>line-height&lt;/code> &lt;code>=&lt;/code> 父元素的 &lt;code>line-height * font-size&lt;/code> （如果是 px 了就直接继承）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>而不带单位的 &lt;code>line-height&lt;/code> 被继承的是倍数，子元素的 &lt;code>line-height&lt;/code> &lt;code>=&lt;/code> 子元素的 &lt;code>font-size *&lt;/code> 继承的&lt;strong>倍数&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-造成内存泄漏的操作有哪些">&lt;strong>Question:&lt;/strong> 造成内存泄漏的操作有哪些&lt;/h3>
+&lt;ol>
+&lt;li>闭包&lt;/li>
+&lt;li>无效的全局变量&lt;/li>
+&lt;li>&lt;code>addEventListener&lt;/code> didn&amp;rsquo;t remove 副作用未清除&lt;/li>
+&lt;li>&lt;code>setInterval&lt;/code> didn&amp;rsquo;t clear&lt;/li>
+&lt;li>还有一种是递归的时候不用尾调用优化，如果层级比较深的话会造成内存消耗激增，甚至程序崩溃，但是只要递归完成了，这些内存会被释放&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903556739235848" target="_blank" rel="noopener"
+>line-height 3 种设置方式的区别 - 掘金&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　31</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/</link><pubDate>Sun, 17 Oct 2021 16:01:03 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/frontend-31-cover.jpg" alt="Featured image of post 毎日のフロントエンド　31" />&lt;h1 id="第三十一日">第三十一日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-dom-和-bom-有什么区别">&lt;strong>Question:&lt;/strong>　 &lt;code>DOM&lt;/code> 和 &lt;code>BOM&lt;/code> 有什么区别&lt;/h3>
 &lt;blockquote>
