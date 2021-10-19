@@ -1,0 +1,369 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　33</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　33">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-10-19T12:55:27+09:00"><meta property="article:modified_time" content="2021-10-19T12:55:27+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/frontend-33-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　33">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/frontend-33-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/frontend-33-cover_huc485326263da33a2635c789e852b16d8_1881309_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/frontend-33-cover_huc485326263da33a2635c789e852b16d8_1881309_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/frontend-33-cover_huc485326263da33a2635c789e852b16d8_1881309_1600x0_resize_q75_box.jpg 1600w" width=800 height=515 loading=lazy alt="Featured image of post 毎日のフロントエンド　33">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/>毎日のフロントエンド　33</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 19, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 3 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第三十三日>第三十三日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-html-和-html5-有什么区别呢><strong>Question:</strong> html 和 html5 有什么区别呢</h3>
+<h4 id=文档声明区别>文档声明区别</h4>
+<ol>
+<li>HTML 文档的类型声明为：</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=cp>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD HTML 4.01//EN&#34; &#34;http://www.w3.org/TR/html4/strict.dtd&#34;&gt;</span>
+//或
+<span class=cp>&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
+</code></pre></div><ol start=2>
+<li>HTML5 文档的类型声明为：</li>
+</ol>
+<p><code>&lt;!DOCTYPE html></code></p>
+<h4 id=结构语义区别>结构语义区别</h4>
+<p><code>HTML</code>：没有体现结构语义的标签，如<code>&lt;div id='nav'>&lt;/div></code></p>
+<p><code>HTML5</code>：添加了许多具有语义化的标签，如：<code>&lt;article></code>、<code>&lt;aside></code>、<code>&lt;audio></code>，更利于 <strong>SEO</strong></p>
+<p>相对于 HTML，HTML5 中新增和修改了一些元素</p>
+<h4 id=绘图区别>绘图区别</h4>
+<p>HTML5：HTML5 的 <code>canvas</code> 使用脚本（通常使用 JavaScript）在网页是绘制图像，可以控制画布上每个像素</p>
+<h4 id=音频的视频的支持>音频的视频的支持</h4>
+<p>HTML：如果不使用 Flash 播放器支持，它不支持音频和视频</p>
+<p>HTML5：使用<code>&lt;audio></code>和<code>&lt;vedio></code>标签来支持音频和视频控制。</p>
+<h2 id=css>CSS</h2>
+<h3 id=question-用-css-绘制一个三角形1><strong>Question:</strong> 用 CSS 绘制一个三角形<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup></h3>
+<p>用伪元素来实现这种装饰性的效果，<code>content</code> 为空，就不需要 <code>width</code></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=p>.</span><span class=nc>triangle</span><span class=p>:</span><span class=nd>after</span> <span class=p>{</span>
+  <span class=k>content</span><span class=p>:</span> <span class=s1>&#39;&#39;</span><span class=p>;</span>
+  <span class=k>border</span><span class=p>:</span> <span class=mi>35</span><span class=kt>px</span> <span class=kc>solid</span> <span class=kc>transparent</span><span class=p>;</span>
+  <span class=k>border-bottom-color</span><span class=p>:</span> <span class=kc>lightgreen</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><h2 id=javascript>JavaScript</h2>
+<h3 id=question-说说对-this-的理解><strong>Question:</strong> 说说对 <code>this</code> 的理解</h3>
+<h4 id=一一般函数>一，一般函数</h4>
+<p>函数中的 this 永远指向函数的调用者（在代码执行时才能确定），谁最终调用这个函数，this 就指向谁:</p>
+<ul>
+<li>在全局环境中，<code>this</code> 指向 <code>window</code>（如果开启严格模式，this 将指向<code>undefined</code>)</li>
+<li>如果函数是通过对象调用的，那么 this 就指向这个<strong>对象</strong>（但要小心 this 绑定丢失<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>，尤其要注意将函数作为值向函数中传入赋值时发生隐式丢失）</li>
+<li>如果函数是通过 <code>call</code>、<code>apply</code>、<code>bind</code> 进行绑定，那么 this 就指向被绑定的对象</li>
+<li>如果函数是通过<code>new</code>绑定的（<strong>构造函数</strong>），那么<code>this</code>就指向<code>new</code>出来的对象:
+<ul>
+<li>使用 new 来调用函数的时候会自动执行下面的操作：
+<ol>
+<li>创建（或这说构造）一个全新的对象</li>
+<li>这个新的对象会被执行<code>[[Prototype]]</code>连接</li>
+<li>这个新对象会绑定到函数调用的<code>this</code></li>
+<li>如果函数没有返回其他对象，那么 new 表达式中的函数调用会<strong>自动返回这个新对象</strong></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>显示绑定：使用<code>call，apply</code>的话，在使用回调函数的情况中会出现违背预期的结果。因为 call，apply 都会<strong>立即执行。</strong> 而硬绑定 bind 则<strong>不会立即执行</strong>。符合我们对回调函数执行的要求</p>
+</blockquote>
+<h4 id=二箭头函数>二，箭头函数</h4>
+<p><strong>箭头函数</strong>中的<code>this</code>例外，它指向定义时所在的位置。或者可以说<strong>箭头函数</strong>的<code>this</code>继承自外层作用域，只要确定了外层作用域的 this，就知道箭头函数中的 this 指向谁了。</p>
+<h4 id=types-of-binding-in-js>Types of Binding in JS</h4>
+<ul>
+<li>Default Binding</li>
+<li>Implicit Binding</li>
+<li>Explicit Binding</li>
+<li>Constructor call Binding</li>
+</ul>
+<p><strong><em>Default Binding in JavaScript</em></strong></p>
+<p>One of the first rule to remember is that:
+<strong>If the function housing a this reference is a standalone function, then that function is bound to the global object.</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>alert</span><span class=p>()</span> <span class=p>{</span>
+  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>name</span> <span class=o>+</span> <span class=s1>&#39; is calling&#39;</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kr>const</span> <span class=nx>name</span> <span class=o>=</span> <span class=s1>&#39;Kingsley&#39;</span><span class=p>;</span>
+<span class=nx>alert</span><span class=p>();</span> <span class=c1>// Kingsley is calling
+</span><span class=c1>//  TypeError: `this` is `undefined` when in &#39;use strict&#39;
+</span></code></pre></div><p><strong><em>Implicit Binding in JavaScript</em></strong></p>
+<p>Another scenario to look out for is whether the function is attached to an object (its context) <strong>at the call site</strong>.</p>
+<p><strong>A function can use an object as its context only if that object is bound to it at the call site.</strong> This form of binding is known as implicit binding.</p>
+<p>An easy way to figure out which object <code>this</code> is <strong>implicitly bound to</strong> is to look at which object is to the left of the dot <code>(.)</code></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>alert</span><span class=p>()</span> <span class=p>{</span>
+  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>age</span> <span class=o>+</span> <span class=s1>&#39; years old&#39;</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kr>const</span> <span class=nx>myObj</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=nx>age</span><span class=o>:</span> <span class=mi>22</span><span class=p>,</span>
+  <span class=nx>alert</span><span class=o>:</span> <span class=nx>alert</span><span class=p>,</span>
+  <span class=nx>nestedObj</span><span class=o>:</span> <span class=p>{</span>
+    <span class=nx>age</span><span class=o>:</span> <span class=mi>26</span><span class=p>,</span>
+    <span class=nx>alert</span><span class=o>:</span> <span class=nx>alert</span><span class=p>,</span>
+  <span class=p>},</span>
+<span class=p>};</span>
+
+<span class=nx>myObj</span><span class=p>.</span><span class=nx>alert</span><span class=p>();</span> <span class=c1>// `this` is bound to `myObj` -- 22 years old
+</span><span class=c1></span><span class=nx>myObj</span><span class=p>.</span><span class=nx>nestedObj</span><span class=p>.</span><span class=nx>alert</span><span class=p>();</span> <span class=c1>// `this` is bound to `nestedObj` -- 26 years old
+</span></code></pre></div><p><strong><em>Explicit binding in JavaScript</em></strong></p>
+<p><code>call()</code> and <code>apply()</code>.</p>
+<p>Along with a couple other set of utility functions, these two utilities are available to all functions in JavaScript via the <code>[[Prototype]]</code> mechanism.</p>
+<blockquote>
+<p>Hard binding is a perfect way to lock a context into a function call and truly make that function into a method.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// Hard binding
+</span><span class=c1></span><span class=kd>function</span> <span class=nx>alert</span><span class=p>()</span> <span class=p>{</span>
+  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>age</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kr>const</span> <span class=nx>myObj</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=nx>age</span><span class=o>:</span> <span class=mi>22</span><span class=p>,</span>
+<span class=p>};</span>
+
+<span class=kr>const</span> <span class=nx>bar</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+  <span class=nx>alert</span><span class=p>.</span><span class=nx>call</span><span class=p>(</span><span class=nx>myObj</span><span class=p>);</span>
+<span class=p>};</span>
+
+<span class=nx>bar</span><span class=p>();</span> <span class=c1>// 22
+</span><span class=c1></span><span class=nx>setTimeout</span><span class=p>(</span><span class=nx>bar</span><span class=p>,</span> <span class=mi>100</span><span class=p>);</span> <span class=c1>// 22
+</span><span class=c1>// a hard-bound `bar` can no longer have its `this` context overridden
+</span><span class=c1></span><span class=nx>bar</span><span class=p>.</span><span class=nx>call</span><span class=p>(</span><span class=nb>window</span><span class=p>);</span> <span class=c1>// still 22
+</span></code></pre></div><p><strong><em>Constructor Call Binding in JavaScript</em></strong></p>
+<p>When a function is invoked with the <code>new</code> keyword in front of it, otherwise known as a constructor call, the following things occur:</p>
+<ol>
+<li>A brand new object is created (or constructed)</li>
+<li>The newly constructed object is <code>[[Prototype]]</code>-linked to the function that constructed it</li>
+<li>The newly constructed object is set as the <code>this</code> binding for that function call.</li>
+</ol>
+<p><figure class=gallery-image style=flex-grow:118;flex-basis:283px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-1.png data-size=1000x847>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-1.png width=1000 height=847 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-1_hu71e203915231571c8ed66559528d62d1_163838_480x0_resize_box_3.png 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-1_hu71e203915231571c8ed66559528d62d1_163838_1024x0_resize_box_3.png 1024w" loading=lazy alt=this-1>
+</a>
+<figcaption>this-1</figcaption>
+</figure></p>
+<p><figure class=gallery-image style=flex-grow:119;flex-basis:287px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-2.png data-size=1000x834>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-2.png width=1000 height=834 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-2_hua82d7b21903e14cc2323062876f2ae4f_135325_480x0_resize_box_3.png 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-2_hua82d7b21903e14cc2323062876f2ae4f_135325_1024x0_resize_box_3.png 1024w" loading=lazy alt=this-2>
+</a>
+<figcaption>this-2</figcaption>
+</figure></p>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=https://www.freecodecamp.org/news/what-is-this-in-javascript/ target=_blank rel=noopener>What Does &lsquo;this&rsquo; Mean in JavaScript? The this Keyword Explained with Examples</a></p>
+<p><a class=link href=http://www.h-camel.com/index.html target=_blank rel=noopener>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！</a></p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p><a class=link href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/#css target=_blank rel=noopener>毎日のフロントエンド　 6 - CSS</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:2 role=doc-endnote>
+<p><a class=link href=https://github.com/getify/You-Dont-Know-JS/issues/1031 target=_blank rel=noopener>&ldquo;this & object prototypes&rdquo;: Chapter 2 &lsquo;Explicit Binding&rsquo; - question about explicit binding losing the &ldquo;this&rdquo; binding · Issue #1031 · getify/You-Dont-Know-JS</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/frontend-31-cover.f9a675d12ac0dd7a1d780184ccd2f460_hu7e0a161a7e96ed837d8bdf6edf373a7f_2487400_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-+aZ10SrA3XodeAGEzNL0YA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　32</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/frontend-31-cover.f9a675d12ac0dd7a1d780184ccd2f460_hu7e0a161a7e96ed837d8bdf6edf373a7f_2487400_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-+aZ10SrA3XodeAGEzNL0YA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　31</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/frontend-30-cover.7d4f69e96bfaa07a63c0c7b938ed94b0_hu89d8ee96e007565925651f32f7a2142a_1095993_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-fU9p6Wv6oHpjwMe5OO2UsA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　30</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/frontend-29-cover.7d4f69e96bfaa07a63c0c7b938ed94b0_hu89d8ee96e007565925651f32f7a2142a_1095993_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-fU9p6Wv6oHpjwMe5OO2UsA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　29</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-28/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-28/frontend-28-cover.e32a06e2f895bc24959a9187929e7242_hu3ef23944c2fce3d2d361d818b808dcd0_5137874_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-4yoG4viVvCSVmpGHkp5yQg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　28</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-html-和-html5-有什么区别呢><strong>Question:</strong> html 和 html5 有什么区别呢</a>
+<ol>
+<li><a href=#文档声明区别>文档声明区别</a></li>
+<li><a href=#结构语义区别>结构语义区别</a></li>
+<li><a href=#绘图区别>绘图区别</a></li>
+<li><a href=#音频的视频的支持>音频的视频的支持</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-用-css-绘制一个三角形1><strong>Question:</strong> 用 CSS 绘制一个三角形</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-说说对-this-的理解><strong>Question:</strong> 说说对 <code>this</code> 的理解</a>
+<ol>
+<li><a href=#一一般函数>一，一般函数</a></li>
+<li><a href=#二箭头函数>二，箭头函数</a></li>
+<li><a href=#types-of-binding-in-js>Types of Binding in JS</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

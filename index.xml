@@ -1,4 +1,170 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 18 Oct 2021 17:44:05 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　32</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/</link><pubDate>Mon, 18 Oct 2021 17:44:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/frontend-31-cover.jpg" alt="Featured image of post 毎日のフロントエンド　32" />&lt;h1 id="第三十二日">第三十二日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 19 Oct 2021 12:55:27 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　33</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/</link><pubDate>Tue, 19 Oct 2021 12:55:27 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/frontend-33-cover.jpg" alt="Featured image of post 毎日のフロントエンド　33" />&lt;h1 id="第三十三日">第三十三日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html-和-html5-有什么区别呢">&lt;strong>Question:&lt;/strong> html 和 html5 有什么区别呢&lt;/h3>
+&lt;h4 id="文档声明区别">文档声明区别&lt;/h4>
+&lt;ol>
+&lt;li>HTML 文档的类型声明为：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="cp">&amp;lt;!DOCTYPE html PUBLIC &amp;#34;-//W3C//DTD HTML 4.01//EN&amp;#34; &amp;#34;http://www.w3.org/TR/html4/strict.dtd&amp;#34;&amp;gt;&lt;/span>
+//或
+&lt;span class="cp">&amp;lt;!DOCTYPE html PUBLIC &amp;#34;-//W3C//DTD XHTML 1.0 Strict//EN&amp;#34; &amp;#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&amp;#34;&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>HTML5 文档的类型声明为：&lt;/li>
+&lt;/ol>
+&lt;p>&lt;code>&amp;lt;!DOCTYPE html&amp;gt;&lt;/code>&lt;/p>
+&lt;h4 id="结构语义区别">结构语义区别&lt;/h4>
+&lt;p>&lt;code>HTML&lt;/code>：没有体现结构语义的标签，如&lt;code>&amp;lt;div id='nav'&amp;gt;&amp;lt;/div&amp;gt;&lt;/code>&lt;/p>
+&lt;p>&lt;code>HTML5&lt;/code>：添加了许多具有语义化的标签，如：&lt;code>&amp;lt;article&amp;gt;&lt;/code>、&lt;code>&amp;lt;aside&amp;gt;&lt;/code>、&lt;code>&amp;lt;audio&amp;gt;&lt;/code>，更利于 &lt;strong>SEO&lt;/strong>&lt;/p>
+&lt;p>相对于 HTML，HTML5 中新增和修改了一些元素&lt;/p>
+&lt;h4 id="绘图区别">绘图区别&lt;/h4>
+&lt;p>HTML5：HTML5 的 &lt;code>canvas&lt;/code> 使用脚本（通常使用 JavaScript）在网页是绘制图像，可以控制画布上每个像素&lt;/p>
+&lt;h4 id="音频的视频的支持">音频的视频的支持&lt;/h4>
+&lt;p>HTML：如果不使用 Flash 播放器支持，它不支持音频和视频&lt;/p>
+&lt;p>HTML5：使用&lt;code>&amp;lt;audio&amp;gt;&lt;/code>和&lt;code>&amp;lt;vedio&amp;gt;&lt;/code>标签来支持音频和视频控制。&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-用-css-绘制一个三角形1">&lt;strong>Question:&lt;/strong> 用 CSS 绘制一个三角形&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/h3>
+&lt;p>用伪元素来实现这种装饰性的效果，&lt;code>content&lt;/code> 为空，就不需要 &lt;code>width&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">triangle&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">after&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">35&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="kc">transparent&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border-bottom-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">lightgreen&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-说说对-this-的理解">&lt;strong>Question:&lt;/strong> 说说对 &lt;code>this&lt;/code> 的理解&lt;/h3>
+&lt;h4 id="一一般函数">一，一般函数&lt;/h4>
+&lt;p>函数中的 this 永远指向函数的调用者（在代码执行时才能确定），谁最终调用这个函数，this 就指向谁:&lt;/p>
+&lt;ul>
+&lt;li>在全局环境中，&lt;code>this&lt;/code> 指向 &lt;code>window&lt;/code>（如果开启严格模式，this 将指向&lt;code>undefined&lt;/code>)&lt;/li>
+&lt;li>如果函数是通过对象调用的，那么 this 就指向这个&lt;strong>对象&lt;/strong>（但要小心 this 绑定丢失&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>，尤其要注意将函数作为值向函数中传入赋值时发生隐式丢失）&lt;/li>
+&lt;li>如果函数是通过 &lt;code>call&lt;/code>、&lt;code>apply&lt;/code>、&lt;code>bind&lt;/code> 进行绑定，那么 this 就指向被绑定的对象&lt;/li>
+&lt;li>如果函数是通过&lt;code>new&lt;/code>绑定的（&lt;strong>构造函数&lt;/strong>），那么&lt;code>this&lt;/code>就指向&lt;code>new&lt;/code>出来的对象:
+&lt;ul>
+&lt;li>使用 new 来调用函数的时候会自动执行下面的操作：
+&lt;ol>
+&lt;li>创建（或这说构造）一个全新的对象&lt;/li>
+&lt;li>这个新的对象会被执行&lt;code>[[Prototype]]&lt;/code>连接&lt;/li>
+&lt;li>这个新对象会绑定到函数调用的&lt;code>this&lt;/code>&lt;/li>
+&lt;li>如果函数没有返回其他对象，那么 new 表达式中的函数调用会&lt;strong>自动返回这个新对象&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>显示绑定：使用&lt;code>call，apply&lt;/code>的话，在使用回调函数的情况中会出现违背预期的结果。因为 call，apply 都会&lt;strong>立即执行。&lt;/strong> 而硬绑定 bind 则&lt;strong>不会立即执行&lt;/strong>。符合我们对回调函数执行的要求&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="二箭头函数">二，箭头函数&lt;/h4>
+&lt;p>&lt;strong>箭头函数&lt;/strong>中的&lt;code>this&lt;/code>例外，它指向定义时所在的位置。或者可以说&lt;strong>箭头函数&lt;/strong>的&lt;code>this&lt;/code>继承自外层作用域，只要确定了外层作用域的 this，就知道箭头函数中的 this 指向谁了。&lt;/p>
+&lt;h4 id="types-of-binding-in-js">Types of Binding in JS&lt;/h4>
+&lt;ul>
+&lt;li>Default Binding&lt;/li>
+&lt;li>Implicit Binding&lt;/li>
+&lt;li>Explicit Binding&lt;/li>
+&lt;li>Constructor call Binding&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>&lt;em>Default Binding in JavaScript&lt;/em>&lt;/strong>&lt;/p>
+&lt;p>One of the first rule to remember is that:
+&lt;strong>If the function housing a this reference is a standalone function, then that function is bound to the global object.&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">alert&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39; is calling&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;Kingsley&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">alert&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// Kingsley is calling
+&lt;/span>&lt;span class="c1">// TypeError: `this` is `undefined` when in &amp;#39;use strict&amp;#39;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>&lt;em>Implicit Binding in JavaScript&lt;/em>&lt;/strong>&lt;/p>
+&lt;p>Another scenario to look out for is whether the function is attached to an object (its context) &lt;strong>at the call site&lt;/strong>.&lt;/p>
+&lt;p>&lt;strong>A function can use an object as its context only if that object is bound to it at the call site.&lt;/strong> This form of binding is known as implicit binding.&lt;/p>
+&lt;p>An easy way to figure out which object &lt;code>this&lt;/code> is &lt;strong>implicitly bound to&lt;/strong> is to look at which object is to the left of the dot &lt;code>(.)&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">alert&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">age&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39; years old&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">myObj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">age&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">22&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">alert&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">alert&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">nestedObj&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">age&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">26&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">alert&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">alert&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">myObj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">alert&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// `this` is bound to `myObj` -- 22 years old
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">myObj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">nestedObj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">alert&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// `this` is bound to `nestedObj` -- 26 years old
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>&lt;em>Explicit binding in JavaScript&lt;/em>&lt;/strong>&lt;/p>
+&lt;p>&lt;code>call()&lt;/code> and &lt;code>apply()&lt;/code>.&lt;/p>
+&lt;p>Along with a couple other set of utility functions, these two utilities are available to all functions in JavaScript via the &lt;code>[[Prototype]]&lt;/code> mechanism.&lt;/p>
+&lt;blockquote>
+&lt;p>Hard binding is a perfect way to lock a context into a function call and truly make that function into a method.&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// Hard binding
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">alert&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">myObj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">age&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">22&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">bar&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">alert&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">myObj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">bar&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// 22
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">bar&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 22
+&lt;/span>&lt;span class="c1">// a hard-bound `bar` can no longer have its `this` context overridden
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">bar&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">window&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// still 22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>&lt;em>Constructor Call Binding in JavaScript&lt;/em>&lt;/strong>&lt;/p>
+&lt;p>When a function is invoked with the &lt;code>new&lt;/code> keyword in front of it, otherwise known as a constructor call, the following things occur:&lt;/p>
+&lt;ol>
+&lt;li>A brand new object is created (or constructed)&lt;/li>
+&lt;li>The newly constructed object is &lt;code>[[Prototype]]&lt;/code>-linked to the function that constructed it&lt;/li>
+&lt;li>The newly constructed object is set as the &lt;code>this&lt;/code> binding for that function call.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 118;
+flex-basis: 283px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-1.png" data-size="1000x847">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-1.png"
+width="1000"
+height="847"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-1_hu71e203915231571c8ed66559528d62d1_163838_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-1_hu71e203915231571c8ed66559528d62d1_163838_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="this-1">
+&lt;/a>
+&lt;figcaption>this-1&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 119;
+flex-basis: 287px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-2.png" data-size="1000x834">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-2.png"
+width="1000"
+height="834"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-2_hua82d7b21903e14cc2323062876f2ae4f_135325_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/this-2_hua82d7b21903e14cc2323062876f2ae4f_135325_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="this-2">
+&lt;/a>
+&lt;figcaption>this-2&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.freecodecamp.org/news/what-is-this-in-javascript/" target="_blank" rel="noopener"
+>What Does &amp;lsquo;this&amp;rsquo; Mean in JavaScript? The this Keyword Explained with Examples&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/#css" target="_blank" rel="noopener"
+>毎日のフロントエンド　 6 - CSS&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://github.com/getify/You-Dont-Know-JS/issues/1031" target="_blank" rel="noopener"
+>&amp;ldquo;this &amp;amp; object prototypes&amp;rdquo;: Chapter 2 &amp;lsquo;Explicit Binding&amp;rsquo; - question about explicit binding losing the &amp;ldquo;this&amp;rdquo; binding · Issue #1031 · getify/You-Dont-Know-JS&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド　32</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/</link><pubDate>Mon, 18 Oct 2021 17:44:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/frontend-31-cover.jpg" alt="Featured image of post 毎日のフロントエンド　32" />&lt;h1 id="第三十二日">第三十二日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说说对-html-元素的显示优先级的理解">&lt;strong>Question:&lt;/strong> 说说对 &lt;code>HTML&lt;/code> 元素的显示优先级的理解&lt;/h3>
 &lt;p>Day20 类似。&lt;/p>
