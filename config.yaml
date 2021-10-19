@@ -1,7 +1,7 @@
 baseurl: https://youkoucoding.github.io/
 languageCode: zh-cn
 theme: hugo-theme-stack
-paginate: 6
+paginate: 8
 title: 技術の手帳
 
 # Change it to your Disqus shortname before using
