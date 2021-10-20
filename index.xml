@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 19 Oct 2021 12:55:27 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　33</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/</link><pubDate>Tue, 19 Oct 2021 12:55:27 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/frontend-33-cover.jpg" alt="Featured image of post 毎日のフロントエンド　33" />&lt;h1 id="第三十三日">第三十三日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 20 Oct 2021 09:53:44 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　34</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/</link><pubDate>Wed, 20 Oct 2021 09:53:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/frontend-34-cover.jpg" alt="Featured image of post 毎日のフロントエンド　34" />&lt;h1 id="第三十四日">第三十四日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-standards-模式和-quirks-模式有什么区别">&lt;strong>Question:&lt;/strong> Standards 模式和 Quirks 模式有什么区别&lt;/h3>
+&lt;p>在 quirks 模式和标准模式之间一个突出的不同是对 CSS IE 盒模型缺陷的处理，怪异模式和标准模式最早是为了对旧版本网页进行兼容而设计的，可以通过 &amp;lt;!DOCTYPE&amp;gt; 来进行区分。&lt;/p>
+&lt;p>&lt;code>standards&lt;/code>盒模型： &lt;code>width&lt;/code> = &lt;code>content&lt;/code>
+&lt;code>quirks&lt;/code>盒模型： &lt;code>width&lt;/code> = &lt;code>content&lt;/code> + &lt;code>border&lt;/code> + &lt;code>padding&lt;/code>&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-浏览器是怎样判断元素是否和某个-css-选择器匹配">&lt;strong>Question:&lt;/strong> 浏览器是怎样判断元素是否和某个 CSS 选择器匹配&lt;/h3>
+&lt;h4 id="从右往左匹配">从右往左匹配&lt;/h4>
+&lt;p>浏览器先产生一个元素集合，这个集合往往由最后一个部分的索引产生（如果没有索引就是所有元素的集合）。然后向上匹配，如果不符合上一个部分，就把元素从集合中删除，直到真个选择器都匹配完，还在集合中的元素就匹配这个选择器了。&lt;/p>
+&lt;p>即，从最开始匹配的元素集合，根据增加的选择器来剔除，得到最终匹配&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 125;
+flex-basis: 300px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/selector.jpeg" data-size="562x449">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/selector.jpeg"
+width="562"
+height="449"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/selector_hud3f906394e33c42b903908d2e33c2bfb_45652_480x0_resize_q75_box.jpeg 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/selector_hud3f906394e33c42b903908d2e33c2bfb_45652_1024x0_resize_q75_box.jpeg 1024w"
+loading="lazy"
+alt="selector">
+&lt;/a>
+&lt;figcaption>selector&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　33</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/</link><pubDate>Tue, 19 Oct 2021 12:55:27 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/frontend-33-cover.jpg" alt="Featured image of post 毎日のフロントエンド　33" />&lt;h1 id="第三十三日">第三十三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html-和-html5-有什么区别呢">&lt;strong>Question:&lt;/strong> html 和 html5 有什么区别呢&lt;/h3>
 &lt;h4 id="文档声明区别">文档声明区别&lt;/h4>

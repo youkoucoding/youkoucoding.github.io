@@ -1,0 +1,225 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　34</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　34">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-10-20T09:53:44+09:00"><meta property="article:modified_time" content="2021-10-20T09:53:44+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/frontend-34-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　34">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/frontend-34-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/frontend-34-cover_huc485326263da33a2635c789e852b16d8_1881309_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/frontend-34-cover_huc485326263da33a2635c789e852b16d8_1881309_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/frontend-34-cover_huc485326263da33a2635c789e852b16d8_1881309_1600x0_resize_q75_box.jpg 1600w" width=800 height=515 loading=lazy alt="Featured image of post 毎日のフロントエンド　34">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/>毎日のフロントエンド　34</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 20, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 1 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第三十四日>第三十四日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-standards-模式和-quirks-模式有什么区别><strong>Question:</strong> Standards 模式和 Quirks 模式有什么区别</h3>
+<p>在 quirks 模式和标准模式之间一个突出的不同是对 CSS IE 盒模型缺陷的处理，怪异模式和标准模式最早是为了对旧版本网页进行兼容而设计的，可以通过 &lt;!DOCTYPE> 来进行区分。</p>
+<p><code>standards</code>盒模型： <code>width</code> = <code>content</code>
+<code>quirks</code>盒模型： <code>width</code> = <code>content</code> + <code>border</code> + <code>padding</code></p>
+<h2 id=css>CSS</h2>
+<h3 id=question-浏览器是怎样判断元素是否和某个-css-选择器匹配><strong>Question:</strong> 浏览器是怎样判断元素是否和某个 CSS 选择器匹配</h3>
+<h4 id=从右往左匹配>从右往左匹配</h4>
+<p>浏览器先产生一个元素集合，这个集合往往由最后一个部分的索引产生（如果没有索引就是所有元素的集合）。然后向上匹配，如果不符合上一个部分，就把元素从集合中删除，直到真个选择器都匹配完，还在集合中的元素就匹配这个选择器了。</p>
+<p>即，从最开始匹配的元素集合，根据增加的选择器来剔除，得到最终匹配</p>
+<p><figure class=gallery-image style=flex-grow:125;flex-basis:300px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/selector.jpeg data-size=562x449>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/selector.jpeg width=562 height=449 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/selector_hud3f906394e33c42b903908d2e33c2bfb_45652_480x0_resize_q75_box.jpeg 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/selector_hud3f906394e33c42b903908d2e33c2bfb_45652_1024x0_resize_q75_box.jpeg 1024w" loading=lazy alt=selector>
+</a>
+<figcaption>selector</figcaption>
+</figure></p>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=http://www.h-camel.com/index.html target=_blank rel=noopener>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/frontend-33-cover.a7cad587cb7346a05a0fa097ab8fbad8_huc485326263da33a2635c789e852b16d8_1881309_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-p8rVh8tzRqBaD6CXq4+62A==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　33</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/frontend-31-cover.f9a675d12ac0dd7a1d780184ccd2f460_hu7e0a161a7e96ed837d8bdf6edf373a7f_2487400_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-+aZ10SrA3XodeAGEzNL0YA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　32</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/frontend-31-cover.f9a675d12ac0dd7a1d780184ccd2f460_hu7e0a161a7e96ed837d8bdf6edf373a7f_2487400_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-+aZ10SrA3XodeAGEzNL0YA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　31</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-30/frontend-30-cover.7d4f69e96bfaa07a63c0c7b938ed94b0_hu89d8ee96e007565925651f32f7a2142a_1095993_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-fU9p6Wv6oHpjwMe5OO2UsA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　30</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-29/frontend-29-cover.7d4f69e96bfaa07a63c0c7b938ed94b0_hu89d8ee96e007565925651f32f7a2142a_1095993_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-fU9p6Wv6oHpjwMe5OO2UsA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　29</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-standards-模式和-quirks-模式有什么区别><strong>Question:</strong> Standards 模式和 Quirks 模式有什么区别</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-浏览器是怎样判断元素是否和某个-css-选择器匹配><strong>Question:</strong> 浏览器是怎样判断元素是否和某个 CSS 选择器匹配</a>
+<ol>
+<li><a href=#从右往左匹配>从右往左匹配</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
