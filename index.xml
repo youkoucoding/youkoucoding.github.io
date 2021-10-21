@@ -1,4 +1,110 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 20 Oct 2021 09:53:44 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　34</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/</link><pubDate>Wed, 20 Oct 2021 09:53:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/frontend-34-cover.jpg" alt="Featured image of post 毎日のフロントエンド　34" />&lt;h1 id="第三十四日">第三十四日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 21 Oct 2021 10:36:22 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　35</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/</link><pubDate>Thu, 21 Oct 2021 10:36:22 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/frontend-35-cover.jpg" alt="Featured image of post 毎日のフロントエンド　35" />&lt;h1 id="第三十五日">第三十五日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-用一个-div-模拟-textarea-的实现">&lt;strong>Question&lt;/strong> 用一个 &lt;code>div&lt;/code> 模拟 &lt;code>textarea&lt;/code> 的实现&lt;/h3>
+&lt;p>&lt;code>&amp;lt;div class=&amp;quot;edit&amp;quot; contenteditable=&amp;quot;true&amp;quot; style=&amp;quot;resize: both&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code>&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-使用-flex-实现三栏布局两边固定中间自适应">&lt;strong>Question&lt;/strong> 使用 flex 实现三栏布局，两边固定，中间自适应&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">container&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="err">.left,&lt;/span>
+&lt;span class="err">.right&lt;/span> &lt;span class="err">{&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#8c939d&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">content&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">flex&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#306eff&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="err">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>flex: 0 1 auto&lt;/code> 分别表示什么意思&lt;/p>
+&lt;p>三个参数分别对应的是 &lt;code>flex-grow&lt;/code>, &lt;code>flex-shrink&lt;/code> 和 &lt;code>flex-basis&lt;/code>，默认值分别是&lt;code>0 1 auto&lt;/code>&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>flex-grow&lt;/code>属性定义项目的放大比例，默认为 0，即如果存在剩余空间，也不放大&lt;/li>
+&lt;li>&lt;code>flex-shrink&lt;/code>属性定义了项目的缩小比例，默认为 1，即如果空间不足，该项目将缩小&lt;/li>
+&lt;li>&lt;code>flex-basis&lt;/code>属性定义了在分配多余空间之前，项目占据的主轴空间（main size）&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-解释一个为什么-10tofixed10-会报错">&lt;strong>Question&lt;/strong> 解释一个为什么 &lt;code>10.toFixed(10)&lt;/code> 会报错&lt;/h3>
+&lt;p>因为在这里的 &lt;code>.&lt;/code> 发生了歧义，它既可以理解为小数点，也可以理解为对方法的调用
+因为这个点紧跟于一个数字之后，按照规范，解释器就把它判断为一个小数点&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>(10).toFixed(10)&lt;/code>&lt;/li>
+&lt;li>&lt;code>10..toFixed(10)&lt;/code>&lt;/li>
+&lt;li>&lt;code>10 .toFixed(10)&lt;/code>&lt;/li>
+&lt;li>&lt;code>10.0.toFixed(10)&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>出现这个报错是因为前面这个数是整数，如果本来就是小数就不会出现这个报错&lt;/p>
+&lt;h3 id="question-写一个-mysetintervalfn-a-b-每次间隔-aaba2b-anb-的时间然后写一个-myclear停止上面的-mysetinterval">&lt;strong>Question&lt;/strong> 写一个 &lt;code>mySetInterVal(fn, a, b)&lt;/code> ,每次间隔 &lt;code>a&lt;/code>,&lt;code>a+b&lt;/code>,&lt;code>a+2b&lt;/code>, &lt;code>...&lt;/code>,&lt;code>a+nb&lt;/code> 的时间，然后写一个 &lt;code>myClear&lt;/code>，停止上面的 &lt;code>mySetInterVal&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">mySetInterVal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fn&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">b&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">time&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">handle&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">handle&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">fn&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">time&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">start&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">b&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">time&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">b&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">time&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stop&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">clearTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">handle&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">time&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">demo&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">mySetInterVal&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;demo&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="mi">100&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="mi">200&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="nx">demo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">start&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">demo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stop&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="soft-skill">Soft Skill&lt;/h2>
+&lt;h3 id="question-谈一谈知道的前端性能优化方案有哪些">&lt;strong>Question&lt;/strong> 谈一谈知道的前端性能优化方案有哪些&lt;/h3>
+&lt;p>客户端优化&lt;/p>
+&lt;ul>
+&lt;li>减少&lt;code>http&lt;/code>请求次数：&lt;code>CSS Sprites&lt;/code>, &lt;code>JS&lt;/code>、&lt;code>CSS&lt;/code>源码压缩、图片大小控制合适；网页&lt;code>Gzip&lt;/code>，&lt;code>CDN&lt;/code>托管，&lt;code>data&lt;/code>缓存 ，图片服务器&lt;/li>
+&lt;li>使用&lt;code>CSS Sprites&lt;/code>: 将多个图片合并到一张单独的图片，这样就大大减少了页面中图片的&lt;code>HTTP&lt;/code>请求&lt;/li>
+&lt;li>减少&lt;code>DOM&lt;/code>操作次数，优化&lt;code>javascript&lt;/code>性能&lt;/li>
+&lt;li>少用全局变量、减少 DOM 操作、缓存 DOM 节点查找的结果。减少 IO 读取操作&lt;/li>
+&lt;li>延迟加载 | 延迟渲染&lt;/li>
+&lt;li>图片预加载，将样式表放在顶部，将脚本放在底部 加上时间戳&lt;/li>
+&lt;li>避免在页面的主体布局中使用 &lt;code>table&lt;/code>，&lt;code>table&lt;/code> 要等其中的内容完全下载之后才会显示出来，&lt;strong>显示比 &lt;code>div+css&lt;/code> 布局慢&lt;/strong>&lt;/li>
+&lt;li>&lt;code>http&lt;/code>缓存 设置&lt;code>cache-control expires Last-modified&lt;/code>&lt;/li>
+&lt;li>前端缓存 对于一些页面今天配置直接存储到&lt;code>localStorage&lt;/code>中&lt;/li>
+&lt;li>对于长期不发生改变的代码可以直接通过&lt;code>server-work&lt;/code>存储到本地&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>优化加载&lt;/p>
+&lt;/blockquote>
+&lt;ol>
+&lt;li>&lt;code>webpack&lt;/code> 开启 &lt;code>tree-shaking&lt;/code> 减少代码体积&lt;/li>
+&lt;li>通过 &lt;code>preload&lt;/code> &lt;code>prefetch&lt;/code> 优化加载资源的时间&lt;/li>
+&lt;li>&lt;code>import('').then()&lt;/code>异步加载资源&lt;/li>
+&lt;li>图片小于 &lt;code>30k&lt;/code> 的图片直接做成 &lt;code>base64&lt;/code>；&lt;/li>
+&lt;li>对于首屏的样式可以直接内嵌到 &lt;code>html&lt;/code> 中；&lt;/li>
+&lt;/ol>
+&lt;p>服务端优化&lt;/p>
+&lt;ul>
+&lt;li>尽量减少响应的体积，比如用 &lt;code>gzip&lt;/code> 压缩(&lt;code>nignx&lt;/code>)，优化图片字节数，压缩 &lt;code>css&lt;/code> 和 &lt;code>js&lt;/code>；或加快文件读取速度，优化服务端的缓存策略。&lt;/li>
+&lt;li>客户端优化 &lt;code>dom&lt;/code>、&lt;code>css&lt;/code> 和 &lt;code>js&lt;/code> 的代码和加载顺序；或进行&lt;strong>服务器端渲染&lt;/strong>，减轻客户端渲染的压力。&lt;/li>
+&lt;li>优化网络路由，比如增加 &lt;code>CDN 缓存&lt;/code>；或增加并发处理能力，比如服务端设置多个域名，客户端使用多个域名同时请求资源，增加并发量。&lt;/li>
+&lt;/ul>
+&lt;p>Summary&lt;/p>
+&lt;p>&lt;strong>尽量向前端优化、减少数据库操作、减少磁盘&lt;code>IO&lt;/code>&lt;/strong>:
+&lt;strong>向前端优化&lt;/strong>指的是，在不影响功能和体验的情况下，能在浏览器执行的不要在服务端执行，能在缓存服务器上直接返回的不要到应用服务器，程序能直接取得的结果不要到外部取得，本机内能取得的数据不要到远程取，内存能取到的不要到磁盘取，缓存中有的不要去数据库查询。
+&lt;strong>减少数据库操作&lt;/strong>指减少更新次数、缓存结果减少查询次数、将数据库执行的操作尽可能的让你的程序完成（例如 join 查询），减少磁盘 IO 指尽量不使用文件系统作为缓存、减少读写文件次数等。程序优化永远要优化慢的部分，换语言是无法“优化”的。&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://lgwebdream.github.io/FE-Interview/" target="_blank" rel="noopener"
+>前端面试 - 大厂前端面试真题&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844904182156115982" target="_blank" rel="noopener"
+>『前端面试 100 问』之弹性盒子中 flex: 0 1 auto 表示什么意思 - 掘金&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　34</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/</link><pubDate>Wed, 20 Oct 2021 09:53:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/frontend-34-cover.jpg" alt="Featured image of post 毎日のフロントエンド　34" />&lt;h1 id="第三十四日">第三十四日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-standards-模式和-quirks-模式有什么区别">&lt;strong>Question:&lt;/strong> Standards 模式和 Quirks 模式有什么区别&lt;/h3>
 &lt;p>在 quirks 模式和标准模式之间一个突出的不同是对 CSS IE 盒模型缺陷的处理，怪异模式和标准模式最早是为了对旧版本网页进行兼容而设计的，可以通过 &amp;lt;!DOCTYPE&amp;gt; 来进行区分。&lt;/p>
