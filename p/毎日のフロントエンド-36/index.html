@@ -1,0 +1,353 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　36</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　36">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-10-22T11:27:44+09:00"><meta property="article:modified_time" content="2021-10-22T11:27:44+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/frontend-36-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　36">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/frontend-36-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/frontend-36-cover_hu85575022c92bc4a88deb51d9b1a51415_3856305_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/frontend-36-cover_hu85575022c92bc4a88deb51d9b1a51415_3856305_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/frontend-36-cover_hu85575022c92bc4a88deb51d9b1a51415_3856305_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド　36">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/>毎日のフロントエンド　36</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 22, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 3 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第三十六日>第三十六日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-html-与-xhtml-二者有不同><strong>Question:</strong> HTML 与 XHTML 二者有不同</h3>
+<p>HTML vs HTML5 vs XHTML</p>
+<p>All three are <em>markup</em> language, performing, essentially, the same task.</p>
+<h4 id=html-and-html5>HTML and HTML5</h4>
+<p>A markup language most common today is HTML. It was designed by the inventor of the World Wide Web.</p>
+<h4 id=xhtml>XHTML</h4>
+<p>It is worth noting that before HTML5 was released, the World Wide Web Consortium (W3C) initiated work to develop an extension of the basic HTML, merging it with XML format.</p>
+<p>This was meant to resolve some compatibility issues that browsers were experiencing at the time.</p>
+<h4 id=differences-between-html-vs-xhtml-vs-html5>Differences between HTML vs XHTML vs HTML5</h4>
+<p>Listed below are some of the main differences between <code>HTML</code> and <code>HTML5</code>:</p>
+<ul>
+<li><code>HTML5</code> provides better support for different types of media – for example, audio and video. <em>It is done by providing additional tags for media files.</em></li>
+<li><code>HTML5</code> enables <code>Javascript</code> to run in the browser – a feature, previously unavailable in HTML.</li>
+<li><code>HTML5</code> introduced brand-new input attributes, including <code>email</code>, <code>URLs</code>, <code>date</code> and <code>time</code>, and search, to name a few.</li>
+<li><code>HTML5</code> has better browser compatibility than HTML. It is also device-independent.</li>
+<li><code>HTML5</code> adopts superior text processing rules, also known as <code>parsing</code>. This allows for much greater parsing flexibility than HTML.</li>
+<li><code>HTML5</code> now makes it a lot easier to find locations without the need for third-party plugins.</li>
+<li><code>HTML5</code> provides native support for vector graphics. <em>This reduces the need for third-party software, such as Adobe Flash.</em></li>
+</ul>
+<p>Listed below are some of the main differences between <code>HTML</code> and <code>XHTML</code>:</p>
+<ul>
+<li><code>HTML</code> accepts that some elements may not contain the closing tag. <code>XHTML</code> expects that all elements with no exception include a closing tag(<code>XHTML</code> 标签必须关闭)</li>
+<li>XHTML, unlike HTML, does not allow elements to overlap.</li>
+<li>For a document to be valid XHTML, attributes cannot be minimized.
+-XHTML requires that all attribute values (e.g., font size) are quoted – even the numeric ones. There is no such requirement in HTML.</li>
+</ul>
+<p>Listed below are some of the main differences between <code>HTML5</code> and <code>XHTML</code>:</p>
+<ul>
+<li><code>XHTML</code> is <strong>case sensitive</strong> (same as HTML), whereas HTML5 is not.</li>
+<li>Both XHTML and HTML have a more complex doctype than HTML5.</li>
+<li>HTML5 is compatible with all browsers. XHTML is not.</li>
+<li>HTML5, being a successor of HTML, is much more flexible than XHTML.</li>
+<li>XHTML is better suited for desktop computers, while HTML5 is better suited for mobile devices — smartphones and tablets.</li>
+</ul>
+<h2 id=css>CSS</h2>
+<h3 id=question-写出主流浏览器内核私有属性的-css-前缀><strong>Question:</strong> 写出主流浏览器内核私有属性的 css 前缀</h3>
+<table>
+<thead>
+<tr>
+<th>浏览器</th>
+<th>内核</th>
+<th>CSS 前缀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chrome</td>
+<td>Blink 内核（新）</td>
+<td><code>-webkit-</code></td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>Gecko 内核</td>
+<td><code>-moz-</code></td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>Webkit 内核</td>
+<td><code>-webkit-</code></td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>Webkit 内核（新）</td>
+<td><code>-o-</code></td>
+</tr>
+<tr>
+<td>IE/Edge</td>
+<td>Trident 内核</td>
+<td><code>-ms-</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id=javascript>JavaScript</h2>
+<h3 id=question-合并二维有序数组成一维有序数组归并排序的思路><strong>Question:</strong> 合并二维有序数组成一维有序数组，归并排序的思路</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=cm>/**
+</span><span class=cm> * 解题思路：
+</span><span class=cm> * 双指针 从头到尾比较 两个数组的第一个值，根据值的大小依次插入到新的数组中
+</span><span class=cm> * 空间复杂度：O(m + n)
+</span><span class=cm> * 时间复杂度：O(m + n)
+</span><span class=cm> * @param {Array} arr1
+</span><span class=cm> * @param {Array} arr2
+</span><span class=cm> */</span>
+<span class=kd>function</span> <span class=nx>merge</span><span class=p>(</span><span class=nx>arr1</span><span class=p>,</span> <span class=nx>arr2</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kd>let</span> <span class=nx>result</span> <span class=o>=</span> <span class=p>[];</span>
+  <span class=k>while</span> <span class=p>(</span><span class=nx>arr1</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=nx>arr2</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=nx>arr1</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>&lt;</span> <span class=nx>arr2</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span> <span class=p>{</span>
+      <span class=cm>/*shift()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值。*/</span>
+      <span class=nx>result</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>arr1</span><span class=p>.</span><span class=nx>shift</span><span class=p>());</span>
+    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+      <span class=nx>result</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>arr2</span><span class=p>.</span><span class=nx>shift</span><span class=p>());</span>
+    <span class=p>}</span>
+  <span class=p>}</span>
+  <span class=k>return</span> <span class=nx>result</span><span class=p>.</span><span class=nx>concat</span><span class=p>(</span><span class=nx>arr1</span><span class=p>).</span><span class=nx>concat</span><span class=p>(</span><span class=nx>arr2</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>mergeSort</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kd>let</span> <span class=nx>lengthArr</span> <span class=o>=</span> <span class=nx>arr</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>lengthArr</span> <span class=o>===</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=p>[];</span>
+  <span class=p>}</span>
+  <span class=k>while</span> <span class=p>(</span><span class=nx>arr</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;</span> <span class=mi>1</span><span class=p>)</span> <span class=p>{</span>
+    <span class=kd>let</span> <span class=nx>arrayItem1</span> <span class=o>=</span> <span class=nx>arr</span><span class=p>.</span><span class=nx>shift</span><span class=p>();</span>
+    <span class=kd>let</span> <span class=nx>arrayItem2</span> <span class=o>=</span> <span class=nx>arr</span><span class=p>.</span><span class=nx>shift</span><span class=p>();</span>
+    <span class=kd>let</span> <span class=nx>mergeArr</span> <span class=o>=</span> <span class=nx>merge</span><span class=p>(</span><span class=nx>arrayItem1</span><span class=p>,</span> <span class=nx>arrayItem2</span><span class=p>);</span>
+    <span class=nx>arr</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>mergeArr</span><span class=p>);</span>
+  <span class=p>}</span>
+  <span class=k>return</span> <span class=nx>arr</span><span class=p>[</span><span class=mi>0</span><span class=p>];</span>
+<span class=p>}</span>
+<span class=kd>let</span> <span class=nx>arr1</span> <span class=o>=</span> <span class=p>[</span>
+  <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>],</span>
+  <span class=p>[</span><span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>],</span>
+  <span class=p>[</span><span class=mi>7</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>9</span><span class=p>],</span>
+  <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>],</span>
+  <span class=p>[</span><span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>],</span>
+<span class=p>];</span>
+<span class=kd>let</span> <span class=nx>arr2</span> <span class=o>=</span> <span class=p>[</span>
+  <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>6</span><span class=p>],</span>
+  <span class=p>[</span><span class=mi>7</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>10</span><span class=p>],</span>
+  <span class=p>[</span><span class=mi>2</span><span class=p>,</span> <span class=mi>6</span><span class=p>,</span> <span class=mi>9</span><span class=p>],</span>
+  <span class=p>[</span><span class=mi>3</span><span class=p>,</span> <span class=mi>7</span><span class=p>,</span> <span class=mi>13</span><span class=p>],</span>
+  <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>12</span><span class=p>],</span>
+<span class=p>];</span>
+<span class=nx>mergeSort</span><span class=p>(</span><span class=nx>arr1</span><span class=p>);</span>
+<span class=nx>mergeSort</span><span class=p>(</span><span class=nx>arr2</span><span class=p>);</span>
+</code></pre></div><h2 id=soft-skill>Soft Skill</h2>
+<h3 id=question-前端安全说说对-xss-和-csrf-的理解><strong>Question</strong> 前端安全，说说对 <code>XSS</code> 和 <code>CSRF</code> 的理解</h3>
+<p><code>XSS</code>攻击全称跨站脚本攻击,一般有<code>sql</code>注入，<code>js</code>脚本注入。
+评论类型模块的提交过程中不要相信客户的输入内容，需要进行转义。</p>
+<p><code>csrf</code>跨站请求伪造
+请求需要鉴权，如携带 <code>token</code>，或者利用 <code>seesion</code>，<code>cookie</code>。敏感信息提交可以使用验证码</p>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=https://scandiweb.com/blog/html-vs-html5-vs-xhtml-the-difference-in-a-nutshell/ target=_blank rel=noopener>HTML vs HTML5 vs XHTML: the Difference</a></p>
+<p><a class=link href=http://www.h-camel.com/index.html target=_blank rel=noopener>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/frontend-35-cover.b9f1b098987476f379f2722d2735113b_hu85575022c92bc4a88deb51d9b1a51415_3856305_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-ufGwmJh0dvN58nItJzUROw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　35</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/frontend-34-cover.a7cad587cb7346a05a0fa097ab8fbad8_huc485326263da33a2635c789e852b16d8_1881309_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-p8rVh8tzRqBaD6CXq4+62A==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　34</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/frontend-33-cover.a7cad587cb7346a05a0fa097ab8fbad8_huc485326263da33a2635c789e852b16d8_1881309_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-p8rVh8tzRqBaD6CXq4+62A==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　33</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/frontend-31-cover.f9a675d12ac0dd7a1d780184ccd2f460_hu7e0a161a7e96ed837d8bdf6edf373a7f_2487400_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-+aZ10SrA3XodeAGEzNL0YA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　32</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-31/frontend-31-cover.f9a675d12ac0dd7a1d780184ccd2f460_hu7e0a161a7e96ed837d8bdf6edf373a7f_2487400_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-+aZ10SrA3XodeAGEzNL0YA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　31</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-html-与-xhtml-二者有不同><strong>Question:</strong> HTML 与 XHTML 二者有不同</a>
+<ol>
+<li><a href=#html-and-html5>HTML and HTML5</a></li>
+<li><a href=#xhtml>XHTML</a></li>
+<li><a href=#differences-between-html-vs-xhtml-vs-html5>Differences between HTML vs XHTML vs HTML5</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-写出主流浏览器内核私有属性的-css-前缀><strong>Question:</strong> 写出主流浏览器内核私有属性的 css 前缀</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-合并二维有序数组成一维有序数组归并排序的思路><strong>Question:</strong> 合并二维有序数组成一维有序数组，归并排序的思路</a></li>
+</ol>
+</li>
+<li><a href=#soft-skill>Soft Skill</a>
+<ol>
+<li><a href=#question-前端安全说说对-xss-和-csrf-的理解><strong>Question</strong> 前端安全，说说对 <code>XSS</code> 和 <code>CSRF</code> 的理解</a></li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

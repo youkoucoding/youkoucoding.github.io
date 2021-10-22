@@ -1,4 +1,139 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 21 Oct 2021 10:36:22 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　35</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/</link><pubDate>Thu, 21 Oct 2021 10:36:22 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/frontend-35-cover.jpg" alt="Featured image of post 毎日のフロントエンド　35" />&lt;h1 id="第三十五日">第三十五日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 22 Oct 2021 11:27:44 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　36</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/</link><pubDate>Fri, 22 Oct 2021 11:27:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/frontend-36-cover.jpg" alt="Featured image of post 毎日のフロントエンド　36" />&lt;h1 id="第三十六日">第三十六日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html-与-xhtml-二者有不同">&lt;strong>Question:&lt;/strong> HTML 与 XHTML 二者有不同&lt;/h3>
+&lt;p>HTML vs HTML5 vs XHTML&lt;/p>
+&lt;p>All three are &lt;em>markup&lt;/em> language, performing, essentially, the same task.&lt;/p>
+&lt;h4 id="html-and-html5">HTML and HTML5&lt;/h4>
+&lt;p>A markup language most common today is HTML. It was designed by the inventor of the World Wide Web.&lt;/p>
+&lt;h4 id="xhtml">XHTML&lt;/h4>
+&lt;p>It is worth noting that before HTML5 was released, the World Wide Web Consortium (W3C) initiated work to develop an extension of the basic HTML, merging it with XML format.&lt;/p>
+&lt;p>This was meant to resolve some compatibility issues that browsers were experiencing at the time.&lt;/p>
+&lt;h4 id="differences-between-html-vs-xhtml-vs-html5">Differences between HTML vs XHTML vs HTML5&lt;/h4>
+&lt;p>Listed below are some of the main differences between &lt;code>HTML&lt;/code> and &lt;code>HTML5&lt;/code>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>HTML5&lt;/code> provides better support for different types of media – for example, audio and video. &lt;em>It is done by providing additional tags for media files.&lt;/em>&lt;/li>
+&lt;li>&lt;code>HTML5&lt;/code> enables &lt;code>Javascript&lt;/code> to run in the browser – a feature, previously unavailable in HTML.&lt;/li>
+&lt;li>&lt;code>HTML5&lt;/code> introduced brand-new input attributes, including &lt;code>email&lt;/code>, &lt;code>URLs&lt;/code>, &lt;code>date&lt;/code> and &lt;code>time&lt;/code>, and search, to name a few.&lt;/li>
+&lt;li>&lt;code>HTML5&lt;/code> has better browser compatibility than HTML. It is also device-independent.&lt;/li>
+&lt;li>&lt;code>HTML5&lt;/code> adopts superior text processing rules, also known as &lt;code>parsing&lt;/code>. This allows for much greater parsing flexibility than HTML.&lt;/li>
+&lt;li>&lt;code>HTML5&lt;/code> now makes it a lot easier to find locations without the need for third-party plugins.&lt;/li>
+&lt;li>&lt;code>HTML5&lt;/code> provides native support for vector graphics. &lt;em>This reduces the need for third-party software, such as Adobe Flash.&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>Listed below are some of the main differences between &lt;code>HTML&lt;/code> and &lt;code>XHTML&lt;/code>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>HTML&lt;/code> accepts that some elements may not contain the closing tag. &lt;code>XHTML&lt;/code> expects that all elements with no exception include a closing tag(&lt;code>XHTML&lt;/code> 标签必须关闭)&lt;/li>
+&lt;li>XHTML, unlike HTML, does not allow elements to overlap.&lt;/li>
+&lt;li>For a document to be valid XHTML, attributes cannot be minimized.
+-XHTML requires that all attribute values (e.g., font size) are quoted – even the numeric ones. There is no such requirement in HTML.&lt;/li>
+&lt;/ul>
+&lt;p>Listed below are some of the main differences between &lt;code>HTML5&lt;/code> and &lt;code>XHTML&lt;/code>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>XHTML&lt;/code> is &lt;strong>case sensitive&lt;/strong> (same as HTML), whereas HTML5 is not.&lt;/li>
+&lt;li>Both XHTML and HTML have a more complex doctype than HTML5.&lt;/li>
+&lt;li>HTML5 is compatible with all browsers. XHTML is not.&lt;/li>
+&lt;li>HTML5, being a successor of HTML, is much more flexible than XHTML.&lt;/li>
+&lt;li>XHTML is better suited for desktop computers, while HTML5 is better suited for mobile devices — smartphones and tablets.&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-写出主流浏览器内核私有属性的-css-前缀">&lt;strong>Question:&lt;/strong> 写出主流浏览器内核私有属性的 css 前缀&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>浏览器&lt;/th>
+&lt;th>内核&lt;/th>
+&lt;th>CSS 前缀&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Chrome&lt;/td>
+&lt;td>Blink 内核（新）&lt;/td>
+&lt;td>&lt;code>-webkit-&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Firefox&lt;/td>
+&lt;td>Gecko 内核&lt;/td>
+&lt;td>&lt;code>-moz-&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Safari&lt;/td>
+&lt;td>Webkit 内核&lt;/td>
+&lt;td>&lt;code>-webkit-&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Opera&lt;/td>
+&lt;td>Webkit 内核（新）&lt;/td>
+&lt;td>&lt;code>-o-&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>IE/Edge&lt;/td>
+&lt;td>Trident 内核&lt;/td>
+&lt;td>&lt;code>-ms-&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-合并二维有序数组成一维有序数组归并排序的思路">&lt;strong>Question:&lt;/strong> 合并二维有序数组成一维有序数组，归并排序的思路&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * 解题思路：
+&lt;/span>&lt;span class="cm"> * 双指针 从头到尾比较 两个数组的第一个值，根据值的大小依次插入到新的数组中
+&lt;/span>&lt;span class="cm"> * 空间复杂度：O(m + n)
+&lt;/span>&lt;span class="cm"> * 时间复杂度：O(m + n)
+&lt;/span>&lt;span class="cm"> * @param {Array} arr1
+&lt;/span>&lt;span class="cm"> * @param {Array} arr2
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">merge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">arr2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">arr1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">arr2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">arr1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">arr2&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="cm">/*shift()方法用于把数组的第一个元素从其中删除，并返回第一个元素的值。*/&lt;/span>
+&lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">shift&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">shift&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">concat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr1&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">concat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">mergeSort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">lengthArr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">lengthArr&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">arrayItem1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">shift&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">arrayItem2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">shift&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">mergeArr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">merge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayItem1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">arrayItem2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">mergeArr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">arr1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="p">];&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">arr2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">13&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="p">];&lt;/span>
+&lt;span class="nx">mergeSort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">mergeSort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="soft-skill">Soft Skill&lt;/h2>
+&lt;h3 id="question-前端安全说说对-xss-和-csrf-的理解">&lt;strong>Question&lt;/strong> 前端安全，说说对 &lt;code>XSS&lt;/code> 和 &lt;code>CSRF&lt;/code> 的理解&lt;/h3>
+&lt;p>&lt;code>XSS&lt;/code>攻击全称跨站脚本攻击,一般有&lt;code>sql&lt;/code>注入，&lt;code>js&lt;/code>脚本注入。
+评论类型模块的提交过程中不要相信客户的输入内容，需要进行转义。&lt;/p>
+&lt;p>&lt;code>csrf&lt;/code>跨站请求伪造
+请求需要鉴权，如携带 &lt;code>token&lt;/code>，或者利用 &lt;code>seesion&lt;/code>，&lt;code>cookie&lt;/code>。敏感信息提交可以使用验证码&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://scandiweb.com/blog/html-vs-html5-vs-xhtml-the-difference-in-a-nutshell/" target="_blank" rel="noopener"
+>HTML vs HTML5 vs XHTML: the Difference&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
+>前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　35</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/</link><pubDate>Thu, 21 Oct 2021 10:36:22 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/frontend-35-cover.jpg" alt="Featured image of post 毎日のフロントエンド　35" />&lt;h1 id="第三十五日">第三十五日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-用一个-div-模拟-textarea-的实现">&lt;strong>Question&lt;/strong> 用一个 &lt;code>div&lt;/code> 模拟 &lt;code>textarea&lt;/code> 的实现&lt;/h3>
 &lt;p>&lt;code>&amp;lt;div class=&amp;quot;edit&amp;quot; contenteditable=&amp;quot;true&amp;quot; style=&amp;quot;resize: both&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code>&lt;/p>
