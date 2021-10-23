@@ -1,0 +1,355 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　37</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　37">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-10-23T12:52:30+09:00"><meta property="article:modified_time" content="2021-10-23T12:52:30+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/frontend-37-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　37">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/frontend-37-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/frontend-37-cover_hu20e66b4b944b265ee469f519e298d070_872394_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/frontend-37-cover_hu20e66b4b944b265ee469f519e298d070_872394_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/frontend-37-cover_hu20e66b4b944b265ee469f519e298d070_872394_1600x0_resize_q75_box.jpg 1600w" width=800 height=530 loading=lazy alt="Featured image of post 毎日のフロントエンド　37">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/>毎日のフロントエンド　37</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 23, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 2 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第三十七日>第三十七日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-html5-哪些标签可以优化-seo><strong>Question:</strong> <code>html5</code> 哪些标签可以优化 <code>SEO</code></h3>
+<p>通过标签语义化优化 SEO</p>
+<ul>
+<li>
+<p><code>&lt;h1></code>是最高的等级，所以你需要准确确定每个页面最重要的内容是什么，要优化的关键词在哪里。以我们最常见的博客为例，博客首页罗列最多的通常就是最新博文，而最重要的应该就是博客的名称了，而后面最新文章的链接标题则可以使用<code>&lt;h2></code>或者<code>&lt;h3></code>，一般都使用<code>&lt;h2></code>，表示次级标题。</p>
+</li>
+<li>
+<p><code>strong</code>标签的使用, <code>title</code>网站 SEO 标题</p>
+</li>
+<li>
+<p><code>meta name="title" content="网站标题"</code></p>
+</li>
+<li>
+<p><code>meta name="description" content="网站描述"</code></p>
+</li>
+<li>
+<p><code>meta name="keywords" content="网站关键词"</code></p>
+</li>
+<li>
+<p><code>a href="链接地址" title="链接说明"</code></p>
+</li>
+<li>
+<p><code>img src="图片链接地址" alt="图片说明"</code></p>
+</li>
+<li>
+<p><code>div id="copyright"</code> 版权部分加上网站名称和链接</p>
+</li>
+</ul>
+<p><figure class=gallery-image style=flex-grow:268;flex-basis:644px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/dom-seo.png data-size=2480x924>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/dom-seo.png width=2480 height=924 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/dom-seo_hu1f8ef2b9bf63061699400b2647acf70e_156371_480x0_resize_box_3.png 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/dom-seo_hu1f8ef2b9bf63061699400b2647acf70e_156371_1024x0_resize_box_3.png 1024w" loading=lazy alt="html - structure">
+</a>
+<figcaption>html - structure</figcaption>
+</figure></p>
+<ul>
+<li>
+<p><code>nav</code>: 可以帮助 UA 迅速获得导航内容，例如读屏器可以省去很多渲染直接跳到导航位置。</p>
+</li>
+<li>
+<p><code>aside</code>: 可以表示与周围内容关系不太密切的内容 (广告)，通常表现为侧边栏内容 (相关背景内容)、引述内容</p>
+</li>
+<li>
+<p><code>header</code>: 通常是一组介绍性描述 (搜索框 / logo / …)，网络爬虫知道诸如与之类的部分后可以非常简单的跳过它们，更好的定位网页内容</p>
+</li>
+<li>
+<p><code>article</code>: 独立的文档、页面、应用、站点，可以单独发布、重用；可以是一篇帖子、一篇文章、一则用户评论、一个可交互的 widget</p>
+</li>
+<li>
+<p><code>section</code>: 按主题将内容分组，通常会有标题 (heading): 内容体现在文档的提纲 (outline) 中时，用 section 是合适</p>
+</li>
+</ul>
+<h2 id=css>CSS</h2>
+<h3 id=question-不使用-border-画出-1px-高的线在不同浏览器的标准和怪异模式下都能保持效果一样><strong>Question:</strong> 不使用 border 画出 1px 高的线，在不同浏览器的标准和怪异模式下都能保持效果一样</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>div</span> <span class=na>style</span><span class=o>=</span><span class=s>&#34;width: 100%;height: 1px;&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=nt>hr</span> <span class=na>size</span><span class=o>=</span><span class=s>&#34;1&#34;</span> <span class=p>/&gt;</span>
+</code></pre></div><h2 id=javascript>JavaScript</h2>
+<h3 id=question-找到字符串中最长的单词并返回它的长度><strong>Question:</strong> 找到字符串中最长的单词，并返回它的长度</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>findLongestWord</span><span class=p>(</span><span class=nx>str</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kd>var</span> <span class=nx>stringArr</span> <span class=o>=</span> <span class=nx>str</span><span class=p>.</span><span class=nx>split</span><span class=p>(</span><span class=s1>&#39; &#39;</span><span class=p>);</span>
+
+  <span class=k>return</span> <span class=nx>stringArr</span><span class=p>.</span><span class=nx>reduce</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>prev</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>{</span>
+    <span class=c1>// 返回值为参数与当前字符串中较大的数
+</span><span class=c1></span>    <span class=c1>// 返回值会作为下次计算的 prev 传入
+</span><span class=c1></span>    <span class=k>return</span> <span class=nb>Math</span><span class=p>.</span><span class=nx>max</span><span class=p>(</span><span class=nx>prev</span><span class=p>,</span> <span class=nx>next</span><span class=p>.</span><span class=nx>length</span><span class=p>);</span>
+  <span class=p>},</span> <span class=mi>0</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><h3 id=question-实现斐波那契数列><strong>Question:</strong> 实现斐波那契数列</h3>
+<p>递归</p>
+<p>递归的方法定义</p>
+<pre tabindex=0><code>F(0) = 0;
+F(1) = 1;
+F(n) = F(n - 1) + F(n - 2);
+</code></pre><ol>
+<li>正常递归版本, 这个版本有个问题就是存在大量重复计算。如：当 n 为 5 的时候要计算 fib(4) + fib(3)当 n 为 4 的要计算 fib(3) + fib(2) ，这时 fib(3)就是重复计算了。</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>fib</span><span class=p>(</span><span class=nx>n</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>n</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>)</span> <span class=k>throw</span> <span class=k>new</span> <span class=nb>Error</span><span class=p>(</span><span class=s1>&#39;输入的数字不能小于0&#39;</span><span class=p>);</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>n</span> <span class=o>&lt;</span> <span class=mi>2</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=nx>n</span><span class=p>;</span>
+  <span class=p>}</span>
+  <span class=k>return</span> <span class=nx>fib</span><span class=p>(</span><span class=nx>n</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span> <span class=o>+</span> <span class=nx>fib</span><span class=p>(</span><span class=nx>n</span> <span class=o>-</span> <span class=mi>2</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><ol start=2>
+<li><code>for</code> 循环: 这个版本没有重复计算问题。循环的问题在于状态变量太多，为了实现 fib 这里使用了 4 个状态变量(f0,f1,curFib,i) 而状态变量 在写、修改、删除的过程中需要格外小心。状态变量多,增加阅读难度。</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>fib</span><span class=p>(</span><span class=nx>n</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>n</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>)</span> <span class=k>throw</span> <span class=k>new</span> <span class=nb>Error</span><span class=p>(</span><span class=s1>&#39;输入的数字不能小于0&#39;</span><span class=p>);</span>
+  <span class=kd>let</span> <span class=nx>f_0</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+  <span class=kd>let</span> <span class=nx>f_1</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+  <span class=kd>let</span> <span class=nx>curFib</span> <span class=o>=</span> <span class=nx>f0</span><span class=p>;</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>n</span> <span class=o>&lt;</span> <span class=mi>2</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=nx>n</span><span class=p>;</span>
+  <span class=p>}</span>
+  <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>n</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>curFib</span> <span class=o>=</span> <span class=nx>f_0</span> <span class=o>+</span> <span class=nx>f_1</span><span class=p>;</span>
+    <span class=nx>f_0</span> <span class=o>=</span> <span class=nx>f_1</span><span class=p>;</span>
+    <span class=nx>f_1</span> <span class=o>=</span> <span class=nx>curFib</span><span class=p>;</span>
+  <span class=p>}</span>
+  <span class=k>return</span> <span class=nx>curFib</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><ol start=3>
+<li>去除重复计算的递归版本:把前两位数字做成参数巧妙的避免了重复计算，性能也有明显的提升。n 做递减运算，前两位数字做递增（斐波那契数列的递增）,这段代码一个减，一个增。</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>fib</span><span class=p>(</span><span class=nx>n</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>n</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>)</span> <span class=k>throw</span> <span class=k>new</span> <span class=nb>Error</span><span class=p>(</span><span class=s1>&#39;输入的数字不能小于0&#39;</span><span class=p>);</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>n</span> <span class=o>&lt;</span> <span class=mi>2</span><span class=p>)</span> <span class=k>return</span> <span class=nx>n</span><span class=p>;</span>
+  <span class=kd>function</span> <span class=mi>_</span><span class=nx>fib</span><span class=p>(</span><span class=nx>n</span><span class=p>,</span> <span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=nx>n</span> <span class=o>===</span> <span class=mi>0</span><span class=p>)</span> <span class=k>return</span> <span class=nx>a</span><span class=p>;</span>
+    <span class=k>return</span> <span class=mi>_</span><span class=nx>fib</span><span class=p>(</span><span class=nx>n</span> <span class=o>-</span> <span class=mi>1</span><span class=p>,</span> <span class=nx>b</span><span class=p>,</span> <span class=nx>a</span> <span class=o>+</span> <span class=nx>b</span><span class=p>);</span>
+  <span class=p>}</span>
+  <span class=k>return</span> <span class=mi>_</span><span class=nx>fib</span><span class=p>(</span><span class=nx>n</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><ol start=4>
+<li>基于 <code>ES6 Generator</code> 实现</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span><span class=o>*</span> <span class=nx>fib</span><span class=p>(</span><span class=nx>n</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>n</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>)</span> <span class=k>throw</span> <span class=k>new</span> <span class=nb>Error</span><span class=p>(</span><span class=s1>&#39;输入的数字不能小于0&#39;</span><span class=p>);</span>
+  <span class=kd>let</span> <span class=nx>f0</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span>
+    <span class=nx>f1</span> <span class=o>=</span> <span class=mi>1</span><span class=p>,</span>
+    <span class=nx>count</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+  <span class=k>while</span> <span class=p>(</span><span class=nx>count</span> <span class=o>&lt;</span> <span class=nx>n</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>yield</span> <span class=nx>f0</span><span class=p>;</span>
+    <span class=p>[</span><span class=nx>f0</span><span class=p>,</span> <span class=nx>f1</span><span class=p>]</span> <span class=o>=</span> <span class=p>[</span><span class=nx>f1</span><span class=p>,</span> <span class=nx>f0</span> <span class=o>+</span> <span class=nx>f1</span><span class=p>];</span>
+    <span class=nx>count</span><span class=o>++</span><span class=p>;</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><ol start=5>
+<li>Array</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>fib</span><span class=p>(</span><span class=nx>n</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>n</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>)</span> <span class=k>throw</span> <span class=k>new</span> <span class=nb>Error</span><span class=p>(</span><span class=s1>&#39;输入的数字不能小于0&#39;</span><span class=p>);</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>n</span> <span class=o>&lt;</span> <span class=mi>2</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=nx>n</span><span class=p>;</span>
+  <span class=p>}</span>
+  <span class=kd>let</span> <span class=nx>list</span> <span class=o>=</span> <span class=p>[];</span>
+  <span class=nx>list</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+  <span class=nx>list</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+  <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>n</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>list</span><span class=p>[</span><span class=nx>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>]</span> <span class=o>=</span> <span class=nx>list</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=o>+</span> <span class=nx>list</span><span class=p>[</span><span class=nx>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>];</span>
+  <span class=p>}</span>
+  <span class=k>return</span> <span class=nx>list</span><span class=p>[</span><span class=nx>n</span><span class=p>];</span>
+<span class=p>}</span>
+</code></pre></div><h2 id=reference>Reference</h2>
+<p><a class=link href=https://juejin.cn/post/6876826035946684424 target=_blank rel=noopener>HTML 标签语义化与 SEO - 掘金</a></p>
+<p><a class=link href=https://lgwebdream.github.io/FE-Interview/ target=_blank rel=noopener>前端题</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/frontend-36-cover.b9f1b098987476f379f2722d2735113b_hu85575022c92bc4a88deb51d9b1a51415_3856305_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-ufGwmJh0dvN58nItJzUROw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　36</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/frontend-35-cover.b9f1b098987476f379f2722d2735113b_hu85575022c92bc4a88deb51d9b1a51415_3856305_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-ufGwmJh0dvN58nItJzUROw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　35</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-34/frontend-34-cover.a7cad587cb7346a05a0fa097ab8fbad8_huc485326263da33a2635c789e852b16d8_1881309_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-p8rVh8tzRqBaD6CXq4+62A==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　34</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-33/frontend-33-cover.a7cad587cb7346a05a0fa097ab8fbad8_huc485326263da33a2635c789e852b16d8_1881309_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-p8rVh8tzRqBaD6CXq4+62A==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　33</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/frontend-31-cover.f9a675d12ac0dd7a1d780184ccd2f460_hu7e0a161a7e96ed837d8bdf6edf373a7f_2487400_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-+aZ10SrA3XodeAGEzNL0YA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　32</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-html5-哪些标签可以优化-seo><strong>Question:</strong> <code>html5</code> 哪些标签可以优化 <code>SEO</code></a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-不使用-border-画出-1px-高的线在不同浏览器的标准和怪异模式下都能保持效果一样><strong>Question:</strong> 不使用 border 画出 1px 高的线，在不同浏览器的标准和怪异模式下都能保持效果一样</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-找到字符串中最长的单词并返回它的长度><strong>Question:</strong> 找到字符串中最长的单词，并返回它的长度</a></li>
+<li><a href=#question-实现斐波那契数列><strong>Question:</strong> 实现斐波那契数列</a></li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
