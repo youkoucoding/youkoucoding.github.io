@@ -1,4 +1,144 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Oct 2021 12:52:30 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　37</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/</link><pubDate>Sat, 23 Oct 2021 12:52:30 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/frontend-37-cover.jpg" alt="Featured image of post 毎日のフロントエンド　37" />&lt;h1 id="第三十七日">第三十七日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 24 Oct 2021 10:07:50 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　38</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/</link><pubDate>Sun, 24 Oct 2021 10:07:50 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/frontend-38-cover.jpg" alt="Featured image of post 毎日のフロントエンド　38" />&lt;h1 id="第三十八日">第三十八日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-说说你对-cookie-和-session-的理解">&lt;strong>Question:&lt;/strong> 说说你对 &lt;code>cookie&lt;/code> 和 &lt;code>session&lt;/code> 的理解&lt;/h3>
+&lt;h4 id="cookie">cookie&lt;/h4>
+&lt;p>&lt;code>HTTP Cookie&lt;/code>（也叫 &lt;code>Web Cookie&lt;/code> 或浏览器 &lt;code>Cookie&lt;/code>）是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器下次向同一服务器再发起请求时被携带并发送到服务器上。通常，它用于告知服务端两个请求是否来自同一浏览器，如保持用户的登录状态。Cookie 使基于无状态的 HTTP 协议记录稳定的状态信息成为了可能。&lt;/p>
+&lt;p>&lt;code>cookie&lt;/code> 分发是通过扩展 &lt;code>HTTP 协议&lt;/code>来实现的，服务器通过在 HTTP 的响应头&lt;code>header&lt;/code>中加上一行特殊的指示以提示浏览器按照指示生成相应的 &lt;code>cookie&lt;/code>。然而纯粹的客户端脚本如 &lt;code>JavaScript&lt;/code> 等方式也可以生成 &lt;code>cookie&lt;/code>。&lt;/p>
+&lt;p>cookie 的使用是由浏览器按照一定的原则在后台自动发送给服务器的。浏览器检查所有存储的 cookie，如果某个 cookie 所声明的作用范围大于等于将要请求的资源所在的位置，则把该 cookie 附在请求资源的 HTTP 请求头上发送给服务器。&lt;/p>
+&lt;p>Cookie 主要用于:&lt;/p>
+&lt;ul>
+&lt;li>会话状态管理（如用户登录状态、购物车、游戏分数或其它需要记录的信息）&lt;/li>
+&lt;li>个性化设置（如用户自定义设置、主题等）&lt;/li>
+&lt;li>浏览器行为跟踪（如跟踪分析用户行为等）&lt;/li>
+&lt;/ul>
+&lt;p>创建 Cookie:&lt;/p>
+&lt;p>当服务器收到 HTTP 请求时，服务器可以在响应头里面添加一个 &lt;code>Set-Cookie&lt;/code> 选项。浏览器收到响应后通常会保存下 Cookie，之后对该服务器每一次请求中都通过 &lt;code>Cookie&lt;/code> 请求头部将 &lt;code>Cookie&lt;/code> 信息发送给服务器。另外，&lt;code>Cookie&lt;/code> 的过期时间、域、路径、有效期、适用站点都可以根据需要来指定。&lt;/p>
+&lt;h4 id="session">Session&lt;/h4>
+&lt;p>&lt;code>cookie&lt;/code>机制弥补了 HTTP 协议无状态的不足。在 Session 出现之前，基本上所有的网站都采用 Cookie 来跟踪会话。&lt;/p>
+&lt;p>与 Cookie 不同的是，&lt;code>session&lt;/code>是以&lt;strong>服务端保存状态&lt;/strong>。&lt;/p>
+&lt;p>当客户端请求创建一个&lt;code>session&lt;/code>的时候，服务器会先检查这个客户端的请求里是否已包含了一个&lt;code>session标识 &lt;/code>- sessionId`:&lt;/p>
+&lt;ul>
+&lt;li>如果已包含这个 sessionId，则说明以前已经为此客户端创建过 session，服务器就按照 sessionId 把这个 session 检索出来使用（如果检索不到，可能会新建一个）&lt;/li>
+&lt;li>如果客户端请求不包含 sessionId，则为此客户端创建一个 session 并且生成一个与此 session 相关联的 sessionId&lt;/li>
+&lt;/ul>
+&lt;h4 id="what-is-cookie">What is Cookie?&lt;/h4>
+&lt;p>A cookie us a small file with the maximum size of &lt;code>4kb&lt;/code> that the web server stores on the &lt;code>client&lt;/code>. Once a cookie has been set, all page requests that follow return the cookie name and value. &lt;strong>A cookie can only be read from the domain that it has been issued from.&lt;/strong> Most web browsers have options for disabling cookies, third party cookies or both.&lt;/p>
+&lt;h4 id="what-is-a-session">What is a Session?&lt;/h4>
+&lt;p>A session is a global variable stored on the server. Each session is assigned a unique id which is used to retrieve stored values. Whenever a session is created, a cookie containing the unique session id is stored on the user&amp;rsquo;s computer and returned with every request to the server. If the client browser does not support cookiesm the unique session id is displayed in the URL. Sessions have the capacity to store relatively large data compared to cookies.&lt;/p>
+&lt;p>The session values are automaticlly deleted when the browser is closed.&lt;/p>
+&lt;h4 id="key-difference">KEY Difference&lt;/h4>
+&lt;ul>
+&lt;li>Cookies are client-side files that contain user information, whereas Sessions are server-side files that contain user information.&lt;/li>
+&lt;li>Cookie is not dependent on session, but Session is dependent on Cookie.&lt;/li>
+&lt;li>Cookie expires depending on the lifetime you set for it, while a Session ends when a user closes browser.&lt;/li>
+&lt;li>The maximum cookie size is 4kb whereas in session, you can store as much data as you like.&lt;/li>
+&lt;li>Cookie does not have a function named unsetcookie() while in Session you can use. Session_destroy(); which is used to destroy all registered data or to unset some.&lt;/li>
+&lt;/ul>
+&lt;h4 id="why-and-when-to-use-cookie">Why and when to use Cookie?&lt;/h4>
+&lt;p>Http is a stateless protocol; cookies allow us to track the state of the application using small files stored on the user&amp;rsquo;s computer. The path were cookies are stored depends on the browser.&lt;/p>
+&lt;h4 id="why-and-when-to-use-session">Why and when to use Session?&lt;/h4>
+&lt;p>To store important information such as the user id more securely on the server where malicious users cannot temper with them. Sessions are used to pass values from one page to another.&lt;/p>
+&lt;p>It is also used when you want the alternative to cookies on browsers that do not support cookies, to store global variables in an efficient and more secure way compared to passing them in the URL, developing an application such as a shopping cart that has to temporary store information with a capacity large than 4kb.&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-实现单行文本居中和多行文本左对齐并超出显示">&lt;strong>Question:&lt;/strong> 实现单行文本居中和多行文本左对齐并超出显示&amp;quot;&amp;hellip;&amp;quot;&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">one&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">multi&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">overflow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">hidden&lt;/span>
+&lt;span class="kc">text&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="k">overflow&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">ellipsis&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kp">-webkit-&lt;/span>&lt;span class="n">box&lt;/span>
+&lt;span class="kp">-webkit-&lt;/span>&lt;span class="n">line-clamp&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span>
+&lt;span class="kp">-webkit-&lt;/span>&lt;span class="n">box-orient&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">vertical&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-说说你对-eval-的理解">&lt;strong>Question:&lt;/strong> 说说你对 eval 的理解&lt;/h3>
+&lt;p>&lt;code>eval()&lt;/code> 函数会将传入的字符串当做 JavaScript 代码进行执行。&lt;/p>
+&lt;p>The &lt;code>eval()&lt;/code> function evaluates JavaScript code represented as a string.&lt;/p>
+&lt;blockquote>
+&lt;p>Executing JavaScript from a string is an enormous security risk. It is far too easy for a bad actor to run arbitrary code when you use eval().&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>不安全的, 容易出错&lt;/li>
+&lt;li>性能低&lt;/li>
+&lt;li>某种情况下跟 new Function(), setTimeout, setInterval 类似&lt;/li>
+&lt;li>不利于代码可维护性, 可拓展性&lt;/li>
+&lt;li>不是在无可奈何的情况下, 请不要使用&lt;/li>
+&lt;/ul>
+&lt;h3 id="question-一个给定字符串中不重复出现的最长的子字符串-以及-这个子字符串的长度第-4-题">&lt;strong>Question:&lt;/strong> 一个给定字符串中，不重复出现的最长的子字符串 以及 这个子字符串的长度（第 4 题）&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">lengthOfStr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">acc&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">acc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">indexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">acc&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">res&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">acc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">acc&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">res&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">acc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">acc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">indexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">acc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">res&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">res&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">max&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">res&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;fdsfsdzffdfdddfsdsds&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">s&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">total&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 长度
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">maxStr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 最长不重复长度的字符串
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">ele&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">idx&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">indexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ele&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">idx&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">idx&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ele&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="nx">total&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">maxStr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">total&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">total&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">maxStr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * 题目：字符串出现的不重复最长长度
+&lt;/span>&lt;span class="cm"> * 整体思路：
+&lt;/span>&lt;span class="cm"> * 用一个滑动窗口装没有重复的字符，枚举字符记录最大值即可
+&lt;/span>&lt;span class="cm"> * 对于遇到重复字符如何收缩窗口大小？
+&lt;/span>&lt;span class="cm"> * 可以用 map 维护字符的索引，遇到相同的字符，把左边界移动过去即可
+&lt;/span>&lt;span class="cm"> * 挪动的过程中记录最大长度
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">lengthOfLongestSubstring&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">map&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Map&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">s&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">has&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">max&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">max&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">res&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">map&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">res&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903957916024839" target="_blank" rel="noopener"
+>session 和 cookie - 掘金&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903953029677064" target="_blank" rel="noopener"
+>详解 cookie、session、webStorage - 掘金&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://web.stanford.edu/~ouster/cgi-bin/cs142-fall10/lecture.php?topic=cookie" target="_blank" rel="noopener"
+>Cookies and Sessions - cs142&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies" target="_blank" rel="noopener"
+>HTTP cookies - HTTP | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.guru99.com/difference-between-cookie-session.html" target="_blank" rel="noopener"
+>Difference between Cookie and Session&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview: Html、Css、JavaScript、Vue、React、Node、TypeScript、Webpack、算法、网络与安全、浏览器&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　37</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/</link><pubDate>Sat, 23 Oct 2021 12:52:30 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/frontend-37-cover.jpg" alt="Featured image of post 毎日のフロントエンド　37" />&lt;h1 id="第三十七日">第三十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5-哪些标签可以优化-seo">&lt;strong>Question:&lt;/strong> &lt;code>html5&lt;/code> 哪些标签可以优化 &lt;code>SEO&lt;/code>&lt;/h3>
 &lt;p>通过标签语义化优化 SEO&lt;/p>
