@@ -1,4 +1,206 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 24 Oct 2021 10:07:50 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　38</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/</link><pubDate>Sun, 24 Oct 2021 10:07:50 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/frontend-38-cover.jpg" alt="Featured image of post 毎日のフロントエンド　38" />&lt;h1 id="第三十八日">第三十八日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 25 Oct 2021 10:58:32 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　39</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-39/</link><pubDate>Mon, 25 Oct 2021 10:58:32 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-39/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-39/frontend-39-cover.jpg" alt="Featured image of post 毎日のフロントエンド　39" />&lt;h1 id="第三十九日">第三十九日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-title-与-h1b-与-strongi-与-em-的区别分别是什么">&lt;strong>Question:&lt;/strong> &lt;code>title&lt;/code> 与 &lt;code>h1&lt;/code>、&lt;code>b&lt;/code> 与 &lt;code>strong&lt;/code>、&lt;code>i&lt;/code> 与 &lt;code>em&lt;/code> 的区别分别是什么？&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>title&lt;/code>标签写在&lt;code>body&lt;/code>里面不会被渲染,只能写在&lt;code>head&lt;/code>里面,对网站 SEO 比较重要&lt;/li>
+&lt;li>&lt;code>h1&lt;/code>标签写在 body 里面,但是写在 head 里(不推荐),渲染的时候会自动渲染到 body 里面去&lt;/li>
+&lt;li>&lt;code>b&lt;/code>标签与&lt;code>strong&lt;/code>标签在表现上是一样的,都自带&lt;code>font-weight: bold&lt;/code>属性
+&lt;ul>
+&lt;li>&lt;code>b&lt;/code> 仅表示加粗既装饰用，我们应该使用 &lt;code>CSS&lt;/code> 而不应该使用 &lt;code>b&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>i&lt;/code>标签与&lt;code>em&lt;/code>标签在表现上是一样的,都自带&lt;code>font-style: italic&lt;/code>属性
+&lt;ul>
+&lt;li>&lt;code>i&lt;/code> 用于斜体展示，我们应该使用 &lt;code>CSS&lt;/code> 而不应该使用 &lt;code>i&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>b&lt;/code>标签与&lt;code>i&lt;/code>标签是物理标记,告诉浏览器以何种格式显示文字&lt;/li>
+&lt;li>&lt;code>strong&lt;/code>标签与&lt;code>em&lt;/code>标签是逻辑标记,逻辑元素告诉浏览器这些文字有怎么样的重要性&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-css-水平和垂直居中的方法">&lt;strong>Question:&lt;/strong> CSS 水平和垂直居中的方法&lt;/h3>
+&lt;ol>
+&lt;li>绝对布局&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">parent&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">relative&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">child&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">absolute&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">transform&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">translate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">-50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">-50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">flexbox&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>flexbox&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">parent&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">justify-content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">align-items&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-说说对模块化的理解">&lt;strong>Question:&lt;/strong> 说说对模块化的理解&lt;/h3>
+&lt;p>&lt;code>Javascipt&lt;/code> 模块化&lt;/p>
+&lt;ol>
+&lt;li>Problem&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>命名问题：所有文件的方法都挂载到&lt;code>window/global&lt;/code>上，会污染全局环境，并且需要考虑命名冲突问题&lt;/li>
+&lt;li>依赖问题：&lt;code>script&lt;/code>是顺序加载的，如果各个文件文件有依赖，就得考虑 js 文件的加载顺序&lt;/li>
+&lt;li>网络问题：如果 js 文件过多，所需请求次数就会增多，增加加载时间&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>4 种规范: &lt;code>CommonJS&lt;/code>、&lt;code>AMD&lt;/code>、&lt;code>UMD&lt;/code>、&lt;code>ESM&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h4 id="commonjs">CommonJS&lt;/h4>
+&lt;p>&lt;code>CommonJS&lt;/code>是一个更偏向于服务器端的规范。&lt;code>NodeJS&lt;/code>采用了这个规范。&lt;code>CommonJS&lt;/code>的一个模块就是一个脚本文件。&lt;code>require&lt;/code> &lt;strong>命令第一次加载该脚本时就会执行整个脚本，然后在内存中生成一个对象。&lt;/strong>&lt;/p>
+&lt;p>&lt;code>CommonJS&lt;/code>规范代表&lt;code>node.js&lt;/code>的模块系统，在&lt;code>node&lt;/code>里面实现了&lt;code>moduel&lt;/code>、&lt;code>exports&lt;/code>、&lt;code>require&lt;/code>、&lt;code>global&lt;/code>四个变量&lt;/p>
+&lt;ul>
+&lt;li>允许模块以&lt;code>require&lt;/code>的方式同步加载其他模块,然后通过&lt;code>exports&lt;/code>和&lt;code>module.exports&lt;/code>的形式向外暴露接口。&lt;/li>
+&lt;li>使用方式如下，如果只是对外暴露一些属性或者方法用&lt;code>exports&lt;/code>，如果要暴露一个对象（包含属性和方法）则使用&lt;code>module.exports&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">//导入
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;module&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./app.js&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">//导出
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">exports&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getSomethInfo&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="nx">module&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">exports&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">someValue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">someFunction&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>优点&lt;/p>
+&lt;ul>
+&lt;li>简单易用&lt;/li>
+&lt;li>服务端的模块便于复用&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>缺点&lt;/p>
+&lt;ul>
+&lt;li>同步加载在浏览器端不适用，会阻碍加载，浏览器资源是异步加载的&lt;/li>
+&lt;li>不能非阻塞并行加载多个模块&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="amdasynchronous-module-definition-异步加载模块">AMD&lt;code>Asynchronous Module Definition &lt;/code>（异步加载模块）&lt;/h4>
+&lt;p>采用异步方式加载模块，模块的加载不影响后面语句的运行。所有依赖模块的语句，都定义在一个回调函数中，等到加载完成之后，回调函数才执行。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">require&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="nx">module&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">callback&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// AMD也采用require命令加载模块，但是不同于CommonJS，它要求两个参数
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>第一个参数&lt;code>[module]&lt;/code>，是一个数组，里面的成员是要加载的模块，&lt;code>callback&lt;/code>是加载完成后的回调函数，回调函数中参数对应数组中的成员（模块）。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js"> &lt;span class="c1">// 定义
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">define&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;module&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;dep1&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;dep2&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">d1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">d2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{...});&lt;/span>
+&lt;span class="c1">// 加载模块
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">require&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;module&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;../app&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">module&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">app&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{...});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>优点&lt;/p>
+&lt;ul>
+&lt;li>适合在浏览器环境中异步加载模块&lt;/li>
+&lt;li>可以并行加载多个模块&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>缺点&lt;/p>
+&lt;ul>
+&lt;li>提高了开发成本，代码的阅读和书写比较困难，模块定义方式的语义不顺畅&lt;/li>
+&lt;li>不符合通用的模块化思维方式，是一种妥协的实现&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>AMD 规范代表 &lt;code>requirejs&lt;/code>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="umd-规范异步加载模块universal-module-definition">UMD 规范（异步加载模块）(&lt;code>Universal Module Definition&lt;/code>)&lt;/h4>
+&lt;p>所谓的通用，就是兼容了 &lt;code>CmmonJS&lt;/code> 和 &lt;code>AMD&lt;/code> 规范，这意味着无论是在 &lt;code>CommonJS&lt;/code> 规范的项目中，还是 &lt;code>AMD&lt;/code> 规范的项目中，都可以直接引用 &lt;code>UMD&lt;/code> 规范的模块使用。&lt;/p>
+&lt;p>原理其实就是在模块中去判断全局是否存在 exports 和 define，如果存在 exports，那么以 CommonJS 的方式暴露模块，如果存在 define 那么以 AMD 的方式暴露模块:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">root&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">factory&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">define&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;function&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">define&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">amd&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">define&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;jquery&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;underscore&amp;#34;&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">factory&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">exports&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;object&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">module&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">exports&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">factory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;jquery&amp;#34;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;underscore&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">root&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Requester&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">factory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">root&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">$&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">root&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mi">_&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">$&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// this is where I defined my module implementation
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">Requester&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="c1">// ... };
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">Requester&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="cmd-规范异步加载模块">CMD 规范（异步加载模块）&lt;/h4>
+&lt;ul>
+&lt;li>CMD 规范和 AMD 很相似，简单，并与 CommonJS 和 Node.js 的 Modules 规范保持了很大的兼容性；在 CMD 规范中，一个模块就是一个文件。&lt;/li>
+&lt;li>定义模块使用全局函数 define，其接收 factory 参数，factory 可以是一个函数，也可以是一个对象或字符串；&lt;/li>
+&lt;li>&lt;code>factory&lt;/code> 是一个函数，有三个参数，&lt;code>function(require, exports, module)&lt;/code>：
+&lt;ul>
+&lt;li>&lt;code>require&lt;/code> 是一个方法，接受模块标识作为唯一参数，用来获取其他模块提供的接口：&lt;code>require(id)&lt;/code>&lt;/li>
+&lt;li>&lt;code>exports&lt;/code> 是一个对象，用来向外提供模块接口&lt;/li>
+&lt;li>&lt;code>module&lt;/code> 是一个对象，上面存储了与当前模块相关联的一些属性和方法&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">define&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">require&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">exports&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">module&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./a&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">doSomething&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="c1">// 依赖就近书写，什么时候用到什么时候引入
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">b&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./b&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">b&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">doSomething&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="es6模块化">&lt;code>ES6&lt;/code>模块化&lt;/h4>
+&lt;p>ES6 在语言标准的层面上，实现了模块功能，而且实现得相当简单，完全可以取代 &lt;code>CommonJS&lt;/code> 和 &lt;code>AMD&lt;/code> 规范，成为浏览器和服务器通用的模块解决方案&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js"> &lt;span class="c1">// 导入
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">import&lt;/span> &lt;span class="s2">&amp;#34;/app&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">import&lt;/span> &lt;span class="nx">React&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="err">“&lt;/span>&lt;span class="nx">react&lt;/span>&lt;span class="err">”&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">Component&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="err">“&lt;/span>&lt;span class="nx">react&lt;/span>&lt;span class="err">”&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// 导出
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">export&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">multiply&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{...};&lt;/span>
+&lt;span class="kr">export&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">year&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">2018&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="p">...&lt;/span>
+&lt;span class="p">...&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="require与import的区别">&lt;code>require&lt;/code>与&lt;code>import&lt;/code>的区别&lt;/h4>
+&lt;p>&lt;code>require&lt;/code>使用与&lt;code>CommonJs&lt;/code>规范，&lt;code>import&lt;/code>使用于 Es6 模块规范；所以两者的区别实质是两种规范的区别；&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>CommonJS&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>对于基本数据类型，属于复制。即会被模块缓存；同时，在另一个模块可以对该模块输出的变量重新赋值。&lt;/li>
+&lt;li>对于复杂数据类型，属于浅拷贝。由于两个模块引用的对象指向同一个内存空间，因此对该模块的值做修改时会影响另一个模块。&lt;/li>
+&lt;li>当使用 require 命令加载某个模块时，就会运行整个模块的代码。&lt;/li>
+&lt;li>当使用 require 命令加载同一个模块时，不会再执行该模块，而是取到缓存之中的值。也就是说，- CommonJS 模块无论加载多少次，都只会在第一次加载时运行一次，以后再加载，就返回第一次运行的结果，除非手动清除系统缓存。&lt;/li>
+&lt;li>循环加载时，属于加载时执行。即脚本代码在 require 的时候，就会全部执行。一旦出现某个模块被”循环加载”，就只输出已经执行的部分，还未执行的部分不会输出。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>ES6 模块&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>对于只读来说，即不允许修改引入变量的值，import 的变量是只读的，不论是基本数据类型还是复杂数据类型。当模块遇到 import 命令时，就会生成一个只读引用。等到脚本真正执行时，再根据这个只读引用，到被加载的那个模块里面去取值。&lt;/li>
+&lt;li>对于动态来说，原始值发生变化，import 加载的值也会发生变化。不论是基本数据类型还是复杂数据类型。&lt;/li>
+&lt;li>循环加载时，ES6 模块是动态引用。只要两个模块之间存在某个引用，代码就能够执行。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>&lt;code>require/exports&lt;/code> 是必要通用且必须的；因为事实上，目前编写的 &lt;code>import/export&lt;/code> 最终都是编译为 &lt;code>require/exports&lt;/code> 来执行的。&lt;/strong>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview: &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://nandemo-nobiru.com/2096/" target="_blank" rel="noopener"
+>文字を強調するタグ strong・b・em・i の違いと SEO 効果 | なんでものびる WEB&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.bozaigao.net/2020/07/21/js_standard/" target="_blank" rel="noopener"
+>Js 前端模块化规范 &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000039375332" target="_blank" rel="noopener"
+>Javascript 模块化详解 - SegmentFault 思否&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://requirejs.org/" target="_blank" rel="noopener"
+>RequireJS&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド　38</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/</link><pubDate>Sun, 24 Oct 2021 10:07:50 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/frontend-38-cover.jpg" alt="Featured image of post 毎日のフロントエンド　38" />&lt;h1 id="第三十八日">第三十八日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说说你对-cookie-和-session-的理解">&lt;strong>Question:&lt;/strong> 说说你对 &lt;code>cookie&lt;/code> 和 &lt;code>session&lt;/code> 的理解&lt;/h3>
 &lt;h4 id="cookie">cookie&lt;/h4>
