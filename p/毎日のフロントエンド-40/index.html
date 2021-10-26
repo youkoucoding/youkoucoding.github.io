@@ -1,0 +1,370 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　40</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　40">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-10-26T10:14:45+09:00"><meta property="article:modified_time" content="2021-10-26T10:14:45+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/frontend-40-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　40">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/frontend-40-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/frontend-40-cover_hu525553c2cb9d13bd725600d6caadba7f_2217610_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/frontend-40-cover_hu525553c2cb9d13bd725600d6caadba7f_2217610_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/frontend-40-cover_hu525553c2cb9d13bd725600d6caadba7f_2217610_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド　40">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/>毎日のフロントエンド　40</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 26, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 2 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第四十日>第四十日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-html5-都有哪些新的特性移除了哪些元素><strong>Question:</strong> <code>html5</code> 都有哪些新的特性？移除了哪些元素</h3>
+<p>新增特性:</p>
+<ul>
+<li><code>canvas</code></li>
+<li><code>svg</code></li>
+<li><code>video</code></li>
+<li><code>drag & drop</code></li>
+<li><code>localStorage/sessionStorage</code></li>
+<li>语义化标签: <code>header/nav/section/article/footer</code></li>
+<li><code>input</code> 类型: <code>date/datetime/email/range</code></li>
+</ul>
+<p>移除元素:</p>
+<ul>
+<li><code>applet</code></li>
+<li><code>big</code></li>
+<li><code>font</code></li>
+<li><code>frame/frameset</code></li>
+</ul>
+<h2 id=css>CSS</h2>
+<h3 id=question-怎么才能让图文不可复制><strong>Question:</strong> 怎么才能让图文不可复制？</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// 禁止右键菜单
+</span><span class=c1></span><span class=nb>document</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>oncontextmenu</span> <span class=o>=</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
+  <span class=c1>// e.preventDefault();
+</span><span class=c1></span><span class=p>};</span>
+<span class=c1>// 禁止文字选择
+</span><span class=c1></span><span class=nb>document</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>onselectstart</span> <span class=o>=</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
+  <span class=c1>// e.preventDefault();
+</span><span class=c1></span><span class=p>};</span>
+<span class=c1>// 禁止复制
+</span><span class=c1></span><span class=nb>document</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>oncopy</span> <span class=o>=</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
+  <span class=c1>// e.preventDefault();
+</span><span class=c1></span><span class=p>};</span>
+<span class=c1>// 禁止粘贴
+</span><span class=c1></span><span class=nb>document</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>onpaste</span> <span class=o>=</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
+  <span class=c1>// e.preventDefault();
+</span><span class=c1></span><span class=p>};</span>
+</code></pre></div><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=c>/* CSS禁止文本选择，这样不会触发js */</span>
+<span class=nt>body</span> <span class=p>{</span>
+  <span class=k>user-select</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+  <span class=kp>-webkit-</span><span class=k>user-select</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+  <span class=kp>-moz-</span><span class=k>user-select</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+  <span class=kp>-ms-</span><span class=k>user-select</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+  <span class=kp>-o-</span><span class=k>user-select</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><h2 id=javascript>JavaScript</h2>
+<h3 id=question-为什么会有跨域问题怎么解决跨域><strong>Question:</strong> 为什么会有跨域问题？怎么解决跨域？</h3>
+<p>浏览器为了安全，产生了同源策略，协议、域名、端口有一个不同，产生跨域问题。不同协议、不同域名、不同端口,即为不同源。</p>
+<p>常用的跨域方式有：</p>
+<ol>
+<li>JSONP： 优点是可以兼容老浏览器，缺点是只能发送 GET 请求</li>
+<li>CORS：优点简单方便，支持 post 请求，缺点是需要后端的配合,不支持老版浏览器</li>
+<li>Server Proxy：优点是前端正常发送 ajax 请求，缺点是后端会二次请求</li>
+</ol>
+<h2 id=one-more-question>One more question</h2>
+<h3 id=question-说一下-http-缓存策略有什么区别分别解决了什么问题><strong>Question:</strong> 说一下 Http 缓存策略，有什么区别，分别解决了什么问题</h3>
+<h4 id=浏览器缓存策略>浏览器缓存策略</h4>
+<p>浏览器每次发起请求时，先在本地缓存中查找结果以及缓存标识，根据缓存标识来判断是否使用本地缓存。如果缓存有效，则使用本地缓存；否则，则向服务器发起请求并携带缓存标识。根据是否需向服务器发起 HTTP 请求，将缓存过程划分为两个部分：<strong>强制缓存</strong>和<strong>协商缓存</strong>，强缓存优先于协商缓存。</p>
+<ul>
+<li>强缓存，服务器通知浏览器一个缓存时间，在缓存时间内，下次请求，直接用缓存，不在时间内，执行比较缓存策略。</li>
+<li>协商缓存，让客户端与服务器之间能实现缓存文件是否更新的验证、提升缓存的复用率，将缓存信息中的 Etag 和 Last-Modified 通过请求发送给服务器，由服务器校验，返回 <strong>304</strong> 状态码时，浏览器直接使用缓存。</li>
+</ul>
+<p>HTTP 缓存都是从第二次请求开始的：</p>
+<ol>
+<li>第一次请求资源时，服务器返回资源，并在 response header 中回传资源的缓存策略</li>
+<li>第二次请求时，浏览器判断这些请求参数，击中强缓存就直接 返回状态码 200，否则就把请求参数加到 request header 头中传给服务器，看是否击中协商缓存，击中则返回 304，否则服务器会返回新的资源。</li>
+</ol>
+<p><figure class=gallery-image style=flex-grow:157;flex-basis:377px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/http-cache.png data-size=1654x1052>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/http-cache.png width=1654 height=1052 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/http-cache_hu00036b2cf92c2b89f1b477a58ee35541_127864_480x0_resize_box_3.png 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-40/http-cache_hu00036b2cf92c2b89f1b477a58ee35541_127864_1024x0_resize_box_3.png 1024w" loading=lazy alt=http-cache-flow-chart>
+</a>
+<figcaption>http-cache-flow-chart</figcaption>
+</figure></p>
+<h4 id=强缓存>强缓存</h4>
+<ul>
+<li>强缓存命中则直接读取浏览器本地的资源，在 network 中显示的是 from memory 或者 from disk</li>
+<li>控制强制缓存的字段有：<code>Cache-Control</code>（http1.1）和 <code>Expires</code>（http1.0）</li>
+<li><code>Cache-control</code> 是一个相对时间，用以表达自上次请求正确的资源之后的多少秒的时间段内缓存有效。</li>
+<li><code>Expires</code> 是一个绝对时间。用以表达在这个时间点之前发起请求可以直接从浏览器中读取数据，而无需发起请求</li>
+<li><code>Cache-Control</code> 的优先级比 Expires 的优先级高。前者的出现是为了解决 Expires 在浏览器时间被手动更改导致缓存判断错误的问题</li>
+<li>如果同时存在则使用<code>Cache-control</code></li>
+</ul>
+<h5 id=强缓存-expires>强缓存 <code>expires</code></h5>
+<ul>
+<li>
+<p>该字段是<strong>服务器</strong>响应消息头字段，告诉浏览器在过期时间之前可以直接从浏览器缓存中存取数据</p>
+</li>
+<li>
+<p><code>Expires</code> 是 <code>HTTP 1.0</code> 的字段，表示缓存到期时间，是一个绝对的时间 (当前时间+缓存时间)。在响应消息头中，设置这个字段之后，就可以告诉浏览器，在未过期之前不需要再次请求。</p>
+</li>
+<li>
+<p>由于是绝对时间，用户可能会将客户端本地的时间进行修改，而导致浏览器判断缓存失效，重新请求该资源。此外，即使不考虑修改，时差或者误差等因素也可能造成客户端与服务端的时间不一致，致使缓存失效。</p>
+</li>
+</ul>
+<p>优点:</p>
+<ol>
+<li><code>HTTP 1.0</code> 产物，可以在 <code>HTTP 1.0</code> 和 <code>1.1</code> 中使用，简单易用。</li>
+<li>以时刻标识失效时间。
+缺点：</li>
+<li>时间是由服务器发送的<code>(UTC)</code>，如果服务器时间和客户端时间存在不一致，可能会出现问题。</li>
+<li>存在版本问题，到期之前的修改客户端是不可知的。</li>
+</ol>
+<h5 id=强缓存-cache-control>强缓存 <code>cache-control</code></h5>
+<ul>
+<li>
+<p>已知<code>Expires</code>的缺点之后，在<code>HTTP/1.1</code>中，增加了一个字段 <code>Cache-control</code>，该字段表示资源缓存的最大有效时间，在该时间内，客户端不需要向服务器发送请求。</p>
+</li>
+<li>
+<p>这两者的区别就是前者是绝对时间，而后者是相对时间。下面是一些 <code>Cache-control</code> 字段<em>常用</em>的值：</p>
+<ul>
+<li><code>max-age</code>: 即最大有效时间</li>
+<li><code>must-revalidate</code>: 如果超过了 <code>max-age</code> 的时间，浏览器必须向服务器发送请求，验证资源是否还有效</li>
+<li><code>no-cache</code>: 不使用强缓存，需要与服务器验证缓存是否新鲜</li>
+<li><code>no-store</code>: 真正意义上的“不要缓存”。所有内容都不走缓存，包括强制和对比</li>
+<li><code>public</code>: 所有的内容都可以被缓存, 包括客户端和代理服务器， 如 <code>CDN</code></li>
+<li><code>private</code>: 所有的内容只有客户端才可以缓存, 代理服务器不能缓存, <em>默认值</em></li>
+</ul>
+</li>
+<li>
+<p><code>Cache-control</code> 的优先级高于 <code>Expires</code>，为了兼容 <code>HTTP/1.0</code> 和 <code>HTTP/1.1</code>，实际项目中两个字段都可以设置</p>
+</li>
+<li>
+<p>该字段可以在请求头或者响应头设置，可组合使用多种指令</p>
+</li>
+</ul>
+<p>优点：</p>
+<ol>
+<li><code>HTTP 1.1</code> 产物，以时间间隔标识失效时间，解决了 <code>Expires</code> 服务器和客户端相对时间的问题</li>
+<li>比<code>Expires</code> 多了很多选项设置</li>
+</ol>
+<p>缺点：存在版本问题，到期之前的修改客户端是不可知的</p>
+<h4 id=协商缓存>协商缓存</h4>
+<ul>
+<li>协商缓存的状态码由服务器决策返回<code>200</code>或者<code>304</code></li>
+<li>当浏览器的强缓存失效的时候或者请求头中设置了不走强缓存，并且在请求头中设置了<code>If-Modified-Since</code> 或者 <code>If-None-Match</code> 的时候，会将这两个属性值到服务端去验证是否命中协商缓存，如果命中了协商缓存，会返回 304 状态，加载浏览器缓存，并且响应头会设置 <code>Last-Modified</code> 或者 <code>ETag</code> 属性。</li>
+<li>对比缓存在请求数上和没有缓存是一致的，但如果是 <code>304</code> 的话，返回的仅仅是一个状态码而已，并没有实际的文件内容，因此 在响应体体积上的节省是它的优化点。</li>
+<li>协商缓存有 2 组字段(不是两个)，控制协商缓存的字段有：<code>Last-Modified/If-Modified-since（http1.0）</code> 和 <code>Etag/If-None-match（http1.1）</code></li>
+<li><code>Last-Modified/If-Modified-since</code> 表示的是服务器的资源最后一次修改的时间；<code>Etag/If-None-match</code> 表示的是服务器资源的唯一标
+识，只要资源变化，Etag 就会重新生成。</li>
+<li><code>Etag/If-None-match</code> 的优先级比 <code>Last-Modified/If-Modified-since</code> 高。</li>
+</ul>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=http://blog.poetries.top/2018/12/23/js-copy/#2-2-%E9%98%B2%E5%A4%8D%E5%88%B6%E5%8A%9F%E8%83%BD target=_blank rel=noopener>Javascript 中的复制粘贴功能 </a></p>
+<p><a class=link href=https://segmentfault.com/a/1190000011145364 target=_blank rel=noopener>前端常见跨域解决方案（全） - SegmentFault 思否</a></p>
+<p><a class=link href=http://www.ruanyifeng.com/blog/2016/04/cors.html target=_blank rel=noopener>跨域资源共享 CORS 详解 - 阮一峰的网络日志</a></p>
+<p><a class=link href=https://www.jiqizhixin.com/articles/2020-07-24-12 target=_blank rel=noopener>彻底弄懂浏览器缓存策略 | 机器之心</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-39/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-39/frontend-39-cover.cf5bc9b50c181ca2c1e742524c4aa796_hu5ea06f4f526d4ef1243b976709e90d09_1774697_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-z1vJtQwYHKLB50JSTEqnlg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　39</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/frontend-38-cover.4d821a14fad3ca5843439a8c0eac7ced_hua170349b69ba04ffb68ab040ea06566b_1690641_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-TYIaFPrTylhDQ5qMDqx87Q==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　38</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-37/frontend-37-cover.cfe3f56436522fcc966d285285d8a2ff_hu20e66b4b944b265ee469f519e298d070_872394_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-z+P1ZDZSL8yWbShShdii/w==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　37</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-36/frontend-36-cover.b9f1b098987476f379f2722d2735113b_hu85575022c92bc4a88deb51d9b1a51415_3856305_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-ufGwmJh0dvN58nItJzUROw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　36</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-35/frontend-35-cover.b9f1b098987476f379f2722d2735113b_hu85575022c92bc4a88deb51d9b1a51415_3856305_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-ufGwmJh0dvN58nItJzUROw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　35</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-html5-都有哪些新的特性移除了哪些元素><strong>Question:</strong> <code>html5</code> 都有哪些新的特性？移除了哪些元素</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-怎么才能让图文不可复制><strong>Question:</strong> 怎么才能让图文不可复制？</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-为什么会有跨域问题怎么解决跨域><strong>Question:</strong> 为什么会有跨域问题？怎么解决跨域？</a></li>
+</ol>
+</li>
+<li><a href=#one-more-question>One more question</a>
+<ol>
+<li><a href=#question-说一下-http-缓存策略有什么区别分别解决了什么问题><strong>Question:</strong> 说一下 Http 缓存策略，有什么区别，分别解决了什么问题</a>
+<ol>
+<li><a href=#浏览器缓存策略>浏览器缓存策略</a></li>
+<li><a href=#强缓存>强缓存</a></li>
+<li><a href=#协商缓存>协商缓存</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
