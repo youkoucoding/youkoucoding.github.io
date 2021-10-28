@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 27 Oct 2021 14:51:33 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　41</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-41/</link><pubDate>Wed, 27 Oct 2021 14:51:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-41/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-41/frontend-41-cover.jpg" alt="Featured image of post 毎日のフロントエンド　41" />&lt;h1 id="第四十一日">第四十一日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 28 Oct 2021 11:47:15 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　42</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-42/</link><pubDate>Thu, 28 Oct 2021 11:47:15 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-42/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-42/frontend-42-cover.jpg" alt="Featured image of post 毎日のフロントエンド　42" />&lt;h1 id="第四十二日">第四十二日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-解释下什么是isiso8859-2字符集">&lt;strong>Question:&lt;/strong> 解释下什么是&lt;code>ISISO8859-2&lt;/code>字符集&lt;/h3>
+&lt;p>&lt;code>ISO/IEC 8859-1&lt;/code>，又称 Latin-1 或“西欧语言”，&lt;code>ISO/IEC 8859-2 Latin-2&lt;/code>或“中欧语言”，是国际标准化组织内 ISO/IEC 8859 的 8 位字符集。它以 ASCII 为基础，在空置的 0xA0-0xFF 的范围内，加入 192 个字母及符号，藉以供使用变音符号的拉丁字母语言使用。&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-重置初始化css-的作用是什么">&lt;strong>Question:&lt;/strong> 重置（初始化）css 的作用是什么&lt;/h3>
+&lt;p>统一各个浏览器自带的默认样式, 保证各个浏览器尽量统一样式&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-window-对象和-document-对象有什么区别">&lt;strong>Question:&lt;/strong> window 对象和 document 对象有什么区别&lt;/h3>
+&lt;h4 id="window对象">&lt;code>window&lt;/code>对象&lt;/h4>
+&lt;p>代表浏览器中的一个打开的窗口或者框架，&lt;code>window&lt;/code>对象会在或者每次出现时被自动创建，在客户端&lt;code>JavaScript&lt;/code>中，&lt;code>Window&lt;/code>对象是全局对象&lt;code>global&lt;/code>(&lt;code>node&lt;/code>)，所有的表达式都在当前的环境中计算，要引用当前的窗口不需要特殊的语法，可以把那个窗口属性作为全局变量使用，例如：可以只写&lt;code>document&lt;/code>，而不必写&lt;code>window.document&lt;/code>。同样可以把窗口的对象方法当做函数来使用，如：只写 alert()，而不必写 window.alert.
+&lt;strong>&lt;code>window&lt;/code>对象实现了核心 JavaScript 所定义的全局属性和方法。&lt;/strong>&lt;/p>
+&lt;h4 id="document对象">&lt;code>document&lt;/code>对象&lt;/h4>
+&lt;p>&lt;strong>代表整个&lt;code>HTML&lt;/code>文档，可以用来访问页面中的所有元素。&lt;/strong>
+每一个载入浏览器的 &lt;code>HTML&lt;/code> 文档都会成为 &lt;code>document&lt;/code> 对象。&lt;code>document&lt;/code> 对象使我们可以使用脚本(js)中对 HTML 页面中的所有元素进行访问。&lt;code>document&lt;/code> 对象是 &lt;code>window&lt;/code> 对象的一部分可以通过 &lt;code>window.document&lt;/code> 属性对其进行访问
+&lt;code>HTMLDocument&lt;/code> 接口进行了扩展，定义 &lt;code>HTML&lt;/code> 专用的属性和方法，很多属性和方法都是 &lt;code>HTMLCollection&lt;/code> 对象，其中保存了对锚、表单、链接以及其他可脚本元素的引用。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>document&lt;/code>是文档对象，以&lt;code>html&lt;/code>形式展示。是&lt;code>window&lt;/code>对象里面的 一部分&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　41</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-41/</link><pubDate>Wed, 27 Oct 2021 14:51:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-41/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-41/frontend-41-cover.jpg" alt="Featured image of post 毎日のフロントエンド　41" />&lt;h1 id="第四十一日">第四十一日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="javascript-websocket-怎么兼容处理">&lt;strong>JavaScript&lt;/strong> webSocket 怎么兼容处理&lt;/h3>
 &lt;p>&lt;code>WebSocket&lt;/code>是一种在服务器与客户端双向通讯的技术，使用原生的&lt;code>WebSocket&lt;/code>可以最小化 服务器资源的使用并且为两者提供了一种统一的通信方式。随着 HTML5 的普及，现代浏览器（IE10+）基本上都已经原生支持&lt;code>WebSocket&lt;/code>&lt;/p>
