@@ -158,10 +158,11 @@ const func = (array, count) => {
     // 注意：  因为 下文的 forEach 循环，回遍历的最后一个元素，说明最后一个元素加current 会大于 avg， 因此取最后一个元素的一半相加进行判断
 
     // 如果小，则： 将倒数第二个元素（如果存在的话） push 进入 结果二维数组的 上一个循环产生结果（数组元素）中。
-    // 因为，为了确保分组的和尽量相等，（若加上最后一个元素，已经超过avg）
+    // 因为，为了确保分组的和尽量相等，（若加上最后一个元素，已经超过avg） ??????
     if (current + array[array.length - 1] / 2 < avg && i) {
       array.pop();
       // i >= 1
+      // todo: ???
       res_arr[i - 1].push(array[array.length - 1]);
     }
 
@@ -195,6 +196,40 @@ const func = (array, count) => {
 
 //test
 console.log(func([11, 42, 23, 4, 5, 6, 4, 5, 6, 11, 23, 42, 56, 78, 90], 3));
+```
+
+---
+
+```js
+function getSum(arr) {
+  return arr.reduce((a, b) => a + b, 0);
+}
+
+function getMinArrIndex(arrs) {
+  let minArrIndex = 0;
+
+  arrs.forEach((arr, index) => {
+    if (getSum(arrs[minArrIndex]) > getSum(arrs[index])) {
+      minArrIndex = index;
+    }
+  });
+  return minArrIndex;
+}
+
+function getAlmostEqual(arr, part) {
+  let orderedArr = arr.sort((a, b) => b - a);
+  let res = Array(part)
+    .fill(void 0)
+    .map(() => []);
+
+  orderedArr.forEach((value) => {
+    let minArrIndex = getMinArrIndex(res);
+    res[minArrIndex].push(value);
+  });
+  return res;
+}
+
+getAlmostEqual([11, 42, 23, 4, 5, 6, 4, 5, 6, 11, 23, 42, 56, 78, 90], 3);
 ```
 
 ## Reference
