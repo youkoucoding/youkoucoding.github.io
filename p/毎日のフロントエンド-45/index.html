@@ -172,10 +172,11 @@ frontend 每日一练
     <span class=c1>// 注意：  因为 下文的 forEach 循环，回遍历的最后一个元素，说明最后一个元素加current 会大于 avg， 因此取最后一个元素的一半相加进行判断
 </span><span class=c1></span>
     <span class=c1>// 如果小，则： 将倒数第二个元素（如果存在的话） push 进入 结果二维数组的 上一个循环产生结果（数组元素）中。
-</span><span class=c1></span>    <span class=c1>// 因为，为了确保分组的和尽量相等，（若加上最后一个元素，已经超过avg）
+</span><span class=c1></span>    <span class=c1>// 因为，为了确保分组的和尽量相等，（若加上最后一个元素，已经超过avg） ??????
 </span><span class=c1></span>    <span class=k>if</span> <span class=p>(</span><span class=nx>current</span> <span class=o>+</span> <span class=nx>array</span><span class=p>[</span><span class=nx>array</span><span class=p>.</span><span class=nx>length</span> <span class=o>-</span> <span class=mi>1</span><span class=p>]</span> <span class=o>/</span> <span class=mi>2</span> <span class=o>&lt;</span> <span class=nx>avg</span> <span class=o>&amp;&amp;</span> <span class=nx>i</span><span class=p>)</span> <span class=p>{</span>
       <span class=nx>array</span><span class=p>.</span><span class=nx>pop</span><span class=p>();</span>
       <span class=c1>// i &gt;= 1
+</span><span class=c1></span>      <span class=c1>// todo: ???
 </span><span class=c1></span>      <span class=nx>res_arr</span><span class=p>[</span><span class=nx>i</span> <span class=o>-</span> <span class=mi>1</span><span class=p>].</span><span class=nx>push</span><span class=p>(</span><span class=nx>array</span><span class=p>[</span><span class=nx>array</span><span class=p>.</span><span class=nx>length</span> <span class=o>-</span> <span class=mi>1</span><span class=p>]);</span>
     <span class=p>}</span>
 
@@ -209,6 +210,36 @@ frontend 每日一练
 
 <span class=c1>//test
 </span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>func</span><span class=p>([</span><span class=mi>11</span><span class=p>,</span> <span class=mi>42</span><span class=p>,</span> <span class=mi>23</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>,</span> <span class=mi>11</span><span class=p>,</span> <span class=mi>23</span><span class=p>,</span> <span class=mi>42</span><span class=p>,</span> <span class=mi>56</span><span class=p>,</span> <span class=mi>78</span><span class=p>,</span> <span class=mi>90</span><span class=p>],</span> <span class=mi>3</span><span class=p>));</span>
+</code></pre></div><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>getSum</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=nx>arr</span><span class=p>.</span><span class=nx>reduce</span><span class=p>((</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>a</span> <span class=o>+</span> <span class=nx>b</span><span class=p>,</span> <span class=mi>0</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>getMinArrIndex</span><span class=p>(</span><span class=nx>arrs</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kd>let</span> <span class=nx>minArrIndex</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+
+  <span class=nx>arrs</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>arr</span><span class=p>,</span> <span class=nx>index</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=nx>getSum</span><span class=p>(</span><span class=nx>arrs</span><span class=p>[</span><span class=nx>minArrIndex</span><span class=p>])</span> <span class=o>&gt;</span> <span class=nx>getSum</span><span class=p>(</span><span class=nx>arrs</span><span class=p>[</span><span class=nx>index</span><span class=p>]))</span> <span class=p>{</span>
+      <span class=nx>minArrIndex</span> <span class=o>=</span> <span class=nx>index</span><span class=p>;</span>
+    <span class=p>}</span>
+  <span class=p>});</span>
+  <span class=k>return</span> <span class=nx>minArrIndex</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>getAlmostEqual</span><span class=p>(</span><span class=nx>arr</span><span class=p>,</span> <span class=nx>part</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kd>let</span> <span class=nx>orderedArr</span> <span class=o>=</span> <span class=nx>arr</span><span class=p>.</span><span class=nx>sort</span><span class=p>((</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>b</span> <span class=o>-</span> <span class=nx>a</span><span class=p>);</span>
+  <span class=kd>let</span> <span class=nx>res</span> <span class=o>=</span> <span class=nb>Array</span><span class=p>(</span><span class=nx>part</span><span class=p>)</span>
+    <span class=p>.</span><span class=nx>fill</span><span class=p>(</span><span class=k>void</span> <span class=mi>0</span><span class=p>)</span>
+    <span class=p>.</span><span class=nx>map</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>[]);</span>
+
+  <span class=nx>orderedArr</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>value</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=kd>let</span> <span class=nx>minArrIndex</span> <span class=o>=</span> <span class=nx>getMinArrIndex</span><span class=p>(</span><span class=nx>res</span><span class=p>);</span>
+    <span class=nx>res</span><span class=p>[</span><span class=nx>minArrIndex</span><span class=p>].</span><span class=nx>push</span><span class=p>(</span><span class=nx>value</span><span class=p>);</span>
+  <span class=p>});</span>
+  <span class=k>return</span> <span class=nx>res</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=nx>getAlmostEqual</span><span class=p>([</span><span class=mi>11</span><span class=p>,</span> <span class=mi>42</span><span class=p>,</span> <span class=mi>23</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>,</span> <span class=mi>11</span><span class=p>,</span> <span class=mi>23</span><span class=p>,</span> <span class=mi>42</span><span class=p>,</span> <span class=mi>56</span><span class=p>,</span> <span class=mi>78</span><span class=p>,</span> <span class=mi>90</span><span class=p>],</span> <span class=mi>3</span><span class=p>);</span>
 </code></pre></div><h2 id=reference>Reference</h2>
 <p><a class=link href=https://github.com/haizlin/fe-interview target=_blank rel=noopener>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……</a></p>
 <p><a class=link href=https://github.com/lgwebdream/FE-Interview target=_blank rel=noopener>lgwebdream/FE-Interview </a></p>
