@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 01 Nov 2021 15:01:13 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　46</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/</link><pubDate>Mon, 01 Nov 2021 15:01:13 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/frontend-46-cover.jpg" alt="Featured image of post 毎日のフロントエンド　46" />&lt;h1 id="第四十六日">第四十六日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 02 Nov 2021 10:34:36 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　47</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/</link><pubDate>Tue, 02 Nov 2021 10:34:36 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/frontend-47-cover.jpg" alt="Featured image of post 毎日のフロントエンド　47" />&lt;h1 id="第四十七日">第四十七日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5-如何使用音频和视频">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code> 如何使用音频和视频&lt;/h3>
+&lt;p>&lt;code>&amp;lt;video&amp;gt;&lt;/code>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>&lt;code>&amp;lt;audio&amp;gt;&lt;/code>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-怎样抽离样式模块的">&lt;strong>Question:&lt;/strong> 怎样抽离样式模块的&lt;/h3>
+&lt;p>通用的和业务相关的分离出来，通用的做成样式模块儿共享，业务相关的，放进业务相关的库里面做成对应功能的模块儿。&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-请说说对事件冒泡机制的理解">&lt;strong>Question:&lt;/strong> 请说说对事件冒泡机制的理解&lt;/h3>
+&lt;p>&lt;figure
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/event-flow.svg" >
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/event-flow.svg"
+loading="lazy"
+alt="event-flow">
+&lt;/a>
+&lt;figcaption>event-flow&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>按照 W3C 事件模型，事件流按照次序依次为&lt;strong>捕获阶段&lt;/strong>， &lt;strong>目标阶段&lt;/strong>，&lt;strong>冒泡阶段&lt;/strong>。如果事件绑定时候，禁止了冒泡，则事件流会停止在目标阶段。&lt;/p>
+&lt;p>先说两个有关 DOM 事件流的概念事件冒泡和事件捕获。&lt;/p>
+&lt;ul>
+&lt;li>事件冒泡： 事件沿着 DOM 树向上通知&lt;/li>
+&lt;li>事件捕获：和事件冒泡相反，事件沿着 DOM 数向下通知&lt;/li>
+&lt;/ul>
+&lt;p>开发者可以自己决定事件处理注册到捕获阶段，或者是冒泡阶段。
+&lt;code>element1.addEventListener('click',doSomething2,true)&lt;/code> 如果最后一个参数为 true，则注册到捕获阶段。&lt;/p>
+&lt;h3 id="question-react-事件绑定原理4">&lt;strong>Question:&lt;/strong> React 事件绑定原理&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>&lt;/h3>
+&lt;p>React 并不是将 click 事件绑在该 div 的真实 DOM 上，而是在 document 处监听所有支持的事件，当事件发生并冒泡至 document 处时，React 将事件内容封装并交由真正的处理函数运行。这样的方式不仅减少了内存消耗，还能在组件挂载销毁时统一订阅和移除事件。
+另外冒泡到 document 上的事件也不是原生浏览器事件，而是 React 自己实现的合成事件（SyntheticEvent）。因此我们如果不想要事件冒泡的话，调用 &lt;code>event.stopPropagation&lt;/code> 是无效的，而应该调用 &lt;code>event.preventDefault&lt;/code>。&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 222;
+flex-basis: 533px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/react-event-flow.png" data-size="878x395">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/react-event-flow.png"
+width="878"
+height="395"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/react-event-flow_hu048f4e72918f920058a2cd3c85cf3ea2_104708_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/react-event-flow_hu048f4e72918f920058a2cd3c85cf3ea2_104708_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="react-event">
+&lt;/a>
+&lt;figcaption>react-event&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;video&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;audio&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3" role="doc-endnote">
+&lt;p>&lt;a class="link" href="http://nec.netease.com/standard/css-sort.html" target="_blank" rel="noopener"
+>分类方法 - CSS 规范 - 规范 - NEC : 更好的 CSS 样式解决方案&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview/issues/23" target="_blank" rel="noopener"
+>React 事件绑定原理 · Issue #23 · lgwebdream/FE-Interview&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド　46</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/</link><pubDate>Mon, 01 Nov 2021 15:01:13 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/frontend-46-cover.jpg" alt="Featured image of post 毎日のフロントエンド　46" />&lt;h1 id="第四十六日">第四十六日&lt;/h1>
 &lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="question-对媒体查询的理解">&lt;strong>Question:&lt;/strong> 对媒体查询的理解&lt;/h3>
 &lt;h4 id="css3中的媒体查询">&lt;code>CSS3&lt;/code>中的媒体查询&lt;/h4>
