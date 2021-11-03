@@ -1,0 +1,374 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　48</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　48">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-11-03T15:29:08+09:00"><meta property="article:modified_time" content="2021-11-03T15:29:08+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/frontend-48-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　48">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/frontend-48-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/frontend-48-cover_huee392f8af400356f6133da49ffc9f64d_1815593_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/frontend-48-cover_huee392f8af400356f6133da49ffc9f64d_1815593_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/frontend-48-cover_huee392f8af400356f6133da49ffc9f64d_1815593_1600x0_resize_q75_box.jpg 1600w" width=800 height=534 loading=lazy alt="Featured image of post 毎日のフロントエンド　48">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/>毎日のフロントエンド　48</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Nov 03, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 2 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第四十八日>第四十八日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-对-web-标准和-w3c-的理解与认识><strong>Question:</strong> 对 WEB 标准和 W3C 的理解与认识</h3>
+<p>web 标准简单来说可以分为结构、样式和行为。<code>HTML</code>标签构成页面的结构框架。<code>css</code>完成美化<code>html</code>标签构成的页面。<code>js</code>可以完成页面和用户的交互。</p>
+<p><code>W3C</code>对<code>web</code>标准提出了规范化的要求，也就是在实际编程中的一些代码规范：包含如下几点</p>
+<ol>
+<li>
+<p>对于结构要求：（标签规范可以提高搜索引擎对页面的抓取效率，对 SEO 很有帮助）</p>
+<ul>
+<li>标签字母要小写</li>
+<li>标签要闭合</li>
+<li>标签不允许随意嵌套</li>
+</ul>
+</li>
+<li>
+<p>对于 css 和 js 来说</p>
+<ul>
+<li>尽量使用外链 css 样式表和 js 脚本。是结构、表现和行为分为三块，符合规范。同时提高页面渲染速度，提高用户的体验。</li>
+<li>样式尽量少用行间样式表，使结构与表现分离，标签的 id 和 class 等属性命名要做到见文知义，标签越少，加载越快，用户体验提高，代码维护简单，便于改版</li>
+<li>不需要变动页面内容，便可提供打印版本而不需要复制内容，提高网站易用性。</li>
+</ul>
+</li>
+</ol>
+<h2 id=css>CSS</h2>
+<h3 id=question-全屏滚动的原理是什么吗它用到了-css-的哪些属性><strong>Question:</strong> 全屏滚动的原理是什么吗？它用到了 CSS 的哪些属性</h3>
+<ol>
+<li><code>html</code></li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;page-container&#34;</span><span class=p>&gt;</span>
+  <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;page-item&#34;</span><span class=p>&gt;</span>1<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+  <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;page-item&#34;</span><span class=p>&gt;</span>2<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+  <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;page-item&#34;</span><span class=p>&gt;</span>3<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</code></pre></div><ol start=2>
+<li><code>css</code></li>
+</ol>
+<p><code>html</code>, <code>body</code>设置 <code>overflow: hidden</code>, 让视图中只包括一个分页;
+设置滑动分页的长宽都是 <code>100%</code>;
+外部容器设置 <code>transition</code> 过渡效果, 并设置为相对定位, 滚动是修改外部容器的 Top 值, 实现滚动效果</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=nt>html</span><span class=o>,</span>
+<span class=nt>body</span> <span class=p>{</span>
+  <span class=k>padding</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+  <span class=k>margin</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+  <span class=k>overflow</span><span class=p>:</span> <span class=kc>hidden</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>page-container</span> <span class=p>{</span>
+  <span class=k>position</span><span class=p>:</span> <span class=kc>relative</span><span class=p>;</span>
+  <span class=k>top</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+  <span class=k>transition</span><span class=p>:</span> <span class=kc>all</span> <span class=mi>1000</span><span class=kt>ms</span> <span class=kc>ease</span><span class=p>;</span>
+  <span class=n>touch-action</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>page-item</span> <span class=p>{</span>
+  <span class=k>display</span><span class=p>:</span> <span class=kc>flex</span><span class=p>;</span>
+  <span class=k>justify-content</span><span class=p>:</span> <span class=kc>center</span><span class=p>;</span>
+  <span class=k>align-items</span><span class=p>:</span> <span class=kc>center</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>100</span><span class=kt>%</span><span class=p>;</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>100</span><span class=kt>%</span><span class=p>;</span>
+  <span class=k>border</span><span class=p>:</span> <span class=mi>1</span><span class=kt>px</span> <span class=kc>solid</span> <span class=mh>#ddd</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><ol start=3>
+<li>JavaScript</li>
+</ol>
+<ul>
+<li>初始化,容器高度设置为窗口高度</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>var</span> <span class=nx>container</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>querySelector</span><span class=p>(</span><span class=s1>&#39;.page-container&#39;</span><span class=p>);</span>
+<span class=c1>// 获取根元素高度, 页面可视高度
+</span><span class=c1></span><span class=kd>var</span> <span class=nx>viewHeight</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>documentElement</span><span class=p>.</span><span class=nx>clientHeight</span><span class=p>;</span>
+<span class=c1>// 获取滚动的页数
+</span><span class=c1></span><span class=kd>var</span> <span class=nx>pageNum</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>querySelectorAll</span><span class=p>(</span><span class=s1>&#39;.page-item&#39;</span><span class=p>).</span><span class=nx>length</span><span class=p>;</span>
+<span class=c1>// 初始化当前位置, 距离原始顶部距离
+</span><span class=c1></span><span class=kd>var</span> <span class=nx>currentPosition</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+<span class=c1>// 设置页面高度
+</span><span class=c1></span><span class=nx>container</span><span class=p>.</span><span class=nx>style</span><span class=p>.</span><span class=nx>height</span> <span class=o>=</span> <span class=nx>viewHeight</span> <span class=o>+</span> <span class=s1>&#39;px&#39;</span><span class=p>;</span>
+</code></pre></div><ul>
+<li>初始化滚动事件</li>
+</ul>
+<p>向下滚动时, 当 <code>currentPosition</code> 比 整体分页高度 大的时候(绝对值相比小的时候), 向下滚动;
+向上滚动时, 当 <code>currentPosition</code> 大于 0 的时候, 向上滚动.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// 向下滚动页面
+</span><span class=c1></span><span class=kd>function</span> <span class=nx>goDown</span><span class=p>()</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>currentPosition</span> <span class=o>&gt;</span> <span class=o>-</span><span class=nx>viewHeight</span> <span class=o>*</span> <span class=p>(</span><span class=nx>pageNum</span> <span class=o>-</span> <span class=mi>1</span><span class=p>))</span> <span class=p>{</span>
+    <span class=nx>currentPosition</span> <span class=o>=</span> <span class=nx>currentPosition</span> <span class=o>-</span> <span class=nx>viewHeight</span><span class=p>;</span>
+    <span class=nx>container</span><span class=p>.</span><span class=nx>style</span><span class=p>.</span><span class=nx>top</span> <span class=o>=</span> <span class=nx>currentPosition</span> <span class=o>+</span> <span class=s1>&#39;px&#39;</span><span class=p>;</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+
+<span class=c1>// 向上滚动页面
+</span><span class=c1></span><span class=kd>function</span> <span class=nx>goUp</span><span class=p>()</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>currentPosition</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>currentPosition</span> <span class=o>=</span> <span class=nx>currentPosition</span> <span class=o>+</span> <span class=nx>viewHeight</span><span class=p>;</span>
+    <span class=nx>container</span><span class=p>.</span><span class=nx>style</span><span class=p>.</span><span class=nx>top</span> <span class=o>=</span> <span class=nx>currentPosition</span> <span class=o>+</span> <span class=s1>&#39;px&#39;</span><span class=p>;</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><ul>
+<li>节流函数: 即在规定时间内只会触发一次指定方法, 用于滚动时防止多次触发</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>throttle</span><span class=p>(</span><span class=nx>fn</span><span class=p>,</span> <span class=nx>delay</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kd>let</span> <span class=nx>baseTime</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+  <span class=k>return</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>currentTime</span> <span class=o>=</span> <span class=nb>Date</span><span class=p>.</span><span class=nx>now</span><span class=p>();</span>
+    <span class=k>if</span> <span class=p>(</span><span class=nx>baseTime</span> <span class=o>+</span> <span class=nx>delay</span> <span class=o>&lt;</span> <span class=nx>currentTime</span><span class=p>)</span> <span class=p>{</span>
+      <span class=nx>fn</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=k>this</span><span class=p>,</span> <span class=nx>arguments</span><span class=p>);</span>
+      <span class=nx>baseTime</span> <span class=o>=</span> <span class=nx>currentTime</span><span class=p>;</span>
+    <span class=p>}</span>
+  <span class=p>};</span>
+<span class=p>}</span>
+</code></pre></div><ul>
+<li>监听鼠标滚动</li>
+</ul>
+<p>滚动事件 firefox 与其他浏览器的事件不同, 所以需要进行判断. <code>deltaY</code>大于 0 的时候, 想下滚动; 反之, 向上滚动.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>var</span> <span class=nx>handlerWheel</span> <span class=o>=</span> <span class=nx>throttle</span><span class=p>(</span><span class=nx>scrollMove</span><span class=p>,</span> <span class=mi>1000</span><span class=p>);</span>
+<span class=c1>// https://developer.mozilla.org/en-US/docs/Web/API/Element/mousewheel_event#The_detail_property
+</span><span class=c1>// firefox的页面滚动事件其他浏览器不一样
+</span><span class=c1></span><span class=k>if</span> <span class=p>(</span><span class=nx>navigator</span><span class=p>.</span><span class=nx>userAgent</span><span class=p>.</span><span class=nx>toLowerCase</span><span class=p>().</span><span class=nx>indexOf</span><span class=p>(</span><span class=s1>&#39;firefox&#39;</span><span class=p>)</span> <span class=o>===</span> <span class=o>-</span><span class=mi>1</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nb>document</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;mousewheel&#39;</span><span class=p>,</span> <span class=nx>handlerWheel</span><span class=p>);</span>
+<span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+  <span class=nb>document</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;DOMMouseScroll&#39;</span><span class=p>,</span> <span class=nx>handlerWheel</span><span class=p>);</span>
+<span class=p>}</span>
+<span class=kd>function</span> <span class=nx>scrollMove</span><span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>deltaY</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>goDown</span><span class=p>();</span>
+  <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+    <span class=nx>goUp</span><span class=p>();</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><ul>
+<li>监听移动端 touch 操作</li>
+</ul>
+<p>当 touch 的最终位置大于起始位置时, 则页面向上滚动; 反之, 向下滚动.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>var</span> <span class=nx>touchStartY</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+<span class=nb>document</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;touchstart&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>event</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=nx>touchStartY</span> <span class=o>=</span> <span class=nx>event</span><span class=p>.</span><span class=nx>touches</span><span class=p>[</span><span class=mi>0</span><span class=p>].</span><span class=nx>pageY</span><span class=p>;</span>
+<span class=p>});</span>
+<span class=kd>var</span> <span class=nx>handleTouchEnd</span> <span class=o>=</span> <span class=nx>throttle</span><span class=p>(</span><span class=nx>touchEnd</span><span class=p>,</span> <span class=mi>500</span><span class=p>);</span>
+<span class=nb>document</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;touchend&#39;</span><span class=p>,</span> <span class=nx>handleTouchEnd</span><span class=p>);</span>
+<span class=kd>function</span> <span class=nx>touchEnd</span><span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kd>var</span> <span class=nx>touchEndY</span> <span class=o>=</span> <span class=nx>e</span><span class=p>.</span><span class=nx>changedTouches</span><span class=p>[</span><span class=mi>0</span><span class=p>].</span><span class=nx>pageY</span><span class=p>;</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>touchEndY</span> <span class=o>-</span> <span class=nx>touchStartY</span> <span class=o>&lt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+    <span class=c1>// 向上滑动, 页面向下滚动
+</span><span class=c1></span>    <span class=nx>goDown</span><span class=p>();</span>
+  <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+    <span class=nx>goUp</span><span class=p>();</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><h2 id=javascript>JavaScript</h2>
+<h3 id=question-对事件循环有了解吗><strong>Question:</strong> 对事件循环有了解吗</h3>
+<h4 id=单线程模型>单线程模型</h4>
+<p>JS 引擎有多个线程，但引擎同时只执行一个任务，其他任务都必须在后面排队，即引擎只在一个线程上运行。这个线程称为主线程。</p>
+<h4 id=事件循环机制>事件循环机制</h4>
+<p>JS 本身并不慢，慢的是读写外部数据，比如等待 Ajax 请求返回结果。如果等着 Ajax 返回结果出来，再往下执行，就会耗费很长的时间。所以 JS 设计了一种机制，CPU 可以不管 IO 操作，而是挂起该任务，先执行后面的任务，等到 IO 操作返回了结果，再继续执行挂起的任务。</p>
+<p>同步任务执行完后，引擎一遍又一遍检查那些挂起来的异步任务是否满足进入主线程的条件。这种循环检查的机制，就叫做事件循环机制。</p>
+<h4 id=任务队列>任务队列</h4>
+<p>JS 引擎运行时，除了一个正在运行的主线程，还提供一个或多个任务队列，里面是各种被挂起的异步任务。首先，主线程会去执行所有的同步任务，等到同步任务全部执行完，就会去看任务队列里面的异步任务，如果满足条件，那么异步任务就重新进入主线程开始执行，这时它就会变成同步任务。等到执行完，下一个异步任务再进入主线程开始执行。一旦任务队列清空，程序就结束执行。</p>
+<h4 id=同步任务和异步任务>同步任务和异步任务</h4>
+<p>程序里面所有的任务可以分成两类：</p>
+<p>同步任务：没有被引擎挂起，在主线程上排队执行的任务。只有前一个任务执行完毕，才能执行后一个任务。
+异步任务：被引擎挂起，不进入主线程，而进入任务队列的任务。只有引擎认为某个异步任务可以执行了，该任务才会进入主线程执行。排在异步任务后面的代码，不用等待异步任务结束会马上运行。</p>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=https://github.com/haizlin/fe-interview target=_blank rel=noopener>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/frontend-47-cover.5026ca15c16458097121046058665f9c_huee392f8af400356f6133da49ffc9f64d_1815593_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-UCbKFcFkWAlxIQRgWGZfnA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　47</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/frontend-46-cover.305c255a676775cc644f6911dd275d60_hub658970c4a8c56564578238029a5a6aa_1150640_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-MFwlWmdndcxkT2kR3SddYA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　46</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-45/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-45/frontend-45-cover.305c255a676775cc644f6911dd275d60_hub658970c4a8c56564578238029a5a6aa_1150640_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-MFwlWmdndcxkT2kR3SddYA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　45</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-44/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-44/frontend-44-cover.f4f5fe96d4669a341cd8c93dbb80cb27_huc6e905b6a2b48aceec4d5bdac449ba5b_2387857_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-9PX+ltRmmjQc2Mk9u4DLJw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　44</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-43/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-43/frontend-43-cover.93ebff06667bee9c918f4c00127790e9_hu848b744b5f7a7a4725cf111cfb5199df_2021980_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-k+v/BmZ77pyRj0wAEneQ6Q==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　43</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-对-web-标准和-w3c-的理解与认识><strong>Question:</strong> 对 WEB 标准和 W3C 的理解与认识</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-全屏滚动的原理是什么吗它用到了-css-的哪些属性><strong>Question:</strong> 全屏滚动的原理是什么吗？它用到了 CSS 的哪些属性</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-对事件循环有了解吗><strong>Question:</strong> 对事件循环有了解吗</a>
+<ol>
+<li><a href=#单线程模型>单线程模型</a></li>
+<li><a href=#事件循环机制>事件循环机制</a></li>
+<li><a href=#任务队列>任务队列</a></li>
+<li><a href=#同步任务和异步任务>同步任务和异步任务</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

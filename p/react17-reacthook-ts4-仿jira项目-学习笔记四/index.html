@@ -100,15 +100,15 @@ GET /epics?state<span class=o>=</span>finished
 POST /epics
 PUT /epics/5
 </code></pre></div><h3 id=四-将实际数据包装在-data-字段中>四， 将实际数据包装在 data 字段中</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=err>//</span> <span class=err>GET</span> <span class=err>/epics在数据字段中返回epic资源列表</span>
-<span class=p>{</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=c1>// GET /epics在数据字段中返回epic资源列表
+</span><span class=c1></span><span class=p>{</span>
   <span class=nt>&#34;data&#34;</span><span class=p>:</span> <span class=p>[</span>
     <span class=p>{</span> <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span> <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;epic1&#34;</span> <span class=p>},</span>
     <span class=p>{</span> <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span> <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;epic2&#34;</span> <span class=p>}</span>
   <span class=p>]</span>
 <span class=p>}</span>
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=err>//</span> <span class=err>GET</span> <span class=err>/epic/</span><span class=mi>1</span><span class=err>在数据字段中返回id为</span><span class=mi>1</span><span class=err>的epic对象</span>
-<span class=p>{</span>
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=c1>// GET /epic/1在数据字段中返回id为1的epic对象
+</span><span class=c1></span><span class=p>{</span>
   <span class=nt>&#34;data&#34;</span><span class=p>:</span> <span class=p>{</span>
     <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span>
     <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;epic1&#34;</span>
@@ -132,11 +132,11 @@ GET /employees?filter<span class=o>[</span>id<span class=o>]=</span>1,2
 <p><a class=link href=https://developer.mozilla.org/en-US/docs/Web/HTTP/Status target=_blank rel=noopener>HTTP response status codes - HTTP | MDN</a></p>
 <p>状态码的使用要尽量精确。如果资源可用，但禁止用户访问，则返回 403。如果资源曾经存在但现已被删除或停用，请使用 410。</p>
 <h3 id=七-提供有用的错误消息>七， 提供有用的错误消息</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=err>//</span> <span class=err>request</span>
-<span class=err>GET</span> <span class=err>/epics?state=unknow</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=c1>// request
+</span><span class=c1></span><span class=err>GET</span> <span class=err>/epics?state=unknow</span>
 
-<span class=err>//</span> <span class=err>response</span>
-<span class=p>{</span>
+<span class=c1>// response
+</span><span class=c1></span><span class=p>{</span>
   <span class=nt>&#34;errors&#34;</span><span class=p>:</span> <span class=p>[</span>
     <span class=p>{</span>
       <span class=nt>&#34;status&#34;</span><span class=p>:</span> <span class=mi>400</span><span class=p>,</span>
@@ -149,11 +149,11 @@ GET /employees?filter<span class=o>[</span>id<span class=o>]=</span>1,2
   <span class=p>]</span>
 <span class=p>}</span>
 </code></pre></div><h3 id=八hateoas---provide-links-for-navigating-through-your-api>八，HATEOAS - Provide Links for Navigating through your API</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=err>//</span> <span class=err>request</span>
-<span class=err>GET</span> <span class=err>/epic</span>
-<span class=err>//</span> <span class=err>好的做法是在响应中提供客户可以跟进的链接</span>
-<span class=err>//</span> <span class=err>response</span>
-<span class=p>{</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=c1>// request
+</span><span class=c1></span><span class=err>GET</span> <span class=err>/epic</span>
+<span class=c1>// 好的做法是在响应中提供客户可以跟进的链接
+</span><span class=c1>// response
+</span><span class=c1></span><span class=p>{</span>
   <span class=nt>&#34;data&#34;</span><span class=p>:</span> <span class=p>[</span>
     <span class=p>{</span>
       <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span>
@@ -187,8 +187,8 @@ GET /employees?filter<span class=o>[</span>id<span class=o>]=</span>1,2
           <span class=s2>&#34;http://www.domain.com/employees/12&#34;</span><span class=p>,</span>
           <span class=s2>&#34;http://www.domain.com/employees/13&#34;</span>
         <span class=p>]</span>
-        <span class=err>//or</span> <span class=s2>&#34;teamMembers&#34;</span><span class=p>:</span> <span class=s2>&#34;http://www.domain.com/employees/1/teamMembers&#34;</span>
-      <span class=p>}</span>
+        <span class=c1>//or &#34;teamMembers&#34;: &#34;http://www.domain.com/employees/1/teamMembers&#34;
+</span><span class=c1></span>      <span class=p>}</span>
     <span class=p>}</span>
   <span class=p>]</span>
 <span class=p>}</span>
@@ -318,8 +318,8 @@ GET /employees?filter<span class=o>[</span>id<span class=o>]=</span>1,2
     <span class=nt>&#34;total&#34;</span><span class=p>:</span> <span class=mi>3465</span>
   <span class=p>},</span>
   <span class=nt>&#34;data&#34;</span><span class=p>:</span> <span class=p>[</span>
-    <span class=err>//...</span>
-  <span class=p>],</span>
+    <span class=c1>//...
+</span><span class=c1></span>  <span class=p>],</span>
   <span class=nt>&#34;links&#34;</span><span class=p>:</span> <span class=p>{</span>
     <span class=nt>&#34;next&#34;</span><span class=p>:</span> <span class=s2>&#34;http://www.domain.com/employees?offset=30&amp;limit=10&#34;</span><span class=p>,</span>
     <span class=nt>&#34;prev&#34;</span><span class=p>:</span> <span class=s2>&#34;http://www.domain.com/employees?offset=10&amp;limit=10&#34;</span>
@@ -352,18 +352,18 @@ GET /employees?pageSize<span class=o>=</span>100<span class=p>&amp;</span><span 
 <blockquote>
 <p><a class=link href=https://phauer.com/2018/web-api-pagination-timestamp-id-continuation-token/ target=_blank rel=noopener>Web API Pagination with the &lsquo;Timestamp_ID&rsquo; Continuation Token</a></p>
 </blockquote>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=err>//</span> <span class=err>request</span>
-<span class=err>GET</span> <span class=err>/employees?pageSize=</span><span class=mi>100</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=c1>// request
+</span><span class=c1></span><span class=err>GET</span> <span class=err>/employees?pageSize=</span><span class=mi>100</span>
 
-<span class=err>//</span> <span class=err>response</span>
-<span class=p>{</span>
+<span class=c1>// response
+</span><span class=c1></span><span class=p>{</span>
   <span class=nt>&#34;pagination&#34;</span><span class=p>:</span> <span class=p>{</span>
     <span class=nt>&#34;continuationToken&#34;</span><span class=p>:</span> <span class=s2>&#34;1504224000000_10&#34;</span>
   <span class=p>},</span>
   <span class=nt>&#34;data&#34;</span><span class=p>:</span> <span class=p>[</span>
-    <span class=err>//</span> <span class=err>...</span>
-    <span class=err>//</span> <span class=err>last</span> <span class=err>element:</span>
-    <span class=p>{</span> <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=mi>10</span><span class=p>,</span> <span class=nt>&#34;dateCreated&#34;</span><span class=p>:</span> <span class=mi>1504224000000</span> <span class=p>}</span>
+    <span class=c1>// ...
+</span><span class=c1></span>    <span class=c1>// last element:
+</span><span class=c1></span>    <span class=p>{</span> <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=mi>10</span><span class=p>,</span> <span class=nt>&#34;dateCreated&#34;</span><span class=p>:</span> <span class=mi>1504224000000</span> <span class=p>}</span>
   <span class=p>],</span>
   <span class=nt>&#34;links&#34;</span><span class=p>:</span> <span class=p>{</span>
     <span class=nt>&#34;next&#34;</span><span class=p>:</span> <span class=s2>&#34;http://www.domain.com/employees?pageSize=100&amp;continue=1504224000000_10&#34;</span>

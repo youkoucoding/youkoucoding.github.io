@@ -93,11 +93,11 @@ npx create-react-app my-app --use-npm <span class=c1># if you prefer to use npm<
 </li>
 </ul>
 <h4 id=3-analizing-the-bundle-size>3. Analizing the Bundle Size</h4>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fish data-lang=fish><span class=nf>npm</span> install <span class=na>--save</span> <span class=nb>source</span><span class=na>-map-explorer</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fish data-lang=fish><span class=nf>npm</span> install <span class=na>--save</span> <span class=nb>source</span>-map-explorer
 <span class=k>or</span>
-<span class=nf>yarn</span> add <span class=nb>source</span><span class=na>-map-explorer</span>
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=err>//</span> <span class=err>package.json</span>
-
+<span class=nf>yarn</span> add <span class=nb>source</span>-map-explorer
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=c1>// package.json
+</span><span class=c1></span>
 <span class=s2>&#34;scripts&#34;</span><span class=err>:</span> <span class=p>{</span>
 <span class=err>+</span>    <span class=nt>&#34;analyze&#34;</span><span class=p>:</span> <span class=s2>&#34;source-map-explorer &#39;build/static/js/*.js&#39;&#34;</span><span class=p>,</span>
      <span class=nt>&#34;start&#34;</span><span class=p>:</span> <span class=s2>&#34;react-scripts start&#34;</span><span class=p>,</span>

@@ -1,4 +1,163 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 02 Nov 2021 10:34:36 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　47</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/</link><pubDate>Tue, 02 Nov 2021 10:34:36 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/frontend-47-cover.jpg" alt="Featured image of post 毎日のフロントエンド　47" />&lt;h1 id="第四十七日">第四十七日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 03 Nov 2021 15:29:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　48</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/</link><pubDate>Wed, 03 Nov 2021 15:29:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/frontend-48-cover.jpg" alt="Featured image of post 毎日のフロントエンド　48" />&lt;h1 id="第四十八日">第四十八日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-对-web-标准和-w3c-的理解与认识">&lt;strong>Question:&lt;/strong> 对 WEB 标准和 W3C 的理解与认识&lt;/h3>
+&lt;p>web 标准简单来说可以分为结构、样式和行为。&lt;code>HTML&lt;/code>标签构成页面的结构框架。&lt;code>css&lt;/code>完成美化&lt;code>html&lt;/code>标签构成的页面。&lt;code>js&lt;/code>可以完成页面和用户的交互。&lt;/p>
+&lt;p>&lt;code>W3C&lt;/code>对&lt;code>web&lt;/code>标准提出了规范化的要求，也就是在实际编程中的一些代码规范：包含如下几点&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>对于结构要求：（标签规范可以提高搜索引擎对页面的抓取效率，对 SEO 很有帮助）&lt;/p>
+&lt;ul>
+&lt;li>标签字母要小写&lt;/li>
+&lt;li>标签要闭合&lt;/li>
+&lt;li>标签不允许随意嵌套&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>对于 css 和 js 来说&lt;/p>
+&lt;ul>
+&lt;li>尽量使用外链 css 样式表和 js 脚本。是结构、表现和行为分为三块，符合规范。同时提高页面渲染速度，提高用户的体验。&lt;/li>
+&lt;li>样式尽量少用行间样式表，使结构与表现分离，标签的 id 和 class 等属性命名要做到见文知义，标签越少，加载越快，用户体验提高，代码维护简单，便于改版&lt;/li>
+&lt;li>不需要变动页面内容，便可提供打印版本而不需要复制内容，提高网站易用性。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-全屏滚动的原理是什么吗它用到了-css-的哪些属性">&lt;strong>Question:&lt;/strong> 全屏滚动的原理是什么吗？它用到了 CSS 的哪些属性&lt;/h3>
+&lt;ol>
+&lt;li>&lt;code>html&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;page-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;page-item&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>1&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;page-item&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>2&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;page-item&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>3&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>&lt;code>css&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;code>html&lt;/code>, &lt;code>body&lt;/code>设置 &lt;code>overflow: hidden&lt;/code>, 让视图中只包括一个分页;
+设置滑动分页的长宽都是 &lt;code>100%&lt;/code>;
+外部容器设置 &lt;code>transition&lt;/code> 过渡效果, 并设置为相对定位, 滚动是修改外部容器的 Top 值, 实现滚动效果&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="nt">html&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="nt">body&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">overflow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">hidden&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">page-container&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">relative&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">transition&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">all&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="kt">ms&lt;/span> &lt;span class="kc">ease&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="n">touch-action&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">page-item&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">justify-content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">align-items&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mh">#ddd&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>JavaScript&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>初始化,容器高度设置为窗口高度&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">container&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;.page-container&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 获取根元素高度, 页面可视高度
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">viewHeight&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">documentElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">clientHeight&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// 获取滚动的页数
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">pageNum&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelectorAll&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;.page-item&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// 初始化当前位置, 距离原始顶部距离
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">currentPosition&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// 设置页面高度
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">container&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">height&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">viewHeight&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;px&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>初始化滚动事件&lt;/li>
+&lt;/ul>
+&lt;p>向下滚动时, 当 &lt;code>currentPosition&lt;/code> 比 整体分页高度 大的时候(绝对值相比小的时候), 向下滚动;
+向上滚动时, 当 &lt;code>currentPosition&lt;/code> 大于 0 的时候, 向上滚动.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 向下滚动页面
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">goDown&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">currentPosition&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="nx">viewHeight&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">pageNum&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">currentPosition&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">currentPosition&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">viewHeight&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">container&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">top&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">currentPosition&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;px&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// 向上滚动页面
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">goUp&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">currentPosition&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">currentPosition&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">currentPosition&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">viewHeight&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">container&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">top&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">currentPosition&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;px&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>节流函数: 即在规定时间内只会触发一次指定方法, 用于滚动时防止多次触发&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">throttle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fn&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">delay&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">baseTime&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">currentTime&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">now&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">baseTime&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">delay&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">currentTime&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">fn&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">baseTime&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">currentTime&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>监听鼠标滚动&lt;/li>
+&lt;/ul>
+&lt;p>滚动事件 firefox 与其他浏览器的事件不同, 所以需要进行判断. &lt;code>deltaY&lt;/code>大于 0 的时候, 想下滚动; 反之, 向上滚动.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">handlerWheel&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">throttle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">scrollMove&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// https://developer.mozilla.org/en-US/docs/Web/API/Element/mousewheel_event#The_detail_property
+&lt;/span>&lt;span class="c1">// firefox的页面滚动事件其他浏览器不一样
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">navigator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">userAgent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toLowerCase&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">indexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;firefox&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;mousewheel&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">handlerWheel&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;DOMMouseScroll&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">handlerWheel&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">scrollMove&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">deltaY&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">goDown&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">goUp&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>监听移动端 touch 操作&lt;/li>
+&lt;/ul>
+&lt;p>当 touch 的最终位置大于起始位置时, 则页面向上滚动; 反之, 向下滚动.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">touchStartY&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;touchstart&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">event&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">touchStartY&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">touches&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">pageY&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">handleTouchEnd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">throttle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">touchEnd&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">500&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;touchend&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">handleTouchEnd&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">touchEnd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">touchEndY&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">changedTouches&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">pageY&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">touchEndY&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">touchStartY&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 向上滑动, 页面向下滚动
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">goDown&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">goUp&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-对事件循环有了解吗">&lt;strong>Question:&lt;/strong> 对事件循环有了解吗&lt;/h3>
+&lt;h4 id="单线程模型">单线程模型&lt;/h4>
+&lt;p>JS 引擎有多个线程，但引擎同时只执行一个任务，其他任务都必须在后面排队，即引擎只在一个线程上运行。这个线程称为主线程。&lt;/p>
+&lt;h4 id="事件循环机制">事件循环机制&lt;/h4>
+&lt;p>JS 本身并不慢，慢的是读写外部数据，比如等待 Ajax 请求返回结果。如果等着 Ajax 返回结果出来，再往下执行，就会耗费很长的时间。所以 JS 设计了一种机制，CPU 可以不管 IO 操作，而是挂起该任务，先执行后面的任务，等到 IO 操作返回了结果，再继续执行挂起的任务。&lt;/p>
+&lt;p>同步任务执行完后，引擎一遍又一遍检查那些挂起来的异步任务是否满足进入主线程的条件。这种循环检查的机制，就叫做事件循环机制。&lt;/p>
+&lt;h4 id="任务队列">任务队列&lt;/h4>
+&lt;p>JS 引擎运行时，除了一个正在运行的主线程，还提供一个或多个任务队列，里面是各种被挂起的异步任务。首先，主线程会去执行所有的同步任务，等到同步任务全部执行完，就会去看任务队列里面的异步任务，如果满足条件，那么异步任务就重新进入主线程开始执行，这时它就会变成同步任务。等到执行完，下一个异步任务再进入主线程开始执行。一旦任务队列清空，程序就结束执行。&lt;/p>
+&lt;h4 id="同步任务和异步任务">同步任务和异步任务&lt;/h4>
+&lt;p>程序里面所有的任务可以分成两类：&lt;/p>
+&lt;p>同步任务：没有被引擎挂起，在主线程上排队执行的任务。只有前一个任务执行完毕，才能执行后一个任务。
+异步任务：被引擎挂起，不进入主线程，而进入任务队列的任务。只有引擎认为某个异步任务可以执行了，该任务才会进入主线程执行。排在异步任务后面的代码，不用等待异步任务结束会马上运行。&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　47</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/</link><pubDate>Tue, 02 Nov 2021 10:34:36 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/frontend-47-cover.jpg" alt="Featured image of post 毎日のフロントエンド　47" />&lt;h1 id="第四十七日">第四十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5-如何使用音频和视频">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code> 如何使用音频和视频&lt;/h3>
 &lt;p>&lt;code>&amp;lt;video&amp;gt;&lt;/code>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
@@ -1027,9 +1186,9 @@ alt="http-cache-flow-chart">
 &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">exports&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s2">&amp;#34;object&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="nx">module&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">exports&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">factory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;jquery&amp;#34;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;underscore&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
 &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="nx">root&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Requester&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">factory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">root&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">$&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">root&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mi">_&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">root&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Requester&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">factory&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">root&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">$&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">root&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">_&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;span class="p">}(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">$&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">}(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">$&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">_&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="c1">// this is where I defined my module implementation
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">Requester&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="c1">// ... };
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">Requester&lt;/span>&lt;span class="p">;&lt;/span>
@@ -1363,11 +1522,11 @@ F(n) = F(n - 1) + F(n - 2);
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">fib&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;输入的数字不能小于0&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">n&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="kd">function&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="nx">fib&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">_fib&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="nx">fib&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">_fib&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="nx">fib&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">_fib&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
 &lt;li>基于 &lt;code>ES6 Generator&lt;/code> 实现&lt;/li>
@@ -2805,15 +2964,15 @@ alt="层叠上下文中的七种层叠等级">
 &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="k">this&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">TypeError&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Error&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;span class="kd">var&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="k">this&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">_this&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="kd">var&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="c1">// 返回一个函数
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">F&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="c1">// 因为返回了一个函数，我们可以 new F()，所以需要判断
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nx">F&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">_this&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;span class="k">return&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">concat&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">_this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">context&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">concat&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">));&lt;/span>
 &lt;span class="p">};&lt;/span>
 &lt;span class="p">};&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
@@ -2998,7 +3157,7 @@ CSS 预处理器种类繁多，目前&lt;code>Sass&lt;/code>、&lt;code>Less&lt;
 &lt;span class="k">return&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="p">}&lt;/span>
 &lt;span class="c1">// using _.curry from lodash library
-&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">curriedSum&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">curry&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sum&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">curriedSum&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">curry&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sum&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">curriedSum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// 3, still callable normally
 &lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">curriedSum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// 3, called partially
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="what-for">What for?&lt;/h3>
@@ -3008,7 +3167,7 @@ CSS 预处理器种类繁多，目前&lt;code>Sass&lt;/code>、&lt;code>Less&lt;
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// curry it
-&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">log&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">curry&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">log&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">curry&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;hr>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// how it works
 &lt;/span>&lt;span class="c1">&lt;/span>
@@ -3423,19 +3582,19 @@ alt="result-specificity">
 &lt;li>The object &lt;strong>(not null, false 123 or other primitive types)&lt;/strong> returned by the constructor function becomes the result of the whole &lt;code>new &lt;/code> expression. If the constructor function doesn&amp;rsquo;t explicitly return an object, the object created in step one is used instead &lt;strong>(normally constructors don&amp;rsquo;t return a value, but they can choose to do so if they want to override the normal object creation process.)&lt;/strong>&lt;/li>
 &lt;/ol>
 &lt;h4 id="simulation-new-operator">Simulation &lt;code>new&lt;/code> operator&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">_new&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="c1">// 1. 创建一个新对象
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">newObj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
 &lt;span class="c1">// 得到构造函数, 并调用 shift 得到数组的第一个参数，并且会改变元数组
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">Con&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[].&lt;/span>&lt;span class="nx">shift&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="c1">// 2. 把新对象的原型指向构造函数的prototype
-&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">newObj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mi">__&lt;/span>&lt;span class="nx">proto__&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Con&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">newObj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">__proto__&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Con&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="c1">// 3. 把构造函数里的this指向新对象
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Con&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">newObj&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="c1">// 4. 返回新对象
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">res&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;object&amp;#39;&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">res&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">newObj&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;span class="kd">var&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">constructorFunction&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;willian&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">18&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">_new&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">constructorFunction&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;willian&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">18&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//&amp;#39;willian&amp;#39;, 18
 &lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">say&lt;/span>&lt;span class="p">());&lt;/span> &lt;span class="c1">//Hello willian
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
@@ -3447,7 +3606,7 @@ alt="result-specificity">
 &lt;hr>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// method Two
 &lt;/span>&lt;span class="c1">&lt;/span>
-&lt;span class="kd">function&lt;/span> &lt;span class="mi">_&lt;/span>&lt;span class="k">new&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fn&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="nx">arg&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">_new&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fn&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="nx">arg&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="c1">//将创建的对象的原型指向构造函数的原型 ==&amp;gt; 新对象.__proto__(原型) == fn.prototype
 &lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fn&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;span class="c1">// 将this指向新对象
@@ -5843,7 +6002,7 @@ alt="devbounce-throttle">
 &lt;h2 id="throttling-节流">Throttling 节流&lt;/h2>
 &lt;p>Throttling or sometimes is also called throttle function is a practise used in websites. To throttle a function means to ensure that the function is called at most once in a specified time period. This means throttling will prevent a function from running if it has run &amp;ldquo;recently&amp;rdquo;. Throttling also ensures a function is run regularly at a fixed rate.&lt;/p>
 &lt;p>Throttlig is used to call a function after every millisecond or a particular interval of time only the first click is executed immediately.&lt;/p>
-&lt;p>用来实现**_阻止_**在短时间内重复多次触发同一个函数。&lt;/p>
+&lt;p>用来实现**&lt;em>阻止&lt;/em>**在短时间内重复多次触发同一个函数。&lt;/p>
 &lt;p>即： 每一个时间间隔内， 只执行一次函数, &lt;code>timer&lt;/code> 存在的时候 直接返回，不存在的时候，执行&lt;code>setTimeout&lt;/code>(执行完，会清空&lt;code>timer&lt;/code>)&lt;/p>
 &lt;h4 id="implementing-throttle">Implementing Throttle:&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// Throttle
@@ -5996,15 +6155,15 @@ GET /epics?state&lt;span class="o">=&lt;/span>finished
 POST /epics
 PUT /epics/5
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="四-将实际数据包装在-data-字段中">四， 将实际数据包装在 data 字段中&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">//&lt;/span> &lt;span class="err">GET&lt;/span> &lt;span class="err">/epics在数据字段中返回epic资源列表&lt;/span>
-&lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="c1">// GET /epics在数据字段中返回epic资源列表
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
 &lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;epic1&amp;#34;&lt;/span> &lt;span class="p">},&lt;/span>
 &lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;epic2&amp;#34;&lt;/span> &lt;span class="p">}&lt;/span>
 &lt;span class="p">]&lt;/span>
 &lt;span class="p">}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">//&lt;/span> &lt;span class="err">GET&lt;/span> &lt;span class="err">/epic/&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="err">在数据字段中返回id为&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="err">的epic对象&lt;/span>
-&lt;span class="p">{&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="c1">// GET /epic/1在数据字段中返回id为1的epic对象
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;epic1&amp;#34;&lt;/span>
@@ -6029,10 +6188,10 @@ GET /employees?filter&lt;span class="o">[&lt;/span>id&lt;span class="o">]=&lt;/s
 >HTTP response status codes - HTTP | MDN&lt;/a>&lt;/p>
 &lt;p>状态码的使用要尽量精确。如果资源可用，但禁止用户访问，则返回 403。如果资源曾经存在但现已被删除或停用，请使用 410。&lt;/p>
 &lt;h3 id="七-提供有用的错误消息">七， 提供有用的错误消息&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">//&lt;/span> &lt;span class="err">request&lt;/span>
-&lt;span class="err">GET&lt;/span> &lt;span class="err">/epics?state=unknow&lt;/span>
-&lt;span class="err">//&lt;/span> &lt;span class="err">response&lt;/span>
-&lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="c1">// request
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="err">GET&lt;/span> &lt;span class="err">/epics?state=unknow&lt;/span>
+&lt;span class="c1">// response
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;errors&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
 &lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;status&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">400&lt;/span>&lt;span class="p">,&lt;/span>
@@ -6045,11 +6204,11 @@ GET /employees?filter&lt;span class="o">[&lt;/span>id&lt;span class="o">]=&lt;/s
 &lt;span class="p">]&lt;/span>
 &lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="八hateoas---provide-links-for-navigating-through-your-api">八，HATEOAS - Provide Links for Navigating through your API&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">//&lt;/span> &lt;span class="err">request&lt;/span>
-&lt;span class="err">GET&lt;/span> &lt;span class="err">/epic&lt;/span>
-&lt;span class="err">//&lt;/span> &lt;span class="err">好的做法是在响应中提供客户可以跟进的链接&lt;/span>
-&lt;span class="err">//&lt;/span> &lt;span class="err">response&lt;/span>
-&lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="c1">// request
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="err">GET&lt;/span> &lt;span class="err">/epic&lt;/span>
+&lt;span class="c1">// 好的做法是在响应中提供客户可以跟进的链接
+&lt;/span>&lt;span class="c1">// response
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
 &lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
@@ -6083,8 +6242,8 @@ GET /employees?filter&lt;span class="o">[&lt;/span>id&lt;span class="o">]=&lt;/s
 &lt;span class="s2">&amp;#34;http://www.domain.com/employees/12&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="s2">&amp;#34;http://www.domain.com/employees/13&amp;#34;&lt;/span>
 &lt;span class="p">]&lt;/span>
-&lt;span class="err">//or&lt;/span> &lt;span class="s2">&amp;#34;teamMembers&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://www.domain.com/employees/1/teamMembers&amp;#34;&lt;/span>
-&lt;span class="p">}&lt;/span>
+&lt;span class="c1">//or &amp;#34;teamMembers&amp;#34;: &amp;#34;http://www.domain.com/employees/1/teamMembers&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
 &lt;span class="p">}&lt;/span>
 &lt;span class="p">]&lt;/span>
 &lt;span class="p">}&lt;/span>
@@ -6213,8 +6372,8 @@ GET /employees?filter&lt;span class="o">[&lt;/span>id&lt;span class="o">]=&lt;/s
 &lt;span class="nt">&amp;#34;total&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">3465&lt;/span>
 &lt;span class="p">},&lt;/span>
 &lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
-&lt;span class="err">//...&lt;/span>
-&lt;span class="p">],&lt;/span>
+&lt;span class="c1">//...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">],&lt;/span>
 &lt;span class="nt">&amp;#34;links&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;next&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://www.domain.com/employees?offset=30&amp;amp;limit=10&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;prev&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://www.domain.com/employees?offset=10&amp;amp;limit=10&amp;#34;&lt;/span>
@@ -6246,17 +6405,17 @@ GET /employees?pageSize&lt;span class="o">=&lt;/span>100&lt;span class="p">&amp;
 &lt;p>&lt;a class="link" href="https://phauer.com/2018/web-api-pagination-timestamp-id-continuation-token/" target="_blank" rel="noopener"
 >Web API Pagination with the &amp;lsquo;Timestamp_ID&amp;rsquo; Continuation Token&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">//&lt;/span> &lt;span class="err">request&lt;/span>
-&lt;span class="err">GET&lt;/span> &lt;span class="err">/employees?pageSize=&lt;/span>&lt;span class="mi">100&lt;/span>
-&lt;span class="err">//&lt;/span> &lt;span class="err">response&lt;/span>
-&lt;span class="p">{&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="c1">// request
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="err">GET&lt;/span> &lt;span class="err">/employees?pageSize=&lt;/span>&lt;span class="mi">100&lt;/span>
+&lt;span class="c1">// response
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;pagination&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;continuationToken&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;1504224000000_10&amp;#34;&lt;/span>
 &lt;span class="p">},&lt;/span>
 &lt;span class="nt">&amp;#34;data&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
-&lt;span class="err">//&lt;/span> &lt;span class="err">...&lt;/span>
-&lt;span class="err">//&lt;/span> &lt;span class="err">last&lt;/span> &lt;span class="err">element:&lt;/span>
-&lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;dateCreated&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1504224000000&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// last element:
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;id&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;dateCreated&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1504224000000&lt;/span> &lt;span class="p">}&lt;/span>
 &lt;span class="p">],&lt;/span>
 &lt;span class="nt">&amp;#34;links&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="nt">&amp;#34;next&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;http://www.domain.com/employees?pageSize=100&amp;amp;continue=1504224000000_10&amp;#34;&lt;/span>
@@ -6570,10 +6729,11 @@ npx create-react-app my-app --use-npm &lt;span class="c1"># if you prefer to use
 &lt;/li>
 &lt;/ul>
 &lt;h4 id="3-analizing-the-bundle-size">3. Analizing the Bundle Size&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fish" data-lang="fish">&lt;span class="nf">npm&lt;/span> install &lt;span class="na">--save&lt;/span> &lt;span class="nb">source&lt;/span>&lt;span class="na">-map-explorer&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fish" data-lang="fish">&lt;span class="nf">npm&lt;/span> install &lt;span class="na">--save&lt;/span> &lt;span class="nb">source&lt;/span>-map-explorer
 &lt;span class="k">or&lt;/span>
-&lt;span class="nf">yarn&lt;/span> add &lt;span class="nb">source&lt;/span>&lt;span class="na">-map-explorer&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="err">//&lt;/span> &lt;span class="err">package.json&lt;/span>
+&lt;span class="nf">yarn&lt;/span> add &lt;span class="nb">source&lt;/span>-map-explorer
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="c1">// package.json
+&lt;/span>&lt;span class="c1">&lt;/span>
 &lt;span class="s2">&amp;#34;scripts&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;span class="err">+&lt;/span> &lt;span class="nt">&amp;#34;analyze&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;source-map-explorer &amp;#39;build/static/js/*.js&amp;#39;&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
 &lt;span class="nt">&amp;#34;start&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;react-scripts start&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
@@ -6679,7 +6839,7 @@ npx create-react-app my-app --use-npm &lt;span class="c1"># if you prefer to use
 &lt;/blockquote>
 &lt;h5 id="fish-shell">&lt;code>fish shell&lt;/code>&lt;/h5>
 &lt;p>Add the code to home directory&amp;rsquo;s &lt;code>~/.config/fish/config.fish&lt;/code>:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fish" data-lang="fish">&lt;span class="k">set&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="nv">GOPATH&lt;/span> &lt;span class="nv">$HOME&lt;/span>/project/go&lt;span class="na">-workspace&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fish" data-lang="fish">&lt;span class="k">set&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="nv">GOPATH&lt;/span> &lt;span class="nv">$HOME&lt;/span>/project/go-workspace
 &lt;span class="k">set&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="nv">GOROOT&lt;/span> /usr/local/opt/go/libexec
 &lt;span class="k">set&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="nv">PATH&lt;/span> &lt;span class="nv">$PATH&lt;/span>:&lt;span class="nv">$GOPATH&lt;/span>/bin
 &lt;span class="k">set&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="nv">PATH&lt;/span> &lt;span class="nv">$PATH&lt;/span>:&lt;span class="nv">$GOROOT&lt;/span>/bin

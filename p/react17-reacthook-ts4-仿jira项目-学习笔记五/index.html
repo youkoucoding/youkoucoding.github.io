@@ -127,7 +127,7 @@ TypeScript
 <h2 id=throttling-节流>Throttling 节流</h2>
 <p>Throttling or sometimes is also called throttle function is a practise used in websites. To throttle a function means to ensure that the function is called at most once in a specified time period. This means throttling will prevent a function from running if it has run &ldquo;recently&rdquo;. Throttling also ensures a function is run regularly at a fixed rate.</p>
 <p>Throttlig is used to call a function after every millisecond or a particular interval of time only the first click is executed immediately.</p>
-<p>用来实现**_阻止_**在短时间内重复多次触发同一个函数。</p>
+<p>用来实现**<em>阻止</em>**在短时间内重复多次触发同一个函数。</p>
 <p>即： 每一个时间间隔内， 只执行一次函数, <code>timer</code> 存在的时候 直接返回，不存在的时候，执行<code>setTimeout</code>(执行完，会清空<code>timer</code>)</p>
 <h4 id=implementing-throttle>Implementing Throttle:</h4>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// Throttle
