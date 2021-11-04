@@ -1,4 +1,101 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 04 Nov 2021 13:26:16 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　49</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/</link><pubDate>Thu, 04 Nov 2021 13:26:16 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/frontend-49-cover.jpg" alt="Featured image of post 毎日のフロントエンド　49" />&lt;h1 id="第四十九日">第四十九日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 04 Nov 2021 16:52:18 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Append Item to Array in JavaScript</title><link>https://youkoucoding.github.io/p/append-item-to-array-in-javascript/</link><pubDate>Thu, 04 Nov 2021 16:52:18 +0900</pubDate><guid>https://youkoucoding.github.io/p/append-item-to-array-in-javascript/</guid><description>&lt;img src="https://youkoucoding.github.io/p/append-item-to-array-in-javascript/append-item-array-cover.jpg" alt="Featured image of post Append Item to Array in JavaScript" />&lt;h1 id="5-way-to-append-item-to-array-in-javascript">5 Way to Append Item to Array in JavaScript&lt;/h1>
+&lt;p>Here are 5 ways to add an item to the end of an array.&lt;/p>
+&lt;p>&lt;code>push splice length&lt;/code> will mutate the orginal array.&lt;/p>
+&lt;p>Whereas &lt;code>concat&lt;/code> and &lt;code>spread&lt;/code> will not and will instead return a new array.&lt;/p>
+&lt;h2 id="mutative---3-ways-to-append-item-to-array">Mutative - 3 ways to Append Item to Array&lt;/h2>
+&lt;h3 id="push">&lt;code>push&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">zoo&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;🦊&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🐮&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">zoo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🐧&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">zoo&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [&amp;#39;🦊&amp;#39;, &amp;#39;🐮&amp;#39;, &amp;#39;🐧&amp;#39;]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Of course, you can push multiple items.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">zoo&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;🦊&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🐮&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">zoo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🐧&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🐦&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🐤&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">zoo&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [&amp;#39;🦊&amp;#39;, &amp;#39;🐮&amp;#39;, &amp;#39;🐧&amp;#39;, &amp;#39;🐦&amp;#39;, &amp;#39;🐤&amp;#39;]
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// or
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">zoo&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;🦊&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🐮&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">birds&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;🐧&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🐦&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🐤&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">zoo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">birds&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">zoo&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [&amp;#39;🦊&amp;#39;, &amp;#39;🐮&amp;#39;, &amp;#39;🐧&amp;#39;, &amp;#39;🐦&amp;#39;, &amp;#39;🐤&amp;#39;]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="splice">&lt;code>splice&lt;/code>&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Parameters&lt;/th>
+&lt;th>Parameter Name&lt;/th>
+&lt;th>Definition&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>startIndex&lt;/td>
+&lt;td>The index where you want to add/remove item&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>deleteCount&lt;/td>
+&lt;td>The number of items you want to remove&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>items&lt;/td>
+&lt;td>The number you want to add (If you&amp;rsquo;re removing, you can just leave this blank)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">zoo&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;🦊&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🐮&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">zoo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">splice&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="nx">zoo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// We want add at the END of our array
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1">// We do NOT want to remove any item
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="s1">&amp;#39;🐧&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;🐦&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;🐤&amp;#39;&lt;/span> &lt;span class="c1">// These are the items we want to add
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">zoo&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [&amp;#39;🦊&amp;#39;, &amp;#39;🐮&amp;#39;, &amp;#39;🐧&amp;#39;, &amp;#39;🐦&amp;#39;, &amp;#39;🐤&amp;#39;]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="length">&lt;code>length&lt;/code>&lt;/h3>
+&lt;p>&lt;code>array.length&lt;/code> returns us the total count of items in the array. That means the length us always one number higher than the last item of out index. So by assigning a value at the length index, it&amp;rsquo;s essentially adding an item to the end of the array.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">zoo&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;🦊&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🐮&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">length&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">zoo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 2
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nx">zoo&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;🐯&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">zoo&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [&amp;#39;🦊&amp;#39;, &amp;#39;🐮&amp;#39;, &amp;#39;🐯&amp;#39;]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="non-mutative---2-ways-to-append-item-to-array">Non Mutative - 2 ways to Append Item to Array&lt;/h2>
+&lt;p>The original array will remain untouched and a new array will contain the addition.&lt;/p>
+&lt;h3 id="concat">&lt;code>concat&lt;/code>&lt;/h3>
+&lt;p>This method is meant to merge arrays. So we can use it to add multiple items by passing in an array.&lt;/p>
+&lt;p>It doesn&amp;rsquo;t just accept arrays as its parameter, it also acceptes value.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">ocean&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;🐙&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🦀&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">aquarium&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ocean&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">concat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🐡&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Add a single value
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">sushi&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ocean&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">concat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;🐡&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🍚&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Add multiple values
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nx">aquarium&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// [&amp;#39;🐙&amp;#39;, &amp;#39;🦀&amp;#39;, &amp;#39;🐡&amp;#39;]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">sushi&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// [&amp;#39;🐙&amp;#39;, &amp;#39;🦀&amp;#39;, &amp;#39;🐡&amp;#39;, &amp;#39;🍚&amp;#39;]
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// Original Array Not Affected
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">ocean&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// [&amp;#39;🐙&amp;#39;, &amp;#39;🦀&amp;#39;]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="spread">&lt;code>spread&lt;/code>&lt;/h3>
+&lt;p>We can uyse the spread syntax to expand each array element into individual elements.
+A very popular application is to use spread to crate a copy or merge two separetate arrays. This is similar to the effects of &lt;code>concat&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">ocean&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;🐙&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🦀&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">fish&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;🐠&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🐟&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">aquarium&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nx">ocean&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="nx">fish&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">aquarium&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// [&amp;#39;🐙&amp;#39;, &amp;#39;🦀&amp;#39;, &amp;#39;🐠&amp;#39;, &amp;#39;🐟&amp;#39;]
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// Original Array Not Affected
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">ocean&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// [&amp;#39;🐙&amp;#39;, &amp;#39;🦀&amp;#39;]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>if we don&amp;rsquo;t use &lt;code>spread&lt;/code>, we will get this: a nested array&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">ocean&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;🐙&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🦀&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">fish&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;🐠&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;🐟&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">aquarium&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">ocean&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">fish&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="c1">// [ [&amp;#39;🐙&amp;#39;, &amp;#39;🦀&amp;#39;], [&amp;#39;🐠&amp;#39;, &amp;#39;🐟&amp;#39;] ]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="to-mutate-or-not">To Mutate or NOT&lt;/h2>
+&lt;p>IT Really depends on your use case. When you&amp;rsquo;re working in &lt;strong>Redux&lt;/strong> or any state management architecture, then it&amp;rsquo;s all about the &lt;strong>immutability&lt;/strong>. So the non-mutatve methods will be the right choices.&lt;/p>
+&lt;p>Also the idea of immutability is often preferred as it&amp;rsquo;s considered a good practice to &lt;strong>avoid side effects&lt;/strong> &amp;ndash; which is the foundation of functional programming and producing pure functions.&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.samanthaming.com/tidbits/87-5-ways-to-append-item-to-array/" target="_blank" rel="noopener"
+>5 Way to Append Item to Array in JavaScript | SamanthaMing.com&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　49</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/</link><pubDate>Thu, 04 Nov 2021 13:26:16 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/frontend-49-cover.jpg" alt="Featured image of post 毎日のフロントエンド　49" />&lt;h1 id="第四十九日">第四十九日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说说对target_blank的理解有啥安全性问题如何防范">&lt;strong>Question:&lt;/strong> 说说对&lt;code>target=&amp;quot;_blank&amp;quot;&lt;/code>的理解？有啥安全性问题？如何防范&lt;/h3>
 &lt;p>恶意攻击问题&lt;/p>
