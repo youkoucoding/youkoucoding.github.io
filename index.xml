@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 03 Nov 2021 15:29:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　48</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/</link><pubDate>Wed, 03 Nov 2021 15:29:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/frontend-48-cover.jpg" alt="Featured image of post 毎日のフロントエンド　48" />&lt;h1 id="第四十八日">第四十八日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 04 Nov 2021 13:26:16 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　49</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/</link><pubDate>Thu, 04 Nov 2021 13:26:16 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/frontend-49-cover.jpg" alt="Featured image of post 毎日のフロントエンド　49" />&lt;h1 id="第四十九日">第四十九日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-说说对target_blank的理解有啥安全性问题如何防范">&lt;strong>Question:&lt;/strong> 说说对&lt;code>target=&amp;quot;_blank&amp;quot;&lt;/code>的理解？有啥安全性问题？如何防范&lt;/h3>
+&lt;p>恶意攻击问题&lt;/p>
+&lt;p>如果网站上有一个使用了 &lt;code>target=&amp;quot;_blank&amp;quot;&lt;/code> 的 &lt;code>a&lt;/code> 标签链接，一旦用户点击了这个链接打开了新的标签页，如果这个标签页跳转的网站内存在的恶意代码，那么你原本页面的网站可能会被转到一个假的页面。也就是说，当用户回到原本的页面时，看到的可能就是已经被替换过的钓鱼页面了。&lt;/p>
+&lt;p>防范&lt;/p>
+&lt;p>在 &lt;code>&amp;lt;iframe&amp;gt;&lt;/code> 中有一个 &lt;code>sandbox&lt;/code> 属性，可以使用以下的一些方法来预防链接:&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>Referrer Policy&lt;/code> 和 &lt;code>noreferrer&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://an.evil.site&amp;#34;&lt;/span> &lt;span class="na">target&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;_blank&amp;#34;&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;noreferrer&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+Enter an &amp;#34;evil&amp;#34; website
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>&lt;code>noopener&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://an.evil.site&amp;#34;&lt;/span> &lt;span class="na">target&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;_blank&amp;#34;&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;noopener&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+Enter an &amp;#34;evil&amp;#34; website
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>3 &lt;code>nofollow&lt;/code>&lt;/p>
+&lt;p>&lt;code>nofollow&lt;/code> 是 HTML 页面中 a 标签的属性值。这个标签的意义是告诉搜索引擎&amp;quot;不要追踪此网页上的链接或不要追踪此特定链接&amp;quot;&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-写个还剩下多少天过年的倒计时">&lt;strong>Question:&lt;/strong> 写个还剩下多少天过年的倒计时&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">day&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">floor&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;2019-12-31 23:59:59:999&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mf">864e5&lt;/span>
+&lt;span class="p">);&lt;/span> &lt;span class="c1">// 210
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;code>1000*60*60*24 or 86400000 or 864e5&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>864e5&lt;/code> is a valid Javascript number that represents the number of miliseconds in 24 hours day.&lt;/p>
+&lt;h2 id="one-more-question">One more question&lt;/h2>
+&lt;h3 id="question-redux-saga-和-mobx-的比较">&lt;strong>Question:&lt;/strong> &lt;code>redux-saga&lt;/code> 和 &lt;code>mobx&lt;/code> 的比较&lt;/h3>
+&lt;h4 id="状态管理">状态管理&lt;/h4>
+&lt;p>&lt;code>redux-sage&lt;/code> 是 &lt;code>redux&lt;/code> 的一个异步处理的中间件
+&lt;code>mobx&lt;/code> 是数据管理库，和 &lt;code>redux&lt;/code> 一样&lt;/p>
+&lt;h4 id="设计思想">设计思想&lt;/h4>
+&lt;p>&lt;code>redux-sage&lt;/code> 属于 &lt;code>flux&lt;/code> 体系， &lt;strong>函数式编程思想&lt;/strong>
+mobx 不属于 flux 体系，面向对象编程和响应式编程&lt;/p>
+&lt;h4 id="主要特点">主要特点&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>redux-sage&lt;/code> 因为是中间件，更关注&lt;strong>异步处理&lt;/strong>的，通过 &lt;code>Generator&lt;/code> 函数来将异步变为同步，使代码可读性高，结构清晰。action 也不是 action creator 而是 &lt;code>pure action&lt;/code>，&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在 &lt;code>Generator&lt;/code> 函数中通过 &lt;code>call&lt;/code> 或者 &lt;code>put&lt;/code> 方法直接声明式调用，并自带一些方法，如 &lt;code>takeEvery&lt;/code>，&lt;code>takeLast&lt;/code>，&lt;code>race&lt;/code> 等，控制多个异步操作，让多个异步更简单。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>mobx&lt;/code> 是更简单更方便更灵活的处理数据。 &lt;code>Store&lt;/code> 是包含了 &lt;code>state&lt;/code> 和 &lt;code>action&lt;/code>。&lt;code>state&lt;/code> 包装成一个可被观察的对象， &lt;code>action&lt;/code> 可以直接修改 &lt;code>state&lt;/code>，之后通过 &lt;code>Computed values&lt;/code> 将依赖 &lt;code>state&lt;/code> 的计算属性更新 ，之后触发 &lt;code>Reactions&lt;/code> 响应依赖 &lt;code>state&lt;/code> 的变更，输出相应的副作用 ，但不生成新的 &lt;code>state&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="数据可变性">数据可变性&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>redux-sage&lt;/code> 强调 &lt;code>state&lt;/code> &lt;strong>不可变&lt;/strong>，不能直接操作 state，通过 action 和 reducer 在原来的 state 的基础上返回一个新的 state 达到改变 state 的目的。&lt;/li>
+&lt;li>&lt;code>mobx&lt;/code> 直接在方法中更改 state，同时所有使用的 state 都发生变化，不生成新的 state。&lt;/li>
+&lt;/ul>
+&lt;h4 id="写法难易度">写法难易度&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>redux-sage&lt;/code> 比 redux 在 action 和 reducer 上要简单一些。需要用 dispatch 触发 state 的改变，需要 mapStateToProps 订阅 state。&lt;/li>
+&lt;li>&lt;code>mobx&lt;/code> 在非严格模式下不用 action 和 reducer，在严格模式下需要在 action 中修改 state，并且自动触发相关依赖的更新。&lt;/li>
+&lt;/ul>
+&lt;h4 id="使用场景">使用场景&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>redux-sage&lt;/code> 很好的解决了 redux 关于异步处理时的复杂度和代码冗余的问题，数据流向比较好追踪。但是 redux 的学习成本比 较高，代码比较冗余，不是特别需要状态管理，最好用别的方式代替。&lt;/li>
+&lt;li>&lt;code>mobx&lt;/code> 学习成本低，能快速上手，代码比较简洁。但是可能因为代码编写的原因和数据更新时相对黑盒，导致数据流向不利于追踪。&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/53132574" target="_blank" rel="noopener"
+>隐藏危险: target = &amp;ldquo;_blank&amp;rdquo; 和 &amp;ldquo;opener&amp;rdquo; - 知乎&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　48</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/</link><pubDate>Wed, 03 Nov 2021 15:29:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/frontend-48-cover.jpg" alt="Featured image of post 毎日のフロントエンド　48" />&lt;h1 id="第四十八日">第四十八日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-对-web-标准和-w3c-的理解与认识">&lt;strong>Question:&lt;/strong> 对 WEB 标准和 W3C 的理解与认识&lt;/h3>
 &lt;p>web 标准简单来说可以分为结构、样式和行为。&lt;code>HTML&lt;/code>标签构成页面的结构框架。&lt;code>css&lt;/code>完成美化&lt;code>html&lt;/code>标签构成的页面。&lt;code>js&lt;/code>可以完成页面和用户的交互。&lt;/p>
