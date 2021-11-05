@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 04 Nov 2021 16:52:18 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Append Item to Array in JavaScript</title><link>https://youkoucoding.github.io/p/append-item-to-array-in-javascript/</link><pubDate>Thu, 04 Nov 2021 16:52:18 +0900</pubDate><guid>https://youkoucoding.github.io/p/append-item-to-array-in-javascript/</guid><description>&lt;img src="https://youkoucoding.github.io/p/append-item-to-array-in-javascript/append-item-array-cover.jpg" alt="Featured image of post Append Item to Array in JavaScript" />&lt;h1 id="5-way-to-append-item-to-array-in-javascript">5 Way to Append Item to Array in JavaScript&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 05 Nov 2021 11:24:58 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　50</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-50/</link><pubDate>Fri, 05 Nov 2021 11:24:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-50/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-50/frontend-50-cover.jpg" alt="Featured image of post 毎日のフロントエンド　50" />&lt;h1 id="第五十日">第五十日&lt;/h1>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-列举-css-优化提高性能的方法">&lt;strong>Question:&lt;/strong> 列举 CSS 优化、提高性能的方法&lt;/h3>
+&lt;h4 id="加载性能">加载性能&lt;/h4>
+&lt;ol>
+&lt;li>压缩 CSS&lt;/li>
+&lt;li>尽量，通过&lt;code>link&lt;/code>方式加载，而不是&lt;code>@import&lt;/code>&lt;/li>
+&lt;li>复合属性其实分开写，执行效率更高，因为 CSS 最终也还是要去解析如 &lt;code>margin-left: left;&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h4 id="选择器性能">选择器性能&lt;/h4>
+&lt;ol>
+&lt;li>尽量少的使用嵌套，可以采用&lt;code>BEM&lt;/code>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>的方式来解决命名冲突&lt;/li>
+&lt;li>尽量少甚至是不使用标签选择器，这个性能实在是差，同样的还有*选择器&lt;/li>
+&lt;li>利用继承，减少代码量&lt;/li>
+&lt;/ol>
+&lt;h4 id="渲染性能">渲染性能&lt;/h4>
+&lt;ol>
+&lt;li>慎重使用高性能属性：浮动、定位；&lt;/li>
+&lt;li>尽量减少页面重排、重绘；&lt;/li>
+&lt;li>css 雪碧图&lt;/li>
+&lt;li>自定义 web 字体，尽量少用&lt;/li>
+&lt;li>尽量减少使用昂贵属性，如 box-shadow/border-radius/filter/透明度/:nth-child 等&lt;/li>
+&lt;li>使用 transform 来变换而不是宽高等会造成重绘的属性&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-请写出一个函数求出-n-的阶乘即-n">&lt;strong>Question:&lt;/strong> 请写出一个函数求出 N 的阶乘（即 N!）&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">factorial&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">n&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">factorial&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">n&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="one-more-question">One more question&lt;/h2>
+&lt;p>写出执行结果，并解释原因&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">min&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">max&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">max&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">min&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">max&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>false&lt;/li>
+&lt;li>MDN 相关文档
+&lt;ul>
+&lt;li>&lt;code>Math.min&lt;/code> 的参数是 0 个或者多个，如果多个参数很容易理解，返回参数中最小的。如果没有参数，则返回 &lt;code>Infinity&lt;/code>，无穷大。&lt;/li>
+&lt;li>&lt;code>Math.max&lt;/code> 没有传递参数时返回的是&lt;code>-Infinity&lt;/code>. 所以输出 &lt;code>false&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://css-tricks.com/bem-101/" target="_blank" rel="noopener"
+>BEM 101 | CSS-Tricks&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>Append Item to Array in JavaScript</title><link>https://youkoucoding.github.io/p/append-item-to-array-in-javascript/</link><pubDate>Thu, 04 Nov 2021 16:52:18 +0900</pubDate><guid>https://youkoucoding.github.io/p/append-item-to-array-in-javascript/</guid><description>&lt;img src="https://youkoucoding.github.io/p/append-item-to-array-in-javascript/append-item-array-cover.jpg" alt="Featured image of post Append Item to Array in JavaScript" />&lt;h1 id="5-way-to-append-item-to-array-in-javascript">5 Way to Append Item to Array in JavaScript&lt;/h1>
 &lt;p>Here are 5 ways to add an item to the end of an array.&lt;/p>
 &lt;p>&lt;code>push splice length&lt;/code> will mutate the orginal array.&lt;/p>
 &lt;p>Whereas &lt;code>concat&lt;/code> and &lt;code>spread&lt;/code> will not and will instead return a new array.&lt;/p>
