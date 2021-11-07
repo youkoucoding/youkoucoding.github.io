@@ -1,0 +1,326 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　52</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　52">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-11-07T10:47:11+09:00"><meta property="article:modified_time" content="2021-11-07T10:47:11+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/frontend-52-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　52">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/frontend-52-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/frontend-52-cover_hu7ada2d7a71634d05b97ddf35971cff96_4596727_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/frontend-52-cover_hu7ada2d7a71634d05b97ddf35971cff96_4596727_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/frontend-52-cover_hu7ada2d7a71634d05b97ddf35971cff96_4596727_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド　52">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/>毎日のフロントエンド　52</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Nov 07, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 3 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第五十二日>第五十二日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-form表单提交时为什么会刷新页面怎么预防刷新><strong>Question</strong> <code>Form</code>表单提交时为什么会刷新页面？怎么预防刷新</h3>
+<p>因为早期网页交互模型只能是浏览器提交数据给服务器，服务器做出响应重新返回一个页面，浏览器加载这个页面进行显示。早期前端没有编程式发送网络请求的 API，更没有前端路由管理的概念，所以表单提交跳转页面是广泛接受的方案。</p>
+<p>不想刷新可以使用 JS 拦截 form 的 onsubmit 事件，阻止掉浏览器的默认行为，然后用 ajax/fetch 和后台交互。另一个偏方是使用 iframe 作为 form 的 target，不过 JS 处理方面不如让浏览器别管自己全手动发请求来得简单。</p>
+<h2 id=css>CSS</h2>
+<h3 id=question-要是position跟displayoverflowfloat这些特性相互叠加后会怎么样><strong>Question</strong> 要是<code>position</code>跟<code>display</code>、<code>overflow</code>、<code>float</code>这些特性相互叠加后会怎么样</h3>
+<h4 id=displayposition-和-float-的相互关系><code>display</code>、<code>position</code> 和 <code>float</code> 的相互关系</h4>
+<p><code>display</code> 属性规定元素应该生成的框的类型。<code>block</code> <code>inline</code>&mldr;</p>
+<p><code>position</code> 属性规定元素的定位类型。</p>
+<ul>
+<li><code>absolute</code>表示生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位；</li>
+<li><code>fixed</code>成绝对定位的元素，相对于浏览器窗口进行定位；</li>
+<li><code>relative</code>生成相对定位的元素，相对于其正常位置进行定位；</li>
+<li><code>static</code> 默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right z-index 声明）。</li>
+</ul>
+<p><code>Float</code>也是是一种布局方式，它定义元素在哪个方向浮动。在布局过程中也经常会使用它来达到左右并排布局的效果。</p>
+<ul>
+<li><code>position:absolute</code>和<code>position:fixed</code> 优先级最高，有它存在的时候，浮动不起作用，<code>display</code> 的值也需要调整；</li>
+<li>其次，元素的 <code>float</code> 特性的值不是 <code>none</code> 的时候或者它是根元素的时候，调整 <code>display</code> 的值；</li>
+<li>最后，非根元素，并且非浮动元素，并且非绝对定位的元素，<code>display</code> 特性值等同设置值。</li>
+</ul>
+<ol>
+<li><code>display</code> 的值为 <code>none</code>: <code>position</code> 和 <code>float</code> 不起作用, 浮动和定位无效</li>
+<li><code>position</code> 的值是 <code>absolute</code> 或 <code>fixed</code>: 浮动失效，<code>display</code> 会被按规则重置</li>
+<li><code>float</code> 的值不是 <code>none</code>: 浮动并且 &lsquo;display&rsquo; 会被按照转换设置</li>
+</ol>
+<h2 id=javascript>JavaScript</h2>
+<h3 id=question-什么是事件委托><strong>Question</strong> 什么是事件委托</h3>
+<p>Event Delegation is basically a pattern to handle events efficiently. Instead of adding an event listener to each and every similar element, we can add an event listener to a parent element and call an event on a particular target using the <code>.target</code> property of the event object.</p>
+<p>Example without event delegation:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>customUl</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;ul&#39;</span><span class=p>);</span>
+
+<span class=k>for</span> <span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;=</span> <span class=mi>10</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>newElement</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;li&#39;</span><span class=p>);</span>
+  <span class=nx>newElement</span><span class=p>.</span><span class=nx>textContent</span> <span class=o>=</span> <span class=s1>&#39;This is line &#39;</span> <span class=o>+</span> <span class=nx>i</span><span class=p>;</span>
+  <span class=nx>newElement</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;click&#39;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;Responding&#39;</span><span class=p>);</span>
+  <span class=p>});</span>
+  <span class=nx>customUI</span><span class=p>.</span><span class=nx>appendChild</span><span class=p>(</span><span class=nx>newElement</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><p>The above code will associate the function with every <code>&lt;li></code> element.</p>
+<p>Implementing the same functionalities with an alternate approach. In this approach, we will associate the same function with all event listeners. We are creating too many responding functions. <strong>We could extract this function and just reference the function too many functions:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>customUl</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;ul&#39;</span><span class=p>);</span>
+
+<span class=kd>function</span> <span class=nx>responding</span><span class=p>()</span> <span class=p>{</span>
+  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;Responding&#39;</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=k>for</span> <span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;=</span> <span class=mi>10</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>newElement</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;li&#39;</span><span class=p>);</span>
+  <span class=nx>newElement</span><span class=p>.</span><span class=nx>textContent</span> <span class=o>=</span> <span class=s1>&#39;This is line &#39;</span> <span class=o>+</span> <span class=nx>i</span><span class=p>;</span>
+  <span class=nx>newElement</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;click&#39;</span><span class=p>,</span> <span class=nx>responding</span><span class=p>);</span>
+  <span class=nx>customUI</span><span class=p>.</span><span class=nx>appendChild</span><span class=p>(</span><span class=nx>newElement</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><p>In above approach, we still have too many event listners pointing to the same function.</p>
+<p>Implementing the same functionalities using a single function and single event:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>customUl</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;ul&#39;</span><span class=p>);</span>
+
+<span class=kd>function</span> <span class=nx>responding</span><span class=p>()</span> <span class=p>{</span>
+  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;Responding&#39;</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=k>for</span> <span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;=</span> <span class=mi>10</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>newElement</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;li&#39;</span><span class=p>);</span>
+  <span class=nx>newElement</span><span class=p>.</span><span class=nx>textContent</span> <span class=o>=</span> <span class=s1>&#39;This is line &#39;</span> <span class=o>+</span> <span class=nx>i</span><span class=p>;</span>
+  <span class=nx>customUI</span><span class=p>.</span><span class=nx>appendChild</span><span class=p>(</span><span class=nx>newElement</span><span class=p>);</span>
+<span class=p>}</span>
+<span class=nx>customUI</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;click&#39;</span><span class=p>,</span> <span class=nx>responding</span><span class=p>);</span>
+</code></pre></div><p>Now there is a single event listener and a single responding function.
+In the above-shown method, we have improved the performance, but we have lost access to individual <code>&lt;li></code> elements so to resolve this issue, we will use a technique called <strong>event delegation</strong>.</p>
+<p>The event object has a special property call <code>.target</code> which will help us in getting access to individual <code>&lt;li></code> elements with the help of phases.</p>
+<p>Steps:</p>
+<ul>
+<li><code>&lt;ul></code> element is clicked.</li>
+<li>The event goes in the capturing phase.</li>
+<li>It reaches the target (<code>&lt;li></code> in our case).</li>
+<li>It switches to the bubbling phase.</li>
+<li>When it hits the <code>&lt;ul></code> element, it runs the event listener.</li>
+<li>Inside the listener function <code>event.target</code> is the element that was clicked.</li>
+<li><strong><code>Event.target</code> provides us access to the <code>&lt;li></code> element that was clicked.</strong></li>
+</ul>
+<p>The <code>.nodeName</code> property of the <code>.target</code> allows us to identify a specific node. If our parent element contains more than one child element then we can identify specific elements by using the <code>.nodeName</code> property.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>customUl</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;ul&#39;</span><span class=p>);</span>
+
+<span class=kd>function</span> <span class=nx>responding</span><span class=p>(</span><span class=nx>evt</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>evt</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>nodeName</span> <span class=o>===</span> <span class=s1>&#39;li&#39;</span><span class=p>)</span> <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;Responding&#39;</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=k>for</span> <span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;=</span> <span class=mi>10</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>newElement</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;li&#39;</span><span class=p>);</span>
+  <span class=nx>newElement</span><span class=p>.</span><span class=nx>textContent</span> <span class=o>=</span> <span class=s1>&#39;This is line &#39;</span> <span class=o>+</span> <span class=nx>i</span><span class=p>;</span>
+  <span class=nx>customUI</span><span class=p>.</span><span class=nx>appendChild</span><span class=p>(</span><span class=nx>newElement</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=nx>customUI</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;click&#39;</span><span class=p>,</span> <span class=nx>responding</span><span class=p>);</span>
+</code></pre></div><hr>
+<p>当发生点击事件（或传播的任何其他事件）时：</p>
+<ul>
+<li>事件从 window、document、根元素向下传播，并经过目标元素的祖先（捕获阶段）；</li>
+<li>事件发生在目标（目标阶段）上；</li>
+<li>最后，事件在目标祖先之间冒出气泡，直到根元素 document 和 window（冒泡阶段）。</li>
+</ul>
+<p>该机制称为<strong>事件传播</strong>。</p>
+<p>事件委托是一种有用的模式，因为你可以只需要用一个事件处理程序就能侦听多个元素上的事件。</p>
+<p>使用事件委托需要三个步骤：</p>
+<ul>
+<li>确定要监视事件的元素的父级元素</li>
+<li>把将事件侦听器附加到父元素</li>
+<li>用 event.target 选择目标元素</li>
+</ul>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=https://www.cnblogs.com/jiangtuzi/p/4128962.html target=_blank rel=noopener>position 跟 display、margin collapse、overflow、float 这些特性相互叠加后会怎么样？</a></p>
+<p><a class=link href=https://www.geeksforgeeks.org/event-delegation-in-javascript/ target=_blank rel=noopener>Event Delegation in JavaScript - GeeksforGeeks</a></p>
+<p><a class=link href=https://segmentfault.com/a/1190000023563411 target=_blank rel=noopener>浅析 JavaScript 中的事件委托 - SegmentFault 思否</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-50/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-50/frontend-50-cover.3e78f615d89899fa3dc3897a720bc94e_huf9bebf57e38dee1401493ccccc38150e_4688895_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-Pnj2FdiYmfo9w4l6cgvJTg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　50</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/frontend-49-cover.2f3d0582d19bb36f40b43c3f9d7347dd_huf85f6763ad22d7115d9deb6f5e8b1b11_5837531_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-Lz0FgtGbs29AtDw/nXNH3Q==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　49</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/frontend-48-cover.5026ca15c16458097121046058665f9c_huee392f8af400356f6133da49ffc9f64d_1815593_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-UCbKFcFkWAlxIQRgWGZfnA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　48</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-47/frontend-47-cover.5026ca15c16458097121046058665f9c_huee392f8af400356f6133da49ffc9f64d_1815593_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-UCbKFcFkWAlxIQRgWGZfnA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　47</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/frontend-46-cover.305c255a676775cc644f6911dd275d60_hub658970c4a8c56564578238029a5a6aa_1150640_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-MFwlWmdndcxkT2kR3SddYA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　46</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-form表单提交时为什么会刷新页面怎么预防刷新><strong>Question</strong> <code>Form</code>表单提交时为什么会刷新页面？怎么预防刷新</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-要是position跟displayoverflowfloat这些特性相互叠加后会怎么样><strong>Question</strong> 要是<code>position</code>跟<code>display</code>、<code>overflow</code>、<code>float</code>这些特性相互叠加后会怎么样</a>
+<ol>
+<li><a href=#displayposition-和-float-的相互关系><code>display</code>、<code>position</code> 和 <code>float</code> 的相互关系</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-什么是事件委托><strong>Question</strong> 什么是事件委托</a></li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 06 Nov 2021 14:08:07 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　51</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-51/</link><pubDate>Sat, 06 Nov 2021 14:08:07 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-51/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-51/frontend-51-cover.jpg" alt="Featured image of post 毎日のフロントエンド　51" />&lt;h1 id="第五十一日">第五十一日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 07 Nov 2021 10:47:11 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　52</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/</link><pubDate>Sun, 07 Nov 2021 10:47:11 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/frontend-52-cover.jpg" alt="Featured image of post 毎日のフロントエンド　52" />&lt;h1 id="第五十二日">第五十二日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-form表单提交时为什么会刷新页面怎么预防刷新">&lt;strong>Question&lt;/strong> &lt;code>Form&lt;/code>表单提交时为什么会刷新页面？怎么预防刷新&lt;/h3>
+&lt;p>因为早期网页交互模型只能是浏览器提交数据给服务器，服务器做出响应重新返回一个页面，浏览器加载这个页面进行显示。早期前端没有编程式发送网络请求的 API，更没有前端路由管理的概念，所以表单提交跳转页面是广泛接受的方案。&lt;/p>
+&lt;p>不想刷新可以使用 JS 拦截 form 的 onsubmit 事件，阻止掉浏览器的默认行为，然后用 ajax/fetch 和后台交互。另一个偏方是使用 iframe 作为 form 的 target，不过 JS 处理方面不如让浏览器别管自己全手动发请求来得简单。&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-要是position跟displayoverflowfloat这些特性相互叠加后会怎么样">&lt;strong>Question&lt;/strong> 要是&lt;code>position&lt;/code>跟&lt;code>display&lt;/code>、&lt;code>overflow&lt;/code>、&lt;code>float&lt;/code>这些特性相互叠加后会怎么样&lt;/h3>
+&lt;h4 id="displayposition-和-float-的相互关系">&lt;code>display&lt;/code>、&lt;code>position&lt;/code> 和 &lt;code>float&lt;/code> 的相互关系&lt;/h4>
+&lt;p>&lt;code>display&lt;/code> 属性规定元素应该生成的框的类型。&lt;code>block&lt;/code> &lt;code>inline&lt;/code>&amp;hellip;&lt;/p>
+&lt;p>&lt;code>position&lt;/code> 属性规定元素的定位类型。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>absolute&lt;/code>表示生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位；&lt;/li>
+&lt;li>&lt;code>fixed&lt;/code>成绝对定位的元素，相对于浏览器窗口进行定位；&lt;/li>
+&lt;li>&lt;code>relative&lt;/code>生成相对定位的元素，相对于其正常位置进行定位；&lt;/li>
+&lt;li>&lt;code>static&lt;/code> 默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right z-index 声明）。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>Float&lt;/code>也是是一种布局方式，它定义元素在哪个方向浮动。在布局过程中也经常会使用它来达到左右并排布局的效果。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>position:absolute&lt;/code>和&lt;code>position:fixed&lt;/code> 优先级最高，有它存在的时候，浮动不起作用，&lt;code>display&lt;/code> 的值也需要调整；&lt;/li>
+&lt;li>其次，元素的 &lt;code>float&lt;/code> 特性的值不是 &lt;code>none&lt;/code> 的时候或者它是根元素的时候，调整 &lt;code>display&lt;/code> 的值；&lt;/li>
+&lt;li>最后，非根元素，并且非浮动元素，并且非绝对定位的元素，&lt;code>display&lt;/code> 特性值等同设置值。&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>&lt;code>display&lt;/code> 的值为 &lt;code>none&lt;/code>: &lt;code>position&lt;/code> 和 &lt;code>float&lt;/code> 不起作用, 浮动和定位无效&lt;/li>
+&lt;li>&lt;code>position&lt;/code> 的值是 &lt;code>absolute&lt;/code> 或 &lt;code>fixed&lt;/code>: 浮动失效，&lt;code>display&lt;/code> 会被按规则重置&lt;/li>
+&lt;li>&lt;code>float&lt;/code> 的值不是 &lt;code>none&lt;/code>: 浮动并且 &amp;lsquo;display&amp;rsquo; 会被按照转换设置&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-什么是事件委托">&lt;strong>Question&lt;/strong> 什么是事件委托&lt;/h3>
+&lt;p>Event Delegation is basically a pattern to handle events efficiently. Instead of adding an event listener to each and every similar element, we can add an event listener to a parent element and call an event on a particular target using the &lt;code>.target&lt;/code> property of the event object.&lt;/p>
+&lt;p>Example without event delegation:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">customUl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;ul&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">newElement&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;li&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">newElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">textContent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;This is line &amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">newElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;click&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Responding&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">customUI&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">appendChild&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">newElement&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The above code will associate the function with every &lt;code>&amp;lt;li&amp;gt;&lt;/code> element.&lt;/p>
+&lt;p>Implementing the same functionalities with an alternate approach. In this approach, we will associate the same function with all event listeners. We are creating too many responding functions. &lt;strong>We could extract this function and just reference the function too many functions:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">customUl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;ul&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">responding&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Responding&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">newElement&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;li&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">newElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">textContent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;This is line &amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">newElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;click&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">responding&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">customUI&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">appendChild&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">newElement&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>In above approach, we still have too many event listners pointing to the same function.&lt;/p>
+&lt;p>Implementing the same functionalities using a single function and single event:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">customUl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;ul&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">responding&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Responding&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">newElement&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;li&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">newElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">textContent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;This is line &amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">customUI&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">appendChild&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">newElement&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">customUI&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;click&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">responding&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now there is a single event listener and a single responding function.
+In the above-shown method, we have improved the performance, but we have lost access to individual &lt;code>&amp;lt;li&amp;gt;&lt;/code> elements so to resolve this issue, we will use a technique called &lt;strong>event delegation&lt;/strong>.&lt;/p>
+&lt;p>The event object has a special property call &lt;code>.target&lt;/code> which will help us in getting access to individual &lt;code>&amp;lt;li&amp;gt;&lt;/code> elements with the help of phases.&lt;/p>
+&lt;p>Steps:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;ul&amp;gt;&lt;/code> element is clicked.&lt;/li>
+&lt;li>The event goes in the capturing phase.&lt;/li>
+&lt;li>It reaches the target (&lt;code>&amp;lt;li&amp;gt;&lt;/code> in our case).&lt;/li>
+&lt;li>It switches to the bubbling phase.&lt;/li>
+&lt;li>When it hits the &lt;code>&amp;lt;ul&amp;gt;&lt;/code> element, it runs the event listener.&lt;/li>
+&lt;li>Inside the listener function &lt;code>event.target&lt;/code> is the element that was clicked.&lt;/li>
+&lt;li>&lt;strong>&lt;code>Event.target&lt;/code> provides us access to the &lt;code>&amp;lt;li&amp;gt;&lt;/code> element that was clicked.&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>The &lt;code>.nodeName&lt;/code> property of the &lt;code>.target&lt;/code> allows us to identify a specific node. If our parent element contains more than one child element then we can identify specific elements by using the &lt;code>.nodeName&lt;/code> property.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">customUl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;ul&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">responding&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">evt&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">evt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">nodeName&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;li&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Responding&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">newElement&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;li&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">newElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">textContent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;This is line &amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">customUI&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">appendChild&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">newElement&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">customUI&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;click&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">responding&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;p>当发生点击事件（或传播的任何其他事件）时：&lt;/p>
+&lt;ul>
+&lt;li>事件从 window、document、根元素向下传播，并经过目标元素的祖先（捕获阶段）；&lt;/li>
+&lt;li>事件发生在目标（目标阶段）上；&lt;/li>
+&lt;li>最后，事件在目标祖先之间冒出气泡，直到根元素 document 和 window（冒泡阶段）。&lt;/li>
+&lt;/ul>
+&lt;p>该机制称为&lt;strong>事件传播&lt;/strong>。&lt;/p>
+&lt;p>事件委托是一种有用的模式，因为你可以只需要用一个事件处理程序就能侦听多个元素上的事件。&lt;/p>
+&lt;p>使用事件委托需要三个步骤：&lt;/p>
+&lt;ul>
+&lt;li>确定要监视事件的元素的父级元素&lt;/li>
+&lt;li>把将事件侦听器附加到父元素&lt;/li>
+&lt;li>用 event.target 选择目标元素&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.cnblogs.com/jiangtuzi/p/4128962.html" target="_blank" rel="noopener"
+>position 跟 display、margin collapse、overflow、float 这些特性相互叠加后会怎么样？&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.geeksforgeeks.org/event-delegation-in-javascript/" target="_blank" rel="noopener"
+>Event Delegation in JavaScript - GeeksforGeeks&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000023563411" target="_blank" rel="noopener"
+>浅析 JavaScript 中的事件委托 - SegmentFault 思否&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　51</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-51/</link><pubDate>Sat, 06 Nov 2021 14:08:07 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-51/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-51/frontend-51-cover.jpg" alt="Featured image of post 毎日のフロントエンド　51" />&lt;h1 id="第五十一日">第五十一日&lt;/h1>
 &lt;h2 id="javascript">JavaScript&lt;/h2>
 &lt;h3 id="question-字符串相连有哪些方式哪种最好为什么">&lt;strong>Question:&lt;/strong> 字符串相连有哪些方式？哪种最好？为什么？&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;aaaa&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
