@@ -1,4 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 07 Nov 2021 10:47:11 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　52</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/</link><pubDate>Sun, 07 Nov 2021 10:47:11 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/frontend-52-cover.jpg" alt="Featured image of post 毎日のフロントエンド　52" />&lt;h1 id="第五十二日">第五十二日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 08 Nov 2021 19:38:24 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　53</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/</link><pubDate>Mon, 08 Nov 2021 19:38:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/frontend-53-cover.jpg" alt="Featured image of post 毎日のフロントエンド　53" />&lt;h1 id="第五十三日">第五十三日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-web-workers-能帮我们解决哪些问题">&lt;strong>Question:&lt;/strong> &lt;code>web workers&lt;/code> 能帮我们解决哪些问题&lt;/h3>
+&lt;p>&lt;code>Web Worker&lt;/code> 的作用，就是为 &lt;code>JavaScript&lt;/code> 创造多线程环境，允许主线程创建 &lt;code>Worker&lt;/code> 线程，将一些任务分配给后者运行。在主线程运行的同时，&lt;code>Worker&lt;/code> 线程在后台运行，两者互不干扰。等到 &lt;code>Worker&lt;/code> 线程完成计算任务，再把结果返回给主线程。这样的好处是，一些计算密集型或高延迟的任务，被 Worker 线程负担了，主线程（通常负责 UI 交互）就会很流畅，不会被阻塞或拖慢。&lt;/p>
+&lt;p>Web Worker 有以下几个使用注意点:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>同源限制: 必须与主线程的脚本文件同源。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>DOM&lt;/code> 限制&lt;/p>
+&lt;ul>
+&lt;li>Worker 线程所在的全局对象，与主线程不一样，无法读取主线程所在网页的 DOM 对象，也无法使用&lt;code>document&lt;/code>、&lt;code>window&lt;/code>、&lt;code>parent&lt;/code>这些对象。但是，&lt;code>Worker&lt;/code> 线程可以 &lt;code>navigator&lt;/code> 对象和 &lt;code>location&lt;/code> 对象。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>通信联系&lt;/p>
+&lt;ul>
+&lt;li>Worker 线程和主线程不在同一个上下文环境，它们不能直接通信，必须通过消息完成。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>脚本限制&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Worker&lt;/code> 线程不能执行&lt;code>alert()&lt;/code>方法和&lt;code>confirm()&lt;/code>方法，但可以使用 &lt;code>XMLHttpRequest&lt;/code> 对象发出 &lt;code>AJAX&lt;/code> 请求。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>文件限制&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Worker&lt;/code> 线程无法读取本地文件，即不能打开本机的文件系统&lt;code>file://&lt;/code>，它所加载的脚本，必须来自网络。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-怎么使用自定义字体有什么注意事项">&lt;strong>Question:&lt;/strong> 怎么使用自定义字体？有什么注意事项&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">@&lt;/span>&lt;span class="k">font-face&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">font-family&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;自定义字体名称&amp;#39;&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="nt">src&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">url&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;字体文件名.eot&amp;#39;&lt;/span>&lt;span class="o">);&lt;/span> &lt;span class="c">/* Modern Browsers url(&amp;#39;字体文件名.ttf&amp;#39;) format(&amp;#39;truetype&amp;#39;), / Safari, Android, iOS / url(&amp;#39;字体文件名.svg#字体文件名&amp;#39;) format(&amp;#39;svg&amp;#39;); / Legacy iOS */&lt;/span>
+&lt;span class="nt">font-style&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">normal&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="nt">font-weight&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">normal&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-document的-load-和-ready-有什么区别">&lt;strong>Question:&lt;/strong> &lt;code>document&lt;/code>的 &lt;code>load&lt;/code> 和 &lt;code>ready&lt;/code> 有什么区别&lt;/h3>
+&lt;p>&lt;code>Dom&lt;/code>文档执行顺序：&lt;/p>
+&lt;ol>
+&lt;li>解析 HTML 结构&lt;/li>
+&lt;li>加载外部脚本和样式表文件&lt;/li>
+&lt;li>解析并执行脚本代码&lt;/li>
+&lt;li>构建 &lt;code>html&lt;/code> &lt;code>dom&lt;/code> 模型 // &lt;code>ready&lt;/code> 页面资源加载完成&lt;/li>
+&lt;li>加载图片等外部文件&lt;/li>
+&lt;li>页面加载完毕 // &lt;code>load&lt;/code> &lt;code>dom&lt;/code>加载完成&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="http://www.ruanyifeng.com/blog/2018/07/web-worker.html" target="_blank" rel="noopener"
+>Web Worker 使用教程 - 阮一峰的网络日志&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　52</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/</link><pubDate>Sun, 07 Nov 2021 10:47:11 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/frontend-52-cover.jpg" alt="Featured image of post 毎日のフロントエンド　52" />&lt;h1 id="第五十二日">第五十二日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-form表单提交时为什么会刷新页面怎么预防刷新">&lt;strong>Question&lt;/strong> &lt;code>Form&lt;/code>表单提交时为什么会刷新页面？怎么预防刷新&lt;/h3>
 &lt;p>因为早期网页交互模型只能是浏览器提交数据给服务器，服务器做出响应重新返回一个页面，浏览器加载这个页面进行显示。早期前端没有编程式发送网络请求的 API，更没有前端路由管理的概念，所以表单提交跳转页面是广泛接受的方案。&lt;/p>
