@@ -28,13 +28,41 @@
 &lt;p>&lt;code>arguments&lt;/code> 中 c 的值还是 1 不会变成 10。
 c=1 赋值给了 a， 1+1+10， 10 为函数 a 中块级作用域内定义的&lt;code>c=10&lt;/code>。&lt;/p>
 &lt;p>因为 &lt;code>function a()&lt;/code> 函数加了默认值，就按 ES 的方式解析，&lt;code>ES6&lt;/code> 是有块级作用域的，&lt;code>c&lt;/code> 的值不会改变&lt;/p>
+&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">side&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">c&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// c没有默认值的情况，c=10
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 当非严格模式中的函数没有包含剩余参数、默认参数和解构赋值，那么arguments对象中的值会跟踪参数的值（反之亦然）
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">c&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">side&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">b&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">c&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>argument 对象&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>在严格模式下，剩余参数、默认参数和解构赋值参数的存在不会改变 &lt;code>arguments&lt;/code> 对象的行为，但是在非严格模式下就有所不同了。&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="reference">Reference&lt;/h2>
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Geolocation/getCurrentPosition" target="_blank" rel="noopener"
 >Geolocation.getCurrentPosition() - Web API 接口参考 | MDN&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
 >haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
->lgwebdream/FE-Interview &lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　53</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/</link><pubDate>Mon, 08 Nov 2021 19:38:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/frontend-53-cover.jpg" alt="Featured image of post 毎日のフロントエンド　53" />&lt;h1 id="第五十三日">第五十三日&lt;/h1>
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments#%E5%89%A9%E4%BD%99%E5%8F%82%E6%95%B0%E3%80%81%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E5%92%8C%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC%E5%8F%82%E6%95%B0" target="_blank" rel="noopener"
+>Arguments 对象 - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド　53</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/</link><pubDate>Mon, 08 Nov 2021 19:38:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/frontend-53-cover.jpg" alt="Featured image of post 毎日のフロントエンド　53" />&lt;h1 id="第五十三日">第五十三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-web-workers-能帮我们解决哪些问题">&lt;strong>Question:&lt;/strong> &lt;code>web workers&lt;/code> 能帮我们解决哪些问题&lt;/h3>
 &lt;p>&lt;code>Web Worker&lt;/code> 的作用，就是为 &lt;code>JavaScript&lt;/code> 创造多线程环境，允许主线程创建 &lt;code>Worker&lt;/code> 线程，将一些任务分配给后者运行。在主线程运行的同时，&lt;code>Worker&lt;/code> 线程在后台运行，两者互不干扰。等到 &lt;code>Worker&lt;/code> 线程完成计算任务，再把结果返回给主线程。这样的好处是，一些计算密集型或高延迟的任务，被 Worker 线程负担了，主线程（通常负责 UI 交互）就会很流畅，不会被阻塞或拖慢。&lt;/p>
