@@ -1,0 +1,242 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　54</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　54">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-11-09T11:39:45+09:00"><meta property="article:modified_time" content="2021-11-09T11:39:45+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/frontend-54-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　54">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/frontend-54-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/frontend-54-cover_hu4507f086d4f8c26b1105d9908976a66c_4915421_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/frontend-54-cover_hu4507f086d4f8c26b1105d9908976a66c_4915421_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/frontend-54-cover_hu4507f086d4f8c26b1105d9908976a66c_4915421_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド　54">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/>毎日のフロントエンド　54</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Nov 09, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 1 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第五十四日>第五十四日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-了解-html5-的地理定位吗怎么使用><strong>Question:</strong> 了解 HTML5 的地理定位吗？怎么使用</h3>
+<p><code>Geolocation.getCurrentPosition()</code> 方法用来获取设备当前位置</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nx>navigator</span><span class=p>.</span><span class=nx>geolocation</span><span class=p>.</span><span class=nx>getCurrentPosition</span><span class=p>(</span><span class=nx>success</span><span class=p>,</span> <span class=nx>error</span><span class=p>,</span> <span class=nx>options</span><span class=p>);</span>
+</code></pre></div><h2 id=css>CSS</h2>
+<h3 id=question-css3-的nth-child-和nth-of-type-的区别是什么><strong>Question:</strong> css3 的<code>:nth-child</code> 和<code>:nth-of-type</code> 的区别是什么？</h3>
+<p><code>:nth-child(n)</code> 选择器匹配属于其父元素的第 <code>N</code> 个子元素，不论元素的类型。
+<code>:nth-of-type(n)</code> 选择器匹配属于父元素的特定类型的第 N 个子元素。<code>n</code> 可以是数字、关键词或公式</p>
+<h2 id=javascript>JavaScript</h2>
+<h3 id=question-写一个函数找出给定数组中的最大差值><strong>Question:</strong> 写一个函数找出给定数组中的最大差值</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>difference</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=nb>Math</span><span class=p>.</span><span class=nx>max</span><span class=p>(...</span><span class=nx>arr</span><span class=p>)</span> <span class=o>-</span> <span class=nb>Math</span><span class=p>.</span><span class=nx>min</span><span class=p>(...</span><span class=nx>arr</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><h2 id=one-more-question>One more Question</h2>
+<p>写出执行结果，并解释原因</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>side</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>arr</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>=</span> <span class=nx>arr</span><span class=p>[</span><span class=mi>2</span><span class=p>];</span>
+<span class=p>}</span>
+<span class=kd>function</span> <span class=nx>a</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>,</span> <span class=nx>c</span> <span class=o>=</span> <span class=mi>3</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>c</span> <span class=o>=</span> <span class=mi>10</span><span class=p>;</span>
+  <span class=nx>side</span><span class=p>(</span><span class=nx>arguments</span><span class=p>);</span>
+  <span class=k>return</span> <span class=nx>a</span> <span class=o>+</span> <span class=nx>b</span> <span class=o>+</span> <span class=nx>c</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=nx>a</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>1</span><span class=p>);</span>
+</code></pre></div><hr>
+<p>12</p>
+<p><code>arguments</code> 中 c 的值还是 1 不会变成 10。
+c=1 赋值给了 a， 1+1+10， 10 为函数 a 中块级作用域内定义的<code>c=10</code>。</p>
+<p>因为 <code>function a()</code> 函数加了默认值，就按 ES 的方式解析，<code>ES6</code> 是有块级作用域的，<code>c</code> 的值不会改变</p>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/API/Geolocation/getCurrentPosition target=_blank rel=noopener>Geolocation.getCurrentPosition() - Web API 接口参考 | MDN</a></p>
+<p><a class=link href=https://github.com/haizlin/fe-interview target=_blank rel=noopener>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……</a></p>
+<p><a class=link href=https://github.com/lgwebdream/FE-Interview target=_blank rel=noopener>lgwebdream/FE-Interview </a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/frontend-53-cover.dd327162dd67a05e5bbef629c04fdfc1_hu4c1ea721cfa3846928b5c5544e9117fc_528188_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-3TJxYt1noF5bvvYpwE/fwQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　53</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-52/frontend-52-cover.f80ed609404f558a4b271a37e9f54d03_hu7ada2d7a71634d05b97ddf35971cff96_4596727_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-+A7WCUBPVYpLJxo36fVNAw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　52</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-50/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-50/frontend-50-cover.3e78f615d89899fa3dc3897a720bc94e_huf9bebf57e38dee1401493ccccc38150e_4688895_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-Pnj2FdiYmfo9w4l6cgvJTg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　50</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-49/frontend-49-cover.2f3d0582d19bb36f40b43c3f9d7347dd_huf85f6763ad22d7115d9deb6f5e8b1b11_5837531_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-Lz0FgtGbs29AtDw/nXNH3Q==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　49</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-48/frontend-48-cover.5026ca15c16458097121046058665f9c_huee392f8af400356f6133da49ffc9f64d_1815593_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-UCbKFcFkWAlxIQRgWGZfnA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　48</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-了解-html5-的地理定位吗怎么使用><strong>Question:</strong> 了解 HTML5 的地理定位吗？怎么使用</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-css3-的nth-child-和nth-of-type-的区别是什么><strong>Question:</strong> css3 的<code>:nth-child</code> 和<code>:nth-of-type</code> 的区别是什么？</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-写一个函数找出给定数组中的最大差值><strong>Question:</strong> 写一个函数找出给定数组中的最大差值</a></li>
+</ol>
+</li>
+<li><a href=#one-more-question>One more Question</a></li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
