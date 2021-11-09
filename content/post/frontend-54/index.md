@@ -63,6 +63,29 @@ c=1 赋值给了 a， 1+1+10， 10 为函数 a 中块级作用域内定义的`c=
 
 因为 `function a()` 函数加了默认值，就按 ES 的方式解析，`ES6` 是有块级作用域的，`c` 的值不会改变
 
+---
+
+```js
+function side(arr) {
+  arr[0] = arr[2];
+}
+function a(a, b, c) {
+  // c没有默认值的情况，c=10
+  // 当非严格模式中的函数没有包含剩余参数、默认参数和解构赋值，那么arguments对象中的值会跟踪参数的值（反之亦然）
+  c = 10;
+  console.log(arguments);
+  side(arguments);
+  return a + b + c;
+}
+a(1, 1, 1); // 21
+```
+
+> argument 对象[^1]
+
+> 在严格模式下，剩余参数、默认参数和解构赋值参数的存在不会改变 `arguments` 对象的行为，但是在非严格模式下就有所不同了。
+
+[^1]: [Arguments 对象 - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments#%E5%89%A9%E4%BD%99%E5%8F%82%E6%95%B0%E3%80%81%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E5%92%8C%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC%E5%8F%82%E6%95%B0)
+
 ## Reference
 
 [Geolocation.getCurrentPosition() - Web API 接口参考 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Geolocation/getCurrentPosition)
