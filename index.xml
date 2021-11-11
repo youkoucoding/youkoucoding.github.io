@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 10 Nov 2021 17:43:19 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　55</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-55/</link><pubDate>Wed, 10 Nov 2021 17:43:19 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-55/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-55/frontend-55-cover.jpg" alt="Featured image of post 毎日のフロントエンド　55" />&lt;h1 id="第五十五日">第五十五日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 11 Nov 2021 20:17:32 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　56</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-56/</link><pubDate>Thu, 11 Nov 2021 20:17:32 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-56/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-56/frontend-56-cover.jpg" alt="Featured image of post 毎日のフロントエンド　56" />&lt;h1 id="第五十六日">第五十六日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-渐进式渲染是什么progressive-rendering">&lt;strong>Question:&lt;/strong> 渐进式渲染是什么&lt;code>progressive rendering&lt;/code>&lt;/h3>
+&lt;p>渐进式渲染是用来提高网页性能，以尽快呈现页面的技术。
+比如：&lt;/p>
+&lt;ul>
+&lt;li>图片懒加载——页面上的图片不会一次性全部加载。当用户滚动页面到图片部分时，JavaScript 将加载并显示图像。&lt;/li>
+&lt;li>确定显示内容的优先级（分层次渲染）——为了尽快将页面呈现给用户，页面只包含基本的最少量的 CSS、脚本和内容，然后可以使用延迟加载脚本或监听 &lt;code>DOMContentLoaded/load&lt;/code> 事件加载其他资源和内容。&lt;/li>
+&lt;li>异步加载 &lt;code>HTML&lt;/code> 片段——当页面通过后台渲染时，把 &lt;code>HTML&lt;/code> 拆分，通过异步请求，分块发送给浏览器。&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-margin和padding使用的场景有哪些">&lt;strong>Question:&lt;/strong> &lt;code>margin&lt;/code>和&lt;code>padding&lt;/code>使用的场景有哪些&lt;/h3>
+&lt;p>&lt;code>margin&lt;/code>是用来隔开元素与元素的间距&lt;/p>
+&lt;p>&lt;code>padding&lt;/code>是用来隔开元素与内容的间隔&lt;/p>
+&lt;p>&lt;code>margin&lt;/code>用于布局分开元素使元素与元素互不相干&lt;/p>
+&lt;p>&lt;code>padding&lt;/code>用于元素与内容之间的间隔，让内容（文字）与（包裹）元素之间有一段距离&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-jsonp的原理是什么解决什么问题">&lt;strong>Question:&lt;/strong> &lt;code>JSONP&lt;/code>的原理是什么？解决什么问题&lt;/h3>
+&lt;h4 id="jsonp-是什么">&lt;code>JSONP&lt;/code> 是什么&lt;/h4>
+&lt;p>&lt;code>JSONP&lt;/code> 是一种动态 &lt;code>script&lt;/code> 标签跨域请求技术。
+指的是请求方动态创建 &lt;code>script&lt;/code> 标签，&lt;code>src&lt;/code>指向响应方的服务器（非同源的 url），同时传一个参数&lt;code>callback&lt;/code>，
+&lt;code>callback&lt;/code> 后面是&lt;code>functionName&lt;/code>，当请求方发起请求时，响应方根据传过来的参数&lt;code>callback&lt;/code>,构造并调用：xxx.call(undefined,&amp;lsquo;数据&amp;rsquo;),其中 &lt;em>数据&lt;/em> 的传入格式是以&lt;code>JSON&lt;/code>格式传入的，因为传入的 JSON 数据具有左右 &lt;code>padding&lt;/code>,因而得名 &lt;code>JSONP&lt;/code> 。
+后端代码构造并调用了 xxx，浏览器接收到了响应，就会执行 xxx.call(undefined,&amp;lsquo;数据&amp;rsquo;),于是，请求方就知道了要的数据了。&lt;/p>
+&lt;h4 id="jsonp-usage">&lt;code>JSONP&lt;/code> Usage&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">//server.js
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">Koa&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;koa&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">bodyParser&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;koa-bodyparser&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">getUser&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./mock&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">app&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Koa&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">app&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">use&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">bodyParser&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;span class="nx">app&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">use&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">next&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">path&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">curPath&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ctx&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">request&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">curPath&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;/jsonp&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 设置响应头
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">ctx&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Content-Type&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;application/javascript;charset=utf-8&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">ctx&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;X-Content-Type-Options&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;nosniff&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">callback&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ctx&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">query&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">callback&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">getUser&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">query&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">ctx&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">body&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sb">`&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">callback&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">(&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">)`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ctx&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">query&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;服务器已启动！&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">app&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">listen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3001&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// client.js
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">btn&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">HTMLElement&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;btn&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">btn&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="s1">&amp;#39;click&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;http://127.0.0.1:3030/jsonp?type=all&amp;amp;callback=getdata&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">loadScript&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="kc">false&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">loadScript&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">src&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">script&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">HTMLScriptElement&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;script&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">script&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">src&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">script&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onload&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 每次动态创建script标签之后,都将script标签删掉
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">body&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">removeChild&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">script&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">script&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onerror&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;请求失败了&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">delete&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;getdata&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">body&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">removeChild&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">script&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">body&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">appendChild&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">script&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">getdata&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">any&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// data 为服务端返回的数据
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// to do something
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">alert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="jsonp优缺点">&lt;code>JSONP&lt;/code>优缺点&lt;/h4>
+&lt;p>优点：&lt;/p>
+&lt;ol>
+&lt;li>JSONP 可以跨源&lt;/li>
+&lt;li>兼容性更好&lt;/li>
+&lt;/ol>
+&lt;p>缺点：&lt;/p>
+&lt;ol>
+&lt;li>只支持 &lt;code>GET&lt;/code> 请求&lt;/li>
+&lt;li>&lt;code>jsonp&lt;/code> 在调用失败的时候不会返回 HTTP 状态码&lt;/li>
+&lt;li>只支持跨域 &lt;code>HTTP&lt;/code> 请求这种情况，不能解决不同域的两个页面之间如何进行 JavaScript 调用的问题。&lt;/li>
+&lt;li>安全性不佳：假如提供 &lt;code>jsonp&lt;/code> 的服务存在页面注入漏洞，即它返回的 &lt;code>javascript&lt;/code> 的内容被人控制的,那么所有调用这个 &lt;code>jsonp&lt;/code> 的网站都会存在漏洞,这样的话危险就不止在一个域名下。&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://tech.ebayinc.com/engineering/async-fragments-rediscovering-progressive-html-rendering-with-marko/" target="_blank" rel="noopener"
+>Async Fragments: Rediscovering Progressive HTML Rendering with Marko&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　55</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-55/</link><pubDate>Wed, 10 Nov 2021 17:43:19 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-55/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-55/frontend-55-cover.jpg" alt="Featured image of post 毎日のフロントエンド　55" />&lt;h1 id="第五十五日">第五十五日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5-中新添加的表单属性有哪些">&lt;strong>Question:&lt;/strong> HTML5 中新添加的表单属性有哪些&lt;/h3>
 &lt;ol>
