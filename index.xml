@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 11 Nov 2021 20:17:32 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　56</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-56/</link><pubDate>Thu, 11 Nov 2021 20:17:32 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-56/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-56/frontend-56-cover.jpg" alt="Featured image of post 毎日のフロントエンド　56" />&lt;h1 id="第五十六日">第五十六日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 12 Nov 2021 16:05:02 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　57</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/</link><pubDate>Fri, 12 Nov 2021 16:05:02 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/frontend-57-cover.jpg" alt="Featured image of post 毎日のフロントエンド　57" />&lt;h1 id="第五十七日">第五十七日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5的download属性">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>的&lt;code>download&lt;/code>属性&lt;/h3>
+&lt;p>&lt;code>HTMLAnchorElement.download&lt;/code>属性是一个&lt;code>DOMString&lt;/code>，表明链接的资源将被下载，而不是显示在浏览器中。该值表示下载文件的建议名称。&lt;/p>
+&lt;p>常规的&lt;code>&amp;lt;a&amp;gt;&lt;/code>标签通过 &lt;code>href&lt;/code> 实现链接跳转，如果只想下载文件而不是跳转预览，最好的方式是在&lt;code>&amp;lt;a&amp;gt;&lt;/code>标签中添加&lt;code>download&lt;/code>属性，就能很简单地实现下载操作。&lt;/p>
+&lt;p>&lt;code>download&lt;/code>是 HTML5 中&lt;code>&amp;lt;a&amp;gt;&lt;/code>标签新增的一个属性，此属性会&lt;strong>强制触发下载操作&lt;/strong>，指示浏览器下载 &lt;code>URL&lt;/code> 而不是导航到它，并提示用户将其保存为本地文件，例如&lt;/p>
+&lt;p>&lt;code>&amp;lt;a href=&amp;quot;result.png&amp;quot; download&amp;gt;download&amp;lt;/a&amp;gt;&lt;/code>&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-inlineblockinline-block这三个属性值有什么区别">&lt;strong>Question:&lt;/strong> &lt;code>inline&lt;/code>、&lt;code>block&lt;/code>、&lt;code>inline-block&lt;/code>这三个属性值有什么区别&lt;/h3>
+&lt;p>CSS 显示模块分为内部显示类型和外部显示类型，内部显示类型是定义子元素如何参与内部布局，外部显示类型定义了父元素如何参与外部整个文档流的布局:&lt;/p>
+&lt;p>&lt;code>inline&lt;/code>-&amp;gt; &lt;code>inline-inline&lt;/code>;
+&lt;code>block&lt;/code>-&amp;gt; &lt;code>block-block&lt;/code>;
+&lt;code>inline-block&lt;/code>-&amp;gt; &lt;code>inline-block&lt;/code>;&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>inline&lt;/code>： 行内元素，元素不独占一行，不可以修改宽高;
+&lt;code>block&lt;/code>： 块级元素，元素独占一行，可以修改宽高;
+&lt;code>inline-block&lt;/code>： 行内块级元素，元素不独占一行，并且可以修改宽高&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-写一个方法使得sumxy和sumxy返回的结果相同">&lt;strong>Question:&lt;/strong> 写一个方法，使得&lt;code>sum(x)(y)&lt;/code>和&lt;code>sum(x,y)&lt;/code>返回的结果相同&lt;/h3>
+&lt;ol>
+&lt;li>&lt;code>sum(x)(y)&lt;/code>和&lt;code>sum(x,y)&lt;/code>返回的结果相同&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">sum&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">argument&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">argument&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">y&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// 7
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)(&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// 7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/58888918" target="_blank" rel="noopener"
+>浅析 HTML5 中的 download 属性&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/yygmind/blog/issues/36" target="_blank" rel="noopener"
+>JavaScript 高阶函数浅析&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://lodash.com/docs/4.17.15#curry" target="_blank" rel="noopener"
+>Lodash Documentation # curry&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　56</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-56/</link><pubDate>Thu, 11 Nov 2021 20:17:32 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-56/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-56/frontend-56-cover.jpg" alt="Featured image of post 毎日のフロントエンド　56" />&lt;h1 id="第五十六日">第五十六日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-渐进式渲染是什么progressive-rendering">&lt;strong>Question:&lt;/strong> 渐进式渲染是什么&lt;code>progressive rendering&lt;/code>&lt;/h3>
 &lt;p>渐进式渲染是用来提高网页性能，以尽快呈现页面的技术。
