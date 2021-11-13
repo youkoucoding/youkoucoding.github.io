@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 12 Nov 2021 16:05:02 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　57</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/</link><pubDate>Fri, 12 Nov 2021 16:05:02 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/frontend-57-cover.jpg" alt="Featured image of post 毎日のフロントエンド　57" />&lt;h1 id="第五十七日">第五十七日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 13 Nov 2021 15:00:34 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　58</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-58/</link><pubDate>Sat, 13 Nov 2021 15:00:34 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-58/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-58/frontend-58-cover.jpg" alt="Featured image of post 毎日のフロントエンド　58" />&lt;h1 id="第五十八日">第五十八日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5-相对于-html4-有哪些优势">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code> 相对于 &lt;code>HTML4&lt;/code> 有哪些优势&lt;/h3>
+&lt;p>更简洁-文档声明
+更语义-语义标签
+功能更强-各种表单属性及自定义属性等&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-box-sizing-常用的属性有哪些分别有什么作用">&lt;strong>Question:&lt;/strong> &lt;code>box-sizing&lt;/code> 常用的属性有哪些？分别有什么作用&lt;/h3>
+&lt;p>The &lt;code>box-sizing&lt;/code> css property sets how the total width and heights of elements are calculated.&lt;/p>
+&lt;p>There are two behaviors to be used to adjust:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>content-box&lt;/code> gives you the default &lt;code>box-sizing&lt;/code> behavior. If you set an element&amp;rsquo;s width to 100 px, then element&amp;rsquo;s content box will be 100 px wide, and the width of any border or padding will be added to the final rendered width, &lt;strong>making the element wider than 100 px.&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>border-box&lt;/code> tells the browser to account for any border and padding in the values you specify for an element&amp;rsquo;s width and height. If you set an element&amp;rsquo;s width to 100 pixels, that 100 px will &lt;strong>include any border or padding you added,&lt;/strong> and the content box will shrink to absorb that extra width.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>&lt;code>border-box&lt;/code> typically makes it much easier to size elements.&lt;/strong> And that&amp;rsquo;s the default styling that browsers use for the &lt;code>&amp;lt;table&amp;gt;&lt;/code>, &lt;code>&amp;lt;select&amp;gt;&lt;/code>, &lt;code>&amp;lt;button&amp;gt;&lt;/code>elements, and for &lt;code>&amp;lt;input&amp;gt;&lt;/code> elements whose type us &lt;code>radio&lt;/code>, &lt;code>checkbox&lt;/code>,&lt;code>reset&lt;/code>, &lt;code>button&lt;/code>, &lt;code>submit&lt;/code>, &lt;code>color&lt;/code>, or &lt;code>search&lt;/code>.&lt;/p>
+&lt;blockquote>
+&lt;p>content-box 盒子的宽度不包含 border 和 padding，&lt;code>border-box&lt;/code> 盒子的宽度包含 &lt;code>border&lt;/code> 和 &lt;code>padding&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-请说下对proto和-prototype-的理解">&lt;strong>Question:&lt;/strong> 请说下对&lt;code>proto&lt;/code>和 &lt;code>prototype&lt;/code> 的理解&lt;/h3>
+&lt;ul>
+&lt;li>只有&lt;strong>函数对象&lt;/strong>才有&lt;code>prototype&lt;/code>属性, &lt;code>prototype&lt;/code>对象上&lt;strong>存放&lt;/strong>共用的方法和属性&lt;/li>
+&lt;li>&lt;strong>对象&lt;/strong>都有 &lt;code>__proto__&lt;/code>属性，&lt;code>__proto__&lt;/code> 是指向该对象构造函数的原型属性（即&lt;code>prototype&lt;/code>）, 函数本身也是对象， 同样有&lt;code>__proto__&lt;/code>属性&lt;/li>
+&lt;li>同时，&lt;code>constructor&lt;/code>是&lt;strong>对象&lt;/strong>才有的属性,它是从一个对象指向一个函数的,指向的函数就是该对象的构造函数。每个对象都有构造函数&lt;/li>
+&lt;/ul>
+&lt;p>通过&lt;code>__proto__&lt;/code>属性（从一个对象指向另一个对象）, 可以拿到&lt;code>Object&lt;/code>原型对象上的属性和方法，原型对象上的&lt;code>__proto__&lt;/code>又指向该构造函数的&lt;code>prototype&lt;/code>，从而形成了一条原型链。&lt;/p>
+&lt;p>&lt;code>p1.__proto__ === Parent.prototype; //true&lt;/code>&lt;/p>
+&lt;p>&lt;code>__proto__&lt;/code>通常称为隐式原型，&lt;code>prototype&lt;/code>通常称为显式原型，那可以说一个对象的隐式原型指向了该对象的&lt;strong>构造函数的显式原型&lt;/strong>。&lt;/p>
+&lt;p>那么我们在显式原型上定义的属性方法，通过隐式原型传递给了构造函数的实例。这样一来实例就能很容易的访问到构造函数原型上的方法和属性了。&lt;/p>
+&lt;p>&lt;code>Parent.prototype.__proto__ === Object.prototype; //true&lt;/code>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000021232132" target="_blank" rel="noopener"
+>一张图搞定 JS 原型&amp;amp;原型链&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　57</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/</link><pubDate>Fri, 12 Nov 2021 16:05:02 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/frontend-57-cover.jpg" alt="Featured image of post 毎日のフロントエンド　57" />&lt;h1 id="第五十七日">第五十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5的download属性">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>的&lt;code>download&lt;/code>属性&lt;/h3>
 &lt;p>&lt;code>HTMLAnchorElement.download&lt;/code>属性是一个&lt;code>DOMString&lt;/code>，表明链接的资源将被下载，而不是显示在浏览器中。该值表示下载文件的建议名称。&lt;/p>
