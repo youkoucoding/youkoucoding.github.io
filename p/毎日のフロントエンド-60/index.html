@@ -1,0 +1,284 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　60</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-60/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　60">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-60/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-11-15T15:49:03+09:00"><meta property="article:modified_time" content="2021-11-15T15:49:03+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-60/frontend-60-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　60">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-60/frontend-60-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-60/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-60/frontend-60-cover_hudc81c27420b7943d487a1ef0a83d433c_637835_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-60/frontend-60-cover_hudc81c27420b7943d487a1ef0a83d433c_637835_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-60/frontend-60-cover_hudc81c27420b7943d487a1ef0a83d433c_637835_1600x0_resize_q75_box.jpg 1600w" width=800 height=526 loading=lazy alt="Featured image of post 毎日のフロントエンド　60">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-60/>毎日のフロントエンド　60</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Nov 15, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 1 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第六十日>第六十日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-srchreflink的区别是什么><strong>Question:</strong> <code>src</code>、<code>href</code>、<code>link</code>的区别是什么</h3>
+<blockquote>
+<p><code>src</code>用于替代这个元素，而<code>href</code>用于建立这个标签与外部资源之间的关系</p>
+</blockquote>
+<ol>
+<li><code>href</code> - <code>HyperText Reference</code></li>
+</ol>
+<p>超文本引用， 常用的有： <code>&lt;a></code>,<code>&lt;link></code>, <code>href</code>是引用和页面关联，是在当前元素和引用资源之间 <strong>建立联系</strong></p>
+<p><code>&lt;link href="reset.css" rel=”stylesheet“/></code> 浏览器会识别该文档为 css 文档，<strong>并行下载</strong>该文档，并且不会停止对当前文档的处理。</p>
+<ol start=2>
+<li><code>src</code> - <code>source</code></li>
+</ol>
+<p>src 的内容是页面必不可少的一部分，是 <strong>引入</strong>。<code>src</code>指向的内容会嵌入到文档中当前标签所在的位置。常用的有：<code>&lt;img></code>、<code>&lt;script></code>、<code>&lt;iframe></code></p>
+<p><code>&lt;script src="script.js">&lt;/script></code> 当浏览器解析到该元素时，会暂停浏览器的渲染，直到该资源加载完毕。</p>
+<h4 id=补充-link和import的区别>补充 <code>link</code>和<code>@import</code>的区别</h4>
+<ol>
+<li><code>link</code>引用<code>CSS</code>时，在页面载入时同时加载；<code>@import</code>需要页面网页完全载入以后加载。</li>
+<li><code>link</code>支持使用<code>JS</code>控制<code>DOM</code>去改变样式；而<code>@import</code>不支持</li>
+<li><code>link</code> 兼容性更好</li>
+</ol>
+<h2 id=javascript>JavaScript</h2>
+<h3 id=question-请实现一个flattendeep函数把多维数组扁平化><strong>Question:</strong> 请实现一个<code>flattenDeep</code>函数，把多维数组扁平化</h3>
+<p>solution:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=nx>arr</span><span class=p>.</span><span class=nx>reduce</span><span class=p>((</span><span class=nx>pre</span><span class=p>,</span> <span class=nx>current</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=nx>pre</span><span class=p>.</span><span class=nx>concat</span><span class=p>(</span><span class=nb>Array</span><span class=p>.</span><span class=nx>isArray</span><span class=p>(</span><span class=nx>current</span><span class=p>)</span> <span class=o>?</span> <span class=nx>flatten</span><span class=p>(</span><span class=nx>current</span><span class=p>)</span> <span class=o>:</span> <span class=nx>current</span><span class=p>);</span>
+  <span class=p>},</span> <span class=p>[]);</span>
+<span class=p>}</span>
+</code></pre></div><blockquote>
+<p><code>arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])</code></p>
+</blockquote>
+<p>reduce 接收参数说明：</p>
+<ol>
+<li>
+<p><code>callback</code> 函数，执行数组中每个值 (如果没有提供 <code>initialValue</code>, 则第一个值除外)的函数， 此函数包含四个参数：</p>
+<ol>
+<li><code>accumulator</code>: 累计器， 用于累计回调函数的返回值； acc 的值是上一次调用回调时返回的累计值。或者是 函数外提供的值 => <code>initialValue</code></li>
+<li><code>currentValue</code>: 数组中正在被处理的那个元素</li>
+<li><code>index</code>(可选)： currentValue 的索引。 <strong>如果提供了<code>initialValue</code>， 则 index 从 0 开始，否则从 1 开始</strong></li>
+<li><code>array</code>(可选): 调用<code>reduce()</code>的数组</li>
+</ol>
+</li>
+<li>
+<p><code>initialValue</code>(可选):
+作为第一次调用 <code>callback</code> 函数时的第一个参数的值。 如果没有提供初始值，则将使用数组中的<strong>第一个元素</strong>。 在没有初始值的空数组上调用 <code>reduce</code> 将报错。</p>
+</li>
+<li>
+<p>说明：
+回调函数第一次执行时，<code>accumulator</code> 和 <code>currentValue</code> 的取值有两种情况：如果调用 <code>reduce()</code>时提供了 <code>initialValue</code>，<code>accumulator</code> 取值为 <code>initialValue</code>，<code>currentValue</code> 取数组中的第一个值；如果没有提供 <code>initialValue</code>，那么 <code>accumulator</code> 取数组中的第一个值，<code>currentValue</code> 取数组中的第二个值。</p>
+</li>
+</ol>
+<h3 id=question-写出执行结果><strong>Question:</strong> 写出执行结果</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>var</span> <span class=nx>length</span> <span class=o>=</span> <span class=mi>10</span><span class=p>;</span>
+<span class=kd>function</span> <span class=nx>fn</span><span class=p>()</span> <span class=p>{</span>
+  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>length</span><span class=p>);</span>
+<span class=p>}</span>
+<span class=kd>var</span> <span class=nx>obj</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=nx>length</span><span class=o>:</span> <span class=mi>2</span><span class=p>,</span>
+  <span class=nx>show</span><span class=o>:</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>fn</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>length</span> <span class=o>=</span> <span class=mi>3</span><span class=p>;</span>
+    <span class=nx>fn</span><span class=p>();</span>
+    <span class=nx>arguments</span><span class=p>[</span><span class=mi>0</span><span class=p>]();</span>
+  <span class=p>},</span>
+<span class=p>};</span>
+<span class=nx>obj</span><span class=p>.</span><span class=nx>show</span><span class=p>(</span><span class=nx>fn</span><span class=p>);</span>
+</code></pre></div><p>Answer: 10, 1</p>
+<p>Explain:</p>
+<ol>
+<li>10 => 来自 <code>show</code> 的匿名函数内的 <code>fn()</code>,嵌套函数里的 <code>this</code> 在未指定的情况下，默认绑定，应该指向的是 <code>window</code> 对象(此处<strong>并不指向</strong>调用它外部函数的对象<code>obj</code>), <code>let</code> 声明变量时会形成块级作用于，且不存在变量提升，而 <code>var</code> 存在声明提升,因此，<code>window.a</code> 为 10</li>
+<li>1 => 可以将<code>arguments[0]()</code>看成<code>arguments.0()</code>; 因此这里的 <code>this</code> 是函数的参数，也就是 <code>arguments</code> 的个数</li>
+</ol>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=https://github.com/haizlin/fe-interview target=_blank rel=noopener>haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……</a></p>
+<p><a class=link href=https://github.com/lgwebdream/FE-Interview target=_blank rel=noopener>lgwebdream/FE-Interview </a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce target=_blank rel=noopener>Array.prototype.reduce() - JavaScript | MDN</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-59/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-59/frontend-59-cover.45a5daa22a157c06cdc65004a57f5d3f_hu0093becff9b3695b7123f78fcd954563_1159308_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-RaXaoioVfAbNxlAEpX9dPw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　59</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-58/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-58/frontend-58-cover.4dc66eac7a6f5ca85d8cf15175c45443_hu8b21583feb74d263a0b19bbb61cd2e80_1501205_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-TcZurHpvXKhdjPFRdcRUQw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　58</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/frontend-57-cover.4b837e5e1fdffe0208b557eddcc06223_hue3849197f5b979cd742b80c6c887eb37_2295043_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-S4N+Xh/f/gIItVft3MBiIw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　57</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-56/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-56/frontend-56-cover.38c3e452881f2da5f21f9da9a87ebafe_hu143b0c39fffb81447a9d472d85d6e296_1446511_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-OMPkUogfLaXyH52pqH66/g==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　56</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-55/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-55/frontend-55-cover.0b4b50115d27b08a60ce1b57b583b89e_hu67c9ad1ced82eae4afbbe173a2ebe537_3180563_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-C0tQEV0nsIpgzhtXtYO4ng==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　55</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-srchreflink的区别是什么><strong>Question:</strong> <code>src</code>、<code>href</code>、<code>link</code>的区别是什么</a>
+<ol>
+<li><a href=#补充-link和import的区别>补充 <code>link</code>和<code>@import</code>的区别</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-请实现一个flattendeep函数把多维数组扁平化><strong>Question:</strong> 请实现一个<code>flattenDeep</code>函数，把多维数组扁平化</a></li>
+<li><a href=#question-写出执行结果><strong>Question:</strong> 写出执行结果</a></li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
