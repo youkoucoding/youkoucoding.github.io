@@ -1,4 +1,141 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 16 Nov 2021 12:44:26 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　61</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-61/</link><pubDate>Tue, 16 Nov 2021 12:44:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-61/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-61/frontend-61-cover.jpg" alt="Featured image of post 毎日のフロントエンド　61" />&lt;h1 id="第六十一日">第六十一日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 17 Nov 2021 10:03:17 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　62</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/</link><pubDate>Wed, 17 Nov 2021 10:03:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/frontend-62-cover.jpg" alt="Featured image of post 毎日のフロントエンド　62" />&lt;h1 id="第六十二日">第六十二日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5-的拖放-api">&lt;strong>Question:&lt;/strong> HTML5 的拖放 API&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>图片默认自带拖拽功能，非图片元素设置 &lt;code>draggable&lt;/code> 属性为 &lt;code>true&lt;/code> 即可拖拽。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>被拖拽元素的事件：&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>ondragstart&lt;/code> 拖拽的一瞬间触发&lt;/li>
+&lt;li>&lt;code>ondrag&lt;/code> 拖拽期间连续触发&lt;/li>
+&lt;li>&lt;code>ondragend&lt;/code> 拖拽结束触发&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>目标元素事件（将拖拽元素释放的地方）：&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>ondragenter&lt;/code> 进入目标元素触发（鼠标光标进入）&lt;/li>
+&lt;li>&lt;code>ondragover&lt;/code> 进入离开目标元素连续触发&lt;/li>
+&lt;li>&lt;code>ondragleave&lt;/code> 离开目标元素触发&lt;/li>
+&lt;li>&lt;code>ondrop&lt;/code> 在目标元素上释放鼠标触发&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;p>默认状态下，一个元素不能放在另一个元素上面，需要在 &lt;code>ondragover&lt;/code> 上阻止默认事件。&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-写出执行结果并解释原因-一">&lt;strong>Question:&lt;/strong> 写出执行结果,并解释原因 一&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">fullname&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">fullname&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;b&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">prop&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">fullname&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;c&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">getFullname&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fullname&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prop&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getFullname&lt;/span>&lt;span class="p">());&lt;/span> &lt;span class="c1">// c
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">test&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prop&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getFullname&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">test&lt;/span>&lt;span class="p">());&lt;/span> &lt;span class="c1">// a
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Explain:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>this&lt;/code> 指向的是函数的执行环境，&lt;code>this&lt;/code> 取决于其被谁调用了，而不是被谁定义了&lt;/li>
+&lt;li>对第一个 &lt;code>console.log()&lt;/code>语句而言，&lt;code>getFullName()&lt;/code>是作为 &lt;code>obj.prop&lt;/code> 对象的一个方法被调用的，因此此时的执行环境应该是这个对象。&lt;/li>
+&lt;li>另一方面，但 &lt;code>getFullName()&lt;/code>被分配给 &lt;code>test&lt;/code> 变量时，此时的执行环境变成全局对象（&lt;code>window&lt;/code>），原因是 test 是在全局作用域中定义的。因此，此时的 &lt;code>this&lt;/code> 指向的是全局作用域的 &lt;code>fullname&lt;/code> 变量，即 &lt;code>a&lt;/code> (&lt;code>var&lt;/code> 声明)&lt;/li>
+&lt;/ul>
+&lt;h3 id="question-写出执行结果并解释原因-二">&lt;strong>Question:&lt;/strong> 写出执行结果,并解释原因 二&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">company&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">address&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;toki&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">abc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">company&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">delete&lt;/span> &lt;span class="nx">abc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">address&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">abc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">address&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// toki
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Explain:&lt;/p>
+&lt;p>这里的 &lt;code>abc&lt;/code> 通过 prototype 继承了 company 的 address。abc 自己并没有 address 属性。所以 &lt;code>delete&lt;/code> 操作符无效。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>note one：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>delete&lt;/code> 操作符用于删除对象的某个属性；如果没有指向这个属性的引用，那它最终会被释放。&lt;/li>
+&lt;li>&lt;code>delete&lt;/code> 的操作对象应是&lt;strong>某个属性的引用&lt;/strong>&lt;/li>
+&lt;li>返回值： &lt;strong>对于所有情况都是 &lt;code>true&lt;/code>&lt;/strong>，除非属性是一个自身的 &lt;em>不可配置的属性&lt;/em>，在这种情况下，非严格模式返回 false。:如果你试图删除的属性不存在，那么&lt;code>delete&lt;/code> 将不会起任何作用，但仍会返回&lt;code>true&lt;/code>&lt;/li>
+&lt;li>&lt;code>delete&lt;/code> 操作符&lt;strong>与直接释放内存无关&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>note two:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>delete&lt;/code> 在删除一个不可配置的属性时在严格模式和非严格模式下的区别:&lt;/p>
+&lt;ol>
+&lt;li>在严格模式中，如果属性是一个不可配置（&lt;code>non-configurable）&lt;/code>属性，删除时会抛出异常;&lt;/li>
+&lt;li>非严格模式下返回 false&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>delete&lt;/code> 能删除隐式声明的全局变量：这个全局变量其实是&lt;code>global&lt;/code>对象(&lt;code>window&lt;/code>)的属性&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>delete&lt;/code> 可以删除的:&lt;/p>
+&lt;ol>
+&lt;li>可配置对象的属性&lt;/li>
+&lt;li>隐式声明的全局变量&lt;/li>
+&lt;li>用户定义的属性&lt;/li>
+&lt;li>在 ES6 中，通过 &lt;code>const&lt;/code> 或 &lt;code>let&lt;/code> 声明指定的 &lt;code>temporal dead zone&lt;/code> (TDZ) , &lt;code>delete&lt;/code> 操作符也会起作用&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>delete&lt;/code>不能删除的:&lt;/p>
+&lt;ol>
+&lt;li>显式声明的全局变量&lt;/li>
+&lt;li>内置对象的内置属性&lt;/li>
+&lt;li>一个对象从原型继承而来的属性(如，本题)&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>delete&lt;/code> 删除数组元素:&lt;/p>
+&lt;ol>
+&lt;li>删除一个数组元素时，数组的 &lt;code>length&lt;/code> 属性并不会变小，数组元素变成&lt;code>undefined&lt;/code>&lt;/li>
+&lt;li>用 &lt;code>delete&lt;/code> 操作符删除一个数组元素时，被删除的元素已经完全不属于该数组&lt;/li>
+&lt;li>如果想让一个数组元素的值变为 &lt;code>undefined&lt;/code> 而不是删除它，可以使用 &lt;code>undefined&lt;/code> 给其赋值而不是使用 &lt;code>delete&lt;/code> 操作符。此时数组元素是在数组中的&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>Example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">output&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;span class="k">delete&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">})(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">output&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 0
+&lt;/span>&lt;span class="c1">// delete 操作符是将object的属性删去的操作。但是这里的 x 是并不是对象的属性， delete 操作符并不能作用
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">output&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span>&lt;span class="p">(){&lt;/span>
+&lt;span class="k">delete&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">})();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">output&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 1 同上
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">foo&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">output&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">delete&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">foo&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">foo&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">})();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">output&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// undefined
+&lt;/span>&lt;span class="c1">// x虽然是全局变量，但是它是一个object。delete作用在x.foo上，成功的将x.foo删去。所以返回 undefined
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/SortableJS/Sortable" target="_blank" rel="noopener"
+>SortableJS/Sortable: Reorderable drag-and-drop lists for modern browsers and touch devices. No jQuery or framework required.&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/delete" target="_blank" rel="noopener"
+>delete 操作符 - JavaScript | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　61</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-61/</link><pubDate>Tue, 16 Nov 2021 12:44:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-61/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-61/frontend-61-cover.jpg" alt="Featured image of post 毎日のフロントエンド　61" />&lt;h1 id="第六十一日">第六十一日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5-的websqldeprecated和indexeddb">&lt;strong>Question:&lt;/strong> HTML5 的&lt;code>webSQL&lt;/code>(deprecated)和&lt;code>IndexedDB&lt;/code>&lt;/h3>
 &lt;p>&lt;code>IndexedDB&lt;/code> 就是浏览器提供的本地数据库，它可以被网页脚本创建和操作。&lt;/p>

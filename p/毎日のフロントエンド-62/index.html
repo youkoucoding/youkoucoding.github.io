@@ -1,0 +1,335 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド　62</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド　62">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-11-17T10:03:17+09:00"><meta property="article:modified_time" content="2021-11-17T10:03:17+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/frontend-62-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド　62">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/frontend-62-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/frontend-62-cover_hu5942861c36a348d9337193d6ea71cbbc_3032302_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/frontend-62-cover_hu5942861c36a348d9337193d6ea71cbbc_3032302_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/frontend-62-cover_hu5942861c36a348d9337193d6ea71cbbc_3032302_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド　62">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/>毎日のフロントエンド　62</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Nov 17, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 2 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第六十二日>第六十二日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-html5-的拖放-api><strong>Question:</strong> HTML5 的拖放 API</h3>
+<ul>
+<li>
+<p>图片默认自带拖拽功能，非图片元素设置 <code>draggable</code> 属性为 <code>true</code> 即可拖拽。</p>
+</li>
+<li>
+<p>被拖拽元素的事件：</p>
+<ol>
+<li><code>ondragstart</code> 拖拽的一瞬间触发</li>
+<li><code>ondrag</code> 拖拽期间连续触发</li>
+<li><code>ondragend</code> 拖拽结束触发</li>
+</ol>
+</li>
+<li>
+<p>目标元素事件（将拖拽元素释放的地方）：</p>
+<ol>
+<li><code>ondragenter</code> 进入目标元素触发（鼠标光标进入）</li>
+<li><code>ondragover</code> 进入离开目标元素连续触发</li>
+<li><code>ondragleave</code> 离开目标元素触发</li>
+<li><code>ondrop</code> 在目标元素上释放鼠标触发</li>
+</ol>
+</li>
+</ul>
+<p>默认状态下，一个元素不能放在另一个元素上面，需要在 <code>ondragover</code> 上阻止默认事件。</p>
+<h2 id=javascript>JavaScript</h2>
+<h3 id=question-写出执行结果并解释原因-一><strong>Question:</strong> 写出执行结果,并解释原因 一</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>var</span> <span class=nx>fullname</span> <span class=o>=</span> <span class=s1>&#39;a&#39;</span><span class=p>;</span>
+<span class=kd>var</span> <span class=nx>obj</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=nx>fullname</span><span class=o>:</span> <span class=s1>&#39;b&#39;</span><span class=p>,</span>
+  <span class=nx>prop</span><span class=o>:</span> <span class=p>{</span>
+    <span class=nx>fullname</span><span class=o>:</span> <span class=s1>&#39;c&#39;</span><span class=p>,</span>
+    <span class=nx>getFullname</span><span class=o>:</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+      <span class=k>return</span> <span class=k>this</span><span class=p>.</span><span class=nx>fullname</span><span class=p>;</span>
+    <span class=p>},</span>
+  <span class=p>},</span>
+<span class=p>};</span>
+
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>obj</span><span class=p>.</span><span class=nx>prop</span><span class=p>.</span><span class=nx>getFullname</span><span class=p>());</span> <span class=c1>// c
+</span><span class=c1></span><span class=kd>var</span> <span class=nx>test</span> <span class=o>=</span> <span class=nx>obj</span><span class=p>.</span><span class=nx>prop</span><span class=p>.</span><span class=nx>getFullname</span><span class=p>;</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>test</span><span class=p>());</span> <span class=c1>// a
+</span></code></pre></div><p>Explain:</p>
+<ul>
+<li><code>this</code> 指向的是函数的执行环境，<code>this</code> 取决于其被谁调用了，而不是被谁定义了</li>
+<li>对第一个 <code>console.log()</code>语句而言，<code>getFullName()</code>是作为 <code>obj.prop</code> 对象的一个方法被调用的，因此此时的执行环境应该是这个对象。</li>
+<li>另一方面，但 <code>getFullName()</code>被分配给 <code>test</code> 变量时，此时的执行环境变成全局对象（<code>window</code>），原因是 test 是在全局作用域中定义的。因此，此时的 <code>this</code> 指向的是全局作用域的 <code>fullname</code> 变量，即 <code>a</code> (<code>var</code> 声明)</li>
+</ul>
+<h3 id=question-写出执行结果并解释原因-二><strong>Question:</strong> 写出执行结果,并解释原因 二</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>var</span> <span class=nx>company</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=nx>address</span><span class=o>:</span> <span class=s1>&#39;toki&#39;</span><span class=p>,</span>
+<span class=p>};</span>
+<span class=kd>var</span> <span class=nx>abc</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>create</span><span class=p>(</span><span class=nx>company</span><span class=p>);</span>
+<span class=k>delete</span> <span class=nx>abc</span><span class=p>.</span><span class=nx>address</span><span class=p>;</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>abc</span><span class=p>.</span><span class=nx>address</span><span class=p>);</span> <span class=c1>// toki
+</span></code></pre></div><p>Explain:</p>
+<p>这里的 <code>abc</code> 通过 prototype 继承了 company 的 address。abc 自己并没有 address 属性。所以 <code>delete</code> 操作符无效。</p>
+<ul>
+<li>
+<p>note one：</p>
+<ul>
+<li><code>delete</code> 操作符用于删除对象的某个属性；如果没有指向这个属性的引用，那它最终会被释放。</li>
+<li><code>delete</code> 的操作对象应是<strong>某个属性的引用</strong></li>
+<li>返回值： <strong>对于所有情况都是 <code>true</code></strong>，除非属性是一个自身的 <em>不可配置的属性</em>，在这种情况下，非严格模式返回 false。:如果你试图删除的属性不存在，那么<code>delete</code> 将不会起任何作用，但仍会返回<code>true</code></li>
+<li><code>delete</code> 操作符<strong>与直接释放内存无关</strong>。</li>
+</ul>
+</li>
+<li>
+<p>note two:</p>
+<ul>
+<li>
+<p><code>delete</code> 在删除一个不可配置的属性时在严格模式和非严格模式下的区别:</p>
+<ol>
+<li>在严格模式中，如果属性是一个不可配置（<code>non-configurable）</code>属性，删除时会抛出异常;</li>
+<li>非严格模式下返回 false</li>
+</ol>
+</li>
+<li>
+<p><code>delete</code> 能删除隐式声明的全局变量：这个全局变量其实是<code>global</code>对象(<code>window</code>)的属性</p>
+</li>
+<li>
+<p><code>delete</code> 可以删除的:</p>
+<ol>
+<li>可配置对象的属性</li>
+<li>隐式声明的全局变量</li>
+<li>用户定义的属性</li>
+<li>在 ES6 中，通过 <code>const</code> 或 <code>let</code> 声明指定的 <code>temporal dead zone</code> (TDZ) , <code>delete</code> 操作符也会起作用</li>
+</ol>
+</li>
+<li>
+<p><code>delete</code>不能删除的:</p>
+<ol>
+<li>显式声明的全局变量</li>
+<li>内置对象的内置属性</li>
+<li>一个对象从原型继承而来的属性(如，本题)</li>
+</ol>
+</li>
+<li>
+<p><code>delete</code> 删除数组元素:</p>
+<ol>
+<li>删除一个数组元素时，数组的 <code>length</code> 属性并不会变小，数组元素变成<code>undefined</code></li>
+<li>用 <code>delete</code> 操作符删除一个数组元素时，被删除的元素已经完全不属于该数组</li>
+<li>如果想让一个数组元素的值变为 <code>undefined</code> 而不是删除它，可以使用 <code>undefined</code> 给其赋值而不是使用 <code>delete</code> 操作符。此时数组元素是在数组中的</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>var</span> <span class=nx>output</span> <span class=o>=</span> <span class=p>(</span><span class=kd>function</span><span class=p>(</span><span class=nx>x</span><span class=p>){</span>
+    <span class=k>delete</span> <span class=nx>x</span><span class=p>;</span>
+    <span class=k>return</span> <span class=nx>x</span><span class=p>;</span>
+<span class=p>})(</span><span class=mi>0</span><span class=p>);</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>output</span><span class=p>);</span> <span class=c1>// 0
+</span><span class=c1>// delete 操作符是将object的属性删去的操作。但是这里的 x 是并不是对象的属性， delete 操作符并不能作用
+</span></code></pre></div><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>var</span> <span class=nx>x</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+<span class=kd>var</span> <span class=nx>output</span> <span class=o>=</span> <span class=p>(</span><span class=kd>function</span><span class=p>(){</span>
+    <span class=k>delete</span> <span class=nx>x</span><span class=p>;</span>
+    <span class=k>return</span> <span class=nx>x</span><span class=p>;</span>
+<span class=p>})();</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>output</span><span class=p>);</span> <span class=c1>// 1  同上
+</span></code></pre></div><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>var</span> <span class=nx>x</span> <span class=o>=</span> <span class=p>{</span> <span class=nx>foo</span><span class=o>:</span> <span class=mi>1</span> <span class=p>};</span>
+<span class=kd>var</span> <span class=nx>output</span> <span class=o>=</span> <span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+  <span class=k>delete</span> <span class=nx>x</span><span class=p>.</span><span class=nx>foo</span><span class=p>;</span>
+  <span class=k>return</span> <span class=nx>x</span><span class=p>.</span><span class=nx>foo</span><span class=p>;</span>
+<span class=p>})();</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>output</span><span class=p>);</span> <span class=c1>// undefined
+</span><span class=c1>// x虽然是全局变量，但是它是一个object。delete作用在x.foo上，成功的将x.foo删去。所以返回 undefined
+</span></code></pre></div><h2 id=reference>Reference</h2>
+<p><a class=link href=https://github.com/haizlin/fe-interview target=_blank rel=noopener>haizlin/fe-interview</a></p>
+<p><a class=link href=https://github.com/lgwebdream/FE-Interview target=_blank rel=noopener>lgwebdream/FE-Interview </a></p>
+<p><a class=link href=https://github.com/SortableJS/Sortable target=_blank rel=noopener>SortableJS/Sortable: Reorderable drag-and-drop lists for modern browsers and touch devices. No jQuery or framework required.</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/delete target=_blank rel=noopener>delete 操作符 - JavaScript | MDN</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-61/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-61/frontend-61-cover.af3de63b962c622e88e61e1826edbdb4_huaeae36620bfa37ec463aff6f7625ace8_2994182_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-rz3mO5YsYi6I5h4YJu29tA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　61</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-60/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-60/frontend-60-cover.50cf4758b1c39b04e944de36d0c463f5_hudc81c27420b7943d487a1ef0a83d433c_637835_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-UM9HWLHDmwTpRN420MRj9Q==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　60</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-59/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-59/frontend-59-cover.45a5daa22a157c06cdc65004a57f5d3f_hu0093becff9b3695b7123f78fcd954563_1159308_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-RaXaoioVfAbNxlAEpX9dPw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　59</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-58/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-58/frontend-58-cover.4dc66eac7a6f5ca85d8cf15175c45443_hu8b21583feb74d263a0b19bbb61cd2e80_1501205_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-TcZurHpvXKhdjPFRdcRUQw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　58</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-57/frontend-57-cover.4b837e5e1fdffe0208b557eddcc06223_hue3849197f5b979cd742b80c6c887eb37_2295043_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-S4N+Xh/f/gIItVft3MBiIw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド　57</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-html5-的拖放-api><strong>Question:</strong> HTML5 的拖放 API</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-写出执行结果并解释原因-一><strong>Question:</strong> 写出执行结果,并解释原因 一</a></li>
+<li><a href=#question-写出执行结果并解释原因-二><strong>Question:</strong> 写出执行结果,并解释原因 二</a></li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
