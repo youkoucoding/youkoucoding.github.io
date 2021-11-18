@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 17 Nov 2021 10:03:17 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　62</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/</link><pubDate>Wed, 17 Nov 2021 10:03:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/frontend-62-cover.jpg" alt="Featured image of post 毎日のフロントエンド　62" />&lt;h1 id="第六十二日">第六十二日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 18 Nov 2021 10:37:36 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　63</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-63/</link><pubDate>Thu, 18 Nov 2021 10:37:36 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-63/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-63/frontend-63-cover.jpg" alt="Featured image of post 毎日のフロントエンド　63" />&lt;h1 id="第六十三日">第六十三日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-什么是-html-的字符实体版权符号代码怎么写">&lt;strong>Question:&lt;/strong> 什么是 html 的字符实体？版权符号代码怎么写&lt;/h3>
+&lt;p>在 HTML 中，某些字符是预留的，这些预留字符必须被替换为字符实体.。 如： &lt;code>&amp;amp;lt&lt;/code>; &lt;code>&amp;amp;gt&lt;/code>;&lt;/p>
+&lt;p>版权符号： &lt;code>&amp;amp;copy&lt;/code>;&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-position的absolute和fixed共同与不同点分别是什么">&lt;strong>Question:&lt;/strong> &lt;code>position&lt;/code>的&lt;code>absolute&lt;/code>和&lt;code>fixed&lt;/code>共同与不同点分别是什么&lt;/h3>
+&lt;ol>
+&lt;li>&lt;code>static&lt;/code>: 默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）&lt;/li>
+&lt;li>&lt;code>relative&lt;/code>: 生成相对定位的元素，通过&lt;code>top&lt;/code>, &lt;code>bottom&lt;/code>, &lt;code>left&lt;/code>, &lt;code>right&lt;/code> 的设置&lt;strong>相对于其正常（原先本身）位置进行定位&lt;/strong>。可通过&lt;code>z-index&lt;/code>进行层次分级。&lt;/li>
+&lt;li>&lt;code>absolute&lt;/code>: 生成绝对定位的元素，&lt;strong>相对于 &lt;code>static&lt;/code> 定位以外的第一个父元素&lt;/strong>进行定位。元素的位置通过 &lt;code>left&lt;/code>, &lt;code>top&lt;/code>, &lt;code>right&lt;/code> 以及 &lt;code>bottom&lt;/code> 属性进行规定。可通过&lt;code>z-index&lt;/code>进行层次分级。&lt;/li>
+&lt;li>&lt;code>fixed&lt;/code>: 生成绝对定位的元素，相对于&lt;strong>浏览器窗口&lt;/strong>进行定位。元素的位置通过 &lt;code>left&lt;/code>, &lt;code>top&lt;/code>, &lt;code>right&lt;/code> 以及 &lt;code>bottom&lt;/code> 属性进行规定。可通过 z-index 进行层次分级。&lt;/li>
+&lt;/ol>
+&lt;h4 id="relative">&lt;code>relative&lt;/code>&lt;/h4>
+&lt;p>定位为 &lt;code>relative&lt;/code> 的元素脱离正常的文本流中，但&lt;strong>其在文本流中的位置依然存在&lt;/strong>。
+无论父级存在不存在，无论有没有 TRBL(&lt;code>top right bottom left&lt;/code>)，均是以父级的左上角进行定位，但是父级的&lt;code>Padding&lt;/code>属性会对其影响。&lt;/p>
+&lt;h4 id="absolute">&lt;code>absolute&lt;/code>&lt;/h4>
+&lt;p>定位为&lt;code>absolute&lt;/code>的层脱离正常文本流，但与&lt;code>relative&lt;/code>的区别是其&lt;strong>在正常流中的位置不再存在&lt;/strong>。&lt;/p>
+&lt;p>若想把一个定位属性为 absolute 的元素定位于其父级元素内，只有满足两个条件：&lt;/p>
+&lt;ol>
+&lt;li>设定 TRBL(&lt;code>top right bottom left&lt;/code>)&lt;/li>
+&lt;li>父级设定&lt;code>position&lt;/code>属性&lt;/li>
+&lt;/ol>
+&lt;h4 id="relative与absolute的主要区别">&lt;code>relative&lt;/code>与&lt;code>absolute&lt;/code>的主要区别&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>relative&lt;/code>定位的层总是相对于其最近的父元素，无论其父元素是何种定位方式&lt;/li>
+&lt;li>&lt;code>absolute&lt;/code> 总是相对于其最近的定义为&lt;code>absolute&lt;/code>或&lt;code>relative&lt;/code>的父层，这个父层并不一定是其直接父层。如果其父层中都未定义&lt;code>absolute&lt;/code>或&lt;code>relative&lt;/code>，则其将相对 body`进行定位&lt;/li>
+&lt;/ul>
+&lt;h4 id="summary">Summary&lt;/h4>
+&lt;p>用&lt;code>position&lt;/code>来布局页面，父级元素的&lt;code>position&lt;/code>属性必须为&lt;code>relative&lt;/code>，而定位于父级内部某个位置的元素，最好用 &lt;code>absolute&lt;/code>。 因为它不受父级元素的&lt;code>padding&lt;/code>的属性影响，当然也可以用 position，不过到时候计算的时候不能忘记 padding 的值。&lt;/p>
+&lt;blockquote>
+&lt;p>绝对(absolute)定位对象在可视区域之外会导致滚动条出现。而放置相对(relative)定位对象在可视区域之外，滚动条不会出现。
+使用&lt;code>static&lt;/code> 定位或&lt;strong>无 position&lt;/strong>定位的元素&lt;code>z-index&lt;/code>属性是无效的&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-举例说明-javascript-的变量声明提升和函数声明提升">&lt;strong>Question:&lt;/strong> 举例说明 javascript 的变量声明提升和函数声明提升&lt;/h3>
+&lt;ul>
+&lt;li>变量声明只提升声明 不提升赋值操作&lt;/li>
+&lt;li>函数声明 函数体整体被提升&lt;/li>
+&lt;/ul>
+&lt;h2 id="one-more-question">One more Question&lt;/h2>
+&lt;h3 id="question-css-伪类-与-伪元素">&lt;strong>Question:&lt;/strong> css 伪类 与 伪元素&lt;/h3>
+&lt;h4 id="伪类pseudo-classes">伪类(&lt;code>pseudo-classes&lt;/code>)&lt;/h4>
+&lt;ul>
+&lt;li>其核⼼就是⽤来选择 DOM 树之外的信息,不能够被普通选择器选择的⽂档之外的元素，⽤来添加⼀些选择器的特殊效果。 ⽐如&lt;code>:hover&lt;/code> &lt;code>:active&lt;/code> &lt;code>:visited&lt;/code> &lt;code>:link&lt;/code> &lt;code>:visited&lt;/code> &lt;code>:first-child&lt;/code> &lt;code>:focus&lt;/code> &lt;code>:lang&lt;/code> 等&lt;/li>
+&lt;li>由于状态的变化是⾮静态的，所以元素达到⼀个特定状态时，它可能得到⼀个伪类的样式；当状态改变时，它⼜会失去这个样式。 由此可以看出，它的功能和 class 有些类似，但它是基于⽂档之外的抽象，所以叫 伪类。&lt;/li>
+&lt;/ul>
+&lt;h4 id="伪元素pseudo-elements">伪元素(&lt;code>Pseudo-elements&lt;/code>)&lt;/h4>
+&lt;ul>
+&lt;li>DOM 树没有定义的虚拟元素&lt;/li>
+&lt;li>核⼼就是需要创建通常不存在于⽂档中的元素，&lt;/li>
+&lt;li>⽐如 &lt;code>::before&lt;/code> &lt;code>::after&lt;/code> 它选择的是元素指定内容，表示选择元素内容的之前内容或之后内容。&lt;/li>
+&lt;li>伪元素控制的内容和元素是没有差别的，但是它本身只是基于元素的抽象，并不存在于⽂档中，所以称为伪元素。⽤于将特殊的效果添加到某些选择器&lt;/li>
+&lt;/ul>
+&lt;h4 id="伪类与伪元素的区别">伪类与伪元素的区别&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>表示⽅法:&lt;/p>
+&lt;ol>
+&lt;li>CSS2 中伪类、伪元素都是以单冒号&lt;code>:&lt;/code>表示&lt;/li>
+&lt;li>&lt;code>CSS2.1&lt;/code> 后规定伪类⽤&lt;code>:&lt;/code>单冒号表示,伪元素⽤双冒号&lt;code>::&lt;/code>表示&lt;/li>
+&lt;li>&lt;code>CSS3&lt;/code>，伪类与伪元素在语法上也有所区别，伪元素修改为以&lt;code>::&lt;/code>开头。浏览器对以:开头的伪元素也继续⽀持，但建议规范书写为::开头&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>不同之处&lt;/p>
+&lt;ol>
+&lt;li>伪类即假的类，可以添加类来达到效果&lt;/li>
+&lt;li>伪类其实就是基于普通 DOM 元素⽽产⽣的不同状态，是 DOM 元素的某⼀特征。&lt;/li>
+&lt;li>伪元素即假元素，需要通过添加元素才能达到效果&lt;/li>
+&lt;li>伪元素能够创建在 DOM 树中不存在的抽象对象，⽽且这些抽象对象是能够访问到的&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>是否需要添加元素才能达到效果，如果是则是伪元素，反之则是伪类。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>相同之处
+&lt;ol>
+&lt;li>伪类和伪元素都&lt;strong>不出现&lt;/strong>在源⽂件和 DOM 树中。也就是说在 html 源⽂件中是看不到伪类和伪元素的&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.w3school.com.cn/charsets/ref_html_8859.asp" target="_blank" rel="noopener"
+>HTML ISO-8859-1 参考手册&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　62</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/</link><pubDate>Wed, 17 Nov 2021 10:03:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-62/frontend-62-cover.jpg" alt="Featured image of post 毎日のフロントエンド　62" />&lt;h1 id="第六十二日">第六十二日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5-的拖放-api">&lt;strong>Question:&lt;/strong> HTML5 的拖放 API&lt;/h3>
 &lt;ul>
