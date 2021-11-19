@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 18 Nov 2021 10:37:36 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　63</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-63/</link><pubDate>Thu, 18 Nov 2021 10:37:36 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-63/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-63/frontend-63-cover.jpg" alt="Featured image of post 毎日のフロントエンド　63" />&lt;h1 id="第六十三日">第六十三日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 19 Nov 2021 14:21:57 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　64</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-64/</link><pubDate>Fri, 19 Nov 2021 14:21:57 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-64/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-64/frontend-64-cover.jpg" alt="Featured image of post 毎日のフロントエンド　64" />&lt;h1 id="第六十四日">第六十四日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-写出-html-提供的几种空格实体">&lt;strong>Question:&lt;/strong> 写出 &lt;code>html&lt;/code> 提供的几种空格实体&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>&amp;amp;nbsp;&lt;/code>: No-Break Space 不换行空格&lt;/li>
+&lt;li>&lt;code>&amp;amp;ensp;&lt;/code>: En Space 半角空格, en 是字体排印学的计量单位，为 em 宽度的一半(如&lt;code>16px&lt;/code>字体中就是&lt;code>8px&lt;/code>)&lt;/li>
+&lt;li>&lt;code>&amp;amp;emsp;&lt;/code>: Em Space 全角空格, em 是字体排印学的计量单位，相当于当前指定的点数。例如，&lt;code>1em&lt;/code>在&lt;code>16px&lt;/code>的字体中就是&lt;code>16px&lt;/code>。&lt;/li>
+&lt;li>&lt;code>&amp;amp;thinsp;&lt;/code>: Thin Space 窄空格&lt;/li>
+&lt;li>&lt;code>&amp;amp;zwnj;&lt;/code>: Zero Width Non Joiner 是一个不打印字符&lt;/li>
+&lt;/ul>
+&lt;p>此外，浏览器还会把以下字符当作空白进行解析：空格（&lt;code>&amp;amp;#x0020;&lt;/code>）、制表位（&lt;code>&amp;amp;#x0009;&lt;/code>）、换行（&lt;code>&amp;amp;#x000A;&lt;/code>）和回车（&lt;code>&amp;amp;#x000D;&lt;/code>）还有（&lt;code>&amp;amp;#12288;&lt;/code>）&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-举例说明css中颜色的表示方法有几种">&lt;strong>Question:&lt;/strong> 举例说明&lt;code>css&lt;/code>中颜色的表示方法有几种&lt;/h3>
+&lt;ol>
+&lt;li>颜色单词: &lt;code>blue&lt;/code> / &lt;code>lightblue&lt;/code> / &lt;code>skyblue&lt;/code> / &lt;code>transparent&lt;/code>(透明)&lt;/li>
+&lt;li>&lt;code>rgb(0-255, 0-255, 0-255)&lt;/code> / &lt;code>rgba(0-255, 0-255, 0-255, 0-1)&lt;/code>&lt;/li>
+&lt;li>&lt;code>hsl&lt;/code>色相: &lt;code>hsl(色调，饱和度，明度)&lt;/code> &lt;code>hsla( 色调，饱和度，亮度，不透明度 )&lt;/code> (兼容性)&lt;/li>
+&lt;li>十六进制: &lt;code>#0- #FFFFFF ( #0 - #fff ) ( 0-9 a-f | [A-F] )&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-谜题如何让a1--a2--a3的值为-true把--换成--后还能为true吗">&lt;strong>Question:&lt;/strong> (谜题)如何让(&lt;code>a==1 &amp;amp;&amp;amp; a==2 &amp;amp;&amp;amp; a==3&lt;/code>)的值为 true，把 &lt;code>==&lt;/code> 换成 &lt;code>===&lt;/code> 后还能为&lt;code>true&lt;/code>吗&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">valueOf&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//true
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="宽松相等">宽松相等&lt;code>==&lt;/code>&lt;/h4>
+&lt;p>先将左右两两边的值转化成&lt;strong>相同的原始类型&lt;/strong>，然后再去比较他们是否相等。&lt;/p>
+&lt;p>在进行两个值的比较时，执行了类型的强制转换:&lt;/p>
+&lt;p>&lt;code>ToPrimitive(input, PreferredType?)&lt;/code>&lt;/p>
+&lt;p>转化过程如下:&lt;/p>
+&lt;ol>
+&lt;li>如果输入&lt;code>input&lt;/code>是基本类型, 就返回这个值&lt;/li>
+&lt;li>如果输入变量是&lt;code>Object&lt;/code>类型, 那么调用&lt;code>input.valueOf()&lt;/code>. 如果返回结果是基本类型，就返回这个值&lt;/li>
+&lt;li>如果都不是的话就调用&lt;code>input.toString()&lt;/code>. 如果结果是基本类型, 就返回它&lt;/li>
+&lt;li>如果以上都不可以，就会抛出一个类型错误&lt;code>TypeError&lt;/code>， 表示转化&lt;code>input&lt;/code>变量到基本类型失败。&lt;/li>
+&lt;/ol>
+&lt;h4 id="a--1--a--2--a--3严格匹配-问题">&lt;code>(a === 1 &amp;amp;&amp;amp; a === 2 &amp;amp;&amp;amp; a === 3)&lt;/code>(严格匹配) 问题&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">value&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//window.value
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">defineProperty&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">window&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">get&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">value&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>JS 中的原始类型将不再满足于上面的条件(&lt;strong>严格相等没有转化的过程&lt;/strong>)，所以需要通过一些方式去调用一个函数，并在这个函数中做想做的事情。&lt;/p>
+&lt;p>这里不是宽松相等==，valueOf 将不会被 JS 引擎调用&lt;/p>
+&lt;blockquote>
+&lt;p>属性描述符(&lt;code>property descriptors&lt;/code>)&lt;/p>
+&lt;/blockquote>
+&lt;p>使用&lt;code>Object.defineProperty&lt;/code>为对象定义了一个属性, 此处, 需要调用一个无需&lt;code>()&lt;/code>(执行)的函数, 通过&lt;code>get&lt;/code>属性, 我们可以调用一个函数并且不用在函数名后添加&lt;code>()&lt;/code>&lt;/p>
+&lt;p>上面提到的解决方案中, 在 &lt;code>window&lt;/code> 对象上定义了一个具有 &lt;code>getter&lt;/code> 的 &lt;code>a&lt;/code> 属性, 所以 &lt;code>a&lt;/code> 可以在代码中直接被访问到(全局变量)， 因此也可以直接获得 a 的值。&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903725442531341" target="_blank" rel="noopener"
+>[译] 在 JS 中，如何让(a===1 &amp;amp;&amp;amp; a===2 &amp;amp;&amp;amp; a === 3)(严格相等)的值为 true？ - 掘金&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="noopener"
+>Object.defineProperty() - JavaScript | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　63</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-63/</link><pubDate>Thu, 18 Nov 2021 10:37:36 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-63/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-63/frontend-63-cover.jpg" alt="Featured image of post 毎日のフロントエンド　63" />&lt;h1 id="第六十三日">第六十三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-什么是-html-的字符实体版权符号代码怎么写">&lt;strong>Question:&lt;/strong> 什么是 html 的字符实体？版权符号代码怎么写&lt;/h3>
 &lt;p>在 HTML 中，某些字符是预留的，这些预留字符必须被替换为字符实体.。 如： &lt;code>&amp;amp;lt&lt;/code>; &lt;code>&amp;amp;gt&lt;/code>;&lt;/p>
