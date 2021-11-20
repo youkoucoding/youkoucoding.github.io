@@ -1,4 +1,108 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 19 Nov 2021 14:21:57 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　64</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-64/</link><pubDate>Fri, 19 Nov 2021 14:21:57 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-64/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-64/frontend-64-cover.jpg" alt="Featured image of post 毎日のフロントエンド　64" />&lt;h1 id="第六十四日">第六十四日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 20 Nov 2021 19:30:16 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　65</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/</link><pubDate>Sat, 20 Nov 2021 19:30:16 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/frontend-65-cover.jpg" alt="Featured image of post 毎日のフロントエンド　65" />&lt;h1 id="第六十五日">第六十五日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html直接输入多个空格为什么只能显示一个空格">&lt;strong>Question:&lt;/strong> &lt;code>HTML&lt;/code>直接输入多个空格为什么只能显示一个空格&lt;/h3>
+&lt;p>该行为由 CSS &lt;code>white-space&lt;/code> 控制，其默认值 &lt;code>normal&lt;/code> 的表现即为&lt;strong>多个空格压缩成一个&lt;/strong>&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-数据类型转换的方法有哪些">&lt;strong>Question:&lt;/strong> 数据类型转换的方法有哪些&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>数据等于判断时的类型转换&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>if&lt;/code> 等判断只做 &lt;code>Boolean()&lt;/code> 转换&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>包含： &lt;code>if&lt;/code> &lt;code>?:&lt;/code> &lt;code>&amp;amp;&amp;amp;&lt;/code> &lt;code>||&lt;/code>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 22;
+flex-basis: 54px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/if-value.png" data-size="205x901">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/if-value.png"
+width="205"
+height="901"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/if-value_hucdb48e5c5816dc086bcc1b404abcb5e3_63776_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/if-value_hucdb48e5c5816dc086bcc1b404abcb5e3_63776_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;ol start="3">
+&lt;li>&lt;code>Number&lt;/code> 与 &lt;code>parse&lt;/code> 函数&lt;/li>
+&lt;/ol>
+&lt;p>&lt;code>Number&lt;/code> 比 &lt;code>parseInt&lt;/code> 能转化更多，比如 &lt;code>&amp;quot;&amp;quot;&lt;/code> &lt;code>Infinity&lt;/code> &lt;code>[]&lt;/code> &lt;code>true&lt;/code> 都会被 &lt;code>parseInt&lt;/code> 返回 &lt;code>NaN&lt;/code>，而 &lt;code>Number&lt;/code> 有值。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nb">Number&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 0
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">parseInt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// NaN
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nb">Number&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">]);&lt;/span> &lt;span class="c1">// NaN
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">parseInt&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">]);&lt;/span> &lt;span class="c1">// 1
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nb">Number&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 0
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Number&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">undefined&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// NaN
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">parseInt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// NaN
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">parseInt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">undefined&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// NaN
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="p">((&lt;/span>&lt;span class="nb">Number&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1.&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nb">parseInt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1.&amp;#39;&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nb">parseInt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1,&amp;#39;&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nb">Number&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1x&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">NaN&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>计算时的类型转换&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="o">+&lt;/span>&lt;span class="s1">&amp;#39; 014&amp;#39;&lt;/span> &lt;span class="c1">// 14
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="s1">&amp;#39;0x12&amp;#39;&lt;/span> &lt;span class="c1">// 18
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;14&amp;#39;&lt;/span> &lt;span class="c1">// &amp;#39;114&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;0x12&amp;#39;&lt;/span> &lt;span class="c1">// &amp;#39;10x12&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="o">+&lt;/span>&lt;span class="s1">&amp;#39;14&amp;#39;&lt;/span> &lt;span class="c1">// 15
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="s1">&amp;#39;14&amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="c1">// &amp;#39;141&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="c1">// &amp;#39;11,1&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">{};&lt;/span> &lt;span class="c1">// &amp;#39;1[object Object]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 1
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span>&lt;span class="kc">undefined&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// NaN
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="o">++&lt;/span>&lt;span class="s1">&amp;#39;14&amp;#39;&lt;/span> &lt;span class="c1">// ReferenceError
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="kc">Infinity&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="kc">Infinity&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// Infinity
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">Infinity&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">Infinity&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// -Infinity
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kc">Infinity&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">Infinity&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// NaN
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="o">+&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 0
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// -0
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 0
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
+&lt;li>&lt;code>toString&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nb">String&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;null&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// Uncaught TypeError
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kc">undefined&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// Uncaught TypeError
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="p">(&lt;/span>&lt;span class="mi">30&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">16&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#34;1e&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="s1">&amp;#39;30&amp;#39;&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">16&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#34;30&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;abc&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">NaN&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="c1">// &amp;#34;1,2,abc,,0,,,false,NaN,3&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="kc">null&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// Uncaught TypeError
+&lt;/span>&lt;span class="c1">// 在使用 toString 时最好加个判断，或用 [] 再 toString
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// &amp;#39;&amp;#39;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="6">
+&lt;li>&lt;code>JSON.stringify&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">Infinity&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;null&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">NaN&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;null&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">undefined&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// undefined （注：非字符串）
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="kc">undefined&lt;/span>&lt;span class="p">]);&lt;/span> &lt;span class="c1">// &amp;#39;[null]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">undefined&lt;/span> &lt;span class="p">});&lt;/span> &lt;span class="c1">// &amp;#39;{}&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span> &lt;span class="p">});&lt;/span> &lt;span class="c1">// &amp;#39;{&amp;#34;a&amp;#34;:null}&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{});&lt;/span> &lt;span class="c1">// &amp;#39;undefined&amp;#39;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　64</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-64/</link><pubDate>Fri, 19 Nov 2021 14:21:57 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-64/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-64/frontend-64-cover.jpg" alt="Featured image of post 毎日のフロントエンド　64" />&lt;h1 id="第六十四日">第六十四日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-写出-html-提供的几种空格实体">&lt;strong>Question:&lt;/strong> 写出 &lt;code>html&lt;/code> 提供的几种空格实体&lt;/h3>
 &lt;ul>
