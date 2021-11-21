@@ -1,4 +1,199 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 20 Nov 2021 19:30:16 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　65</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/</link><pubDate>Sat, 20 Nov 2021 19:30:16 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/frontend-65-cover.jpg" alt="Featured image of post 毎日のフロントエンド　65" />&lt;h1 id="第六十五日">第六十五日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 21 Nov 2021 14:43:43 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　66</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/</link><pubDate>Sun, 21 Nov 2021 14:43:43 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/frontend-66-cover.jpg" alt="Featured image of post 毎日のフロントエンド　66" />&lt;h1 id="第六十六日">第六十六日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5如果不写-doctype-html-页面还会正常工作么">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>如果不写&lt;code>&amp;lt;! DOCTYPE html&amp;gt;&lt;/code>, 页面还会正常工作么&lt;/h3>
+&lt;p>页面添加了&lt;code>&amp;lt;! DOCTYPE html&amp;gt;&lt;/code>说明该页面采用了&lt;code>W3C&lt;/code>标准，如果不加则页面会根据浏览器自身的解析标准来解析，这可能会导致页面在不同的浏览器呈现出不同的效果。&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-元素竖向的百分比设置是相对容器的高度吗">&lt;strong>Question:&lt;/strong> 元素竖向的百分比设置是相对容器的高度吗&lt;/h3>
+&lt;p>当按百分比设定一个元素的&lt;strong>宽度&lt;/strong>时，它是相对于父容器的宽度计算的&lt;/p>
+&lt;p>&lt;strong>对于一些表示竖向距离的属性&lt;/strong>，例如&lt;code>padding-top&lt;/code>, &lt;code>padding-bottom&lt;/code>, &lt;code>margin-top&lt;/code>, &lt;code>margin-bottom&lt;/code>等，当按百分比设定它们时，依据的也是&lt;strong>父容器的宽度，而不是高度&lt;/strong>。&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-事件循环机制node浏览器">&lt;strong>Question:&lt;/strong> 事件循环机制(node、浏览器)&lt;/h3>
+&lt;h4 id="为什么会有event-loop">为什么会有&lt;code>Event Loop&lt;/code>&lt;/h4>
+&lt;p>&lt;code>JavaScript&lt;/code>的任务分为两种&lt;strong>同步&lt;/strong>和&lt;strong>异步&lt;/strong>，它们的处理方式也各自不同，同步任务是直接放在主线程上排队依次执行，异步任务会放在任务队列中，若有多个异步任务则需要在任务队列中排队等待，任务队列类似于缓冲区，任务下一步会被移到调用栈然后主线程执行调用栈的任务。&lt;/p>
+&lt;blockquote>
+&lt;p>调用栈：调用栈是一个栈结构，函数调用会形成一个栈帧，帧中包含了当前执行函数的参数和局部变量等上下文信息，函数执行完后，它的执行上下文会从栈中弹出。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>JavaScript&lt;/code>是单线程的，单线程是指 js 引擎中解析和执行 js 代码的&lt;strong>线程只有一个（主线程）&lt;/strong>，每次只能做一件事情，然而&lt;code>ajax&lt;/code>请求中，主线程在等待响应的过程中会去做其他事情，浏览器先在事件表注册&lt;code>ajax&lt;/code>的回调函数，响应回来后， 回调函数被添加到任务队列中等待执行，不会造成线程阻塞，所以说 js 处理 ajax 请求的方式是异步的。&lt;/p>
+&lt;p>综上所述，检查调用栈是否为空以及讲某个任务添加到调用栈中的个过程就是 event loop，这就是 JavaScript 实现异步的核心。&lt;/p>
+&lt;h4 id="浏览器中的-event-loop">浏览器中的 &lt;code>Event Loop&lt;/code>&lt;/h4>
+&lt;p>&lt;code>Micro-Task&lt;/code> 与 &lt;code>Macro-Task&lt;/code>&lt;/p>
+&lt;p>&lt;strong>浏览器端事件循环&lt;/strong>中的异步队列有两种：&lt;code>macro&lt;/code>（宏任务）队列和 &lt;code>micro&lt;/code>（微任务）队列。&lt;/p>
+&lt;p>常见的 &lt;code>macro-task&lt;/code>：&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>setTimeout&lt;/code>&lt;/li>
+&lt;li>&lt;code>setInterval&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>I/O&lt;/code>&lt;/li>
+&lt;li>&lt;code>UI&lt;/code>渲染&lt;/li>
+&lt;/ol>
+&lt;p>常见的 &lt;code>micro-task&lt;/code>:&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>Promise&lt;/code>&lt;/li>
+&lt;li>&lt;code>MutationObserver&lt;/code> : 触发指定 DOM 事件时，调用指定的回调函数。&lt;code>MutationObserver&lt;/code> 对 &lt;code>DOM&lt;/code> 的观察不会立即启动；而必须先调用 &lt;code>observe()&lt;/code> 方法来确定，要监听哪一部分的 &lt;code>DOM&lt;/code> 以及要响应哪些更改。&lt;/li>
+&lt;/ol>
+&lt;p>Note:&lt;/p>
+&lt;p>&lt;code>requestAnimationFrame&lt;/code>: 属于异步执行的方法，但该方法既不属于宏任务，也不属于微任务。&lt;code>requestAnimationFrame&lt;/code>是 GUI 渲染之前执行，但在&lt;code>Micro-Task&lt;/code>之后，不过 requestAnimationFrame 不一定会在当前帧必须执行，由浏览器根据当前的策略自行决定在哪一帧执行。&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 82;
+flex-basis: 197px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/browser-event-loop.jpeg" data-size="436x529">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/browser-event-loop.jpeg"
+width="436"
+height="529"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/browser-event-loop_huced1fe38045f5eee4b9e74f19891a71d_44490_480x0_resize_q75_box.jpeg 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/browser-event-loop_huced1fe38045f5eee4b9e74f19891a71d_44490_1024x0_resize_q75_box.jpeg 1024w"
+loading="lazy"
+alt="browser-event-loop">
+&lt;/a>
+&lt;figcaption>browser-event-loop&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ol>
+&lt;li>检查 &lt;code>macrotask&lt;/code> 队列是否为空，非空则到 2，为空则到 3&lt;/li>
+&lt;li>执行 &lt;code>macrotask&lt;/code> 中的一个任务&lt;/li>
+&lt;li>继续检查 &lt;code>microtask&lt;/code> 队列是否为空，若有则到 4，否则到 5&lt;/li>
+&lt;li>取出 &lt;code>microtask&lt;/code> 中的任务执行，执行完成返回到步骤 3&lt;/li>
+&lt;li>执行视图更新&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>当某个宏任务执行完后,会查看是否有微任务队列。如果有，先执行微任务队列中的所有任务，如果没有，会读取宏任务队列中排在最前的任务，执行宏任务的过程中，遇到微任务，依次加入微任务队列。栈空后，再次读取微任务队列里的任务，依次类推。&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="node-中的-event-loop">&lt;code>node&lt;/code> 中的 &lt;code>Event Loop&lt;/code>&lt;/h4>
+&lt;p>&lt;code>Node&lt;/code> 中的 &lt;code>Event Loop&lt;/code> 和浏览器中的是完全不相同的东西。&lt;code>Node.js&lt;/code> 采用&lt;code>V8&lt;/code>作为&lt;code>js解析引擎&lt;/code>，而&lt;code>I/O&lt;/code>处理方面使用了自己设计的&lt;code>libuv&lt;/code>，&lt;code>libuv&lt;/code>是一个基于事件驱动的跨平台抽象层，封装了不同操作系统一些底层特性，对外提供&lt;code>统一的API&lt;/code>，事件循环机制也是它里面的实现。&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 253;
+flex-basis: 607px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/node-event-loop.png" data-size="800x316">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/node-event-loop.png"
+width="800"
+height="316"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/node-event-loop_huea6c2925cd5829a8dc3851ef8479abca_21842_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/node-event-loop_huea6c2925cd5829a8dc3851ef8479abca_21842_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="node-event-loop">
+&lt;/a>
+&lt;figcaption>node-event-loop&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>V8&lt;/code> 引擎解析 &lt;code>JavaScript&lt;/code> 脚本。&lt;/li>
+&lt;li>解析后的代码，调用 &lt;code>Node API&lt;/code>。&lt;/li>
+&lt;li>&lt;code>libuv&lt;/code> 库负责 &lt;code>Node API&lt;/code> 的执行。它将不同的任务分配给不同的线程，形成一个 &lt;code>Event Loop&lt;/code>（事件循环），以异步的方式将任务的执行结果返回给 V8 引擎。&lt;/li>
+&lt;li>&lt;code>V8&lt;/code> 引擎再将结果返回给用户。&lt;/li>
+&lt;/ol>
+&lt;h5 id="libuv">&lt;code>libuv&lt;/code>&lt;/h5>
+&lt;ul>
+&lt;li>六大阶段&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>libuv&lt;/code>引擎中的事件循环分为 &lt;code>6 个阶段&lt;/code>，它们会按照顺序反复运行。每当进入某一个阶段的时候，都会从对应的回调队列中取出函数去执行。当队列为空或者执行的回调函数数量到达系统设定的阈值，就会进入下一阶段。&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 108;
+flex-basis: 260px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/libuv.png" data-size="359x331">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/libuv.png"
+width="359"
+height="331"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/libuv_hu065751215c4bd0080ad015f7e77409de_2699_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/libuv_hu065751215c4bd0080ad015f7e77409de_2699_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="libuv">
+&lt;/a>
+&lt;figcaption>libuv&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>timers&lt;/code> 阶段：这个阶段执行 &lt;code>timer&lt;/code>（&lt;code>setTimeout&lt;/code>、&lt;code>setInterval&lt;/code>）的回调，并且是由 &lt;code>poll&lt;/code> 阶段控制的。&lt;/li>
+&lt;li>&lt;code>I/O callbacks&lt;/code> 阶段：处理一些上一轮循环中的少数未执行的 &lt;code>I/O&lt;/code> 回调&lt;/li>
+&lt;li>&lt;code>idle, prepare&lt;/code> 阶段：仅 &lt;code>node&lt;/code> 内部使用&lt;/li>
+&lt;li>&lt;code>poll&lt;/code> 阶段：获取新的 &lt;code>I/O&lt;/code> 事件, 适当的条件下 &lt;code>node&lt;/code> 将阻塞在这里&lt;/li>
+&lt;li>&lt;code>check&lt;/code> 阶段：执行 &lt;code>setImmediate()&lt;/code> 的回调&lt;/li>
+&lt;li>&lt;code>close callbacks&lt;/code> 阶段：执行 &lt;code>socket&lt;/code> 的 &lt;code>close&lt;/code> 事件回调&lt;/li>
+&lt;/ol>
+&lt;h6 id="poll阶段">&lt;code>poll&lt;/code>阶段&lt;/h6>
+&lt;p>&lt;code>poll&lt;/code> 是一个至关重要的阶段，这一阶段中，系统会做两件事情：&lt;/p>
+&lt;ol>
+&lt;li>回到 &lt;code>timer&lt;/code> 阶段执行回调&lt;/li>
+&lt;li>执行 &lt;code>I/O&lt;/code> 回调&lt;/li>
+&lt;/ol>
+&lt;p>在进入该阶段时如果没有设定了 timer 的话，会发生以下两件事情：&lt;/p>
+&lt;ul>
+&lt;li>如果 &lt;code>poll&lt;/code> 队列不为空，会遍历回调队列并同步执行，直到队列为空或者达到系统限制&lt;/li>
+&lt;li>如果 &lt;code>poll&lt;/code> 队列为空时：
+&lt;ul>
+&lt;li>如果有 &lt;code>setImmediate&lt;/code> 回调需要执行，&lt;code>poll&lt;/code> 阶段会停止并且进入到 &lt;code>check&lt;/code> 阶段执行回调&lt;/li>
+&lt;li>如果没有 &lt;code>setImmediate&lt;/code> 回调需要执行，会等待回调被加入到队列中并立即执行回调，这里同样会有个超时时间设置防止一直等待下去&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>设定了 &lt;code>timer&lt;/code> 且 &lt;code>poll&lt;/code> 队列为空，则会判断是否有 &lt;code>timer 超时&lt;/code>，如果有的话会回到 &lt;code>timer&lt;/code> 阶段执行回调。&lt;/p>
+&lt;h6 id="micro-task-与-macro-task">&lt;code>Micro-Task&lt;/code> 与 &lt;code>Macro-Task&lt;/code>&lt;/h6>
+&lt;p>&lt;code>Node&lt;/code>端事件循环中的异步队列也是这两种：&lt;code>macro（宏任务）&lt;/code>队列和 &lt;code>micro（微任务）&lt;/code>队列。&lt;/p>
+&lt;p>常见的 macro-task:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>setTimeout&lt;/code>、&lt;code>setInterval&lt;/code>、 &lt;code>setImmediate&lt;/code>、&lt;code>&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;&lt;/code>、 &lt;code>I/O&lt;/code> 操作&lt;/li>
+&lt;/ul>
+&lt;p>常见的 micro-task:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>process.nextTick&lt;/code>, &lt;code>Promise&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h5 id="note">Note&lt;/h5>
+&lt;h6 id="settimeout-和-setimmediate">&lt;code>setTimeout&lt;/code> 和 &lt;code>setImmediate&lt;/code>&lt;/h6>
+&lt;p>二者非常相似，区别主要在于调用时机不同。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>setImmediate&lt;/code> 设计在&lt;code>poll&lt;/code>阶段完成时执行，即&lt;code>check&lt;/code>阶段；&lt;/li>
+&lt;li>&lt;code>setTimeout&lt;/code> 设计在&lt;code>poll&lt;/code>阶段为空闲时，且设定时间到达后执行，但它在&lt;code>timer&lt;/code>阶段执行&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">timeout&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;timeout&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">setImmediate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">immediate&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;immediate&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
+&lt;li>对于以上代码来说，&lt;code>setTimeout&lt;/code> 可能执行在前，也可能执行在后。&lt;/li>
+&lt;li>首先 &lt;code>setTimeout(fn, 0) === setTimeout(fn, 1)&lt;/code>，这是由源码决定的 进入事件循环也是需要成本的，如果在准备时候花费了大于 1ms 的时间，那么在 &lt;code>timer&lt;/code> 阶段就会直接执行 &lt;code>setTimeout&lt;/code> 回调&lt;/li>
+&lt;li>如果准备时间花费小于 1ms，那么就是 &lt;code>setImmediate&lt;/code> 回调先执行了&lt;/li>
+&lt;/ol>
+&lt;h6 id="processnexttick">&lt;code>process.nextTick&lt;/code>&lt;/h6>
+&lt;p>这个函数其实是独立于 &lt;code>Event Loop&lt;/code> 之外的，它有一个自己的队列，当每个阶段完成后，如果存在 &lt;code>nextTick&lt;/code> 队列，就会清空队列中的所有回调函数，并且优先于其他 &lt;code>microtask&lt;/code> 执行。&lt;/p>
+&lt;h4 id="node与浏览器的-event-loop-差异">&lt;code>Node&lt;/code>与浏览器的 &lt;code>Event Loop&lt;/code> 差异&lt;/h4>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 305;
+flex-basis: 733px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/diff.png" data-size="1051x344">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/diff.png"
+width="1051"
+height="344"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/diff_hu0cab5ce6b4773ed8d8072007d8fb6120_79057_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/diff_hu0cab5ce6b4773ed8d8072007d8fb6120_79057_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="Node与浏览器的 Event Loop 差异">
+&lt;/a>
+&lt;figcaption>Node与浏览器的 Event Loop 差异&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Node&lt;/code>端，&lt;code>microtask&lt;/code> 在事件循环的各个阶段之间执行&lt;/li>
+&lt;li>浏览器端，&lt;code>microtask&lt;/code> 在事件循环的 &lt;code>macrotask&lt;/code> 执行完之后执行&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>在 &lt;code>node 11&lt;/code> 版本后，&lt;code>node&lt;/code> 下 &lt;code>Event Loop&lt;/code> 已经与&lt;code>浏览器&lt;/code>趋于相同&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.webhek.com/post/7-tips-web-front-developer-must-know__trashed.html" target="_blank" rel="noopener"
+>七个 Web 前端程序员必须会用 css 技巧&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview/issues/26" target="_blank" rel="noopener"
+>事件循环机制&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000013660033" target="_blank" rel="noopener"
+>浏览器和 Node 不同的事件循环（Event Loop） - SegmentFault 思否&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　65</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/</link><pubDate>Sat, 20 Nov 2021 19:30:16 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-65/frontend-65-cover.jpg" alt="Featured image of post 毎日のフロントエンド　65" />&lt;h1 id="第六十五日">第六十五日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html直接输入多个空格为什么只能显示一个空格">&lt;strong>Question:&lt;/strong> &lt;code>HTML&lt;/code>直接输入多个空格为什么只能显示一个空格&lt;/h3>
 &lt;p>该行为由 CSS &lt;code>white-space&lt;/code> 控制，其默认值 &lt;code>normal&lt;/code> 的表现即为&lt;strong>多个空格压缩成一个&lt;/strong>&lt;/p>
