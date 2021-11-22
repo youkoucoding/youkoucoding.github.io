@@ -1,4 +1,183 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 21 Nov 2021 14:43:43 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　66</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/</link><pubDate>Sun, 21 Nov 2021 14:43:43 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/frontend-66-cover.jpg" alt="Featured image of post 毎日のフロントエンド　66" />&lt;h1 id="第六十六日">第六十六日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 22 Nov 2021 14:50:01 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 67</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-67/</link><pubDate>Mon, 22 Nov 2021 14:50:01 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-67/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-67/frontend-67-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 67" />&lt;h1 id="第六十七日">第六十七日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-请写出唤醒拔打电话发送邮件发送短信的例子">&lt;strong>Question:&lt;/strong> 请写出唤醒拔打电话、发送邮件、发送短信的例子&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;tel:1xxxxxxxx&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>一键拨打号码&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;mailto:xxxxxx@xxxx.com&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>一键发送邮件&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;sms:1xxxxxxxxx&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>一键发送短信&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-如何消除-transition-闪屏">&lt;strong>Question:&lt;/strong> 如何消除 &lt;code>transition&lt;/code> 闪屏&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">css&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kp">-webkit-&lt;/span>&lt;span class="k">transform-style&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">preserve-3d&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kp">-webkit-&lt;/span>&lt;span class="k">backface-visibility&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">hidden&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kp">-webkit-&lt;/span>&lt;span class="k">perspective&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-举例子说说对-js-隐式类型转换的理解">&lt;strong>Question:&lt;/strong> 举例子说说对 js 隐式类型转换的理解&lt;/h3>
+&lt;ol>
+&lt;li>字符串连接符(+)，转换为 String&lt;/li>
+&lt;li>关系运算符(&lt;code>&amp;gt;,&amp;lt;,&amp;gt;=,&amp;lt;=,==&lt;/code>)、算术运算符号(&lt;code>+,-,*,/,%,++,--&lt;/code>)，转换为&lt;code>Number&lt;/code>&lt;/li>
+&lt;li>逻辑非运算符(&lt;code>!&lt;/code>)，转换为&lt;code>Boolean&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h4 id="note">note:&lt;/h4>
+&lt;ol>
+&lt;li>
+&lt;p>数组、对象等复杂数据类型在隐式转换时会先使用&lt;code>valueOf()&lt;/code>获取其原始值，如果原始值不是 &lt;code>Number&lt;/code> 则调用 &lt;code>toString()&lt;/code> 转成 &lt;code>Sting&lt;/code>，再转成 &lt;code>Number&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Boolean&lt;/code>转换为&lt;code>false&lt;/code>： &lt;code>0，-0，NaN，undefined，&amp;quot;&amp;quot;，null，[]，false&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>undefined&lt;/code>与&lt;code>null&lt;/code>的特殊情况&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kc">undefined&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kc">undefined&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kc">null&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>&lt;code>NaN&lt;/code>与任何数据比较都是 false，包括自己。&lt;/li>
+&lt;/ol>
+&lt;h3 id="question-手写数组转树">&lt;strong>Question:&lt;/strong> 手写数组转树&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 递归实现
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">input&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">val&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;学校&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">val&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;班级1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">val&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;班级2&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">val&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;学生1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">val&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;学生2&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">val&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;学生3&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">];&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">buildTree&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">childrenArray&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parentId&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">children&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">buildTree&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">childrenArray&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">arrayToTree&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">input&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">buildTree&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">input&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arrayToTree&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">input&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// reduce 函数 生成： map 数据结构
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门A&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门C&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门D&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门E&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门F&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门G&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门H&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">4&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">];&lt;/span>
+&lt;span class="c1">//
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">convert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">list&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// reduce callback first parameter `acc`=&amp;gt; 累加值，初始化为 一个空对象 {}
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// item =&amp;gt; list 的 第一个元素
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 返回 acc =&amp;gt; 一个以 数组元素的id 为 key， 以 此元素为 value的键值对，的对象 （map）。
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 相当于map = new Map() 类 map结构
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">map&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">acc&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">acc&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">acc&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="p">{});&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="c1">// reduce函数返回的对象 便于进行 for in 循环。 由操作一个数组，转化操作一个对象。
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">key&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 拿到每一个原始元素id 对应的元素
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">item&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parentId&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 使用map结构的方便之处： 直接通过匹配的parentId 找到对应的parent_item
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 用本轮循环中的item的父id，直接从map中取得对应的父元素，
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 增加children属性，向children属性添加数组形式的子元素
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">parent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">parent&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">parent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">children&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">parent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">children&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">parent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 要加上else，保证匹配不到 parent_id 的元素被保留
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">convert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">list&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">result&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;p>一个 “更” map 的写法&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">type&lt;/span> &lt;span class="nx">Node&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">number&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">number&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">type&lt;/span> &lt;span class="nx">TreeNode&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">number&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">number&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">children&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">TreeNode&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">[];&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">Node&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">string&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">[]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;V1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;V2&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;V3&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;V4&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;V5&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;V6&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;V7&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">4&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">listToTree&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">list&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">Node&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">[])&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">TreeNode&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="kc">undefined&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">map&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">Map&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">number&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">TreeNode&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">T&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&amp;gt;&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">prev&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">curr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">prev&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">curr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="nx">curr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">children&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[]&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">prev&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Map&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">headId&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">map&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">treeNode&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">parent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">treeNode&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">parent&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">parent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">treeNode&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">treeNode&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parentId&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">headId&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">treeNode&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">headId&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview/issues/35" target="_blank" rel="noopener"
+>手写数组转树 · lgwebdream/FE-Interview&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　66</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/</link><pubDate>Sun, 21 Nov 2021 14:43:43 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-66/frontend-66-cover.jpg" alt="Featured image of post 毎日のフロントエンド　66" />&lt;h1 id="第六十六日">第六十六日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5如果不写-doctype-html-页面还会正常工作么">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>如果不写&lt;code>&amp;lt;! DOCTYPE html&amp;gt;&lt;/code>, 页面还会正常工作么&lt;/h3>
 &lt;p>页面添加了&lt;code>&amp;lt;! DOCTYPE html&amp;gt;&lt;/code>说明该页面采用了&lt;code>W3C&lt;/code>标准，如果不加则页面会根据浏览器自身的解析标准来解析，这可能会导致页面在不同的浏览器呈现出不同的效果。&lt;/p>
