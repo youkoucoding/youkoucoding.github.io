@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 23 Nov 2021 12:07:51 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 68</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-68/</link><pubDate>Tue, 23 Nov 2021 12:07:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-68/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-68/frontend-68-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 68" />&lt;h1 id="第六十八日">第六十八日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 24 Nov 2021 17:19:04 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 69</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-69/</link><pubDate>Wed, 24 Nov 2021 17:19:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-69/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-69/frontend-69-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 69" />&lt;h1 id="第六十九日">第六十九日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-怎样禁止表单记住密码自动填充">&lt;strong>Question:&lt;/strong> 怎样禁止表单记住密码自动填充&lt;/h3>
+&lt;p>&lt;code>autocomplete=&amp;quot;off&amp;quot;&lt;/code> or &lt;code>autocomplete=&amp;quot;new-password&amp;quot;&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">form&lt;/span> &lt;span class="na">method&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;post&amp;#34;&lt;/span> &lt;span class="na">action&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/form&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+[…]
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">label&lt;/span> &lt;span class="na">for&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;cc&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>信用卡：&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">label&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;cc&amp;#34;&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;cc&amp;#34;&lt;/span> &lt;span class="na">autocomplete&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;off&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">form&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-box-sizing-border-box-作用及好处有哪些">&lt;strong>Question:&lt;/strong> &lt;code>*{box-sizing: border-box;}&lt;/code> 作用及好处有哪些&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">{&lt;/span>&lt;span class="k">box-sizing&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">content-box&lt;/span>&lt;span class="err">（初期値）&lt;/span>&lt;span class="k">box-sizing&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">border-box&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>盒子的尺寸计算有两种，一种是&lt;code>content-box&lt;/code>，还有一种是&lt;code>border-box&lt;/code>，两者的不同是计算最大尺寸时&lt;strong>是否包含框和内边距&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>content-box&lt;/code> 的 &lt;code>width&lt;/code> 不包括 &lt;code>padding&lt;/code> 和 &lt;code>border&lt;/code>&lt;/li>
+&lt;li>&lt;code>border-box&lt;/code> 的 &lt;code>width&lt;/code> 包括 &lt;code>padding&lt;/code> 和 &lt;code>border&lt;/code> (更符合我们通常对一个「盒子」尺寸的认知,省掉一些计算)&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-对base64的理解它的使用场景有哪些">&lt;strong>Question:&lt;/strong> 对&lt;code>base64&lt;/code>的理解，它的使用场景有哪些&lt;/h3>
+&lt;p>Base64 是一种二进制到文本的编码方式： 一种将 byte 数组编码为字符串的方法，而且编码出的字符串只包含 ASCII 基础字符。&lt;/p>
+&lt;p>Base64 不是加密算法，其仅仅是一种编码方式，算法也是公开的，所以不能依赖它进行加密。&lt;/p>
+&lt;p>Base64 使用到的 64 个字符(加一个填充字符&lt;code>=&lt;/code>)：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>A-Z&lt;/code> 26 个&lt;/li>
+&lt;li>&lt;code>a-z&lt;/code> 26 个&lt;/li>
+&lt;li>&lt;code>0-9&lt;/code> 10 个&lt;/li>
+&lt;li>&lt;code>+&lt;/code> 1 个&lt;/li>
+&lt;li>&lt;code>/&lt;/code> 1 个&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Base64 就是为了解决各系统以及传输协议中二进制不兼容的问题而生的。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>Base-64 编码保证了二进制数据的安全&lt;/li>
+&lt;/ul>
+&lt;p>Base-64 编码可以将任意一组字节转换为较长的常见文本字符序列，从而可以合法地作为首部字段值。Base-64 编码将用户输入或二进制数据，打包成一种安全格式，将其作为 HTTP 首部字段的值发送出去，而无须担心其中包含会破坏 HTTP 分析程序的冒号、换行符或二进制值。&lt;/p>
+&lt;p>Base-64 编码是作为 MIME 多媒体电子邮件标准的一部分开发的，这样 MIME 就可以在不同的合法电子邮件网关之间传输富文本和任意的二进制数据里。Base-64 编码与将二进制数据文本化表示的 &lt;code>uuencode&lt;/code>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> 和 &lt;code>BinHex&lt;/code>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> 标准在本质上类似，但空间效率更高。&lt;/p>
+&lt;p>&lt;code>Data URL&lt;/code> 用 &lt;code>base64&lt;/code> 处理图片可以减少&lt;code>http&lt;/code>请求&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>atob()&lt;/code>&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>&lt;code>btoa()&lt;/code>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion" target="_blank" rel="noopener"
+>如何关闭表单自动填充 - Web 安全 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" target="_blank" rel="noopener"
+>Base64 - MDN Web Docs Glossary: Definitions of Web-related terms | MDN&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://zh.wikipedia.org/zh-cn/Uuencode" target="_blank" rel="noopener"
+>Uuencode - 维基百科，自由的百科全书&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://en.wikipedia.org/wiki/BinHex" target="_blank" rel="noopener"
+>BinHex - Wikipedia&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/atob" target="_blank" rel="noopener"
+>WindowOrWorkerGlobalScope.atob() - Web API 接口参考 | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/btoa" target="_blank" rel="noopener"
+>WindowOrWorkerGlobalScope.btoa() - Web API 接口参考 | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド　 68</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-68/</link><pubDate>Tue, 23 Nov 2021 12:07:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-68/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-68/frontend-68-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 68" />&lt;h1 id="第六十八日">第六十八日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说明html5在移动端如何打开-app">&lt;strong>Question:&lt;/strong> 说明&lt;code>HTML5&lt;/code>在移动端如何打开 APP&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="nx">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;zhihu://&amp;#39;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="nx">打开应用&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/a&amp;gt;&lt;/span>
