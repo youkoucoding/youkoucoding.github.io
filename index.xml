@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 24 Nov 2021 17:19:04 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 69</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-69/</link><pubDate>Wed, 24 Nov 2021 17:19:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-69/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-69/frontend-69-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 69" />&lt;h1 id="第六十九日">第六十九日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 25 Nov 2021 15:54:26 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 70</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-70/</link><pubDate>Thu, 25 Nov 2021 15:54:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-70/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-70/frontend-70-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 70" />&lt;h1 id="第七十日">第七十日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html-的-a-标签属性-relnofollow-有什么作用">&lt;strong>Question:&lt;/strong> &lt;code>html&lt;/code> 的 &lt;code>&amp;lt;a&amp;gt;&lt;/code> 标签属性 &lt;code>rel='nofollow'&lt;/code> 有什么作用&lt;/h3>
+&lt;p>&lt;code>rel=&amp;quot;nofollow&amp;quot;&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;meta name=&amp;quot;robots&amp;quot; content=&amp;quot;nofollow&amp;quot; /&amp;gt;&lt;/code>: 告诉搜索引擎爬虫该页面上所有链接都无需追踪。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;a href=&amp;quot;login.aspx&amp;quot; rel=&amp;quot;nofollow&amp;quot;&amp;gt;登录&amp;lt;/a&amp;gt;&lt;/code>: 该页面无需追踪。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-写出执行结果并解释原因">&lt;strong>Question:&lt;/strong> 写出执行结果，并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">f&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{})&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">x&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">f&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: &lt;code>1undefined&lt;/code>&lt;/p>
+&lt;p>条件判断为&lt;strong>假&lt;/strong>的情况有：&lt;code>0&lt;/code>，&lt;code>false&lt;/code>，&lt;code>''&lt;/code>，&lt;code>null&lt;/code>，&lt;code>undefined&lt;/code>，&lt;code>未定义对象&lt;/code>。&lt;/p>
+&lt;p>函数声明写在运算符中，其为 true，但放在运算符中的函数声明在&lt;strong>执行阶段是找不到&lt;/strong>。
+另外，对未声明的变量执行&lt;code>typeOf&lt;/code>不会报错，会返回&lt;code>undefined&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">f&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">f&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">f&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nx">f&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: &lt;code>false&lt;/code>&lt;/p>
+&lt;p>&lt;code>a instanceof b&lt;/code> 用于检测 a 是不是 b 的实例, 即检测原型链上有没有 &lt;code>b.prototype&lt;/code> 即 &lt;code>a.proto === b.prototype || a.proto.proto === b.prototype&lt;/code>。&lt;/p>
+&lt;ul>
+&lt;li>如果题目&lt;code>f&lt;/code>中没有&lt;code>return f&lt;/code>,则答案为&lt;code>true&lt;/code>&lt;/li>
+&lt;li>在本题中&lt;code>new f()&lt;/code>其返回的结果为 &lt;code>f&lt;/code> 的函数对象，其并不是 &lt;code>f&lt;/code> 的一个实例。(&lt;code>new&lt;/code> 操作符会返回该函数的一个实例)&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>The &lt;code>new&lt;/code> keyword does the following things:&lt;/p>
+&lt;ol>
+&lt;li>Creates a blank, plain JavaScript object.&lt;/li>
+&lt;li>Adds a property to the new object(&lt;code>__proto__)&lt;/code>) that links to the constructor function&amp;rsquo;s prototype object.&lt;/li>
+&lt;li>Binds the newly created object instance as the &lt;code>this&lt;/code> context (i.e(in other words) &lt;code>this&lt;/code> in the constructor function now refer to the object created in the first step).&lt;/li>
+&lt;li>Returns &lt;code>this&lt;/code> &lt;strong>if the function doesn&amp;rsquo;t return an object.&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　 69</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-69/</link><pubDate>Wed, 24 Nov 2021 17:19:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-69/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-69/frontend-69-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 69" />&lt;h1 id="第六十九日">第六十九日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-怎样禁止表单记住密码自动填充">&lt;strong>Question:&lt;/strong> 怎样禁止表单记住密码自动填充&lt;/h3>
 &lt;p>&lt;code>autocomplete=&amp;quot;off&amp;quot;&lt;/code> or &lt;code>autocomplete=&amp;quot;new-password&amp;quot;&lt;/code>&lt;/p>
