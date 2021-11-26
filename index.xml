@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 25 Nov 2021 15:54:26 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 70</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-70/</link><pubDate>Thu, 25 Nov 2021 15:54:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-70/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-70/frontend-70-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 70" />&lt;h1 id="第七十日">第七十日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 26 Nov 2021 17:22:43 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 71</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-71/</link><pubDate>Fri, 26 Nov 2021 17:22:43 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-71/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-71/frontend-71-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 71" />&lt;h1 id="第七十一日">第七十一日&lt;/h1>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-深拷贝对象">&lt;strong>Question:&lt;/strong> 深拷贝对象&lt;/h3>
+&lt;ul>
+&lt;li>使用原生的 &lt;code>Object.assign()&lt;/code>,以及展开运算符，以实现&lt;strong>浅拷贝&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * 深度拷贝一个对象
+&lt;/span>&lt;span class="cm"> * @param {any} val
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">deepClone&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">getType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">_val&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">_val&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="c1">// 对_val调用toString方法,比如:一个number调用该方法后,会得到:
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// &amp;#34;[object Number]&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 然后替换其中的object
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 具体调用示例如下:
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// Object.prototype.toString.call(1)
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// &amp;#34;[object Number]&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// Object.prototype.toString.call({})
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// &amp;#34;[object Object]&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// Object.prototype.toString.call([])
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// &amp;#34;[object Array]&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// Object.prototype.toString.call(&amp;#39;&amp;#39;)
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// &amp;#34;[object String]&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// Object.prototype.toString.call(true)
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// &amp;#34;[object Boolean]&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// Object.prototype.toString.call(Symbol())
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// &amp;#34;[object Symbol]&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// Object.prototype.toString.call(()=&amp;gt;{})
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// &amp;#34;[object Function]&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// Object.prototype.toString.call(undefined)
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// &amp;#34;[object Undefined]&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// Object.prototype.toString.call(null)
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// &amp;#34;[object Null]&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/[\[\s\]]|(object)/g&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">valType&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">getType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 如果是非引用类型,直接赋值就是深度拷贝了
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">valType&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;Object&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">valType&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;Array&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">val&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">output&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="c1">// 如果是 Array 类型的话,新建一个Array, 然后将值拷贝到数组中,(递归)
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">valType&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;Array&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">output&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">val&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">output&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">valType&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;Object&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">output&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">deepClone&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">valType&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;Function&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 针对函数,使用assign来实现
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">output&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">assign&lt;/span>&lt;span class="p">({},&lt;/span> &lt;span class="nx">val&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">output&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="question-判断输出结果">&lt;strong>Question:&lt;/strong> 判断输出结果&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">num&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">add&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nx">reduce&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: 12 NaN&lt;/p>
+&lt;p>add 是普通函数，而 reduce 是箭头函数。对于箭头函数，this 关键字指向是它所在上下文（&lt;strong>定义时的位置&lt;/strong>）的环境，与普通函数不同！ 这意味着当我们调用 reduce 时，它不是指向 num 对象，而是指其定义时的环境（&lt;code>window&lt;/code>）。没有值 a 属性，返回 undefined。&lt;/p>
+&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">person&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;yideng&amp;#39;&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">sayHi&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="sb">`&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb"> is &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sayHi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">person&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">21&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sayHi&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">bind&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">person&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">21&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>yideng is 21&lt;/code>&lt;/li>
+&lt;li>ƒ sayHi(age) { return &lt;code>${this.name} is ${age}&lt;/code>; }&lt;/li>
+&lt;/ul>
+&lt;p>使用两者，以传递我们想要&lt;code>this&lt;/code>关键字引用的对象:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>.call&lt;/code>方法会立即执行&lt;/li>
+&lt;li>&lt;code>.bind&lt;/code>方法会返回函数的拷贝值，带有绑定的函数执行上下文， 它不会立即执行&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　 70</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-70/</link><pubDate>Thu, 25 Nov 2021 15:54:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-70/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-70/frontend-70-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 70" />&lt;h1 id="第七十日">第七十日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html-的-a-标签属性-relnofollow-有什么作用">&lt;strong>Question:&lt;/strong> &lt;code>html&lt;/code> 的 &lt;code>&amp;lt;a&amp;gt;&lt;/code> 标签属性 &lt;code>rel='nofollow'&lt;/code> 有什么作用&lt;/h3>
 &lt;p>&lt;code>rel=&amp;quot;nofollow&amp;quot;&lt;/code>&lt;/p>
