@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 27 Nov 2021 12:06:32 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 72</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-72/</link><pubDate>Sat, 27 Nov 2021 12:06:32 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-72/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-72/frontend-72-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 72" />&lt;h1 id="第七十二日">第七十二日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 28 Nov 2021 18:03:33 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 73</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-73/</link><pubDate>Sun, 28 Nov 2021 18:03:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-73/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-73/frontend-73-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 73" />&lt;h1 id="第七十三日">第七十三日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-faviconico-有什么作用怎么在页面中引用常用尺寸有哪些可以修改后缀名吗">&lt;strong>Question:&lt;/strong> favicon.ico 有什么作用？怎么在页面中引用？常用尺寸有哪些？可以修改后缀名吗&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>favicon&lt;/code>不仅是网站的头像，也是其可以让浏览器的收藏夹中除了显示相应的标题外，还以图标的方式区分不同的网站。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;link rel=&amp;quot;shortcut icon&amp;quot; type=&amp;quot;image/x-icon&amp;quot; href=&amp;quot;/favicon.ico&amp;quot;&amp;gt;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>推荐使用后缀名&lt;code>.ico&lt;/code>，对浏览器的支持范围广，一个.ico 文件可以同时满足多个尺寸的需求。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>常用尺寸：&lt;code>16*16&lt;/code> &lt;code>32*32&lt;/code> &lt;code>48*48&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-在实际编写-css-中遇到过哪些浏览器兼容性的问题怎么解决的">&lt;strong>Question:&lt;/strong> 在实际编写 css 中遇到过哪些浏览器兼容性的问题？怎么解决的&lt;/h3>
+&lt;p>TODO&lt;/p>
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://www.npmjs.com/package/postcss" target="_blank" rel="noopener"
+>postcss - npm&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/postcss/autoprefixer" target="_blank" rel="noopener"
+>postcss/autoprefixer: Parse CSS and add vendor prefixes to rules by Can I Use&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/browserslist/browserslist" target="_blank" rel="noopener"
+>browserslist/browserslist: 🦔 Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-preset-env&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-移动端点击事件为什么会有延迟延迟多长时间有哪些方法可以解决">&lt;strong>Question:&lt;/strong> 移动端点击事件为什么会有延迟？延迟多长时间？有哪些方法可以解决&lt;/h3>
+&lt;p>原因：等待 300ms 看用户是点击还是双击缩放&lt;/p>
+&lt;p>解决办法：&lt;/p>
+&lt;ol>
+&lt;li>禁止缩放&lt;/li>
+&lt;li>设置默认视口宽度为设备宽度&lt;/li>
+&lt;li>设置 css &lt;code>touch-action:none&lt;/code>&lt;/li>
+&lt;li>&lt;code>fastclick.js&lt;/code>: &lt;a class="link" href="https://github.com/ftlabs/fastclick" target="_blank" rel="noopener"
+>ftlabs/fastclick: Polyfill to remove click delays on browsers with touch UIs&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h3 id="question-写出执行结果并解释原因">&lt;strong>Question:&lt;/strong> 写出执行结果,并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="p">[&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">null&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: &lt;code>[object, false]&lt;/code>&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>typeof&lt;/code> 返回一个&lt;strong>表示类型的字符串&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>typeof 的结果列表
+&lt;ul>
+&lt;li>&lt;code>Undefined &amp;quot;undefined&amp;quot;&lt;/code>&lt;/li>
+&lt;li>&lt;code>Null &amp;quot;object&amp;quot;&lt;/code>&lt;/li>
+&lt;li>&lt;code>Boolean &amp;quot;boolean&amp;quot;&lt;/code>&lt;/li>
+&lt;li>&lt;code>Number &amp;quot;number&amp;quot;&lt;/code>&lt;/li>
+&lt;li>&lt;code>String &amp;quot;string&amp;quot;&lt;/code>&lt;/li>
+&lt;li>&lt;code>Symbol &amp;quot;symbol&amp;quot;&lt;/code>&lt;/li>
+&lt;li>&lt;code>Function &amp;quot;function&amp;quot;&lt;/code>&lt;/li>
+&lt;li>&lt;code>Object &amp;quot;object&amp;quot;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>instanceof&lt;/code> 运算符用来检测 &lt;code>constructor.prototype&lt;/code> 是否存在于参数 &lt;code>object&lt;/code> 的原型链上&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="question-写出执行结果并解释原因-1">&lt;strong>Question:&lt;/strong> 写出执行结果,并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">f&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">f&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">b&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getPrototypeOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">f&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: &lt;code>false&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>f.prototype&lt;/code> 是使用 &lt;code>new&lt;/code> 创建的 &lt;code>f&lt;/code> 实例的原型.&lt;/li>
+&lt;li>&lt;code>Object.getPrototypeOf&lt;/code> 是 &lt;code>f&lt;/code> &lt;strong>函数的原型&lt;/strong>&lt;/li>
+&lt;li>&lt;code>Function.prototype === Object.getPrototypeOf(f) // true&lt;/code>&lt;/li>
+&lt;li>&lt;code>a === Object.getPrototypeOf(new f()) // true&lt;/code>&lt;/li>
+&lt;li>&lt;code>b === Function.prototype // true&lt;/code>&lt;/li>
+&lt;li>&lt;code>a === b // false&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;code>Object.getPrototypeOf()&lt;/code> 方法返回指定对象的原型（内部&lt;code>[[Prototype]]&lt;/code>属性的值）。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　 72</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-72/</link><pubDate>Sat, 27 Nov 2021 12:06:32 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-72/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-72/frontend-72-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 72" />&lt;h1 id="第七十二日">第七十二日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-video和audio分别支持哪些格式">&lt;strong>Question:&lt;/strong> &lt;code>video&lt;/code>和&lt;code>audio&lt;/code>分别支持哪些格式&lt;/h3>
 &lt;ul>
