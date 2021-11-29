@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 28 Nov 2021 18:03:33 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 73</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-73/</link><pubDate>Sun, 28 Nov 2021 18:03:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-73/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-73/frontend-73-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 73" />&lt;h1 id="第七十三日">第七十三日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 29 Nov 2021 16:22:25 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 74</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-74/</link><pubDate>Mon, 29 Nov 2021 16:22:25 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-74/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-74/frontend-74-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 74" />&lt;h1 id="第七十四日">第七十四日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-在a标签上的四个伪类执行顺序是什么">&lt;strong>Question:&lt;/strong> 在&lt;code>a&lt;/code>标签上的四个伪类执行顺序是什么&lt;/h3>
+&lt;ol>
+&lt;li>&lt;code>a:link&lt;/code>: 定义正常链接的样式&lt;/li>
+&lt;li>&lt;code>a:visited&lt;/code>: 定义已访问过链接的样式&lt;/li>
+&lt;li>&lt;code>a:hover&lt;/code>: 定义鼠标悬浮在链接上时的样式&lt;/li>
+&lt;li>&lt;code>a:active&lt;/code>: 定义鼠标点击链接时的样式&lt;/li>
+&lt;/ol>
+&lt;p>&lt;code>link--visited--hover-active&lt;/code>，也就是我们常说到的 LoVe HAte 原则（大写字母就是它们的首字母）&lt;/p>
+&lt;p>在&lt;code>W3C&lt;/code>规范中，也规定了链接的声明顺序：
+在 &lt;code>CSS&lt;/code> 定义中，&lt;code>a:hover&lt;/code> 必须被置于 &lt;code>a:link&lt;/code> 和 &lt;code>a:visited&lt;/code> 之后，才是有效的。
+在 &lt;code>CSS&lt;/code> 定义中，&lt;code>a:active&lt;/code> 必须被置于 &lt;code>a:hover&lt;/code> 之后，才是有效的。&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-important一般在哪些场景使用">&lt;strong>Question:&lt;/strong> &lt;code>!important&lt;/code>，一般在哪些场景使用&lt;/h3>
+&lt;p>&lt;code>!important&lt;/code> 可以让样式的 特指度最高，覆盖任何样式，而且本身不可被覆盖。
+一般场景就是用来强制覆盖其他样式，用的比较少，不建议使用。&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-写一个方法随机生成指定位数的字符串">&lt;strong>Question:&lt;/strong> 写一个方法随机生成指定位数的字符串&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">getRandomString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">//let str = Math.random().toString(36).substr(2); // substr: This feature is no longer recommended.
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// substring(2) remove the 0 and .
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">36&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">substring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="nx">length&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">substring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">str&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">getRandomString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">str&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>toString(36)&lt;/code>: &lt;code>radix&lt;/code>是&lt;code>36&lt;/code>，就会把数字表示为由&lt;code>0-9&lt;/code>, &lt;code>a-z&lt;/code>组成的的&amp;quot;36 进制字符串&amp;quot;.&lt;/li>
+&lt;li>&lt;code>substring()&lt;/code> 方法返回一个字符串在开始索引到结束索引之间的一个子集, 或从开始索引直到字符串的末尾的一个子集。&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring" target="_blank" rel="noopener"
+>String.prototype.substring() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString" target="_blank" rel="noopener"
+>Object.prototype.toString() - JavaScript | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　 73</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-73/</link><pubDate>Sun, 28 Nov 2021 18:03:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-73/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-73/frontend-73-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 73" />&lt;h1 id="第七十三日">第七十三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-faviconico-有什么作用怎么在页面中引用常用尺寸有哪些可以修改后缀名吗">&lt;strong>Question:&lt;/strong> favicon.ico 有什么作用？怎么在页面中引用？常用尺寸有哪些？可以修改后缀名吗&lt;/h3>
 &lt;ul>
