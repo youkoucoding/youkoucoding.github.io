@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 29 Nov 2021 16:22:25 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 74</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-74/</link><pubDate>Mon, 29 Nov 2021 16:22:25 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-74/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-74/frontend-74-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 74" />&lt;h1 id="第七十四日">第七十四日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 30 Nov 2021 09:01:53 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 75</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-75/</link><pubDate>Tue, 30 Nov 2021 09:01:53 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-75/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-75/frontend-75-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 75" />&lt;h1 id="第七十五日">第七十五日&lt;/h1>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-解释下什么是浮动和它的工作原理是什么同时浮动会引起什么问题">&lt;strong>Question:&lt;/strong> 解释下什么是浮动和它的工作原理是什么？同时浮动会引起什么问题&lt;/h3>
+&lt;ul>
+&lt;li>什么是浮动：通过浮动可以让元素左右浮动，然后通过&lt;code>margin&lt;/code>调整位置&lt;/li>
+&lt;li>工作原理：使元素脱离文档流，让元素可以左右浮动，直到遇到另一个浮动元素的边缘才停止。&lt;/li>
+&lt;li>带来的问题：浮动元素会造成父级元素无法自动获取高度，导致父级塌陷，布局错乱。&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-js-中三个的区别是什么并说明它们各自的工作过程">&lt;strong>Question:&lt;/strong> js 中&lt;code>=&lt;/code>、&lt;code>==&lt;/code>、&lt;code>===&lt;/code>三个的区别是什么？并说明它们各自的工作过程&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>=&lt;/code> 是赋值运算符&lt;/p>
+&lt;ul>
+&lt;li>遵循右结合律&lt;/li>
+&lt;li>返回 &lt;code> lhs(left-hand-side)&lt;/code> （但在声明语句（&lt;code>var&lt;/code>, &lt;code>let&lt;/code>, &lt;code>const&lt;/code>）中返回 &lt;code>undefined&lt;/code>）&lt;/li>
+&lt;li>若 &lt;code> rhs(right-hand-side)&lt;/code> 是 &lt;code>primitive value&lt;/code> （&lt;code>number&lt;/code>, &lt;code>string&lt;/code>, &lt;code>symbol&lt;/code>, &lt;code>undefined&lt;/code>, &lt;code>boolean&lt;/code>) 则 &lt;code>lhs&lt;/code> 被赋值为该值&lt;/li>
+&lt;li>若 &lt;code>rhs&lt;/code> 是 &lt;code>object&lt;/code> 则 &lt;code>lhs&lt;/code> 被赋值为指向该 &lt;code>object&lt;/code> 的 &lt;code>reference&lt;/code>&lt;/li>
+&lt;li>&lt;code>const&lt;/code> 声明的不变量不能被再次赋值，否则会 &lt;code>throw ReferenceError&lt;/code>&lt;/li>
+&lt;li>如果在局部作用域不使用声明语句就给一个既未声明于局部作用域，也未声明于任何上层作用域的变量赋值，那它将会被创建为一个全局变量。不应该如此使用。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>==&lt;/code> 是带有 &lt;code>implicit type conversion&lt;/code>(隐式类型转换) 的判等运算符&lt;/p>
+&lt;ul>
+&lt;li>遵循左结合律&lt;/li>
+&lt;li>返回 boolean&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>===&lt;/code> 是严格的判等运算符&lt;/p>
+&lt;ul>
+&lt;li>遵循左结合律&lt;/li>
+&lt;li>返回 &lt;code>boolean&lt;/code>&lt;/li>
+&lt;li>若两侧是 &lt;code>primitive value&lt;/code> 则判断两侧值是否相等&lt;/li>
+&lt;li>若两侧是 &lt;code>object&lt;/code> 则判断两侧 &lt;code>reference&lt;/code> 是否指向同一块内存&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="question-写出执行结果并解释原因">&lt;strong>Question:&lt;/strong> 写出执行结果,并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">showCase&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">switch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="s1">&amp;#39;A&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Case A&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="s1">&amp;#39;B&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Case B&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;undefined&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">default&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Do not know!&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">showCase&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;A&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: Do not know!&lt;/p>
+&lt;p>&lt;code>switch&lt;/code> 是严格比较, &lt;code>String&lt;/code> 实例和 字符串不一样&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">str1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;str&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">str2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;str&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">str1&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#34;string&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">str2&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//&amp;#34;object&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/Amery2010/HEAD#meta-%E6%A0%87%E7%AD%BE" target="_blank" rel="noopener"
+>与 &lt;code>&amp;lt;head&amp;gt;&lt;/code> 相关的标签列表。&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　 74</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-74/</link><pubDate>Mon, 29 Nov 2021 16:22:25 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-74/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-74/frontend-74-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 74" />&lt;h1 id="第七十四日">第七十四日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-在a标签上的四个伪类执行顺序是什么">&lt;strong>Question:&lt;/strong> 在&lt;code>a&lt;/code>标签上的四个伪类执行顺序是什么&lt;/h3>
 &lt;ol>
