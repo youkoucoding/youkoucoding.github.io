@@ -1,4 +1,112 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 30 Nov 2021 09:01:53 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 75</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-75/</link><pubDate>Tue, 30 Nov 2021 09:01:53 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-75/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-75/frontend-75-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 75" />&lt;h1 id="第七十五日">第七十五日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 01 Dec 2021 16:23:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 76</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-76/</link><pubDate>Wed, 01 Dec 2021 16:23:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-76/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-76/frontend-76-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 76" />&lt;h1 id="第七十六日">第七十六日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5如何识别语音读出的内容和朗读指定的内容">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>如何识别语音读出的内容和朗读指定的内容&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API" target="_blank" rel="noopener"
+>Web Speech API - Web APIs | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank" rel="noopener"
+>SpeechSynthesis - Web APIs | MDN&lt;/a> （实验性）&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-用css画出一个任意角度的扇形可以写多种实现的方法">&lt;strong>Question:&lt;/strong> 用&lt;code>CSS&lt;/code>画出一个任意角度的扇形，可以写多种实现的方法&lt;/h3>
+&lt;ul>
+&lt;li>一个圆 + 两个绝对定位的半圆&lt;/li>
+&lt;li>扇形可以通过两个半圆作为遮罩旋转来露出相应的角度实现&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;contain&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;main&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;mask1 common&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;mask2 common&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">contain&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">relative&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">main&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">lightgreen&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">common&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">absolute&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">mask1&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">transform&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rotate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">83&lt;/span>&lt;span class="kt">deg&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">transform-origin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">right&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">red&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">mask2&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">transform&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rotate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">-76&lt;/span>&lt;span class="kt">deg&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">transform-origin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">left&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">blue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;p>Solution - 2 : &lt;code>clip-path: polygon()&lt;/code>&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-说说instanceof和typeof的实现原理并模拟实现一个instanceof">&lt;strong>Question:&lt;/strong> 说说&lt;code>instanceof&lt;/code>和&lt;code>typeof&lt;/code>的实现原理并模拟实现一个&lt;code>instanceof&lt;/code>&lt;/h3>
+&lt;h4 id="instacenof">&lt;code>instacenof&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>返回 &lt;code>boolean&lt;/code>&lt;/li>
+&lt;li>通过调用 &lt;code>class&lt;/code> 的 &lt;code>[Symbol.hasInstance]&lt;/code> &lt;code>static method&lt;/code> 来判断一个 &lt;code>object&lt;/code> 是否是一个 &lt;code>class&lt;/code> 的 &lt;code>instance&lt;/code>&lt;/li>
+&lt;li>缺省行为：判断 &lt;code>object&lt;/code> 的 &lt;code>prototype chain&lt;/code> 中是否有任意一个 &lt;code>prototype&lt;/code> 与 &lt;code>class&lt;/code> 的 &lt;code>prototype&lt;/code> 相等&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-typescript" data-lang="typescript">&lt;span class="kr">interface&lt;/span> &lt;span class="nx">IConstructor&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">new&lt;/span> &lt;span class="p">(...&lt;/span>&lt;span class="nx">args&lt;/span>: &lt;span class="kt">any&lt;/span>&lt;span class="p">[])&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">isObject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">o&lt;/span>: &lt;span class="kt">any&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">o&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;object&amp;#39;&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">o&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">o&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">instanceOf&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;(&lt;/span>&lt;span class="nx">obj&lt;/span>: &lt;span class="kt">any&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cls&lt;/span>: &lt;span class="kt">IConstructor&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="k">is&lt;/span> &lt;span class="nx">T&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">isObject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">cls&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">cls&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">Symbol&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hasInstance&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">cls&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">Symbol&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hasInstance&lt;/span>&lt;span class="p">](&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">cls&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">isObject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">cls&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">cls&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isPrototypeOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">else&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">TypeError&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;cls is not callable&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">TypeError&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;cls is not an object&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="typeof">&lt;code>typeof&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>返回 &lt;code>string&lt;/code>, &lt;code>number&lt;/code>, &lt;code>undefined&lt;/code>, &lt;code>boolean&lt;/code>, &lt;code>object (null or Object)&lt;/code>, &lt;code>function&lt;/code>, &lt;code>symbol&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="question-选择正确的答案">&lt;strong>Question:&lt;/strong> 选择正确的答案&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">pow&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">([].&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">pow&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm">A. 2 报错
+&lt;/span>&lt;span class="cm">B. 2 NaN
+&lt;/span>&lt;span class="cm">C. 1 报错
+&lt;/span>&lt;span class="cm">D. 1 NaN
+&lt;/span>&lt;span class="cm">*/&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: C: 1 error&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>arr.reduce(callback[, initialValue])&lt;/code>
+&lt;ul>
+&lt;li>&lt;code>reduce&lt;/code> 接受两个参数, 一个回调, 一个初始值&lt;/li>
+&lt;li>回调函数接受四个参数 &lt;code>previousValue&lt;/code>, &lt;code>currentValue&lt;/code>, &lt;code>currentIndex&lt;/code>, &lt;code>array&lt;/code>&lt;/li>
+&lt;li>If the array is empty and no initialValue was provided, TypeError would be thrown.&lt;/li>
+&lt;li>所以第二个会报异常. 第一个表达式等价于 Math.pow(2, 1) =&amp;gt; 2; Math.pow(2, 0) =&amp;gt;1&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　 75</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-75/</link><pubDate>Tue, 30 Nov 2021 09:01:53 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-75/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-75/frontend-75-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 75" />&lt;h1 id="第七十五日">第七十五日&lt;/h1>
 &lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="question-解释下什么是浮动和它的工作原理是什么同时浮动会引起什么问题">&lt;strong>Question:&lt;/strong> 解释下什么是浮动和它的工作原理是什么？同时浮动会引起什么问题&lt;/h3>
 &lt;ul>
