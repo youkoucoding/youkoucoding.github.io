@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 01 Dec 2021 16:23:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 76</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-76/</link><pubDate>Wed, 01 Dec 2021 16:23:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-76/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-76/frontend-76-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 76" />&lt;h1 id="第七十六日">第七十六日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 02 Dec 2021 20:41:22 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 77</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-77/</link><pubDate>Thu, 02 Dec 2021 20:41:22 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-77/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-77/frontend-77-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 77" />&lt;h1 id="第七十七日">第七十七日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5的img标签属性-srcset-和-sizes-的理解都有哪些应用场景">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>的&lt;code>img&lt;/code>标签属性 &lt;code>srcset&lt;/code> 和 &lt;code>sizes&lt;/code> 的理解？都有哪些应用场景？&lt;/h3>
+&lt;p>&lt;code>HTMLImageElement.srcset&lt;/code>, &lt;code>srcset&lt;/code> 的值是一个字符串，用来定义一个或多个图像候选地址，以 &lt;code>,&lt;/code>分割，每个候选地址将在特定条件下得以使用。候选地址包含图片 &lt;code>URL&lt;/code> 和一个可选的宽度描述符和像素密度描述符，该候选地址用来在特定条件下替代原始地址成为 &lt;code>src (en-US)&lt;/code> 的属性。&lt;/p>
+&lt;blockquote>
+&lt;p>The &lt;code>srcset&lt;/code> property, &lt;strong>along with the &lt;code>sizes&lt;/code> (en-US) property&lt;/strong>, are a crucial component in &lt;strong>designing responsive web sites&lt;/strong>, as they can be used together to make pages that use appropriate images for the rendering situation.&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;code>srcset&lt;/code>：规定了图片的 &lt;code>src&lt;/code> 候选集;&lt;/li>
+&lt;li>&lt;code>sizes&lt;/code>：规定了图片在不同条件下的尺寸取值，根据尺寸取值从&lt;code>srcset&lt;/code>中找到对应的图片&lt;code>src&lt;/code>；配合&lt;code>srcset&lt;/code>属性才能使用；&lt;/li>
+&lt;/ul>
+&lt;p>多用于响应式图片或不同像素密度设备的图片适配&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-请问displayinline-block在什么时候会显示间隙">&lt;strong>Question:&lt;/strong> 请问&lt;code>display:inline-block&lt;/code>在什么时候会显示间隙&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>display: inline-block&lt;/code> 在&lt;code>IE67&lt;/code>下会产生&lt;code>4px&lt;/code>的空白间隙，原因是换行或空格会占据一定的位置。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>解决办法： 设置父元素的&lt;code>font-size: 0; letter-spaceing: -4px;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-解释var-x-y--1-x--y--">&lt;strong>Question:&lt;/strong> 解释：&lt;code>var x, y = 1; x + y = ?&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">x&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// =&amp;gt; undefined
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">y&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// =&amp;gt; 1
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">y&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// =&amp;gt; undefined + 1 =&amp;gt; NaN
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>运算符 &lt;code>+&lt;/code> 的&lt;code>implicit type conversion&lt;/code>规则：&lt;/p>
+&lt;ul>
+&lt;li>若任何一侧是 &lt;code>string&lt;/code> 则两边转换为 &lt;code>string&lt;/code> 进行连接&lt;/li>
+&lt;li>&lt;code>object&lt;/code> 则依次调用&lt;code>valueOf&lt;/code>和&lt;code>toString&lt;/code>&lt;/li>
+&lt;li>否则均转换为 &lt;code>number&lt;/code> 并进行相加&lt;/li>
+&lt;li>&lt;code>symbol&lt;/code> 相加, 会 &lt;code>throw TypeError&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="question-写出执行结果并解释原因">&lt;strong>Question:&lt;/strong> 写出执行结果,并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">value&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;Value is&amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="o">!!&lt;/span>&lt;span class="nb">Number&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s1">&amp;#39;0&amp;#39;&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="s1">&amp;#39;yideng&amp;#39;&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;undefined&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: yideng&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>+&lt;/code>优先级大于&lt;code>?&lt;/code>&lt;/li>
+&lt;li>等价于 &lt;code>'Value is false' ? 'yideng' : 'undefined'&lt;/code> 而不是 &lt;code>'Value is' + (false ? 'yideng' : 'undefined')&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLImageElement/srcset" target="_blank" rel="noopener"
+>HTMLImageElement.srcset - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.zhangxinxu.com/wordpress/2014/10/responsive-images-srcset-size-w-descriptor/" target="_blank" rel="noopener"
+>响应式图片 srcset 全新释义 sizes 属性 w 描述符&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　 76</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-76/</link><pubDate>Wed, 01 Dec 2021 16:23:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-76/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-76/frontend-76-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 76" />&lt;h1 id="第七十六日">第七十六日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5如何识别语音读出的内容和朗读指定的内容">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>如何识别语音读出的内容和朗读指定的内容&lt;/h3>
 &lt;ul>
