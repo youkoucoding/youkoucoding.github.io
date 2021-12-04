@@ -1,4 +1,179 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 03 Dec 2021 11:42:03 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 78</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-78/</link><pubDate>Fri, 03 Dec 2021 11:42:03 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-78/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-78/frontend-78-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 78" />&lt;h1 id="第七十八日">第七十八日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 04 Dec 2021 17:26:38 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 79</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/</link><pubDate>Sat, 04 Dec 2021 17:26:38 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/frontend-79-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 79" />&lt;h1 id="第七十九日">第七十九日&lt;/h1>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-说说你对bem规范的理解同时举例说明常见的css规范有哪些">&lt;strong>Question:&lt;/strong> 说说你对&lt;code>BEM&lt;/code>规范的理解，同时举例说明常见的&lt;code>CSS&lt;/code>规范有哪些&lt;/h3>
+&lt;h4 id="bem规范">&lt;code>BEM&lt;/code>规范&lt;/h4>
+&lt;p>CSS 的命名规范又叫做 BEM 规范，BEM - &lt;code>Block Element Modifier&lt;/code> 它可以快速创建出可复用的前端组件和前端代码。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Block&lt;/code>, 代表了一个独立的块级元素，可以理解为功能组件块，&lt;strong>一个 Block 就是一个独立的功能区块&lt;/strong>，比如头部是一个 block，表单功能输入框也可以是一个 block。block 功能可大可小。&lt;/li>
+&lt;li>&lt;code>Element&lt;/code>, 是 Block 的一部分不能独立来使用，&lt;strong>所有的 Element 都是与 Block 紧密关联的&lt;/strong>。例如一个带有 icon 的输入框，那么这个 icon 就是输入框 block 的一个 element。&lt;/li>
+&lt;li>&lt;code>Modifier&lt;/code>，是用来修饰 Block 的一个 Element，&lt;strong>表示 block 或者 element 在外观或者行为上的改变&lt;/strong>。例如前文提到的输入框 Block，当鼠标悬停时边框高亮，那么这个高亮的效果就应该用 Modifier 来实现。&lt;/li>
+&lt;/ul>
+&lt;h4 id="bem-命名">BEM 命名&lt;/h4>
+&lt;ul>
+&lt;li>尽量使用类名选择器，&lt;strong>不要使用 tag 或者 id 选择器&lt;/strong>&lt;/li>
+&lt;li>使用&lt;strong>小写字母、数字或者&lt;code>-&lt;/code>&lt;/strong>，多个单词描述时采用&lt;code>-&lt;/code>来连接,例如&lt;code>el-input&lt;/code>&lt;/li>
+&lt;li>使用两个&lt;code>_&lt;/code>来连接&lt;code>Block&lt;/code>和&lt;code>Element&lt;/code>, &lt;code>Block__Element&lt;/code>, 例如&lt;code>el-input__icon&lt;/code>&lt;/li>
+&lt;li>使用两个&lt;code>-&lt;/code>来连接 &lt;code>Modifier&lt;/code> 和 &lt;code>Element&lt;/code> 或 &lt;code>Block&lt;/code>, &lt;code>Block__Element--modifier&lt;/code> 或者 &lt;code>Block--modifier&lt;/code>, 例如 &lt;code>el-input--color-primary&lt;/code>, &lt;code>el-input__icon--size-small&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">form&lt;/span> &lt;span class="na">action&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;form form--theme-xmas form--simple&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;form__input&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;form__submit form__submit--disabled&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">form&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">form&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">form--thema-xmas&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">form--simple&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">form__input&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">form__submit&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">form__submit--disabled&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="在sass中的使用">在&lt;code>Sass&lt;/code>中的使用&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sass" data-lang="sass">&lt;span class="nc">.header&lt;/span> &lt;span class="err">{&lt;/span>
+&lt;span class="k">&amp;amp;&lt;/span>&lt;span class="nt">__body&lt;/span> &lt;span class="err">{&lt;/span>
+&lt;span class="err"> &lt;/span>&lt;span class="na">padding&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="err">;&lt;/span>
+&lt;span class="err">}&lt;/span>
+&lt;span class="err">​&lt;/span>
+&lt;span class="k">&amp;amp;&lt;/span>&lt;span class="nt">__button&lt;/span> &lt;span class="err">{&lt;/span>
+&lt;span class="k">&amp;amp;&lt;/span>&lt;span class="nt">--primary&lt;/span> &lt;span class="err">{&lt;/span>
+&lt;span class="err"> &lt;/span>&lt;span class="na">background&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mh">#329FD9&lt;/span>&lt;span class="err">;&lt;/span>
+&lt;span class="err">}&lt;/span>
+&lt;span class="k">&amp;amp;&lt;/span>&lt;span class="nt">--default&lt;/span> &lt;span class="err">{&lt;/span>
+&lt;span class="err"> &lt;/span>&lt;span class="na">background&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="no">none&lt;/span>&lt;span class="err">;&lt;/span>
+&lt;span class="err">}&lt;/span>
+&lt;span class="err">}&lt;/span>
+&lt;span class="err">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="在less中的使用">在&lt;code>Less&lt;/code>中的使用&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">@&lt;/span>&lt;span class="k">classname&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">header&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="err">​&lt;/span> &lt;span class="o">.@&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="err">classname&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="err">.@{classname&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="nt">__body&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="err">​&lt;/span> &lt;span class="o">.@&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="err">classname&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="nt">__button&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="err">.@{classname&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="nt">__button--primary&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#329fd9&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="err">​&lt;/span> &lt;span class="o">.@&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="err">classname&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="nt">__button--default&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="err">}&lt;/span>
+&lt;span class="err">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-举例说明什么是iife它有什么好处">&lt;strong>Question:&lt;/strong> 举例说明什么是&lt;code>IIFE&lt;/code>？它有什么好处&lt;/h3>
+&lt;h4 id="instantly-invoked-function-expression-即时调用函数表达式">Instantly Invoked Function Expression 即时调用函数表达式&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">//最好在 IIFE 前追加分号 ; 来避免解析时与前一个表达式合并出现问题
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">;(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ... statements
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">)()&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>创建&lt;strong>一个局部作用域隔离变量&lt;/strong>；通过立即执行函数来创造一个新的作用域并缓存变量，来解决闭包带来的副作用问题，但在 ES6 拥有了块级作用域后变得没有必要，可以用语句块 { &amp;hellip; } 配合 let/const 替代&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>将运行逻辑转化为可求值的表达式，弥补 JavaScript 基本逻辑语句不是表达式的缺陷&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(...)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;span class="k">else&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;span class="p">})()&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>基本等价于&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">a&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(...)&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;span class="k">else&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>由于立即执行函数，不污染外部作用域的原则，因此诞生了 umd 模块的写法。一般主流的框架都会提供 umd 格式的 js，通过 script 标签注入页面后会生成唯一一个全局变量，内部变量都不会暴露出来&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="question-写出执行结果并解释原因">&lt;strong>Question:&lt;/strong> 写出执行结果,并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">async1&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;async1 start&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">await&lt;/span> &lt;span class="nx">async2&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;async1 end&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">async2&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;async2&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;script start&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;setTimeout&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">async1&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;promise1&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">resolve&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}).&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;promise2&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;script end&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">script&lt;/span> &lt;span class="nx">start&lt;/span>
+&lt;span class="nx">async1&lt;/span> &lt;span class="nx">start&lt;/span>
+&lt;span class="nx">async2&lt;/span>
+&lt;span class="nx">promise1&lt;/span>
+&lt;span class="nx">script&lt;/span> &lt;span class="nx">end&lt;/span>
+&lt;span class="nx">async1&lt;/span> &lt;span class="nx">end&lt;/span>
+&lt;span class="nx">promise2&lt;/span>
+&lt;span class="nx">setTimeout&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
+&lt;li>&lt;code>Promise&lt;/code>优先于&lt;code>setTimeout(宏任务)&lt;/code>。所以，&lt;code>setTimeout&lt;/code>回调会在最后执行。&lt;/li>
+&lt;li>&lt;code>Promise&lt;/code>一旦被定义，就会立即执行&lt;/li>
+&lt;li>&lt;code>Promise&lt;/code>的&lt;code>reject&lt;/code>和&lt;code>resolve&lt;/code>是异步执行的回调。所以，&lt;code>resolve()&lt;/code>会被放到回调队列中，在主函数执行完和&lt;code>setTimeout&lt;/code>前调用。&lt;/li>
+&lt;li>&lt;code>await&lt;/code>执行完后，会让出线程。&lt;code>async&lt;/code>标记的函数会返回一个&lt;code>Promise&lt;/code>对象&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">async1&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;async1 start&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">await&lt;/span> &lt;span class="nx">async2&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;async1 end&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">async2&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;async2&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// 相当于
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">async1&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;async1 start&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">async2&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">result&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;async1 end&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">resolve&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">async2&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;async2&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">resolve&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>执行流程&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>首先，事件循环从宏任务(macrotask)队列开始，这个时候，宏任务队列中，只有一个 script(整体代码)任务；从宏任务队列中取一个任务出来执行。&lt;/p>
+&lt;ul>
+&lt;li>首先执行&lt;code>console.log('script start')&lt;/code> ，输出 &amp;lsquo;script start&amp;rsquo;&lt;/li>
+&lt;li>遇到&lt;code>setTimeout&lt;/code> 把 &lt;code>console.log('setTimeout')&lt;/code> 放到&lt;code>macroTask&lt;/code>队列中&lt;/li>
+&lt;li>执行&lt;code>async1()&lt;/code>， 输出 &amp;lsquo;async1 start&amp;rsquo; 和 &amp;lsquo;async2&amp;rsquo; ，把 &lt;code>console.log('async1 end')&lt;/code> 放到&lt;code>microTask&lt;/code> 队列中&lt;/li>
+&lt;li>执行到&lt;code>promise&lt;/code>， 输出 &amp;lsquo;promise1&amp;rsquo; ， 把 &lt;code>console.log('promise2')&lt;/code> 放到&lt;code>microTask&lt;/code>队列中&lt;/li>
+&lt;li>执行 &lt;code>console.log('script end')&lt;/code> 。输出 &amp;lsquo;script end&amp;rsquo;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>macroTask&lt;/code> 执行完会执行&lt;code>microTask&lt;/code>，把 &lt;code>microtask quene&lt;/code> 里面的 &lt;code>microTask&lt;/code> 全部拿出来一次性执行完，所以会输出 ‘async1 end’ 和 ‘promise2’&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>开始新一轮事件循环，去除一个&lt;code>macroTask&lt;/code>执行，所以会输出 “setTimeout”&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　 78</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-78/</link><pubDate>Fri, 03 Dec 2021 11:42:03 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-78/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-78/frontend-78-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 78" />&lt;h1 id="第七十八日">第七十八日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5中的datalist标签">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>中的&lt;code>datalist&lt;/code>标签&lt;/h3>
 &lt;p>&lt;code>&amp;lt;datalist&amp;gt;&lt;/code>: The HTML data list element.&lt;/p>
