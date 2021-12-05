@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 04 Dec 2021 17:26:38 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 79</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/</link><pubDate>Sat, 04 Dec 2021 17:26:38 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/frontend-79-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 79" />&lt;h1 id="第七十九日">第七十九日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 05 Dec 2021 16:12:48 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 80</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/</link><pubDate>Sun, 05 Dec 2021 16:12:48 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/frontend-80-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 80" />&lt;h1 id="第八十日">第八十日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-简述html的快捷键属性是哪个并举例说明有什么用">&lt;strong>Question:&lt;/strong> 简述&lt;code>HTML&lt;/code>的快捷键属性是哪个？并举例说明有什么用&lt;/h3>
+&lt;p>&lt;code>accesskey&lt;/code>属性目前是 h5 标准中的一个全局快捷键访问属性，通过在&lt;em>任意元素&lt;/em>上注入&lt;code>accesskey&lt;/code>属性值，在浏览器中触发相应的快捷键 &lt;code>alt + key&lt;/code> or &lt;code>control + alt(option) + key&lt;/code>(macos)，即可实现对相应元素的 focus 或 click；&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span>
+&lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/accesskey&amp;#34;&lt;/span>
+&lt;span class="na">target&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;_blank&amp;#34;&lt;/span>
+&lt;span class="na">accesskey&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;x&amp;#34;&lt;/span>
+&lt;span class="p">&amp;gt;&lt;/span>快捷键x：accesskey&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>
+&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">accesskey&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;z&amp;#34;&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;this.style.color = &amp;#39;red&amp;#39;;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>快捷键z：变红&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-说明如何强制自动中英文换行与不换行">&lt;strong>Question:&lt;/strong> 说明如何强制（自动）中、英文换行与不换行&lt;/h3>
+&lt;ol>
+&lt;li>&lt;code>word-break:break-all;&lt;/code>只对英文起作用，以字母作为换行依据&lt;/li>
+&lt;li>&lt;code>word-wrap:break-word;&lt;/code> 只对英文起作用，以单词作为换行依据&lt;/li>
+&lt;li>&lt;code>white-space:pre-wrap;&lt;/code> 只对中文起作用，强制换行&lt;/li>
+&lt;li>&lt;code>white-space:nowrap;&lt;/code> 强制不换行，都起作用&lt;/li>
+&lt;li>&lt;code>white-space:nowrap;&lt;/code> &lt;code>overflow:hidden;&lt;/code> &lt;code>text-overflow:ellipsis;&lt;/code>不换行，超出部分隐藏且以省略号形式出现（部分浏览器支持）&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-什么是decodeuri和encodeuri是什么">&lt;strong>Question:&lt;/strong> 什么是&lt;code>decodeURI()&lt;/code>和&lt;code>encodeURI()&lt;/code>是什么&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>encodeURI()&lt;/code>：将 &lt;code>URI&lt;/code> 中的每个字符编码为 &lt;code>1-4&lt;/code> 个格式为 &lt;code>%xx&lt;/code> 的转义序列（&lt;code>xx&lt;/code> 为十六进制数），但不包括 &lt;code>ASCII&lt;/code> 数字、字母、URL 分隔符（&lt;code>/、?、,、&amp;amp;、...&lt;/code>）、以及其他部分 &lt;code>ASCII&lt;/code> 字符。具体见 MDN&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>。&lt;/p>
+&lt;ul>
+&lt;li>Example: &lt;code>encodeURI('http://example.com/端点?键=值') =&amp;gt; 'http://example.com/%E7%AB%AF%E7%82%B9?%E9%94%AE=%E5%80%BC'&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>decodeURI()&lt;/code>：将已经编码的 &lt;code>URI&lt;/code> 中的转义序列解码为它们表示的字符，但除了 &lt;code>encodeURI()&lt;/code> 不会编码的字符。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>encodeURIComponent()&lt;/code>：用于编码 &lt;code>URI&lt;/code> 中的组成部分。它除了转义 &lt;code>encodeURI()&lt;/code> 指定的字符，还会转义 URL 分隔符（&lt;code>/、?、,、&amp;amp;、...&lt;/code>）&lt;/p>
+&lt;ul>
+&lt;li>Example: &lt;code>encodeURIComponent('测试/测试?测试=测试') =&amp;gt; '%E6%B5%8B%E8%AF%95%2F%E6%B5%8B%E8%AF%95%3F%E6%B5%8B%E8%AF%95%3D%E6%B5%8B%E8%AF%95'&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>decodeURIComponent()&lt;/code>：将已经编码的 URI 组成部分中的转义序列解码为它们表示的字符，但除了 &lt;code>encodeURIComponent()&lt;/code> 不会编码的字符。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 34;
+flex-basis: 83px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/encode-decode.png" data-size="800x2296">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/encode-decode.png"
+width="800"
+height="2296"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/encode-decode_hu3d13be10b8af0bb1f38798b6e3252302_114465_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/encode-decode_hu3d13be10b8af0bb1f38798b6e3252302_114465_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="encode-decode">
+&lt;/a>
+&lt;figcaption>encode-decode&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>都是编码 URL，唯一区别就是编码的字符范围&lt;/li>
+&lt;li>&lt;code>encodeURIComponent&lt;/code>比&lt;code>encodeURI&lt;/code>编码的范围更大。&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/accesskey" target="_blank" rel="noopener"
+>accesskey - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.zhangxinxu.com/wordpress/2017/05/html-accesskey/" target="_blank" rel="noopener"
+>HTML accesskey 属性与 web 自定义键盘快捷访问 « 张鑫旭-鑫空间-鑫生活&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.alloyteam.com/2016/05/css-word-for-word-breaker-do-you-really-understand/" target="_blank" rel="noopener"
+>CSS 单词换行 and 断词，你真的完全了解吗 | AlloyTeam&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903697424580616" target="_blank" rel="noopener"
+>彻底搞懂 word-wrap、white-space 等 - 掘金&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI" target="_blank" rel="noopener"
+>encodeURI() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド　 79</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/</link><pubDate>Sat, 04 Dec 2021 17:26:38 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/frontend-79-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 79" />&lt;h1 id="第七十九日">第七十九日&lt;/h1>
 &lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="question-说说你对bem规范的理解同时举例说明常见的css规范有哪些">&lt;strong>Question:&lt;/strong> 说说你对&lt;code>BEM&lt;/code>规范的理解，同时举例说明常见的&lt;code>CSS&lt;/code>规范有哪些&lt;/h3>
 &lt;h4 id="bem规范">&lt;code>BEM&lt;/code>规范&lt;/h4>
