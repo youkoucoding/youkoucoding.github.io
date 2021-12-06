@@ -1,4 +1,147 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 05 Dec 2021 16:12:48 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 80</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/</link><pubDate>Sun, 05 Dec 2021 16:12:48 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/frontend-80-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 80" />&lt;h1 id="第八十日">第八十日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 06 Dec 2021 10:51:02 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 81</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-81/</link><pubDate>Mon, 06 Dec 2021 10:51:02 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-81/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-81/frontend-81-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 81" />&lt;h1 id="第八十一日">第八十一日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5的device-api应用场景">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>的&lt;code>Device API&lt;/code>应用场景&lt;/h3>
+&lt;ul>
+&lt;li>dial: 拨打电话&lt;/li>
+&lt;li>vibrate: 设备振动&lt;/li>
+&lt;li>setWakelock: 设置应用是否保持唤醒（屏幕常亮）状态&lt;/li>
+&lt;li>isWakelock: 获取程序是否一直保持唤醒（屏幕常亮）状态&lt;/li>
+&lt;li>setVolume: 设置设备的系统音量&lt;/li>
+&lt;li>getVolume: 获取设备的系统音量&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-在-js-中怎么捕获异常应用场景">&lt;strong>Question:&lt;/strong> 在 js 中怎么捕获异常，应用场景&lt;/h3>
+&lt;p>Js 捕获异常的方法:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>try catch finally&lt;/code>&lt;/li>
+&lt;li>&lt;code>window.onerror = function(message, source, lineno, colno, error) { ... }&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="try-catch-finally">&lt;code>try catch finally&lt;/code>&lt;/h4>
+&lt;p>&lt;code>try catch finally&lt;/code> 只能捕获&lt;strong>运行时&lt;/strong>的错误，无法捕获语法错误，可以拿到出错的信息，堆栈，出错的文件、行号、列号。&lt;code>try catch finally&lt;/code> 语句标记要尝试的语句块，并指定一个出现异常时抛出的响应。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// try_statements
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">TypeError&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Test&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// catch_statements
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;catch_statements&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nx">TypeError&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// handle this expected error
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;handle this expected error&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// handle unexpected error
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;handle unexpected error&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">finally&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// finally_statements
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;finally_statements&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="cm">/*
+&lt;/span>&lt;span class="cm"> 注：
+&lt;/span>&lt;span class="cm"> [catch (e if e instanceof TypeError) { // 非标准
+&lt;/span>&lt;span class="cm"> catch_statements
+&lt;/span>&lt;span class="cm"> }]
+&lt;/span>&lt;span class="cm">*/&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>通过&lt;code>Error&lt;/code>的构造器可以创建一个错误对象，当运行时错误产生时，&lt;code>Error&lt;/code>的实例对象会被抛出，&lt;code>Error&lt;/code>对象也可用于用户自定义的异常的基础对象，Js 内建了几种标准错误类型：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>EvalError:&lt;/code> 创建一个&lt;code>error&lt;/code>实例，表示错误的原因：与 eval()有关。&lt;/li>
+&lt;li>&lt;code>RangeError:&lt;/code> 创建一个&lt;code>error&lt;/code>实例，表示错误的原因：数值变量或参数超出其有效范围。&lt;/li>
+&lt;li>&lt;code>ReferenceError:&lt;/code> 创建一个&lt;code>error&lt;/code>实例，表示错误的原因：无效引用。&lt;/li>
+&lt;li>&lt;code>SyntaxError:&lt;/code> 创建一个&lt;code>error&lt;/code>实例，表示错误的原因：eval()在解析代码的过程中发生的语法错误。&lt;/li>
+&lt;li>&lt;code>TypeError:&lt;/code> 创建一个&lt;code>error&lt;/code>实例，表示错误的原因：变量或参数不属于有效类型。&lt;/li>
+&lt;li>&lt;code>URIError:&lt;/code> 创建一个&lt;code>error&lt;/code>实例，表示错误的原因：给 encodeURI()或 decodeURl()传递的参数无效。&lt;/li>
+&lt;/ul>
+&lt;h4 id="windowonerror">&lt;code>window.onerror&lt;/code>&lt;/h4>
+&lt;p>&lt;code>window.onerror&lt;/code>可以&lt;strong>捕捉语法错误，也可以捕捉运行时错误&lt;/strong>，可以拿到出错的信息，堆栈，出错的文件、行号、列号，只要在当前&lt;code>window&lt;/code>执行的 Js 脚本出错都会捕捉到，通过&lt;code>window.onerror&lt;/code>可以实现前端的错误监控。出于安全方面的考虑，当加载自不同域的脚本中发生语法错误时，语法错误的细节将不会报告。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="cm">/*
+&lt;/span>&lt;span class="cm"> message：错误信息（字符串）。
+&lt;/span>&lt;span class="cm"> source：发生错误的脚本URL（字符串）
+&lt;/span>&lt;span class="cm"> lineno：发生错误的行号（数字）
+&lt;/span>&lt;span class="cm"> colno：发生错误的列号（数字）
+&lt;/span>&lt;span class="cm"> error：Error对象（对象）
+&lt;/span>&lt;span class="cm"> 若该函数返回true，则阻止执行默认事件处理函数。
+&lt;/span>&lt;span class="cm">*/&lt;/span>
+&lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onerror&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">source&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">lineno&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">colno&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// onerror_statements
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;span class="cm">/*
+&lt;/span>&lt;span class="cm"> ErrorEvent类型的event包含有关事件和错误的所有信息。
+&lt;/span>&lt;span class="cm">*/&lt;/span>
+&lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;error&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">event&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// onerror_statements
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="question-下面代码中-a-在什么情况下会打印-1">&lt;strong>Question:&lt;/strong> 下面代码中 a 在什么情况下会打印 1&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">?&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="o">==&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="o">==&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>实际情况中，应规定禁用 &lt;code>==&lt;/code> 运算符换用&lt;code>===&lt;/code> 严格相等。&lt;/p>
+&lt;/blockquote>
+&lt;p>Solution 1:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">i&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">toString&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>如果原始类型的值和对象比较，对象会转为原始类型的值，再进行比较。&lt;/li>
+&lt;li>对象转换成原始类型的值，算法是先调用 &lt;code>valueOf()&lt;/code>；如果返回的还是对象，再接着调用 &lt;code>toString()&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;p>Solution 2:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">join&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">shift&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>array&lt;/code> 也属于对象&lt;/li>
+&lt;li>对于数组对象，&lt;code>toString()&lt;/code> 方法&lt;strong>返回一个字符串&lt;/strong>，该字符串由数组中的每个元素的 &lt;code>toString()&lt;/code> 返回值经调用 &lt;code>join()&lt;/code> 方法连接（由逗号隔开）组成&lt;/li>
+&lt;li>数组 &lt;code>toString&lt;/code> 会调用本身的 &lt;code>join&lt;/code> 方法，这里把自己的 &lt;code>join&lt;/code> 方法该写为 &lt;code>shift&lt;/code>,每次返回第一个元素，而且原数组删除第一个值，正好可以使判断成立&lt;/li>
+&lt;/ul>
+&lt;p>Solution 3:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">val&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">defineProperty&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">window&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">get&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="o">++&lt;/span>&lt;span class="nx">val&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>全局变量也相当于 &lt;code>window&lt;/code> 对象上的一个属性，这里用&lt;code>defineProperty&lt;/code> 定义了 &lt;code>a&lt;/code> 的 &lt;code>get&lt;/code> 也使得其动态返回值。和&lt;code>with&lt;/code>有一些类似。&lt;/li>
+&lt;/ul>
+&lt;p>Solution 4:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="nx">Symbol&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toPrimitive&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span>
+&lt;span class="o">++&lt;/span>&lt;span class="nx">i&lt;/span>
+&lt;span class="p">)(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>ES6 引入了一种新的原始数据类型&lt;code>Symbol&lt;/code>，表示独一无二的值。
+&lt;ul>
+&lt;li>定义类的内部私有属性时候习惯用 &lt;code>__x&lt;/code> ,这种命名方式避免别人定义相同的属性名覆盖原来的属性，完全可以用 &lt;code>Symbol&lt;/code> 值来代替这种方法，而且完全不用担心被覆盖。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>ES6 还提供了 11 个内置的 &lt;code>Symbol&lt;/code> 值，指向语言内部使用的方法。
+&lt;ul>
+&lt;li>&lt;code>Symbol.toPrimitive&lt;/code> 就是其中一个，它指向一个方法，表示该对象被转为原始类型的值时，会调用这个方法，返回该对象对应的原始类型值。这里就是改变这个属性，把它的值改为一个 &lt;strong>Instantly Invoked Function Expression 即时调用函数表达式&lt;/strong> 返回的函数。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalEventHandlers/onerror" target="_blank" rel="noopener"
+>GlobalEventHandlers.onerror - Web API 接口参考 | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　 80</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/</link><pubDate>Sun, 05 Dec 2021 16:12:48 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/frontend-80-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 80" />&lt;h1 id="第八十日">第八十日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-简述html的快捷键属性是哪个并举例说明有什么用">&lt;strong>Question:&lt;/strong> 简述&lt;code>HTML&lt;/code>的快捷键属性是哪个？并举例说明有什么用&lt;/h3>
 &lt;p>&lt;code>accesskey&lt;/code>属性目前是 h5 标准中的一个全局快捷键访问属性，通过在&lt;em>任意元素&lt;/em>上注入&lt;code>accesskey&lt;/code>属性值，在浏览器中触发相应的快捷键 &lt;code>alt + key&lt;/code> or &lt;code>control + alt(option) + key&lt;/code>(macos)，即可实现对相应元素的 focus 或 click；&lt;/p>
