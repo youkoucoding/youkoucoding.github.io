@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 07 Dec 2021 12:20:43 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 82</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-82/</link><pubDate>Tue, 07 Dec 2021 12:20:43 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-82/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-82/frontend-82-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 82" />&lt;h1 id="第八十二日">第八十二日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 08 Dec 2021 17:52:29 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 83</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/</link><pubDate>Wed, 08 Dec 2021 17:52:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/frontend-83-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 83" />&lt;h1 id="第八十三日">第八十三日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-在新窗口打开链接的方法是什么那怎么设置全站链接都在新窗口打开">&lt;strong>Question:&lt;/strong> 在新窗口打开链接的方法是什么？那怎么设置全站链接都在新窗口打开&lt;/h3>
+&lt;ol>
+&lt;li>&lt;code>a&lt;/code>标签的&lt;code>target&lt;/code>属性&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#&amp;#34;&lt;/span> &lt;span class="na">target&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;_blank&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>2.在 &lt;code>head&lt;/code> 标签下,为所有的链接设置默认的打开方式为新窗口打开；&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">base&lt;/span> &lt;span class="na">target&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;_blank&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-举例说明-js-如何实现继承">&lt;strong>Question:&lt;/strong> 举例说明 js 如何实现继承&lt;/h3>
+&lt;p>&lt;code>JS&lt;/code> 基于原型链实现的继承，简单来说就是通过对象的&lt;code>__proto__&lt;/code>实现的向上查找。&lt;/p>
+&lt;h4 id="原型">原型&lt;/h4>
+&lt;p>JS 中的对象包含了一个&lt;code>prototype&lt;/code>的内部属性，这个属性所对应的就是该对象的原型, in chrome &lt;code>[[prototype]]&lt;/code> or &lt;code>__proto__&lt;/code>。&lt;/p>
+&lt;ul>
+&lt;li>所有引用类型（函数，数组，对象）都拥有&lt;code>__proto__&lt;/code>属性（隐式原型)&lt;/li>
+&lt;li>所有函数除了有&lt;em>proto&lt;/em>属性之外还拥有&lt;code>prototype&lt;/code>属性（显式原型）&lt;/li>
+&lt;li>原型对象：&lt;strong>每创建一个函数，该函数会自动带有一个&lt;code>prototype&lt;/code>属性&lt;/strong>，该属性是一个指针，指向了一个对象，我们称之为原型对象。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>函数除了有&lt;code>__proto__&lt;/code>属性之外还拥有&lt;code>prototype&lt;/code>属性&lt;/p>
+&lt;/blockquote>
+&lt;ol>
+&lt;li>
+&lt;p>实例对象只有&lt;code>__proto__&lt;/code>（隐式原型），构造函数既有 &lt;code>__proto__&lt;/code>（隐式原型）也有&lt;code>prototype&lt;/code>（显式原型）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>__proto__&lt;/code> 和 &lt;code>prototype&lt;/code> 都是一个对象，既然是对象，就表示他们也有一个 &lt;code>__proto__&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">__proto__&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">__proto__&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">A&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">__proto__&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>实例对象 a 的隐式原型指向它构造函数的显式原型&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">__proto__&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">A&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>当调用某种方法或查找某种属性时，首先会在自身调用和查找，如果自身并没有该属性或方法，则会去它的&lt;code>__proto__&lt;/code>属性中调用查找，也就是它构造函数的&lt;code>prototype&lt;/code>中调用查找。&lt;/li>
+&lt;/ol>
+&lt;h4 id="原型链">原型链&lt;/h4>
+&lt;ol>
+&lt;li>
+&lt;p>查找属性时，如果本身没有，则会去&lt;code>__proto__&lt;/code>中查找，也就是构造函数的显式原型中查找，如果构造函数的显式原型中也没有该属性，因为构造函数的显式原型也是对象，也有&lt;code>__proto__&lt;/code>，那么会去它的显式原型中查找，一直到 &lt;code>null&lt;/code>, &lt;code>Object.prototype.__proto__ === null&lt;/code>，如果没有则返回 &lt;code>undefined&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>p.__proto__.constructor == function Person(){}&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>p.__proto__.__proto__== Object.prototype&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>p.__proto__.__proto__.__proto__== Object.prototype.__proto__ === null&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>通过&lt;code>__proto__&lt;/code>形成原型链而非&lt;code>protrotype&lt;/code>&lt;/strong>, 通过原型链的方式, 实现了继承。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="question-写出执行结果并解释原因">&lt;strong>Question:&lt;/strong> 写出执行结果,并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">user&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;一&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;二&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">person&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">user&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">person&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>答案：一&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// obj传入的是引用
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">user&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;一&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 修改传入引用的值
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// obj 指向了一个新地址，（新实例， 与传入的person引用，无关）
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;二&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 修改的是新对象，没法改变传入的对象
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/base" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;base&amp;gt;&lt;/code>：文档根 &lt;code>URL&lt;/code> 元素 - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.cnblogs.com/powertoolsteam/p/14009110.html" target="_blank" rel="noopener"
+>搞懂原型和原型链&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド　 82</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-82/</link><pubDate>Tue, 07 Dec 2021 12:20:43 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-82/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-82/frontend-82-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 82" />&lt;h1 id="第八十二日">第八十二日&lt;/h1>
 &lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="question-遇到过ie6789的-bug-及解决方法">&lt;strong>Question:&lt;/strong> 遇到过&lt;code>IE6/7/8/9&lt;/code>的 BUG 及解决方法&lt;/h3>
 &lt;ol>
