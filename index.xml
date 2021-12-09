@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 08 Dec 2021 17:52:29 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 83</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/</link><pubDate>Wed, 08 Dec 2021 17:52:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/frontend-83-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 83" />&lt;h1 id="第八十三日">第八十三日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Dec 2021 17:14:12 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 84</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/</link><pubDate>Thu, 09 Dec 2021 17:14:12 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/frontend-84-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 84" />&lt;h1 id="第八十四日">第八十四日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-a标签下的hrefjavascriptvoid0起到了什么作用">&lt;strong>Question:&lt;/strong> &lt;code>a&lt;/code>标签下的&lt;code>href=&amp;quot;javascript:void(0)&amp;quot;&lt;/code>起到了什么作用&lt;/h3>
+&lt;p>当用户点击一个以 &lt;code>javascript:&lt;/code> 开头的&lt;code>URI&lt;/code> 时，它会执行 URI 中的代码，然后用返回的值替换页面内容，除非返回的值是&lt;code>undefined&lt;/code>。&lt;code>void&lt;/code>运算符可用于返回&lt;code>undefined&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;javascript:void(0);&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+这个链接点击之后不会做任何事情，如果去掉 void()，
+点击之后整个页面会被替换成一个字符 0。
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> chrome中即使&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;javascript:0;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>也没变化，firefox中会变成一个字符串0 &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;javascript:void(document.body.style.backgroundColor=&amp;#39;green&amp;#39;);&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+点击这个链接会让页面背景变成绿色。
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;code>void&lt;/code> 运算符 对给定的表达式进行求值，然后返回 &lt;code>undefined&lt;/code>。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;code>void&lt;/code>关键字在 js 的含义为执行一个表达式，但不会返回任何值（即&lt;code>undefined&lt;/code>）；因此 void(0)语句相当于执行表达式 0，然后不返回任何值；&lt;/li>
+&lt;li>&lt;code>href=&amp;quot;javascript:void(0)&amp;quot;&lt;/code>的作用是点击链接后不发生任何行为，&lt;strong>常用于阻止页面刷新或跳转&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-font-style的属性有italic和oblique区别">&lt;strong>Question:&lt;/strong> &lt;code>font-style&lt;/code>的属性有&lt;code>Italic&lt;/code>和&lt;code>oblique&lt;/code>，区别&lt;/h3>
+&lt;p>&lt;code>italic&lt;/code>和&lt;code>oblique&lt;/code>都是向右倾斜的文字, 但区别在于&lt;code>Italic&lt;/code>是指&lt;strong>斜体字&lt;/strong>，而&lt;code>Oblique&lt;/code>是倾斜的文字，&lt;em>对于没有斜体的字体应该使用 Oblique 属性值来实现倾斜的文字效果&lt;/em>&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-简述浏览器同源策略的理解">&lt;strong>Question:&lt;/strong> 简述浏览器同源策略的理解&lt;/h3>
+&lt;h4 id="浏览器的同源安全策略">浏览器的同源安全策略&lt;/h4>
+&lt;p>为了安全，浏览器同源策略是指，某个页面上执行的 &lt;code>AJAX&lt;/code>请求只能访问到同域名下同端口的 &lt;code>URL&lt;/code>&lt;/p>
+&lt;h4 id="跨域">跨域&lt;/h4>
+&lt;ol>
+&lt;li>跨域请求不是 JS 限制的，是浏览器的同源策略所限制(可以把同源策略当成浏览器的一种约定，安全策略)&lt;/li>
+&lt;li>目的是从一个服务去请求另外一个域名和端口不一样的服务从而拿到所需要的数据。(一半用于调用别人的接口数据等)&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>解决跨域一般使用&lt;code>jsonp&lt;/code>或者&lt;strong>服务端&lt;/strong>设置 Response header &lt;code>Access-control-Allow-Origin&lt;/code>, &lt;code>Access-Control-Allow-Method&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="question-写出执行结果并解释原因">&lt;strong>Question:&lt;/strong> 写出执行结果,并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">company&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;facebook&amp;#39;&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">defineProperty&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">company&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;address&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;apple&amp;#39;&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">company&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">company&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="p">{&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;facebook&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">address&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;apple&amp;#39;&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;name&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>Object.defineProperty()&lt;/code>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象。&lt;/p>
+&lt;p>&lt;code>Object.defineProperty(obj, prop, descriptor)&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>使用 &lt;code>defineProperty&lt;/code> 方法给对象添加了一个属性之后，属性默认为 不可枚举(&lt;code>not enumerable&lt;/code>)&lt;/li>
+&lt;li>&lt;code>Object.keys&lt;/code>方法仅返回对象中 可枚举(enumerable) 的属性，因此只剩下了 &lt;code>name&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>用 &lt;code>defineProperty&lt;/code> 方法添加的属性默认不可变。可以通过 &lt;code>writable&lt;/code>, &lt;code>configurable&lt;/code> 和 &lt;code>enumerable&lt;/code>属性来改变这一行为。于是，相比于自己添加的属性，&lt;code>defineProperty&lt;/code> 方法添加的属性有了更多的控制权。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/void" target="_blank" rel="noopener"
+>void 运算符 - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="noopener"
+>Object.defineProperty() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド　 83</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/</link><pubDate>Wed, 08 Dec 2021 17:52:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/frontend-83-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 83" />&lt;h1 id="第八十三日">第八十三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-在新窗口打开链接的方法是什么那怎么设置全站链接都在新窗口打开">&lt;strong>Question:&lt;/strong> 在新窗口打开链接的方法是什么？那怎么设置全站链接都在新窗口打开&lt;/h3>
 &lt;ol>
