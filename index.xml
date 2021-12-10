@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Dec 2021 17:14:12 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド　 84</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/</link><pubDate>Thu, 09 Dec 2021 17:14:12 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/frontend-84-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 84" />&lt;h1 id="第八十四日">第八十四日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 10 Dec 2021 17:06:03 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 85</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-85/</link><pubDate>Fri, 10 Dec 2021 17:06:03 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-85/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-85/frontend-85-cover.jpg" alt="Featured image of post 毎日のフロントエンド 85" />&lt;h1 id="第八十五日">第八十五日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-iframe的使用场景有哪些">&lt;strong>Question:&lt;/strong> &lt;code>iframe&lt;/code>的使用场景有哪些&lt;/h3>
+&lt;ol>
+&lt;li>典型系统结构，左侧是功能树，右侧就是一些常见的 table 或者表单之类的。每一个功能，单独分离，采用 iframe&lt;/li>
+&lt;li>ajax 上传文件&lt;/li>
+&lt;li>加载别的网站内容，例如 google 广告，网站流量分析&lt;/li>
+&lt;li>在上传图片时，不用 flash 实现无刷新&lt;/li>
+&lt;li>跨域访问的时候可以用到 iframe，使用 iframe 请求不同域名下的资源&lt;/li>
+&lt;/ol>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-怎么让-body-高度自适应屏幕">&lt;strong>Question:&lt;/strong> 怎么让 &lt;code>body&lt;/code> 高度自适应屏幕&lt;/h3>
+&lt;p>Solution: &lt;code>body{height:100vh}&lt;/code>&lt;/p>
+&lt;p>设置&lt;code>body{height：100%}&lt;/code> &lt;strong>不可行&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>height：100%&lt;/code> 是相对于父元素来说的，如果只设置 body 的高度属性，由于其父元素是 html 高度未设置，且并非浏览器窗口高度&lt;/li>
+&lt;li>只设置 body 为 100%是不能达到效果的，&lt;strong>必须&lt;code>html，body&lt;/code>都设置 100%&lt;/strong>&lt;/li>
+&lt;li>&lt;code>body{height: 100vh}&lt;/code>直接把高度设置成了视口高度，与&lt;code>html&lt;/code>大小无关&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-js-延迟加载的方式有哪些">&lt;strong>Question:&lt;/strong> js 延迟加载的方式有哪些&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>defer&lt;/code> 属性&lt;/strong>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>&lt;strong>&lt;code>async&lt;/code> 属性&lt;/strong>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>动态创建 DOM 方式&lt;/li>
+&lt;li>使用 &lt;code>setTimeout&lt;/code> 延迟方法&lt;/li>
+&lt;li>让 JS 最后加载&lt;/li>
+&lt;li>使用 jQuery 的 getScript 方法&lt;/li>
+&lt;/ul>
+&lt;h3 id="question-写出执行结果并解释原因">&lt;strong>Question:&lt;/strong> 写出执行结果,并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">num&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">increaseNumber&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">num&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">increasePassedNumber&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">number&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">number&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">num1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">increaseNumber&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">num2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">increasePassedNumber&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: 10 10&lt;/p>
+&lt;ul>
+&lt;li>一元操作符 &lt;code>++&lt;/code> &lt;strong>先返回&lt;/strong> 操作值, 再累加 操作值。&lt;/li>
+&lt;li>num1 的值是 10, 因为 increaseNumber 函数首先返回 num 的值，也就是 10，随后再进行 num 的累加。&lt;/li>
+&lt;li>num2 是 10 因为我们将 num1 传入 increasePassedNumber. number 等于 10（ num1 的值。同样道理， &lt;code>++&lt;/code> 先返回 操作值, 再累加 操作值。） number 是 10，所以 num2 也是 10.&lt;/li>
+&lt;/ul>
+&lt;h3 id="question-写出执行结果并解释原因-1">&lt;strong>Question:&lt;/strong> 写出执行结果,并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">addToList&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">addToList&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;company&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;yideng&amp;#39;&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">result&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:2&lt;/p>
+&lt;p>&lt;code>push()&lt;/code>方法返回新数组的长度。&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/script#attr-defer" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;script&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push" target="_blank" rel="noopener"
+>Array.prototype.push() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド　 84</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/</link><pubDate>Thu, 09 Dec 2021 17:14:12 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/frontend-84-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 84" />&lt;h1 id="第八十四日">第八十四日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-a标签下的hrefjavascriptvoid0起到了什么作用">&lt;strong>Question:&lt;/strong> &lt;code>a&lt;/code>标签下的&lt;code>href=&amp;quot;javascript:void(0)&amp;quot;&lt;/code>起到了什么作用&lt;/h3>
 &lt;p>当用户点击一个以 &lt;code>javascript:&lt;/code> 开头的&lt;code>URI&lt;/code> 时，它会执行 URI 中的代码，然后用返回的值替换页面内容，除非返回的值是&lt;code>undefined&lt;/code>。&lt;code>void&lt;/code>运算符可用于返回&lt;code>undefined&lt;/code>。&lt;/p>
