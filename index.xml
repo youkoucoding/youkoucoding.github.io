@@ -1,4 +1,129 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 Dec 2021 20:18:58 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 86</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-86/</link><pubDate>Sat, 11 Dec 2021 20:18:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-86/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-86/frontend-86-cover.jpg" alt="Featured image of post 毎日のフロントエンド 86" />&lt;h1 id="第八十六日">第八十六日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 12 Dec 2021 15:34:58 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 87</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/</link><pubDate>Sun, 12 Dec 2021 15:34:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/frontend-87-cover.jpg" alt="Featured image of post 毎日のフロントエンド 87" />&lt;h1 id="第八十七日">第八十七日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-举例说明如何原样输出-html-代码不被浏览器解析">&lt;strong>Question:&lt;/strong> 举例说明如何原样输出 HTML 代码，不被浏览器解析&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;pre&amp;gt;&lt;/code>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>&lt;code>&amp;lt;code&amp;gt;&lt;/code>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>&lt;code>&amp;lt;textarea&amp;gt;&lt;/code>&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">textarea&lt;/span> &lt;span class="na">rows&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="na">cols&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;border: none;resize: none;width: 100%;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;div2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>2&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">textarea&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-写出几个初始化-css-的样式并解释说明为什么要这样写">&lt;strong>Question:&lt;/strong> 写出几个初始化 CSS 的样式，并解释说明为什么要这样写&lt;/h3>
+&lt;p>&lt;a class="link" href="https://necolas.github.io/normalize.css/latest/normalize.css" target="_blank" rel="noopener"
+>https://necolas.github.io/normalize.css/latest/normalize.css&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对 CSS 初始化往往会出现浏览器之间的页面显示差异&lt;/li>
+&lt;li>初始化 CSS 样式可以提高编码质量，保持代码的统一性，如果不初始化，重复的 CSS 样式很多。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>Examples:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="c">/*清除元素默认的内外边距 */&lt;/span>
+&lt;span class="o">*&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">margin&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c">/*让所有斜体 不倾斜*/&lt;/span>
+&lt;span class="nt">em&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="nt">i&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">font-style&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">normal&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c">/*去掉列表前面的小点*/&lt;/span>
+&lt;span class="nt">li&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">list-style&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c">/*图片没有边框 去掉图片底侧的空白缝隙*/&lt;/span>
+&lt;span class="nt">img&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/*ie6*/&lt;/span>
+&lt;span class="k">vertical-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">middle&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c">/*取消链接的下划线*/&lt;/span>
+&lt;span class="nt">a&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">text-decoration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c">/*清除浮动*/&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">clearfix&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">after&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">visibility&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">hidden&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">clear&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">both&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;.&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">clearfix&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="err">*&lt;/span>&lt;span class="n">zoom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-写一个-sleep暂停函数">&lt;strong>Question:&lt;/strong> 写一个 sleep（暂停）函数&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">time&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span>
+&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">time&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// … do something …
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">5000&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="c1">// … do something else …
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}()&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="question-写出输出结果并解释">&lt;strong>Question:&lt;/strong> 写出输出结果，并解释&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">foo&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">bar&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">length&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;Nice to meet you!&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">foo&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">bar&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: 0&lt;/p>
+&lt;ul>
+&lt;li>因为 foo 函数是由 window 对象调用，打印的 length 是 window 对象下的 length 属性 0。&lt;code>window.length ===0&lt;/code>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>&lt;/li>
+&lt;/ul>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>var&lt;/code> 在代码中的任意位置声明变量总是等效于在代码开头声明,“hoisting”就像是把所有的变量声明移动到函数或者全局代码的开头位置。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>foo&lt;/code>函数不是&lt;code>bar&lt;/code>的内部函数（闭包），而是全局函数。&lt;strong>一个函数内部定义(不是调用)另一个函数 内部函数可调用外部函数的变量&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>函数作用域链的确定：&lt;/p>
+&lt;ul>
+&lt;li>函数域是指函数声明时的所在的地方，或者函数在顶层被声明时指整个程序。&lt;/li>
+&lt;li>函数提升仅适用于函数声明，而不适用于函数表达式。&lt;/li>
+&lt;li>在函数内定义的变量不能在函数之外的任何地方访问，因为变量仅仅在该函数的域的内部有定义。相对应的，一个函数可以访问定义在其范围内的任何变量和函数。换言之，定义在全局域中的函数可以访问所有定义在全局域中的变量。在另一个函数中定义的函数也可以访问在其父函数中定义的所有变量和父函数有权访问的任何其他变量。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>在函数创建的时候创建一个包含全局变量对象的作用域链，储存在内部&lt;code>[[Scope]]&lt;/code>属性中。函数执行的时候会创建一个执行环境，通过复制&lt;code>[[Scope]]&lt;/code>属性中的对象，构建执行环境的作用域链，并把自己的活动对象推入该作用域链的前端以此形成完整的作用域链。&lt;code>[[Scope]]&lt;/code>保存的是对全局变量的引用，而不是值的复制。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Functions" target="_blank" rel="noopener"
+>函数 - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/pre" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;pre&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/code" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;code&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;textarea&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/length" target="_blank" rel="noopener"
+>&lt;code>Window.length&lt;/code> - Web APIs | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド 86</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-86/</link><pubDate>Sat, 11 Dec 2021 20:18:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-86/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-86/frontend-86-cover.jpg" alt="Featured image of post 毎日のフロントエンド 86" />&lt;h1 id="第八十六日">第八十六日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5的ruby标签有哪些应用场景">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>的&lt;code>ruby&lt;/code>标签，有哪些应用场景&lt;/h3>
 &lt;p>HTML &lt;code>&amp;lt;ruby&amp;gt;&lt;/code> 元素 被用来展示东亚文字注音或字符注释。&lt;/p>
