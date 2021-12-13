@@ -1,4 +1,179 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 12 Dec 2021 15:34:58 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 87</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/</link><pubDate>Sun, 12 Dec 2021 15:34:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/frontend-87-cover.jpg" alt="Featured image of post 毎日のフロントエンド 87" />&lt;h1 id="第八十七日">第八十七日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 13 Dec 2021 10:17:48 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 88</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-88/</link><pubDate>Mon, 13 Dec 2021 10:17:48 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-88/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-88/frontend-88-cover.jpg" alt="Featured image of post 毎日のフロントエンド 88" />&lt;h1 id="第八十八日">第八十八日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-怎么使用html5来获取定位定位不准怎么解决">&lt;strong>Question:&lt;/strong> 怎么使用&lt;code>HTML5&lt;/code>来获取定位？定位不准怎么解决&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>navigator.geolocation&lt;/code> &lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Geolocation_API" target="_blank" rel="noopener"
+>使用地理位置定位 - Web API 接口参考 | MDN&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-css-样式覆盖规则">&lt;strong>Question:&lt;/strong> CSS 样式覆盖规则&lt;/h3>
+&lt;ol>
+&lt;li>首先看权重，权重高的样式会覆盖权重低大的样式。&lt;code>!important&lt;/code> &amp;gt; &lt;code>#id&lt;/code> &amp;gt; &lt;code>.class&lt;/code> &amp;gt; &lt;code>tag&lt;/code> &amp;gt; &lt;code>*&lt;/code>&lt;/li>
+&lt;li>同等权重时，&lt;code>css&lt;/code> 靠后的覆盖靠前的（&lt;strong>就近原则&lt;/strong>），只与 css 书写的顺序有关，与 class 引用的顺序无关&lt;/li>
+&lt;li>行内样式 &amp;gt; 内联样式 &amp;gt; 外联样式&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-判断-instanceof-的结果并解释原因">&lt;strong>Question:&lt;/strong> 判断 &lt;code>instanceof&lt;/code> 的结果并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">test&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">test&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">new&lt;/span> &lt;span class="nx">test&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nx">test&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: &lt;code>false&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>instanceof&lt;/code> 运算符将检测&lt;em>右端值&lt;/em>的 &lt;code>prototype&lt;/code> 属性是否在左端值的原型链（&lt;code>[[Prototype]]&lt;/code>(&lt;code>__proto__&lt;/code>) 属性）上&lt;/li>
+&lt;li>如果不在，则向上查找（&lt;code>[[Prototype]]&lt;/code> 的 &lt;code>[[Prototype]]&lt;/code>，…），直到找遍左端值的整个原型链。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>
+&lt;p>如果函数明确返回 &lt;code>non-primitive&lt;/code>(即，引用类型) 值，那么 &lt;code>new&lt;/code> 运算符的结果将是这个值，也就是说，原式相当于&lt;code>test instanceof test&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>左端值&lt;/em> &lt;code>test&lt;/code> 是一个 &lt;code>Function&lt;/code>，故它的原型链为：&lt;code>Function.prototype -&amp;gt; Object.prototype -&amp;gt; null &lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>此原型链上没有 &lt;code>test.prototype&lt;/code> 出现，所以 test 并不是 test 的一个实例。因此返回&lt;code>false&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="question-对于扩展运算符下面代码的执行结果是什么并解释原因">&lt;strong>Question:&lt;/strong> 对于扩展运算符，下面代码的执行结果是什么？并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">oneObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="kc">undefined&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">oneObject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">twoArray&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="kc">undefined&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">twoArray&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">oneObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="kc">undefined&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">oneObject&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//Object { } 空对象
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">twoArray&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="kc">undefined&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">twoArray&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Uncaught TypeError: null is not iterable (undefined is not iterable)
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>第一个打印一个空对象&lt;/li>
+&lt;li>第二个打印报错，是因为在数组和函数中使用展开语法时，&lt;strong>只能用于可迭代对象&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h3 id="question-写出类数组转换结果并解释原因">&lt;strong>Question:&lt;/strong> 写出类数组转换结果，并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">arrLike&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">length&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="mi">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="mi">1&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;-1&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="mi">3&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="mi">4&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrLike&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrLike&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">empty&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>&lt;code>Array.from()&lt;/code>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>: 对一个&lt;strong>类似数组或可迭代对象&lt;/strong>创建一个新的，浅拷贝的数组实例。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Array.prototype.slice.call()&lt;/code>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>返回一个新的数组对象&lt;/strong>,这一对象是一个由 &lt;code>begin&lt;/code> 和 &lt;code>end&lt;/code> 决定的原数组的浅拷贝（包括 begin，不包括 end）。原始数组不会被改变。&lt;/li>
+&lt;li>方法可以用来将一个类数组（Array-like）对象&lt;strong>转换成一个新数组&lt;/strong>。只需将该方法绑定到这个对象上。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;ul>
+&lt;li>伪数组对象(类数组对象)：拥有一个 &lt;code>length&lt;/code> 属性和若干索引属性的任意对象, 一个函数中的 &lt;code>arguments&lt;/code> 就是一个类数组对象的例子。(arguments 在 ES6 中，被 rest 参数代替了)&lt;/li>
+&lt;/ul>
+&lt;p>Example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">list1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [1, 2, 3]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="类数组">类数组&lt;/h4>
+&lt;p>类数组的定义，有如下两条：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>具有：指向对象元素的数字索引下标以及 &lt;code>length&lt;/code> 属性表明元素个数&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>不具有：如&lt;code>push&lt;/code>、&lt;code>forEach&lt;/code> 以及 &lt;code>indexOf&lt;/code> 等数组对象具有的方法&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>三个典型的 JavaScript 类数组:&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>DOM&lt;/code>方法&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 获取所有div
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">arrayLike&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelectorAll&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;div&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLike&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// [object NodeList]
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLike&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 127
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLike&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;span class="c1">// &amp;lt;div id=&amp;#34;js-pjax-loader-bar&amp;#34; class=&amp;#34;pjax-loader-bar&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isArray&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLike&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// false
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nx">arrayLike&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;push&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// Uncaught TypeError: arrayLike.push is not a function(…)
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>类数组对象&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">arrayLikeObj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">length&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="mi">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;This is Array Like Object&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="mi">1&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLikeObj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 2
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLikeObj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]);&lt;/span> &lt;span class="c1">// This is Array Like Object
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isArray&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLikeObj&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// false
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">arrObj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLikeObj&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isArray&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrObj&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>类数组函数&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">arrayLikeFunc1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLikeFunc1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 0
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">arrFunc1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLikeFunc1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrFunc1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">arrFunc1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// ([], 0)
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">arrayLikeFunc2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLikeFunc2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 2
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">arrFunc2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLikeFunc2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrFunc2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">arrFunc2&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// ([undefined × 2], 2)
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;code>length&amp;gt;0&lt;/code>时，如果转为数组，则数组里的值会是&lt;code>undefined&lt;/code>。个数等于函数&lt;code>length&lt;/code>的长度。&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="类数组的实现原理">类数组的实现原理&lt;/h4>
+&lt;ol>
+&lt;li>&lt;code>JS&lt;/code> “万物皆对象”概念&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>在 JavaScript 中，“一切皆对象”，数组和函数本质上都是对象，就连三种原始类型的值——数值、字符串、布尔值——在一定条件下，也会自动转为对象，也就是原始类型的“包装对象”。&lt;/p>
+&lt;/blockquote>
+&lt;ol start="2">
+&lt;li>&lt;code>JS&lt;/code> 支持的“鸭子类型”&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>对象/函数，但是只要有 length 属性和对应的数字下标，那么他们就是数组&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice#array-like" target="_blank" rel="noopener"
+>Array.prototype.slice() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000005076858" target="_blank" rel="noopener"
+>深入理解 JavaScript 类数组 - SegmentFault 思否&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from" target="_blank" rel="noopener"
+>Array.from() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" target="_blank" rel="noopener"
+>Array.prototype.slice() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド 87</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/</link><pubDate>Sun, 12 Dec 2021 15:34:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/frontend-87-cover.jpg" alt="Featured image of post 毎日のフロントエンド 87" />&lt;h1 id="第八十七日">第八十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-举例说明如何原样输出-html-代码不被浏览器解析">&lt;strong>Question:&lt;/strong> 举例说明如何原样输出 HTML 代码，不被浏览器解析&lt;/h3>
 &lt;ul>
