@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 14 Dec 2021 12:28:13 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 89</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-89/</link><pubDate>Tue, 14 Dec 2021 12:28:13 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-89/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-89/frontend-89-cover.jpg" alt="Featured image of post 毎日のフロントエンド 89" />&lt;h1 id="第八十九日">第八十九日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 15 Dec 2021 15:51:17 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 90</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/</link><pubDate>Wed, 15 Dec 2021 15:51:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/frontend-90-cover.jpg" alt="Featured image of post 毎日のフロントエンド 90" />&lt;h1 id="第九十日">第九十日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-ol和ul标签的区别它们的运用场景分别是什么">&lt;strong>Question:&lt;/strong> &lt;code>ol&lt;/code>和&lt;code>ul&lt;/code>标签的区别？它们的运用场景分别是什么&lt;/h3>
+&lt;p>&lt;code>ol&lt;/code> 为&lt;em>有序列表&lt;/em>，&lt;code>ul&lt;/code> 为&lt;em>无需列表&lt;/em>。浏览器默认会给这两个加上不同的样式。可以通过 &lt;code>list-style-type&lt;/code> 来改变样式。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>ol&lt;/code> 的列表前会添加序号&lt;/li>
+&lt;li>&lt;code>ul&lt;/code> 的列表前则是圆点&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>ol&lt;/code> 和 &lt;code>ul&lt;/code> 有语义上的区别，对于确实有顺序关系的我们应该使用 &lt;code>ul&lt;/code>。&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-css-的overflow属性定义溢出元素内容区的内容会如何处理">&lt;strong>Question:&lt;/strong> CSS 的&lt;code>overflow&lt;/code>属性定义溢出元素内容区的内容会如何处理&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>visible&lt;/code>（默认值）：溢出的内容会照常显示在元素内容区之外；&lt;/li>
+&lt;li>&lt;code>hidden&lt;/code>：溢出的内容会被裁剪；&lt;/li>
+&lt;li>&lt;code>scroll&lt;/code>：溢出的内容会出现在滚动区，通过滚动条滚动可以看到；&lt;/li>
+&lt;li>&lt;code>auto&lt;/code>：当内容溢出时表现同&lt;code>scroll&lt;/code>；&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>除了 &lt;code>visible&lt;/code> 之外，其他的属性都会触发 &lt;code>BFC&lt;/code>。&lt;code>overflow:hidden&lt;/code> 也常常被用来进去浮动的清除。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-写个方法随机打乱一个数组">&lt;strong>Question:&lt;/strong> 写个方法随机打乱一个数组&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-24/#question-%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E8%AE%A9%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E4%B9%B1%E5%BA%8F%E5%86%99%E5%87%BA%E6%9D%A5" target="_blank" rel="noopener"
+>毎日のフロントエンド　 24&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">shuffle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">sort&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mf">0.5&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>以上方法不能真正随机打乱数组。&lt;/p>
+&lt;p>Fisher–Yates shuffle 算法&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">shuffle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">arr&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="question-写出结果并解释原因">&lt;strong>Question:&lt;/strong> 写出结果，并解释原因&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">k1&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">b&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">k3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">k2&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// ?
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">b&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// ?
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="p">{&lt;/span>&lt;span class="nx">k2&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nx">k1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">k3&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">k2&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">}}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>key:&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>.&lt;/code>优先级 大于 &lt;code>=&lt;/code>&lt;/li>
+&lt;li>对象是引用类型，每个新对象都是一个新的内存地址。&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>&lt;code>var b = a;&lt;/code> a&amp;amp;b 指向同一处内存地址&lt;/li>
+&lt;li>&lt;code>a.k3 = a = { k2: 2 }&lt;/code> &lt;code>.&lt;/code>运算符优先级高，因此先执行&lt;code>a.k3&lt;/code>， 于是 a 和 b 在&lt;code>.&lt;/code>执行完之后都是&lt;code>{k1:1, k3:undefined}&lt;/code>&lt;/li>
+&lt;li>&lt;code>=&lt;/code> 从右向左执行，&lt;code>a = { k2: 2 }&lt;/code> 于是 a 指向一个新的对象地址。&lt;/li>
+&lt;li>接下来执行&lt;code>a.k3 = a&lt;/code>： 此时 &lt;code>a.k3&lt;/code> 是最早执行的， 已经将最开始的 a 和 b 指向的那个原始对象修改为&lt;code>{k1:1, k3:undefined}&lt;/code>， 因此 可以将 &lt;code>a.k3 = a&lt;/code> 视为 &lt;code>{k1:1, k3:undefined}.k3 = {k2:2}&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow" target="_blank" rel="noopener"
+>overflow - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://oldj.net/article/2017/01/23/shuffle-an-array-in-javascript/#comment-1466" target="_blank" rel="noopener"
+>关于 JavaScript 的数组随机排序 - oldj&amp;rsquo;s blog&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle" target="_blank" rel="noopener"
+>Fisher–Yates shuffle - Wikipedia&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 89</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-89/</link><pubDate>Tue, 14 Dec 2021 12:28:13 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-89/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-89/frontend-89-cover.jpg" alt="Featured image of post 毎日のフロントエンド 89" />&lt;h1 id="第八十九日">第八十九日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-a-标签的href和onclick属性同时存在时哪个先触发">&lt;strong>Question:&lt;/strong> a 标签的&lt;code>href&lt;/code>和&lt;code>onclick&lt;/code>属性同时存在时哪个先触发&lt;/h3>
 &lt;p>&lt;code>onclick&lt;/code>先触发，判断依据是在&lt;code>onclick&lt;/code>中使用&lt;code>preventDefault&lt;/code>方法可以阻止&lt;code>a&lt;/code>标签的跳转，说明 a 标签的跳转行为是一个默认行为&lt;/p>
