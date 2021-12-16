@@ -1,4 +1,180 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 15 Dec 2021 15:51:17 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 90</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/</link><pubDate>Wed, 15 Dec 2021 15:51:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/frontend-90-cover.jpg" alt="Featured image of post 毎日のフロントエンド 90" />&lt;h1 id="第九十日">第九十日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 16 Dec 2021 11:56:42 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 91</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-91/</link><pubDate>Thu, 16 Dec 2021 11:56:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-91/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-91/frontend-91-cover.jpg" alt="Featured image of post 毎日のフロントエンド 91" />&lt;h1 id="第九十一日">第九十一日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-描述下元素的href和src有什么区别">&lt;strong>Question:&lt;/strong> 描述下元素的&lt;code>href&lt;/code>和&lt;code>src&lt;/code>有什么区别&lt;/h3>
+&lt;ol>
+&lt;li>概念不同
+&lt;ul>
+&lt;li>&lt;code>href&lt;/code>用于在当前文档和引用资源之间确立联系&lt;/li>
+&lt;li>&lt;code>src&lt;/code>用于将资源替换当前元素&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>解析方式不同
+&lt;ul>
+&lt;li>&lt;code>href&lt;/code>解析时，会并行下载资源且不会停止当前文档处理， 异步&lt;/li>
+&lt;li>&lt;code>src&lt;/code>解析时，会暂停当前文档处理， 同步&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-null和undefined的区别是什么这两者分别运用在什么场景">&lt;strong>Question:&lt;/strong> &lt;code>null&lt;/code>和&lt;code>undefined&lt;/code>的区别是什么？这两者分别运用在什么场景&lt;/h3>
+&lt;ol>
+&lt;li>概念方面:
+&lt;ul>
+&lt;li>&lt;code>undefined&lt;/code>:一般是简单数据类型,表示此处应该有个值,但是当前尚未赋值&lt;/li>
+&lt;li>&lt;code>null&lt;/code>:一般是复杂数据类型,表示不存在&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>用途方面:
+&lt;ul>
+&lt;li>&lt;code>undefined&lt;/code>: 返回执行之后无返回值/ 获取对象不存在的属性值&lt;/li>
+&lt;li>&lt;code>null&lt;/code>: 原型链的最顶部的不存在对象&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;ul>
+&lt;li>es6 的结构与函数默认值，只有 &lt;code>undefined&lt;/code> 可设默认值，&lt;code>null&lt;/code> 不能&lt;/li>
+&lt;li>&lt;code>+null&lt;/code> 为 &lt;code>0&lt;/code>，&lt;code>+undefined&lt;/code> 为 &lt;code>NaN&lt;/code>&lt;/li>
+&lt;li>&lt;code>JSON.stringify(undefined)&lt;/code> 为 &lt;code>undefined&lt;/code>，&lt;code>JSON.stringify(null)&lt;/code> 为 &lt;code>'null'&lt;/code>&lt;/li>
+&lt;li>&lt;code>JSON.stringify({a:undefined})&lt;/code> 为 &lt;code>'{}'&lt;/code>，&lt;code>JSON.stringify({a:null})&lt;/code> 为 &lt;code>'{&amp;quot;a&amp;quot;:null}'&lt;/code>&lt;/li>
+&lt;li>&lt;code>typeof null&lt;/code> 为 &lt;code>'object'&lt;/code>，&lt;code>typeof undefined&lt;/code> 为 &lt;code>'undefined'&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;code>null == undefined // true&lt;/code>&lt;/p>
+&lt;h3 id="question-原生-javascript-实现图片懒加载">&lt;strong>Question:&lt;/strong> 原生 &lt;code>JavaScript&lt;/code> 实现图片懒加载&lt;/h3>
+&lt;h4 id="实现方案-当图片在可视区域内时才加载图片否则不加载也可一个给个默认的图片占位">实现方案: 当图片在可视区域内时，才加载图片，否则不加载；也可一个给个默认的图片占位&lt;/h4>
+&lt;ol>
+&lt;li>在 img 元素时，自定义一个属性 &lt;code>data-src&lt;/code>，用于存放图片的地址；&lt;/li>
+&lt;li>获取屏幕可视区域的尺寸；&lt;/li>
+&lt;li>获取元素到窗口边缘的距离；&lt;/li>
+&lt;li>判断元素时候在可视区域内，在则将 data-src 的值赋给 src,否则，不执行其他操作；&lt;/li>
+&lt;/ol>
+&lt;h4 id="apis">&lt;code>APIs&lt;/code>:&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>IntersectionObserver&lt;/code>: 提供了一种异步观察目标元素与其祖先元素或顶级文档视窗(&lt;code>viewport&lt;/code>)交叉状态的方法。祖先元素与视窗(&lt;code>viewport&lt;/code>)被称为根(&lt;code>root&lt;/code>)。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>window.requestIdleCallback()&lt;/code>: 将在浏览器的空闲时段内调用的函数排队。这使开发者能够在主事件循环上执行后台和低优先级工作，而不会影响延迟关键事件，如动画和输入响应。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="caution">Caution:&lt;/h4>
+&lt;ul>
+&lt;li>提前加载，+100 像素&lt;/li>
+&lt;li>滚动时只处理未加载的图片即可&lt;/li>
+&lt;li>函数节流&lt;/li>
+&lt;/ul>
+&lt;h4 id="code">Code:&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">lang&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;en&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;UTF-8&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">http-equiv&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;X-UA-Compatible&amp;#34;&lt;/span> &lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;ie=edge&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>图片懒加载&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="nt">img&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">450&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">margin-bottom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">data-src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;./images/1.png&amp;#34;&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">data-src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;./images/2.png&amp;#34;&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">data-src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;./images/3.png&amp;#34;&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">data-src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;./images/4.png&amp;#34;&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">data-src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;./images/5.png&amp;#34;&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">data-src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;./images/6.png&amp;#34;&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">imgs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelectorAll&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;img&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 节流函数,定时器版本
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">throttle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">func&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">wait&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(...&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">timer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">func&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">timer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="nx">wait&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">//方法1： H + S &amp;gt; offsetTop
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">lazyLoad1&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">imgs&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">//offsetTop是元素与offsetParent的距离，循环获取直到页面顶部
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">getTop&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">T&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">offsetTop&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="p">((&lt;/span>&lt;span class="nx">e&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">offsetParent&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">T&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">offsetTop&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// 屏幕可视区域的高度 + 滚动条滚动距离 &amp;gt; 元素到文档顶部的距离，document.documentElement.clientHeight + document.documentElement.scrollTop &amp;gt; element.offsetTop
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">H&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">documentElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">clientHeight&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//获取可视区域高度
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">S&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">documentElement&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scrollTop&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">body&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scrollTop&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">imgs&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">img&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// +100 提前100个像素就开始加载
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 并且只处理没有src即没有加载过的图片
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">H&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">S&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">100&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="nx">getTop&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">img&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="o">!&lt;/span>&lt;span class="nx">img&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">img&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">img&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">dataset&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">throttleLazyLoad1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">throttle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">lazyLoad1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 方法2：el.getBoundingClientRect().top &amp;lt;= window.innerHeight
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">lazyLoad2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">imgs&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">isIn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">el&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 获取元素大小和位置
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">bound&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">el&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getBoundingClientRect&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">clientHeight&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">innerHeight&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">bound&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">top&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="nx">clientHeight&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">imgs&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">img&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">isIn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">img&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="o">!&lt;/span>&lt;span class="nx">img&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">img&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">img&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">dataset&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">throttleLazyLoad2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">throttle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">lazyLoad2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 滚轮事件监听
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// window.onload = window.onscroll = function () {
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// throttleLazyLoad1(imgs);
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// // throttleLazyLoad2(imgs);
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// };
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// 方法3：IntersectionObserver 自动观察元素是否在视口内
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">lazyLoad3&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">imgs&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">io&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">IntersectionObserver&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">ioes&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">ioes&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">ioe&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">img&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ioe&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">intersectionRatio&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ioe&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">intersectionRatio&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">intersectionRatio&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">intersectionRatio&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">img&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">img&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">img&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">dataset&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">img&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onload&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">img&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onerror&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">io&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">unobserve&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">img&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">imgs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">img&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">io&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">observe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">img&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">lazyLoad3&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">imgs&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
+>lgwebdream/FE-Interview &lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000002877022" target="_blank" rel="noopener"
+>url、href、src 详解 - SegmentFault 思否&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/IntersectionObserver" target="_blank" rel="noopener"
+>Intersection Observer - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/data-*" target="_blank" rel="noopener"
+>&lt;code>data-*&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 90</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/</link><pubDate>Wed, 15 Dec 2021 15:51:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/frontend-90-cover.jpg" alt="Featured image of post 毎日のフロントエンド 90" />&lt;h1 id="第九十日">第九十日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-ol和ul标签的区别它们的运用场景分别是什么">&lt;strong>Question:&lt;/strong> &lt;code>ol&lt;/code>和&lt;code>ul&lt;/code>标签的区别？它们的运用场景分别是什么&lt;/h3>
 &lt;p>&lt;code>ol&lt;/code> 为&lt;em>有序列表&lt;/em>，&lt;code>ul&lt;/code> 为&lt;em>无需列表&lt;/em>。浏览器默认会给这两个加上不同的样式。可以通过 &lt;code>list-style-type&lt;/code> 来改变样式。&lt;/p>
