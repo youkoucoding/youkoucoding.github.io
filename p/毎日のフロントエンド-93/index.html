@@ -1,0 +1,285 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 93</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  93">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-12-18T20:27:51+09:00"><meta property="article:modified_time" content="2021-12-18T20:27:51+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/frontend-93-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド  93">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/frontend-93-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/frontend-93-cover_huc5f8b2b2ae6a11b5c059ded37e194db2_2803227_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/frontend-93-cover_huc5f8b2b2ae6a11b5c059ded37e194db2_2803227_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/frontend-93-cover_huc5f8b2b2ae6a11b5c059ded37e194db2_2803227_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド  93">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/>毎日のフロントエンド 93</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Dec 18, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 1 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第九十三日>第九十三日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-用svg画一个圆><strong>Question:</strong> 用<code>svg</code>画一个圆</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>svg</span> <span class=na>width</span><span class=o>=</span><span class=s>&#34;500&#34;</span> <span class=na>height</span><span class=o>=</span><span class=s>&#34;500&#34;</span><span class=p>&gt;</span>
+  <span class=p>&lt;</span><span class=nt>circle</span> <span class=na>cx</span><span class=o>=</span><span class=s>&#34;100&#34;</span> <span class=na>cy</span><span class=o>=</span><span class=s>&#34;100&#34;</span> <span class=na>r</span><span class=o>=</span><span class=s>&#34;80&#34;</span> <span class=na>fill</span><span class=o>=</span><span class=s>&#34;skyblue&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>circle</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>svg</span><span class=p>&gt;</span>
+</code></pre></div><h2 id=css>CSS</h2>
+<h3 id=question-写出-div-在不固定高度的情况下水平垂直居中的方法><strong>Question:</strong> 写出 div 在不固定高度的情况下水平垂直居中的方法</h3>
+<ul>
+<li><code>flex</code>布局:</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=p>#</span><span class=nn>section</span> <span class=p>{</span>
+  <span class=k>display</span><span class=p>:</span> <span class=kc>flex</span><span class=p>;</span>
+  <span class=k>justify-content</span><span class=p>:</span> <span class=kc>center</span><span class=p>;</span>
+  <span class=k>align-items</span><span class=p>:</span> <span class=kc>center</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><ul>
+<li><code>transform</code>属性</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=p>.</span><span class=nc>father</span> <span class=p>{</span>
+  <span class=k>position</span><span class=p>:</span> <span class=kc>relative</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>children</span> <span class=p>{</span>
+  <span class=k>position</span><span class=p>:</span> <span class=kc>absolute</span><span class=p>;</span>
+  <span class=k>left</span><span class=p>:</span> <span class=mi>50</span><span class=kt>%</span><span class=p>;</span>
+  <span class=k>top</span><span class=p>:</span> <span class=mi>50</span><span class=kt>%</span><span class=p>;</span>
+  <span class=k>transform</span><span class=p>:</span> <span class=nb>translate</span><span class=p>(</span><span class=mi>-50</span><span class=kt>%</span><span class=p>,</span> <span class=mi>-50</span><span class=kt>%</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><h2 id=javascript>JavaScript</h2>
+<h3 id=question-js-的函数有哪几种调用形式><strong>Question:</strong> js 的函数有哪几种调用形式</h3>
+<p>定义：<code>function fn(){}</code></p>
+<ul>
+<li>常见调用：<code>fn()</code></li>
+<li>作为对象方法调用：
+<ul>
+<li><code>let obj = {fn:function(){}};</code></li>
+<li><code>obj.fn()</code></li>
+</ul>
+</li>
+<li>使用构造函数调用：<code>new fn()</code></li>
+<li>使用 <code>call</code> <code>apply</code> <code>bind</code> 调用：<code>fn.call(); fn.apply()</code></li>
+</ul>
+<h3 id=question-写出代码执行结果><strong>Question:</strong> 写出代码执行结果</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>].</span><span class=nx>map</span><span class=p>(</span><span class=nb>parseInt</span><span class=p>);</span>
+</code></pre></div><p>Result: <code>[1, NaN, NaN, NaN, NaN]</code></p>
+<p><code>Array.prototype.map(callback(currentValue[, index[, array]])[, thisArg])</code></p>
+<ul>
+<li><code>callback</code>
+<ul>
+<li>生成新数组元素的函数，使用三个参数：
+<ul>
+<li><code>currentValue</code>: 数组中正在处理的当前元素</li>
+<li><code>index</code>(可选):数组中正在处理的当前元素的索引</li>
+<li><code>array</code>(可选): <code>map</code> 方法调用的数组</li>
+</ul>
+</li>
+<li><code>thisArg</code>(可选): 执行 callback 函数时值被用作<code>this</code>。</li>
+</ul>
+</li>
+</ul>
+<p><code>parseInt(string, radix)</code> 解析一个字符串并返回指定基数的十进制整数， <code>radix</code> 是 2-36 之间的整数，表示被解析字符串的基数。</p>
+<p><code>NaN</code>，当</p>
+<ul>
+<li>radix 小于 2 或大于 36 ，或</li>
+<li>第一个非空格字符不能转换为数字。</li>
+</ul>
+<p><code>map</code>方法执行的过程中，<code>parseInt</code>将会进行如下调用：</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nb>parseInt</span><span class=p>(</span><span class=s1>&#39;1&#39;</span><span class=p>,</span> <span class=mi>0</span><span class=p>);</span> <span class=c1>// 0 索引
+</span><span class=c1></span><span class=nb>parseInt</span><span class=p>(</span><span class=s1>&#39;2&#39;</span><span class=p>,</span> <span class=mi>1</span><span class=p>);</span> <span class=c1>// 1 索引 radix 小于2 NaN
+</span><span class=c1></span><span class=nb>parseInt</span><span class=p>(</span><span class=s1>&#39;3&#39;</span><span class=p>,</span> <span class=mi>2</span><span class=p>);</span> <span class=c1>// 2 索引 3转二进制位 NaN
+</span><span class=c1></span><span class=nb>parseInt</span><span class=p>(</span><span class=s1>&#39;4&#39;</span><span class=p>,</span> <span class=mi>3</span><span class=p>);</span> <span class=c1>// 3 索引 NaN
+</span><span class=c1></span><span class=nb>parseInt</span><span class=p>(</span><span class=s1>&#39;5&#39;</span><span class=p>,</span> <span class=mi>4</span><span class=p>);</span> <span class=c1>// 4 索引 NaN
+</span></code></pre></div><h2 id=reference>Reference</h2>
+<p><a class=link href=https://github.com/haizlin/fe-interview target=_blank rel=noopener>haizlin/fe-interview</a></p>
+<p><a class=link href=https://github.com/lgwebdream/FE-Interview target=_blank rel=noopener>lgwebdream/FE-Interview </a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial target=_blank rel=noopener>SVG | MDN</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map target=_blank rel=noopener>Array.prototype.map() - JavaScript | MDN</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-92/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-92/frontend-92-cover.0f8bbe4122d65fc1a1c0fbb51a7f22b9_hu22419a964066d4f972d030a91f8ea3cb_1229445_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-D4u+QSLWX8GhwPu1Gn8iuQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 92</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/frontend-90-cover.a5d0984e86474851ac6d10e4bbaa0e34_hu07621e823ccfa711fb8aa60fd2e4224a_2820237_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-pdCYToZHSFGsbRDku6oONA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 90</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-89/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-89/frontend-89-cover.3b663b2c2cfa7b69c9559f5ac79fe890_hu40695bab0afb47b54e41c6a6e71ef670_1606991_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-O2Y7LCz6e2nJVZ9ax5/okA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 89</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-88/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-88/frontend-88-cover.4ebc9872fe1932f7d7a8c68d88379f0d_hu7ed455ebcb7ffa0a71c8e753c7550894_1070784_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-TryYcv4ZMvfXqMaNiDefDQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 88</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/frontend-87-cover.fa3c75562e713f6d3451babc493b53bf_hufe3344a1d68b432ce28c1e10ca16f7f3_1446107_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-+jx1Vi5xP200Ubq8STtTvw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 87</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-用svg画一个圆><strong>Question:</strong> 用<code>svg</code>画一个圆</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-写出-div-在不固定高度的情况下水平垂直居中的方法><strong>Question:</strong> 写出 div 在不固定高度的情况下水平垂直居中的方法</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-js-的函数有哪几种调用形式><strong>Question:</strong> js 的函数有哪几种调用形式</a></li>
+<li><a href=#question-写出代码执行结果><strong>Question:</strong> 写出代码执行结果</a></li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
