@@ -1,0 +1,288 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 94</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-94/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  94">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-94/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-12-19T15:17:29+09:00"><meta property="article:modified_time" content="2021-12-19T15:17:29+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-94/frontend-94-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド  94">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-94/frontend-94-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-94/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-94/frontend-94-cover_hu25608a23101694ebb412255f07c27973_5444881_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-94/frontend-94-cover_hu25608a23101694ebb412255f07c27973_5444881_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-94/frontend-94-cover_hu25608a23101694ebb412255f07c27973_5444881_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド  94">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-94/>毎日のフロントエンド 94</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Dec 19, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 1 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第九十四日>第九十四日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-使用-html5-需要遵守哪些设计原则><strong>Question:</strong> 使用 HTML5 需要遵守哪些设计原则</h3>
+<ul>
+<li>避免不必要的复杂性</li>
+</ul>
+<p>html4</p>
+<p><code>&lt;!DOCTYPE html PUBLIC "-//W3C/DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"></code></p>
+<p>html5</p>
+<p><code>&lt;!DOCTYPE html></code></p>
+<p>html4</p>
+<p><code>&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"></code></p>
+<p>html5</p>
+<p><code>&lt;meta charset="utf-8"></code></p>
+<ul>
+<li>
+<p>支持已有内容</p>
+</li>
+<li>
+<p>解决现实的问题</p>
+</li>
+<li>
+<p>语义化</p>
+</li>
+</ul>
+<p>html5 新增了多个元素，其中包括：<code>section</code>、<code>article</code>、<code>aside</code>和<code>nav</code>，它们代表了一种新的内容模型给内容分区。</p>
+<ul>
+<li>平稳退化</li>
+</ul>
+<p>浏览器在遇到不识别的 type 值时，会将 type 的值解释为 <code>text</code></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>input type=&#34;number&#34; input type=&#34;search&#34; input type=&#34;range&#34; input type=&#34;email&#34;
+input type=&#34;date&#34; input type=&#34;url&#34;
+</code></pre></div><ul>
+<li>最终用户优先</li>
+</ul>
+<h2 id=css>CSS</h2>
+<h3 id=question-为什么会出现浮动在什么时候需要清除浮动><strong>Question:</strong> 为什么会出现浮动？在什么时候需要清除浮动</h3>
+<ul>
+<li>什么是浮动：我们在做布局的时候用到的一种技术，通过浮动可以让元素左右浮动，然后通过 margin 调整位置</li>
+<li>工作原理：使元素脱离文档流，让元素可以左右浮动，直到遇到另一个浮动元素的边缘才停止。</li>
+<li>带来的问题：浮动元素会造成父级元素无法自动获取高度，导致父级塌陷，布局错乱。</li>
+</ul>
+<h2 id=javascript>JavaScript</h2>
+<h3 id=question-用-js-写出死循环的方法有哪些><strong>Question:</strong> 用 js 写出死循环的方法有哪些</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=k>while</span> <span class=p>(</span><span class=kc>true</span><span class=p>)</span> <span class=p>{}</span>
+
+<span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{}</span>
+
+<span class=c1>// 这个等价于 while
+</span><span class=c1></span><span class=k>for</span> <span class=p>(;;)</span> <span class=p>{}</span>
+
+<span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+<span class=k>do</span> <span class=p>{</span>
+  <span class=nx>i</span><span class=o>++</span><span class=p>;</span>
+<span class=p>}</span> <span class=k>while</span> <span class=p>(</span><span class=nx>i</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>);</span>
+
+<span class=c1>// 不设置结束条件
+</span><span class=c1></span><span class=kd>function</span> <span class=nx>fn</span><span class=p>(</span><span class=nx>a</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>a</span><span class=p>);</span>
+  <span class=nx>fn</span><span class=p>(</span><span class=nx>a</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><h3 id=question-将-1538127-转化为-1538127><strong>Question:</strong> 将 <code>153812.7</code> 转化为 <code>153,812.7</code></h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>parseMoney</span><span class=p>(</span><span class=nx>num</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kd>let</span> <span class=p>[</span><span class=nx>interger</span><span class=p>,</span> <span class=nx>decimal</span><span class=p>]</span> <span class=o>=</span> <span class=nb>String</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>split</span><span class=p>.</span><span class=nx>call</span><span class=p>(</span><span class=nx>num</span><span class=p>,</span> <span class=s1>&#39;.&#39;</span><span class=p>);</span>
+  <span class=nx>interger</span> <span class=o>=</span> <span class=nx>interger</span><span class=p>.</span><span class=nx>replace</span><span class=p>(</span><span class=sr>/\d{1,3}(?=(\d{3})+$)/g</span><span class=p>,</span> <span class=s1>&#39;$&amp;,&#39;</span><span class=p>);</span>
+  <span class=nx>decimal</span> <span class=o>=</span> <span class=nx>decimal</span> <span class=o>?</span> <span class=sb>`.</span><span class=si>${</span><span class=nx>decimal</span><span class=si>}</span><span class=sb>`</span> <span class=o>:</span> <span class=s1>&#39;&#39;</span><span class=p>;</span>
+  <span class=k>return</span> <span class=nx>interger</span> <span class=o>+</span> <span class=nx>decimal</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>parseMoney</span><span class=p>(</span><span class=mf>153812.7</span><span class=p>));</span>
+</code></pre></div><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>formatNum</span><span class=p>(</span><span class=nx>num</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=k>new</span> <span class=nx>Intl</span><span class=p>.</span><span class=nx>NumberFormat</span><span class=p>().</span><span class=nx>format</span><span class=p>(</span><span class=nx>num</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><h2 id=reference>Reference</h2>
+<p><a class=link href=https://github.com/haizlin/fe-interview target=_blank rel=noopener>haizlin/fe-interview</a></p>
+<p><a class=link href=https://github.com/lgwebdream/FE-Interview target=_blank rel=noopener>lgwebdream/FE-Interview </a></p>
+<p><a class=link href=https://segmentfault.com/a/1190000019652601 target=_blank rel=noopener>html5 设计原则-2007 - SegmentFault 思否</a></p>
+<p><a class=link href=https://www.w3.org/TR/html-design-principles/ target=_blank rel=noopener>HTML Design Principles</a></p>
+<p><a class=link href=https://www.yisu.com/zixun/408759.html target=_blank rel=noopener>html5 需遵循的设计原则有哪些 - web 开发 - 亿速云</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl target=_blank rel=noopener>Intl - JavaScript | MDN</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/frontend-93-cover.02eb56278706842ca1cb96cc6425a7ca_huc5f8b2b2ae6a11b5c059ded37e194db2_2803227_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-AutWJ4cGhCyhy5bMZCWnyg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 93</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-92/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-92/frontend-92-cover.0f8bbe4122d65fc1a1c0fbb51a7f22b9_hu22419a964066d4f972d030a91f8ea3cb_1229445_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-D4u+QSLWX8GhwPu1Gn8iuQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 92</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-90/frontend-90-cover.a5d0984e86474851ac6d10e4bbaa0e34_hu07621e823ccfa711fb8aa60fd2e4224a_2820237_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-pdCYToZHSFGsbRDku6oONA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 90</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-89/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-89/frontend-89-cover.3b663b2c2cfa7b69c9559f5ac79fe890_hu40695bab0afb47b54e41c6a6e71ef670_1606991_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-O2Y7LCz6e2nJVZ9ax5/okA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 89</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-88/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-88/frontend-88-cover.4ebc9872fe1932f7d7a8c68d88379f0d_hu7ed455ebcb7ffa0a71c8e753c7550894_1070784_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-TryYcv4ZMvfXqMaNiDefDQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 88</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-使用-html5-需要遵守哪些设计原则><strong>Question:</strong> 使用 HTML5 需要遵守哪些设计原则</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-为什么会出现浮动在什么时候需要清除浮动><strong>Question:</strong> 为什么会出现浮动？在什么时候需要清除浮动</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-用-js-写出死循环的方法有哪些><strong>Question:</strong> 用 js 写出死循环的方法有哪些</a></li>
+<li><a href=#question-将-1538127-转化为-1538127><strong>Question:</strong> 将 <code>153812.7</code> 转化为 <code>153,812.7</code></a></li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
