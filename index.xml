@@ -1,4 +1,168 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 21 Dec 2021 11:06:04 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 96</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-96/</link><pubDate>Tue, 21 Dec 2021 11:06:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-96/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-96/frontend-96-cover.jpg" alt="Featured image of post 毎日のフロントエンド 96" />&lt;h1 id="第九十六日">第九十六日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 22 Dec 2021 16:21:09 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 97</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/</link><pubDate>Wed, 22 Dec 2021 16:21:09 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/frontend-97-cover.jpg" alt="Featured image of post 毎日のフロントエンド 97" />&lt;h1 id="第九十七日">第九十七日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-doctype-有什么作用">&lt;strong>Question:&lt;/strong> &lt;code>DOCTYPE&lt;/code> 有什么作用&lt;/h3>
+&lt;p>&lt;code>DOCTYPE&lt;/code>声明指定了浏览器对于 HTML 文档解析的类型；&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>HTML5&lt;/code>的&lt;code>DOCTYPE&lt;/code>只有一种：
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;!DOCTYPE html&amp;gt;&lt;/code>:在 &lt;code>HTML5&lt;/code>中，&lt;code>DOCTYPE&lt;/code> 唯一的作用是启用标准模式。更早期的 &lt;code>HTML&lt;/code> 标准会附加其他意义，但没有任何浏览器会将 &lt;code>DOCTYPE&lt;/code> 用于怪异模式和标准模式之间互换以外的用途。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>HTML4.01&lt;/code>的&lt;code>DOCTYPE&lt;/code>有三种：
+&lt;ul>
+&lt;li>&lt;code>Strict&lt;/code>是不包括展示性和废弃的属性 以及框架集&lt;code>framset&lt;/code>&lt;/li>
+&lt;li>&lt;code>Transitional&lt;/code> 包括展示性和废弃属性 不包含框架集&lt;/li>
+&lt;li>&lt;code>Framset&lt;/code> 在&lt;code>Transitional&lt;/code> 基础上包括框架集&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>NOTE:&lt;/p>
+&lt;ul>
+&lt;li>位置必须放在文档顶端，任何放在 DOCTYPE 前面的东西，比如批注或 XML 声明，会令 IE9 或更早期的浏览器触发怪异模式&lt;/li>
+&lt;li>DOCTYPE 不是 HTML 标签，它是一个它是浏览器模式渲染的指令，更没有结束标签&lt;/li>
+&lt;li>&lt;code>&amp;lt;!DOCTYPE&amp;gt;&lt;/code> 声明&lt;strong>大小写不敏感&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-如何更改placeholder的字体颜色和大小">&lt;strong>Question:&lt;/strong> 如何更改&lt;code>placeholder&lt;/code>的字体颜色和大小&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css"> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="c">/* Chrome浏览器 */&lt;/span>
+&lt;span class="nt">input&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">-webkit-input-placeholder&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">red&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c">/* 火狐浏览器 */&lt;/span>
+&lt;span class="nt">input&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">-moz-placeholder&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">red&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c">/* IE */&lt;/span>
+&lt;span class="nt">input&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">-ms-input-placeholder&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">red&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="o">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="nt">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;text&amp;#34;&lt;/span> &lt;span class="nt">placeholder&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;你好&amp;#34;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;span class="o">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-如何给-li-绑定事件ul下有-1000个li">&lt;strong>Question:&lt;/strong> 如何给 li 绑定事件（&lt;code>ul&lt;/code>下有 1000+个&lt;code>li&lt;/code>）&lt;/h3>
+&lt;p>&lt;code>for&lt;/code>循环遍历所有&lt;code>li&lt;/code>，然后添加事件,引起大量浏览器重绘与重排。&lt;/p>
+&lt;blockquote>
+&lt;p>当子元素过多时，可以利用“&lt;strong>事件冒泡&lt;/strong>”在 &lt;code>ul&lt;/code>(共同的父元素) 上绑定事件，实现&lt;strong>事件委托&lt;/strong>。可以利用 &lt;code>event.target&lt;/code> 对被触发的子元素进行操作。&lt;/p>
+&lt;/blockquote>
+&lt;p>事件冒泡： 事件从最深的节点开始，然后逐步向上传播事件。&lt;/p>
+&lt;p>给最外面的&lt;code>div&lt;/code>加点击事件，那么子元素 &lt;code>ul&lt;/code>，&lt;code>li&lt;/code>，&lt;code>a&lt;/code>等做点击事件的时候，都会冒泡到最外层的&lt;code>div&lt;/code>上，都会触发，委托它们父级&lt;strong>代为执行事件&lt;/strong>。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementsByTag&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;ul&amp;#39;&lt;/span>&lt;span class="p">)[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;event&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * 利用 e.target 对冒泡上来的元素做区分
+&lt;/span>&lt;span class="cm"> * e.target.nodeName, e.target.id
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h4 id="事件流">事件流&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>事件捕获&lt;/p>
+&lt;ul>
+&lt;li>父元素到子元素传递&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>事件冒泡&lt;/p>
+&lt;ul>
+&lt;li>子元素向父元素传递&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>具体什么时候执行函数是通过 &lt;code>addEventListener()&lt;/code>&lt;strong>第三个参数&lt;/strong>决定的，不填默认为 &lt;code>false&lt;/code>，也就是冒泡时执行，为 &lt;code>true&lt;/code>，捕获时执行。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="事件模型">事件模型&lt;/h4>
+&lt;ul>
+&lt;li>原始事件模型 （没有事件流）&lt;/li>
+&lt;li>IE 事件模型 （IE 浏览器独有）&lt;/li>
+&lt;li>DOM2 事件模型 （W3C 规范的标准事件模型）&lt;em>现代浏览器的标准&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>DOM2 事件模型&lt;/strong>事件流分为三个阶段：&lt;/p>
+&lt;ul>
+&lt;li>捕获事件阶段&lt;/li>
+&lt;li>处于目标阶段&lt;/li>
+&lt;li>冒泡事件阶段&lt;/li>
+&lt;/ul>
+&lt;p>例：&lt;/p>
+&lt;p>点击 子元素 &lt;code>li&lt;/code> 时：&lt;/p>
+&lt;ul>
+&lt;li>首先是捕获阶段（&lt;code>document--&amp;gt;html--&amp;gt;body--&amp;gt;div--&amp;gt;ul--&amp;gt;li&lt;/code>）&lt;/li>
+&lt;li>然后是处于目标阶段，也就是到达点击的 &lt;code>li&lt;/code>，处于捕获和冒泡的中间&lt;/li>
+&lt;li>最后是冒泡阶段（&lt;code>li--&amp;gt;ul--&amp;gt;div--&amp;gt;body--&amp;gt;html--&amp;gt;document&lt;/code>）&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h4 id="应用场景">应用场景&lt;/h4>
+&lt;h5 id="冒泡">冒泡&lt;/h5>
+&lt;p>&lt;em>「下拉加载列表」的功能&lt;/em>，循环遍历出列表的数据，并逐条添加点击事件。会占用大量的内存，从而影响网页的性能。&lt;/p>
+&lt;p>利用「冒泡事件流」的特性来，解决这个问题。只要在「ul」或者「div」等父元素中添加点击事件。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;list-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;list&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;btn&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>添加列表项&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementsByClassName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;list&amp;#39;&lt;/span>&lt;span class="p">)[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="c1">//ul
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">listItem&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;.list-item&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">btn&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;.btn&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//button
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">dataList&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;2&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;3&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;4&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;5&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">addDOM&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">newDOM&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;li&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">newDOM&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;list-item&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">//添加自定义属性，可以存接口的需要的属性值，例如:查看该项数据详细的ID
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">newDOM&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setAttribute&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;data-text&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">text&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">newDOM&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">innerHTML&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">text&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">appendChild&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">newDOM&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">dataList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">addDOM&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;click&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">dataset&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//获取自定义属性 data-text 的值
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="nx">btn&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;click&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">dataList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">dataList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">addDOM&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">dataList&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">dataList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>假设现在父元素和子元素中都绑定了点击事件，点击子元素的时候，父元素的点击事件也跟着触发了。如果只希望目标元素的事件触发，就需要阻止冒泡。可以使用&lt;code>event.stopPropagation()&lt;/code>来阻止事件冒泡。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;list-container&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;list&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;list-item&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>1&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">listContainer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementsByClassName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;list-container&amp;#39;&lt;/span>&lt;span class="p">)[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="c1">//div
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementsByClassName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;list&amp;#39;&lt;/span>&lt;span class="p">)[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="c1">//ul
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">listItem&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;.list-item&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//li
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">doSome&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">text&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">listItem&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;click&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">//true 自定义的参数「e」和「event」对象引用是相同的。
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;说明使用e和event是等价的，可以相互使用&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">e&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">event&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stopPropagation&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">//阻止事件传递
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">doSome&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;li————最先执行&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;click&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;——————ul没有阻止冒泡——————&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">doSome&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;ul————接着执行&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">listContainer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;click&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">doSome&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;div————最后执行&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.zhangxinxu.com/wordpress/2013/06/%e4%bc%aa%e5%85%83%e7%b4%a0-%e8%a1%a8%e5%8d%95%e6%a0%b7%e5%bc%8f-pseudo-elements-style-form-controls/" target="_blank" rel="noopener"
+>伪元素表单控件默认样式重置与自定义大全 « 张鑫旭-鑫空间-鑫生活&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.cnblogs.com/leftJS/p/10948138.html" target="_blank" rel="noopener"
+>JS 中的事件、事件冒泡和事件捕获、事件委托&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 96</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-96/</link><pubDate>Tue, 21 Dec 2021 11:06:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-96/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-96/frontend-96-cover.jpg" alt="Featured image of post 毎日のフロントエンド 96" />&lt;h1 id="第九十六日">第九十六日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html-标签字体居中文字加粗下标">&lt;strong>Question:&lt;/strong> HTML 标签：字体、居中、文字加粗、下标&lt;/h3>
 &lt;ul>

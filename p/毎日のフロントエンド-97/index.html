@@ -1,0 +1,381 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 97</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  97">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-12-22T16:21:09+09:00"><meta property="article:modified_time" content="2021-12-22T16:21:09+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/frontend-97-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド  97">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/frontend-97-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/frontend-97-cover_hudf13d246b7b38333898411c5f401a8ee_1546402_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/frontend-97-cover_hudf13d246b7b38333898411c5f401a8ee_1546402_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/frontend-97-cover_hudf13d246b7b38333898411c5f401a8ee_1546402_1600x0_resize_q75_box.jpg 1600w" width=800 height=450 loading=lazy alt="Featured image of post 毎日のフロントエンド  97">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/>毎日のフロントエンド 97</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Dec 22, 2021</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 2 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第九十七日>第九十七日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-doctype-有什么作用><strong>Question:</strong> <code>DOCTYPE</code> 有什么作用</h3>
+<p><code>DOCTYPE</code>声明指定了浏览器对于 HTML 文档解析的类型；</p>
+<ul>
+<li><code>HTML5</code>的<code>DOCTYPE</code>只有一种：
+<ul>
+<li><code>&lt;!DOCTYPE html></code>:在 <code>HTML5</code>中，<code>DOCTYPE</code> 唯一的作用是启用标准模式。更早期的 <code>HTML</code> 标准会附加其他意义，但没有任何浏览器会将 <code>DOCTYPE</code> 用于怪异模式和标准模式之间互换以外的用途。</li>
+</ul>
+</li>
+<li><code>HTML4.01</code>的<code>DOCTYPE</code>有三种：
+<ul>
+<li><code>Strict</code>是不包括展示性和废弃的属性 以及框架集<code>framset</code></li>
+<li><code>Transitional</code> 包括展示性和废弃属性 不包含框架集</li>
+<li><code>Framset</code> 在<code>Transitional</code> 基础上包括框架集</li>
+</ul>
+</li>
+</ul>
+<p>NOTE:</p>
+<ul>
+<li>位置必须放在文档顶端，任何放在 DOCTYPE 前面的东西，比如批注或 XML 声明，会令 IE9 或更早期的浏览器触发怪异模式</li>
+<li>DOCTYPE 不是 HTML 标签，它是一个它是浏览器模式渲染的指令，更没有结束标签</li>
+<li><code>&lt;!DOCTYPE></code> 声明<strong>大小写不敏感</strong></li>
+</ul>
+<h2 id=css>CSS</h2>
+<h3 id=question-如何更改placeholder的字体颜色和大小><strong>Question:</strong> 如何更改<code>placeholder</code>的字体颜色和大小</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css>  <span class=o>&lt;</span><span class=nt>style</span><span class=o>&gt;</span>
+    <span class=c>/* Chrome浏览器 */</span>
+    <span class=nt>input</span><span class=p>::</span><span class=nd>-webkit-input-placeholder</span> <span class=p>{</span>
+      <span class=k>color</span><span class=p>:</span> <span class=kc>red</span><span class=p>;</span>
+    <span class=p>}</span>
+
+    <span class=c>/* 火狐浏览器 */</span>
+    <span class=nt>input</span><span class=p>::</span><span class=nd>-moz-placeholder</span> <span class=p>{</span>
+      <span class=k>color</span><span class=p>:</span> <span class=kc>red</span><span class=p>;</span>
+    <span class=p>}</span>
+
+    <span class=c>/* IE */</span>
+    <span class=nt>input</span><span class=p>:</span><span class=nd>-ms-input-placeholder</span> <span class=p>{</span>
+      <span class=k>color</span><span class=p>:</span> <span class=kc>red</span><span class=p>;</span>
+    <span class=p>}</span>
+  <span class=o>&lt;/</span><span class=nt>style</span><span class=o>&gt;</span>
+<span class=o>&lt;</span><span class=nt>body</span><span class=o>&gt;</span>
+  <span class=o>&lt;</span><span class=nt>input</span> <span class=nt>type</span><span class=o>=</span><span class=s2>&#34;text&#34;</span> <span class=nt>placeholder</span><span class=o>=</span><span class=s2>&#34;你好&#34;</span><span class=o>&gt;</span>
+<span class=o>&lt;/</span><span class=nt>body</span><span class=o>&gt;</span>
+</code></pre></div><h2 id=javascript>JavaScript</h2>
+<h3 id=question-如何给-li-绑定事件ul下有-1000个li><strong>Question:</strong> 如何给 li 绑定事件（<code>ul</code>下有 1000+个<code>li</code>）</h3>
+<p><code>for</code>循环遍历所有<code>li</code>，然后添加事件,引起大量浏览器重绘与重排。</p>
+<blockquote>
+<p>当子元素过多时，可以利用“<strong>事件冒泡</strong>”在 <code>ul</code>(共同的父元素) 上绑定事件，实现<strong>事件委托</strong>。可以利用 <code>event.target</code> 对被触发的子元素进行操作。</p>
+</blockquote>
+<p>事件冒泡： 事件从最深的节点开始，然后逐步向上传播事件。</p>
+<p>给最外面的<code>div</code>加点击事件，那么子元素 <code>ul</code>，<code>li</code>，<code>a</code>等做点击事件的时候，都会冒泡到最外层的<code>div</code>上，都会触发，委托它们父级<strong>代为执行事件</strong>。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nb>document</span><span class=p>.</span><span class=nx>getElementsByTag</span><span class=p>(</span><span class=s1>&#39;ul&#39;</span><span class=p>)[</span><span class=mi>0</span><span class=p>].</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;event&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=cm>/**
+</span><span class=cm>   *  利用 e.target 对冒泡上来的元素做区分
+</span><span class=cm>   *  e.target.nodeName, e.target.id
+</span><span class=cm>   */</span>
+<span class=p>});</span>
+</code></pre></div><hr>
+<h4 id=事件流>事件流</h4>
+<ul>
+<li>
+<p>事件捕获</p>
+<ul>
+<li>父元素到子元素传递</li>
+</ul>
+</li>
+<li>
+<p>事件冒泡</p>
+<ul>
+<li>子元素向父元素传递</li>
+</ul>
+</li>
+<li>
+<p>具体什么时候执行函数是通过 <code>addEventListener()</code><strong>第三个参数</strong>决定的，不填默认为 <code>false</code>，也就是冒泡时执行，为 <code>true</code>，捕获时执行。</p>
+</li>
+</ul>
+<h4 id=事件模型>事件模型</h4>
+<ul>
+<li>原始事件模型 （没有事件流）</li>
+<li>IE 事件模型 （IE 浏览器独有）</li>
+<li>DOM2 事件模型 （W3C 规范的标准事件模型）<em>现代浏览器的标准</em></li>
+</ul>
+<p><strong>DOM2 事件模型</strong>事件流分为三个阶段：</p>
+<ul>
+<li>捕获事件阶段</li>
+<li>处于目标阶段</li>
+<li>冒泡事件阶段</li>
+</ul>
+<p>例：</p>
+<p>点击 子元素 <code>li</code> 时：</p>
+<ul>
+<li>首先是捕获阶段（<code>document-->html-->body-->div-->ul-->li</code>）</li>
+<li>然后是处于目标阶段，也就是到达点击的 <code>li</code>，处于捕获和冒泡的中间</li>
+<li>最后是冒泡阶段（<code>li-->ul-->div-->body-->html-->document</code>）</li>
+</ul>
+<hr>
+<h4 id=应用场景>应用场景</h4>
+<h5 id=冒泡>冒泡</h5>
+<p><em>「下拉加载列表」的功能</em>，循环遍历出列表的数据，并逐条添加点击事件。会占用大量的内存，从而影响网页的性能。</p>
+<p>利用「冒泡事件流」的特性来，解决这个问题。只要在「ul」或者「div」等父元素中添加点击事件。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;list-container&#34;</span><span class=p>&gt;</span>
+  <span class=p>&lt;</span><span class=nt>ul</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;list&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>ul</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=nt>button</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;btn&#34;</span><span class=p>&gt;</span>添加列表项<span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+
+<span class=p>&lt;</span><span class=nt>script</span><span class=p>&gt;</span>
+  <span class=kd>let</span> <span class=nx>list</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>getElementsByClassName</span><span class=p>(</span><span class=s1>&#39;list&#39;</span><span class=p>)[</span><span class=mi>0</span><span class=p>];</span> <span class=c1>//ul
+</span><span class=c1></span>  <span class=kd>let</span> <span class=nx>listItem</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>querySelector</span><span class=p>(</span><span class=s1>&#39;.list-item&#39;</span><span class=p>);</span>
+  <span class=kd>let</span> <span class=nx>btn</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>querySelector</span><span class=p>(</span><span class=s1>&#39;.btn&#39;</span><span class=p>);</span> <span class=c1>//button
+</span><span class=c1></span>  <span class=kd>let</span> <span class=nx>dataList</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;1&#39;</span><span class=p>,</span> <span class=s1>&#39;2&#39;</span><span class=p>,</span> <span class=s1>&#39;3&#39;</span><span class=p>,</span> <span class=s1>&#39;4&#39;</span><span class=p>,</span> <span class=s1>&#39;5&#39;</span><span class=p>];</span>
+
+  <span class=kd>let</span> <span class=nx>addDOM</span> <span class=o>=</span> <span class=p>(</span><span class=nx>text</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=kd>let</span> <span class=nx>newDOM</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;li&#39;</span><span class=p>);</span>
+    <span class=nx>newDOM</span><span class=p>.</span><span class=nx>classList</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;list-item&#39;</span><span class=p>);</span>
+    <span class=c1>//添加自定义属性，可以存接口的需要的属性值，例如:查看该项数据详细的ID
+</span><span class=c1></span>    <span class=nx>newDOM</span><span class=p>.</span><span class=nx>setAttribute</span><span class=p>(</span><span class=s1>&#39;data-text&#39;</span><span class=p>,</span> <span class=nx>text</span><span class=p>);</span>
+    <span class=nx>newDOM</span><span class=p>.</span><span class=nx>innerHTML</span> <span class=o>=</span> <span class=nx>text</span><span class=p>;</span>
+    <span class=nx>list</span><span class=p>.</span><span class=nx>appendChild</span><span class=p>(</span><span class=nx>newDOM</span><span class=p>);</span>
+  <span class=p>};</span>
+
+  <span class=nx>dataList</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>x</span><span class=p>,</span> <span class=nx>i</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>addDOM</span><span class=p>(</span><span class=nx>x</span><span class=p>);</span>
+  <span class=p>});</span>
+
+  <span class=nx>list</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;click&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>e</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>dataset</span><span class=p>.</span><span class=nx>text</span><span class=p>);</span> <span class=c1>//获取自定义属性 data-text 的值
+</span><span class=c1></span>  <span class=p>});</span>
+
+  <span class=nx>btn</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;click&#39;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>dataList</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>dataList</span><span class=p>.</span><span class=nx>length</span> <span class=o>+</span> <span class=mi>1</span><span class=p>);</span>
+    <span class=nx>addDOM</span><span class=p>(</span><span class=nx>dataList</span><span class=p>[</span><span class=nx>dataList</span><span class=p>.</span><span class=nx>length</span> <span class=o>-</span> <span class=mi>1</span><span class=p>]);</span>
+  <span class=p>});</span>
+<span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</code></pre></div><p>假设现在父元素和子元素中都绑定了点击事件，点击子元素的时候，父元素的点击事件也跟着触发了。如果只希望目标元素的事件触发，就需要阻止冒泡。可以使用<code>event.stopPropagation()</code>来阻止事件冒泡。</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;list-container&#34;</span><span class=p>&gt;</span>
+  <span class=p>&lt;</span><span class=nt>ul</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;list&#34;</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>li</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;list-item&#34;</span><span class=p>&gt;</span>1<span class=p>&lt;/</span><span class=nt>li</span><span class=p>&gt;</span>
+  <span class=p>&lt;/</span><span class=nt>ul</span><span class=p>&gt;</span>
+<span class=p>&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=nt>script</span><span class=p>&gt;</span>
+  <span class=kd>let</span> <span class=nx>listContainer</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>getElementsByClassName</span><span class=p>(</span><span class=s1>&#39;list-container&#39;</span><span class=p>)[</span><span class=mi>0</span><span class=p>];</span> <span class=c1>//div
+</span><span class=c1></span>  <span class=kd>let</span> <span class=nx>list</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>getElementsByClassName</span><span class=p>(</span><span class=s1>&#39;list&#39;</span><span class=p>)[</span><span class=mi>0</span><span class=p>];</span> <span class=c1>//ul
+</span><span class=c1></span>  <span class=kd>let</span> <span class=nx>listItem</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>querySelector</span><span class=p>(</span><span class=s1>&#39;.list-item&#39;</span><span class=p>);</span> <span class=c1>//li
+</span><span class=c1></span>
+  <span class=kd>let</span> <span class=nx>doSome</span> <span class=o>=</span> <span class=p>(</span><span class=nx>text</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>text</span><span class=p>);</span>
+  <span class=p>};</span>
+  <span class=nx>listItem</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;click&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=c1>//true 自定义的参数「e」和「event」对象引用是相同的。
+</span><span class=c1></span>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;说明使用e和event是等价的，可以相互使用&#39;</span><span class=p>,</span> <span class=nx>e</span> <span class=o>===</span> <span class=nx>event</span><span class=p>);</span>
+    <span class=nx>e</span><span class=p>.</span><span class=nx>stopPropagation</span><span class=p>();</span> <span class=c1>//阻止事件传递
+</span><span class=c1></span>    <span class=nx>doSome</span><span class=p>(</span><span class=s1>&#39;li————最先执行&#39;</span><span class=p>);</span>
+  <span class=p>});</span>
+  <span class=nx>list</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;click&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>e</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;——————ul没有阻止冒泡——————&#39;</span><span class=p>);</span>
+    <span class=nx>doSome</span><span class=p>(</span><span class=s1>&#39;ul————接着执行&#39;</span><span class=p>);</span>
+  <span class=p>});</span>
+  <span class=nx>listContainer</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;click&#39;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>doSome</span><span class=p>(</span><span class=s1>&#39;div————最后执行&#39;</span><span class=p>);</span>
+  <span class=p>});</span>
+<span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</code></pre></div><h2 id=reference>Reference</h2>
+<p><a class=link href=https://github.com/haizlin/fe-interview target=_blank rel=noopener>haizlin/fe-interview</a></p>
+<p><a class=link href=https://muyiy.cn/ target=_blank rel=noopener>前端进阶</a></p>
+<p><a class=link href=https://www.zhangxinxu.com/wordpress/2013/06/%e4%bc%aa%e5%85%83%e7%b4%a0-%e8%a1%a8%e5%8d%95%e6%a0%b7%e5%bc%8f-pseudo-elements-style-form-controls/ target=_blank rel=noopener>伪元素表单控件默认样式重置与自定义大全 « 张鑫旭-鑫空间-鑫生活</a></p>
+<p><a class=link href=https://www.cnblogs.com/leftJS/p/10948138.html target=_blank rel=noopener>JS 中的事件、事件冒泡和事件捕获、事件委托</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-96/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-96/frontend-96-cover.6f705b720741061d1839489c03ca270d_hu928e8077375b91512b8a24a8ffb0b3c6_4633534_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-b3BbcgdBBh0YOUicA8onDQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 96</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-95/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-95/frontend-95-cover.d8c428e7360e6c5566c1875efde5b8e4_hua3f0249491aebdaedf332baf0424de5f_3735422_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-2MQo5zYObFVmwYde/eW45A==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 95</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-94/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-94/frontend-94-cover.9a95acb200e0762e6e97c764c35ff23f_hu25608a23101694ebb412255f07c27973_5444881_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-mpWssgDgdi5ul8dkw1/yPw==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 94</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-93/frontend-93-cover.02eb56278706842ca1cb96cc6425a7ca_huc5f8b2b2ae6a11b5c059ded37e194db2_2803227_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-AutWJ4cGhCyhy5bMZCWnyg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 93</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-92/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-92/frontend-92-cover.0f8bbe4122d65fc1a1c0fbb51a7f22b9_hu22419a964066d4f972d030a91f8ea3cb_1229445_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-D4u+QSLWX8GhwPu1Gn8iuQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 92</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-doctype-有什么作用><strong>Question:</strong> <code>DOCTYPE</code> 有什么作用</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-如何更改placeholder的字体颜色和大小><strong>Question:</strong> 如何更改<code>placeholder</code>的字体颜色和大小</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-如何给-li-绑定事件ul下有-1000个li><strong>Question:</strong> 如何给 li 绑定事件（<code>ul</code>下有 1000+个<code>li</code>）</a>
+<ol>
+<li><a href=#事件流>事件流</a></li>
+<li><a href=#事件模型>事件模型</a></li>
+<li><a href=#应用场景>应用场景</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
