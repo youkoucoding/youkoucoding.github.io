@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 22 Dec 2021 16:21:09 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 97</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/</link><pubDate>Wed, 22 Dec 2021 16:21:09 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/frontend-97-cover.jpg" alt="Featured image of post 毎日のフロントエンド 97" />&lt;h1 id="第九十七日">第九十七日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 23 Dec 2021 16:33:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 98</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-98/</link><pubDate>Thu, 23 Dec 2021 16:33:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-98/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-98/frontend-98-cover.jpg" alt="Featured image of post 毎日のフロントエンド 98" />&lt;h1 id="第九十八日">第九十八日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-列举出常用的-meta-标签的写法和作用">&lt;strong>Question:&lt;/strong> 列举出常用的 meta 标签的写法和作用&lt;/h3>
+&lt;p>&lt;code>&amp;lt;meta&amp;gt;&lt;/code>用来描述网页的元信息；诸如字符编码，浏览器引擎编译，文档信息等等；&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>charset&lt;/code>：声明当前文档的字符编码，用于浏览器解析文档；如：
+&lt;code>&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>name&lt;/code>：声明当前文档的元信息；常用的有 viewport，keywords，description 等；&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>viewport&lt;/code>：文档视口设置，如初始视口大小（&lt;code>initial-scale&lt;/code>），是否允许用户缩放（&lt;code>user-scalable&lt;/code>）等；&lt;/li>
+&lt;li>&lt;code>keywords&lt;/code>：网页的关键字，常用于搜索引擎对于该网页的搜索关键字；&lt;/li>
+&lt;li>&lt;code>description&lt;/code>：网页的描述信息；&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>http-equiv&lt;/code>：可以用来设定一些属性改变服务器或浏览器引擎对文档的编译行为；&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>http-equiv 和 name 的属性，&lt;strong>属性值&lt;/strong>通过&lt;code>&amp;lt;meta&amp;gt;&lt;/code>标签的&lt;code>content&lt;/code>属性来设置；例如：&lt;code>&amp;lt;meta name=&amp;quot;format-detection&amp;quot; content=&amp;quot;telephone=no&amp;quot; /&amp;gt;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-下列代码运行结果">&lt;strong>Question:&lt;/strong> 下列代码运行结果&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">changeObjProperty&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">o&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">o&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">siteUrl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;http://www.123.com&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">o&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">o&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">siteUrl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;http://www.456.com&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">webSite&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">changeObjProperty&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">webSite&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">webSite&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">siteUrl&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: &lt;code>http://www.123.com&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 这里把o改成a
+&lt;/span>&lt;span class="c1">// webSite引用地址的值copy给a了
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">changeObjProperty&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 改变对应地址内的对象属性值
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">siteUrl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;http://www.123.com&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// 变量a指向新的地址 以后的变动和旧地址无关
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">siteUrl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;http://www.456.com&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">456&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">webSite&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">webSite&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;123&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">changeObjProperty&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">webSite&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">webSite&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// {name: 123, siteUrl: &amp;#39;http://www.123.com&amp;#39;}
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 97</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/</link><pubDate>Wed, 22 Dec 2021 16:21:09 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-97/frontend-97-cover.jpg" alt="Featured image of post 毎日のフロントエンド 97" />&lt;h1 id="第九十七日">第九十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-doctype-有什么作用">&lt;strong>Question:&lt;/strong> &lt;code>DOCTYPE&lt;/code> 有什么作用&lt;/h3>
 &lt;p>&lt;code>DOCTYPE&lt;/code>声明指定了浏览器对于 HTML 文档解析的类型；&lt;/p>
