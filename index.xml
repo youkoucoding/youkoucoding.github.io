@@ -1,4 +1,115 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 23 Dec 2021 16:33:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 98</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-98/</link><pubDate>Thu, 23 Dec 2021 16:33:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-98/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-98/frontend-98-cover.jpg" alt="Featured image of post 毎日のフロントエンド 98" />&lt;h1 id="第九十八日">第九十八日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 24 Dec 2021 14:22:47 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 99</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-99/</link><pubDate>Fri, 24 Dec 2021 14:22:47 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-99/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-99/frontend-99-cover.jpg" alt="Featured image of post 毎日のフロントエンド 99" />&lt;h1 id="第九十九日">第九十九日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5-的页面可见性page-visibility有哪些应用场景">&lt;strong>Question:&lt;/strong> HTML5 的页面可见性（&lt;code>Page Visibility&lt;/code>）有哪些应用场景&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>Document.hidden&lt;/code> 只读
+&lt;ul>
+&lt;li>如果页面处于被认为是对用户隐藏状态时返回 true，否则返回 false。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>Document.visibilityState&lt;/code> 只读
+&lt;ul>
+&lt;li>是一个用来展示文档当前的可见性的 DOMString 。该属性的值为以下值之一：
+&lt;ul>
+&lt;li>&lt;code>visible&lt;/code> : 页面内容至少是部分可见。 在实际中，这意味着页面是非最小化窗口的前景选项卡。&lt;/li>
+&lt;li>&lt;code>hidden&lt;/code> : 页面内容对用户不可见。 在实际中，这意味着文档可以是一个后台标签，或是最小化窗口的一部分，或是在操作系统锁屏激活的状态下。&lt;/li>
+&lt;li>&lt;code>prerender&lt;/code> : 页面内容正在被预渲染且对用户是不可见的(被&lt;code>document.hidden&lt;/code>当做隐藏). 文档可能初始状态为 prerender，但绝不会从其它值转为该值。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>Document.onvisibilitychange&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-比较-opacity-0-visibility-hidden-display-none-优劣和适用场景">&lt;strong>Question:&lt;/strong> 比较 &lt;code>opacity: 0;&lt;/code> &lt;code>visibility: hidden;&lt;/code> &lt;code>display: none;&lt;/code> 优劣和适用场景&lt;/h3>
+&lt;p>可见性：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>display:none;&lt;/code>: 让元素完全从渲染树中消失，渲染的时候不占据任何空间, 不能点击&lt;/li>
+&lt;li>&lt;code>visibility: hidden;&lt;/code>: 不会让元素从渲染树消失，渲染元素继续占据空间，只是内容不可见，不能点击&lt;/li>
+&lt;li>&lt;code>opacity: 0;&lt;/code>: 不会让元素从渲染树消失，渲染元素继续占据空间，只是内容不可见，可以点击&lt;/li>
+&lt;/ul>
+&lt;p>继承性：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>display: none&lt;/code> 和 &lt;code>opacity: 0&lt;/code> ：是非继承属性，子孙节点消失由于元素从渲染树消失造成，通过修改子孙节点属性无法显示。&lt;/li>
+&lt;li>&lt;code>visibility: hidden&lt;/code>：是继承属性，子孙节点消失&lt;strong>由于继承了 hidden&lt;/strong>，通过设置 visibility: visible;可以让子孙节点显式。&lt;/li>
+&lt;/ul>
+&lt;p>性能：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>display: none;&lt;/code> : 修改元素会造成文档回流,读屏器不会读取 display: none 元素内容，性能消耗较大&lt;/li>
+&lt;li>&lt;code>visibility: hidden;&lt;/code>: 修改元素只会造成本元素的重绘,性能消耗较少读屏器可读取&lt;code>visibility: hidden&lt;/code>元素内容&lt;/li>
+&lt;li>&lt;code>opacity: 0&lt;/code> ： 修改元素会造成重绘，性能消耗较少&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>display: none;&lt;/code>&lt;/p>
+&lt;ol>
+&lt;li>DOM 结构：浏览器不会渲染 display 属性为 none 的元素，不占据空间；&lt;/li>
+&lt;li>事件监听：无法进行 DOM 事件监听；&lt;/li>
+&lt;li>性能：动态改变此属性时会引起重排，性能较差；&lt;/li>
+&lt;li>继承：不会被子元素继承，毕竟子类也不会被渲染；&lt;/li>
+&lt;li>&lt;code>transition&lt;/code>：transition 不支持 display。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>visibility: hidden;&lt;/code>&lt;/p>
+&lt;ol>
+&lt;li>DOM 结构：元素被隐藏，但是会被渲染不会消失，占据空间；&lt;/li>
+&lt;li>事件监听：无法进行 DOM 事件监听；&lt;/li>
+&lt;li>性 能：动态改变此属性时会引起重绘，性能较高；&lt;/li>
+&lt;li>继 承：会被子元素继承，子元素可以通过设置 visibility: visible; 来取消隐藏；&lt;/li>
+&lt;li>&lt;code>transition&lt;/code>：transition 支持 visibility。visibility 会立即显示，隐藏时会延时&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>opacity: 0;&lt;/code>&lt;/p>
+&lt;ol>
+&lt;li>DOM 结构：透明度为 100%，元素隐藏，占据空间；&lt;/li>
+&lt;li>事件监听：可以进行 DOM 事件监听；&lt;/li>
+&lt;li>性 能：提升为合成层，不会触发重绘，性能较高；&lt;/li>
+&lt;li>继 承：会被子元素继承,且，子元素并不能通过 opacity: 1 来取消隐藏；&lt;/li>
+&lt;li>&lt;code>transition&lt;/code>：transition 支持 opacity。opacity 可以延时显示和隐藏&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-不用第三方库原生-js-怎么实现读取和导出-excel">&lt;strong>Question:&lt;/strong> 不用第三方库，原生 js 怎么实现读取和导出 excel&lt;/h3>
+&lt;ul>
+&lt;li>接收后端传过来的 excel 文件流&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">axios&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="nx">url&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fdConfig&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">indexParams&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="kr">export&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">method&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fdConfig&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">methodPost&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">downloadPrams&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1">// 设置类型为 blob
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">responseType&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;blob&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">}).&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="p">(&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">blob&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Blob&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;application/vnd.ms-excel&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">link&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">link&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">href&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">URL&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createObjectURL&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">blob&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 这里也可以从headers中获取文件名.
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">link&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">download&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;导出excel.xlsx&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// element.click() 模拟鼠标点击
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">link&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">click&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;导出excel出错&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Page_Visibility_API" target="_blank" rel="noopener"
+>页面可见性 API - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/visibilityState" target="_blank" rel="noopener"
+>Document.visibilityState - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.ruanyifeng.com/blog/2018/10/page_visibility_api.html" target="_blank" rel="noopener"
+>Page Visibility API 教程 - 阮一峰的网络日志&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 98</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-98/</link><pubDate>Thu, 23 Dec 2021 16:33:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-98/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-98/frontend-98-cover.jpg" alt="Featured image of post 毎日のフロントエンド 98" />&lt;h1 id="第九十八日">第九十八日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-列举出常用的-meta-标签的写法和作用">&lt;strong>Question:&lt;/strong> 列举出常用的 meta 标签的写法和作用&lt;/h3>
 &lt;p>&lt;code>&amp;lt;meta&amp;gt;&lt;/code>用来描述网页的元信息；诸如字符编码，浏览器引擎编译，文档信息等等；&lt;/p>
