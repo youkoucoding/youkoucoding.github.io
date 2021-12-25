@@ -1,4 +1,100 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 24 Dec 2021 14:22:47 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 99</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-99/</link><pubDate>Fri, 24 Dec 2021 14:22:47 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-99/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-99/frontend-99-cover.jpg" alt="Featured image of post 毎日のフロントエンド 99" />&lt;h1 id="第九十九日">第九十九日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 25 Dec 2021 20:03:03 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 100</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-100/</link><pubDate>Sat, 25 Dec 2021 20:03:03 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-100/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-100/frontend-100-cover.jpg" alt="Featured image of post 毎日のフロントエンド 100" />&lt;h1 id="第一百日">第一百日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5为输入框添加语音输入的功能呢">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>为输入框添加语音输入的功能呢&lt;/h3>
+&lt;p>原理：在人说话时接收语音，然后放到谷歌后台，谷歌自己写的语音识别系统，再返回数据
+&lt;code>&amp;lt;input type=”text” speech x-webkit-speech /&amp;gt;&lt;/code>&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-如何让大小不同的图片等比缩放不变形显示在固定大小的div里">&lt;strong>Question:&lt;/strong> 如何让大小不同的图片等比缩放不变形显示在固定大小的&lt;code>div&lt;/code>里&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>图片等比缩放 &lt;code>img{ object-fit: cover/contain; width:100%}&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>div 宽高比例固定，跟随屏幕变化而变化，利用 padding 垂直方向的属性来实现&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>object-fit&lt;/code>: 属性指定可替换元素的内容应该如何适应到其使用的高度和宽度确定的框。&lt;/p>
+&lt;ul>
+&lt;li>典型的可替换元素有：
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;iframe&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;lt;video&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;lt;embed&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;lt;img&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>contain&lt;/code>: 被替换的内容将被缩放，以在填充元素的内容框时保持其宽高比。 整个对象在填充盒子的同时保留其长宽比，因此如果宽高比与框的宽高比不匹配，该对象将被添加“黑边”。&lt;/li>
+&lt;li>&lt;code>cover&lt;/code>: 被替换的内容在保持其宽高比的同时填充元素的整个内容框。如果对象的宽高比与内容框不相匹配，该对象将被剪裁以适应内容框。&lt;/li>
+&lt;li>&lt;code>fill&lt;/code>: 被替换的内容正好填充元素的内容框。整个对象将完全填充此框。如果对象的宽高比与内容框不相匹配，那么该对象将被拉伸以适应内容框。&lt;/li>
+&lt;li>&lt;code>none&lt;/code>: 被替换的内容将保持其原有的尺寸。&lt;/li>
+&lt;li>&lt;code>scale-down&lt;/code>: 内容的尺寸与 none 或 contain 中的一个相同，取决于它们两个之间谁得到的对象尺寸会更小一些。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-为什么-for-循环嵌套顺序会影响性能">&lt;strong>Question:&lt;/strong> 为什么 for 循环嵌套顺序会影响性能？&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">t1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">getTime&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">k&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">k&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">10000&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">k&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">t2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">getTime&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;first time&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">t2&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">t1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">10000&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">k&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">k&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">k&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">t3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">getTime&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;two time&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">t3&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">t2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>第一个&lt;code>for&lt;/code>循环，&lt;code>i&lt;/code>会循环 100 次，判断&lt;code>i&amp;lt;100&lt;/code>, &lt;strong>100&lt;/strong> 次, j 会循环&lt;code>100 * 1000&lt;/code>次，判断&lt;code>j&amp;lt;100&lt;/code>, &lt;strong>&lt;code>100 * 1000&lt;/code>&lt;/strong> 次, k 会循环&lt;code>100 * 1000 * 10000&lt;/code>次，判断&lt;code>k&amp;lt;100&lt;/code>, &lt;strong>&lt;code>100 * 1000 * 10000&lt;/code>&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>第二个&lt;code>for&lt;/code>循环，&lt;code>i&lt;/code>会循环 10000 次，判断 i&lt;code>&amp;lt;100&lt;/code> &lt;strong>10000&lt;/strong> 次, j 会循环&lt;code>10000 * 1000&lt;/code>次，判断&lt;code>j&amp;lt;100&lt;/code>, &lt;strong>&lt;code>10000 * 1000&lt;/code>&lt;/strong> 次, k 会循环&lt;code>100 * 1000 * 10000&lt;/code>次， 判断&lt;code>k&amp;lt;100&lt;/code>, &lt;strong>&lt;code>100 * 1000 * 10000&lt;/code>&lt;/strong> 次&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>虽然判断&lt;code>k&amp;lt;100&lt;/code>的次数都是一样的 但是前面两种判断就不一样了，由此可以看见时间长短。外层越大，越影响性能。&lt;/p>
+&lt;h3 id="queston-代码运行结果">&lt;strong>Queston:&lt;/strong> 代码运行结果&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="mi">1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="mi">2&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="s1">&amp;#39;2&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">[(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="o">+&lt;/span>&lt;span class="s1">&amp;#39;b&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>1 + &amp;quot;1&amp;quot;&lt;/code>
+&lt;ul>
+&lt;li>&lt;code>&amp;quot;11&amp;quot;&lt;/code>&lt;/li>
+&lt;li>加操作符：如果只有一个操作数是字符串，则将另一个操作数转换为字符串，然后再将两个字符串拼接起来&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>2 * '2'&lt;/code>
+&lt;ul>
+&lt;li>&lt;code>4&lt;/code>&lt;/li>
+&lt;li>乘操作符：如果有一个操作数不是数值，则在后台调用 &lt;code>Number()&lt;/code>将其转换为数值&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>[(1, 2)] + [2, 1];&lt;/code>
+&lt;ul>
+&lt;li>js 中所有对象基本都是先调用&lt;code>valueOf&lt;/code>方法，如果不是数值，再调用&lt;code>toString&lt;/code>方法。&lt;/li>
+&lt;li>两个数组对象的 &lt;code>toString&lt;/code> 方法相加：&lt;code>&amp;quot;1,22,1&amp;quot;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>'a' + + 'b'&lt;/code>
+&lt;ul>
+&lt;li>后一个&lt;code>+&lt;/code>将作为一元操作符，如果操作数是字符串，将调用&lt;code>Number&lt;/code>方法将该操作数转为数值，如果操作数无法转为数值，则为&lt;code>NaN&lt;/code>。&lt;/li>
+&lt;li>&lt;code>&amp;quot;aNaN&amp;quot;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit" target="_blank" rel="noopener"
+>object-fit - CSS（层叠样式表） | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 99</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-99/</link><pubDate>Fri, 24 Dec 2021 14:22:47 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-99/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-99/frontend-99-cover.jpg" alt="Featured image of post 毎日のフロントエンド 99" />&lt;h1 id="第九十九日">第九十九日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5-的页面可见性page-visibility有哪些应用场景">&lt;strong>Question:&lt;/strong> HTML5 的页面可见性（&lt;code>Page Visibility&lt;/code>）有哪些应用场景&lt;/h3>
 &lt;ul>
