@@ -15,7 +15,7 @@ categories:
 
 ### **Question:** `accesskey`，举例说明它有什么运用场景
 
-[毎日のフロントエンド　 80](https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-80/#question-%E7%AE%80%E8%BF%B0html%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%B1%9E%E6%80%A7%E6%98%AF%E5%93%AA%E4%B8%AA%E5%B9%B6%E4%B8%BE%E4%BE%8B%E8%AF%B4%E6%98%8E%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8)
+- 毎日のフロントエンド 80
 
 ## CSS
 
