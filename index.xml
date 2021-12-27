@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 26 Dec 2021 17:44:12 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 101</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/</link><pubDate>Sun, 26 Dec 2021 17:44:12 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover.jpg" alt="Featured image of post 毎日のフロントエンド 101" />&lt;h1 id="第一百零一日">第一百零一日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 27 Dec 2021 20:20:51 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 102</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-102/</link><pubDate>Mon, 27 Dec 2021 20:20:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-102/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-102/frontend-102-cover.jpg" alt="Featured image of post 毎日のフロントエンド 102" />&lt;h1 id="第一百零二日">第一百零二日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-行内元素块级元素空void元素分别有哪些">&lt;strong>Question:&lt;/strong> 行内元素、块级元素、空(void)元素分别有哪些&lt;/h3>
+&lt;h4 id="行内元素">行内元素&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>a&lt;/code>, &lt;code>b&lt;/code>, &lt;code>input&lt;/code>, &lt;code>span&lt;/code>, &lt;code>label&lt;/code>, &lt;code>button&lt;/code>, &lt;code>textarea&lt;/code>&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;h4 id="块级元素">块级元素&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>div&lt;/code>, &lt;code>form&lt;/code>, &lt;code>table&lt;/code>, &lt;code>h1&lt;/code>&amp;hellip;&lt;code>h6&lt;/code>, &lt;code>p&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="空元素">空元素&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>img&lt;/code>, &lt;code>input&lt;/code>, &lt;code>hr&lt;/code>, &lt;code>br&lt;/code>, &lt;code>meta&lt;/code>, &lt;code>source&lt;/code>,&lt;code>track&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-如何规划响应式布局的">&lt;strong>Question:&lt;/strong> 如何规划响应式布局的&lt;/h3>
+&lt;p>Mobile 优先： 先已较少的 css 代码实现相对简单移动端页面。&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-1234split的结果是什么包括类型和值">&lt;strong>Question:&lt;/strong> &lt;code>'1,2,3,4'.split()&lt;/code>的结果是什么（包括类型和值）&lt;/h3>
+&lt;p>Result: &lt;code>[&amp;quot;1,2,3,4&amp;quot;]&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>一个长度为 1 的&lt;code>Array&lt;/code>，元素类型为&lt;code>String&lt;/code>&lt;/li>
+&lt;li>&lt;code>split&lt;/code>，其可以接受两个参数:
+&lt;ol>
+&lt;li>第一个参数是字符串或正则表达式，从该参数指定的地方分割 stringObject；&lt;/li>
+&lt;li>第二个参数, 限制返回 Array 的最大长度&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>&lt;code>split()&lt;/code>，默认将整个字符串作为一个元素返回一个长度为 1 的 &lt;code>Array&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="question-以下代码执行的结果">&lt;strong>Question:&lt;/strong> 以下代码执行的结果&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="mi">2&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="mi">3&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">length&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">splice&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">splice&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">push&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: &lt;code>[empty × 2, 1, 2, splice: ƒ, push: ƒ]&lt;/code> &lt;strong>类数组&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>在对象中加入 splice 属性方法，和 length 属性后。这个对象变成一个&lt;strong>类数组&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>第一次&lt;code>push&lt;/code>，&lt;code>obj&lt;/code>对象的&lt;code>push&lt;/code>方法设置 &lt;code>obj[2]=1;&lt;/code> &lt;strong>&lt;code>obj.length+=1;&lt;/code>&lt;/strong>&lt;/li>
+&lt;li>第二次&lt;code>push&lt;/code>，&lt;code>obj&lt;/code>对象的&lt;code>push&lt;/code>方法设置 &lt;code>obj[3]=2;&lt;/code> &lt;strong>&lt;code>obj.length+=1&lt;/code>&lt;/strong>&lt;/li>
+&lt;li>&lt;code>console.log()&lt;/code>: &lt;code>obj&lt;/code>具有 &lt;code>length&lt;/code> 属性和 &lt;code>splice&lt;/code> 方法，故将其作为数组进行打印 4.打印时因为数组未设置下标为 0 1 处的值，故打印为 empty，主动 obj[0] 获取为 undefined&lt;/li>
+&lt;/ol>
+&lt;h4 id="类数组arraylike">类数组（&lt;code>ArrayLike&lt;/code>）&lt;/h4>
+&lt;p>一组数据，由数组来存，但是如果要对这组数据进行扩展，会影响到数组原型，ArrayLike 的出现则提供了一个中间数据桥梁，ArrayLike 有数组的特性， 但是对 ArrayLike 的扩展并不会影响到原生的数组。&lt;/p>
+&lt;h4 id="push方法1">&lt;code>push&lt;/code>方法&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>：&lt;/h4>
+&lt;p>push 方法有意具有通用性。该方法和 &lt;code>call()&lt;/code> 或 &lt;code>apply()&lt;/code> 一起使用时，可应用在&lt;strong>类数组的对象&lt;/strong>上。&lt;strong>&lt;code>push&lt;/code> 方法根据 &lt;code>length&lt;/code> 属性来决定从哪里开始插入给定的值。&lt;/strong> 如果 length 不能被转成一个数值，则插入的元素索引为 0，包括 length 不存在时。当 length 不存在时，将会创建它。 唯一的原生类数组（array-like）对象是 Strings，尽管如此，它们并不适用该方法，因为字符串是不可改变的。&lt;/p>
+&lt;hr>
+&lt;p>&lt;code>Array.prototype.slice()&lt;/code>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903814332432397" target="_blank" rel="noopener"
+>前端响应式布局原理与方案（详细版） - 掘金&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push#description" target="_blank" rel="noopener"
+>Array.prototype.push() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" target="_blank" rel="noopener"
+>Array.prototype.slice() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド 101</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/</link><pubDate>Sun, 26 Dec 2021 17:44:12 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover.jpg" alt="Featured image of post 毎日のフロントエンド 101" />&lt;h1 id="第一百零一日">第一百零一日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-accesskey举例说明它有什么运用场景">&lt;strong>Question:&lt;/strong> &lt;code>accesskey&lt;/code>，举例说明它有什么运用场景&lt;/h3>
 &lt;ul>
