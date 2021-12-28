@@ -1,4 +1,84 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 27 Dec 2021 20:20:51 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 102</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-102/</link><pubDate>Mon, 27 Dec 2021 20:20:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-102/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-102/frontend-102-cover.jpg" alt="Featured image of post 毎日のフロントエンド 102" />&lt;h1 id="第一百零二日">第一百零二日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 28 Dec 2021 21:04:50 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 103</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-103/</link><pubDate>Tue, 28 Dec 2021 21:04:50 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-103/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-103/frontend-103-cover.jpg" alt="Featured image of post 毎日のフロントエンド 103" />&lt;h1 id="第一百零三日">第一百零三日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-描述cookiessessionstorage和localstorage的区别">&lt;strong>Question:&lt;/strong> 描述&lt;code>cookies&lt;/code>、&lt;code>sessionStorage&lt;/code>和&lt;code>localStorage&lt;/code>的区别&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>Cookies&lt;/code>
+&lt;ul>
+&lt;li>网站为了对用户身份做标识而存储在本地的数据。在同源的 http 请求中会被一同发送，因此会占用网络带宽。最大大小 4KB。以前每个域名支持 20 个，新版本的增加到 50 个。生命周期为设置的过期时间，若不设置则到关闭浏览器为止。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>localStorage&lt;/code>
+&lt;ul>
+&lt;li>HTML5 新增的，不会将数据自动发送到服务器，仅存储在本地，并且会永久存储，除非用户主动删除，不然不会过期或者自动清除。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>sessionStorage&lt;/code>
+&lt;ul>
+&lt;li>有效期限为一次 session 会话（即一个 tab 页从打开到关闭之间的时间段）。webStorage 在不同浏览器的最大大小不同，因此一般以 5M 为上限较为安全。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-低版本-ie-的盒子模型">&lt;strong>Question:&lt;/strong> 低版本 IE 的盒子模型&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>CSS 盒子由四部分组成，由内到外依次是：&lt;code>content&lt;/code>、&lt;code>padding&lt;/code>、&lt;code>border&lt;/code>、&lt;code>margin&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>所谓盒子模型定义的是盒子宽高的计算方法:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>IE&lt;/code>盒子模型的宽高为 content、padding、border 之和&lt;/li>
+&lt;li>W3C 盒子的宽高仅为 content&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>从页面布局来说&lt;strong>IE 盒子模型&lt;/strong>实际上更实用一点，这也是后来 W3C 提供 box-sizing 属性用于切换盒子模型的原因。&lt;code>box-sizing:border-box;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-如何更好地处理asyncawait的异常的">&lt;strong>Question:&lt;/strong> 如何更好地处理&lt;code>Async/Await&lt;/code>的异常的&lt;/h3>
+&lt;p>对 promise 对象进行一层包装，通过返回值判断是否有异常&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 对Promise对象进行一层包装，将异常值和成功结果一起返回
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">wrapper&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">promise&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">promise&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">res&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">res&lt;/span>&lt;span class="p">]).&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">t&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">t&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;123&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">resolve&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="nx">t&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">delay&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">res&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">wrapper&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`error: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">delay&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="question-列举出多种减少页面加载时间的方法">&lt;strong>Question:&lt;/strong> 列举出多种减少页面加载时间的方法&lt;/h3>
+&lt;ul>
+&lt;li>缓存利用： 缓存 Ajax，使用 CDN、外部 JavaScript 和 css 文件缓存，添加 Expires 头，在服务器端配置 Etag，减少 DNS 查找等&lt;/li>
+&lt;li>请求数量．合并样式和脚本，使用 css 图片精灵，初始首屏之外的图片资源按需加载，静态资源延迟加载&lt;/li>
+&lt;li>请求带宽：压缩文件，开启 GZIP&lt;/li>
+&lt;li>css 代码：避免使用 css 表达式、高级选择器、通配选择器&lt;/li>
+&lt;li>js 代码：用散列表来优化查找，少用全局变量，用 innerHTML 代替 DOM 操作，减少 DOM 操作次数，优化 JavaScript 性能，用 setTimeout 避免页面失去响应，缓 存 DOM 节点查找的结果，避免使用 with (with 会创建自己的作用域， 增加作用域链的 长度），多个变量声明合并&lt;/li>
+&lt;li>HTML 代码：&lt;strong>避免图片和 iFrame 等 src 属性为空&lt;/strong>, src 属性为空，会重新加载当前页面&lt;/li>
+&lt;li>尽量避免 js 操作 dom, 避免 js 造成的 reflow 和闪烁&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903767129718791" target="_blank" rel="noopener"
+>async/await 优雅的错误处理方法 - 掘金&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.grossman.io/how-to-write-async-await-without-try-catch-blocks-in-javascript/" target="_blank" rel="noopener"
+>How to write async await without try-catch blocks in Javascript&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 102</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-102/</link><pubDate>Mon, 27 Dec 2021 20:20:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-102/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-102/frontend-102-cover.jpg" alt="Featured image of post 毎日のフロントエンド 102" />&lt;h1 id="第一百零二日">第一百零二日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-行内元素块级元素空void元素分别有哪些">&lt;strong>Question:&lt;/strong> 行内元素、块级元素、空(void)元素分别有哪些&lt;/h3>
 &lt;h4 id="行内元素">行内元素&lt;/h4>
