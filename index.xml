@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 28 Dec 2021 21:04:50 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 103</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-103/</link><pubDate>Tue, 28 Dec 2021 21:04:50 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-103/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-103/frontend-103-cover.jpg" alt="Featured image of post 毎日のフロントエンド 103" />&lt;h1 id="第一百零三日">第一百零三日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 29 Dec 2021 20:38:33 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 104</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-104/</link><pubDate>Wed, 29 Dec 2021 20:38:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-104/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-104/frontend-104-cover.jpg" alt="Featured image of post 毎日のフロントエンド 104" />&lt;h1 id="第一百零四日">第一百零四日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html标签有什么作用">&lt;strong>Question:&lt;/strong> &lt;code>&amp;lt;html&amp;gt;&lt;/code>标签有什么作用&lt;/h3>
+&lt;p>&lt;code>&amp;lt;html&amp;gt;&lt;/code> 元素定义了整个 HTML 文档。&lt;/p>
+&lt;ul>
+&lt;li>告诉浏览器这是一个 HTML 文档&lt;/li>
+&lt;li>标识了文档开始和结束的位置&lt;/li>
+&lt;li>最外层的标签&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;ul>
+&lt;li>html &lt;code>document.documentElement&lt;/code>&lt;/li>
+&lt;li>head &lt;code>document.head&lt;/code>&lt;/li>
+&lt;li>body &lt;code>document.body&lt;/code>&lt;/li>
+&lt;li>所有的 script 对应 js 的 &lt;code>document.scripts&lt;/code>&lt;/li>
+&lt;li>所有的 img 对应 js 的 &lt;code>document.imgs&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-行内元素和块级元素有什么区别如何相互转换">&lt;strong>Question:&lt;/strong> 行内元素和块级元素有什么区别，如何相互转换&lt;/h3>
+&lt;h4 id="块级元素">块级元素：&lt;/h4>
+&lt;ul>
+&lt;li>独占一行,默认情况下，其宽度自动填满其父元素宽度&lt;/li>
+&lt;li>可以设置&lt;code>margin&lt;/code>和&lt;code>padding&lt;/code>属性&lt;/li>
+&lt;li>可以设置&lt;code>width&lt;/code>，&lt;code>height&lt;/code>属性&lt;/li>
+&lt;/ul>
+&lt;h4 id="行内元素">行内元素：&lt;/h4>
+&lt;ul>
+&lt;li>相邻的行内元素会排列在同一行里，直到一行排不下，才会换行，其宽度随元素的内容而变化&lt;/li>
+&lt;li>行内元素起边距作用的只有&lt;code>margin-left&lt;/code>、&lt;code>margin-right&lt;/code>、&lt;code>padding-left&lt;/code>、&lt;code>padding-right&lt;/code>，其它属性不会起边距效果。&lt;/li>
+&lt;li>&lt;strong>不可置换行内元素&lt;/strong>不能设置&lt;code>width&lt;/code>、&lt;code>height&lt;/code>和垂直方向上的 margin，而&lt;strong>可置换行内元素&lt;/strong>(&lt;code>&amp;lt;img&amp;gt;&lt;/code>，&lt;code>&amp;lt;input&amp;gt;&lt;/code>等)则可以。&lt;/li>
+&lt;li>行内元素又分为可置换元素与不可置换元素。可置换元素展示的内容是通过元素的 &lt;code>src&lt;/code>、&lt;code>value&lt;/code> 等属性或 CSS content 属性从外部引用得到的，可被替换的，如&lt;code>&amp;lt;img&amp;gt;&lt;/code>，&lt;code>&amp;lt;input&amp;gt;&lt;/code>, &lt;code>&amp;lt;textarea&amp;gt;&lt;/code>等。剩下的就是不可置换元素。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>通过&lt;code>display: block;&lt;/code> &lt;code>display: inline;&lt;/code> 来转换&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-json和jsonp的区别">&lt;strong>Question:&lt;/strong> &lt;code>json&lt;/code>和&lt;code>jsonp&lt;/code>的区别&lt;/h3>
+&lt;ul>
+&lt;li>json 是一种数据结构&lt;/li>
+&lt;li>jsonp 是一种用于跨域的技术，JSON with Padding 的略称，是 json 的一种‘使用模式’，可以跨域的获取到数据
+&lt;ul>
+&lt;li>script 标签可以实现跨域，而且可以跨域执行 js 文件，因此可以插入 script 标签来引入 js 文件，通过动态生成 js 文件，客户端通过执行 js 文件中的函数，获取返回值来得到需要的数据。&lt;/li>
+&lt;li>优点是兼容性较佳，支持服务器和浏览器的双向通信，缺点是只支持 get 请求。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="question-如下代码的返回值">&lt;strong>Question:&lt;/strong> 如下代码的返回值&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nb">String&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;11&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;11&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nb">String&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;11&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;11&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result: &lt;code>true&lt;/code> &lt;code>false&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>new String()&lt;/code> 返回的是对象&lt;/li>
+&lt;li>&lt;code>==&lt;/code> 隐式转换，实际运行的是 String(&amp;lsquo;11&amp;rsquo;) == new String(&amp;lsquo;11&amp;rsquo;).toString();&lt;/li>
+&lt;li>&lt;code>===&lt;/code> 类型不一样，一个是 string，一个是 object, &lt;code>String()&lt;/code> 返回的是字符串&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903583331123214" target="_blank" rel="noopener"
+>前端布局基础概述 - 掘金&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903976505344013" target="_blank" rel="noopener"
+>一分钟说完 JSONP 请求 - 掘金&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6947694608247685127" target="_blank" rel="noopener"
+>面试题之 Jsonp 的理解及手写代码 - 掘金&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 103</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-103/</link><pubDate>Tue, 28 Dec 2021 21:04:50 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-103/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-103/frontend-103-cover.jpg" alt="Featured image of post 毎日のフロントエンド 103" />&lt;h1 id="第一百零三日">第一百零三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-描述cookiessessionstorage和localstorage的区别">&lt;strong>Question:&lt;/strong> 描述&lt;code>cookies&lt;/code>、&lt;code>sessionStorage&lt;/code>和&lt;code>localStorage&lt;/code>的区别&lt;/h3>
 &lt;ul>
