@@ -1,4 +1,214 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 02 Jan 2022 11:52:07 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 108</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-108/</link><pubDate>Sun, 02 Jan 2022 11:52:07 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-108/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-108/frontend-108-cover.jpg" alt="Featured image of post 毎日のフロントエンド 108" />&lt;h1 id="第一百零八日">第一百零八日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 03 Jan 2022 10:54:18 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 109</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/</link><pubDate>Mon, 03 Jan 2022 10:54:18 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/frontend-109-cover.jpg" alt="Featured image of post 毎日のフロントエンド 109" />&lt;h1 id="第一百零九日">第一百零九日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-很多网站不常用-table-和-iframe-这两个元素原因">&lt;strong>Question:&lt;/strong> 很多网站不常用 table 和 iframe 这两个元素，原因？&lt;/h3>
+&lt;h4 id="iframe">&lt;code>iframe&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>cons&lt;/p>
+&lt;ul>
+&lt;li>是一个单独的容器，因此不会应用全局的 CSS 样式&lt;/li>
+&lt;li>会和网页共用域名连接池，因此可能由于 iframe 占用了连接数导致加载阻塞&lt;/li>
+&lt;li>搜索引擎爬虫不易爬取，不利于 SEO&lt;/li>
+&lt;li>相比直接操作 DOM 元素，使用 iframe 更耗费资源&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>pros&lt;/p>
+&lt;ul>
+&lt;li>可以用其展示广告，可以避免由于添加广告而网站被爬虫拒绝收录的情况&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="table">&lt;code>table&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>cons&lt;/p>
+&lt;ul>
+&lt;li>table 的内容会等内部的所有内容加载完成才会显示，比基于 div+css 实现的表格布局加载速度慢。&lt;/li>
+&lt;li>会导致网页语义发生错误，不利于无障碍功能&lt;/li>
+&lt;li>改动内部内容会造成整个 table 重绘，消耗更多资源&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>pros&lt;/p>
+&lt;ul>
+&lt;li>前期广泛用于后台管理系统，由于普通的后台管理系统大多都是表格布局，基于 table 编程难度低&lt;/li>
+&lt;li>且面向内网的管理系统对性能要求不高&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-cursor-属性">&lt;strong>Question:&lt;/strong> &lt;code>cursor&lt;/code> 属性&lt;/h3>
+&lt;p>&lt;code>cursor&lt;/code> 是鼠标光标的属性。可以给元素设置不同的 cursor 属性来使鼠标在不同的位置显示不同的形状。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>值&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>url&lt;/td>
+&lt;td>需使用的自定义光标的 URL。注释：请在此列表的末端始终定义一种普通的光标，以防没有由 URL 定义的可用光标。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>default&lt;/td>
+&lt;td>默认光标（通常是一个箭头）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>auto&lt;/td>
+&lt;td>默认。浏览器设置的光标&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>crosshair&lt;/td>
+&lt;td>光标呈现为十字线&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pointer&lt;/td>
+&lt;td>光标呈现为指示链接的指针&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>move&lt;/td>
+&lt;td>此光标指示某对象可被移动&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>e-resize&lt;/td>
+&lt;td>此光标指示矩形框的边缘可被向右（东）移动&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ne-resize&lt;/td>
+&lt;td>此光标指示矩形框的边缘可被向上及向右移动（北/东）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>nw-resize&lt;/td>
+&lt;td>此光标指示矩形框的边缘可被向上及向左移动（北/西）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>n-resize&lt;/td>
+&lt;td>此光标指示矩形框的边缘可被向上（北）移动&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>se-resize&lt;/td>
+&lt;td>此光标指示矩形框的边缘可被向下及向右移动（南/东）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sw-resize&lt;/td>
+&lt;td>此光标指示矩形框的边缘可被向下及向左移动（南/西）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>s-resize&lt;/td>
+&lt;td>此光标指示矩形框的边缘可被向下移动（南）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>w-resize&lt;/td>
+&lt;td>此光标指示矩形框的边缘可被向左移动（西）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>text&lt;/td>
+&lt;td>此光标指示文本&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>wait&lt;/td>
+&lt;td>此光标指示程序正忙（通常是一只表或沙漏）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>help&lt;/td>
+&lt;td>此光标指示可用的帮助（通常是一个问号或一个气球）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-什么是原型模式它主要运用在哪些场景">&lt;strong>Question:&lt;/strong> 什么是原型模式？它主要运用在哪些场景&lt;/h3>
+&lt;h4 id="原型模式prototype">原型模式（prototype）&lt;/h4>
+&lt;p>原型模式（prototype）是指用原型实例(一个共享的原型实例)指向创建对象的种类，并且通过拷贝这些原型创建新的对象。也就是创建一个对象作为另一个对象的 Prototype 属性。用于创建重复的对象，可以提升性能。&lt;/p>
+&lt;p>原型模式不单是一种设计模式，也被称为一种编程泛型。&lt;/p>
+&lt;p>从设计模式的角度讲，原型模式是用于创建对象的一种模式。我们不再关心对象的具体类型，而是找到一个对象，然后通过克隆来创建一个一模一样的对象。在其他语言很少使用原型模式，但是 JavaScript 作为原型语言，在构造新对象及其原型时会使用该模式。&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 240;
+flex-basis: 577px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/prototype_mode.jpeg" data-size="378x157">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/prototype_mode.jpeg"
+width="378"
+height="157"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/prototype_mode_hu0a4b1e16b988fc5788838830b390cb76_5905_480x0_resize_q75_box.jpeg 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/prototype_mode_hu0a4b1e16b988fc5788838830b390cb76_5905_1024x0_resize_q75_box.jpeg 1024w"
+loading="lazy"
+alt="原型模式">
+&lt;/a>
+&lt;figcaption>原型模式&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h4 id="实例-examples">实例 Examples&lt;/h4>
+&lt;ul>
+&lt;li>经典实现&lt;/li>
+&lt;/ul>
+&lt;p>CustomerPrototype 对象，它可以克隆给定原型对象（Customer）。它的构造函数接受一个 Customer 类型的原型，然后调用克隆方法生成一个新的 Customer 对象，其对象属性值使用原型对象的值进行初始化。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">//客户原型类
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">CustomerPrototype&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">proto&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">proto&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">proto&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">clone&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">customer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Customer&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">customer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">proto&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">customer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">age&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">proto&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">customer&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">//客户类
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">Customer&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">age&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">age&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">age&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">say&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">info&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="s1">&amp;#39;%c%s&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;color:red;font-size:18px&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;姓名: &amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;, 年龄: &amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">age&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">run&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">proto&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Customer&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;张三&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">18&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">prototype&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">CustomerPrototype&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">proto&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">customer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">clone&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">customer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">say&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">run&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ul>
+&lt;li>&lt;code>Object.create()&lt;/code>实现原型模式&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>Object.create()&lt;/code>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>方法用于创建一个新对象，使用现有的对象来提供新创建的对象的&lt;code>__proto__&lt;/code>&lt;/p>
+&lt;h4 id="优点应用场景">优点，应用场景&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>在需要一个类的大量对象的时候，使用原型模式是最佳选择，因为原型模式是在内存中对这个对象进行拷贝，要比直接 new 这个对象性能要好很多，在这种情况下，需要的对象越多，原型模式体现出的优点越明显&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>如果一个对象的初始化需要很多其他对象的数据准备或其他资源的繁琐计算，那么可以使用原型模式&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>当需要一个对象的大量公共信息，少量字段进行个性化设置的时候，也可以使用原型模式拷贝出现有对象的副本进行加工处理&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.w3school.com.cn/cssref/pr_class_cursor.asp" target="_blank" rel="noopener"
+>CSS cursor 属性&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://cloud.tencent.com/developer/article/1694166" target="_blank" rel="noopener"
+>设计模式(7)[JS 版]-JavaScript 设计模式之原型模式如何实现&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create" target="_blank" rel="noopener"
+>Object.create() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド 108</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-108/</link><pubDate>Sun, 02 Jan 2022 11:52:07 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-108/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-108/frontend-108-cover.jpg" alt="Featured image of post 毎日のフロントエンド 108" />&lt;h1 id="第一百零八日">第一百零八日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-在默认的情况下使用-h1-标签呈现出什么效果">&lt;strong>Question:&lt;/strong> 在默认的情况下，使用 h1 标签呈现出什么效果&lt;/h3>
 &lt;p>&lt;code>h1&lt;/code>标签&lt;/p>
