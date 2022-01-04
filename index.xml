@@ -1,4 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 03 Jan 2022 10:54:18 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 109</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/</link><pubDate>Mon, 03 Jan 2022 10:54:18 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/frontend-109-cover.jpg" alt="Featured image of post 毎日のフロントエンド 109" />&lt;h1 id="第一百零九日">第一百零九日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 04 Jan 2022 11:10:29 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 110</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-110/</link><pubDate>Tue, 04 Jan 2022 11:10:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-110/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-110/frontend-110-cover.jpg" alt="Featured image of post 毎日のフロントエンド 110" />&lt;h1 id="第一百一十日">第一百一十日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-svg有什么运用场景">&lt;strong>Question:&lt;/strong> &lt;code>svg&lt;/code>有什么运用场景&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">svg&lt;/span> &lt;span class="na">xmlns&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://www.w3.org/2000/svg&amp;#34;&lt;/span> &lt;span class="na">version&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;1.1&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">rect&lt;/span> &lt;span class="na">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;300px&amp;#34;&lt;/span> &lt;span class="na">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;100px&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">svg&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>SVG 是可缩放的矢量图形，是用 XML 来定义的图像。一个最基础的 svg 标签如下：&lt;/p>
+&lt;p>全称是可缩放矢量图（Scalable Vector Graphics）。其他图像格式都是基于像素处理的，SVG 则是属于对图像的形状描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。&lt;/p>
+&lt;ul>
+&lt;li>SVG 文件可以直接插入网页，成为 DOM 的一部分，然后用 JavaScript 和 CSS 进行操作。&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-设备像素比">&lt;strong>Question:&lt;/strong> 设备像素比&lt;/h3>
+&lt;p>设备像素比(Device Pixel Ratio 简称：&lt;code>DPR&lt;/code>)，是指物理像素和 CSS 像素(设备独立像素)的比例。&lt;/p>
+&lt;h4 id="viewport">&lt;code>viewport&lt;/code>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span>
+&lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;viewport&amp;#34;&lt;/span>
+&lt;span class="na">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no&amp;#34;&lt;/span>
+&lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>width&lt;/code> : 控制 &lt;code>viewport&lt;/code> 的大小，能够指定一个值，如 600， 或者特殊的值，如 device-width 为设备的宽度（单位为缩放为 100%的 CSS 的像素）&lt;/li>
+&lt;li>&lt;code>height&lt;/code> : 和 width 相对应，指定高度&lt;/li>
+&lt;li>&lt;code>initial-scale&lt;/code> : 初始缩放比例，页面第一次加载时的缩放比例&lt;/li>
+&lt;li>&lt;code>maximum-scale&lt;/code> : 容许用户缩放到的最大比例，范围从 0 到 10.0&lt;/li>
+&lt;li>&lt;code>minimum-scale&lt;/code> : 容许用户缩放到的最小比例，范围从 0 到 10.0&lt;/li>
+&lt;li>&lt;code>user-scalable&lt;/code> : 用户是否能够手动缩放，值能够是：&lt;code>true&lt;/code>容许用户缩放；&lt;code>false&lt;/code>不容许用户缩放&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-ajax-的工作原理">&lt;strong>Question:&lt;/strong> AJAX 的工作原理&lt;/h3>
+&lt;p>AJAX 即“Asynchronous Javascript And XML”，异步请求数据的 web 开发技术，是在不重新加载整个页面的情况下，与服务器交换数据并更新部分网页。&lt;/p>
+&lt;p>基本原理是，通过&lt;code>XMLHttpRequest&lt;/code>向服务器发送异步请求，获得服务器返回的数据，利用 js 更新页面。其核心功能在于&lt;code>XMLHttpRequest&lt;/code>对象。
+创建一个 ajax 的步骤大致可以分为以下几步&lt;/p>
+&lt;ul>
+&lt;li>创建&lt;code>XMLHttpRequest&lt;/code>对象&lt;/li>
+&lt;li>打开链接 （指定请求类型，需要请求数据在服务器的地址，是否异步 i 请求）&lt;/li>
+&lt;li>向服务器发送请求（get 类型直接发送请求，post 类型需要设置请求头）&lt;/li>
+&lt;li>接收服务器的响应数据（需根据 XMLHttpRequest 的 readyState 属性判定调用哪个回调函数）&lt;/li>
+&lt;li>更新页面&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.runoob.com/svg/svg-reference.html" target="_blank" rel="noopener"
+>SVG 参考手册&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.ruanyifeng.com/blog/2018/08/svg.html" target="_blank" rel="noopener"
+>SVG 图像入门教程&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903841100464136" target="_blank" rel="noopener"
+>掌握移动 web 开发基础系列&amp;ndash;viewport&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://jonny-wei.github.io/blog/mobile/h5/mobile-fit.html#%E5%83%8F%E7%B4%A0%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5" target="_blank" rel="noopener"
+>移动端适配&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/AJAX" target="_blank" rel="noopener"
+>Ajax - Web 开发者指南 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903618764603399" target="_blank" rel="noopener"
+>Ajax 原理一篇就够了&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 109</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/</link><pubDate>Mon, 03 Jan 2022 10:54:18 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-109/frontend-109-cover.jpg" alt="Featured image of post 毎日のフロントエンド 109" />&lt;h1 id="第一百零九日">第一百零九日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-很多网站不常用-table-和-iframe-这两个元素原因">&lt;strong>Question:&lt;/strong> 很多网站不常用 table 和 iframe 这两个元素，原因？&lt;/h3>
 &lt;h4 id="iframe">&lt;code>iframe&lt;/code>&lt;/h4>
