@@ -1,4 +1,182 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 04 Jan 2022 11:10:29 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 110</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-110/</link><pubDate>Tue, 04 Jan 2022 11:10:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-110/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-110/frontend-110-cover.jpg" alt="Featured image of post 毎日のフロントエンド 110" />&lt;h1 id="第一百一十日">第一百一十日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 06 Jan 2022 12:12:18 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 112</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-112/</link><pubDate>Thu, 06 Jan 2022 12:12:18 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-112/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-112/frontend-112-cover.jpg" alt="Featured image of post 毎日のフロントエンド 112" />&lt;h1 id="第一百一十二日">第一百一十二日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-checkbox有几种状态吗它们分别用来表示什么">&lt;strong>Question:&lt;/strong> &lt;code>checkbox&lt;/code>有几种状态吗？它们分别用来表示什么&lt;/h3>
+&lt;p>&lt;code>checkbox&lt;/code>状态的属性有&lt;code>checked&lt;/code>，&lt;code>disabled&lt;/code>和&lt;code>indeterminate&lt;/code>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>checked&lt;/code>：选中/未选中状态；&lt;/li>
+&lt;li>&lt;code>disabled&lt;/code>：禁用/可用状态；&lt;/li>
+&lt;li>&lt;code>indeterminate&lt;/code>：用于表示复选框组介于全部选中或全部未选中之间的状态；&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-时间频率角度弧度百分度的单位分别是哪些">&lt;strong>Question:&lt;/strong> 时间、频率、角度、弧度、百分度的单位分别是哪些&lt;/h3>
+&lt;ul>
+&lt;li>时间: &lt;code>s&lt;/code>, &lt;code>ms&lt;/code>&lt;/li>
+&lt;li>频率: &lt;code>Hz&lt;/code>&lt;/li>
+&lt;li>角度: &lt;code>deg&lt;/code>&lt;/li>
+&lt;li>弧度: &lt;code>rad&lt;/code>&lt;/li>
+&lt;li>百分度: &lt;code>grad&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-函数声明与函数表达式有什么区别">&lt;strong>Question:&lt;/strong> 函数声明与函数表达式有什么区别&lt;/h3>
+&lt;blockquote>
+&lt;p>两者最大的区别是： &lt;strong>函数声明&lt;/strong>会提升至作用域的顶端，函数表达式则会在赋值之后能调用。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>函数声明
+&lt;blockquote>
+&lt;p>在函数声明被定义之前，它就可以被调用&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 函数名必须有
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">sayHi&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">alert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Hello&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>函数表达式
+&lt;blockquote>
+&lt;p>函数表达式是在代码执行到达时被创建，并且仅从那一刻起可用(函数表达式在代码执行到它时才会被创建)&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 在函数表达式中可以省略函数名
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">sayHi&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">alert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Hello&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;p>在大多数情况下，当我们需要声明一个函数时，最好使用函数声明，因为函数在被声明之前也是可见的。&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 111</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-111/</link><pubDate>Wed, 05 Jan 2022 09:11:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-111/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-111/frontend-111-cover.jpg" alt="Featured image of post 毎日のフロントエンド 111" />&lt;h1 id="第一百一十一日">第一百一十一日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html-如何创建分区响应图">&lt;strong>Question:&lt;/strong> HTML 如何创建分区响应图&lt;/h3>
+&lt;ul>
+&lt;li>分区响应图:一张图片,分成多个模块,点击模块可以链接到不同的 URL 地址&lt;/li>
+&lt;li>实现: &lt;code>map&lt;/code>, &lt;code>area&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;./1.png&amp;#34;&lt;/span> &lt;span class="na">usemap&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#myMap&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">map&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;myMap&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">area&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://baidu.com&amp;#34;&lt;/span> &lt;span class="na">shape&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;rect&amp;#34;&lt;/span> &lt;span class="na">coords&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;50,106,220,273&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">area&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://google.com&amp;#34;&lt;/span> &lt;span class="na">shape&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;rect&amp;#34;&lt;/span> &lt;span class="na">coords&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;260,106,430,275&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">area&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://juejin.im&amp;#34;&lt;/span> &lt;span class="na">shape&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;default&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">map&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-table-布局">&lt;strong>Question:&lt;/strong> table 布局&lt;/h3>
+&lt;ul>
+&lt;li>在 div + css 布局成为主流之前，基本都是以 table 布局为主&lt;/li>
+&lt;li>table 布局对于排版比较友好，水平居中、垂直居中都可以利用 table 的属性来完成。&lt;/li>
+&lt;li>缺点也是十分明显
+&lt;ul>
+&lt;li>&lt;code>table&lt;/code> 布局往往是 table 嵌套 table，会有非常多的 DOM 节点，性能糟糕&lt;/li>
+&lt;li>语义化不明，本身就是标签错误的用法。因此对 SEO 不友好&lt;/li>
+&lt;li>DOM 操作困难，tr、td 中要寻找到目标 DOM 元素非常困难，代码没有维护性&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-用-js-编写一个红绿灯程序">&lt;strong>Question:&lt;/strong> 用 js 编写一个红绿灯程序&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">t&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">resolve&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="nx">t&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * 循环显示红绿灯
+&lt;/span>&lt;span class="cm"> * @param {number} green 绿灯显示毫秒数
+&lt;/span>&lt;span class="cm"> * @param {number} yellow 黄灯显示毫秒数
+&lt;/span>&lt;span class="cm"> * @param {number} red 红灯显示毫秒数
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">light&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">green&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">15000&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">yellow&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">3000&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">red&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">10000&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;green&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">await&lt;/span> &lt;span class="nx">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">green&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;yellow&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">status&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="kr">await&lt;/span> &lt;span class="nx">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">yellow&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;red&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">status&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="kr">await&lt;/span> &lt;span class="nx">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">red&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;green&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">status&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">light&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3000&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="question-浏览器缓存读取规则">&lt;strong>Question:&lt;/strong> 浏览器缓存读取规则&lt;/h3>
+&lt;p>浏览器缓存可以在网络请求、浏览器响应中优化性能。&lt;/p>
+&lt;h4 id="缓存位置">缓存位置&lt;/h4>
+&lt;p>从缓存位置上来说分为四种，并且各自有优先级，当依次查找缓存且都没有命中的时候，才会去请求网络。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Service Worker&lt;/code>&lt;/li>
+&lt;li>&lt;code>Memory Cache&lt;/code>&lt;/li>
+&lt;li>&lt;code>Disk Cache&lt;/code>&lt;/li>
+&lt;li>&lt;code>Push Cache&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h5 id="service-worker">&lt;code>Service Worker&lt;/code>&lt;/h5>
+&lt;p>Service Worker 是运行在浏览器背后的独立线程，一般可以用来实现缓存功能。使用 Service Worker 的话，传输协议必须为 &lt;code>HTTPS&lt;/code>。因为 Service Worker 中涉及到请求拦截，所以必须使用 HTTPS 协议来保障安全。&lt;/p>
+&lt;ul>
+&lt;li>Service Worker 的缓存与浏览器其他内建的缓存机制不同，它可以让我们自由控制缓存哪些文件、如何匹配缓存、如何读取缓存，并且缓存是持续性的。&lt;/li>
+&lt;/ul>
+&lt;p>Service Worker 实现缓存功能一般分为三个步骤：首先需要先注册 Service Worker，然后监听到 install 事件以后就可以缓存需要的文件，那么在下次用户访问的时候就可以通过拦截请求的方式查询是否存在缓存，存在缓存的话就可以直接读取缓存文件，否则就去请求数据。&lt;/p>
+&lt;p>当 Service Worker 没有命中缓存的时候，我们需要去调用 fetch 函数获取数据。也就是说，如果我们没有在 Service Worker 命中缓存的话，会根据缓存查找优先级去查找数据。但是不管我们是从 Memory Cache 中还是从网络请求中获取的数据，浏览器都会显示我们是从 Service Worker 中获取的内容。&lt;/p>
+&lt;h5 id="memory-cache">&lt;code>Memory Cache&lt;/code>&lt;/h5>
+&lt;p>Memory Cache 也就是内存中的缓存，主要包含的是当前中页面中已经抓取到的资源,例如页面上已经下载的样式、脚本、图片等。读取内存中的数据肯定比磁盘快,内存缓存虽然读取高效，可是缓存持续性很短，会随着进程的释放而释放。 &lt;strong>关闭 Tab 页面，内存中的缓存就被释放了。&lt;/strong>&lt;/p>
+&lt;p>内存缓存中有一块重要的缓存资源是 preloader 相关指令（例如&lt;code>&amp;lt;link rel=&amp;quot;prefetch&amp;quot;&amp;gt;&lt;/code>）下载的资源。可以一边解析 js/css 文件，一边网络请求下一个资源。&lt;/p>
+&lt;p>需要注意的事情是，内存缓存在缓存资源时并不关心返回资源的 HTTP 缓存头 Cache-Control 是什么值，同时资源的匹配也并非仅仅是对 URL 做匹配，还可能会对 Content-Type，CORS 等其他特征做校验。&lt;/p>
+&lt;h5 id="disk-cache">&lt;code>Disk Cache&lt;/code>&lt;/h5>
+&lt;p>Disk Cache 也就是存储在硬盘中的缓存，读取速度慢点，但是什么都能存储到磁盘中，比之 Memory Cache 胜在容量和存储时效性上。&lt;/p>
+&lt;p>在所有浏览器缓存中，Disk Cache 覆盖面基本是最大的。它会根据 HTTP Herder 中的字段判断哪些资源需要缓存，哪些资源可以不请求直接使用，哪些资源已经过期需要重新请求。并且即使在跨站点的情况下，相同地址的资源一旦被硬盘缓存下来，就不会再次去请求数据。绝大部分的缓存都来自 Disk Cache&lt;/p>
+&lt;p>浏览器会把哪些文件进入内存中？哪些进入硬盘中：&lt;/p>
+&lt;ul>
+&lt;li>对于大文件来说，大概率是不存储在内存中的，反之优先&lt;/li>
+&lt;li>当前系统内存使用率高的话，文件优先存储进硬盘&lt;/li>
+&lt;/ul>
+&lt;h5 id="push-cache">&lt;code>Push Cache&lt;/code>&lt;/h5>
+&lt;p>Push Cache（推送缓存）是 HTTP/2 中的内容，当以上三种缓存都没有命中时，它才会被使用。它只在会话（Session）中存在，一旦会话结束就被释放，并且缓存时间也很短暂，在 Chrome 浏览器中只有 5 分钟左右，同时它也并非严格执行 HTTP 头中的缓存指令。&lt;/p>
+&lt;h4 id="缓存过程分析">缓存过程分析&lt;/h4>
+&lt;p>浏览器与服务器通信的方式为应答模式，即是：浏览器发起 HTTP 请求 – 服务器响应该请求，那么浏览器怎么确定一个资源该不该缓存，如何去缓存呢？浏览器第一次向服务器发起该请求后拿到请求结果后，将请求结果和缓存标识存入浏览器缓存，浏览器对于缓存的处理是根据第一次请求资源时返回的响应头来确定的。&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 130;
+flex-basis: 314px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-111/http-cache.png" data-size="670x512">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-111/http-cache.png"
+width="670"
+height="512"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-111/http-cache_huc3a9f09b5c09e96754450c7057b5dd54_165132_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-111/http-cache_huc3a9f09b5c09e96754450c7057b5dd54_165132_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>浏览器每次发起请求，都会先在浏览器缓存中查找该请求的结果以及缓存标识&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>浏览器每次拿到返回的请求结果都会将该结果和缓存标识存入浏览器缓存中&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map" target="_blank" rel="noopener"
+>&lt;!-- raw HTML omitted -->: The Image Map element - HTML: HyperText Markup Language | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903747357769742?utm_source=gold_browser_extension" target="_blank" rel="noopener"
+>一文读懂前端缓存&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.jianshu.com/p/54cc04190252" target="_blank" rel="noopener"
+>深入理解浏览器的缓存机制&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 110</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-110/</link><pubDate>Tue, 04 Jan 2022 11:10:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-110/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-110/frontend-110-cover.jpg" alt="Featured image of post 毎日のフロントエンド 110" />&lt;h1 id="第一百一十日">第一百一十日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-svg有什么运用场景">&lt;strong>Question:&lt;/strong> &lt;code>svg&lt;/code>有什么运用场景&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">svg&lt;/span> &lt;span class="na">xmlns&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://www.w3.org/2000/svg&amp;#34;&lt;/span> &lt;span class="na">version&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;1.1&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
