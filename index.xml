@@ -1,4 +1,143 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 06 Jan 2022 12:12:18 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 112</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-112/</link><pubDate>Thu, 06 Jan 2022 12:12:18 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-112/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-112/frontend-112-cover.jpg" alt="Featured image of post 毎日のフロントエンド 112" />&lt;h1 id="第一百一十二日">第一百一十二日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 07 Jan 2022 15:17:10 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 113</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-113/</link><pubDate>Fri, 07 Jan 2022 15:17:10 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-113/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-113/frontend-113-cover.jpg" alt="Featured image of post 毎日のフロントエンド 113" />&lt;h1 id="第一百一十三日">第一百一十三日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-在-html5-中如何组合标题用哪个元素">&lt;strong>Question:&lt;/strong> 在 HTML5 中如何组合标题？用哪个元素&lt;/h3>
+&lt;p>&lt;code>&amp;lt;hgroup&amp;gt;&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>HTML &lt;code>&amp;lt;hgroup&amp;gt;&lt;/code> element 代表文档章节所属的多级别的目录，它将多个&lt;!-- raw HTML omitted -->至&lt;!-- raw HTML omitted -->的子元素组装到一起。&lt;/li>
+&lt;li>对区段（section）的标题进行组合&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-elementclass-和-id-选择器三者的区别是什么分别在什么时候用">&lt;strong>Question:&lt;/strong> element、class 和 id 选择器三者的区别是什么？分别在什么时候用&lt;/h3>
+&lt;p>标签选择器的格式为 &lt;code>element { ... }&lt;/code>，class 选择器的格式为 &lt;code>.class-name { ... }&lt;/code>，id 选择器的格式为 &lt;code>#identifier { ... }&lt;/code>&lt;/p>
+&lt;h3 id="question-3-ways-to-elegantly-center-a-div-horizontally-and-vertically">&lt;strong>Question:&lt;/strong> 3 ways to elegantly center a div (horizontally and vertically)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">centered&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="k">grid&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="n">place-items&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">also-centered&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">flex&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">justify-content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">align-items&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">centered-absolute&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">absolute&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">transform&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">translate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">-50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">-50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-用-js-写一个事件侦听器的方法">&lt;strong>Question:&lt;/strong> 用 js 写一个事件侦听器的方法&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * 一个简单的发布订阅者模式
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kr">interface&lt;/span> &lt;span class="nx">IHandler&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">fn&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">Function&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">export&lt;/span> &lt;span class="k">default&lt;/span> &lt;span class="kr">class&lt;/span> &lt;span class="nx">EventUtils&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * 键值对 对应事件名称以及数组的值
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kr">static&lt;/span> &lt;span class="nx">handler&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * on 方法 添加监听事件
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kr">static&lt;/span> &lt;span class="nx">on&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">string&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">handler&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">Function&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">EventUtils&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">IHandler&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">fn&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">handler&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;on&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">EventUtils&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">includes&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">EventUtils&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">EventUtils&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">EventUtils&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[].&lt;/span>&lt;span class="nx">concat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">EventUtils&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * off 方法 移除监听事件
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kr">static&lt;/span> &lt;span class="nx">off&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">string&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">handler&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">Function&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">EventUtils&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">event&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">any&lt;/span>&lt;span class="p">[]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">EventUtils&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">event&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">event&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">fn&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">handler&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">splice&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">EventUtils&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * emit 方法 触发监听的事件
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kr">static&lt;/span> &lt;span class="nx">emit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">string&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">any&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">EventUtils&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">event&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">EventUtils&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">newEvent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">event&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span>
+&lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span>
+&lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">IHandler&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">number&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fn&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 如果有只监听一次的事件
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">type&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;once&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">newEvent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">hasOnce&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;span class="nx">event&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span>
+&lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span>
+&lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">some&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">IHandler&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">type&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;once&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">hasOnce&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">EventUtils&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">newEvent&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// 这里做一个执行完成之后的 once代码 off 的操作
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">EventUtils&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="cm">/**
+&lt;/span>&lt;span class="cm"> * once 方法 添加事件 只会被执行一次
+&lt;/span>&lt;span class="cm"> */&lt;/span>
+&lt;span class="kr">static&lt;/span> &lt;span class="nx">once&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">string&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">handler&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">Function&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">EventUtils&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">on&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">handler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">EventUtils&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">handler&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="s1">&amp;#39;type&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;once&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="question-shim-和-polyfill-有什么区别它们分别有什么用">&lt;strong>Question:&lt;/strong> shim 和 polyfill 有什么区别？它们分别有什么用&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;code>polyfill&lt;/code>是&lt;code>shim&lt;/code>的一种.目的都是在没有相关 API 的环境上顺利执行代码&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>shim:是 js 库, 抹平不同平台的差异性，提供一致对外的接口调用&lt;/p>
+&lt;ul>
+&lt;li>用库定义的 api 去执行一些操作, 如 jquery,$.ajax,底层用 ActiveXObject 或 XMLHttpRequest 实现,用户不直接用标准 API,而是用库定义的 api,具体环境判断和实现交给库&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>polyfill: 用 js 模拟标准 api，抹平环境差异，用户仍是使用标准 api(在旧版浏览器上提高可用性)&lt;/p>
+&lt;ul>
+&lt;li>比如发现&lt;code>window.requestAnimationFrame&lt;/code>不存在,polyfill 会用 setTimeout 覆写&lt;code>window.requestAnimationFrame&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>polyfill 的好处在于，可以动态监测浏览器版本,低版本加载,而在高本版浏览器可以不加载这段 js，用户代码不修改直接可用&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>shim 则是无论浏览器版本都要加载这段 js，因为用的 api 是库定义的&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/hgroup" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;hgroup&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/zloirock/core-js" target="_blank" rel="noopener"
+>zloirock/core-js: Standard Library - polyfill&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 112</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-112/</link><pubDate>Thu, 06 Jan 2022 12:12:18 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-112/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-112/frontend-112-cover.jpg" alt="Featured image of post 毎日のフロントエンド 112" />&lt;h1 id="第一百一十二日">第一百一十二日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-checkbox有几种状态吗它们分别用来表示什么">&lt;strong>Question:&lt;/strong> &lt;code>checkbox&lt;/code>有几种状态吗？它们分别用来表示什么&lt;/h3>
 &lt;p>&lt;code>checkbox&lt;/code>状态的属性有&lt;code>checked&lt;/code>，&lt;code>disabled&lt;/code>和&lt;code>indeterminate&lt;/code>:&lt;/p>
