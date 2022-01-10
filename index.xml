@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 09 Jan 2022 17:32:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 115</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-115/</link><pubDate>Sun, 09 Jan 2022 17:32:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-115/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-115/frontend-115-cover.jpg" alt="Featured image of post 毎日のフロントエンド 115" />&lt;h1 id="第一百一十五日">第一百一十五日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 10 Jan 2022 10:43:28 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 116</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-116/</link><pubDate>Mon, 10 Jan 2022 10:43:28 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-116/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-116/frontend-116-cover.jpg" alt="Featured image of post 毎日のフロントエンド 116" />&lt;h1 id="第一百一十六日">第一百一十六日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-页面布局中的结构与表现分离那么什么是结构什么是表现">&lt;strong>Question:&lt;/strong> 页面布局中的结构与表现分离，那么什么是结构？什么是表现&lt;/h3>
+&lt;ul>
+&lt;li>结构，是由 HTML 或者 XHTML 之类的标记语言负责创建，标签对网页内容的语义含义做出了描述
+&lt;ul>
+&lt;li>例如： 标签表达了这“这是一个文本段落”，但只是表达了其语义，并没有包含关于内容如何显示的信息&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>表现，CSS 描述页面内容应该如何呈现
+&lt;ul>
+&lt;li>例如： 可以定义这样一个 CSS 来声明：“文本段应该使用灰色的 Arial 字体和另外几张 scan-serif 字体来显示&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-自定义鼠标指针的图案">&lt;strong>Question:&lt;/strong> 自定义鼠标指针的图案&lt;/h3>
+&lt;p>&lt;code>cursor: url() ,auto&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>url 是自定义光标图案的绝对路径，auto 是默认光标，当我们自定义的光标不起作用时，就用默认光标代替&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-使用-js-来截图怎样截可见区域和整个页面">&lt;strong>Question:&lt;/strong> 使用 js 来截图？怎样截可见区域和整个页面&lt;/h3>
+&lt;p>&lt;a class="link" href="https://github.com/puppeteer/puppeteer" target="_blank" rel="noopener"
+>puppeteer/puppeteer: Headless Chrome Node.js API&lt;/a>&lt;/p>
+&lt;h3 id="question-前端加密的常见场景和方法">&lt;strong>Question:&lt;/strong> 前端加密的常见场景和方法&lt;/h3>
+&lt;h4 id="场景-密码传输">场景-密码传输&lt;/h4>
+&lt;ul>
+&lt;li>前端加密、后端解密后计算密码字符串的 MD5/MD6 存入数据库；&lt;code>Base64 / Unicode+1&lt;/code>&lt;/li>
+&lt;li>直接前端使用一种稳定算法加密成唯一值、后端直接将加密结果进行 MD5/MD6，全程密码明文不出现在程序中。直接使用 MD5/MD6 之类的方式取 Hash ，让后端存 Hash 的 Hash 。&lt;/li>
+&lt;/ul>
+&lt;h4 id="场景-数据包加密">场景-数据包加密&lt;/h4>
+&lt;p>&lt;code>HTTPS&lt;/code>&lt;/p>
+&lt;h4 id="场景-展示成果加密">场景-展示成果加密&lt;/h4>
+&lt;ul>
+&lt;li>将文本内容进行展示层加密，利用字体的引用特点，把拿给爬虫的数据变成“乱码”&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903654810468359" target="_blank" rel="noopener"
+>Web 端反爬虫技术方案&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903764973846542" target="_blank" rel="noopener"
+>前端加密那点事&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/brix/crypto-js" target="_blank" rel="noopener"
+>brix/crypto-js: JavaScript library of crypto standards.&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 115</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-115/</link><pubDate>Sun, 09 Jan 2022 17:32:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-115/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-115/frontend-115-cover.jpg" alt="Featured image of post 毎日のフロントエンド 115" />&lt;h1 id="第一百一十五日">第一百一十五日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-去除-html-标签之间换行产生的空格">&lt;strong>Question:&lt;/strong> 去除 html 标签之间换行产生的空格&lt;/h3>
 &lt;p>&lt;figure
