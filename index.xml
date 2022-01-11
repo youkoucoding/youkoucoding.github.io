@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 10 Jan 2022 10:43:28 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 116</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-116/</link><pubDate>Mon, 10 Jan 2022 10:43:28 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-116/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-116/frontend-116-cover.jpg" alt="Featured image of post 毎日のフロントエンド 116" />&lt;h1 id="第一百一十六日">第一百一十六日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 11 Jan 2022 12:05:24 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 117</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/</link><pubDate>Tue, 11 Jan 2022 12:05:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/frontend-117-cover.jpg" alt="Featured image of post 毎日のフロントエンド 117" />&lt;h1 id="第一百一十七日">第一百一十七日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-frame-和-iframe-有什么区别">&lt;strong>Question:&lt;/strong> frame 和 iframe 有什么区别&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;code>frame&lt;/code> 在 HTML5 中已经被废弃。现在比较推荐使用 iframe 来代替 frame&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>两者都可以在一个 HTML 中插入引入另一个 HTML 的文档内容。frame 必须要放在 frameset 中使用，可以想象把浏览器的窗口进行切割&lt;/li>
+&lt;li>&lt;code>frame&lt;/code> 不能脱离 frameset 使用，并且不能放在 body 中，否则不能正常显示，而 iframe 则没有这个限制&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-css-中的字母c代表什么">&lt;strong>Question:&lt;/strong> CSS 中的字母&amp;quot;C&amp;quot;代表什么&lt;/h3>
+&lt;p>CSS(Cascading Style Sheets)。&amp;ldquo;C&amp;rdquo; 即为 &lt;code>Cascading&lt;/code> 层叠的意思，编写 CSS 的时候，写在后面的样式会覆盖前面的样式即层叠。&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-documentwrite和innerhtml有什么区别">&lt;strong>Question:&lt;/strong> &lt;code>document.write&lt;/code>和&lt;code>innerHTML&lt;/code>有什么区别&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>document.write()&lt;/code> &lt;strong>是 DOM 方法&lt;/strong> 将需要展示的内容添加到 HTML 文档流中。对于一个已经加载完成的页面，document.write() 会&lt;strong>重新绘制整个页面&lt;/strong>。自然其性能就不是很好。&lt;/p>
+&lt;ul>
+&lt;li>直接写入到页面的内容流，如果在写之前没有调用 document.open, 浏览器会自动调用 open。每次写完关闭之后重新调用该函数，会导致页面被重写。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Element.innerHTML&lt;/code> &lt;strong>是 DOM 属性&lt;/strong>, 替换某个元素中的内容，简单地认为是 &lt;code>&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&lt;/code> 标签中间的内容。&lt;strong>也即只会影响到所指定的元素&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>两者都可向页面输出内容,&lt;code>innerHTML&lt;/code>比&lt;code>document.write()&lt;/code>更灵活&lt;/p>
+&lt;ul>
+&lt;li>当文档加载时调用 document.write 直接向页面输出内容，文档加载结束后调用 document.write 输出内容会重写整个页面。通常按照两种的方式使用 write() 方法：一是在使用该方在文档中输出 HTML，二是在调用该方法的的窗口之外的窗口、框架中产生新文档（务必使用 close 关闭文档）。&lt;/li>
+&lt;li>在读模式下，innerHTML 属性返回与调用元素的所有子节点对应的 HTML 标记，在写模式下，innerHTML 会根据指定的值创建新的 DOM 树替换调用元素原先的所有子节点。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>两者都可动态包含外部资源如 JavaScript 文件&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>document.write&lt;/code>插入&lt;code>&amp;lt;script&amp;gt;&lt;/code>元素会自动执行其中的脚本&lt;/li>
+&lt;li>大多数浏览器中，通过&lt;code>innerHTML&lt;/code>插入&lt;code>&amp;lt;script&amp;gt;&lt;/code>元素并不会执行其中的脚本。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;iframe&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/write" target="_blank" rel="noopener"
+>document.write - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/innerHTML" target="_blank" rel="noopener"
+>element.innerHTML - Web API 接口参考 | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 116</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-116/</link><pubDate>Mon, 10 Jan 2022 10:43:28 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-116/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-116/frontend-116-cover.jpg" alt="Featured image of post 毎日のフロントエンド 116" />&lt;h1 id="第一百一十六日">第一百一十六日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-页面布局中的结构与表现分离那么什么是结构什么是表现">&lt;strong>Question:&lt;/strong> 页面布局中的结构与表现分离，那么什么是结构？什么是表现&lt;/h3>
 &lt;ul>
