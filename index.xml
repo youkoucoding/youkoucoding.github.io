@@ -1,4 +1,293 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 11 Jan 2022 12:05:24 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 117</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/</link><pubDate>Tue, 11 Jan 2022 12:05:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/frontend-117-cover.jpg" alt="Featured image of post 毎日のフロントエンド 117" />&lt;h1 id="第一百一十七日">第一百一十七日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 12 Jan 2022 17:11:59 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 118</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-118/</link><pubDate>Wed, 12 Jan 2022 17:11:59 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-118/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-118/frontend-118-cover.jpg" alt="Featured image of post 毎日のフロントエンド 118" />&lt;h1 id="第一百一十八日">第一百一十八日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5-的跟踪元素track-轨道">&lt;strong>Question:&lt;/strong> HTML5 的跟踪元素&lt;code>&amp;lt;track&amp;gt;&lt;/code> (轨道)&lt;/h3>
+&lt;p>跟踪元素 - 向视频和音频提供字幕和说明文字的方法&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">video&lt;/span> &lt;span class="na">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;320&amp;#34;&lt;/span> &lt;span class="na">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;240&amp;#34;&lt;/span> &lt;span class="na">controls&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">source&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;forrest_gump.mp4&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;video/mp4&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">source&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;forrest_gump.ogg&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;video/ogg&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">track&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;subtitles_en.vtt&amp;#34;&lt;/span> &lt;span class="na">kind&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;subtitles&amp;#34;&lt;/span> &lt;span class="na">srclang&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;en&amp;#34;&lt;/span> &lt;span class="na">label&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;English&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">track&lt;/span>
+&lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;subtitles_no.vtt&amp;#34;&lt;/span>
+&lt;span class="na">kind&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;subtitles&amp;#34;&lt;/span>
+&lt;span class="na">srclang&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;no&amp;#34;&lt;/span>
+&lt;span class="na">label&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;Norwegian&amp;#34;&lt;/span>
+&lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">video&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-哪些元素能触发-gpu-硬件加速">&lt;strong>Question:&lt;/strong> 哪些元素能触发 GPU 硬件加速&lt;/h3>
+&lt;ul>
+&lt;li>GPU: 用于渲染页面&lt;/li>
+&lt;li>在 css 中使用 &lt;code>transform: translateZ(0)&lt;/code>, &lt;code>opacity&lt;/code>, &lt;code>filter&lt;/code>等,可以开启 GPU 硬件加速&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">Javascript&lt;/h2>
+&lt;h3 id="question-使用正则去掉-html-中标签与标签之间的空格">&lt;strong>Question:&lt;/strong> 使用正则去掉 html 中标签与标签之间的空格&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">htmlStr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/&amp;gt;\s+&amp;lt;/g&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;gt;&amp;lt;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;h3 id="question-骨架屏---skeleton-screen">&lt;strong>Question:&lt;/strong> 骨架屏 - Skeleton Screen&lt;/h3>
+&lt;h4 id="为什么需要">为什么需要&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>在最开始关于 MIT 2014 年的研究中已有提到，用户大概会在 200ms 内获取到界面的具体关注点，在数据获取或页面加载完成之前，给用户首先展现骨架屏，骨架屏的样式、布局和真实数据渲染的页面保持一致，这样用户在骨架屏中获取到关注点，并能够预知页面什么地方将要展示文字什么地方展示图片，这样也就能够将关注焦点移到感兴趣的位置。当真实数据获取后，用真实数据渲染的页面替换骨架屏，如果整个过程在 1s 以内，用户几乎感知不到数据的加载过程和最终渲染的页面替换骨架屏，而在用户的感知上，出现骨架屏那一刻数据已经获取到了，而后只是数据渐进式的渲染出来。这样用户感知页面加载更快了。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>三大框架有一个共同的特点，都是 JS 驱动，在 JS 代码解析完成之前，页面不会展示任何内容，也就是所谓的白屏。用户是极其不喜欢看到白屏的，什么都没有展示，用户很有可能怀疑网络或者应用出了什么问题。 例如： Vue，在应用启动时，Vue 会对组件中的 data 和 computed 中状态值通过 &lt;code>Object.defineProperty&lt;/code> 方法转化成 set、get 访问属性，以便对数据变化进行监听。而这一过程都是在启动应用时完成的，这也势必导致页面启动阶段比非 JS 驱动（比如 jQuery 应用）的页面要慢一些&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="如何构建">如何构建&lt;/h4>
+&lt;blockquote>
+&lt;p>手写 skeleton Screen 的代价：每次需求的变更我们不仅需要修改业务代码， 同时也要去修改骨架屏的样式和布局，这往往是比较机械重复的工作，手写骨架屏增加了维护成本。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>那么为什么不直接使用服务端渲染&lt;code>nuxtjs&lt;/code> &lt;code>nextjs&lt;/code>等，来加快内容展现？&lt;/p>
+&lt;ul>
+&lt;li>服务端渲染主要有两个目的，一是 SEO，二是加快内容展现。在带来这两个好处的同时，也需要评估服务端渲染的成本，首先需要服务端的支持，因此涉及到服务构建、部署等，同时如果 web 项目是一个流量较大的网站，也需要考虑服务器的负载，以及相应的缓存策略。尤其是，不同用户看到的页面也是不一样的，也就是所谓的千人千面，也为缓存造成了一定困难。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>为什么不使用 预渲染（prerender）&lt;/p>
+&lt;ul>
+&lt;li>所谓预渲染，就是在项目的构建过程中，通过一些渲染机制，比如 puppeteer&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> 或则 jsdom&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> 将页面在构建的过程中就渲染好，然后插入到 html 中，这样在页面启动之前首先看到的就是预渲染的页面了。&lt;/li>
+&lt;li>预渲染渲染的页面数据是在构建过程中就已经打包到了 html 中， 当真实访问页面的时候，真实数据可能已经和预渲染的数据有了很大的出入，而且预渲染的页面也是一个不可交互的页面，在页面没有启动之前，用户无法和预渲染的页面进行任何交互，预渲染页面中的数据反而会影响到用户获取真实的信息，当涉及到一些重要数据，甚至会导致用户做出一些错误的决定。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="生成骨架屏基本方案">生成骨架屏基本方案&lt;/h5>
+&lt;p>通过 puppeteer&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> 在服务端使用 &lt;code>headless Chrome&lt;/code> 打开开发中的需要生成骨架屏的页面，在等待页面加载渲染完成之后，在保留页面布局样式的前提下，通过对页面中元素进行删减或增添，对已有元素通过层叠样式进行覆盖，这样达到在不改变页面布局下，隐藏图片和文字，通过样式覆盖，使得其展示为灰色块。然后将修改后的 HTML 和 CSS 样式提取出来，这样就可以生成想要的骨架屏了。&lt;/p>
+&lt;h5 id="具体生成过程">具体生成过程&lt;/h5>
+&lt;ul>
+&lt;li>
+&lt;p>将页面划分为不同的块，然后分别对每个块进行处理，这样不会破坏页面整体的样式和布局，当我们最终生成骨架屏后，骨架屏的布局样式将和真实页面的布局样式完全一致，这样就达到了复用样式及页面布局的目的。&lt;/p>
+&lt;ul>
+&lt;li>文本块：仅包含&lt;strong>文本节点&lt;/strong>（NodeType 为 Node.TEXT_NODE）的元素（NodeType 为 Node.ELEMENT_NODE），一个文本块可能是一个 p 元素也可能是 div 等。文本块将会被转化为灰色条纹&lt;/li>
+&lt;li>图片块：图片块是很好区分的，任何 img 元素都将被视为图片块，图片块的颜色将被处理成配置的颜色，形状也被修改为配置的矩形或者圆型&lt;/li>
+&lt;li>按钮块：任何 button 元素、 type 为 button 的 input 元素，role 为 button 的 a 元素，都将被视为按钮块。按钮块中的文本块不在处理&lt;/li>
+&lt;li>svg 块：任何最外层是 svg 的元素都被视为 svg 块&lt;/li>
+&lt;li>伪类元素块：任何伪类元素都将视为伪类元素块，如 ::before 或者 ::after&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ol>
+&lt;li>前提：将生成骨架屏的脚本，插入到 &lt;code>puppeteer&lt;/code> 打开的页面中，这样才能够执行脚本，并最终生成骨架屏。&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>puppetter 原生方法，&lt;code>page.addScriptTag(options)&lt;/code>，插入一段 js 脚本的 url 或者是相对/绝对路径，也可以直接是 js 脚本的内容。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js"> &lt;span class="kr">async&lt;/span> &lt;span class="nx">makeSkeleton&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">page&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">defer&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">options&lt;/span>
+&lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addScriptTag&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">content&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">scriptContent&lt;/span> &lt;span class="p">})&lt;/span>
+&lt;span class="kr">await&lt;/span> &lt;span class="nx">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">defer&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="kr">await&lt;/span> &lt;span class="nx">page&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">evaluate&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">Skeleton&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">genSkeleton&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>通过上面插入的脚本，同时在插入的脚本中提供了一个全局对象 &lt;code>Skeleton&lt;/code>，这样就可以直接通过 &lt;code>page.evaluate&lt;/code> 方法来执行脚本内容并最终生成骨架页面了。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ol start="2">
+&lt;li>文本块的骨架结构生成&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>任何只包含文本节点的元素都将视为文本块，在确定某个元素是文本块后，下一步就是通过一些 CSS 样式，以及元素的增减将其修改为骨架样式。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在生成文本块骨架屏之前，我们首先需要了解一些基本的参数。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>单行文本内容的高度，可以通过 &lt;code>fontSize&lt;/code> 获取到&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>单行文本内容加空白间隙的高度，可以通过 &lt;code>lineHeight&lt;/code> 获取到&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>p&lt;/code> 元素总共有多少行文本，也就是所谓行数，这个可以通过（height - paddingTop - paddingBottom）/ lineHeight 计算出大致结果&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>文本的 textAlign 属性&lt;/p>
+&lt;blockquote>
+&lt;p>fontSize、lineHeight、paddingTop、paddingBottom 都可以通过 getComputedStyle 获取&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>元素的高度 height 可以通过 getBoundingClientRect 获取&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a class="link" href="CSS-secrets.png" >@Lea Verou - css secretz&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>文本块的骨架屏就是是通过线性渐变来绘制的。核心简化代码：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">textHeightRatio&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">parseFloat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fontSize&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="nb">parseFloat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">lineHeight&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">firstColorPoint&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(((&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">textHeightRatio&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">toFixed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">decimal&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">secondColorPoint&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;span class="p">((&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">textHeightRatio&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">textHeightRatio&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span>
+&lt;span class="mi">100&lt;/span>
+&lt;span class="p">).&lt;/span>&lt;span class="nx">toFixed&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">decimal&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">rule&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sb">`{
+&lt;/span>&lt;span class="sb"> background-image: linear-gradient(
+&lt;/span>&lt;span class="sb"> transparent &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">firstColorPoint&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">%, &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">color&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb"> 0%,
+&lt;/span>&lt;span class="sb"> &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">color&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb"> &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">secondColorPoint&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">%, transparent 0%);
+&lt;/span>&lt;span class="sb"> background-size: 100% &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">lineHeight&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">;
+&lt;/span>&lt;span class="sb"> position: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">position&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">;
+&lt;/span>&lt;span class="sb"> background-origin: content-box;
+&lt;/span>&lt;span class="sb"> background-clip: content-box;
+&lt;/span>&lt;span class="sb"> background-color: transparent;
+&lt;/span>&lt;span class="sb"> color: transparent;
+&lt;/span>&lt;span class="sb"> background-repeat: repeat-y;
+&lt;/span>&lt;span class="sb">}`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>首先计算了 lineHeight 和 fontSize 等一些样式参数，通过这些参数我们计算出了文本占整个行高的比值，也就是 textHeightRadio，有了这一比值，就可以知道灰色条纹的分界点&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>CSS Secrets&lt;/strong> “If a color stop has a position that is less than the specied position of any color stop before it in the list, set its position to be equal to the largest speci ed position of any color stop before it.” — CSS Images Level 3 (&lt;a class="link" href="http://w3.org/TR/css3-images" target="_blank" rel="noopener"
+>http://w3.org/TR/css3-images&lt;/a>)&lt;/p>
+&lt;/blockquote>
+&lt;p>在线性渐变中，如果将线性渐变的起始点设置小于前一个颜色点的起始值，或者设置为 0%，那么线性渐变将会消失，取而代之的将是两条颜色分明的条纹，也就是说不再有线性渐变。&lt;/p>
+&lt;p>绘制文本块的时候，backgroundSize 宽度为 100%， 高度为 lineHeight，也就是灰色条纹加透明条纹的高度是 lineHeight。虽然把灰色条纹绘制出来了，但是，文字依然显示，在最终骨架样式效果出现之前，我们还需要隐藏文字，设置 color：‘transparent’ 这样文字就和背景色一致，最终显示得也就是灰色条纹了。&lt;/p>
+&lt;p>根据 &lt;code>lineCount&lt;/code> 可以判断文本块是单行文本还是多行，在处理单行文本的时候，由于文本的宽度并没有整行宽度，因此，针对单行文本，还需要计算出文本的宽度，然后设置灰色条纹的宽度为文本宽度，这样骨架样式的效果才能够更加接近文本样式。&lt;/p>
+&lt;hr>
+&lt;ol start="3">
+&lt;li>图片块的骨架生成&lt;/li>
+&lt;/ol>
+&lt;p>选择了将一张 1 * 1 像素的 gif 透明图片，转化成 dataUrl ，然后将其赋予给 IMG 元素的 src 特性上，同时设置图片的 width 和 height 特性为之前图片的宽高，将背景色调至为骨架样式所配置的颜色值&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 1 * 1像素的 base64 格式的透明 gif 图片
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="s1">&amp;#39;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">imgHandler&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ele&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">color&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">shape&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">shapeOpposite&lt;/span> &lt;span class="p">})&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">width&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">height&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ele&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getBoundingClientRect&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">attrs&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">width&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">height&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">src&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">finalShape&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;span class="nx">shapeOpposite&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">indexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ele&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">getOppositeShape&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">shape&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">shape&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">setAttributes&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ele&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">attrs&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">className&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">CLASS_NAME_PREFEX&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;image&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">shapeName&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">CLASS_NAME_PREFEX&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">finalShape&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">rule&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sb">`{
+&lt;/span>&lt;span class="sb"> background: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">color&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb"> !important;
+&lt;/span>&lt;span class="sb"> }`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">addStyle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`.&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">className&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">rule&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">shapeStyle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">finalShape&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">addClassName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ele&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">className&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">shapeName&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">ele&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hasAttribute&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;alt&amp;#39;&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">ele&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">removeAttribute&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;alt&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ol start="4">
+&lt;li>svg 块骨架结构&lt;/li>
+&lt;/ol>
+&lt;p>判断 svg 元素 hidden 属性是否为 true，如果为 true，说明该元素不展示的，可以直接删除该元素&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">width&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nx">height&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nx">ele&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getAttribute&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;hidden&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;true&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">removeElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ele&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果不是隐藏的元素，那么我们将会把 svg 元素内部所有元素删除，减少最终生成的骨架页面体积，其次，设置 svg 元素的宽、高和形状等&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">shapeClassName&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">CLASS_NAME_PREFEX&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">shape&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">shapeStyle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">shape&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">assign&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ele&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">px2relativeUtil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">width&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cssUnit&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">decimal&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="nx">height&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">px2relativeUtil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">height&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cssUnit&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">decimal&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">addClassName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ele&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">shapeClassName&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">color&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">TRANSPARENT&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">setOpacity&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ele&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">className&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">CLASS_NAME_PREFEX&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;svg&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">rule&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sb">`{
+&lt;/span>&lt;span class="sb"> background: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">color&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb"> !important;
+&lt;/span>&lt;span class="sb"> }`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">addStyle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`.&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">className&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">rule&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">ele&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">className&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ol start="5">
+&lt;li>优化细节&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>首先，由上面一些代码可以看出，在生成骨架页面的过程中，将所有的共用样式通过 &lt;code>addStyle&lt;/code> 方法缓存起来，最后在生成骨架屏的时候，统一通过 style 标签插入到骨架屏中。这样保证了样式尽可能多的复用&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>其次，在处理列表的时候，为了生成骨架屏尽可能美观，对列表进行了同化处理，也就是说将 list 中所有的 listItem 都是同一个 listItem 的克隆。这样生成的 list 的骨架屏样式就更加统一了&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>骨架屏仅是一种加载状态，并非真实页面，因此其并不需要完整的页面，其实只需要首屏就好了，对非首屏的元素进行了删除，只保留了首屏内部元素，这样也大大缩减了生成骨架屏的体积&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>删除无用的 CSS 样式，只是我们只提取了对骨架屏有用的 CSS，然后通过 style 标签引入&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 大致代码
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">checker&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">selector&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">DEAD_OBVIOUS&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">has&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">selector&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="sr">/:-(ms|moz)-/&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">test&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">selector&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="sr">/:{1,2}(before|after)/&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">test&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">selector&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">keep&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="o">!!&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">selector&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">keep&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">exception&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="sb">`Unable to querySelector(&amp;#39;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">selector&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">&amp;#39;) [&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">exception&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">]`&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;error&amp;#39;&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>主要通过 document.querySelector 方法来判断该 CSS 是否被使用到，如果该 CSS 选择器能够选择上元素，说明该 CSS 样式是有用的，保留。如果没有选择上元素，说明该 CSS 样式没有用到，移除&lt;/li>
+&lt;/ul>
+&lt;h5 id="通过-webpack-将骨架屏打包到项目中">通过 webpack 将骨架屏打包到项目中&lt;/h5>
+&lt;p>Webpack 在整个打包的过程中提供了众多生命周期事件，比如 compilation 、after-emit 等，比如最终将骨架屏插入到 html 中就是在 after-emit 钩子函数中进行&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">//大致代码
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nx">SkeletonPlugin&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">compiler&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 其他代码
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">plugin&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;after-emit&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kr">async&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">compilation&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">done&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">await&lt;/span> &lt;span class="nx">outputSkeletonScreen&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">originalHtml&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">server&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">info&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">server&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">warn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">done&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="c1">// 其他代码
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://web.dev/media-accessibility/" target="_blank" rel="noopener"
+>Media accessibility&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/Jocs/jocs.github.io/issues/22" target="_blank" rel="noopener"
+>一种自动化生成骨架屏的方案&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://github.com/puppeteer/puppeteer" target="_blank" rel="noopener"
+>puppeteer/puppeteer: Headless Chrome Node.js API&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://www.npmjs.com/package/jsdom" target="_blank" rel="noopener"
+>jsdom - npm&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド 117</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/</link><pubDate>Tue, 11 Jan 2022 12:05:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/frontend-117-cover.jpg" alt="Featured image of post 毎日のフロントエンド 117" />&lt;h1 id="第一百一十七日">第一百一十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-frame-和-iframe-有什么区别">&lt;strong>Question:&lt;/strong> frame 和 iframe 有什么区别&lt;/h3>
 &lt;blockquote>
