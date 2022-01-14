@@ -1,4 +1,153 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 13 Jan 2022 20:40:37 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 119</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/</link><pubDate>Thu, 13 Jan 2022 20:40:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/frontend-119-cover.jpg" alt="Featured image of post 毎日のフロントエンド 119" />&lt;h1 id="第一百一十九日">第一百一十九日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 14 Jan 2022 10:59:02 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 120</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/</link><pubDate>Fri, 14 Jan 2022 10:59:02 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/frontend-120-cover.jpg" alt="Featured image of post 毎日のフロントエンド 120" />&lt;h1 id="第一百二十日">第一百二十日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-富文本编辑器的实现原理">&lt;strong>Question:&lt;/strong> 富文本编辑器的实现原理&lt;/h3>
+&lt;p>WYSIWYG stands for “What you see is what you get”. &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>&lt;a class="link" href="https://stackoverflow.com/questions/67021368/how-to-build-an-own-wysiwyg-editor-rte-using-vanilla-js" target="_blank" rel="noopener"
+>javascript - How to build an own WYSIWYG editor (RTE) using Vanilla JS - Stack Overflow&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>contenteditable&lt;/code>(HTML)属性：一个全局枚举属性，用于表示元素是否可编辑；该属性可被继承；&lt;/li>
+&lt;li>&lt;code>caret-color&lt;/code>(CSS)属性：可设置编辑区域内的可插入光标的颜色；&lt;/li>
+&lt;li>&lt;code>window.getSelection()&lt;/code>方法：返回一个 &lt;code>Selection&lt;/code> 对象，表示用户选择的文本范围或光标的当前位置；利用该方法可以对选中的文字进行样式设置，或在光标处插入内容等操作&lt;/li>
+&lt;/ol>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-设置字体时为什么建议设置替换字体">&lt;strong>Question:&lt;/strong> 设置字体时为什么建议设置替换字体&lt;/h3>
+&lt;p>在浏览器不兼容首选字体情况下的一种替代方案，设置替换字体（尽可能样式接近的替换字体）可以尽可能保证所有用户的浏览体验。&lt;/p>
+&lt;p>&lt;code>font-family:name/inherit;&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>name 为首选字体的名称，字体名称有多个单词，即中间有空格，则需要将字体名称用一对单引号或者双引号包围起来&lt;/li>
+&lt;li>为 font-family 属性指定多种字体，且多种字体之间用逗号隔开，这样可以为页面指定一个字体列表。&lt;/li>
+&lt;li>如果用户机器没有第一种字体，则浏览器会查找字体列表中的下一种字体作为替代字体显示。如果找遍了字体列表还是没有可以使用的字体，浏览器才会使用默认字体显示页面。&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-如何终止-web-worker">&lt;strong>Question:&lt;/strong> 如何终止 &lt;code>Web Worker&lt;/code>&lt;/h3>
+&lt;p>Web Worker 的作用，就是为 JavaScript 创造多线程环境，允许主线程创建 Worker 线程，将一些任务分配给后者运行。Worker 线程一旦新建成功，就会始终运行，不会被主线程上的活动（比如用户点击按钮、提交表单）打断。在主线程运行的同时，Worker 线程在后台运行，两者互不干扰。等到 Worker 线程完成计算任务，再把结果返回给主线程。这样的好处是，一些计算密集型或高延迟的任务，被 Worker 线程负担了，主线程（通常负责 UI 交互）就会很流畅，不会被阻塞或拖慢。&lt;/p>
+&lt;blockquote>
+&lt;p>Web Worker 比较耗费资源，不应该过度使用，而且一旦使用完毕，就应该关闭&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;code>worker.terminate();&lt;/code>&lt;/p>
+&lt;h2 id="clean-code-javascript">Clean Code JavaScript&lt;/h2>
+&lt;h3 id="variables-变量">Variables 变量&lt;/h3>
+&lt;h4 id="1-use-meaningful-and-pronounceable-variable-names">1. Use meaningful and pronounceable variable names&lt;/h4>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">yyyymmdstr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">moment&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;YYYY/MM/DD&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">currentDate&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">moment&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;YYYY/MM/DD&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="2-use-the-same-vocabulary-for-the-same-type-of-variable">2. Use the same vocabulary for the same type of variable&lt;/h4>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="nx">getUserInfo&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">getClientData&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">getCustomerRecord&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="nx">getUser&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="3-use-searchable-names">3. Use searchable names&lt;/h4>
+&lt;p>It&amp;rsquo;s important that the code we do write is readable and searchable.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/danielstjules/buddy.js" target="_blank" rel="noopener"
+>buddy.js&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/eslint/eslint/blob/660e0918933e6e7fede26bc675a0763a6b357c94/docs/rules/no-magic-numbers.md" target="_blank" rel="noopener"
+>ESLint&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="c1">// What&amp;#39;s 86400000 for?
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">blastOff&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">86400000&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="c1">// Declare them as capitalized named constants.
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">MILLISECONDS_PER_DAY&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">60&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">60&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">24&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//86400000;
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">blastOff&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">MILLISECONDS_PER_DAY&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="4-use-explanatory-variables">4. Use explanatory variables&lt;/h4>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">address&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;One Infinite Loop, Cupertino 95014&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">cityZipCodeRegex&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sr">/^[^,\\]+[,\\\s]+(.+?)\s*(\d{5})?$/&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">saveCityZipCode&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="nx">address&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">match&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">cityZipCodeRegex&lt;/span>&lt;span class="p">)[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="nx">address&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">match&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">cityZipCodeRegex&lt;/span>&lt;span class="p">)[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">address&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;One Infinite Loop, Cupertino 95014&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">cityZipCodeRegex&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sr">/^[^,\\]+[,\\\s]+(.+?)\s*(\d{5})?$/&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">_&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">city&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">zipCode&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">address&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">match&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">cityZipCodeRegex&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">saveCityZipCode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">city&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">zipCode&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="5-avoid-mental-mapping">5. Avoid Mental Mapping&lt;/h4>
+&lt;p>&lt;strong>Explicit is better than implicit.&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">locations&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;Austin&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;New York&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;San Francisco&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">locations&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">l&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">doStuff&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">doSomeOtherStuff&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// Wait, what is `l` for again?
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">dispatch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">l&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">locations&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;Austin&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;New York&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;San Francisco&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">locations&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">location&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">doStuff&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">doSomeOtherStuff&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">dispatch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">location&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="6-dont-add-unneeded-context">6. Don&amp;rsquo;t add unneeded context&lt;/h4>
+&lt;p>If your class/object name tells you something, don&amp;rsquo;t repeat that in your
+variable name.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Car&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">carMake&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Honda&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">carModel&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Accord&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">carColor&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Blue&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">paintCar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">car&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">color&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">car&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">carColor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">color&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Car&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">make&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Honda&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">model&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Accord&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">color&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Blue&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">paintCar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">car&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">color&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">car&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">color&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">color&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="7-use-default-arguments-instead-of-short-circuiting-or-conditionals">7. Use default arguments instead of short circuiting or conditionals&lt;/h4>
+&lt;p>Default arguments are often cleaner than short circuiting(短路). Be aware that if you
+use them, your function will only provide default values for &lt;code>undefined&lt;/code>
+arguments. Other &amp;ldquo;falsy&amp;rdquo; values such as &lt;code>''&lt;/code>, &lt;code>&amp;quot;&amp;quot;&lt;/code>, &lt;code>false&lt;/code>, &lt;code>null&lt;/code>, &lt;code>0&lt;/code>, and
+&lt;code>NaN&lt;/code>, will not be replaced by a default value.（This will make checkfalsy mandatory.）&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">createMicrobrewery&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">breweryName&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="s1">&amp;#39;Hipster Brew Co.&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">createMicrobrewery&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;Hipster Brew Co.&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/ryanmcdermott/clean-code-javascript#introduction" target="_blank" rel="noopener"
+>ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/contenteditable" target="_blank" rel="noopener"
+>contenteditable - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://webdeasy.de/en/program-wysiwyg-editor/" target="_blank" rel="noopener"
+>Program your own WYSIWYG editor - with HTML, CSS &amp;amp; JavaScript&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.ruanyifeng.com/blog/2018/07/web-worker.html" target="_blank" rel="noopener"
+>Web Worker 使用教程 - 阮一峰的网络日志&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://webdeasy.de/en/program-wysiwyg-editor/" target="_blank" rel="noopener"
+>Program your own WYSIWYG editor - with HTML, CSS &amp;amp; JavaScript&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド 119</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/</link><pubDate>Thu, 13 Jan 2022 20:40:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/frontend-119-cover.jpg" alt="Featured image of post 毎日のフロントエンド 119" />&lt;h1 id="第一百一十九日">第一百一十九日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-富文本">&lt;strong>Question:&lt;/strong> 富文本&lt;/h3>
 &lt;p>富文本格式（Rich Text Format）即 RTF 格式，又称多文本格式，是由微软公司开发的跨平台文档格式。最大的特点是：所见即所得，你把格式调整成什么样子，就会直接显示出什么样的效果。这一点和 words 类似。&lt;/p>
