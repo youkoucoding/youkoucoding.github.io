@@ -1,0 +1,715 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 121</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  121">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2022-01-15T17:22:59+09:00"><meta property="article:modified_time" content="2022-01-15T17:22:59+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/frontend-121-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド  121">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/frontend-121-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/frontend-121-cover_hu2303cd74e7eb4e8dcaeed6adce03d1a2_347886_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/frontend-121-cover_hu2303cd74e7eb4e8dcaeed6adce03d1a2_347886_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/frontend-121-cover_hu2303cd74e7eb4e8dcaeed6adce03d1a2_347886_1600x0_resize_q75_box.jpg 1600w" width=800 height=540 loading=lazy alt="Featured image of post 毎日のフロントエンド  121">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/>毎日のフロントエンド 121</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Jan 15, 2022</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 13 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第一百二十一日>第一百二十一日</h1>
+<h2 id=clean-code-javascript>Clean Code JavaScript</h2>
+<h3 id=functions>Functions</h3>
+<h4 id=1-function-arguments-2-or-fewer-ideally>1. Function arguments (2 or fewer ideally)</h4>
+<p>Limiting the amount of function parameters is incredibly important because it makes testing your function explosion where you have to teset tons of different cases with each separeate argument.</p>
+<p>减少函数的参数数量，有利于测试函数。</p>
+<p><strong>One or two arguments is the ideal case</strong>, and three should be avoided if possible. Anything more than that should be consolidated(被合并). Usually, if you have more than two arguments then your function is trying to do too much. In cases where it&rsquo;s not, most of the time a higher-level object will suffice as an argument.</p>
+<p>如果参数太多且无法缩减，应考虑用对象代替。</p>
+<p>Since JavaScript allows you to make objects on the fly, without a lot of class boilerplate, you can use an object if you are finding youself needing a lot of arguments.</p>
+<p>To make it obvious what properties the function expects, we can use the destructuring syntax(from EX2015/ES6). This has a few advantages:</p>
+<ol>
+<li>When someone looks at the function signature, it&rsquo;s immediately clear what properties are being used.</li>
+<li>It can be used to simulate named parameters.</li>
+<li>Destructuring also <strong>clones the specified primitive values of the argument object</strong> passed into the function. <strong>This can help prevent side effects.</strong>
+<blockquote>
+<p>Note: objects and arrays that are destructured from the argument object are NOT cloned.</p>
+</blockquote>
+</li>
+<li>Linters can warn you about unused properties, which would be impossible without destructuring.</li>
+</ol>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>createMenu</span><span class=p>(</span><span class=nx>title</span><span class=p>,</span> <span class=nx>body</span><span class=p>,</span> <span class=nx>buttonText</span><span class=p>,</span> <span class=nx>cancellable</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=nx>createMenu</span><span class=p>(</span><span class=s1>&#39;Foo&#39;</span><span class=p>,</span> <span class=s1>&#39;Bar&#39;</span><span class=p>,</span> <span class=s1>&#39;Baz&#39;</span><span class=p>,</span> <span class=kc>true</span><span class=p>);</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>createMenu</span><span class=p>({</span> <span class=nx>title</span><span class=p>,</span> <span class=nx>body</span><span class=p>,</span> <span class=nx>buttonText</span><span class=p>,</span> <span class=nx>cancellable</span> <span class=p>})</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=nx>createMenu</span><span class=p>({</span>
+  <span class=nx>title</span><span class=o>:</span> <span class=s1>&#39;Foo&#39;</span><span class=p>,</span>
+  <span class=nx>body</span><span class=o>:</span> <span class=s1>&#39;Bar&#39;</span><span class=p>,</span>
+  <span class=nx>buttonText</span><span class=o>:</span> <span class=s1>&#39;Baz&#39;</span><span class=p>,</span>
+  <span class=nx>cancellable</span><span class=o>:</span> <span class=kc>true</span><span class=p>,</span>
+<span class=p>});</span>
+</code></pre></div><h4 id=2-functions-should-do-one-thing>2. Functions should do one thing</h4>
+<p><strong>This is by far the most important rule in software engineering</strong>. When functions do more than one thing, they are harder to compose, test, and reason about. When you can isolate a function to just one action, it can be refactored easily and your code will read much cleaner.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>emailClients</span><span class=p>(</span><span class=nx>clients</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>clients</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>client</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>clientRecord</span> <span class=o>=</span> <span class=nx>database</span><span class=p>.</span><span class=nx>lookup</span><span class=p>(</span><span class=nx>client</span><span class=p>);</span>
+    <span class=k>if</span> <span class=p>(</span><span class=nx>clientRecord</span><span class=p>.</span><span class=nx>isActive</span><span class=p>())</span> <span class=p>{</span>
+      <span class=nx>email</span><span class=p>(</span><span class=nx>client</span><span class=p>);</span>
+    <span class=p>}</span>
+  <span class=p>});</span>
+<span class=p>}</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>emailActiveClients</span><span class=p>(</span><span class=nx>clients</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>clients</span><span class=p>.</span><span class=nx>filter</span><span class=p>(</span><span class=nx>isActiveClient</span><span class=p>).</span><span class=nx>forEach</span><span class=p>(</span><span class=nx>email</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>isActiveClient</span><span class=p>(</span><span class=nx>client</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>clientRecord</span> <span class=o>=</span> <span class=nx>database</span><span class=p>.</span><span class=nx>lookup</span><span class=p>(</span><span class=nx>client</span><span class=p>);</span>
+  <span class=k>return</span> <span class=nx>clientRecord</span><span class=p>.</span><span class=nx>isActive</span><span class=p>();</span>
+<span class=p>}</span>
+</code></pre></div><h4 id=3-function-names-should-say-what-they-do>3. Function names should say what they do</h4>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>addToDate</span><span class=p>(</span><span class=nx>date</span><span class=p>,</span> <span class=nx>month</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=kr>const</span> <span class=nx>date</span> <span class=o>=</span> <span class=k>new</span> <span class=nb>Date</span><span class=p>();</span>
+
+<span class=c1>// It&#39;s hard to tell from the function name what is added
+</span><span class=c1></span><span class=nx>addToDate</span><span class=p>(</span><span class=nx>date</span><span class=p>,</span> <span class=mi>1</span><span class=p>);</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>addMonthToDate</span><span class=p>(</span><span class=nx>month</span><span class=p>,</span> <span class=nx>date</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=kr>const</span> <span class=nx>date</span> <span class=o>=</span> <span class=k>new</span> <span class=nb>Date</span><span class=p>();</span>
+<span class=nx>addMonthToDate</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=nx>date</span><span class=p>);</span>
+</code></pre></div><h4 id=4-functions-should-only-be-one-level-of-abstraction>4. Functions should only be one level of abstraction</h4>
+<p>When you have more than one level of abstraction your function is usually doing too much. Splitting up functions leads to reusability and easier testing.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>parseBetterJSAlternative</span><span class=p>(</span><span class=nx>code</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>REGEXES</span> <span class=o>=</span> <span class=p>[</span>
+    <span class=c1>// ...
+</span><span class=c1></span>  <span class=p>];</span>
+
+  <span class=kr>const</span> <span class=nx>statements</span> <span class=o>=</span> <span class=nx>code</span><span class=p>.</span><span class=nx>split</span><span class=p>(</span><span class=s1>&#39; &#39;</span><span class=p>);</span>
+  <span class=kr>const</span> <span class=nx>tokens</span> <span class=o>=</span> <span class=p>[];</span>
+  <span class=nx>REGEXES</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>REGEX</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>statements</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>statement</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+      <span class=c1>// ...
+</span><span class=c1></span>    <span class=p>});</span>
+  <span class=p>});</span>
+
+  <span class=kr>const</span> <span class=nx>ast</span> <span class=o>=</span> <span class=p>[];</span>
+  <span class=nx>tokens</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>token</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=c1>// lex...
+</span><span class=c1></span>  <span class=p>});</span>
+
+  <span class=nx>ast</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>node</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=c1>// parse...
+</span><span class=c1></span>  <span class=p>});</span>
+<span class=p>}</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>parseBetterJSAlternative</span><span class=p>(</span><span class=nx>code</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>tokens</span> <span class=o>=</span> <span class=nx>tokenize</span><span class=p>(</span><span class=nx>code</span><span class=p>);</span>
+  <span class=kr>const</span> <span class=nx>syntaxTree</span> <span class=o>=</span> <span class=nx>parse</span><span class=p>(</span><span class=nx>tokens</span><span class=p>);</span>
+  <span class=nx>syntaxTree</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>node</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=c1>// parse...
+</span><span class=c1></span>  <span class=p>});</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>tokenize</span><span class=p>(</span><span class=nx>code</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>REGEXES</span> <span class=o>=</span> <span class=p>[</span>
+    <span class=c1>// ...
+</span><span class=c1></span>  <span class=p>];</span>
+
+  <span class=kr>const</span> <span class=nx>statements</span> <span class=o>=</span> <span class=nx>code</span><span class=p>.</span><span class=nx>split</span><span class=p>(</span><span class=s1>&#39; &#39;</span><span class=p>);</span>
+  <span class=kr>const</span> <span class=nx>tokens</span> <span class=o>=</span> <span class=p>[];</span>
+  <span class=nx>REGEXES</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>REGEX</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>statements</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>statement</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+      <span class=nx>tokens</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=cm>/* ... */</span><span class=p>);</span>
+    <span class=p>});</span>
+  <span class=p>});</span>
+
+  <span class=k>return</span> <span class=nx>tokens</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>parse</span><span class=p>(</span><span class=nx>tokens</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>syntaxTree</span> <span class=o>=</span> <span class=p>[];</span>
+  <span class=nx>tokens</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>token</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>syntaxTree</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=cm>/* ... */</span><span class=p>);</span>
+  <span class=p>});</span>
+
+  <span class=k>return</span> <span class=nx>syntaxTree</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><h4 id=5-remove-duplicate-code>5. Remove duplicate code</h4>
+<p>Do your absolute best to avoid duplicate code. Duplicate code is bad because it means that there&rsquo;s more than one place to alter something if you need to change some logic.</p>
+<p>Imagine if you run a restaurant and you keep track of your inventory: all your tomatoes, onions, garlic, spices, etc. If you have multiple lists that you keep this on, then all have to be updated when you serve a dish with tomatoes in them. <strong>If you only have one list, there&rsquo;s only one place to update!</strong></p>
+<p>Oftentimes you have duplicate code because you have two or more slightly different things, that share a lot in common, but their differences force you to have two or more separate functions that do much of the same things. <strong>Removing duplicate code means creating an abstraction that can handle this set of different things with just one function/module/class.</strong></p>
+<p>Getting the abstraction right is critical, that&rsquo;s why you should follow the SOLID principles laid out in the <em>Classes</em> section. Bad abstractions can be worse than duplicate code, so be careful! Having said this, if you can make a good abstraction, do it! <strong>Don&rsquo;t repeat yourself</strong>, otherwise you&rsquo;ll find yourself updating multiple places anytime you want to change one thing.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>showDeveloperList</span><span class=p>(</span><span class=nx>developers</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>developers</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>developer</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>expectedSalary</span> <span class=o>=</span> <span class=nx>developer</span><span class=p>.</span><span class=nx>calculateExpectedSalary</span><span class=p>();</span>
+    <span class=kr>const</span> <span class=nx>experience</span> <span class=o>=</span> <span class=nx>developer</span><span class=p>.</span><span class=nx>getExperience</span><span class=p>();</span>
+    <span class=kr>const</span> <span class=nx>githubLink</span> <span class=o>=</span> <span class=nx>developer</span><span class=p>.</span><span class=nx>getGithubLink</span><span class=p>();</span>
+    <span class=kr>const</span> <span class=nx>data</span> <span class=o>=</span> <span class=p>{</span>
+      <span class=nx>expectedSalary</span><span class=p>,</span>
+      <span class=nx>experience</span><span class=p>,</span>
+      <span class=nx>githubLink</span><span class=p>,</span>
+    <span class=p>};</span>
+
+    <span class=nx>render</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+  <span class=p>});</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>showManagerList</span><span class=p>(</span><span class=nx>managers</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>managers</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>manager</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>expectedSalary</span> <span class=o>=</span> <span class=nx>manager</span><span class=p>.</span><span class=nx>calculateExpectedSalary</span><span class=p>();</span>
+    <span class=kr>const</span> <span class=nx>experience</span> <span class=o>=</span> <span class=nx>manager</span><span class=p>.</span><span class=nx>getExperience</span><span class=p>();</span>
+    <span class=kr>const</span> <span class=nx>portfolio</span> <span class=o>=</span> <span class=nx>manager</span><span class=p>.</span><span class=nx>getMBAProjects</span><span class=p>();</span>
+    <span class=kr>const</span> <span class=nx>data</span> <span class=o>=</span> <span class=p>{</span>
+      <span class=nx>expectedSalary</span><span class=p>,</span>
+      <span class=nx>experience</span><span class=p>,</span>
+      <span class=nx>portfolio</span><span class=p>,</span>
+    <span class=p>};</span>
+
+    <span class=nx>render</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+  <span class=p>});</span>
+<span class=p>}</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>showEmployeeList</span><span class=p>(</span><span class=nx>employees</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>employees</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>employee</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>expectedSalary</span> <span class=o>=</span> <span class=nx>employee</span><span class=p>.</span><span class=nx>calculateExpectedSalary</span><span class=p>();</span>
+    <span class=kr>const</span> <span class=nx>experience</span> <span class=o>=</span> <span class=nx>employee</span><span class=p>.</span><span class=nx>getExperience</span><span class=p>();</span>
+
+    <span class=kr>const</span> <span class=nx>data</span> <span class=o>=</span> <span class=p>{</span>
+      <span class=nx>expectedSalary</span><span class=p>,</span>
+      <span class=nx>experience</span><span class=p>,</span>
+    <span class=p>};</span>
+
+    <span class=k>switch</span> <span class=p>(</span><span class=nx>employee</span><span class=p>.</span><span class=nx>type</span><span class=p>)</span> <span class=p>{</span>
+      <span class=k>case</span> <span class=s1>&#39;manager&#39;</span><span class=o>:</span>
+        <span class=nx>data</span><span class=p>.</span><span class=nx>portfolio</span> <span class=o>=</span> <span class=nx>employee</span><span class=p>.</span><span class=nx>getMBAProjects</span><span class=p>();</span>
+        <span class=k>break</span><span class=p>;</span>
+      <span class=k>case</span> <span class=s1>&#39;developer&#39;</span><span class=o>:</span>
+        <span class=nx>data</span><span class=p>.</span><span class=nx>githubLink</span> <span class=o>=</span> <span class=nx>employee</span><span class=p>.</span><span class=nx>getGithubLink</span><span class=p>();</span>
+        <span class=k>break</span><span class=p>;</span>
+    <span class=p>}</span>
+
+    <span class=nx>render</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+  <span class=p>});</span>
+<span class=p>}</span>
+</code></pre></div><h4 id=6-set-default-objects-with-objectassign>6. Set default objects with <code>Object.assign</code></h4>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kr>const</span> <span class=nx>menuConfig</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=nx>title</span><span class=o>:</span> <span class=kc>null</span><span class=p>,</span>
+  <span class=nx>body</span><span class=o>:</span> <span class=s1>&#39;Bar&#39;</span><span class=p>,</span>
+  <span class=nx>buttonText</span><span class=o>:</span> <span class=kc>null</span><span class=p>,</span>
+  <span class=nx>cancellable</span><span class=o>:</span> <span class=kc>true</span><span class=p>,</span>
+<span class=p>};</span>
+
+<span class=kd>function</span> <span class=nx>createMenu</span><span class=p>(</span><span class=nx>config</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>config</span><span class=p>.</span><span class=nx>title</span> <span class=o>=</span> <span class=nx>config</span><span class=p>.</span><span class=nx>title</span> <span class=o>||</span> <span class=s1>&#39;Foo&#39;</span><span class=p>;</span>
+  <span class=nx>config</span><span class=p>.</span><span class=nx>body</span> <span class=o>=</span> <span class=nx>config</span><span class=p>.</span><span class=nx>body</span> <span class=o>||</span> <span class=s1>&#39;Bar&#39;</span><span class=p>;</span>
+  <span class=nx>config</span><span class=p>.</span><span class=nx>buttonText</span> <span class=o>=</span> <span class=nx>config</span><span class=p>.</span><span class=nx>buttonText</span> <span class=o>||</span> <span class=s1>&#39;Baz&#39;</span><span class=p>;</span>
+  <span class=nx>config</span><span class=p>.</span><span class=nx>cancellable</span> <span class=o>=</span>
+    <span class=nx>config</span><span class=p>.</span><span class=nx>cancellable</span> <span class=o>!==</span> <span class=kc>undefined</span> <span class=o>?</span> <span class=nx>config</span><span class=p>.</span><span class=nx>cancellable</span> <span class=o>:</span> <span class=kc>true</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=nx>createMenu</span><span class=p>(</span><span class=nx>menuConfig</span><span class=p>);</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kr>const</span> <span class=nx>menuConfig</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=nx>title</span><span class=o>:</span> <span class=s1>&#39;Order&#39;</span><span class=p>,</span>
+  <span class=c1>// User did not include &#39;body&#39; key
+</span><span class=c1></span>  <span class=nx>buttonText</span><span class=o>:</span> <span class=s1>&#39;Send&#39;</span><span class=p>,</span>
+  <span class=nx>cancellable</span><span class=o>:</span> <span class=kc>true</span><span class=p>,</span>
+<span class=p>};</span>
+
+<span class=kd>function</span> <span class=nx>createMenu</span><span class=p>(</span><span class=nx>config</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kd>let</span> <span class=nx>finalConfig</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>assign</span><span class=p>(</span>
+    <span class=p>{</span>
+      <span class=nx>title</span><span class=o>:</span> <span class=s1>&#39;Foo&#39;</span><span class=p>,</span>
+      <span class=nx>body</span><span class=o>:</span> <span class=s1>&#39;Bar&#39;</span><span class=p>,</span>
+      <span class=nx>buttonText</span><span class=o>:</span> <span class=s1>&#39;Baz&#39;</span><span class=p>,</span>
+      <span class=nx>cancellable</span><span class=o>:</span> <span class=kc>true</span><span class=p>,</span>
+    <span class=p>},</span>
+    <span class=nx>config</span>
+  <span class=p>);</span>
+  <span class=k>return</span> <span class=nx>finalConfig</span><span class=p>;</span>
+  <span class=c1>// config now equals: {title: &#34;Order&#34;, body: &#34;Bar&#34;, buttonText: &#34;Send&#34;, cancellable: true}
+</span><span class=c1></span>  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=nx>createMenu</span><span class=p>(</span><span class=nx>menuConfig</span><span class=p>);</span>
+</code></pre></div><h4 id=7-dont-use-flags-as-function-parameters>7. Don&rsquo;t use flags as function parameters</h4>
+<p>Flags tell your user that this function does more than one thing. Functions should do one thing. Split out your functions if they are following different code paths based on a boolean.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>createFile</span><span class=p>(</span><span class=nx>name</span><span class=p>,</span> <span class=nx>temp</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>temp</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>fs</span><span class=p>.</span><span class=nx>create</span><span class=p>(</span><span class=sb>`./temp/</span><span class=si>${</span><span class=nx>name</span><span class=si>}</span><span class=sb>`</span><span class=p>);</span>
+  <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+    <span class=nx>fs</span><span class=p>.</span><span class=nx>create</span><span class=p>(</span><span class=nx>name</span><span class=p>);</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>function</span> <span class=nx>createFile</span><span class=p>(</span><span class=nx>name</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>fs</span><span class=p>.</span><span class=nx>create</span><span class=p>(</span><span class=nx>name</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>createTempFile</span><span class=p>(</span><span class=nx>name</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>createFile</span><span class=p>(</span><span class=sb>`./temp/</span><span class=si>${</span><span class=nx>name</span><span class=si>}</span><span class=sb>`</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><h4 id=8-avoid-side-effects-part-1>8. Avoid Side Effects (part 1)</h4>
+<p>A function produces a side effect if it does anything other than take a value in and return another value or values. A side effect could be writing to a file, modifying some global variable, or accidentally wiring all your money to a stranger.</p>
+<p>Now, you do need to have side effects in a program on occasion. Like the previous example, you might need to write to a file. What you want to do is to centralize where you are doing this. Don&rsquo;t have several functions and classes that write to a particular file. Have one service that does it. One and only one.</p>
+<p>The main point is to avoid common pitfalls like sharing state between objects without any structure, using mutable data types that can be written to by anything, and not centralizing where your side effects occur. If you can do this, you will be happier than the vast majority of other programmers.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// Global variable referenced by following function.
+</span><span class=c1>// If we had another function that used this name, now it&#39;d be an array and it could break it.
+</span><span class=c1></span><span class=kd>let</span> <span class=nx>name</span> <span class=o>=</span> <span class=s1>&#39;Ryan McDermott&#39;</span><span class=p>;</span>
+
+<span class=kd>function</span> <span class=nx>splitIntoFirstAndLastName</span><span class=p>()</span> <span class=p>{</span>
+  <span class=nx>name</span> <span class=o>=</span> <span class=nx>name</span><span class=p>.</span><span class=nx>split</span><span class=p>(</span><span class=s1>&#39; &#39;</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=nx>splitIntoFirstAndLastName</span><span class=p>();</span>
+
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>name</span><span class=p>);</span> <span class=c1>// [&#39;Ryan&#39;, &#39;McDermott&#39;];
+</span></code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>splitIntoFirstAndLastName</span><span class=p>(</span><span class=nx>name</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=nx>name</span><span class=p>.</span><span class=nx>split</span><span class=p>(</span><span class=s1>&#39; &#39;</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kr>const</span> <span class=nx>name</span> <span class=o>=</span> <span class=s1>&#39;Ryan McDermott&#39;</span><span class=p>;</span>
+<span class=kr>const</span> <span class=nx>newName</span> <span class=o>=</span> <span class=nx>splitIntoFirstAndLastName</span><span class=p>(</span><span class=nx>name</span><span class=p>);</span>
+
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>name</span><span class=p>);</span> <span class=c1>// &#39;Ryan McDermott&#39;;
+</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>newName</span><span class=p>);</span> <span class=c1>// [&#39;Ryan&#39;, &#39;McDermott&#39;];
+</span></code></pre></div><h4 id=9-avoid-side-effects-part-2>9. Avoid Side Effects (part 2)</h4>
+<p>In JavaScript, some values are unchangeable (immutable) and some are changeable (mutable). Objects and arrays are two kinds of mutable values so it&rsquo;s important to handle them carefully when they&rsquo;re passed as parameters to a function. A JavaScript function can change an object&rsquo;s properties or alter the contents of an array which could easily cause bugs elsewhere.</p>
+<p>Suppose there&rsquo;s a function that accepts an array parameter representing a shopping cart. If the function makes a change in that shopping cart array - by adding an item to purchase, for example - then any other function that uses that same cart array will be affected by this addition. That may be great, however it could also be bad. Let&rsquo;s imagine a bad situation:</p>
+<p>The user clicks the &ldquo;Purchase&rdquo; button which calls a purchase function that spawns a network request and sends the cart array to the server. Because of a bad network connection, the purchase function has to keep retrying the request. Now, what if in the meantime the user accidentally clicks an &ldquo;Add to Cart&rdquo; button on an item they don&rsquo;t actually want before the network request begins? If that happens and the network request begins, then that purchase function will send the accidentally added item because the cart array was modified.</p>
+<p>A great solution would be for the addItemToCart function to always clone the cart, edit it, and return the clone. This would ensure that functions that are still using the old shopping cart wouldn&rsquo;t be affected by the changes.</p>
+<p>Two caveats to mention to this approach:</p>
+<ol>
+<li>
+<p>There might be cases where you actually want to modify the input object, but when you adopt this programming practice you will find that those cases are pretty rare. Most things can be refactored to have no side effects!</p>
+</li>
+<li>
+<p>Cloning big objects can be very expensive in terms of performance. Luckily, this isn&rsquo;t a big issue in practice because there are great libraries that allow this kind of programming approach to be fast and not as memory intensive as it would be for you to manually clone objects and arrays.</p>
+</li>
+</ol>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>addItemToCart</span> <span class=o>=</span> <span class=p>(</span><span class=nx>cart</span><span class=p>,</span> <span class=nx>item</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=nx>cart</span><span class=p>.</span><span class=nx>push</span><span class=p>({</span> <span class=nx>item</span><span class=p>,</span> <span class=nx>date</span><span class=o>:</span> <span class=nb>Date</span><span class=p>.</span><span class=nx>now</span><span class=p>()</span> <span class=p>});</span>
+<span class=p>};</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>addItemToCart</span> <span class=o>=</span> <span class=p>(</span><span class=nx>cart</span><span class=p>,</span> <span class=nx>item</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=p>[...</span><span class=nx>cart</span><span class=p>,</span> <span class=p>{</span> <span class=nx>item</span><span class=p>,</span> <span class=nx>date</span><span class=o>:</span> <span class=nb>Date</span><span class=p>.</span><span class=nx>now</span><span class=p>()</span> <span class=p>}];</span>
+<span class=p>};</span>
+</code></pre></div><h4 id=10-dont-write-to-global-functions>10. Don&rsquo;t write to global functions</h4>
+<p>Polluting globals is a bad practice in JavaScript because you could clash with another library and the user of your API would be none-the-wiser until they get an exception in production. Let&rsquo;s think about an example: what if you wanted to extend JavaScript&rsquo;s native Array method to have a diff method that could show the difference between two arrays? You could write your new function to the Array.prototype, but it could clash with another library that tried to do the same thing. What if that other library was just using diff to find the difference between the first and last elements of an array? This is why it would be much better to just use ES2015/ES6 classes and simply extend the Array global.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nb>Array</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>diff</span> <span class=o>=</span> <span class=kd>function</span> <span class=nx>diff</span><span class=p>(</span><span class=nx>comparisonArray</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>hash</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Set</span><span class=p>(</span><span class=nx>comparisonArray</span><span class=p>);</span>
+  <span class=k>return</span> <span class=k>this</span><span class=p>.</span><span class=nx>filter</span><span class=p>((</span><span class=nx>elem</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=o>!</span><span class=nx>hash</span><span class=p>.</span><span class=nx>has</span><span class=p>(</span><span class=nx>elem</span><span class=p>));</span>
+<span class=p>};</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>class</span> <span class=nx>SuperArray</span> <span class=kr>extends</span> <span class=nb>Array</span> <span class=p>{</span>
+  <span class=nx>diff</span><span class=p>(</span><span class=nx>comparisonArray</span><span class=p>)</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>hash</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Set</span><span class=p>(</span><span class=nx>comparisonArray</span><span class=p>);</span>
+    <span class=k>return</span> <span class=k>this</span><span class=p>.</span><span class=nx>filter</span><span class=p>((</span><span class=nx>elem</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=o>!</span><span class=nx>hash</span><span class=p>.</span><span class=nx>has</span><span class=p>(</span><span class=nx>elem</span><span class=p>));</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><h4 id=11-favor-functional-programming-over-imperative-programming>11. Favor functional programming over imperative programming</h4>
+<p>JavaScript isn&rsquo;t a functional language in the way that Haskell is, but it has a functional flavor to it. Functional languages can be cleaner and easier to test. Favor this style of programming when you can.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>programmerOutput</span> <span class=o>=</span> <span class=p>[</span>
+  <span class=p>{</span>
+    <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;Uncle Bobby&#39;</span><span class=p>,</span>
+    <span class=nx>linesOfCode</span><span class=o>:</span> <span class=mi>500</span><span class=p>,</span>
+  <span class=p>},</span>
+  <span class=p>{</span>
+    <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;Suzie Q&#39;</span><span class=p>,</span>
+    <span class=nx>linesOfCode</span><span class=o>:</span> <span class=mi>1500</span><span class=p>,</span>
+  <span class=p>},</span>
+  <span class=p>{</span>
+    <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;Jimmy Gosling&#39;</span><span class=p>,</span>
+    <span class=nx>linesOfCode</span><span class=o>:</span> <span class=mi>150</span><span class=p>,</span>
+  <span class=p>},</span>
+  <span class=p>{</span>
+    <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;Gracie Hopper&#39;</span><span class=p>,</span>
+    <span class=nx>linesOfCode</span><span class=o>:</span> <span class=mi>1000</span><span class=p>,</span>
+  <span class=p>},</span>
+<span class=p>];</span>
+
+<span class=kd>let</span> <span class=nx>totalOutput</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+
+<span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>programmerOutput</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>totalOutput</span> <span class=o>+=</span> <span class=nx>programmerOutput</span><span class=p>[</span><span class=nx>i</span><span class=p>].</span><span class=nx>linesOfCode</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>programmerOutput</span> <span class=o>=</span> <span class=p>[</span>
+  <span class=p>{</span>
+    <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;Uncle Bobby&#39;</span><span class=p>,</span>
+    <span class=nx>linesOfCode</span><span class=o>:</span> <span class=mi>500</span><span class=p>,</span>
+  <span class=p>},</span>
+  <span class=p>{</span>
+    <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;Suzie Q&#39;</span><span class=p>,</span>
+    <span class=nx>linesOfCode</span><span class=o>:</span> <span class=mi>1500</span><span class=p>,</span>
+  <span class=p>},</span>
+  <span class=p>{</span>
+    <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;Jimmy Gosling&#39;</span><span class=p>,</span>
+    <span class=nx>linesOfCode</span><span class=o>:</span> <span class=mi>150</span><span class=p>,</span>
+  <span class=p>},</span>
+  <span class=p>{</span>
+    <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;Gracie Hopper&#39;</span><span class=p>,</span>
+    <span class=nx>linesOfCode</span><span class=o>:</span> <span class=mi>1000</span><span class=p>,</span>
+  <span class=p>},</span>
+<span class=p>];</span>
+
+<span class=kr>const</span> <span class=nx>totalOutput</span> <span class=o>=</span> <span class=nx>programmerOutput</span><span class=p>.</span><span class=nx>reduce</span><span class=p>(</span>
+  <span class=p>(</span><span class=nx>totalLines</span><span class=p>,</span> <span class=nx>output</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>totalLines</span> <span class=o>+</span> <span class=nx>output</span><span class=p>.</span><span class=nx>linesOfCode</span><span class=p>,</span>
+  <span class=mi>0</span>
+<span class=p>);</span>
+</code></pre></div><h4 id=12-encapsulate-conditionals>12. Encapsulate conditionals</h4>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=k>if</span> <span class=p>(</span><span class=nx>fsm</span><span class=p>.</span><span class=nx>state</span> <span class=o>===</span> <span class=s1>&#39;fetching&#39;</span> <span class=o>&amp;&amp;</span> <span class=nx>isEmpty</span><span class=p>(</span><span class=nx>listNode</span><span class=p>))</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>shouldShowSpinner</span><span class=p>(</span><span class=nx>fsm</span><span class=p>,</span> <span class=nx>listNode</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=nx>fsm</span><span class=p>.</span><span class=nx>state</span> <span class=o>===</span> <span class=s1>&#39;fetching&#39;</span> <span class=o>&amp;&amp;</span> <span class=nx>isEmpty</span><span class=p>(</span><span class=nx>listNode</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=k>if</span> <span class=p>(</span><span class=nx>shouldShowSpinner</span><span class=p>(</span><span class=nx>fsmInstance</span><span class=p>,</span> <span class=nx>listNodeInstance</span><span class=p>))</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+</code></pre></div><h4 id=13-avoid-negative-conditionals>13. Avoid negative conditionals</h4>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>isDOMNodeNotPresent</span><span class=p>(</span><span class=nx>node</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=nx>isDOMNodeNotPresent</span><span class=p>(</span><span class=nx>node</span><span class=p>))</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>isDOMNodePresent</span><span class=p>(</span><span class=nx>node</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=k>if</span> <span class=p>(</span><span class=nx>isDOMNodePresent</span><span class=p>(</span><span class=nx>node</span><span class=p>))</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+</code></pre></div><h4 id=14-avoid-conditionals>14. Avoid conditionals</h4>
+<p>This seems like an impossible task. Upon first hearing this, most people say, &ldquo;how am I supposed to do anything without an if statement?&rdquo; The answer is that you can use polymorphism to achieve the same task in many cases. The second question is usually, &ldquo;well that&rsquo;s great but why would I want to do that?&rdquo; The answer is a previous clean code concept we learned: a function should only do one thing. When you have classes and functions that have if statements, you are telling your user that your function does more than one thing. Remember, just do one thing.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>class</span> <span class=nx>Airplane</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span>  <span class=nx>getCruisingAltitude</span><span class=p>()</span> <span class=p>{</span>
+    <span class=k>switch</span> <span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>type</span><span class=p>)</span> <span class=p>{</span>
+      <span class=k>case</span> <span class=s1>&#39;777&#39;</span><span class=o>:</span>
+        <span class=k>return</span> <span class=k>this</span><span class=p>.</span><span class=nx>getMaxAltitude</span><span class=p>()</span> <span class=o>-</span> <span class=k>this</span><span class=p>.</span><span class=nx>getPassengerCount</span><span class=p>();</span>
+      <span class=k>case</span> <span class=s1>&#39;Air Force One&#39;</span><span class=o>:</span>
+        <span class=k>return</span> <span class=k>this</span><span class=p>.</span><span class=nx>getMaxAltitude</span><span class=p>();</span>
+      <span class=k>case</span> <span class=s1>&#39;Cessna&#39;</span><span class=o>:</span>
+        <span class=k>return</span> <span class=k>this</span><span class=p>.</span><span class=nx>getMaxAltitude</span><span class=p>()</span> <span class=o>-</span> <span class=k>this</span><span class=p>.</span><span class=nx>getFuelExpenditure</span><span class=p>();</span>
+    <span class=p>}</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>class</span> <span class=nx>Airplane</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=kr>class</span> <span class=nx>Boeing777</span> <span class=kr>extends</span> <span class=nx>Airplane</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span>  <span class=nx>getCruisingAltitude</span><span class=p>()</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=k>this</span><span class=p>.</span><span class=nx>getMaxAltitude</span><span class=p>()</span> <span class=o>-</span> <span class=k>this</span><span class=p>.</span><span class=nx>getPassengerCount</span><span class=p>();</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+
+<span class=kr>class</span> <span class=nx>AirForceOne</span> <span class=kr>extends</span> <span class=nx>Airplane</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span>  <span class=nx>getCruisingAltitude</span><span class=p>()</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=k>this</span><span class=p>.</span><span class=nx>getMaxAltitude</span><span class=p>();</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+
+<span class=kr>class</span> <span class=nx>Cessna</span> <span class=kr>extends</span> <span class=nx>Airplane</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span>  <span class=nx>getCruisingAltitude</span><span class=p>()</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=k>this</span><span class=p>.</span><span class=nx>getMaxAltitude</span><span class=p>()</span> <span class=o>-</span> <span class=k>this</span><span class=p>.</span><span class=nx>getFuelExpenditure</span><span class=p>();</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><h4 id=15-avoid-type-checking-part-1>15. Avoid type-checking (part 1)</h4>
+<p>JavaScript is untyped, which means your functions can take any type of argument. Sometimes you are bitten by this freedom and it becomes tempting to do type-checking in your functions. There are many ways to avoid having to do this. The first thing to consider is consistent APIs.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>travelToTexas</span><span class=p>(</span><span class=nx>vehicle</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>vehicle</span> <span class=k>instanceof</span> <span class=nx>Bicycle</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>vehicle</span><span class=p>.</span><span class=nx>pedal</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>currentLocation</span><span class=p>,</span> <span class=k>new</span> <span class=nx>Location</span><span class=p>(</span><span class=s1>&#39;texas&#39;</span><span class=p>));</span>
+  <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=nx>vehicle</span> <span class=k>instanceof</span> <span class=nx>Car</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>vehicle</span><span class=p>.</span><span class=nx>drive</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>currentLocation</span><span class=p>,</span> <span class=k>new</span> <span class=nx>Location</span><span class=p>(</span><span class=s1>&#39;texas&#39;</span><span class=p>));</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>travelToTexas</span><span class=p>(</span><span class=nx>vehicle</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>vehicle</span><span class=p>.</span><span class=nx>move</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>currentLocation</span><span class=p>,</span> <span class=k>new</span> <span class=nx>Location</span><span class=p>(</span><span class=s1>&#39;texas&#39;</span><span class=p>));</span>
+<span class=p>}</span>
+</code></pre></div><h4 id=16-avoid-type-checking-part-2>16. Avoid type-checking (part 2)</h4>
+<p>If you are working with basic primitive values like strings and integers, and you can&rsquo;t use polymorphism but you still feel the need to type-check, you should consider using TypeScript. It is an excellent alternative to normal JavaScript, as it provides you with static typing on top of standard JavaScript syntax. The problem with manually type-checking normal JavaScript is that doing it well requires so much extra verbiage that the faux &ldquo;type-safety&rdquo; you get doesn&rsquo;t make up for the lost readability. Keep your JavaScript clean, write good tests, and have good code reviews. Otherwise, do all of that but with TypeScript (which, like I said, is a great alternative!).</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>combine</span><span class=p>(</span><span class=nx>val1</span><span class=p>,</span> <span class=nx>val2</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span>
+    <span class=p>(</span><span class=k>typeof</span> <span class=nx>val1</span> <span class=o>===</span> <span class=s1>&#39;number&#39;</span> <span class=o>&amp;&amp;</span> <span class=k>typeof</span> <span class=nx>val2</span> <span class=o>===</span> <span class=s1>&#39;number&#39;</span><span class=p>)</span> <span class=o>||</span>
+    <span class=p>(</span><span class=k>typeof</span> <span class=nx>val1</span> <span class=o>===</span> <span class=s1>&#39;string&#39;</span> <span class=o>&amp;&amp;</span> <span class=k>typeof</span> <span class=nx>val2</span> <span class=o>===</span> <span class=s1>&#39;string&#39;</span><span class=p>)</span>
+  <span class=p>)</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=nx>val1</span> <span class=o>+</span> <span class=nx>val2</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=k>throw</span> <span class=k>new</span> <span class=nb>Error</span><span class=p>(</span><span class=s1>&#39;Must be of type String or Number&#39;</span><span class=p>);</span>
+<span class=p>}</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>combine</span><span class=p>(</span><span class=nx>val1</span><span class=p>,</span> <span class=nx>val2</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=nx>val1</span> <span class=o>+</span> <span class=nx>val2</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><h4 id=17-dont-over-optimize>17. Don&rsquo;t over-optimize</h4>
+<p>Modern browsers do a lot of optimization under-the-hood at runtime. A lot of times, if you are optimizing then you are just wasting your time. There are good resources for seeing where optimization is lacking. Target those in the meantime, until they are fixed if they can be.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// On old browsers, each iteration with uncached `list.length` would be costly
+</span><span class=c1>// because of `list.length` recomputation. In modern browsers, this is optimized.
+</span><span class=c1></span><span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span> <span class=nx>len</span> <span class=o>=</span> <span class=nx>list</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>len</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>list</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+</code></pre></div><h4 id=18-remove-dead-code>18. Remove dead code</h4>
+<p>Dead code is just as bad as duplicate code. There&rsquo;s no reason to keep it in your codebase. If it&rsquo;s not being called, get rid of it! It will still be safe in your version history if you still need it.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>oldRequestModule</span><span class=p>(</span><span class=nx>url</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>newRequestModule</span><span class=p>(</span><span class=nx>url</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=kr>const</span> <span class=nx>req</span> <span class=o>=</span> <span class=nx>newRequestModule</span><span class=p>;</span>
+<span class=nx>inventoryTracker</span><span class=p>(</span><span class=s1>&#39;apples&#39;</span><span class=p>,</span> <span class=nx>req</span><span class=p>,</span> <span class=s1>&#39;www.inventory-awesome.io&#39;</span><span class=p>);</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>newRequestModule</span><span class=p>(</span><span class=nx>url</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=kr>const</span> <span class=nx>req</span> <span class=o>=</span> <span class=nx>newRequestModule</span><span class=p>;</span>
+<span class=nx>inventoryTracker</span><span class=p>(</span><span class=s1>&#39;apples&#39;</span><span class=p>,</span> <span class=nx>req</span><span class=p>,</span> <span class=s1>&#39;www.inventory-awesome.io&#39;</span><span class=p>);</span>
+</code></pre></div><h2 id=reference>Reference</h2>
+<p><a class=link href=https://github.com/haizlin/fe-interview target=_blank rel=noopener>haizlin/fe-interview</a></p>
+<p><a class=link href=https://muyiy.cn/ target=_blank rel=noopener>前端进阶</a></p>
+<p><a class=link href=https://github.com/ryanmcdermott/clean-code-javascript#introduction target=_blank rel=noopener>ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript</a></p>
+<p><a class=link href=https://github.com/petkaantonov/bluebird/wiki/Optimization-killers target=_blank rel=noopener>Optimization killers · petkaantonov/bluebird Wiki</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/frontend-120-cover.0a32e571e6d51a551baabbfb616704dd_hua011d6231397639b73e178c4dc9d94a3_79248_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-CjLlcebVGlUbqrv7YWcE3Q==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 120</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/frontend-119-cover.4234e27e2e1d4f34e9bfab81087c6d39_hu1cab084fcfd321b801547f46a62f6338_47272_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-QjTifi4dTzTpv6uBCHxtOQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 119</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-118/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-118/frontend-118-cover.50523d108b9ee8ae1b9389de920501b2_hufc37e162faff2880f01b9b5308f608d2_169483_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-UFI9EIue6K4bk4nekgUBsg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 118</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/frontend-117-cover.a34a5a62873efbe8a37b12da991ef97e_huc73ebb938871a4155941d153947771f0_1863070_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-o0paYoc+++ijexLamR75fg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 117</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-116/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-116/frontend-116-cover.15be91245f8e665df0cbc2d3b28e3bad_hu57b85128ed781cfde0d0ded5ed20c9ad_1809746_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-Fb6RJF+OZl3wy8LTso47rQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 116</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 -
+2022 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#clean-code-javascript>Clean Code JavaScript</a>
+<ol>
+<li><a href=#functions>Functions</a>
+<ol>
+<li><a href=#1-function-arguments-2-or-fewer-ideally>1. Function arguments (2 or fewer ideally)</a></li>
+<li><a href=#2-functions-should-do-one-thing>2. Functions should do one thing</a></li>
+<li><a href=#3-function-names-should-say-what-they-do>3. Function names should say what they do</a></li>
+<li><a href=#4-functions-should-only-be-one-level-of-abstraction>4. Functions should only be one level of abstraction</a></li>
+<li><a href=#5-remove-duplicate-code>5. Remove duplicate code</a></li>
+<li><a href=#6-set-default-objects-with-objectassign>6. Set default objects with <code>Object.assign</code></a></li>
+<li><a href=#7-dont-use-flags-as-function-parameters>7. Don&rsquo;t use flags as function parameters</a></li>
+<li><a href=#8-avoid-side-effects-part-1>8. Avoid Side Effects (part 1)</a></li>
+<li><a href=#9-avoid-side-effects-part-2>9. Avoid Side Effects (part 2)</a></li>
+<li><a href=#10-dont-write-to-global-functions>10. Don&rsquo;t write to global functions</a></li>
+<li><a href=#11-favor-functional-programming-over-imperative-programming>11. Favor functional programming over imperative programming</a></li>
+<li><a href=#12-encapsulate-conditionals>12. Encapsulate conditionals</a></li>
+<li><a href=#13-avoid-negative-conditionals>13. Avoid negative conditionals</a></li>
+<li><a href=#14-avoid-conditionals>14. Avoid conditionals</a></li>
+<li><a href=#15-avoid-type-checking-part-1>15. Avoid type-checking (part 1)</a></li>
+<li><a href=#16-avoid-type-checking-part-2>16. Avoid type-checking (part 2)</a></li>
+<li><a href=#17-dont-over-optimize>17. Don&rsquo;t over-optimize</a></li>
+<li><a href=#18-remove-dead-code>18. Remove dead code</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

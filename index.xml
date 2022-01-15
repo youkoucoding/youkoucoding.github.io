@@ -1,4 +1,466 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 14 Jan 2022 10:59:02 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 120</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/</link><pubDate>Fri, 14 Jan 2022 10:59:02 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/frontend-120-cover.jpg" alt="Featured image of post 毎日のフロントエンド 120" />&lt;h1 id="第一百二十日">第一百二十日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 15 Jan 2022 17:22:59 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 121</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/</link><pubDate>Sat, 15 Jan 2022 17:22:59 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/frontend-121-cover.jpg" alt="Featured image of post 毎日のフロントエンド 121" />&lt;h1 id="第一百二十一日">第一百二十一日&lt;/h1>
+&lt;h2 id="clean-code-javascript">Clean Code JavaScript&lt;/h2>
+&lt;h3 id="functions">Functions&lt;/h3>
+&lt;h4 id="1-function-arguments-2-or-fewer-ideally">1. Function arguments (2 or fewer ideally)&lt;/h4>
+&lt;p>Limiting the amount of function parameters is incredibly important because it makes testing your function explosion where you have to teset tons of different cases with each separeate argument.&lt;/p>
+&lt;p>减少函数的参数数量，有利于测试函数。&lt;/p>
+&lt;p>&lt;strong>One or two arguments is the ideal case&lt;/strong>, and three should be avoided if possible. Anything more than that should be consolidated(被合并). Usually, if you have more than two arguments then your function is trying to do too much. In cases where it&amp;rsquo;s not, most of the time a higher-level object will suffice as an argument.&lt;/p>
+&lt;p>如果参数太多且无法缩减，应考虑用对象代替。&lt;/p>
+&lt;p>Since JavaScript allows you to make objects on the fly, without a lot of class boilerplate, you can use an object if you are finding youself needing a lot of arguments.&lt;/p>
+&lt;p>To make it obvious what properties the function expects, we can use the destructuring syntax(from EX2015/ES6). This has a few advantages:&lt;/p>
+&lt;ol>
+&lt;li>When someone looks at the function signature, it&amp;rsquo;s immediately clear what properties are being used.&lt;/li>
+&lt;li>It can be used to simulate named parameters.&lt;/li>
+&lt;li>Destructuring also &lt;strong>clones the specified primitive values of the argument object&lt;/strong> passed into the function. &lt;strong>This can help prevent side effects.&lt;/strong>
+&lt;blockquote>
+&lt;p>Note: objects and arrays that are destructured from the argument object are NOT cloned.&lt;/p>
+&lt;/blockquote>
+&lt;/li>
+&lt;li>Linters can warn you about unused properties, which would be impossible without destructuring.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">createMenu&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">body&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">buttonText&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cancellable&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="nx">createMenu&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Foo&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;Bar&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;Baz&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">createMenu&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">body&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">buttonText&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cancellable&lt;/span> &lt;span class="p">})&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="nx">createMenu&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="nx">title&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Foo&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">body&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Bar&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">buttonText&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Baz&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">cancellable&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="2-functions-should-do-one-thing">2. Functions should do one thing&lt;/h4>
+&lt;p>&lt;strong>This is by far the most important rule in software engineering&lt;/strong>. When functions do more than one thing, they are harder to compose, test, and reason about. When you can isolate a function to just one action, it can be refactored easily and your code will read much cleaner.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">emailClients&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">clients&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">clients&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">client&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">clientRecord&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">database&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">lookup&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">client&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">clientRecord&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isActive&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">email&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">client&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">emailActiveClients&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">clients&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">clients&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">isActiveClient&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">email&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">isActiveClient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">client&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">clientRecord&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">database&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">lookup&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">client&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">clientRecord&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isActive&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="3-function-names-should-say-what-they-do">3. Function names should say what they do&lt;/h4>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">addToDate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">date&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">month&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">date&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="c1">// It&amp;#39;s hard to tell from the function name what is added
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">addToDate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">date&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">addMonthToDate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">month&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">date&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">date&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">addMonthToDate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">date&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="4-functions-should-only-be-one-level-of-abstraction">4. Functions should only be one level of abstraction&lt;/h4>
+&lt;p>When you have more than one level of abstraction your function is usually doing too much. Splitting up functions leads to reusability and easier testing.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">parseBetterJSAlternative&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">code&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">REGEXES&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">statements&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">code&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">tokens&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">REGEXES&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">REGEX&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">statements&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">statement&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">ast&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">tokens&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">token&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// lex...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="nx">ast&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// parse...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">parseBetterJSAlternative&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">code&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">tokens&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">tokenize&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">code&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">syntaxTree&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">parse&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">tokens&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">syntaxTree&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// parse...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">tokenize&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">code&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">REGEXES&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">statements&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">code&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">tokens&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">REGEXES&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">REGEX&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">statements&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">statement&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">tokens&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="cm">/* ... */&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">tokens&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">parse&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">tokens&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">syntaxTree&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">tokens&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">token&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">syntaxTree&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="cm">/* ... */&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">syntaxTree&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="5-remove-duplicate-code">5. Remove duplicate code&lt;/h4>
+&lt;p>Do your absolute best to avoid duplicate code. Duplicate code is bad because it means that there&amp;rsquo;s more than one place to alter something if you need to change some logic.&lt;/p>
+&lt;p>Imagine if you run a restaurant and you keep track of your inventory: all your tomatoes, onions, garlic, spices, etc. If you have multiple lists that you keep this on, then all have to be updated when you serve a dish with tomatoes in them. &lt;strong>If you only have one list, there&amp;rsquo;s only one place to update!&lt;/strong>&lt;/p>
+&lt;p>Oftentimes you have duplicate code because you have two or more slightly different things, that share a lot in common, but their differences force you to have two or more separate functions that do much of the same things. &lt;strong>Removing duplicate code means creating an abstraction that can handle this set of different things with just one function/module/class.&lt;/strong>&lt;/p>
+&lt;p>Getting the abstraction right is critical, that&amp;rsquo;s why you should follow the SOLID principles laid out in the &lt;em>Classes&lt;/em> section. Bad abstractions can be worse than duplicate code, so be careful! Having said this, if you can make a good abstraction, do it! &lt;strong>Don&amp;rsquo;t repeat yourself&lt;/strong>, otherwise you&amp;rsquo;ll find yourself updating multiple places anytime you want to change one thing.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">showDeveloperList&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">developers&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">developers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">developer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">expectedSalary&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">developer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">calculateExpectedSalary&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">experience&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">developer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getExperience&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">githubLink&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">developer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getGithubLink&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">expectedSalary&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">experience&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">githubLink&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">render&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">showManagerList&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">managers&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">managers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">manager&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">expectedSalary&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">manager&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">calculateExpectedSalary&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">experience&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">manager&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getExperience&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">portfolio&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">manager&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getMBAProjects&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">expectedSalary&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">experience&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">portfolio&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">render&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">showEmployeeList&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">employees&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">employees&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">employee&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">expectedSalary&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">employee&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">calculateExpectedSalary&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">experience&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">employee&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getExperience&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">expectedSalary&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">experience&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="k">switch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">employee&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="s1">&amp;#39;manager&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">portfolio&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">employee&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getMBAProjects&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="s1">&amp;#39;developer&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="nx">data&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">githubLink&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">employee&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getGithubLink&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">render&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="6-set-default-objects-with-objectassign">6. Set default objects with &lt;code>Object.assign&lt;/code>&lt;/h4>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">menuConfig&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">title&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">body&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Bar&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">buttonText&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">cancellable&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">createMenu&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">config&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">config&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">title&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">config&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">title&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="s1">&amp;#39;Foo&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">config&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">body&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">config&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">body&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="s1">&amp;#39;Bar&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">config&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">buttonText&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">config&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">buttonText&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="s1">&amp;#39;Baz&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">config&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">cancellable&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;span class="nx">config&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">cancellable&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="kc">undefined&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">config&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">cancellable&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">createMenu&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">menuConfig&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">menuConfig&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">title&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Order&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1">// User did not include &amp;#39;body&amp;#39; key
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">buttonText&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Send&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">cancellable&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">createMenu&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">config&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">finalConfig&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">assign&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">title&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Foo&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">body&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Bar&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">buttonText&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Baz&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">cancellable&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nx">config&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">finalConfig&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// config now equals: {title: &amp;#34;Order&amp;#34;, body: &amp;#34;Bar&amp;#34;, buttonText: &amp;#34;Send&amp;#34;, cancellable: true}
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="nx">createMenu&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">menuConfig&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="7-dont-use-flags-as-function-parameters">7. Don&amp;rsquo;t use flags as function parameters&lt;/h4>
+&lt;p>Flags tell your user that this function does more than one thing. Functions should do one thing. Split out your functions if they are following different code paths based on a boolean.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">createFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">temp&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">temp&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`./temp/&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">createFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">createTempFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">createFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`./temp/&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="8-avoid-side-effects-part-1">8. Avoid Side Effects (part 1)&lt;/h4>
+&lt;p>A function produces a side effect if it does anything other than take a value in and return another value or values. A side effect could be writing to a file, modifying some global variable, or accidentally wiring all your money to a stranger.&lt;/p>
+&lt;p>Now, you do need to have side effects in a program on occasion. Like the previous example, you might need to write to a file. What you want to do is to centralize where you are doing this. Don&amp;rsquo;t have several functions and classes that write to a particular file. Have one service that does it. One and only one.&lt;/p>
+&lt;p>The main point is to avoid common pitfalls like sharing state between objects without any structure, using mutable data types that can be written to by anything, and not centralizing where your side effects occur. If you can do this, you will be happier than the vast majority of other programmers.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// Global variable referenced by following function.
+&lt;/span>&lt;span class="c1">// If we had another function that used this name, now it&amp;#39;d be an array and it could break it.
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;Ryan McDermott&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">splitIntoFirstAndLastName&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">splitIntoFirstAndLastName&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [&amp;#39;Ryan&amp;#39;, &amp;#39;McDermott&amp;#39;];
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">splitIntoFirstAndLastName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;Ryan McDermott&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">newName&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">splitIntoFirstAndLastName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;Ryan McDermott&amp;#39;;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">newName&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [&amp;#39;Ryan&amp;#39;, &amp;#39;McDermott&amp;#39;];
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="9-avoid-side-effects-part-2">9. Avoid Side Effects (part 2)&lt;/h4>
+&lt;p>In JavaScript, some values are unchangeable (immutable) and some are changeable (mutable). Objects and arrays are two kinds of mutable values so it&amp;rsquo;s important to handle them carefully when they&amp;rsquo;re passed as parameters to a function. A JavaScript function can change an object&amp;rsquo;s properties or alter the contents of an array which could easily cause bugs elsewhere.&lt;/p>
+&lt;p>Suppose there&amp;rsquo;s a function that accepts an array parameter representing a shopping cart. If the function makes a change in that shopping cart array - by adding an item to purchase, for example - then any other function that uses that same cart array will be affected by this addition. That may be great, however it could also be bad. Let&amp;rsquo;s imagine a bad situation:&lt;/p>
+&lt;p>The user clicks the &amp;ldquo;Purchase&amp;rdquo; button which calls a purchase function that spawns a network request and sends the cart array to the server. Because of a bad network connection, the purchase function has to keep retrying the request. Now, what if in the meantime the user accidentally clicks an &amp;ldquo;Add to Cart&amp;rdquo; button on an item they don&amp;rsquo;t actually want before the network request begins? If that happens and the network request begins, then that purchase function will send the accidentally added item because the cart array was modified.&lt;/p>
+&lt;p>A great solution would be for the addItemToCart function to always clone the cart, edit it, and return the clone. This would ensure that functions that are still using the old shopping cart wouldn&amp;rsquo;t be affected by the changes.&lt;/p>
+&lt;p>Two caveats to mention to this approach:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>There might be cases where you actually want to modify the input object, but when you adopt this programming practice you will find that those cases are pretty rare. Most things can be refactored to have no side effects!&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Cloning big objects can be very expensive in terms of performance. Luckily, this isn&amp;rsquo;t a big issue in practice because there are great libraries that allow this kind of programming approach to be fast and not as memory intensive as it would be for you to manually clone objects and arrays.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">addItemToCart&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">cart&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">cart&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">date&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">now&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">addItemToCart&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">cart&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nx">cart&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">date&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">now&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">}];&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="10-dont-write-to-global-functions">10. Don&amp;rsquo;t write to global functions&lt;/h4>
+&lt;p>Polluting globals is a bad practice in JavaScript because you could clash with another library and the user of your API would be none-the-wiser until they get an exception in production. Let&amp;rsquo;s think about an example: what if you wanted to extend JavaScript&amp;rsquo;s native Array method to have a diff method that could show the difference between two arrays? You could write your new function to the Array.prototype, but it could clash with another library that tried to do the same thing. What if that other library was just using diff to find the difference between the first and last elements of an array? This is why it would be much better to just use ES2015/ES6 classes and simply extend the Array global.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">diff&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">diff&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">comparisonArray&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">hash&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">comparisonArray&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">elem&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="o">!&lt;/span>&lt;span class="nx">hash&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">has&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">elem&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">class&lt;/span> &lt;span class="nx">SuperArray&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nb">Array&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">diff&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">comparisonArray&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">hash&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">comparisonArray&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">elem&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="o">!&lt;/span>&lt;span class="nx">hash&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">has&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">elem&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="11-favor-functional-programming-over-imperative-programming">11. Favor functional programming over imperative programming&lt;/h4>
+&lt;p>JavaScript isn&amp;rsquo;t a functional language in the way that Haskell is, but it has a functional flavor to it. Functional languages can be cleaner and easier to test. Favor this style of programming when you can.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">programmerOutput&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Uncle Bobby&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">linesOfCode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">500&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Suzie Q&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">linesOfCode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1500&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Jimmy Gosling&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">linesOfCode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">150&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Gracie Hopper&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">linesOfCode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">];&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">totalOutput&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">programmerOutput&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">totalOutput&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">programmerOutput&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">linesOfCode&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">programmerOutput&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Uncle Bobby&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">linesOfCode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">500&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Suzie Q&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">linesOfCode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1500&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Jimmy Gosling&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">linesOfCode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">150&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Gracie Hopper&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">linesOfCode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">totalOutput&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">programmerOutput&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="p">(&lt;/span>&lt;span class="nx">totalLines&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">output&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">totalLines&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">output&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">linesOfCode&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="mi">0&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="12-encapsulate-conditionals">12. Encapsulate conditionals&lt;/h4>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">fsm&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">state&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;fetching&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">isEmpty&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">listNode&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">shouldShowSpinner&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fsm&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">listNode&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">fsm&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">state&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;fetching&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">isEmpty&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">listNode&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">shouldShowSpinner&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">fsmInstance&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">listNodeInstance&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="13-avoid-negative-conditionals">13. Avoid negative conditionals&lt;/h4>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">isDOMNodeNotPresent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">isDOMNodeNotPresent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">isDOMNodePresent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">isDOMNodePresent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="14-avoid-conditionals">14. Avoid conditionals&lt;/h4>
+&lt;p>This seems like an impossible task. Upon first hearing this, most people say, &amp;ldquo;how am I supposed to do anything without an if statement?&amp;rdquo; The answer is that you can use polymorphism to achieve the same task in many cases. The second question is usually, &amp;ldquo;well that&amp;rsquo;s great but why would I want to do that?&amp;rdquo; The answer is a previous clean code concept we learned: a function should only do one thing. When you have classes and functions that have if statements, you are telling your user that your function does more than one thing. Remember, just do one thing.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">class&lt;/span> &lt;span class="nx">Airplane&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">getCruisingAltitude&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">switch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="s1">&amp;#39;777&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getMaxAltitude&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getPassengerCount&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="s1">&amp;#39;Air Force One&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getMaxAltitude&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">case&lt;/span> &lt;span class="s1">&amp;#39;Cessna&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getMaxAltitude&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getFuelExpenditure&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">class&lt;/span> &lt;span class="nx">Airplane&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">Boeing777&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Airplane&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">getCruisingAltitude&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getMaxAltitude&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getPassengerCount&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">AirForceOne&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Airplane&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">getCruisingAltitude&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getMaxAltitude&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">Cessna&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Airplane&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">getCruisingAltitude&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getMaxAltitude&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getFuelExpenditure&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="15-avoid-type-checking-part-1">15. Avoid type-checking (part 1)&lt;/h4>
+&lt;p>JavaScript is untyped, which means your functions can take any type of argument. Sometimes you are bitten by this freedom and it becomes tempting to do type-checking in your functions. There are many ways to avoid having to do this. The first thing to consider is consistent APIs.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">travelToTexas&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">vehicle&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">vehicle&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nx">Bicycle&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">vehicle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">pedal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">currentLocation&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Location&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;texas&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">vehicle&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nx">Car&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">vehicle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">drive&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">currentLocation&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Location&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;texas&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">travelToTexas&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">vehicle&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">vehicle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">move&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">currentLocation&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Location&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;texas&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="16-avoid-type-checking-part-2">16. Avoid type-checking (part 2)&lt;/h4>
+&lt;p>If you are working with basic primitive values like strings and integers, and you can&amp;rsquo;t use polymorphism but you still feel the need to type-check, you should consider using TypeScript. It is an excellent alternative to normal JavaScript, as it provides you with static typing on top of standard JavaScript syntax. The problem with manually type-checking normal JavaScript is that doing it well requires so much extra verbiage that the faux &amp;ldquo;type-safety&amp;rdquo; you get doesn&amp;rsquo;t make up for the lost readability. Keep your JavaScript clean, write good tests, and have good code reviews. Otherwise, do all of that but with TypeScript (which, like I said, is a great alternative!).&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">combine&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">val1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">val2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">val1&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;number&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">val2&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;number&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">||&lt;/span>
+&lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">val1&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;string&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">val2&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;string&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">val1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">val2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Must be of type String or Number&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">combine&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">val1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">val2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">val1&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">val2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="17-dont-over-optimize">17. Don&amp;rsquo;t over-optimize&lt;/h4>
+&lt;p>Modern browsers do a lot of optimization under-the-hood at runtime. A lot of times, if you are optimizing then you are just wasting your time. There are good resources for seeing where optimization is lacking. Target those in the meantime, until they are fixed if they can be.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// On old browsers, each iteration with uncached `list.length` would be costly
+&lt;/span>&lt;span class="c1">// because of `list.length` recomputation. In modern browsers, this is optimized.
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">len&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">len&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="18-remove-dead-code">18. Remove dead code&lt;/h4>
+&lt;p>Dead code is just as bad as duplicate code. There&amp;rsquo;s no reason to keep it in your codebase. If it&amp;rsquo;s not being called, get rid of it! It will still be safe in your version history if you still need it.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">oldRequestModule&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">newRequestModule&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">req&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">newRequestModule&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">inventoryTracker&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;apples&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">req&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;www.inventory-awesome.io&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">newRequestModule&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">req&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">newRequestModule&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">inventoryTracker&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;apples&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">req&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;www.inventory-awesome.io&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/ryanmcdermott/clean-code-javascript#introduction" target="_blank" rel="noopener"
+>ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers" target="_blank" rel="noopener"
+>Optimization killers · petkaantonov/bluebird Wiki&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 120</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/</link><pubDate>Fri, 14 Jan 2022 10:59:02 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/frontend-120-cover.jpg" alt="Featured image of post 毎日のフロントエンド 120" />&lt;h1 id="第一百二十日">第一百二十日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-富文本编辑器的实现原理">&lt;strong>Question:&lt;/strong> 富文本编辑器的实现原理&lt;/h3>
 &lt;p>WYSIWYG stands for “What you see is what you get”. &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
