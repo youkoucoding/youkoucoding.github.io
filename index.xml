@@ -1,4 +1,129 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 15 Jan 2022 17:22:59 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 121</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/</link><pubDate>Sat, 15 Jan 2022 17:22:59 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/frontend-121-cover.jpg" alt="Featured image of post 毎日のフロントエンド 121" />&lt;h1 id="第一百二十一日">第一百二十一日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 16 Jan 2022 10:21:54 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 122</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/</link><pubDate>Sun, 16 Jan 2022 10:21:54 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/frontend-122-cover.jpg" alt="Featured image of post 毎日のフロントエンド 122" />&lt;h1 id="第一百二十二日">第一百二十二日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-form-datax-www-form-urlencodedrawbinary的区别">&lt;strong>Question:&lt;/strong> &lt;code>form-data&lt;/code>、&lt;code>x-www-form-urlencoded&lt;/code>、&lt;code>raw&lt;/code>、&lt;code>binary&lt;/code>的区别&lt;/h3>
+&lt;ol>
+&lt;li>&lt;code>form-data&lt;/code>
+&lt;ul>
+&lt;li>http 请求中 &lt;code>multipart/form-data&lt;/code> 它会将表单的数据处理为一条消息，以标签为单元，用分隔符分开&lt;/li>
+&lt;li>既可以上传键值对，也可以上传文件&lt;/li>
+&lt;li>当上传的字段是文件时，&lt;code>Content-Type&lt;/code>来说明文件类型；&lt;/li>
+&lt;li>&lt;code>content-disposition&lt;/code>，用来说明字段的一些信息&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>x-www-form-urlencoded&lt;/code>
+&lt;ul>
+&lt;li>&lt;code>application/x-www-from-urlencoded&lt;/code>, 会将表单内的数据转换为&lt;strong>键值对&lt;/strong> &lt;code>name=leyangjun&amp;amp;age =28&amp;amp;work＝meituan&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>raw&lt;/code>
+&lt;ul>
+&lt;li>可上传任意格式的文本，可以上传 text、json、xml、html 等各种文本类型&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>binary&lt;/code>
+&lt;ul>
+&lt;li>等同于&lt;code>Content-Type:application/octet-stream&lt;/code>，只可上传二进制数据，通常用来上传文件，由于没有键值，所以一次只能上传一个文件&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>note:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>form-data&lt;/code>与&lt;code>x-www-form-urlencoded&lt;/code>不同之处在于：
+&lt;ul>
+&lt;li>&lt;code>multipart/form-data&lt;/code>：既可以上传文件等二进制数据，也可以上传表单键值对，只是最后会转化为一条信息&lt;/li>
+&lt;li>&lt;code>x-www-form-urlencoded&lt;/code>：只能上传键值对，且键值对都是间隔分开&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-能否正确获取本地上传的文件路径">&lt;strong>Question:&lt;/strong> 能否正确获取本地上传的文件路径&lt;/h3>
+&lt;ul>
+&lt;li>无法获取,客户端 js 脚本没有文件访问权限,只能由浏览器代为操作&lt;/li>
+&lt;li>可以通过 DOM-api 获取由浏览器转义的文件路径&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">file&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;change&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">reader&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">FileReader&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">reader&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">readAsDataURL&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">file&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">files&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;span class="nx">reader&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onload&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">result&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//base64数据 or 虚拟路径 取决于浏览器的实现
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="clean-code-javascript">Clean Code JavaScript&lt;/h2>
+&lt;h3 id="object--data-structures">Object &amp;amp; Data structures&lt;/h3>
+&lt;h4 id="1-use-getters-and-setters">1. Use getters and setters&lt;/h4>
+&lt;p>Using getters and setters to access data on objects could be better than simply looking for a property on an object. Here&amp;rsquo;s an unorganized list of reasons why:&lt;/p>
+&lt;ul>
+&lt;li>When you want to do more beyond getting an object property, you don&amp;rsquo;t have to look up and change every accessor in your codebase.&lt;/li>
+&lt;li>Makes adding validation simple when doing a &lt;code>set&lt;/code>&lt;/li>
+&lt;li>Easy to add logging and error handling when getting and setting.&lt;/li>
+&lt;li>You can lazy load your object&amp;rsquo;s properties, let&amp;rsquo;s say getting it form a server.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">makeBankAccount&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">balance&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">account&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">makeBankAccount&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">account&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">balance&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">makeBankAccount&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// this one is private
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">balance&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// a &amp;#34;getter&amp;#34;, made public via the returned object below
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">getBalance&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">balance&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// a &amp;#34;setter&amp;#34;, made public via the returned object below
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">setBalance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">amount&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ... validate before updating the balance
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">balance&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">amount&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">getBalance&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">setBalance&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">account&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">makeBankAccount&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">account&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setBalance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="2-make-objects-have-private-members">2. Make objects have private members&lt;/h4>
+&lt;p>This can be accomplished through &lt;code>closures&lt;/code> (for ES5 and below).&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Employee&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">Employee&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getName&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">getName&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">employee&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Employee&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;John Doe&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`Employee name: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">employee&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getName&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Employee name: John Doe
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">delete&lt;/span> &lt;span class="nx">employee&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`Employee name: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">employee&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getName&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Employee name: undefined
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">makeEmployee&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">getName&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">employee&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">makeEmployee&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;John Doe&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`Employee name: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">employee&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getName&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Employee name: John Doe
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">delete&lt;/span> &lt;span class="nx">employee&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`Employee name: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">employee&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getName&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Employee name: John Doe
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/ryanmcdermott/clean-code-javascript#introduction" target="_blank" rel="noopener"
+>ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader" target="_blank" rel="noopener"
+>FileReader - Web API 接口参考 | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 121</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/</link><pubDate>Sat, 15 Jan 2022 17:22:59 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-121/frontend-121-cover.jpg" alt="Featured image of post 毎日のフロントエンド 121" />&lt;h1 id="第一百二十一日">第一百二十一日&lt;/h1>
 &lt;h2 id="clean-code-javascript">Clean Code JavaScript&lt;/h2>
 &lt;h3 id="functions">Functions&lt;/h3>
 &lt;h4 id="1-function-arguments-2-or-fewer-ideally">1. Function arguments (2 or fewer ideally)&lt;/h4>
