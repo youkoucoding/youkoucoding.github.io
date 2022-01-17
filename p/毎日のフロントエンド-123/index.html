@@ -1,0 +1,505 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 123</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  123">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2022-01-17T11:59:49+09:00"><meta property="article:modified_time" content="2022-01-17T11:59:49+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/frontend-123-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド  123">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/frontend-123-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/frontend-123-cover_hue21ef69feef81f34091e40a51d98cb9f_106460_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/frontend-123-cover_hue21ef69feef81f34091e40a51d98cb9f_106460_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/frontend-123-cover_hue21ef69feef81f34091e40a51d98cb9f_106460_1600x0_resize_q75_box.jpg 1600w" width=800 height=477 loading=lazy alt="Featured image of post 毎日のフロントエンド  123">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/>毎日のフロントエンド 123</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Jan 17, 2022</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 4 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第一百二十三日>第一百二十三日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-用-canvas-画出一个矩形><strong>Question:</strong> 用 canvas 画出一个矩形</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>canvas</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;canvas&#34;</span> <span class=na>width</span><span class=o>=</span><span class=s>&#34;300&#34;</span> <span class=na>height</span><span class=o>=</span><span class=s>&#34;300&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>canvas</span><span class=p>&gt;</span>
+
+<span class=p>&lt;</span><span class=nt>script</span><span class=p>&gt;</span>
+  <span class=kd>var</span> <span class=nx>canvas</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s1>&#39;canvas&#39;</span><span class=p>);</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>canvas</span><span class=p>.</span><span class=nx>getContext</span><span class=p>)</span> <span class=p>{</span>
+    <span class=kd>var</span> <span class=nx>ctx</span> <span class=o>=</span> <span class=nx>canvas</span><span class=p>.</span><span class=nx>getContext</span><span class=p>(</span><span class=s1>&#39;2d&#39;</span><span class=p>);</span>
+    <span class=nx>ctx</span><span class=p>.</span><span class=nx>fillStyle</span> <span class=o>=</span> <span class=s1>&#39;rgb(200,0,0)&#39;</span><span class=p>;</span>
+    <span class=nx>ctx</span><span class=p>.</span><span class=nx>fillRect</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>10</span><span class=p>,</span> <span class=mi>60</span><span class=p>,</span> <span class=mi>30</span><span class=p>);</span>
+  <span class=p>}</span>
+<span class=p>&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</code></pre></div><h2 id=css>CSS</h2>
+<h3 id=question-zoom-作用><strong>Question:</strong> zoom 作用</h3>
+<blockquote>
+<p>zoom 只是 IE 浏览器独有，现在，<strong>除了 FireFox</strong>，其他，尤其 Chrome 和移动端浏览器已经很好支持 zoom 属性
+zoom 依旧不是正式的属性。与之对应的 transform 的 scale 属性是正式的 CSS 属性</p>
+</blockquote>
+<ul>
+<li>zoom 主要的作用是用于元素或者页面的缩放；transform 的 scale 也有同样的作用，两者有如下的区别:
+<ul>
+<li><code>zoom</code> 的缩放点在元素左上角。在 Chrome 下，文字如果缩小后小于 12px 的情况仍然会显示 12px。并且 zoom 缩放会影响元素实际的位置，这样就会造成页面的重排和重绘，在性能上会有影响</li>
+<li><code>transform</code> 的 <code>scale</code> 缩放点在元素中心。缩放会对文字有影响，可以利用此属性实现 Chrome 下小于 12px 的字体。但是 transform 缩放后不会改变元素的位置，即如果元素原来是 200px 宽，缩小 50% 后虽然看上去只有 100px 宽了，但是仍然占 200px</li>
+</ul>
+</li>
+</ul>
+<h2 id=javascript>JavaScript</h2>
+<h3 id=question-分析b--a--a--atolowercase返回的结果><strong>Question:</strong> 分析<code>('b' + 'a' + +'a' + 'a').toLowerCase()</code>返回的结果</h3>
+<p>Result: <code>banana</code></p>
+<p><code>+</code> 是一元操作符，操作数是 <code>'a'</code> => <code>NaN</code></p>
+<ul>
+<li><code>'+'</code>号运算符作为一元运算符时，Expression 将进行<code>ToNumber()</code>操作</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>argument 类型</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Undefined</td>
+<td>NaN</td>
+</tr>
+<tr>
+<td>Null</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>true return 1; false return 0;</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>value</td>
+</tr>
+<tr>
+<td>String</td>
+<td>若字符串为纯数字时返回转换后的数字；非纯数字(包含其他类型字符，无论其位置)均返回 NaN</td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td>抛出 TypeError 异常</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>1.先进行 ToPrimitive(argument, hint Number)得到 rs； 2.然后返回 ToNumber(rs)的结果。</td>
+</tr>
+</tbody>
+</table>
+<h2 id=clean-code-javascript>Clean Code JavaScript</h2>
+<h3 id=classes><strong>Classes</strong></h3>
+<h4 id=1-prefer-es2015es6-classes-over-es5-plain-functions>1. Prefer ES2015/ES6 classes over ES5 plain functions</h4>
+<p>It&rsquo;s very difficult to get readable class inheritance, construction, and method
+definitions for classical ES5 classes. If you need inheritance (and be aware
+that you might not), then prefer ES2015/ES6 classes. However, prefer small functions over
+classes until you find yourself needing larger and more complex objects.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kr>const</span> <span class=nx>Animal</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>age</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=p>(</span><span class=k>this</span> <span class=k>instanceof</span> <span class=nx>Animal</span><span class=p>))</span> <span class=p>{</span>
+    <span class=k>throw</span> <span class=k>new</span> <span class=nb>Error</span><span class=p>(</span><span class=s1>&#39;Instantiate Animal with `new`&#39;</span><span class=p>);</span>
+  <span class=p>}</span>
+
+  <span class=k>this</span><span class=p>.</span><span class=nx>age</span> <span class=o>=</span> <span class=nx>age</span><span class=p>;</span>
+<span class=p>};</span>
+
+<span class=nx>Animal</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>move</span> <span class=o>=</span> <span class=kd>function</span> <span class=nx>move</span><span class=p>()</span> <span class=p>{};</span>
+
+<span class=kr>const</span> <span class=nx>Mammal</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>age</span><span class=p>,</span> <span class=nx>furColor</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=p>(</span><span class=k>this</span> <span class=k>instanceof</span> <span class=nx>Mammal</span><span class=p>))</span> <span class=p>{</span>
+    <span class=k>throw</span> <span class=k>new</span> <span class=nb>Error</span><span class=p>(</span><span class=s1>&#39;Instantiate Mammal with `new`&#39;</span><span class=p>);</span>
+  <span class=p>}</span>
+
+  <span class=nx>Animal</span><span class=p>.</span><span class=nx>call</span><span class=p>(</span><span class=k>this</span><span class=p>,</span> <span class=nx>age</span><span class=p>);</span>
+  <span class=k>this</span><span class=p>.</span><span class=nx>furColor</span> <span class=o>=</span> <span class=nx>furColor</span><span class=p>;</span>
+<span class=p>};</span>
+
+<span class=nx>Mammal</span><span class=p>.</span><span class=nx>prototype</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>create</span><span class=p>(</span><span class=nx>Animal</span><span class=p>.</span><span class=nx>prototype</span><span class=p>);</span>
+<span class=nx>Mammal</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>constructor</span> <span class=o>=</span> <span class=nx>Mammal</span><span class=p>;</span>
+<span class=nx>Mammal</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>liveBirth</span> <span class=o>=</span> <span class=kd>function</span> <span class=nx>liveBirth</span><span class=p>()</span> <span class=p>{};</span>
+
+<span class=kr>const</span> <span class=nx>Human</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>age</span><span class=p>,</span> <span class=nx>furColor</span><span class=p>,</span> <span class=nx>languageSpoken</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=p>(</span><span class=k>this</span> <span class=k>instanceof</span> <span class=nx>Human</span><span class=p>))</span> <span class=p>{</span>
+    <span class=k>throw</span> <span class=k>new</span> <span class=nb>Error</span><span class=p>(</span><span class=s1>&#39;Instantiate Human with `new`&#39;</span><span class=p>);</span>
+  <span class=p>}</span>
+
+  <span class=nx>Mammal</span><span class=p>.</span><span class=nx>call</span><span class=p>(</span><span class=k>this</span><span class=p>,</span> <span class=nx>age</span><span class=p>,</span> <span class=nx>furColor</span><span class=p>);</span>
+  <span class=k>this</span><span class=p>.</span><span class=nx>languageSpoken</span> <span class=o>=</span> <span class=nx>languageSpoken</span><span class=p>;</span>
+<span class=p>};</span>
+
+<span class=nx>Human</span><span class=p>.</span><span class=nx>prototype</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>create</span><span class=p>(</span><span class=nx>Mammal</span><span class=p>.</span><span class=nx>prototype</span><span class=p>);</span>
+<span class=nx>Human</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>constructor</span> <span class=o>=</span> <span class=nx>Human</span><span class=p>;</span>
+<span class=nx>Human</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>speak</span> <span class=o>=</span> <span class=kd>function</span> <span class=nx>speak</span><span class=p>()</span> <span class=p>{};</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kr>class</span> <span class=nx>Animal</span> <span class=p>{</span>
+  <span class=nx>constructor</span><span class=p>(</span><span class=nx>age</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>age</span> <span class=o>=</span> <span class=nx>age</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=nx>move</span><span class=p>()</span> <span class=p>{</span>
+    <span class=cm>/* ... */</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+
+<span class=kr>class</span> <span class=nx>Mammal</span> <span class=kr>extends</span> <span class=nx>Animal</span> <span class=p>{</span>
+  <span class=nx>constructor</span><span class=p>(</span><span class=nx>age</span><span class=p>,</span> <span class=nx>furColor</span><span class=p>)</span> <span class=p>{</span>
+    <span class=kr>super</span><span class=p>(</span><span class=nx>age</span><span class=p>);</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>furColor</span> <span class=o>=</span> <span class=nx>furColor</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=nx>liveBirth</span><span class=p>()</span> <span class=p>{</span>
+    <span class=cm>/* ... */</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+
+<span class=kr>class</span> <span class=nx>Human</span> <span class=kr>extends</span> <span class=nx>Mammal</span> <span class=p>{</span>
+  <span class=nx>constructor</span><span class=p>(</span><span class=nx>age</span><span class=p>,</span> <span class=nx>furColor</span><span class=p>,</span> <span class=nx>languageSpoken</span><span class=p>)</span> <span class=p>{</span>
+    <span class=kr>super</span><span class=p>(</span><span class=nx>age</span><span class=p>,</span> <span class=nx>furColor</span><span class=p>);</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>languageSpoken</span> <span class=o>=</span> <span class=nx>languageSpoken</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=nx>speak</span><span class=p>()</span> <span class=p>{</span>
+    <span class=cm>/* ... */</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><h4 id=2-use-method-chaining>2. Use method chaining</h4>
+<p>This pattern is very useful in JavaScript and you see it in many libraries such as jQuery and Lodash. It allows your code to be expressive, and less verbose.
+For that reason, use method chaining and take a look at how clean your code will be. In your class functions, simply return <code>this</code> at the end of every function, and you can chain further class methods onto it.</p>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kr>class</span> <span class=nx>Car</span> <span class=p>{</span>
+  <span class=nx>constructor</span><span class=p>(</span><span class=nx>make</span><span class=p>,</span> <span class=nx>model</span><span class=p>,</span> <span class=nx>color</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>make</span> <span class=o>=</span> <span class=nx>make</span><span class=p>;</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>model</span> <span class=o>=</span> <span class=nx>model</span><span class=p>;</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>color</span> <span class=o>=</span> <span class=nx>color</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=nx>setMake</span><span class=p>(</span><span class=nx>make</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>make</span> <span class=o>=</span> <span class=nx>make</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=nx>setModel</span><span class=p>(</span><span class=nx>model</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>model</span> <span class=o>=</span> <span class=nx>model</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=nx>setColor</span><span class=p>(</span><span class=nx>color</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>color</span> <span class=o>=</span> <span class=nx>color</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=nx>save</span><span class=p>()</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>make</span><span class=p>,</span> <span class=k>this</span><span class=p>.</span><span class=nx>model</span><span class=p>,</span> <span class=k>this</span><span class=p>.</span><span class=nx>color</span><span class=p>);</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+
+<span class=kr>const</span> <span class=nx>car</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Car</span><span class=p>(</span><span class=s1>&#39;Ford&#39;</span><span class=p>,</span> <span class=s1>&#39;F-150&#39;</span><span class=p>,</span> <span class=s1>&#39;red&#39;</span><span class=p>);</span>
+<span class=nx>car</span><span class=p>.</span><span class=nx>setColor</span><span class=p>(</span><span class=s1>&#39;pink&#39;</span><span class=p>);</span>
+<span class=nx>car</span><span class=p>.</span><span class=nx>save</span><span class=p>();</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kr>class</span> <span class=nx>Car</span> <span class=p>{</span>
+  <span class=nx>constructor</span><span class=p>(</span><span class=nx>make</span><span class=p>,</span> <span class=nx>model</span><span class=p>,</span> <span class=nx>color</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>make</span> <span class=o>=</span> <span class=nx>make</span><span class=p>;</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>model</span> <span class=o>=</span> <span class=nx>model</span><span class=p>;</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>color</span> <span class=o>=</span> <span class=nx>color</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=nx>setMake</span><span class=p>(</span><span class=nx>make</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>make</span> <span class=o>=</span> <span class=nx>make</span><span class=p>;</span>
+    <span class=c1>// NOTE: Returning this for chaining
+</span><span class=c1></span>    <span class=k>return</span> <span class=k>this</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=nx>setModel</span><span class=p>(</span><span class=nx>model</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>model</span> <span class=o>=</span> <span class=nx>model</span><span class=p>;</span>
+    <span class=c1>// NOTE: Returning this for chaining
+</span><span class=c1></span>    <span class=k>return</span> <span class=k>this</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=nx>setColor</span><span class=p>(</span><span class=nx>color</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>color</span> <span class=o>=</span> <span class=nx>color</span><span class=p>;</span>
+    <span class=c1>// NOTE: Returning this for chaining
+</span><span class=c1></span>    <span class=k>return</span> <span class=k>this</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=nx>save</span><span class=p>()</span> <span class=p>{</span>
+    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=nx>make</span><span class=p>,</span> <span class=k>this</span><span class=p>.</span><span class=nx>model</span><span class=p>,</span> <span class=k>this</span><span class=p>.</span><span class=nx>color</span><span class=p>);</span>
+    <span class=c1>// NOTE: Returning this for chaining
+</span><span class=c1></span>    <span class=k>return</span> <span class=k>this</span><span class=p>;</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+
+<span class=kr>const</span> <span class=nx>car</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Car</span><span class=p>(</span><span class=s1>&#39;Ford&#39;</span><span class=p>,</span> <span class=s1>&#39;F-150&#39;</span><span class=p>,</span> <span class=s1>&#39;red&#39;</span><span class=p>).</span><span class=nx>setColor</span><span class=p>(</span><span class=s1>&#39;pink&#39;</span><span class=p>).</span><span class=nx>save</span><span class=p>();</span>
+</code></pre></div><h4 id=3-prefer-composition-over-inheritance>3. Prefer composition over inheritance</h4>
+<p>As stated famously in Design Patterns, you should prefer composition over inheritance where you can. There are lots of good reasons to use inheritance and lots of good reasons to use composition.
+The main point for this maxim is that if your mind instinctively goes for inheritance, try to think if composition could model your problem better. In some cases it can.
+This is a decent list of when inheritance
+makes more sense than composition:</p>
+<ol>
+<li>
+<p>Your inheritance represents an &ldquo;is-a&rdquo; relationship and not a &ldquo;has-a&rdquo;
+relationship (Human->Animal vs. User->UserDetails).</p>
+</li>
+<li>
+<p>You can reuse code from the base classes (Humans can move like all animals).</p>
+</li>
+<li>
+<p>You want to make global changes to derived classes by changing a base class.
+(Change the caloric expenditure of all animals when they move).</p>
+</li>
+<li>
+<p>Your inheritance represents an &ldquo;is-a&rdquo; relationship and not a &ldquo;has-a&rdquo;
+relationship (Human->Animal vs. User->UserDetails).</p>
+</li>
+<li>
+<p>You can reuse code from the base classes (Humans can move like all animals).</p>
+</li>
+<li>
+<p>You want to make global changes to derived classes by changing a base class.
+(Change the caloric expenditure of all animals when they move).</p>
+</li>
+</ol>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kr>class</span> <span class=nx>Employee</span> <span class=p>{</span>
+  <span class=nx>constructor</span><span class=p>(</span><span class=nx>name</span><span class=p>,</span> <span class=nx>email</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>name</span> <span class=o>=</span> <span class=nx>name</span><span class=p>;</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>email</span> <span class=o>=</span> <span class=nx>email</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=c1>// Bad because Employees &#34;have&#34; tax data. EmployeeTaxData is not a type of Employee
+</span><span class=c1></span><span class=kr>class</span> <span class=nx>EmployeeTaxData</span> <span class=kr>extends</span> <span class=nx>Employee</span> <span class=p>{</span>
+  <span class=nx>constructor</span><span class=p>(</span><span class=nx>ssn</span><span class=p>,</span> <span class=nx>salary</span><span class=p>)</span> <span class=p>{</span>
+    <span class=kr>super</span><span class=p>();</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>ssn</span> <span class=o>=</span> <span class=nx>ssn</span><span class=p>;</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>salary</span> <span class=o>=</span> <span class=nx>salary</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kr>class</span> <span class=nx>EmployeeTaxData</span> <span class=p>{</span>
+  <span class=nx>constructor</span><span class=p>(</span><span class=nx>ssn</span><span class=p>,</span> <span class=nx>salary</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>ssn</span> <span class=o>=</span> <span class=nx>ssn</span><span class=p>;</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>salary</span> <span class=o>=</span> <span class=nx>salary</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+
+<span class=kr>class</span> <span class=nx>Employee</span> <span class=p>{</span>
+  <span class=nx>constructor</span><span class=p>(</span><span class=nx>name</span><span class=p>,</span> <span class=nx>email</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>name</span> <span class=o>=</span> <span class=nx>name</span><span class=p>;</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>email</span> <span class=o>=</span> <span class=nx>email</span><span class=p>;</span>
+  <span class=p>}</span>
+
+  <span class=nx>setTaxData</span><span class=p>(</span><span class=nx>ssn</span><span class=p>,</span> <span class=nx>salary</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>this</span><span class=p>.</span><span class=nx>taxData</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>EmployeeTaxData</span><span class=p>(</span><span class=nx>ssn</span><span class=p>,</span> <span class=nx>salary</span><span class=p>);</span>
+  <span class=p>}</span>
+  <span class=c1>// ...
+</span><span class=c1></span><span class=p>}</span>
+</code></pre></div><h2 id=reference>Reference</h2>
+<p><a class=link href=https://github.com/haizlin/fe-interview/blob/master/category/history.md target=_blank rel=noopener>haizlin/fe-interview</a></p>
+<p><a class=link href=https://muyiy.cn/ target=_blank rel=noopener>前端进阶</a></p>
+<p><a class=link href=https://github.com/ryanmcdermott/clean-code-javascript#introduction target=_blank rel=noopener>ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/frontend-122-cover.7ff9da4a8cf400560b992d99cdcd8f95_huddf2dd40e0f37271378c93ed2cf789ee_526159_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-f/naSoz0AFYLmS2Zzc2PlQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 122</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/frontend-120-cover.0a32e571e6d51a551baabbfb616704dd_hua011d6231397639b73e178c4dc9d94a3_79248_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-CjLlcebVGlUbqrv7YWcE3Q==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 120</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/frontend-119-cover.4234e27e2e1d4f34e9bfab81087c6d39_hu1cab084fcfd321b801547f46a62f6338_47272_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-QjTifi4dTzTpv6uBCHxtOQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 119</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-118/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-118/frontend-118-cover.50523d108b9ee8ae1b9389de920501b2_hufc37e162faff2880f01b9b5308f608d2_169483_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-UFI9EIue6K4bk4nekgUBsg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 118</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/frontend-117-cover.a34a5a62873efbe8a37b12da991ef97e_huc73ebb938871a4155941d153947771f0_1863070_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-o0paYoc+++ijexLamR75fg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 117</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 -
+2022 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-用-canvas-画出一个矩形><strong>Question:</strong> 用 canvas 画出一个矩形</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-zoom-作用><strong>Question:</strong> zoom 作用</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-分析b--a--a--atolowercase返回的结果><strong>Question:</strong> 分析<code>('b' + 'a' + +'a' + 'a').toLowerCase()</code>返回的结果</a></li>
+</ol>
+</li>
+<li><a href=#clean-code-javascript>Clean Code JavaScript</a>
+<ol>
+<li><a href=#classes><strong>Classes</strong></a>
+<ol>
+<li><a href=#1-prefer-es2015es6-classes-over-es5-plain-functions>1. Prefer ES2015/ES6 classes over ES5 plain functions</a></li>
+<li><a href=#2-use-method-chaining>2. Use method chaining</a></li>
+<li><a href=#3-prefer-composition-over-inheritance>3. Prefer composition over inheritance</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

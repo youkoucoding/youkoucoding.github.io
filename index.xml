@@ -1,4 +1,262 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 16 Jan 2022 10:21:54 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 122</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/</link><pubDate>Sun, 16 Jan 2022 10:21:54 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/frontend-122-cover.jpg" alt="Featured image of post 毎日のフロントエンド 122" />&lt;h1 id="第一百二十二日">第一百二十二日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 17 Jan 2022 11:59:49 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 123</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/</link><pubDate>Mon, 17 Jan 2022 11:59:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/frontend-123-cover.jpg" alt="Featured image of post 毎日のフロントエンド 123" />&lt;h1 id="第一百二十三日">第一百二十三日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-用-canvas-画出一个矩形">&lt;strong>Question:&lt;/strong> 用 canvas 画出一个矩形&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">canvas&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;canvas&amp;#34;&lt;/span> &lt;span class="na">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;300&amp;#34;&lt;/span> &lt;span class="na">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;300&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">canvas&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">canvas&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;canvas&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">canvas&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getContext&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">ctx&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">canvas&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getContext&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;2d&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">ctx&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fillStyle&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;rgb(200,0,0)&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">ctx&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fillRect&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">60&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-zoom-作用">&lt;strong>Question:&lt;/strong> zoom 作用&lt;/h3>
+&lt;blockquote>
+&lt;p>zoom 只是 IE 浏览器独有，现在，&lt;strong>除了 FireFox&lt;/strong>，其他，尤其 Chrome 和移动端浏览器已经很好支持 zoom 属性
+zoom 依旧不是正式的属性。与之对应的 transform 的 scale 属性是正式的 CSS 属性&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>zoom 主要的作用是用于元素或者页面的缩放；transform 的 scale 也有同样的作用，两者有如下的区别:
+&lt;ul>
+&lt;li>&lt;code>zoom&lt;/code> 的缩放点在元素左上角。在 Chrome 下，文字如果缩小后小于 12px 的情况仍然会显示 12px。并且 zoom 缩放会影响元素实际的位置，这样就会造成页面的重排和重绘，在性能上会有影响&lt;/li>
+&lt;li>&lt;code>transform&lt;/code> 的 &lt;code>scale&lt;/code> 缩放点在元素中心。缩放会对文字有影响，可以利用此属性实现 Chrome 下小于 12px 的字体。但是 transform 缩放后不会改变元素的位置，即如果元素原来是 200px 宽，缩小 50% 后虽然看上去只有 100px 宽了，但是仍然占 200px&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-分析b--a--a--atolowercase返回的结果">&lt;strong>Question:&lt;/strong> 分析&lt;code>('b' + 'a' + +'a' + 'a').toLowerCase()&lt;/code>返回的结果&lt;/h3>
+&lt;p>Result: &lt;code>banana&lt;/code>&lt;/p>
+&lt;p>&lt;code>+&lt;/code> 是一元操作符，操作数是 &lt;code>'a'&lt;/code> =&amp;gt; &lt;code>NaN&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>'+'&lt;/code>号运算符作为一元运算符时，Expression 将进行&lt;code>ToNumber()&lt;/code>操作&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>argument 类型&lt;/th>
+&lt;th>返回值&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Undefined&lt;/td>
+&lt;td>NaN&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Null&lt;/td>
+&lt;td>0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Boolean&lt;/td>
+&lt;td>true return 1; false return 0;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Number&lt;/td>
+&lt;td>value&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>String&lt;/td>
+&lt;td>若字符串为纯数字时返回转换后的数字；非纯数字(包含其他类型字符，无论其位置)均返回 NaN&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Symbol&lt;/td>
+&lt;td>抛出 TypeError 异常&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Object&lt;/td>
+&lt;td>1.先进行 ToPrimitive(argument, hint Number)得到 rs； 2.然后返回 ToNumber(rs)的结果。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="clean-code-javascript">Clean Code JavaScript&lt;/h2>
+&lt;h3 id="classes">&lt;strong>Classes&lt;/strong>&lt;/h3>
+&lt;h4 id="1-prefer-es2015es6-classes-over-es5-plain-functions">1. Prefer ES2015/ES6 classes over ES5 plain functions&lt;/h4>
+&lt;p>It&amp;rsquo;s very difficult to get readable class inheritance, construction, and method
+definitions for classical ES5 classes. If you need inheritance (and be aware
+that you might not), then prefer ES2015/ES6 classes. However, prefer small functions over
+classes until you find yourself needing larger and more complex objects.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">const&lt;/span> &lt;span class="nx">Animal&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nx">Animal&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Instantiate Animal with `new`&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">age&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">age&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">Animal&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">move&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">move&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">Mammal&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">furColor&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nx">Mammal&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Instantiate Mammal with `new`&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">Animal&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">age&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">furColor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">furColor&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">Mammal&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Animal&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">Mammal&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">constructor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Mammal&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">Mammal&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">liveBirth&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">liveBirth&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">Human&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">furColor&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">languageSpoken&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nx">Human&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Instantiate Human with `new`&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">Mammal&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">age&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">furColor&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">languageSpoken&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">languageSpoken&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">Human&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Mammal&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">Human&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">constructor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Human&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">Human&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">speak&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">speak&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">Animal&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">age&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">age&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">move&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="cm">/* ... */&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">Mammal&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Animal&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">furColor&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">super&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">furColor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">furColor&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">liveBirth&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="cm">/* ... */&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">Human&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Mammal&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">furColor&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">languageSpoken&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">super&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">age&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">furColor&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">languageSpoken&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">languageSpoken&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">speak&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="cm">/* ... */&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="2-use-method-chaining">2. Use method chaining&lt;/h4>
+&lt;p>This pattern is very useful in JavaScript and you see it in many libraries such as jQuery and Lodash. It allows your code to be expressive, and less verbose.
+For that reason, use method chaining and take a look at how clean your code will be. In your class functions, simply return &lt;code>this&lt;/code> at the end of every function, and you can chain further class methods onto it.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">Car&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">make&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">model&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">color&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">make&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">make&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">model&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">model&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">color&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">color&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setMake&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">make&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">make&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">make&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setModel&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">model&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">model&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">model&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setColor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">color&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">color&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">color&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">save&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">make&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">model&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">car&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Car&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Ford&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;F-150&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;red&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">car&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setColor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;pink&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">car&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">save&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">Car&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">make&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">model&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">color&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">make&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">make&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">model&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">model&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">color&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">color&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setMake&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">make&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">make&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">make&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// NOTE: Returning this for chaining
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setModel&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">model&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">model&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">model&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// NOTE: Returning this for chaining
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setColor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">color&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">color&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">color&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// NOTE: Returning this for chaining
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">save&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">make&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">model&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// NOTE: Returning this for chaining
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">car&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Car&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Ford&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;F-150&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;red&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">setColor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;pink&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">save&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="3-prefer-composition-over-inheritance">3. Prefer composition over inheritance&lt;/h4>
+&lt;p>As stated famously in Design Patterns, you should prefer composition over inheritance where you can. There are lots of good reasons to use inheritance and lots of good reasons to use composition.
+The main point for this maxim is that if your mind instinctively goes for inheritance, try to think if composition could model your problem better. In some cases it can.
+This is a decent list of when inheritance
+makes more sense than composition:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Your inheritance represents an &amp;ldquo;is-a&amp;rdquo; relationship and not a &amp;ldquo;has-a&amp;rdquo;
+relationship (Human-&amp;gt;Animal vs. User-&amp;gt;UserDetails).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You can reuse code from the base classes (Humans can move like all animals).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You want to make global changes to derived classes by changing a base class.
+(Change the caloric expenditure of all animals when they move).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Your inheritance represents an &amp;ldquo;is-a&amp;rdquo; relationship and not a &amp;ldquo;has-a&amp;rdquo;
+relationship (Human-&amp;gt;Animal vs. User-&amp;gt;UserDetails).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You can reuse code from the base classes (Humans can move like all animals).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You want to make global changes to derived classes by changing a base class.
+(Change the caloric expenditure of all animals when they move).&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">Employee&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">email&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">email&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">email&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// Bad because Employees &amp;#34;have&amp;#34; tax data. EmployeeTaxData is not a type of Employee
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">class&lt;/span> &lt;span class="nx">EmployeeTaxData&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Employee&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ssn&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">salary&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">super&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ssn&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ssn&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">salary&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">salary&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">EmployeeTaxData&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ssn&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">salary&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ssn&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">ssn&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">salary&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">salary&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">Employee&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">email&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">email&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">email&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setTaxData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ssn&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">salary&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">taxData&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">EmployeeTaxData&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">ssn&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">salary&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/ryanmcdermott/clean-code-javascript#introduction" target="_blank" rel="noopener"
+>ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 122</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/</link><pubDate>Sun, 16 Jan 2022 10:21:54 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/frontend-122-cover.jpg" alt="Featured image of post 毎日のフロントエンド 122" />&lt;h1 id="第一百二十二日">第一百二十二日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-form-datax-www-form-urlencodedrawbinary的区别">&lt;strong>Question:&lt;/strong> &lt;code>form-data&lt;/code>、&lt;code>x-www-form-urlencoded&lt;/code>、&lt;code>raw&lt;/code>、&lt;code>binary&lt;/code>的区别&lt;/h3>
 &lt;ol>
