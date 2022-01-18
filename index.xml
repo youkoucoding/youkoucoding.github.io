@@ -1,4 +1,391 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 17 Jan 2022 11:59:49 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 123</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/</link><pubDate>Mon, 17 Jan 2022 11:59:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/frontend-123-cover.jpg" alt="Featured image of post 毎日のフロントエンド 123" />&lt;h1 id="第一百二十三日">第一百二十三日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 18 Jan 2022 17:01:46 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 124</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/</link><pubDate>Tue, 18 Jan 2022 17:01:46 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/frontend-124-cover.jpg" alt="Featured image of post 毎日のフロントエンド 124" />&lt;h1 id="第一百二十四日">第一百二十四日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5规范将元素分为哪几个大类特点">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>规范将元素分为哪几个大类？特点&lt;/h3>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 132;
+flex-basis: 317px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/html5-element.png" data-size="890x672">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/html5-element.png"
+width="890"
+height="672"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/html5-element_hu852eebd98a82d68c322df0a0874cfcfe_50235_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/html5-element_hu852eebd98a82d68c322df0a0874cfcfe_50235_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="html5-element">
+&lt;/a>
+&lt;figcaption>html5-element&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h4 id="构建主体内容">构建主体内容&lt;/h4>
+&lt;ol>
+&lt;li>标识文章&lt;/li>
+&lt;/ol>
+&lt;p>article 元素用来表示文档、页面中独立的、完整的、可以独立被外部引用的内容。article 元素可以嵌套使用。article 元素也可以用来表示插件。&lt;/p>
+&lt;ol start="2">
+&lt;li>给内容分段&lt;/li>
+&lt;/ol>
+&lt;p>section 元素用于对网站或应用程序中页面的内容进行分区，div 元素也可以用来对页面进行分区，当一个容器需要被直接定义样式或通过脚本定义行为时，推荐使用 div，而非 section 元素。div 关注结构的独立性，而 sectio 元素关注内容的独立性，section 元素包含的内容可以单独存储到数据库中或输出到 word 文档中。&lt;/p>
+&lt;p>section 元素用于对网站或者应用程序中页面上的内容进行分块，一个 section 元素通常由内容以及标题组成，需要办好一个&lt;!-- raw HTML omitted -->标题元素，一般不包含 header 头部或者 footer 底部元素，通常用 section 元素为那些有标题的内容进行分段。section 元素是对页面上的内容分块处理，相邻的 section 元素的内容是相关的，而不是像 article 那样独立。事实上，article 可以看做是特殊的 section 元素，article 元素更强调独立性、完整性，section 更强调相关性。&lt;/p>
+&lt;p>使用 section 元素时应注意以下几个问题：&lt;/p>
+&lt;ul>
+&lt;li>不要将 section 元素当做设置样式的页面容器，对于此类操作应该使用 div 元素实现。&lt;/li>
+&lt;li>如果 article 元素、aside 元素或 nav 元素更符合使用条件，不要使用 section 元素。&lt;/li>
+&lt;li>不要为没有标题的内容区块使用 section 元素。&lt;/li>
+&lt;li>在 HTML5 中，div 元素变成了一种容器，当使用 CSS 样式的时候，可以对这个容器进行一个总体的 CSS 样式的套用。&lt;/li>
+&lt;/ul>
+&lt;ol start="3">
+&lt;li>设计导航信息&lt;/li>
+&lt;/ol>
+&lt;p>nav 元素是一个可以用作页面导航的链接组，其中的导航元素链接到其他页面或当前页面的其他部分。nav 元素可以用以以下场合：&lt;/p>
+&lt;ul>
+&lt;li>传统导航条&lt;/li>
+&lt;li>侧边栏导航&lt;/li>
+&lt;li>页内导航&lt;/li>
+&lt;li>翻页操作&lt;/li>
+&lt;li>设计辅助信息&lt;/li>
+&lt;/ul>
+&lt;p>aside 元素用来表示当前页面或文章的附属信息部分，其中的内容可以是与当前文章相关的参考资料、名词解释等。&lt;/p>
+&lt;ol start="4">
+&lt;li>设计微格式&lt;/li>
+&lt;/ol>
+&lt;p>微格式是一种利用 HTML 的 class 属性来对网页添加附加信息的方法，主要是简化 WEB 开发的数据提取&lt;/p>
+&lt;p>time 元素代表 24 小时中的某个时刻或某个日期，标识时刻时允许带时差。&lt;/p>
+&lt;ol start="5">
+&lt;li>添加发布日期&lt;/li>
+&lt;/ol>
+&lt;p>pubdate 属性是一个可选的布尔值属性，可用在 article 元素中的 time 元素上，time 元素代表了文章或整个网页的发布日期。&lt;/p>
+&lt;h4 id="添加语义模块">添加语义模块&lt;/h4>
+&lt;ol>
+&lt;li>添加标题块&lt;/li>
+&lt;/ol>
+&lt;p>header 元素是一种具有引导和导航作用的结构元素。在 HTML5 中，header 元素通常包含 h1-h6 元素，也可以包含 hgroup、table、form、nav 等元素。&lt;/p>
+&lt;ol start="2">
+&lt;li>给标题分组&lt;/li>
+&lt;/ol>
+&lt;p>hgroup 元素可以为标题或者子标题进行分组，通常它与 h1~h6 元素组合使用。但如果文章只有一个主标题，则不需要 hgroup 元素。&lt;/p>
+&lt;ol start="3">
+&lt;li>添加脚注块&lt;/li>
+&lt;/ol>
+&lt;p>footer 元素可以作为内容块的注脚，注脚信息有很多种形式，如作者、相关阅读链接及版权信息等。&lt;/p>
+&lt;ol start="4">
+&lt;li>添加联系信息&lt;/li>
+&lt;/ol>
+&lt;p>address 元素用来在文档中定义联系信息，包括文档作者或文档编辑者名称、电子邮箱、真实地址、电话号码等。&lt;/p>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-伪类nth-childfirst-child与first-of-type-三者有什么不同">&lt;strong>Question:&lt;/strong> 伪类&lt;code>:nth-child&lt;/code>、&lt;code>:first-child&lt;/code>与&lt;code>:first-of-type&lt;/code> 三者有什么不同&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>div:nth-child(2)&lt;/code> 选中父元素里的第二个子元素 div / 选择当前元素的父元素下的第 n 个子元素（从 1 开始）；&lt;/li>
+&lt;li>&lt;code>p:first-child&lt;/code> 选中父元素里的第一个 p 元素；&lt;/li>
+&lt;li>&lt;code>p:first-of-type&lt;/code> 选中第一个类型为 p 的子元素，选择当前元素的父元素下的第 n 个同类型子元素（从 1 开始）&lt;/li>
+&lt;li>&lt;code>:nth-child(n)&lt;/code>和&lt;code>:first-child&lt;/code> 是强调父元素里的第 n 个 xx 子元素，首先是第 n 个，然后才是 xx 类型；&lt;/li>
+&lt;li>&lt;code>:first-of-type&lt;/code> 主要强调类型，即一个父元素里，无论我们想选中的那个元素前面有多少个同级元素，都不算，只要找到父元素里的第一个 xx 子元素就行&lt;/li>
+&lt;/ul>
+&lt;h2 id="clean-code-javascript">Clean Code JavaScript&lt;/h2>
+&lt;h3 id="solid">&lt;strong>SOLID&lt;/strong>&lt;/h3>
+&lt;h4 id="1-single-responsibility-principle-srp">1. Single Responsibility Principle (SRP)&lt;/h4>
+&lt;p>As stated in Clean Code, &amp;ldquo;There should never be more than one reason for a class to change&amp;rdquo;. It&amp;rsquo;s tempting to jam-pack a class with a lot of functionality, like when you can only take one suitcase on your flight. The issue with this is that your class won&amp;rsquo;t be conceptually cohesive and it will give it many reasons to change. Minimizing the amount of times you need to change a class is important. It&amp;rsquo;s important because if too much functionality is in one class and you modify a piece of it, it can be difficult to understand how that will affect other dependent modules in your codebase.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">UserSettings&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">user&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">user&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">user&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">changeSettings&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">settings&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">verifyCredentials&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">verifyCredentials&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">UserAuth&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">user&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">user&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">user&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">verifyCredentials&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">UserSettings&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">user&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">user&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">user&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">auth&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">UserAuth&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">user&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">changeSettings&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">settings&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">auth&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">verifyCredentials&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="2-openclosed-principleocp">2. Open/Closed Principle(OCP)&lt;/h4>
+&lt;p>As stated by Bertrand Meyer, &amp;ldquo;software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.&amp;rdquo; What does that mean though? This principle basically states that you should allow users to add new functionalities without changing existing code.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">AjaxAdapter&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Adapter&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">super&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;ajaxAdapter&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">NodeAdapter&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Adapter&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">super&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;nodeAdapter&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">HttpRequester&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">adapter&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">adapter&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">adapter&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">fetch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">adapter&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;ajaxAdapter&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">makeAjaxCall&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// transform response and return
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">adapter&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;nodeAdapter&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">makeHttpCall&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// transform response and return
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">makeAjaxCall&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// request and return promise
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">makeHttpCall&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// request and return promise
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">AjaxAdapter&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Adapter&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">super&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;ajaxAdapter&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">request&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// request and return promise
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">NodeAdapter&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Adapter&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">super&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;nodeAdapter&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">request&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// request and return promise
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">HttpRequester&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">adapter&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">adapter&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">adapter&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">fetch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">adapter&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">request&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">response&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// transform response and return
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="3-liskov-substitution-principle-lsp">3. Liskov Substitution Principle (LSP)&lt;/h4>
+&lt;p>This is a scary term for a very simple concept. It&amp;rsquo;s formally defined as &amp;ldquo;If S is a subtype of T, then objects of type T may be replaced with objects of type S (i.e., objects of type S may substitute objects of type T) without altering any of the desirable properties of that program (correctness, task performed, etc.).&amp;rdquo; That&amp;rsquo;s an even scarier definition.&lt;/p>
+&lt;p>The best explanation for this is if you have a parent class and a child class, then the base class and child class can be used interchangeably without getting incorrect results. This might still be confusing, so let&amp;rsquo;s take a look at the classic Square-Rectangle example. Mathematically, a square is a rectangle, but if you model it using the &amp;ldquo;is-a&amp;rdquo; relationship via inheritance, you quickly get into trouble.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">Rectangle&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">width&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">height&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setColor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">color&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="nx">render&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">area&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="nx">setWidth&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">width&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">width&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">width&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setHeight&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">height&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">height&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">height&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">getArea&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">width&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">height&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">Square&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Rectangle&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">setWidth&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">width&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">width&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">width&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">height&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">width&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setHeight&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">height&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">width&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">height&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">height&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">height&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">renderLargeRectangles&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">rectangles&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">rectangles&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">rectangle&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">rectangle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setWidth&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">rectangle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setHeight&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">area&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">rectangle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getArea&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// BAD: Returns 25 for Square. Should be 20.
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">rectangle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">render&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">area&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">rectangles&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">Rectangle&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Rectangle&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Square&lt;/span>&lt;span class="p">()];&lt;/span>
+&lt;span class="nx">renderLargeRectangles&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">rectangles&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">Shape&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">setColor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">color&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="nx">render&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">area&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">Rectangle&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Shape&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">width&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">height&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">super&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">width&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">width&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">height&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">height&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">getArea&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">width&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">height&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">Square&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Shape&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">super&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">getArea&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">renderLargeShapes&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">shapes&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">shapes&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">shape&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">area&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">shape&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getArea&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">shape&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">render&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">area&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">shapes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">Rectangle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Rectangle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Square&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">)];&lt;/span>
+&lt;span class="nx">renderLargeShapes&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">shapes&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="4-interface-segregation-principle-isp">4. Interface Segregation Principle (ISP)&lt;/h4>
+&lt;p>ISP states that &amp;ldquo;Clients should not be forced to depend upon interfaces that they do not use.&amp;rdquo; Interfaces are implicit contracts in JavaScript because of duck typing.&lt;/p>
+&lt;p>A good example to look at that demonstrates this principle in JavaScript is for classes that require large settings objects. Not requiring clients to setup huge amounts of options is beneficial, because most of the time they won&amp;rsquo;t need all of the settings. Making them optional helps prevent having a &amp;ldquo;fat interface&amp;rdquo;.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">DOMTraverser&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">settings&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">settings&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">settings&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setup&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setup&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">rootNode&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">settings&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">rootNode&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">settings&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">animationModule&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setup&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">traverse&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">$&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">DOMTraverser&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="nx">rootNode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementsByTagName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;body&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="nx">animationModule&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{},&lt;/span> &lt;span class="c1">// Most of the time, we won&amp;#39;t need to animate when traversing.
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">DOMTraverser&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">settings&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">settings&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">settings&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">settings&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setup&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setup&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">rootNode&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">settings&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">rootNode&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setupOptions&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setupOptions&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">animationModule&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">traverse&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">$&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">DOMTraverser&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="nx">rootNode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementsByTagName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;body&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="nx">options&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">animationModule&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{},&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="5-dependency-inversion-principle-dip">5. Dependency Inversion Principle (DIP)&lt;/h4>
+&lt;p>This principle states two essential things:&lt;/p>
+&lt;ol>
+&lt;li>High-level modules should not depend on low-level modules. Both should depend on abstractions.&lt;/li>
+&lt;li>Abstractions should not depend upon details. Details should depend on abstractions.&lt;/li>
+&lt;/ol>
+&lt;p>This can be hard to understand at first, but if you&amp;rsquo;ve worked with AngularJS, you&amp;rsquo;ve seen an implementation of this principle in the form of Dependency Injection (DI). While they are not identical concepts, DIP keeps high-level modules from knowing the details of its low-level modules and setting them up. It can accomplish this through DI. A huge benefit of this is that it reduces the coupling between modules. Coupling is a very bad development pattern because it makes your code hard to refactor.&lt;/p>
+&lt;p>As stated previously, JavaScript doesn&amp;rsquo;t have interfaces so the abstractions that are depended upon are implicit contracts. That is to say, the methods and properties that an object/class exposes to another object/class. In the example below, the implicit contract is that any Request module for an &lt;code>InventoryTracker&lt;/code> will have a &lt;code>requestItems&lt;/code> method.&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">InventoryRequester&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">REQ_METHODS&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;HTTP&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">requestItem&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">InventoryTracker&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">items&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">items&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">items&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// BAD: We have created a dependency on a specific request implementation.
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// We should just have requestItems depend on a request method: `request`
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">requester&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">InventoryRequester&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">requestItems&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">items&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">requester&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">requestItem&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">inventoryTracker&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">InventoryTracker&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s1">&amp;#39;apples&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;bananas&amp;#39;&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;span class="nx">inventoryTracker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">requestItems&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kr">class&lt;/span> &lt;span class="nx">InventoryTracker&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">items&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">requester&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">items&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">items&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">requester&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">requester&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">requestItems&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">items&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">requester&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">requestItem&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">InventoryRequesterV1&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">REQ_METHODS&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;HTTP&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">requestItem&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kr">class&lt;/span> &lt;span class="nx">InventoryRequesterV2&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">constructor&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">REQ_METHODS&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;WS&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">requestItem&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// ...
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// By constructing our dependencies externally and injecting them, we can easily
+&lt;/span>&lt;span class="c1">// substitute our request module for a fancy new one that uses WebSockets.
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">inventoryTracker&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">InventoryTracker&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;apples&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;bananas&amp;#39;&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="k">new&lt;/span> &lt;span class="nx">InventoryRequesterV2&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="nx">inventoryTracker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">requestItems&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/ryanmcdermott/clean-code-javascript#introduction" target="_blank" rel="noopener"
+>ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 123</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/</link><pubDate>Mon, 17 Jan 2022 11:59:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/frontend-123-cover.jpg" alt="Featured image of post 毎日のフロントエンド 123" />&lt;h1 id="第一百二十三日">第一百二十三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-用-canvas-画出一个矩形">&lt;strong>Question:&lt;/strong> 用 canvas 画出一个矩形&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">canvas&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;canvas&amp;#34;&lt;/span> &lt;span class="na">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;300&amp;#34;&lt;/span> &lt;span class="na">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;300&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">canvas&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
