@@ -1,0 +1,304 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 125</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-125/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  125">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-125/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2022-01-19T16:12:31+09:00"><meta property="article:modified_time" content="2022-01-19T16:12:31+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-125/frontend-125-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド  125">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-125/frontend-125-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-125/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-125/frontend-125-cover_huc1ec2d4d8525afe2d313c79d5a0de9c3_345970_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-125/frontend-125-cover_huc1ec2d4d8525afe2d313c79d5a0de9c3_345970_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-125/frontend-125-cover_huc1ec2d4d8525afe2d313c79d5a0de9c3_345970_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド  125">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-125/>毎日のフロントエンド 125</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Jan 19, 2022</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 2 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第一百二十五日>第一百二十五日</h1>
+<h2 id=css>CSS</h2>
+<h3 id=question-css-代码实现动画的暂停与播放><strong>Question:</strong> CSS 代码实现动画的暂停与播放</h3>
+<ul>
+<li>
+<p>属性：<code>animation-play-state</code></p>
+<ul>
+<li>paused 暂停</li>
+<li>running 播放</li>
+</ul>
+</li>
+<li>
+<p><code>hover</code>取代点击</p>
+</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=p>.</span><span class=nc>stop</span><span class=p>:</span><span class=nd>hover</span> <span class=o>~</span> <span class=p>.</span><span class=nc>animation</span> <span class=p>{</span>
+  <span class=k>animation-play-state</span><span class=p>:</span> <span class=kc>paused</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><ul>
+<li><code>checked</code>伪类
+<ul>
+<li>radio 标签的 checked 伪类，加上实现点击响应</li>
+</ul>
+</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=p>#</span><span class=nn>stop</span><span class=p>:</span><span class=nd>checked</span> <span class=o>~</span> <span class=p>.</span><span class=nc>animation</span> <span class=p>{</span>
+  <span class=k>animation-play-state</span><span class=p>:</span> <span class=kc>paused</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>#</span><span class=nn>play</span><span class=p>:</span><span class=nd>checked</span> <span class=o>~</span> <span class=p>.</span><span class=nc>animation</span> <span class=p>{</span>
+  <span class=k>animation-play-state</span><span class=p>:</span> <span class=kc>running</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></div><h2 id=javascript>JavaScript</h2>
+<h3 id=question-webrtc-api><strong>Question:</strong> <code>WebRTC API</code></h3>
+<p><code>WebRTC</code><sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup> (Web Real-Time Communications) 是一项实时通讯技术，它允许网络应用或者站点，在不借助中间媒介的情况下，建立浏览器之间点对点（Peer-to-Peer）的连接，实现视频流和（或）音频流或者其他任意数据的传输。WebRTC 包含的这些标准使用户在无需安装任何插件或者第三方的软件的情况下，创建点对点（Peer-to-Peer）的数据分享和电话会议成为可能。</p>
+<h2 id=clean-code-javascript>Clean Code JavaScript</h2>
+<h3 id=testing><strong>Testing</strong></h3>
+<p>Testing is more important than shipping. If you have no tests or an inadequate amount, then every time you ship code you won&rsquo;t be sure that you didn&rsquo;t break anything. Deciding on what constitutes an adequate amount is up to your team, but having 100% coverage (all statements and branches) is how you achieve very high confidence and developer peace of mind. This means that in addition to having a great testing framework, you also need to use a <strong>good coverage tool</strong>.</p>
+<p>There&rsquo;s no excuse to not write tests. There are plenty of good JS test frameworks, so find one that your team prefers. When you find one that works for your team, then <strong>aim to always write tests for every new feature/module you introduce.</strong> If your preferred method is Test Driven Development (TDD), that is great, but the main point is to just make sure you are reaching your coverage goals before launching any feature, or refactoring an existing one.</p>
+<h4 id=1-single-concept-per-test>1. Single concept per test</h4>
+<p><strong>Bad:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>import</span> <span class=nx>assert</span> <span class=nx>from</span> <span class=s1>&#39;assert&#39;</span><span class=p>;</span>
+
+<span class=nx>describe</span><span class=p>(</span><span class=s1>&#39;MomentJS&#39;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=nx>it</span><span class=p>(</span><span class=s1>&#39;handles date boundaries&#39;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=kd>let</span> <span class=nx>date</span><span class=p>;</span>
+
+    <span class=nx>date</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>MomentJS</span><span class=p>(</span><span class=s1>&#39;1/1/2015&#39;</span><span class=p>);</span>
+    <span class=nx>date</span><span class=p>.</span><span class=nx>addDays</span><span class=p>(</span><span class=mi>30</span><span class=p>);</span>
+    <span class=nx>assert</span><span class=p>.</span><span class=nx>equal</span><span class=p>(</span><span class=s1>&#39;1/31/2015&#39;</span><span class=p>,</span> <span class=nx>date</span><span class=p>);</span>
+
+    <span class=nx>date</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>MomentJS</span><span class=p>(</span><span class=s1>&#39;2/1/2016&#39;</span><span class=p>);</span>
+    <span class=nx>date</span><span class=p>.</span><span class=nx>addDays</span><span class=p>(</span><span class=mi>28</span><span class=p>);</span>
+    <span class=nx>assert</span><span class=p>.</span><span class=nx>equal</span><span class=p>(</span><span class=s1>&#39;02/29/2016&#39;</span><span class=p>,</span> <span class=nx>date</span><span class=p>);</span>
+
+    <span class=nx>date</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>MomentJS</span><span class=p>(</span><span class=s1>&#39;2/1/2015&#39;</span><span class=p>);</span>
+    <span class=nx>date</span><span class=p>.</span><span class=nx>addDays</span><span class=p>(</span><span class=mi>28</span><span class=p>);</span>
+    <span class=nx>assert</span><span class=p>.</span><span class=nx>equal</span><span class=p>(</span><span class=s1>&#39;03/01/2015&#39;</span><span class=p>,</span> <span class=nx>date</span><span class=p>);</span>
+  <span class=p>});</span>
+<span class=p>});</span>
+</code></pre></div><p><strong>Good:</strong></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>import</span> <span class=nx>assert</span> <span class=nx>from</span> <span class=s1>&#39;assert&#39;</span><span class=p>;</span>
+
+<span class=nx>describe</span><span class=p>(</span><span class=s1>&#39;MomentJS&#39;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=nx>it</span><span class=p>(</span><span class=s1>&#39;handles 30-day months&#39;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>date</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>MomentJS</span><span class=p>(</span><span class=s1>&#39;1/1/2015&#39;</span><span class=p>);</span>
+    <span class=nx>date</span><span class=p>.</span><span class=nx>addDays</span><span class=p>(</span><span class=mi>30</span><span class=p>);</span>
+    <span class=nx>assert</span><span class=p>.</span><span class=nx>equal</span><span class=p>(</span><span class=s1>&#39;1/31/2015&#39;</span><span class=p>,</span> <span class=nx>date</span><span class=p>);</span>
+  <span class=p>});</span>
+
+  <span class=nx>it</span><span class=p>(</span><span class=s1>&#39;handles leap year&#39;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>date</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>MomentJS</span><span class=p>(</span><span class=s1>&#39;2/1/2016&#39;</span><span class=p>);</span>
+    <span class=nx>date</span><span class=p>.</span><span class=nx>addDays</span><span class=p>(</span><span class=mi>28</span><span class=p>);</span>
+    <span class=nx>assert</span><span class=p>.</span><span class=nx>equal</span><span class=p>(</span><span class=s1>&#39;02/29/2016&#39;</span><span class=p>,</span> <span class=nx>date</span><span class=p>);</span>
+  <span class=p>});</span>
+
+  <span class=nx>it</span><span class=p>(</span><span class=s1>&#39;handles non-leap year&#39;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>date</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>MomentJS</span><span class=p>(</span><span class=s1>&#39;2/1/2015&#39;</span><span class=p>);</span>
+    <span class=nx>date</span><span class=p>.</span><span class=nx>addDays</span><span class=p>(</span><span class=mi>28</span><span class=p>);</span>
+    <span class=nx>assert</span><span class=p>.</span><span class=nx>equal</span><span class=p>(</span><span class=s1>&#39;03/01/2015&#39;</span><span class=p>,</span> <span class=nx>date</span><span class=p>);</span>
+  <span class=p>});</span>
+<span class=p>});</span>
+</code></pre></div><h2 id=reference>Reference</h2>
+<p><a class=link href=https://github.com/haizlin/fe-interview/blob/master/category/history.md target=_blank rel=noopener>haizlin/fe-interview</a></p>
+<p><a class=link href=https://github.com/ryanmcdermott/clean-code-javascript#introduction target=_blank rel=noopener>ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript</a></p>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API target=_blank rel=noopener>WebRTC API - Web API 接口参考 | MDN</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-126/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-126/frontend-126-cover.01c40a0cafa1631d14893c93d63fcb64_hu7699e0ee8d5403453adea1c4bdf88a57_369202_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-AcQKDK+hYx0UiTyT1j/LZA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 126</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/frontend-124-cover.85f51ffeb670a478d2df576aef5e527a_hua7b7fe1449b4e501ee1ca7fe06561845_657006_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-hfUf/rZwpHjS31dq715Seg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 124</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-123/frontend-123-cover.28a9b461520f1504a949f29711bdecea_hue21ef69feef81f34091e40a51d98cb9f_106460_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-KKm0YVIPFQSpSfKXEb3s6g==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 123</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-122/frontend-122-cover.7ff9da4a8cf400560b992d99cdcd8f95_huddf2dd40e0f37271378c93ed2cf789ee_526159_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-f/naSoz0AFYLmS2Zzc2PlQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 122</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-120/frontend-120-cover.0a32e571e6d51a551baabbfb616704dd_hua011d6231397639b73e178c4dc9d94a3_79248_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-CjLlcebVGlUbqrv7YWcE3Q==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 120</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 -
+2022 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-css-代码实现动画的暂停与播放><strong>Question:</strong> CSS 代码实现动画的暂停与播放</a></li>
+</ol>
+</li>
+<li><a href=#javascript>JavaScript</a>
+<ol>
+<li><a href=#question-webrtc-api><strong>Question:</strong> <code>WebRTC API</code></a></li>
+</ol>
+</li>
+<li><a href=#clean-code-javascript>Clean Code JavaScript</a>
+<ol>
+<li><a href=#testing><strong>Testing</strong></a>
+<ol>
+<li><a href=#1-single-concept-per-test>1. Single concept per test</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>

@@ -1,4 +1,186 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 18 Jan 2022 17:01:46 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 124</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/</link><pubDate>Tue, 18 Jan 2022 17:01:46 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/frontend-124-cover.jpg" alt="Featured image of post 毎日のフロントエンド 124" />&lt;h1 id="第一百二十四日">第一百二十四日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 20 Jan 2022 12:12:13 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 126</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-126/</link><pubDate>Thu, 20 Jan 2022 12:12:13 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-126/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-126/frontend-126-cover.jpg" alt="Featured image of post 毎日のフロントエンド 126" />&lt;h1 id="第一百二十六日">第一百二十六日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-canvas-和-svg">&lt;strong>Question:&lt;/strong> Canvas 和 SVG&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>canvas&lt;/p>
+&lt;ul>
+&lt;li>依赖分辨率&lt;/li>
+&lt;li>不支持事件处理器&lt;/li>
+&lt;li>基于 js 绘制的&lt;/li>
+&lt;li>弱的文本渲染能力&lt;/li>
+&lt;li>能够以 .png 或 .jpg 格式保存结果图像&lt;/li>
+&lt;li>最适合图像密集型的游戏，其中的许多对象会被频繁重绘&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>svg&lt;/p>
+&lt;ul>
+&lt;li>不依赖分辨率&lt;/li>
+&lt;li>支持事件处理器，可为其中个别节点绑定事件&lt;/li>
+&lt;li>基于 xml 进行定义的，因此 svg 有节点的概念，可对其中部分节点绑定事件&lt;/li>
+&lt;li>最适合带有大型渲染区域的应用程序（比如谷歌地图）&lt;/li>
+&lt;li>复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）&lt;/li>
+&lt;li>不适合游戏应用&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="clean-code-javascript">Clean Code JavaScript&lt;/h2>
+&lt;h3 id="concurrency">Concurrency&lt;/h3>
+&lt;h4 id="1-use-promises-not-callbacks">1. Use promises not callbacks&lt;/h4>
+&lt;p>Callbacks aren&amp;rsquo;t clean, and they cause excessive amounts of nesting. With ES2015/ES6, Promises are a built-in global type. Use them!&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">get&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;request&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">writeFile&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;fs&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="s1">&amp;#39;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">(&lt;/span>&lt;span class="nx">requestErr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">response&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">body&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">requestErr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">requestErr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;article.html&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">body&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">writeErr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">writeErr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">writeErr&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;File written&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">get&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;request-promise&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">writeFile&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;fs-extra&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">body&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;article.html&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">body&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;File written&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="2-asyncawait-are-even-cleaner-than-promises">2. Async/Await are even cleaner than Promises&lt;/h4>
+&lt;p>Promises are a very clean alternative to callbacks, but &lt;code>ES2017/ES8&lt;/code> brings &lt;code>async&lt;/code> and &lt;code>await&lt;/code> which offer an even cleaner solution. All you need is a function that is prefixed in an async keyword, and then you can write your logic imperatively without a then chain of functions. Use this if you can take advantage of ES2017/ES8 features today!&lt;/p>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">get&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;request-promise&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">writeFile&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;fs-extra&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">body&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;article.html&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">body&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;File written&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">get&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;request-promise&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">writeFile&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;fs-extra&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">getCleanCodeArticle&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">body&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://en.wikipedia.org/wiki/Robert_Cecil_Martin&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kr">await&lt;/span> &lt;span class="nx">writeFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;article.html&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">body&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;File written&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">getCleanCodeArticle&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/ryanmcdermott/clean-code-javascript#introduction" target="_blank" rel="noopener"
+>ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 125</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-125/</link><pubDate>Wed, 19 Jan 2022 16:12:31 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-125/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-125/frontend-125-cover.jpg" alt="Featured image of post 毎日のフロントエンド 125" />&lt;h1 id="第一百二十五日">第一百二十五日&lt;/h1>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-css-代码实现动画的暂停与播放">&lt;strong>Question:&lt;/strong> CSS 代码实现动画的暂停与播放&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>属性：&lt;code>animation-play-state&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>paused 暂停&lt;/li>
+&lt;li>running 播放&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>hover&lt;/code>取代点击&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">stop&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">hover&lt;/span> &lt;span class="o">~&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">animation&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">animation-play-state&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">paused&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>checked&lt;/code>伪类
+&lt;ul>
+&lt;li>radio 标签的 checked 伪类，加上实现点击响应&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">#&lt;/span>&lt;span class="nn">stop&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">checked&lt;/span> &lt;span class="o">~&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">animation&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">animation-play-state&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">paused&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">#&lt;/span>&lt;span class="nn">play&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">checked&lt;/span> &lt;span class="o">~&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">animation&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">animation-play-state&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">running&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-webrtc-api">&lt;strong>Question:&lt;/strong> &lt;code>WebRTC API&lt;/code>&lt;/h3>
+&lt;p>&lt;code>WebRTC&lt;/code>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> (Web Real-Time Communications) 是一项实时通讯技术，它允许网络应用或者站点，在不借助中间媒介的情况下，建立浏览器之间点对点（Peer-to-Peer）的连接，实现视频流和（或）音频流或者其他任意数据的传输。WebRTC 包含的这些标准使用户在无需安装任何插件或者第三方的软件的情况下，创建点对点（Peer-to-Peer）的数据分享和电话会议成为可能。&lt;/p>
+&lt;h2 id="clean-code-javascript">Clean Code JavaScript&lt;/h2>
+&lt;h3 id="testing">&lt;strong>Testing&lt;/strong>&lt;/h3>
+&lt;p>Testing is more important than shipping. If you have no tests or an inadequate amount, then every time you ship code you won&amp;rsquo;t be sure that you didn&amp;rsquo;t break anything. Deciding on what constitutes an adequate amount is up to your team, but having 100% coverage (all statements and branches) is how you achieve very high confidence and developer peace of mind. This means that in addition to having a great testing framework, you also need to use a &lt;strong>good coverage tool&lt;/strong>.&lt;/p>
+&lt;p>There&amp;rsquo;s no excuse to not write tests. There are plenty of good JS test frameworks, so find one that your team prefers. When you find one that works for your team, then &lt;strong>aim to always write tests for every new feature/module you introduce.&lt;/strong> If your preferred method is Test Driven Development (TDD), that is great, but the main point is to just make sure you are reaching your coverage goals before launching any feature, or refactoring an existing one.&lt;/p>
+&lt;h4 id="1-single-concept-per-test">1. Single concept per test&lt;/h4>
+&lt;p>&lt;strong>Bad:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">import&lt;/span> &lt;span class="nx">assert&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;assert&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">describe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;MomentJS&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">it&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;handles date boundaries&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">date&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">date&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">MomentJS&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1/1/2015&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addDays&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">30&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">assert&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">equal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1/31/2015&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">date&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">date&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">MomentJS&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;2/1/2016&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addDays&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">28&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">assert&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">equal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;02/29/2016&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">date&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">date&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">MomentJS&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;2/1/2015&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addDays&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">28&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">assert&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">equal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;03/01/2015&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">date&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Good:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">import&lt;/span> &lt;span class="nx">assert&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;assert&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">describe&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;MomentJS&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">it&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;handles 30-day months&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">date&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">MomentJS&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1/1/2015&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addDays&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">30&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">assert&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">equal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1/31/2015&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">date&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">it&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;handles leap year&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">date&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">MomentJS&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;2/1/2016&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addDays&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">28&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">assert&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">equal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;02/29/2016&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">date&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">it&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;handles non-leap year&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">date&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">MomentJS&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;2/1/2015&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addDays&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">28&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">assert&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">equal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;03/01/2015&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">date&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/ryanmcdermott/clean-code-javascript#introduction" target="_blank" rel="noopener"
+>ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript&lt;/a>&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API" target="_blank" rel="noopener"
+>WebRTC API - Web API 接口参考 | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>毎日のフロントエンド 124</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/</link><pubDate>Tue, 18 Jan 2022 17:01:46 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/frontend-124-cover.jpg" alt="Featured image of post 毎日のフロントエンド 124" />&lt;h1 id="第一百二十四日">第一百二十四日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5规范将元素分为哪几个大类特点">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>规范将元素分为哪几个大类？特点&lt;/h3>
 &lt;p>&lt;figure
