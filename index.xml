@@ -1,4 +1,120 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 23 Jan 2022 13:32:22 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 129</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-129/</link><pubDate>Sun, 23 Jan 2022 13:32:22 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-129/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-129/frontend-129-cover.jpg" alt="Featured image of post 毎日のフロントエンド 129" />&lt;h1 id="第一百二十九日">第一百二十九日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 24 Jan 2022 14:10:51 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 130</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-130/</link><pubDate>Mon, 24 Jan 2022 14:10:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-130/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-130/frontend-130-cover.jpg" alt="Featured image of post 毎日のフロントエンド 130" />&lt;h1 id="第一百三十日">第一百三十日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-锚点的作用是什么怎么创建一个锚点">&lt;strong>Question:&lt;/strong> 锚点的作用是什么？怎么创建一个锚点&lt;/h3>
+&lt;ul>
+&lt;li>基于 window 对象，查找 dom 对应&lt;code>id&lt;/code>的元素就是锚点。操作该元素组成的 dom，用 js 改变视图层&lt;/li>
+&lt;li>在 HTML 中定义&lt;code>id&lt;/code>，用&lt;code>document.queryselector&lt;/code>找到该元素，既可以视作锚点&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-实现一个全屏的功能">&lt;strong>Question:&lt;/strong> 实现一个全屏的功能&lt;/h3>
+&lt;p>&lt;code>Element.requestFullscreen()&lt;/code>&lt;/p>
+&lt;p>调用此 API 并不能保证元素一定能够进入全屏模式。如果元素被允许进入全屏幕模式，返回的 Promise 会 resolve，并且该元素会收到一个 fullscreenchange (en-US)事件，通知它已经进入全屏模式。如果全屏请求被拒绝，返回的 promise 会变成 rejected 并且该元素会收到一个 fullscreenerror (en-US)事件。如果该元素已经从原来的文档中分离，那么该文档将会收到这些事件。&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/sindresorhus/screenfull" target="_blank" rel="noopener"
+>sindresorhus/screenfull: Simple wrapper for cross-browser usage of the JavaScript Fullscreen API&lt;/a>&lt;/p>
+&lt;h2 id="clean-code">Clean Code&lt;/h2>
+&lt;h3 id="writing-readable-functions">Writing readable Functions&lt;/h3>
+&lt;h4 id="principle-1---small">Principle 1 - Small&lt;/h4>
+&lt;p>The marjority of your functions should be less than than 15 lines long, and they should hardly ever be more than 20 lines long.&lt;/p>
+&lt;p>You should always be able to fit the entire function on your monitor. If you can&amp;rsquo;t then you probably need to break the function up into separate functions.&lt;/p>
+&lt;p>It means that your function will not be large enough to hold several nested structures. You won&amp;rsquo;t be able to fit a loop, and then a nested if/else statement inside that loop, etc.&lt;/p>
+&lt;p>Instead, you should make those nested structures separate function calls. This also adds documentary value since those functions will have nice descriptive names that explain what they do.(描述性函数名)&lt;/p>
+&lt;h4 id="principle-2---do-one-thing">Principle 2 - Do One Thing&lt;/h4>
+&lt;p>Another way of stating Principle 1 is that your function should only do one thing.&lt;/p>
+&lt;p>A good heuristic to use is to see if you can extract some code from your function and turn that code into a new function with a name that is not just a restatement of its implementation.&lt;/p>
+&lt;p>If you can do that, then that suggests that your function is doing multiple things and you should break in down further.&lt;/p>
+&lt;h4 id="principle-3---one-level-of-abstraction-per-function">Principle 3 - One level of Abstraction Per Function&lt;/h4>
+&lt;p>Your programs can frequently be divided into layers of abstraction, where each layer represents a different model of the same information and processes, but in a different manner.&lt;/p>
+&lt;p>An example is if you&amp;rsquo;re developing a program to scrape a website, parse some data and then put that data in a database.&lt;/p>
+&lt;p>&lt;strong>One layer of abstraction&lt;/strong> is the HTML string you get after sending an HTTP request to the website’s server.&lt;/p>
+&lt;p>You take that HTML string and send it to your second layer of abstraction, where an HTML parser converts that string into an object where the HTML page is represented as a nested data structure (read up on BeautifulSoup if you’d like a more concrete example). This is &lt;strong>the second layer&lt;/strong> of abstraction.&lt;/p>
+&lt;p>&lt;strong>The third layer&lt;/strong> of abstraction could be where you extract the specific data you need from the HTML page object and store that data in an array.&lt;/p>
+&lt;p>&lt;strong>The fourth layer&lt;/strong> of abstraction would be where you write the data in that array to a database.&lt;/p>
+&lt;p>&lt;strong>The statements in a function should all be at the same level of abstraction.&lt;/strong>&lt;/p>
+&lt;p>Clean Code suggests The Stepdown Rule, where your code can be read as a top-down narrative.&lt;/p>
+&lt;p>Every function should be followed by a function at the next layer of abstraction. This way, as you read the program, you’ll be descending down one layer of abstraction at a time as you go through the list of functions.&lt;/p>
+&lt;h4 id="principle-4---use-descriptive-names">Principle 4 - Use Descriptive Names&lt;/h4>
+&lt;p>&lt;strong>Don’t be afraid to make your names long.&lt;/strong> A long, descriptive name is much better than a short, ambiguous name. Your editor’s autocomplete function should make it easy to write code with long function names.&lt;/p>
+&lt;p>Also, use a naming convention that allows multiple words to be easily read in function names. CamelCase is one example.&lt;/p>
+&lt;h4 id="principle-5---prefer-fewer-function-arguments">Principle 5 - Prefer Fewer Function Arguments&lt;/h4>
+&lt;p>The ideal number of arguments for a function is zero. Having more than three arguments for a function should be avoided.&lt;/p>
+&lt;p>Having lots of function arguments makes it harder to read and understand the function since it forces you to know extra details (and those details are usually from a different layer of abstraction).&lt;/p>
+&lt;p>Additionally, having lots of function arguments makes it more difficult for you to write tests. You have to write all the test cases to ensure that all the various combinations of arguments work properly.&lt;/p>
+&lt;h4 id="principle-6---avoid-side-effects">Principle 6 - Avoid Side Effects&lt;/h4>
+&lt;p>A Side Effect is where your function modifies some state variable outside of its local environment, &lt;strong>in addition to returning a value (the intended effect).&lt;/strong>&lt;/p>
+&lt;p>How Grab Processes Billions of Events in Real Time
+Clean Code&amp;rsquo;s recommendations on how to write readable functions. Plus, a free textbook on data mining, a collection of design patterns for building apps in the cloud and more.
+Jan 21&lt;/p>
+&lt;p>Comment
+Share
+Hey Everyone,&lt;/p>
+&lt;p>Today we’ll be talking about&lt;/p>
+&lt;p>Clean Code’s recommendations on how to write readable functions.&lt;/p>
+&lt;p>layers of abstraction in your code&lt;/p>
+&lt;p>descriptive function names&lt;/p>
+&lt;p>number of arguments&lt;/p>
+&lt;p>avoiding side effects in your functions&lt;/p>
+&lt;p>How Grab Processes Billions of Events in Real Time&lt;/p>
+&lt;p>Trident is an IFTTT engine that ingests billions of events on the Grab platform and triggers predefined actions based off those events&lt;/p>
+&lt;p>Grab talks about their design goals with Trident and how they implemented it&lt;/p>
+&lt;p>They talk about how they scale the server level and the data storage level of Trident to cope with variable demand&lt;/p>
+&lt;p>Plus some awesome tech snippets on&lt;/p>
+&lt;p>A style guide for better Git commit messages&lt;/p>
+&lt;p>A programmer’s guide to data mining&lt;/p>
+&lt;p>A collection of design patterns for building reliable, scalable and secure applications in the cloud&lt;/p>
+&lt;p>How much it costs to run Lichess (the most popular free chess site on the internet)&lt;/p>
+&lt;p>If you find Quastor useful, you should check out Pointer.io!&lt;/p>
+&lt;p>It’s a reading club for software developers that sends out super high quality engineering-related content.&lt;/p>
+&lt;p>It’s read by CTOs, Engineering Managers and Senior Engineers so you should definitely sign up if you’re on that path (or if you want to go down that path in the future).&lt;/p>
+&lt;p>It’s completely free!&lt;/p>
+&lt;p>Check out Pointer.io!&lt;/p>
+&lt;p>sponsored (but I’m a big fan of Pointer)&lt;/p>
+&lt;p>Clean Code - writing readable Functions
+Here’s a summary of Clean Code’s advice on writing readable functions.&lt;/p>
+&lt;p>This advice is geared towards functions written in an OOP language, although many of the concepts carry over to other programming paradigms.&lt;/p>
+&lt;p>Principle 1 - Small!
+The majority of your functions should be less than 15 lines long, and they should hardly ever be more than 20 lines long.&lt;/p>
+&lt;p>You should always be able to fit the entire function on your monitor. If you can’t then you probably need to break the function up into separate functions.&lt;/p>
+&lt;p>If you’re following this principle, it means that your function will not be large enough to hold several nested structures. You won’t be able to fit a loop, and then a nested if/else statement inside that loop, etc.&lt;/p>
+&lt;p>Instead, you should make those nested structures separate function calls. This also adds documentary value since those functions will have nice descriptive names that explain what they do.&lt;/p>
+&lt;p>Principle 2 - Do One Thing
+Another way of stating Principle 1 is that your function should only do one thing.&lt;/p>
+&lt;p>A good heuristic to use is to see if you can extract some code from your function and turn that code into a new function with a name that is not just a restatement of its implementation.&lt;/p>
+&lt;p>If you can do that, then that suggests that your function is doing multiple things and you should break it down further.&lt;/p>
+&lt;p>Principle 3 - One Level of Abstraction Per Function
+Your programs can frequently be divided into layers of abstraction, where each layer represents a different model of the same information and processes, but in a different manner.&lt;/p>
+&lt;p>An example is if you’re developing a program to scrape a website, parse some data and then put that data in a database.&lt;/p>
+&lt;p>One layer of abstraction is the HTML string you get after sending an HTTP request to the website’s server.&lt;/p>
+&lt;p>You take that HTML string and send it to your second layer of abstraction, where an HTML parser converts that string into an object where the HTML page is represented as a nested data structure (read up on BeautifulSoup if you’d like a more concrete example). This is the second layer of abstraction.&lt;/p>
+&lt;p>The third layer of abstraction could be where you extract the specific data you need from the HTML page object and store that data in an array.&lt;/p>
+&lt;p>The fourth layer of abstraction would be where you write the data in that array to a database.&lt;/p>
+&lt;p>The statements in a function should all be at the same level of abstraction.&lt;/p>
+&lt;p>You should not be manipulating the HTML string object and writing to the database in the same function.&lt;/p>
+&lt;p>Instead, Clean Code suggests The Stepdown Rule, where your code can be read as a top-down narrative.&lt;/p>
+&lt;p>Every function should be followed by a function at the next layer of abstraction. This way, as you read the program, you’ll be descending down one layer of abstraction at a time as you go through the list of functions.&lt;/p>
+&lt;p>Principle 4 - Use Descriptive Names
+If you’re following the first three principles, then coming up with a name shouldn’t be too difficult.&lt;/p>
+&lt;p>The smaller and more focused your functions are, the easier it is to come up with a name.&lt;/p>
+&lt;p>Don’t be afraid to make your names long. A long, descriptive name is much better than a short, ambiguous name. Your editor’s autocomplete function should make it easy to write code with long function names.&lt;/p>
+&lt;p>Also, use a naming convention that allows multiple words to be easily read in function names. CamelCase is one example.&lt;/p>
+&lt;p>Principle 5 - Prefer Fewer Function Arguments
+The ideal number of arguments for a function is zero. Having more than three arguments for a function should be avoided.&lt;/p>
+&lt;p>Having lots of function arguments makes it harder to read and understand the function since it forces you to know extra details (and those details are usually from a different layer of abstraction).&lt;/p>
+&lt;p>Additionally, having lots of function arguments makes it more difficult for you to write tests. You have to write all the test cases to ensure that all the various combinations of arguments work properly!&lt;/p>
+&lt;p>Principle 6 - Avoid Side Effects
+A Side Effect is where your function modifies some state variable outside of its local environment, in addition to returning a value (the intended effect).&lt;/p>
+&lt;p>An example might be a function that reads a certain value from a database and then returns that value.&lt;/p>
+&lt;p>If that same function also modifies state in some way (and that modification lasts after the function terminates), then that modification is a side effect.&lt;/p>
+&lt;p>Clean Code recommends you avoid side effects.&lt;/p>
+&lt;p>Your function should either change the state of an object(s), or it should return some information. &lt;strong>A single function should not do both!&lt;/strong>&lt;/p>
+&lt;h4 id="principle-7---use-exceptions-not-error-codes">Principle 7 - Use Exceptions, not Error Codes&lt;/h4>
+&lt;p>Your functions should rarely return error codes. Instead, if something goes wrong, you should throw an exception with a well-written error message.&lt;/p>
+&lt;p>One issue with error codes is that it leads to deeply nested structures. When you return an error code, the caller must deal with the error code immediately.&lt;/p>
+&lt;p>On the other hand, a caller can separate the exception handler logic from the other code (a try, catch statement with separate try logic and catch logic).&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/requestFullScreen" target="_blank" rel="noopener"
+>Element.requestFullscreen() - Web API 接口参考 | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 129</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-129/</link><pubDate>Sun, 23 Jan 2022 13:32:22 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-129/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-129/frontend-129-cover.jpg" alt="Featured image of post 毎日のフロントエンド 129" />&lt;h1 id="第一百二十九日">第一百二十九日&lt;/h1>
 &lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="question-absolute的containing-block包含块计算方式和正常流有什么区别">&lt;strong>Question:&lt;/strong> &lt;code>absolute&lt;/code>的&lt;code>containing block&lt;/code>（包含块）计算方式和正常流有什么区别&lt;/h3>
 &lt;p>大多数情况下，包含块（containing block）就是这个元素最近的祖先块元素的内容区&lt;/p>
