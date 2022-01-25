@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 24 Jan 2022 14:10:51 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 130</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-130/</link><pubDate>Mon, 24 Jan 2022 14:10:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-130/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-130/frontend-130-cover.jpg" alt="Featured image of post 毎日のフロントエンド 130" />&lt;h1 id="第一百三十日">第一百三十日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jan 2022 21:36:46 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 131</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-131/</link><pubDate>Tue, 25 Jan 2022 21:36:46 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-131/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-131/frontend-131-cover.jpg" alt="Featured image of post 毎日のフロントエンド 131" />&lt;h1 id="第一百三十一日">第一百三十一日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-table-去除边框的方法">&lt;strong>Question:&lt;/strong> table 去除边框的方法&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>border-style: hidden;&lt;/code>&lt;/li>
+&lt;li>&lt;code>border: 0;&lt;/code>&lt;/li>
+&lt;li>&lt;code>border: hidden;&lt;/code>&lt;/li>
+&lt;li>&lt;code>border-width: 0;&lt;/code>&lt;/li>
+&lt;li>&lt;code>border: transparent;&lt;/code>&lt;/li>
+&lt;li>&lt;code>border-color: transparent;&lt;/code> (仅为不可见)&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-scss" data-lang="scss">&lt;span class="nt">table&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="na">border&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="ni">none&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 去外边框
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nt">td&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="nt">th&lt;/span>&lt;span class="o">,&lt;/span>
+&lt;span class="nt">tr&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="na">border&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="ni">inherit&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 去内边框
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-举例说明实现圆角的方式有哪些">&lt;strong>Question:&lt;/strong> 举例说明实现圆角的方式有哪些&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="nt">border-radius&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">4px&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="nt">border-radius&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">4px&lt;/span> &lt;span class="nt">8px&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c">/* top-left,bottom-right; top-right, bottom-left */&lt;/span>
+&lt;span class="nt">border-radius&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">4px&lt;/span> &lt;span class="nt">8px&lt;/span> &lt;span class="nt">4px&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c">/* top-left; top-right, bottom-right; bottom-left */&lt;/span>
+&lt;span class="nt">border-radius&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">4px&lt;/span> &lt;span class="nt">4px&lt;/span> &lt;span class="nt">8px&lt;/span> &lt;span class="nt">8px&lt;/span>&lt;span class="o">;&lt;/span> &lt;span class="c">/* top-left; top-right; bottom-right; bottom-left */&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-jsonstringify-有什么局限性">&lt;strong>Question:&lt;/strong> JSON.stringify 有什么局限性&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>JSON.stringify()&lt;/code> 方法将一个 JavaScript 对象或值&lt;strong>转换为 &lt;code>JSON&lt;/code> 字符串&lt;/strong>，如果指定了一个 replacer 函数，则可以选择性地替换值，或者指定的 replacer 是数组，则可选择性地仅包含数组指定的属性。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>JSON.stringify&lt;/code> 忽略&lt;code>undefined&lt;/code>，&lt;code>function&lt;/code>，&lt;code>Symbol&lt;/code>，不能正确处理&lt;code>NaN&lt;/code>，&lt;code>Infinity&lt;/code>，&lt;strong>循环引用&lt;/strong>(抛出异常 TypeError (&amp;ldquo;cyclic object value&amp;rdquo;)（循环对象值）)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>JSON.parse()&lt;/code> 方法用来&lt;strong>解析 &lt;code>JSON&lt;/code> 字符串&lt;/strong>，构造由字符串描述的 JavaScript 值或对象。提供可选的 reviver 函数用以在返回之前对所得到的对象执行变换(操作)。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius" target="_blank" rel="noopener"
+>border-radius - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify" target="_blank" rel="noopener"
+>JSON.stringify() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse" target="_blank" rel="noopener"
+>JSON.parse() - JavaScript | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 130</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-130/</link><pubDate>Mon, 24 Jan 2022 14:10:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-130/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-130/frontend-130-cover.jpg" alt="Featured image of post 毎日のフロントエンド 130" />&lt;h1 id="第一百三十日">第一百三十日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-锚点的作用是什么怎么创建一个锚点">&lt;strong>Question:&lt;/strong> 锚点的作用是什么？怎么创建一个锚点&lt;/h3>
 &lt;ul>
