@@ -1,4 +1,101 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jan 2022 21:36:46 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 131</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-131/</link><pubDate>Tue, 25 Jan 2022 21:36:46 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-131/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-131/frontend-131-cover.jpg" alt="Featured image of post 毎日のフロントエンド 131" />&lt;h1 id="第一百三十一日">第一百三十一日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 26 Jan 2022 15:49:05 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 132</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-132/</link><pubDate>Wed, 26 Jan 2022 15:49:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-132/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-132/frontend-132-cover.jpg" alt="Featured image of post 毎日のフロントエンド 132" />&lt;h1 id="第一百三十二日">第一百三十二日&lt;/h1>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="巧用伪类before-after">巧用伪类&lt;code>::before ::after&lt;/code>&lt;/h3>
+&lt;p>基本功能是在 CSS 渲染中向元素的内容前面和后面插入内容。&lt;/p>
+&lt;ol>
+&lt;li>动态在元素中添加字符串
+&lt;ul>
+&lt;li>场景：当需要在列表、或者多处相同样式中增加一个不变的字符串时，我们可以使用它；&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">price&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">before&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;¥&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>
+&lt;p>不改变元素尺寸的边框&lt;/p>
+&lt;ul>
+&lt;li>场景：在宽度为百分比的元素中，为此元素增加边框，此时会导致元素超过原有的百分比；&lt;/li>
+&lt;li>例如：导航条宽度为文档的 100% ，刚好撑满文档，但是需要在周围增加 1px 的边框，导致导航条宽度超过了浏览器宽度；&lt;/li>
+&lt;li>建议：中等程度使用，有替代方案；&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">meun&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">80&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">relative&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">menu&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">before&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">absolute&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mh">#ccc&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">menu&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">after&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">absolute&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mh">#ccc&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>&lt;code>0.5px&lt;/code> 细边框&lt;/p>
+&lt;ul>
+&lt;li>场景：很多简单的几何图形，我们可以通过它们只需要用一个样式就可以解决问题；&lt;/li>
+&lt;li>例如：带尖角的气泡对话框、筛选组件的下拉箭头；&lt;/li>
+&lt;li>建议：强烈推荐；&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">select&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">after&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">absolute&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">margin-top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">-7&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">inline-block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mh">#000&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border-bottom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mh">#000&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">14&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">14&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">transform&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rotate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">-45&lt;/span>&lt;span class="kt">deg&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>清除浮动&lt;/p>
+&lt;ul>
+&lt;li>场景：当一个元素在众多设置了浮动样式 float: left 的后面，但是又要另起一行时；&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">container&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">before&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">table&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">container&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">after&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">clear&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">both&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="事件的冒泡">事件的冒泡&lt;/h3>
+&lt;p>当事件(event)触发在某个元素上时，如果这个事件绑定了方法那么这个方法会被执行，如果没有绑定方法或者被绑定的方法返回 true，那么这个事件会向其父级传播，一层一层直到最顶层即 document 或者 window，除非被认为的中断。&lt;/p>
+&lt;h4 id="冒泡机制">冒泡机制&lt;/h4>
+&lt;p>现代浏览器的冒泡机制基本一致，事件都是由最内层的元素网最外层元素冒泡，冒泡顺序：&lt;code>child-&amp;gt;paren-&amp;gt;body-&amp;gt;html-&amp;gt;document-&amp;gt;window&lt;/code>&lt;/p>
+&lt;h4 id="事件捕获">事件捕获&lt;/h4>
+&lt;p>事件的捕获刚好和冒泡的方向相反，由最外层开始捕获，然后到最内层，捕获顺序：&lt;code>window-&amp;gt;document-&amp;gt;html-&amp;gt;body-&amp;gt;paren-&amp;gt;child&lt;/code>&lt;/p>
+&lt;h4 id="dom-的事件流">DOM 的事件流&lt;/h4>
+&lt;p>事件捕获优先发生而冒泡后发生，这样一来从捕获到冒泡形成了一组事件流。&lt;/p>
+&lt;p>通过&lt;code>addEventListener(event,fn,useCapture)&lt;/code>这个方法给 DOM 绑定事件时，前两个参数很容易理解一个是事件名称&lt;code>event&lt;/code>，第二个是触发方法&lt;code>fn&lt;/code>，其中第三个参数是一个 bool 值，用来设置绑定的方法是在**事件捕获(&lt;code>true&lt;/code>)&lt;strong>时执行还是&lt;/strong>冒泡(&lt;code>false&lt;/code>)**时执行，一般会设置 false，这样比较安全。&lt;/p>
+&lt;h4 id="阻止事件冒泡">阻止事件冒泡&lt;/h4>
+&lt;p>通常情况下，我们不会去做阻止事件冒泡的事情，但是有时候当我们不想同时执行绑定在两个 DOM 元素上的事件时，我们需要手动的阻止事件的冒泡，通常我们使用如下几种方式来阻止：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>return false&lt;/code>：阻止默认事件和冒泡事件；&lt;/li>
+&lt;li>&lt;code>event.preventDefault()&lt;/code>：阻止默认事件但是允许冒泡事件；&lt;/li>
+&lt;li>&lt;code>event.stopPropagation()&lt;/code>：阻止冒泡但是允许默认事件；&lt;/li>
+&lt;/ul>
+&lt;p>默认事件：该元素默认执行的动作。例如：button 的默认事件是 submit，a 的默认事件是打开链接 等等&amp;hellip;&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/lijiakof/frontend-book" target="_blank" rel="noopener"
+>lijiakof/frontend-book&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 131</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-131/</link><pubDate>Tue, 25 Jan 2022 21:36:46 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-131/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-131/frontend-131-cover.jpg" alt="Featured image of post 毎日のフロントエンド 131" />&lt;h1 id="第一百三十一日">第一百三十一日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-table-去除边框的方法">&lt;strong>Question:&lt;/strong> table 去除边框的方法&lt;/h3>
 &lt;ul>
