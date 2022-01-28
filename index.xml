@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 27 Jan 2022 16:05:01 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 133</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-133/</link><pubDate>Thu, 27 Jan 2022 16:05:01 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-133/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-133/frontend-133-cover.jpg" alt="Featured image of post 毎日のフロントエンド 133" />&lt;h1 id="第一百三十三日">第一百三十三日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jan 2022 17:46:44 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 134</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-134/</link><pubDate>Fri, 28 Jan 2022 17:46:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-134/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-134/frontend-134-cover.jpg" alt="Featured image of post 毎日のフロントエンド 134" />&lt;h1 id="第一百三十四日">第一百三十四日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="questions-web-worker-线程的限制是什么">&lt;strong>Questions:&lt;/strong> Web Worker 线程的限制是什么&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>同源限制&lt;/p>
+&lt;ul>
+&lt;li>分配给 Worker 线程运行的脚本文件，必须与主线程的脚本文件同源。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>DOM 限制&lt;/p>
+&lt;ul>
+&lt;li>Worker 线程所在的全局对象，与主线程不一样，无法读取主线程所在网页的 DOM 对象，也无法使用 document、window、parent 这些对象。但是，Worker 线程可以 navigator 对象和 location 对象。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>通信联系&lt;/p>
+&lt;ul>
+&lt;li>Worker 线程和主线程不在同一个上下文环境，它们不能直接通信，必须通过消息完成。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>脚本限制&lt;/p>
+&lt;ul>
+&lt;li>Worker 线程不能执行 alert()方法和 confirm()方法，但可以使用 XMLHttpRequest 对象发出 AJAX 请求。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>文件限制&lt;/p>
+&lt;ul>
+&lt;li>Worker 线程无法读取本地文件，即不能打开本机的文件系统（file://），它所加载的脚本，必须来自网络。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="questions-transitionanimationtransform-三者有什么区别">&lt;strong>Questions:&lt;/strong> transition、animation、transform 三者有什么区别&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>transition&lt;/code>：可以用来设置一个过渡动画效果&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>transition: margin-right 4s ease-in-out 1s;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>animation&lt;/code>：css 动画效果设置，可以通过指定不同的关键帧设置复杂的动画效果&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="nt">animation&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">mymove&lt;/span> &lt;span class="nt">5s&lt;/span> &lt;span class="nt">infinite&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;span class="p">@&lt;/span>&lt;span class="k">keyframes&lt;/span> &lt;span class="nt">mymove&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nt">from&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">to&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>transform&lt;/code>：css3 新增的一个变形属性，可以对元素做 2d 或 3d 旋转，缩放，倾斜的效果&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>transform:rotate(9deg) scale(0.5) ;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="questions-代码运行的结果及解释">&lt;strong>Questions:&lt;/strong> 代码运行的结果及解释&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;images&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">size&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">800&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">height&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">600&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">format&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;jpg&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;png&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">change&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">size&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">format&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;video&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">size&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1024&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">height&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">768&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="nx">format&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;map&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">change&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">size&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">format&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">size&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">format&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>result:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;images&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">size&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">800&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">height&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">600&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="nx">format&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;jpg&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;png&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;map&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>函数形参的传递根据实参值的类型分为值复制（对应基本类型）和引用复制（对应引用类型）&lt;/li>
+&lt;li>通过值复制的值无论怎么改变都不会影响原来的值（对应 type 变量的情况）&lt;/li>
+&lt;li>直接改变引用本身并不会影响其他引用（即引用另一个引用类型的值时，原值的其他引用不会改变；对应 size 变量的情况）&lt;/li>
+&lt;li>通过引用复制的值改变后原值也会改变（对应 format 变量的情况）&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 133</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-133/</link><pubDate>Thu, 27 Jan 2022 16:05:01 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-133/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-133/frontend-133-cover.jpg" alt="Featured image of post 毎日のフロントエンド 133" />&lt;h1 id="第一百三十三日">第一百三十三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-canvas-默认画布的尺寸是多大怎样设置才能不会变形">&lt;strong>Question:&lt;/strong> canvas 默认画布的尺寸是多大？怎样设置才能不会变形&lt;/h3>
 &lt;ul>
