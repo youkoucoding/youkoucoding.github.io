@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jan 2022 17:46:44 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 134</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-134/</link><pubDate>Fri, 28 Jan 2022 17:46:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-134/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-134/frontend-134-cover.jpg" alt="Featured image of post 毎日のフロントエンド 134" />&lt;h1 id="第一百三十四日">第一百三十四日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 29 Jan 2022 13:24:15 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 135</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/</link><pubDate>Sat, 29 Jan 2022 13:24:15 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/frontend-135-cover.jpg" alt="Featured image of post 毎日のフロントエンド 135" />&lt;h1 id="第一百三十五日">第一百三十五日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-如何刷新浏览器的应用缓存">&lt;strong>Question:&lt;/strong> 如何刷新浏览器的应用缓存&lt;/h3>
+&lt;p>浏览器缓存可分为&lt;strong>强缓存&lt;/strong>和&lt;strong>协商缓存&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>强缓存&lt;/strong>指的是设置了 &lt;code>expires&lt;/code> 或者 &lt;code>cache-control:max-age&lt;/code> 的请求，此类&lt;code>NaN&lt;/code>本身设定的过期时间之前刷新不会再次向浏览器发起请求，直接由客户端决定使用缓存进行页面展示。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>协商缓存&lt;/strong>指的是未设置强缓存对应字段的缓存，浏览器会向服务器发送请求，并带&lt;code>IF-Modified-Since&lt;/code>和&lt;code>IF-None-Match&lt;/code>字段，服务器对应的返回字段为&lt;code>Last-Modified&lt;/code>或 &lt;code>Etag&lt;/code>，如果在 etag 未更改 或 last-modified 的时间早于 IF-Modified-Since 则服务器不返回文件，使用浏览器本地缓存。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>如何刷新应用缓存&lt;/p>
+&lt;ul>
+&lt;li>点击浏览器的刷新按钮或者 F5 刷新时，浏览器会&lt;strong>忽略强缓存&lt;/strong>, 必定向服务器发起请求，但是如果服务器返回 304 则会继续使用本地缓存。&lt;/li>
+&lt;li>点击&lt;strong>Ctrl+F5&lt;/strong> 浏览器会&lt;strong>忽略一切缓存&lt;/strong>（&lt;code>cache-control:no-cache&lt;/code>），向服务器发起请求，并且一定会使用服务器的返回来渲染页面。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-will-change属性">&lt;strong>Question:&lt;/strong> &lt;code>will-change&lt;/code>属性&lt;/h3>
+&lt;p>告诉浏览器,这个元素的某些属性可能会频繁变动触发回流，要求浏览器给予资源进行优化，一般浏览器会给这个元素单独生成一个图层渲染,gpu 加速等提前优化手段，不应过度使用这个属性,这属性只是性能出现问题的最后手段&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-解释下-nan--nan-的结果">&lt;strong>Question:&lt;/strong> 解释下 NaN === NaN 的结果&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kc">NaN&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">NaN&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// false
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>NaN&lt;/code>不等于任何值，包括&lt;code>NaN&lt;/code>本身&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/will-change" target="_blank" rel="noopener"
+>will-change - CSS（层叠样式表） | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 134</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-134/</link><pubDate>Fri, 28 Jan 2022 17:46:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-134/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-134/frontend-134-cover.jpg" alt="Featured image of post 毎日のフロントエンド 134" />&lt;h1 id="第一百三十四日">第一百三十四日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="questions-web-worker-线程的限制是什么">&lt;strong>Questions:&lt;/strong> Web Worker 线程的限制是什么&lt;/h3>
 &lt;ul>
