@@ -1,4 +1,165 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 29 Jan 2022 13:24:15 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 135</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/</link><pubDate>Sat, 29 Jan 2022 13:24:15 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/frontend-135-cover.jpg" alt="Featured image of post 毎日のフロントエンド 135" />&lt;h1 id="第一百三十五日">第一百三十五日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 30 Jan 2022 10:39:54 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 136</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/</link><pubDate>Sun, 30 Jan 2022 10:39:54 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/frontend-136-cover.jpg" alt="Featured image of post 毎日のフロントエンド 136" />&lt;h1 id="第一百三十六日">第一百三十六日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5-的服务器server-sent-event发送事件">&lt;strong>Question:&lt;/strong> HTML5 的服务器(server-sent event)发送事件&lt;/h3>
+&lt;p>一个网页获取新的数据通常需要发送一个请求到服务器，也就是向服务器请求的页面。使用 server-sent 事件，服务器可以在任何时刻向我们的 Web 页面推送数据和信息。这些被推送进来的信息可以在这个页面上作为 Events + data 的形式来处理。&lt;/p>
+&lt;p>两种服务端推送技术的简单对比:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>server-sent event&lt;/th>
+&lt;th>WebSocket&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>服务器到浏览器的单向通信&lt;/td>
+&lt;td>两端之间的双向实时通信&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>不兼容 IE&lt;/td>
+&lt;td>兼容性更好&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>协议实现断线重连与消息追踪&lt;/td>
+&lt;td>不在协议范围内, 需要手动处理&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>实现简单, 复用 HTTP&lt;/td>
+&lt;td>独立于 Http, 实现较复杂&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>具体的应用场景有:&lt;/p>
+&lt;ul>
+&lt;li>邮箱: 实时获取新邮件&lt;/li>
+&lt;li>后台性能监控: 实时更新监控数据&lt;/li>
+&lt;li>天气预报: 实时更新天气信息&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-css-计数器序列数字字符自动递增">&lt;strong>Question:&lt;/strong> css 计数器（序列数字字符自动递增）&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>counter-reset&lt;/code>:设置计数器
+&lt;ul>
+&lt;li>&lt;code>counter-reset: count 0 /* 计数器从1开始 */&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>counter-increment&lt;/code>: 递增数值
+&lt;ul>
+&lt;li>&lt;code>counter-increment: count 2 /* 用于count 每次递增2 */&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Item&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Item&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Item&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Item&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="nt">ul&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">counter-reset&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">count&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nt">li&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">before&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">counter-increment&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">count&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">counters&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">count&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;-&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="s1">&amp;#39;.&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;pre tabindex="0">&lt;code>1.Item
+2.Item
+2-1.Item
+2-2.Item
+&lt;/code>&lt;/pre>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="tips-判断数据类型">Tips 判断数据类型&lt;/h3>
+&lt;p>方法一： typeof (返回结果首字母小写)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 注意运行结果有单引号
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// &amp;#39;number&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// &amp;#39;string&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// &amp;#39;undefined&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//&amp;#39;boolean&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">Sympol&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// &amp;#39;sympol&amp;#39;
+&lt;/span>&lt;span class="c1">// =========
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// &amp;#39;object&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="p">[];&lt;/span> &lt;span class="c1">// &amp;#39;object&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="p">{};&lt;/span> &lt;span class="c1">// &amp;#39;object&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// &amp;#39;object&amp;#39;
+&lt;/span>&lt;span class="c1">// =========
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// &amp;#39;function&amp;#39;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;p>方法二： instanceof&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">Fruit&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">apple&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Fruit&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">apple&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nx">Fruit&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// =========
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">banana&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;バナナ&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">banana&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// =========
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;peach&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">str&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// false
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">customInstanceof&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">left&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">right&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 先用 typeof 判断是否为 基本数据类型，如果是 则直接返回fasle；
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 注意 &amp;#39;object&amp;#39; 单引号
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">left&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;object&amp;#39;&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nx">left&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// 通过 getPrototypeOf 拿到参数的原型对象
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">let&lt;/span> &lt;span class="nx">proto&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getPrototypeOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">left&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">proto&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">proto&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">right&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">protoType&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// 拿到原型链再上一层原型，继续对比
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">proto&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getPrototypeOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">proto&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ul>
+&lt;li>&lt;code>typeof&lt;/code> 可以判断基础数据类型（&lt;code>null&lt;/code>除外）, 引用数据类型中 ，（&lt;code>function&lt;/code>除外） 都无法判断&lt;/li>
+&lt;li>&lt;code>instanceof&lt;/code> 可以判断引用数据类型，但不能正确判断基础数据类型&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>方法三： &lt;code>Object.prototype.toString&lt;/code>&lt;/p>
+&lt;p>返回结果的统一格式：&lt;code>object Xxxxx&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">({});&lt;/span> &lt;span class="c1">// &amp;#39;[object Object]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">({});&lt;/span> &lt;span class="c1">// &amp;#39;[object Object]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;[object Number]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;3&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;[object String]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;[object Boolean]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{});&lt;/span> &lt;span class="c1">// &amp;#39;[object Function]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;[object Null]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">undefined&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;[object Undefined]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/abc/g&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;[object RegExp]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">());&lt;/span> &lt;span class="c1">// &amp;#39;[object Date]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">([]);&lt;/span> &lt;span class="c1">// &amp;#39;[object Array]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;[object HTMLDocument]&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">window&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;[object Window]&amp;#39;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>一个获取数据类型的通用方法&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">getType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">type&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;object&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">type&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 如果是 基本数据类型 可直接返回结果
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// 注意正则表达式中 object 后有一个空格
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">replace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/^\[object (\S+)]$/&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;$1&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// 验证， typeof 返回的结果首字母小写； toString返回结果 首字母大写
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">getType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;123&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;string&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">getType&lt;/span>&lt;span class="p">([]);&lt;/span> &lt;span class="c1">// &amp;#39;Array&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">getType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;Null&amp;#39; typeof null, 返回结果是object，因此继续判断
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">getType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">window&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;Window&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">getType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">undefined&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;undefined&amp;#39; typeof 直接返回
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">getType&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// &amp;#39;&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">getType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{});&lt;/span> &lt;span class="c1">// &amp;#39;function&amp;#39; typeof 直接判断后返回
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">getType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/123/g&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;RegExp&amp;#39;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Server-sent_events" target="_blank" rel="noopener"
+>Server-sent events - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventSource" target="_blank" rel="noopener"
+>EventSource - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/GetPrototypeOf" target="_blank" rel="noopener"
+>Object.getPrototypeOf() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString" target="_blank" rel="noopener"
+>Object.prototype.toString() - JavaScript | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 135</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/</link><pubDate>Sat, 29 Jan 2022 13:24:15 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/frontend-135-cover.jpg" alt="Featured image of post 毎日のフロントエンド 135" />&lt;h1 id="第一百三十五日">第一百三十五日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-如何刷新浏览器的应用缓存">&lt;strong>Question:&lt;/strong> 如何刷新浏览器的应用缓存&lt;/h3>
 &lt;p>浏览器缓存可分为&lt;strong>强缓存&lt;/strong>和&lt;strong>协商缓存&lt;/strong>&lt;/p>
