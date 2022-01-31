@@ -1,4 +1,159 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 30 Jan 2022 10:39:54 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 136</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/</link><pubDate>Sun, 30 Jan 2022 10:39:54 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/frontend-136-cover.jpg" alt="Featured image of post 毎日のフロントエンド 136" />&lt;h1 id="第一百三十六日">第一百三十六日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 31 Jan 2022 12:21:29 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 137</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/</link><pubDate>Mon, 31 Jan 2022 12:21:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/frontend-137-cover.jpg" alt="Featured image of post 毎日のフロントエンド 137" />&lt;h1 id="第一百三十七日">第一百三十七日&lt;/h1>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-z-index-不起作用时的原因是什么">&lt;strong>Question:&lt;/strong> z-index 不起作用时的原因是什么&lt;/h3>
+&lt;p>满足下面任一条件会形成层叠上下文:&lt;/p>
+&lt;ul>
+&lt;li>文档根元素（&lt;code>&amp;lt;html&amp;gt;&lt;/code>）；&lt;/li>
+&lt;li>&lt;code>position&lt;/code> 值为 &lt;code>absolute&lt;/code>（绝对定位）或 &lt;code>relative&lt;/code>（相对定位）&lt;strong>且&lt;/strong> &lt;code>z-index&lt;/code> 值不为 &lt;code>auto&lt;/code> 的元素；&lt;/li>
+&lt;li>&lt;code>position&lt;/code> 值为 &lt;code>fixed&lt;/code>（固定定位）或 &lt;code>sticky&lt;/code>（粘滞定位）的元素（沾滞定位适配所有移动设备上的浏览器，但老浏览器不支持）；&lt;/li>
+&lt;li>&lt;code>flex&lt;/code> 容器的子元素，&lt;strong>且&lt;/strong> &lt;code>z-index&lt;/code> 值不为 &lt;code>auto&lt;/code>；&lt;/li>
+&lt;li>&lt;code>grid&lt;/code>容器的子元素，&lt;strong>且&lt;/strong> &lt;code>z-index&lt;/code> 值不为 &lt;code>auto&lt;/code>；&lt;/li>
+&lt;li>&lt;code>opacity&lt;/code> 属性值小于 1 的元素；&lt;/li>
+&lt;li>&lt;code>mix-blend-mode&lt;/code> 属性值不为 normal 的元素；&lt;/li>
+&lt;li>以下任意属性值不为 &lt;code>none&lt;/code> 的元素：
+&lt;ul>
+&lt;li>transform&lt;/li>
+&lt;li>filter&lt;/li>
+&lt;li>perspective&lt;/li>
+&lt;li>clip-path&lt;/li>
+&lt;li>mask / mask-image / mask-border&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>isolation 属性值为 &lt;/code>isolate` 的元素；&lt;/li>
+&lt;li>&lt;code>-webkit-overflow-scrolling&lt;/code> 属性值为 &lt;code>touch&lt;/code> 的元素；&lt;/li>
+&lt;li>&lt;code>will-change&lt;/code> 值设定了任一属性而该属性在 &lt;code>non-initial&lt;/code> 值时会创建层叠上下文的元素；&lt;/li>
+&lt;li>&lt;code>contain&lt;/code> 属性值为 &lt;code>layout&lt;/code>、&lt;code>paint&lt;/code> 或包含它们其中之一的合成值（比如 contain: strict、contain: content）的元素。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>层叠上下文可以包含在其他层叠上下文中，并且一起创建一个层叠上下文的层级。&lt;/li>
+&lt;li>每个层叠上下文都完全独立于它的兄弟元素：当处理层叠时只考虑子元素。&lt;/li>
+&lt;li>每个层叠上下文都是自包含的：当一个元素的内容发生层叠后，该元素将被作为整体在父级层叠上下文中按顺序进行层叠。&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-用-js-实现页面局部打印和预览原理">&lt;strong>Question:&lt;/strong> 用 js 实现页面局部打印和预览原理&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>不打印1&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!--startprint--&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;content&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>要打印的内容&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!--endprint--&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>这块内容不需要打印2&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="na">onclick&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;doPrint()&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>打印按钮&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">button&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">doPrint&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">bdhtml&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">body&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">innerHTML&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">sprnstr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;!--startprint--&amp;gt;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">eprnstr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;&amp;lt;!--endprint--&amp;gt;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">prnhtml&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">bdhtml&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">substr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">bdhtml&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">indexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sprnstr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">17&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">prnhtml&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">prnhtml&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">substring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">prnhtml&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">indexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">eprnstr&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">body&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">innerHTML&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">prnhtml&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">print&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="javascript-数据类型强制类型转换隐式转换">JavaScript 数据类型强制类型转换，隐式转换&lt;/h3>
+&lt;h4 id="强制类型转换">强制类型转换&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>Number()&lt;/code>&lt;/li>
+&lt;li>&lt;code>parseInt()&lt;/code>&lt;/li>
+&lt;li>&lt;code>parseFloat()&lt;/code>&lt;/li>
+&lt;li>&lt;code>Boolean()&lt;/code>&lt;/li>
+&lt;li>&lt;code>String()&lt;/code>&lt;/li>
+&lt;li>&lt;code>toString()&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>Notes:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nb">Number&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 0
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Number&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 0
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">parseInt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// NaN
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>&lt;code>Number()&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>true&lt;/code> &lt;code>false&lt;/code> 转换为 &lt;code>1&lt;/code> &lt;code>0&lt;/code>&lt;/li>
+&lt;li>数字返回自身&lt;/li>
+&lt;li>&lt;code>null&lt;/code> 返回 &lt;code>0&lt;/code>&lt;/li>
+&lt;li>&lt;code>undefined&lt;/code> 返回 &lt;code>NaN&lt;/code>&lt;/li>
+&lt;li>&lt;code>string&lt;/code>
+&lt;ul>
+&lt;li>如果字符串中只只包含数字，则转换为十进制数&lt;/li>
+&lt;li>如果字符串中包含有效浮点格式，则转为相应的浮点数值&lt;/li>
+&lt;li>空字符串，转化为 &lt;code>0&lt;/code>&lt;/li>
+&lt;li>若不是以上情况，均返回 &lt;code>NaN&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>Symbol&lt;/code> 抛出错误&lt;/li>
+&lt;li>对象， 且包含&lt;code>[Symbol.toPrimitive]&lt;/code>, 调用此方法，否则调用对象的 &lt;code>valueOf()&lt;/code>方法
+&lt;ul>
+&lt;li>将以上方法的返回值，按照上述规则进行类型转换，并返回最后结果
+&lt;ul>
+&lt;li>如果转换的结果是 &lt;code>NaN&lt;/code>，则再继续调用对象的&lt;code>toString()&lt;/code>方法后，再次根据上述规则进行转换，并返回最后的结果。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Boolean()&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>除了 &lt;code>undefined&lt;/code>,&lt;code>null&lt;/code>,&lt;code>false&lt;/code>,&lt;code>0&lt;/code>,&lt;code>+0&lt;/code>,&lt;code>-0&lt;/code>, &lt;code>NaN&lt;/code>, 全部结果都为&lt;code>true&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="隐式类型转换">隐式类型转换&lt;/h4>
+&lt;ul>
+&lt;li>当不同数据类型的数据，遇到以下操作符时， 都会发生隐式了行转换:
+&lt;ul>
+&lt;li>逻辑运算符(&lt;code>&amp;amp;&amp;amp;&lt;/code>, &lt;code>||&lt;/code>&amp;hellip;)，运算符(&lt;code>+&lt;/code>, &lt;code>-&lt;/code>&amp;hellip;)， 关系操作符(&lt;code>&amp;gt;&lt;/code>, &lt;code>&amp;lt;&lt;/code>&amp;hellip;)，相等运算符(&lt;code>==&lt;/code>)，&lt;code>if&lt;/code> &lt;code>while&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>==&lt;/code>的隐式转换规则&lt;/p>
+&lt;ul>
+&lt;li>如果其中一个操作数是 &lt;code>null&lt;/code>或&lt;code>undefined&lt;/code>， 那么另一个操作数必须为 &lt;code>null&lt;/code>或&lt;code>undefined&lt;/code>，结果才是&lt;code>true&lt;/code>,其余均返回&lt;code>false&lt;/code>&lt;/li>
+&lt;li>如果有&lt;code>Symbol&lt;/code>类型，则返回&lt;code>false&lt;/code>&lt;/li>
+&lt;li>两个操作数都为， &lt;code>string&lt;/code>和&lt;code>number&lt;/code>， 则转换为&lt;code>number&lt;/code>后 进行比较&lt;/li>
+&lt;li>操作数有&lt;code>boolean&lt;/code>， 将&lt;code>boolean&lt;/code> 转换为 &lt;code>number&lt;/code>&lt;/li>
+&lt;li>操作数有一个&lt;code>object&lt;/code>， 且，另外一个操作数为&lt;code>number&lt;/code> or &lt;code>string&lt;/code> or &lt;code>symbol&lt;/code>，会把 &lt;code>object&lt;/code> 转化为基本数据类型(调用&lt;code>valueOf()&lt;/code> &lt;code>toString()&lt;/code>) 再进行判断&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>+&lt;/code>隐式类型转换&lt;/p>
+&lt;ul>
+&lt;li>两侧都是字符串时，直接进行拼接&lt;/li>
+&lt;li>如果&lt;strong>其中一个是字符串&lt;/strong>，另一个是 &lt;code>undefined&lt;/code> &lt;code>null&lt;/code> &lt;code>boolean&lt;/code> 则对其调用 &lt;code>toString()&lt;/code> 然后进行字符串拼接。
+&lt;ul>
+&lt;li>若是纯对象，数组，正则等，则默认调用对象的转换方法（调用方式有优先级）， 然后字符串拼接&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>如果&lt;strong>其中一个是数字&lt;/strong>，另一个是 &lt;code>undefined&lt;/code> &lt;code>null&lt;/code> &lt;code>boolean&lt;/code> or &lt;strong>数字&lt;/strong>， 则会将其转换为数字，进行加法运算
+&lt;ul>
+&lt;li>若是对象类型，则参考上一条规则&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>数字 &lt;code>+&lt;/code> 字符串， 则进行字符串拼接&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>object&lt;/code> 转换规则&lt;/p>
+&lt;ol>
+&lt;li>如果有&lt;code>[Symbol.toPrimitive]&lt;/code>， 则优先调用此方法，并返回&lt;/li>
+&lt;li>调用&lt;code>valueOf()&lt;/code>, 若结果为基本数据类型， 则返回&lt;/li>
+&lt;li>调用&lt;code>toString()&lt;/code>, 若结果为基本数据类型， 则返回&lt;/li>
+&lt;li>若都没有返回基本数据类型， 会抛出错误&lt;/li>
+&lt;/ol>
+&lt;p>example：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="mi">10&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="c1">// &amp;#39;10[object Object]&amp;#39;
+&lt;/span>&lt;span class="c1">//{} 会默认调用 valueOf 结果是{}, 不是基础数据类型，继续转换=》调用 toString() 返回&amp;#39;[object Object]&amp;#39; 然后字符串拼接。
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context" target="_blank" rel="noopener"
+>层叠上下文 - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" rel="noopener"
+>Number - JavaScript | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 136</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/</link><pubDate>Sun, 30 Jan 2022 10:39:54 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/frontend-136-cover.jpg" alt="Featured image of post 毎日のフロントエンド 136" />&lt;h1 id="第一百三十六日">第一百三十六日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5-的服务器server-sent-event发送事件">&lt;strong>Question:&lt;/strong> HTML5 的服务器(server-sent event)发送事件&lt;/h3>
 &lt;p>一个网页获取新的数据通常需要发送一个请求到服务器，也就是向服务器请求的页面。使用 server-sent 事件，服务器可以在任何时刻向我们的 Web 页面推送数据和信息。这些被推送进来的信息可以在这个页面上作为 Events + data 的形式来处理。&lt;/p>
@@ -16631,7 +16786,7 @@ alt="Photo by Hudai Gayiran on Unsplash">
 &lt;/section></description></item><item><title>Rich Content</title><link>https://youkoucoding.github.io/p/rich-content/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><guid>https://youkoucoding.github.io/p/rich-content/</guid><description>&lt;p>Hugo ships with several &lt;a class="link" href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes" target="_blank" rel="noopener"
 >Built-in Shortcodes&lt;/a> for rich content, along with a &lt;a class="link" href="https://gohugo.io/about/hugo-and-gdpr/" target="_blank" rel="noopener"
 >Privacy Config&lt;/a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p>
-&lt;hr>
+&lt;h2 id="heading">&lt;/h2>
 &lt;h2 id="youtube-privacy-enhanced-shortcode">YouTube Privacy Enhanced Shortcode&lt;/h2>
 &lt;div class="video-wrapper">
 &lt;iframe loading="lazy"
@@ -16643,24 +16798,8 @@ title="YouTube Video"
 &lt;/div>
 &lt;!-- raw HTML omitted -->
 &lt;hr>
-&lt;h2 id="twitter-simple-shortcode">Twitter Simple Shortcode&lt;/h2>
-&lt;style type="text/css">
-.twitter-tweet {
-font: 14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-border-left: 4px solid #2b7bb9;
-padding-left: 1.5em;
-color: #555;
-}
-.twitter-tweet a {
-color: #2b7bb9;
-text-decoration: none;
-}
-blockquote.twitter-tweet a:hover,
-blockquote.twitter-tweet a:focus {
-text-decoration: underline;
-}
-&lt;/style>
-&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">“In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”&lt;br>— Jan Tschichold &lt;a href="https://t.co/gcv7SrhvJb">pic.twitter.com/gcv7SrhvJb&lt;/a>&lt;/p>&amp;mdash; Graphic Design History (@DesignReviewed) &lt;a href="https://twitter.com/DesignReviewed/status/1085870671291310081?ref_src=twsrc%5Etfw">January 17, 2019&lt;/a>&lt;/blockquote>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
 &lt;!-- raw HTML omitted -->
 &lt;hr>
 &lt;h2 id="vimeo-simple-shortcode">Vimeo Simple Shortcode&lt;/h2>
