@@ -1,4 +1,193 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 31 Jan 2022 12:21:29 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 137</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/</link><pubDate>Mon, 31 Jan 2022 12:21:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/frontend-137-cover.jpg" alt="Featured image of post 毎日のフロントエンド 137" />&lt;h1 id="第一百三十七日">第一百三十七日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 01 Feb 2022 11:57:11 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 138</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/</link><pubDate>Tue, 01 Feb 2022 11:57:11 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/frontend-138-cover.jpg" alt="Featured image of post 毎日のフロントエンド 138" />&lt;h1 id="第一百三十八日">第一百三十八日&lt;/h1>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="深浅拷贝">深・浅拷贝&lt;/h3>
+&lt;h4 id="浅拷贝">浅拷贝&lt;/h4>
+&lt;blockquote>
+&lt;p>创建一个新对象， 接收重新复制或引用的对象值。 如果对象属性是基本数据类型，复制的就是基本数据类型的值给新对象； 如果属性值是引用数据类型，复制的就是引用对象在内存中的地址。 如果一个对象改变了此地址上对象的内容，必然影响另外一个。&lt;/p>
+&lt;/blockquote>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>Object.assign(target, ...sources)&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">target&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">source&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">assign&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">source&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// {a:{b:10}}
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">source&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">b&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">consolo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">source&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// {a:{b:10}}
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// {a:{b:10}}
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>不会拷贝对象的继承属性&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>不会拷贝对象的&lt;strong>不可枚举属性&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>可以拷贝 &lt;code>symbol&lt;/code> 类型属性&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>针对深拷贝，需要使用其他办法，因为 Object.assign()拷贝的是（可枚举）属性值。假如源值是一个对象的引用，它仅仅会复制其引用值。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>扩展运算符&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>在构造对象的同时，完成浅拷贝的功能&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>let cloneObj = {...obj}&lt;/code>&lt;/li>
+&lt;li>实际上, 展开语法和 Object.assign() 行为一致, 执行的都是浅拷贝(只遍历一层)。&lt;/li>
+&lt;/ul>
+&lt;ol start="3">
+&lt;li>&lt;code>concat&lt;/code> 拷贝数组&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>&lt;code>concat()&lt;/code> 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。&lt;/li>
+&lt;li>它不会递归到嵌套数组参数中。&lt;/li>
+&lt;/ul>
+&lt;ol start="4">
+&lt;li>&lt;code>slice&lt;/code> 拷贝数组&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>&lt;code>arr.slice(begin, end)&lt;/code>&lt;/li>
+&lt;li>&lt;code>slice()&lt;/code> 方法返回一个新的数组对象，这一对象是一个由 begin 和 end 决定的原数组的浅拷贝（包括 begin，不包括 end）。原始数组不会被改变。&lt;/li>
+&lt;/ul>
+&lt;ol start="5">
+&lt;li>手工实现一个浅拷贝&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>对基本数据类型的数据，做拷贝&lt;/li>
+&lt;li>对引用对象，在新存储位置上，拷贝一层对象属性&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">shallowClone&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">target&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;object&amp;#39;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">target&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">cloneTarget&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isArray&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="p">[]&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">prop&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">target&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">target&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hasOwnProperty&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">prop&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">cloneTarget&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">prop&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">target&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">prop&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">cloneTarget&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">target&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="深拷贝">深拷贝&lt;/h4>
+&lt;blockquote>
+&lt;p>开辟了新的内存， 将原对象，完全复制进新地址， 两个对象，相互独立，互不影响。&lt;/p>
+&lt;/blockquote>
+&lt;ol>
+&lt;li>
+&lt;p>方法一 &lt;code>JSON.stringify&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">obj1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">obj2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parse&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Caveat:&lt;/p>
+&lt;ol>
+&lt;li>拷贝的对象的值中，如果有，函数，undefined，symbol， 经过&lt;code>JSON.stringify()&lt;/code>序列化之后，这个键值对会消失&lt;/li>
+&lt;li>拷贝&lt;code>Date&lt;/code>引用类型，会变成字符串&lt;/li>
+&lt;li>无法拷贝&lt;strong>不可枚举对象&lt;/strong>&lt;/li>
+&lt;li>无法拷贝对象的原型链&lt;/li>
+&lt;li>拷贝正则引用类型， 会变成空对象&lt;/li>
+&lt;li>对象中有，&lt;code>NaN&lt;/code>, &lt;code>Infinty&lt;/code>,&lt;code>-Infinty&lt;/code>, 经过序列化之后，结果会变为&lt;code>null&lt;/code>&lt;/li>
+&lt;li>无法拷贝对象的循环引用， 即对象成环: &lt;code>obj[key]:obj&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>递归实现， 基础实现&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">deepClone&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">cloneObj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">key&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;object&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">cloneObj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">deepClone&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">cloneObj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">cloneObj&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Caveat:&lt;/p>
+&lt;ul>
+&lt;li>这个递归函数，不能复制，&lt;strong>不可枚举属性&lt;/strong>以及 &lt;code>symbol&lt;/code>类型&lt;/li>
+&lt;li>这种方法只能针对，普通引用类型的值进行递归复制&lt;/li>
+&lt;li>循环引用问题未解决&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>改进的递归实现&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Reflect.ownKeys&lt;/code> 解决： &lt;strong>不可枚举属性&lt;/strong>以及 &lt;code>symbol&lt;/code>类型&lt;/li>
+&lt;li>当属性值为，&lt;code>Date&lt;/code>, &lt;code>RegExp&lt;/code>，直接返回新的实例&lt;/li>
+&lt;li>利用&lt;code>getOwnPropertyDescriptors&lt;/code>，可以获得对象所有属性，以及其对应特性， 结合&lt;code>create()&lt;/code>方法创建一个新对象，并继承传入对象的原型链&lt;/li>
+&lt;li>利用&lt;code>WeakMap&lt;/code>类型作为&lt;code>hash table&lt;/code>，weakmap 是弱引用类型，可防止内存泄漏，用于检测循环引用： 如果存在循环引用，则返回&lt;code>WeakMap&lt;/code>存储的值&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">isComplexDataType&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span>
+&lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;object&amp;#39;&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">deepClone&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">hash&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">WeakMap&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="cm">/* Date 类型，直接返回一个新的实例*/&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">constructor&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">constructor&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nb">RegExp&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">RegExp&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="cm">/* 有循环引用， 引入 weakmap*/&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">hash&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">has&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">hash&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">allDesc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getOwnPropertyDescriptors&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="cm">/* 遍历传入所有 键的 特征 */&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">cloneObj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getPrototypeOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="nx">allDesc&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="cm">/* 继承原型链*/&lt;/span>
+&lt;span class="nx">hash&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cloneObj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">key&lt;/span> &lt;span class="k">of&lt;/span> &lt;span class="nx">Reflect&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ownKeys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">cloneObj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;span class="nx">isComplexDataType&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span>
+&lt;span class="o">?&lt;/span> &lt;span class="nx">deepClone&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">hash&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="o">:&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">cloneObj&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// test
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">num&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">str&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="kr">boolean&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">unf&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="kc">null&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">obj&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">12345&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Who I am&amp;#39;&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;span class="nx">func&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{},&lt;/span>
+&lt;span class="nx">date&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="nx">reg&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">RegExp&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;/123/ig&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;span class="p">[&lt;/span>&lt;span class="nx">Symbol&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="p">)]&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">defineProperty&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;innumerable&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">enumerable&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;不可枚举属性&amp;#39;&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;span class="cm">/* 设置循环引用 */&lt;/span>
+&lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getOwnPropertyDescriptors&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">loop&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">cloneObj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">deepClone&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">cloneObj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">12345&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;source&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;result&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cloneObj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" target="_blank" rel="noopener"
+>Object.assign() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="_blank" rel="noopener"
+>展开语法 - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat" target="_blank" rel="noopener"
+>Array.prototype.concat() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" target="_blank" rel="noopener"
+>Array.prototype.slice() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" target="_blank" rel="noopener"
+>Object.prototype.hasOwnProperty() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="noopener"
+>Object.defineProperty() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor" target="_blank" rel="noopener"
+>Object.getOwnPropertyDescriptor() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap" target="_blank" rel="noopener"
+>WeakMap - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors" target="_blank" rel="noopener"
+>Object.getOwnPropertyDescriptors() - JavaScript | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 137</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/</link><pubDate>Mon, 31 Jan 2022 12:21:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/frontend-137-cover.jpg" alt="Featured image of post 毎日のフロントエンド 137" />&lt;h1 id="第一百三十七日">第一百三十七日&lt;/h1>
 &lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="question-z-index-不起作用时的原因是什么">&lt;strong>Question:&lt;/strong> z-index 不起作用时的原因是什么&lt;/h3>
 &lt;p>满足下面任一条件会形成层叠上下文:&lt;/p>

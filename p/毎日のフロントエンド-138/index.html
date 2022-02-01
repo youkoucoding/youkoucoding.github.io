@@ -1,0 +1,391 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 138</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  138">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2022-02-01T11:57:11+09:00"><meta property="article:modified_time" content="2022-02-01T11:57:11+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/frontend-138-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド  138">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/frontend-138-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/frontend-138-cover_hu5079a42c21018aa5d246764db0f44383_658722_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/frontend-138-cover_hu5079a42c21018aa5d246764db0f44383_658722_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/frontend-138-cover_hu5079a42c21018aa5d246764db0f44383_658722_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド  138">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/javascript/>
+Javascript
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/>毎日のフロントエンド 138</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Feb 01, 2022</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 3 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第一百三十八日>第一百三十八日</h1>
+<h2 id=tips>Tips</h2>
+<h3 id=深浅拷贝>深・浅拷贝</h3>
+<h4 id=浅拷贝>浅拷贝</h4>
+<blockquote>
+<p>创建一个新对象， 接收重新复制或引用的对象值。 如果对象属性是基本数据类型，复制的就是基本数据类型的值给新对象； 如果属性值是引用数据类型，复制的就是引用对象在内存中的地址。 如果一个对象改变了此地址上对象的内容，必然影响另外一个。</p>
+</blockquote>
+<ol>
+<li>
+<p><code>Object.assign(target, ...sources)</code></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>let</span> <span class=nx>target</span> <span class=o>=</span> <span class=p>{};</span>
+<span class=kd>let</span> <span class=nx>source</span> <span class=o>=</span> <span class=p>{</span> <span class=nx>a</span><span class=o>:</span> <span class=p>{</span> <span class=nx>b</span><span class=o>:</span> <span class=mi>2</span> <span class=p>}</span> <span class=p>};</span>
+<span class=nb>Object</span><span class=p>.</span><span class=nx>assign</span><span class=p>(</span><span class=nx>target</span><span class=p>,</span> <span class=nx>source</span><span class=p>);</span>
+
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>target</span><span class=p>);</span> <span class=c1>// {a:{b:10}}
+</span><span class=c1></span><span class=nx>source</span><span class=p>.</span><span class=nx>a</span><span class=p>.</span><span class=nx>b</span> <span class=o>=</span> <span class=mi>10</span><span class=p>;</span>
+<span class=nx>consolo</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>source</span><span class=p>);</span> <span class=c1>// {a:{b:10}}
+</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>target</span><span class=p>);</span> <span class=c1>// {a:{b:10}}
+</span></code></pre></div><ul>
+<li>
+<p>不会拷贝对象的继承属性</p>
+</li>
+<li>
+<p>不会拷贝对象的<strong>不可枚举属性</strong></p>
+</li>
+<li>
+<p>可以拷贝 <code>symbol</code> 类型属性</p>
+</li>
+<li>
+<p>针对深拷贝，需要使用其他办法，因为 Object.assign()拷贝的是（可枚举）属性值。假如源值是一个对象的引用，它仅仅会复制其引用值。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>扩展运算符</p>
+</li>
+</ol>
+<p>在构造对象的同时，完成浅拷贝的功能</p>
+<ul>
+<li><code>let cloneObj = {...obj}</code></li>
+<li>实际上, 展开语法和 Object.assign() 行为一致, 执行的都是浅拷贝(只遍历一层)。</li>
+</ul>
+<ol start=3>
+<li><code>concat</code> 拷贝数组</li>
+</ol>
+<ul>
+<li><code>concat()</code> 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。</li>
+<li>它不会递归到嵌套数组参数中。</li>
+</ul>
+<ol start=4>
+<li><code>slice</code> 拷贝数组</li>
+</ol>
+<ul>
+<li><code>arr.slice(begin, end)</code></li>
+<li><code>slice()</code> 方法返回一个新的数组对象，这一对象是一个由 begin 和 end 决定的原数组的浅拷贝（包括 begin，不包括 end）。原始数组不会被改变。</li>
+</ul>
+<ol start=5>
+<li>手工实现一个浅拷贝</li>
+</ol>
+<ul>
+<li>对基本数据类型的数据，做拷贝</li>
+<li>对引用对象，在新存储位置上，拷贝一层对象属性</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>shallowClone</span> <span class=o>=</span> <span class=p>(</span><span class=nx>target</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=k>if</span> <span class=p>(</span><span class=k>typeof</span> <span class=nx>target</span> <span class=o>===</span> <span class=s1>&#39;object&#39;</span> <span class=o>&amp;&amp;</span> <span class=nx>target</span> <span class=o>!==</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>cloneTarget</span> <span class=o>=</span> <span class=nb>Array</span><span class=p>.</span><span class=nx>isArray</span><span class=p>(</span><span class=nx>target</span><span class=p>)</span> <span class=o>?</span> <span class=p>[]</span> <span class=o>:</span> <span class=p>{};</span>
+
+    <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>prop</span> <span class=k>in</span> <span class=nx>target</span><span class=p>)</span> <span class=p>{</span>
+      <span class=k>if</span> <span class=p>(</span><span class=nx>target</span><span class=p>.</span><span class=nx>hasOwnProperty</span><span class=p>(</span><span class=nx>prop</span><span class=p>))</span> <span class=p>{</span>
+        <span class=nx>cloneTarget</span><span class=p>[</span><span class=nx>prop</span><span class=p>]</span> <span class=o>=</span> <span class=nx>target</span><span class=p>[</span><span class=nx>prop</span><span class=p>];</span>
+      <span class=p>}</span>
+    <span class=p>}</span>
+    <span class=k>return</span> <span class=nx>cloneTarget</span><span class=p>;</span>
+  <span class=p>}</span>
+  <span class=k>return</span> <span class=nx>target</span><span class=p>;</span>
+<span class=p>};</span>
+</code></pre></div><h4 id=深拷贝>深拷贝</h4>
+<blockquote>
+<p>开辟了新的内存， 将原对象，完全复制进新地址， 两个对象，相互独立，互不影响。</p>
+</blockquote>
+<ol>
+<li>
+<p>方法一 <code>JSON.stringify</code></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>let</span> <span class=nx>obj1</span> <span class=o>=</span> <span class=p>{</span> <span class=nx>a</span><span class=o>:</span> <span class=mi>1</span><span class=p>,</span> <span class=nx>b</span><span class=o>:</span> <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>]</span> <span class=p>};</span>
+<span class=kd>let</span> <span class=nx>str</span> <span class=o>=</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>(</span><span class=nx>obj1</span><span class=p>);</span>
+<span class=kd>let</span> <span class=nx>obj2</span> <span class=o>=</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>parse</span><span class=p>(</span><span class=nx>str</span><span class=p>);</span>
+</code></pre></div><p>Caveat:</p>
+<ol>
+<li>拷贝的对象的值中，如果有，函数，undefined，symbol， 经过<code>JSON.stringify()</code>序列化之后，这个键值对会消失</li>
+<li>拷贝<code>Date</code>引用类型，会变成字符串</li>
+<li>无法拷贝<strong>不可枚举对象</strong></li>
+<li>无法拷贝对象的原型链</li>
+<li>拷贝正则引用类型， 会变成空对象</li>
+<li>对象中有，<code>NaN</code>, <code>Infinty</code>,<code>-Infinty</code>, 经过序列化之后，结果会变为<code>null</code></li>
+<li>无法拷贝对象的循环引用， 即对象成环: <code>obj[key]:obj</code></li>
+</ol>
+</li>
+<li>
+<p>递归实现， 基础实现</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>let</span> <span class=nx>obj</span> <span class=o>=</span> <span class=p>{</span> <span class=nx>a</span><span class=o>:</span> <span class=p>{</span> <span class=nx>b</span><span class=o>:</span> <span class=mi>1</span> <span class=p>}</span> <span class=p>};</span>
+
+<span class=kr>const</span> <span class=nx>deepClone</span> <span class=o>=</span> <span class=p>(</span><span class=nx>obj</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+  <span class=kd>let</span> <span class=nx>cloneObj</span> <span class=o>=</span> <span class=p>{};</span>
+  <span class=k>for</span> <span class=p>(</span><span class=nx>key</span> <span class=k>in</span> <span class=nx>obj</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=k>typeof</span> <span class=nx>obj</span><span class=p>[</span><span class=nx>key</span><span class=p>]</span> <span class=o>===</span> <span class=s1>&#39;object&#39;</span><span class=p>)</span> <span class=p>{</span>
+      <span class=nx>cloneObj</span><span class=p>[</span><span class=nx>key</span><span class=p>]</span> <span class=o>=</span> <span class=nx>deepClone</span><span class=p>(</span><span class=nx>obj</span><span class=p>[</span><span class=nx>key</span><span class=p>]);</span>
+    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+      <span class=nx>cloneObj</span><span class=p>[</span><span class=nx>key</span><span class=p>]</span> <span class=o>=</span> <span class=nx>obj</span><span class=p>[</span><span class=nx>key</span><span class=p>];</span>
+    <span class=p>}</span>
+  <span class=p>}</span>
+  <span class=k>return</span> <span class=nx>cloneObj</span><span class=p>;</span>
+<span class=p>};</span>
+</code></pre></div><p>Caveat:</p>
+<ul>
+<li>这个递归函数，不能复制，<strong>不可枚举属性</strong>以及 <code>symbol</code>类型</li>
+<li>这种方法只能针对，普通引用类型的值进行递归复制</li>
+<li>循环引用问题未解决</li>
+</ul>
+</li>
+<li>
+<p>改进的递归实现</p>
+<ul>
+<li><code>Reflect.ownKeys</code> 解决： <strong>不可枚举属性</strong>以及 <code>symbol</code>类型</li>
+<li>当属性值为，<code>Date</code>, <code>RegExp</code>，直接返回新的实例</li>
+<li>利用<code>getOwnPropertyDescriptors</code>，可以获得对象所有属性，以及其对应特性， 结合<code>create()</code>方法创建一个新对象，并继承传入对象的原型链</li>
+<li>利用<code>WeakMap</code>类型作为<code>hash table</code>，weakmap 是弱引用类型，可防止内存泄漏，用于检测循环引用： 如果存在循环引用，则返回<code>WeakMap</code>存储的值</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>isComplexDataType</span> <span class=o>=</span> <span class=p>(</span><span class=nx>obj</span><span class=p>)</span> <span class=p>=&gt;</span>
+  <span class=p>(</span><span class=k>typeof</span> <span class=nx>obj</span> <span class=o>===</span> <span class=s1>&#39;object&#39;</span> <span class=o>||</span> <span class=k>typeof</span> <span class=nx>obj</span> <span class=o>===</span> <span class=s1>&#39;function&#39;</span><span class=p>)</span> <span class=o>&amp;&amp;</span> <span class=nx>obj</span> <span class=o>!==</span> <span class=kc>null</span><span class=p>;</span>
+
+<span class=kr>const</span> <span class=nx>deepClone</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>obj</span><span class=p>,</span> <span class=nx>hash</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>WeakMap</span><span class=p>())</span> <span class=p>{</span>
+  <span class=cm>/* Date 类型，直接返回一个新的实例*/</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>obj</span><span class=p>.</span><span class=nx>constructor</span> <span class=o>===</span> <span class=nb>Date</span><span class=p>)</span> <span class=k>return</span> <span class=k>new</span> <span class=nb>Date</span><span class=p>(</span><span class=nx>obj</span><span class=p>);</span>
+
+  <span class=k>if</span> <span class=p>(</span><span class=nx>obj</span><span class=p>.</span><span class=nx>constructor</span> <span class=o>===</span> <span class=nb>RegExp</span><span class=p>)</span> <span class=k>return</span> <span class=k>new</span> <span class=nb>RegExp</span><span class=p>(</span><span class=nx>obj</span><span class=p>);</span>
+
+  <span class=cm>/*  有循环引用， 引入 weakmap*/</span>
+  <span class=k>if</span> <span class=p>(</span><span class=nx>hash</span><span class=p>.</span><span class=nx>has</span><span class=p>(</span><span class=nx>obj</span><span class=p>))</span> <span class=k>return</span> <span class=nx>hash</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=nx>obj</span><span class=p>);</span>
+
+  <span class=kd>let</span> <span class=nx>allDesc</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>getOwnPropertyDescriptors</span><span class=p>(</span><span class=nx>obj</span><span class=p>);</span>
+
+  <span class=cm>/* 遍历传入所有 键的 特征 */</span>
+  <span class=kd>let</span> <span class=nx>cloneObj</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>create</span><span class=p>(</span><span class=nb>Object</span><span class=p>.</span><span class=nx>getPrototypeOf</span><span class=p>(</span><span class=nx>obj</span><span class=p>),</span> <span class=nx>allDesc</span><span class=p>);</span>
+
+  <span class=cm>/* 继承原型链*/</span>
+  <span class=nx>hash</span><span class=p>.</span><span class=nx>set</span><span class=p>(</span><span class=nx>obj</span><span class=p>,</span> <span class=nx>cloneObj</span><span class=p>);</span>
+  <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>key</span> <span class=k>of</span> <span class=nx>Reflect</span><span class=p>.</span><span class=nx>ownKeys</span><span class=p>(</span><span class=nx>obj</span><span class=p>))</span> <span class=p>{</span>
+    <span class=nx>cloneObj</span><span class=p>[</span><span class=nx>key</span><span class=p>]</span> <span class=o>=</span>
+      <span class=nx>isComplexDataType</span><span class=p>(</span><span class=nx>obj</span><span class=p>[</span><span class=nx>key</span><span class=p>])</span> <span class=o>&amp;&amp;</span> <span class=k>typeof</span> <span class=nx>obj</span><span class=p>[</span><span class=nx>key</span><span class=p>]</span> <span class=o>!==</span> <span class=s1>&#39;function&#39;</span>
+        <span class=o>?</span> <span class=nx>deepClone</span><span class=p>(</span><span class=nx>obj</span><span class=p>[</span><span class=nx>key</span><span class=p>],</span> <span class=nx>hash</span><span class=p>)</span>
+        <span class=o>:</span> <span class=nx>obj</span><span class=p>[</span><span class=nx>key</span><span class=p>];</span>
+  <span class=p>}</span>
+  <span class=k>return</span> <span class=nx>cloneObj</span><span class=p>;</span>
+<span class=p>};</span>
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// test
+</span><span class=c1></span><span class=kd>let</span> <span class=nx>obj</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=nx>num</span><span class=o>:</span> <span class=mi>0</span><span class=p>,</span>
+  <span class=nx>str</span><span class=o>:</span> <span class=s1>&#39;&#39;</span><span class=p>,</span>
+  <span class=kr>boolean</span><span class=o>:</span> <span class=kc>true</span><span class=p>,</span>
+  <span class=nx>unf</span><span class=o>:</span> <span class=kc>undefined</span><span class=p>,</span>
+  <span class=kc>null</span><span class=o>:</span> <span class=kc>null</span><span class=p>,</span>
+  <span class=nx>obj</span><span class=o>:</span> <span class=p>{</span> <span class=nx>id</span><span class=o>:</span> <span class=mi>12345</span><span class=p>,</span> <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;Who I am&#39;</span> <span class=p>},</span>
+  <span class=nx>arr</span><span class=o>:</span> <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>],</span>
+  <span class=nx>func</span><span class=o>:</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{},</span>
+  <span class=nx>date</span><span class=o>:</span> <span class=k>new</span> <span class=nb>Date</span><span class=p>(</span><span class=mi>0</span><span class=p>),</span>
+  <span class=nx>reg</span><span class=o>:</span> <span class=k>new</span> <span class=nb>RegExp</span><span class=p>(</span><span class=s1>&#39;/123/ig&#39;</span><span class=p>),</span>
+  <span class=p>[</span><span class=nx>Symbol</span><span class=p>(</span><span class=s1>&#39;1&#39;</span><span class=p>)]</span><span class=o>:</span> <span class=mi>1</span><span class=p>,</span>
+<span class=p>};</span>
+
+<span class=nb>Object</span><span class=p>.</span><span class=nx>defineProperty</span><span class=p>(</span><span class=nx>obj</span><span class=p>,</span> <span class=s1>&#39;innumerable&#39;</span><span class=p>,</span> <span class=p>{</span> <span class=nx>enumerable</span><span class=o>:</span> <span class=kc>false</span><span class=p>,</span> <span class=nx>value</span><span class=o>:</span> <span class=s1>&#39;不可枚举属性&#39;</span> <span class=p>});</span>
+
+<span class=cm>/*  设置循环引用 */</span>
+<span class=nx>obj</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>create</span><span class=p>(</span><span class=nx>obj</span><span class=p>,</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>getOwnPropertyDescriptors</span><span class=p>(</span><span class=nx>obj</span><span class=p>));</span>
+<span class=nx>obj</span><span class=p>.</span><span class=nx>loop</span> <span class=o>=</span> <span class=nx>obj</span><span class=p>;</span>
+
+<span class=kd>let</span> <span class=nx>cloneObj</span> <span class=o>=</span> <span class=nx>deepClone</span><span class=p>(</span><span class=nx>obj</span><span class=p>);</span>
+
+<span class=nx>cloneObj</span><span class=p>.</span><span class=nx>arr</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=mi>12345</span><span class=p>);</span>
+
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;source&#39;</span><span class=p>,</span> <span class=nx>obj</span><span class=p>);</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;result&#39;</span><span class=p>,</span> <span class=nx>cloneObj</span><span class=p>);</span>
+</code></pre></div></li>
+</ol>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=https://github.com/haizlin/fe-interview/blob/master/category/history.md target=_blank rel=noopener>haizlin/fe-interview</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign target=_blank rel=noopener>Object.assign() - JavaScript | MDN</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax target=_blank rel=noopener>展开语法 - JavaScript | MDN</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat target=_blank rel=noopener>Array.prototype.concat() - JavaScript | MDN</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice target=_blank rel=noopener>Array.prototype.slice() - JavaScript | MDN</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty target=_blank rel=noopener>Object.prototype.hasOwnProperty() - JavaScript | MDN</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty target=_blank rel=noopener>Object.defineProperty() - JavaScript | MDN</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor target=_blank rel=noopener>Object.getOwnPropertyDescriptor() - JavaScript | MDN</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap target=_blank rel=noopener>WeakMap - JavaScript | MDN</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors target=_blank rel=noopener>Object.getOwnPropertyDescriptors() - JavaScript | MDN</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/frontend-137-cover.a5241d30fa3cf690a83e56d59310c4f7_hu877fc1cfdbfc30ae78fcb26bc049245c_249798_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-pSQdMPo89pCoPlbVkxDE9w==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 137</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/frontend-136-cover.463c2de98ae7f2614dafdd1c89934b50_hu82c25fa98cd4e9a8103220017be4b8cb_227181_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-Rjwt6Yrn8mFNr90ciZNLUA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 136</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/frontend-135-cover.e6c39ee3fc5483c5e08daa274468f110_hu642cd4cab85d82630eb8e1cb0f35bf61_190723_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-5sOe4/xUg8XgjaonRGjxEA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 135</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-134/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-134/frontend-134-cover.54537e5f890c0863b78dfe2fd6343cb2_huaac16ec4c470d9f2b80d6baac06ce316_329366_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-VFN+X4kMCGO3jf4v1jQ8sg==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 134</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-133/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-133/frontend-133-cover.4d433d6d59f54a13e6e6508089de401d_hua86c26ef9f95ebb3ad56849146b00ae6_303957_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-TUM9bVn1ShPm5lCAid5AHQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 133</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 -
+2022 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#tips>Tips</a>
+<ol>
+<li><a href=#深浅拷贝>深・浅拷贝</a>
+<ol>
+<li><a href=#浅拷贝>浅拷贝</a></li>
+<li><a href=#深拷贝>深拷贝</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
