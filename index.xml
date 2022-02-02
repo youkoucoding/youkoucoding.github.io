@@ -1,4 +1,86 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 01 Feb 2022 11:57:11 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 138</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/</link><pubDate>Tue, 01 Feb 2022 11:57:11 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/frontend-138-cover.jpg" alt="Featured image of post 毎日のフロントエンド 138" />&lt;h1 id="第一百三十八日">第一百三十八日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 02 Feb 2022 10:37:03 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 139</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-139/</link><pubDate>Wed, 02 Feb 2022 10:37:03 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-139/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-139/frontend-139-cover.jpg" alt="Featured image of post 毎日のフロントエンド 139" />&lt;h1 id="第一百三十九日">第一百三十九日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-让-textarea-标签中的内容原格式输出">&lt;strong>Question:&lt;/strong> 让 textarea 标签中的内容原格式输出&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>方法一： 使用 &lt;code>&amp;lt;pre&amp;gt;&lt;/code> 标签&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>方法二：使用 css &lt;code>white-space&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>white-space&lt;/code>属性指定元素内的空白怎样处理
+&lt;ul>
+&lt;li>&lt;code>normal&lt;/code> —— 默认，空白会被浏览器忽略&lt;/li>
+&lt;li>&lt;code>pre&lt;/code> —— 空白会被浏览器保留。其行为方式类似 HTML 中的&lt;code>&amp;lt;pre&amp;gt;&lt;/code>标签。&lt;/li>
+&lt;li>&lt;code>nowrap&lt;/code> —— 文本不会换行，文本会在同一行继续，直到遇到&lt;code>&amp;lt;br/&amp;gt;&lt;/code>标签为止。&lt;/li>
+&lt;li>&lt;code>pre-warp&lt;/code> —— 保留空白符序列，但正常进行换行。&lt;/li>
+&lt;li>&lt;code>pre-line&lt;/code> —— 合并空白符序列，但保留换行符&lt;/li>
+&lt;li>&lt;code>inherit&lt;/code> —— 规定应该从父元素继承 &lt;code>white-space&lt;/code> 属性的值&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;code>white-space:pre-warp&lt;/code> 输入多少空格都会输出的时候就带几个空格。&lt;/li>
+&lt;li>&lt;code>white-space:pre-line&lt;/code> 无论输入多少空格都会输出的时候就带几个空格，会合并为一个。&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-background-colortransparent-和-opacity0-的区别">&lt;strong>Question:&lt;/strong> background-color:transparent 和 opacity:0 的区别&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>background-color:transparents;&lt;/code> 对应的是背景色（background-color）设为透明；&lt;/li>
+&lt;li>&lt;code>opacity:0;&lt;/code> 对应是该元素透明度设为 0（该元素所有内容）&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-柯里化函数currying的理解">&lt;strong>Question:&lt;/strong> 柯里化函数(currying)的理解&lt;/h3>
+&lt;p>柯里化（Currying）是一种关于函数的高阶技术。它不仅被用于 JavaScript，还被用于其他编程语言。柯里化是一种函数的转换，它是指将一个函数从可调用的 &lt;code>f(a, b, c)&lt;/code> 转换为可调用的 &lt;code>f(a)(b)(c)&lt;/code>。&lt;strong>柯里化不会调用函数。它只是对函数进行转换。&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">curry&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">f&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// curry(f) 执行柯里化转换
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">f&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// 用法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">curriedSum&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">curry&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sum&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">alert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">curriedSum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// 3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>curry(func) 的结果就是一个包装器 function(a)&lt;/li>
+&lt;li>当它被像 &lt;code>curriedSum(1)&lt;/code> 这样调用时，它的参数会被保存在词法环境中，然后返回一个新的包装器 &lt;code>function(b)&lt;/code>&lt;/li>
+&lt;li>然后这个包装器被以 2 为参数调用，并且，它将该调用传递给原始的 sum 函数。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>柯里化更高级的实现，例如 lodash 库的 &lt;a class="link" href="https://lodash.com/docs/4.17.15#curry" target="_blank" rel="noopener"
+>&lt;code>_.curry&lt;/code>&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h4 id="currying-好处">currying 好处&lt;/h4>
+&lt;p>例子：&lt;/p>
+&lt;p>一个用于格式化和输出信息的日志（logging）函数 &lt;code>log(date, importance, message)&lt;/code>。在实际项目中，此类函数具有很多有用的功能，例如通过网络发送日志（log），在这儿我们仅使用 alert：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">date&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">importance&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">message&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">alert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`[&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getHours&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">:&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getMinutes&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">] [&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">importance&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">] &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">message&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nx">log&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">curry&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 柯里化之后，log 仍正常运行：
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="s1">&amp;#39;DEBUG&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;some debug&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// log(a, b, c)
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 也可以以柯里化形式运行：
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">())(&lt;/span>&lt;span class="s1">&amp;#39;DEBUG&amp;#39;&lt;/span>&lt;span class="p">)(&lt;/span>&lt;span class="s1">&amp;#39;some debug&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// log(a)(b)(c)
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// logNow 会是带有固定第一个参数的日志的偏函数
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">logNow&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;span class="c1">// 使用它
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">logNow&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;INFO&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;message&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [HH:mm] INFO message
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="summary">Summary&lt;/h4>
+&lt;p>柯里化 是一种转换，将 &lt;code>f(a,b,c)&lt;/code> 转换为可以被以 &lt;code>f(a)(b)(c)&lt;/code> 的形式进行调用。JavaScript 实现通常都保持该函数可以被正常调用，并且如果参数数量不足，则返回偏函数。&lt;/p>
+&lt;p>柯里化让我们能够更容易地获取偏函数。就像我们在日志记录示例中看到的那样，普通函数 log(date, importance, message) 在被柯里化之后，当我们调用它的时候传入一个参数（如 log(date)）或两个参数（log(date, importance)）时，它会返回偏函数。&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://zh.javascript.info/currying-partials" target="_blank" rel="noopener"
+>柯里化（Currying）&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 138</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/</link><pubDate>Tue, 01 Feb 2022 11:57:11 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-138/frontend-138-cover.jpg" alt="Featured image of post 毎日のフロントエンド 138" />&lt;h1 id="第一百三十八日">第一百三十八日&lt;/h1>
 &lt;h2 id="tips">Tips&lt;/h2>
 &lt;h3 id="深浅拷贝">深・浅拷贝&lt;/h3>
 &lt;h4 id="浅拷贝">浅拷贝&lt;/h4>
