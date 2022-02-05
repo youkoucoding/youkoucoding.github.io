@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 04 Feb 2022 15:05:53 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 141</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-141/</link><pubDate>Fri, 04 Feb 2022 15:05:53 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-141/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-141/frontend-141-cover.jpg" alt="Featured image of post 毎日のフロントエンド 141" />&lt;h1 id="第一百四十一日">第一百四十一日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 05 Feb 2022 20:35:58 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 142</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-142/</link><pubDate>Sat, 05 Feb 2022 20:35:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-142/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-142/frontend-142-cover.jpg" alt="Featured image of post 毎日のフロントエンド 142" />&lt;h1 id="第一百四十二日">第一百四十二日&lt;/h1>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-word-wrapword-break和white-space有什么区别">&lt;strong>Question:&lt;/strong> &lt;code>word-wrap&lt;/code>、&lt;code>word-break&lt;/code>和&lt;code>white-space&lt;/code>有什么区别&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>overflow-wrap&lt;/code> 是否允许浏览器再单词内进行断句&lt;/p>
+&lt;ul>
+&lt;li>normal 只允许在断字点换行 默认值&lt;/li>
+&lt;li>break-word 在长单词或这 url 地址内部进行换行&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>word-break&lt;/code> 怎么样进行单词内的断句&lt;/p>
+&lt;ul>
+&lt;li>normal 默认值&lt;/li>
+&lt;li>break-all 允许在单词内换行&lt;/li>
+&lt;li>keep-all 只能在半角空格或字符串处换行&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>white-space&lt;/code> 属性设置如何处理元素内的空白&lt;/p>
+&lt;ul>
+&lt;li>normal 默认值&lt;/li>
+&lt;li>pre 空包会被浏览器保存&lt;/li>
+&lt;li>nowrap 文本不会换行，在同一行显示，知道遇到 br 标签为止&lt;/li>
+&lt;li>pre-wrap 保留空白序列，会正常的换行&lt;/li>
+&lt;li>pre-line 合并空白序列，会保留换行符&lt;/li>
+&lt;li>inherit 应该从父元素继承 white-space 属性的值&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-promiseall">&lt;strong>Question:&lt;/strong> &lt;code>Promise.all&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>Promise.all()&lt;/code>接受一个由&lt;strong>promise 任务组成的数组&lt;/strong>，可以同时处理多个 promise 任务，当所有的任务都执行完成时，Promise.all()返回 resolve，但当有一个失败(reject)，则返回失败的信息，即使其他 promise 执行成功，也会返回失败。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>对于 &lt;code>Promise.all(arr)&lt;/code> 来说，在参数数组中所有元素都变为决定态后，然后才返回新的 promise&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/question/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow-wrap" target="_blank" rel="noopener"
+>overflow-wrap - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-break" target="_blank" rel="noopener"
+>word-break - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/white-space" target="_blank" rel="noopener"
+>white-space - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all" target="_blank" rel="noopener"
+>Promise.all() - JavaScript | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 141</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-141/</link><pubDate>Fri, 04 Feb 2022 15:05:53 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-141/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-141/frontend-141-cover.jpg" alt="Featured image of post 毎日のフロントエンド 141" />&lt;h1 id="第一百四十一日">第一百四十一日&lt;/h1>
 &lt;h2 id="javascript">JavaScript&lt;/h2>
 &lt;h3 id="question-一个洗扑克牌的方法">&lt;strong>Question:&lt;/strong> 一个洗扑克牌的方法&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">Shuffle&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span>
