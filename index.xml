@@ -1,4 +1,194 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 05 Feb 2022 20:35:58 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 142</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-142/</link><pubDate>Sat, 05 Feb 2022 20:35:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-142/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-142/frontend-142-cover.jpg" alt="Featured image of post 毎日のフロントエンド 142" />&lt;h1 id="第一百四十二日">第一百四十二日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 06 Feb 2022 21:32:13 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 143</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-143/</link><pubDate>Sun, 06 Feb 2022 21:32:13 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-143/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-143/frontend-143-cover.jpg" alt="Featured image of post 毎日のフロントエンド 143" />&lt;h1 id="第一百四十三日">第一百四十三日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-pre-和-code-标签的区别">&lt;strong>Question:&lt;/strong> &lt;code>&amp;lt;pre&amp;gt;&lt;/code> 和 &lt;code>&amp;lt;code&amp;gt;&lt;/code> 标签的区别&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>pre&lt;/code>标签是块级元素，&lt;code>code&lt;/code>标签是行内元素&lt;/li>
+&lt;li>&lt;code>pre&lt;/code>的内容保留换行符和连续空格，&lt;code>code&lt;/code>的内容不保留&lt;/li>
+&lt;li>单行代码用&lt;code>code&lt;/code>，多行代码用&lt;code>pre&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-自定义-radio-按钮的样式">&lt;strong>Question:&lt;/strong> 自定义 radio 按钮的样式&lt;/h3>
+&lt;p>&lt;code>input[type=&amp;quot;radio&amp;quot;]&lt;/code>&lt;/p>
+&lt;h4 id="控件与-label-并列">控件与 label 并列&lt;/h4>
+&lt;ul>
+&lt;li>为&lt;code>&amp;lt;label&amp;gt;&lt;/code>元素添加生成性内容（伪元素），用其来设置单选按钮的样式&lt;/li>
+&lt;li>把真正的单选按钮隐藏起来&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;choose-box&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;radio&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;yes&amp;#34;&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;choose&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">label&lt;/span> &lt;span class="na">for&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;yes&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>是&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">label&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;choose-box&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;radio&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;no&amp;#34;&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;choose&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">label&lt;/span> &lt;span class="na">for&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;no&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>否&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">label&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
+&lt;li>给&lt;code>label&lt;/code>标签添加伪类, 选中时使用&lt;code>background-clip&lt;/code>裁剪内容时，&lt;code>padding&lt;/code>会让内容撑大，故&lt;code>width&lt;/code>、&lt;code>height&lt;/code>要相应缩小&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">choose-box&lt;/span> &lt;span class="nt">input&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;radio&amp;#39;&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nt">label&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">before&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">inline-block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mh">#0069ab&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">margin-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">choose-box&lt;/span> &lt;span class="nt">input&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;radio&amp;#39;&lt;/span>&lt;span class="o">]&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">checked&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nt">label&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">before&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background-clip&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">content-box&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#0069ab&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>隐藏原始按钮&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">choose-box&lt;/span> &lt;span class="nt">input&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;radio&amp;#39;&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">absolute&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">clip&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rect&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>让按钮和文字水平居中对齐&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">choose-box&lt;/span> &lt;span class="nt">label&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">inline-flex&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">flex-direction&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">row&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">align-items&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="控件置于-label-内">控件置于 label 内&lt;/h4>
+&lt;blockquote>
+&lt;p>input 嵌套在 label 标签内，不是并行的关系了，给 label 添加伪类用不了 input 标签的 checked 属性。故考虑直接给 input 标签添加伪类来实现&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">label&lt;/span> &lt;span class="na">for&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;yes&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;choose-box&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;radio&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;yes&amp;#34;&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;choose&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>是&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">label&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">label&lt;/span> &lt;span class="na">for&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;no&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;choose-box&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;radio&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;no&amp;#34;&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;choose&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>否&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">label&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>给 input 标签添加伪类，不能隐藏原始的 input 的按钮，也不能使用 display:none; 以及 opacity:0; 等方式隐藏，会直接隐藏到 input 的伪类的展示，可以通过&lt;strong>设置 &lt;code>input&lt;/code> 标签的&lt;code>width:0; height:0&lt;/code> 来实现&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="p">.&lt;/span>&lt;span class="nc">choose-box&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">padding-left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">relative&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">inline-block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">40&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">40&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">choose-box&lt;/span> &lt;span class="nt">input&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;radio&amp;#39;&lt;/span>&lt;span class="o">]&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">before&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">inline-block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mh">#0069ab&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">margin-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">absolute&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">choose-box&lt;/span> &lt;span class="nt">input&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;radio&amp;#39;&lt;/span>&lt;span class="o">]&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">checked&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">before&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">background-clip&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">content-box&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mh">#0069ab&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">.&lt;/span>&lt;span class="nc">choose-box&lt;/span> &lt;span class="nt">input&lt;/span>&lt;span class="o">[&lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;radio&amp;#39;&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-实现-convert-方法把原始-list-转换成树形结构要求尽可能降低时间复杂度">&lt;strong>Question:&lt;/strong> 实现 convert 方法，把原始 list 转换成树形结构，要求尽可能降低时间复杂度&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 原始 list 如下
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">list&lt;/span> &lt;span class="o">=&lt;/span>&lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s1">&amp;#39;部门A&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s1">&amp;#39;部门B&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s1">&amp;#39;部门C&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s1">&amp;#39;部门D&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s1">&amp;#39;部门E&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">6&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s1">&amp;#39;部门F&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s1">&amp;#39;部门G&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s1">&amp;#39;部门H&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="p">];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">convert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">list&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">...);&lt;/span>
+&lt;span class="c1">// 转换后的结果如下
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门A&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">children&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门C&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">children&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门F&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">16&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门L&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门D&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">children&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;span class="p">{&lt;/span>
+&lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;部门H&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">parentId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">4&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">]&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="err">···&lt;/span>
+&lt;span class="p">];&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// O(n)
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">convert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">list&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">res&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">map&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">res&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">((&lt;/span>&lt;span class="nx">res&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="nx">res&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="p">{});&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">item&lt;/span> &lt;span class="k">of&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parentId&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">res&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">continue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parentId&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">parent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">parent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">children&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">parent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">children&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">parent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">children&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">res&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">convert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">list&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">topid&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">map&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="nx">list&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">parentId&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">parentId&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">topid&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">result&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">parentId&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">children&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">children&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">map&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">null&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">result&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/question/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.jianshu.com/p/fd41c203599e" target="_blank" rel="noopener"
+>自定义原生单选按钮 input[type=&amp;ldquo;radio&amp;rdquo;]样式的两种方式&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 142</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-142/</link><pubDate>Sat, 05 Feb 2022 20:35:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-142/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-142/frontend-142-cover.jpg" alt="Featured image of post 毎日のフロントエンド 142" />&lt;h1 id="第一百四十二日">第一百四十二日&lt;/h1>
 &lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="question-word-wrapword-break和white-space有什么区别">&lt;strong>Question:&lt;/strong> &lt;code>word-wrap&lt;/code>、&lt;code>word-break&lt;/code>和&lt;code>white-space&lt;/code>有什么区别&lt;/h3>
 &lt;ol>
