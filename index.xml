@@ -1,4 +1,157 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 06 Feb 2022 21:32:13 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 143</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-143/</link><pubDate>Sun, 06 Feb 2022 21:32:13 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-143/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-143/frontend-143-cover.jpg" alt="Featured image of post 毎日のフロントエンド 143" />&lt;h1 id="第一百四十三日">第一百四十三日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 07 Feb 2022 11:54:29 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 144</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-144/</link><pubDate>Mon, 07 Feb 2022 11:54:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-144/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-144/frontend-144-cover.jpg" alt="Featured image of post 毎日のフロントエンド 144" />&lt;h1 id="第一百四十四日">第一百四十四日&lt;/h1>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-background-size-background-origin-background-clip">&lt;strong>Question:&lt;/strong> &lt;code>background-size&lt;/code> &lt;code>background-origin&lt;/code> &lt;code>background-clip&lt;/code>&lt;/h3>
+&lt;h4 id="background-size">&lt;code>background-size&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>控制背景图片大小&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>&lt;code>background-size: cover&lt;/code>
+&lt;ul>
+&lt;li>缩放背景图片以完全覆盖背景区，可能背景图片部分看不见。和 contain 值相反，cover 值尽可能大的缩放背景图像并&lt;strong>保持图像的宽高比例&lt;/strong>（图像不会被压扁）。该背景图以它的全部宽或者高覆盖所在容器。当容器和背景图大小不同时，背景图的 左/右 或者 上/下 部分会&lt;strong>被裁剪&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>background-size: contain&lt;/code>
+&lt;ul>
+&lt;li>缩放背景图片以完全装入背景区，可能背景区部分空白。contain 尽可能的缩放背景并保持图像的宽高比例（图像不会被压缩）。该背景图会填充所在的容器。当背景图和容器的大小的不同时，容器的空白区域（上/下或者左/右）会显示&lt;strong>由 background-color 设置的背景颜色&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h4 id="background-origin">&lt;code>background-origin&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>规定了指定背景图片 background-image 属性的原点位置的背景相对区域、控制图片平铺位置&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>&lt;code>background-origin: content-box&lt;/code>
+&lt;ul>
+&lt;li>背景图从内容开始平铺，而不从 padding 开始&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>background-origin: border-box&lt;/code>
+&lt;ul>
+&lt;li>背景图从 border 开始平铺&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>padding-box&lt;/code> 默认值&lt;/li>
+&lt;/ol>
+&lt;h4 id="background-clip">&lt;code>background-clip&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>控制图片的平铺后裁切掉只展示哪些区域&lt;/li>
+&lt;li>&lt;code>background-origin&lt;/code>控制的是平铺图片的起点，&lt;code>background-clip&lt;/code>控制的是平铺图片后裁切要展示哪些区域&lt;/li>
+&lt;li>&lt;code>background-clip&lt;/code> 会影响到是图片和颜色，而 &lt;code>background-origin&lt;/code> 不能影响颜色，只能控制图片&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>&lt;code>background-clip: padding-box&lt;/code>
+&lt;ul>
+&lt;li>从 padding 到 content 的部分才展示&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>background-clip: content-box&lt;/code>
+&lt;ul>
+&lt;li>border 和 padding 不会展示出背景图和颜色&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>border-box&lt;/code>默认值&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="tips-数组方法-改变自身和不改变自身">Tips: 数组方法 (改变自身和不改变自身)&lt;/h3>
+&lt;h4 id="改变自身的方法">改变自身的方法&lt;/h4>
+&lt;p>基于 ES6，会改变自身值的方法一共有 9 个，分别为 &lt;code>pop&lt;/code>、&lt;code>push&lt;/code>、&lt;code>reverse&lt;/code>、&lt;code>shift&lt;/code>、&lt;code>sort&lt;/code>、&lt;code>splice&lt;/code>、&lt;code>unshift&lt;/code>，以及两个 ES6 新增的方法 &lt;code>copyWithin&lt;/code> 和 &lt;code>fill&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// pop方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;cat&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;dog&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;cow&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;chicken&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;mouse&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">item&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">pop&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [&amp;#34;cat&amp;#34;, &amp;#34;dog&amp;#34;, &amp;#34;cow&amp;#34;, &amp;#34;chicken&amp;#34;]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// mouse
+&lt;/span>&lt;span class="c1">// push方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;football&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;basketball&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;badminton&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;golfball&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// [&amp;#34;football&amp;#34;, &amp;#34;basketball&amp;#34;, &amp;#34;badminton&amp;#34;, &amp;#34;golfball&amp;#34;]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 4
+&lt;/span>&lt;span class="c1">// reverse方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">array2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reverse&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [5,4,3,2,1]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array2&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;span class="c1">// shift方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">item&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">shift&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [2,3,4,5]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 1
+&lt;/span>&lt;span class="c1">// unshift方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;red&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;green&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;blue&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">length&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">unshift&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;yellow&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [&amp;#34;yellow&amp;#34;, &amp;#34;red&amp;#34;, &amp;#34;green&amp;#34;, &amp;#34;blue&amp;#34;]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 4
+&lt;/span>&lt;span class="c1">// sort方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;apple&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;Boy&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;Cat&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;dog&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">array2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">sort&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [&amp;#34;Boy&amp;#34;, &amp;#34;Cat&amp;#34;, &amp;#34;apple&amp;#34;, &amp;#34;dog&amp;#34;]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array2&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;span class="c1">// splice方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;apple&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;boy&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">splices&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">splice&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [&amp;#34;apple&amp;#34;]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">splices&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [&amp;#34;boy&amp;#34;]
+&lt;/span>&lt;span class="c1">// copyWithin方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">array2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">copyWithin&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">array2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">array2&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// true [4, 5, 3, 4, 5]
+&lt;/span>&lt;span class="c1">// fill方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">array2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fill&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">array2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">array2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// true [10, 10, 10, 4, 5], 可见数组区间[0,3]的元素全部替换为10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="不改变自身的方法">不改变自身的方法&lt;/h4>
+&lt;ul>
+&lt;li>基于 ES7，不会改变自身的方法也有 9 个，分别为 &lt;code>concat&lt;/code>、&lt;code>join&lt;/code>、&lt;code>slice&lt;/code>、&lt;code>toString&lt;/code>、&lt;code>toLocaleString&lt;/code>、&lt;code>indexOf&lt;/code>、&lt;code>lastIndexOf&lt;/code>、未形成标准的 toSource，以及 ES7 新增的方法 &lt;code>includes&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// concat方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">array2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">concat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array2&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [1, 2, 3, 4, 5, 6, 7, 8, 9]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [1, 2, 3], 可见原数组并未被修改
+&lt;/span>&lt;span class="c1">// join方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;We&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;are&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;huaman being&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">());&lt;/span> &lt;span class="c1">// &amp;#34;We,are,human being&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;+&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// &amp;#34;We+are+human being&amp;#34;
+&lt;/span>&lt;span class="c1">// slice方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;one&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;two&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;three&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;four&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;five&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">());&lt;/span> &lt;span class="c1">// [&amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;, &amp;#34;three&amp;#34;,&amp;#34;four&amp;#34;, &amp;#34;five&amp;#34;]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// [&amp;#34;three&amp;#34;]
+&lt;/span>&lt;span class="c1">// toString方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;Jan&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;Feb&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;Mar&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;Apr&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Jan,Feb,Mar,Apr
+&lt;/span>&lt;span class="c1">// tolocalString方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;zz&amp;#39;&lt;/span> &lt;span class="p">},&lt;/span> &lt;span class="mi">123&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;abc&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">()];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">str&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toLocaleString&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">str&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [object Object],123,abc,2016/1/5 下午1:06:23
+&lt;/span>&lt;span class="c1">// indexOf方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;abc&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;def&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;ghi&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;123&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">indexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;def&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// 1
+&lt;/span>&lt;span class="c1">// includes方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">includes&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">includes&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="kc">NaN&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">includes&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">NaN&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;strong>slice 不改变自身，而 splice 会改变自身&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/question/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-size" target="_blank" rel="noopener"
+>background-size - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-origin" target="_blank" rel="noopener"
+>background-origin - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip" target="_blank" rel="noopener"
+>background-clip - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844904094910398477" target="_blank" rel="noopener"
+>理解 background-origin、background-clip、background-size&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 143</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-143/</link><pubDate>Sun, 06 Feb 2022 21:32:13 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-143/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-143/frontend-143-cover.jpg" alt="Featured image of post 毎日のフロントエンド 143" />&lt;h1 id="第一百四十三日">第一百四十三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-pre-和-code-标签的区别">&lt;strong>Question:&lt;/strong> &lt;code>&amp;lt;pre&amp;gt;&lt;/code> 和 &lt;code>&amp;lt;code&amp;gt;&lt;/code> 标签的区别&lt;/h3>
 &lt;ul>
