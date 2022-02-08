@@ -1,4 +1,206 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 07 Feb 2022 11:54:29 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 144</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-144/</link><pubDate>Mon, 07 Feb 2022 11:54:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-144/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-144/frontend-144-cover.jpg" alt="Featured image of post 毎日のフロントエンド 144" />&lt;h1 id="第一百四十四日">第一百四十四日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 08 Feb 2022 20:47:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 145</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/</link><pubDate>Tue, 08 Feb 2022 20:47:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/frontend-145-cover.jpg" alt="Featured image of post 毎日のフロントエンド 145" />&lt;h1 id="第一百四十四日">第一百四十四日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-表单属性typehidden">&lt;strong>Question:&lt;/strong> 表单属性&lt;code>type=&amp;quot;hidden&amp;quot;&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;input type=&amp;quot;hidden&amp;quot;&amp;gt;&lt;/code>
+&lt;ul>
+&lt;li>&amp;ldquo;hidden&amp;rdquo; 类型的 &lt;code>&amp;lt;input&amp;gt;&lt;/code> 元素允许 Web 开发者存放一些用户不可见、不可改的数据，在用户提交表单时，这些数据会一并发送出。比如，正被请求或编辑的内容的 ID，或是一个唯一的安全令牌。这些隐藏的 &lt;code>&amp;lt;input&amp;gt;&lt;/code>元素在渲染完成的页面中完全不可见，而且&lt;strong>没有方法可以使它重新变为可见&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ol>
+&lt;li>隐藏域在页面中对于用户是不可见的，在表单中插入隐藏域的目的在于收集或发送信息，以利于被处理表单的程序所使用。浏览者单击发送按钮发送表单的时候，隐藏域的信息也被一起发送到服务器&lt;/li>
+&lt;li>有些时候要给用户一信息，在提交表单时一同提交,以确定用户身份，如 sessionkey 等．同样也可以用 cookie 实现，但使用隐藏域就简单的多了．兼容性好，且可以避免被禁用&lt;code>cookies&lt;/code>&lt;/li>
+&lt;li>一个 form 里有多个提交按钮，怎样使程序能够分清楚到底用户是按那一个按钮提交上来的呢？ 这时可以添加隐藏域，然后在每一个按钮处加上 οnclick=&amp;ldquo;document.form.command.value=&amp;ldquo;xx&amp;rdquo;， 然后接到数据后先检查 command 的值就会知道用户是按的那个按钮提交上来的&lt;/li>
+&lt;li>一个网页中有多个 form，我们知道多个 form 是不能同时提交的，但有时这些 form 确实相互作用，我们就可以在 form 中添加隐藏域来使它们联系起来&lt;/li>
+&lt;/ol>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="question-原生-math-的方法有哪些">&lt;strong>Question:&lt;/strong> 原生 Math 的方法有哪些&lt;/h3>
+&lt;p>常用方法&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">abs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// num绝对值
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// num向上取整
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">floor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// num向下取整
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">max&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">num2&lt;/span> &lt;span class="p">...)&lt;/span> &lt;span class="c1">// 取较大值
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">min&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">num2&lt;/span> &lt;span class="p">...)&lt;/span> &lt;span class="c1">// 取较小值
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">pow&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">num2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// num1的num2次幂
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">random&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1">// 0-1间伪随机数
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Math&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">num&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// num的平方根
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="数组遍历的方法">数组遍历的方法&lt;/h3>
+&lt;ul>
+&lt;li>基于 ES6，不会改变自身的遍历方法一共有 12 个，分别为 &lt;code>forEach&lt;/code>、&lt;code>every&lt;/code>、&lt;code>some&lt;/code>、&lt;code>filter&lt;/code>、&lt;code>map&lt;/code>、&lt;code>reduce&lt;/code>、&lt;code>reduceRight&lt;/code>，以及 ES6 新增的方法 &lt;code>entries&lt;/code>、&lt;code>find&lt;/code>、&lt;code>findIndex&lt;/code>、&lt;code>keys&lt;/code>、&lt;code>values&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// forEach方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;cc&amp;#39;&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="c1">// callback 参数顺序 1.数组当前项的值 2.数组当前项的索引 3.数组对象本身
+&lt;/span>&lt;span class="c1">// forEach 不会直接改变调用它的对象，但是那个对象可能会被 callback 函数改变
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">sReturn&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">array&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">index&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// cc被打印了三次, this指向obj
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">},&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [1, 3, 5]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">sReturn&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// undefined, 可见返回值为undefined
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// every方法
+&lt;/span>&lt;span class="c1">// 测试一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个布尔值。
+&lt;/span>&lt;span class="c1">// every 不会改变原数组。
+&lt;/span>&lt;span class="c1">// 若传入一个空数组，无论如何都会返回 true
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">o&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">25&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">length&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">bool&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">every&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="nx">o&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">value&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="nx">o&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">bool&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// true 如果回调函数的每一次返回都为 truthy 值，返回 true ，否则返回 false
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// some方法
+&lt;/span>&lt;span class="c1">// 测试数组中是不是至少有1个元素通过了被提供的函数测试。它返回的是一个Boolean类型的值。
+&lt;/span>&lt;span class="c1">// 如果用一个空数组进行测试，在任何情况下它返回的都是false。
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">18&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">35&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">80&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">isExist&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">some&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">value&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">isExist&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// true 至少一个元素通过回调函数的测试就会返回true；所有元素都没有通过回调函数的测试返回值才会为false。
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// map 方法
+&lt;/span>&lt;span class="c1">// 创建一个新数组，其结果是该数组中的每个元素是调用一次提供的函数后的返回值
+&lt;/span>&lt;span class="c1">// callback 函数会被自动传入三个参数：数组元素，元素索引，原数组本身。
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">18&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">35&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">80&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">item&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [19, 10, 11, 36, 81] 一个由原数组每个元素执行回调函数的结果组成的新数组。
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// filter 方法
+&lt;/span>&lt;span class="c1">// 创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">18&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">35&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">80&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">array2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">value&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array2&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [35, 80] 一个新的、由通过测试的元素组成的数组，如果没有任何数组元素通过测试，则返回空数组。
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// reduce方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">s&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">previousValue&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">previousValue&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 24
+&lt;/span>&lt;span class="c1">// ES6写法更加简洁
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">p&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">p&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 24
+&lt;/span>&lt;span class="c1">// reduceRight方法 (和reduce的区别就是从后往前累计)
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduceRight&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">p&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">p&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 24
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// entries方法
+&lt;/span>&lt;span class="c1">// 返回一个新的Array Iterator对象，该对象包含数组中每个索引的键/值对
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;b&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;c&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">iterator&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">entries&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">iterator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">next&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [0, &amp;#34;a&amp;#34;]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">iterator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">next&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [1, &amp;#34;b&amp;#34;]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">iterator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">next&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [2, &amp;#34;c&amp;#34;]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">iterator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">next&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// undefined, 迭代器处于数组末尾时, 再迭代就会返回undefined
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// find &amp;amp; findIndex方法
+&lt;/span>&lt;span class="c1">// find 返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined。
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">7&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">9&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">f&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">value&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="mi">2&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 返回偶数
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">f2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">value&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">20&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 返回大于20的数
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">find&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">f&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// 8
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">find&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">f2&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// undefined
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">findIndex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">f&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// 4
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">findIndex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">f2&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// -1
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// keys方法
+&lt;/span>&lt;span class="c1">// 返回一个包含数组中每个索引键的Array Iterator对象
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">[...&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">keys&lt;/span>&lt;span class="p">()];&lt;/span> &lt;span class="c1">// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">[...&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">keys&lt;/span>&lt;span class="p">()];&lt;/span> &lt;span class="c1">// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// values方法
+&lt;/span>&lt;span class="c1">// 返回一个新的 Array Iterator 对象，该对象包含数组每个索引的值
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;abc&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;xyz&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">iterator&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">values&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">iterator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">next&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//abc
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">iterator&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">next&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//xyz
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">value&lt;/span> &lt;span class="k">of&lt;/span> &lt;span class="nx">iterator&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>reduce&lt;/code>
+&lt;ol>
+&lt;li>&lt;code>callback&lt;/code>（一个在数组的每一项中调用的函数，接受四个参数）：
+&lt;ul>
+&lt;li>previousValue（上一次调用回调函数时的返回值，或者初始值）&lt;/li>
+&lt;li>currentValue（当前正在处理的数组元素）&lt;/li>
+&lt;li>currentIndex（当前正在处理的数组元素下标）&lt;/li>
+&lt;li>array（调用 reduce() 方法的数组）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>initialValue&lt;/code>（可选的初始值，作为第一次调用回调函数时传给 previousValue 的值）&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="cm">/* 题目：数组 arr = [1,2,3,4] 求数组的和：*/&lt;/span>
+&lt;span class="c1">// 第一种方法：
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">sum&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">sum&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">e&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">});&lt;/span> &lt;span class="c1">// sum = 10
+&lt;/span>&lt;span class="c1">// 第二种方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">sum&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">sum&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="c1">// 第三种方法
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">pre&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">pre&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 会直接返回最后累加的结果
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ul>
+&lt;li>var arr = [ {name: &amp;lsquo;brick1&amp;rsquo;}, {name: &amp;lsquo;brick2&amp;rsquo;}, {name: &amp;lsquo;brick3&amp;rsquo;} ] 希望最后返回到 arr 里面每个对象的 name 拼接数据为 &amp;lsquo;brick1, brick2 &amp;amp; brick3&amp;rsquo;&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;one&amp;#39;&lt;/span> &lt;span class="p">},&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;two&amp;#39;&lt;/span> &lt;span class="p">},&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;three&amp;#39;&lt;/span> &lt;span class="p">}];&lt;/span>
+&lt;span class="nx">arr&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">prev&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">current&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">index&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">index&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">current&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">index&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">prev&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39; &amp;amp; &amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">current&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">prev&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s1">&amp;#39;, &amp;#39;&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">current&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// 返回结果 &amp;#34;one, two &amp;amp; three&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 322;
+flex-basis: 773px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/array_methods.png" data-size="2212x686">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/array_methods.png"
+width="2212"
+height="686"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/array_methods_hued533b0fee1c5b63505dc40e804c822f_416224_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/array_methods_hued533b0fee1c5b63505dc40e804c822f_416224_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="array methods">
+&lt;/a>
+&lt;figcaption>array methods&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/question/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank" rel="noopener"
+>Math - JavaScript | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 144</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-144/</link><pubDate>Mon, 07 Feb 2022 11:54:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-144/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-144/frontend-144-cover.jpg" alt="Featured image of post 毎日のフロントエンド 144" />&lt;h1 id="第一百四十四日">第一百四十四日&lt;/h1>
 &lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="question-background-size-background-origin-background-clip">&lt;strong>Question:&lt;/strong> &lt;code>background-size&lt;/code> &lt;code>background-origin&lt;/code> &lt;code>background-clip&lt;/code>&lt;/h3>
 &lt;h4 id="background-size">&lt;code>background-size&lt;/code>&lt;/h4>
