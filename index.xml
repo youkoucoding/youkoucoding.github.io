@@ -1,4 +1,182 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 08 Feb 2022 20:47:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 145</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/</link><pubDate>Tue, 08 Feb 2022 20:47:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/frontend-145-cover.jpg" alt="Featured image of post 毎日のフロントエンド 145" />&lt;h1 id="第一百四十四日">第一百四十四日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 09 Feb 2022 11:17:27 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 146</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/</link><pubDate>Wed, 09 Feb 2022 11:17:27 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/frontend-146-cover.jpg" alt="Featured image of post 毎日のフロントエンド 146" />&lt;h1 id="第一百四十六日">第一百四十六日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-viewport-是什么在什么时候下使用">&lt;strong>Question:&lt;/strong> &lt;code>viewport&lt;/code> 是什么？在什么时候下使用&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>viewport&lt;/code> 是用户网页的可视区域&lt;/li>
+&lt;li>多用于移动端，也可以用在支持类似“固定到边缘”等特性的桌面浏览器&lt;/li>
+&lt;li>移动端的浏览器是把页面放在一个虚拟的&amp;quot;窗口&amp;quot;（viewport）中，通常这个虚拟的&amp;quot;窗口&amp;quot;（viewport）比物理屏幕宽，这样就不用把每个网页挤到很小的窗口中（这样会破坏没有针对手机浏览器优化的网页的布局），用户可以通过平移和缩放来看网页的不同部分&lt;/li>
+&lt;li>visual viewport 尺寸所对应的并不是指屏幕区域里的物理像素，而是 CSS 像素。并且它所包含的 CSS 像素的数量也是随着用户缩放而有所改变&lt;/li>
+&lt;li>在 head 加入这行，把默认的 layout viewport 的宽度设为移动设备的屏幕宽度，也就是把当前的 viewport 宽度设置为设备物理屏幕的宽度，实现全屏的效果&lt;/li>
+&lt;li>&lt;code>&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no&amp;quot;&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="类数组">类数组&lt;/h3>
+&lt;ol>
+&lt;li>函数里面的参数对象 &lt;code>arguments&lt;/code>&lt;/li>
+&lt;li>用 getElementsByTagName/ClassName/Name 获得的 &lt;code>HTMLCollection&lt;/code>&lt;/li>
+&lt;li>用 querySelector 获得的 &lt;code>NodeList&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h4 id="arguments对象">&lt;code>arguments&lt;/code>对象&lt;/h4>
+&lt;ul>
+&lt;li>只定义在函数体中&lt;/li>
+&lt;li>有一个 length 属性&lt;/li>
+&lt;li>callee 属性(此函数自身)&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">foo&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">age&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">sex&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// [Arguments] { &amp;#39;0&amp;#39;: &amp;#39;jack&amp;#39;, &amp;#39;1&amp;#39;: &amp;#39;18&amp;#39;, &amp;#39;2&amp;#39;: &amp;#39;male&amp;#39; }
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// object
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// [object Arguments]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;span class="nx">foo&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;jack&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;18&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;male&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ul>
+&lt;li>&lt;strong>遍历参数操作&lt;/strong>
+&lt;ul>
+&lt;li>在函数内部可以直接获取 arguments 这个类数组的值，那么也可以对于参数进行一些操作&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="kd">function&lt;/span> &lt;span class="nx">add&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">sum&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">len&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">len&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;span class="nx">sum&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">sum&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">add&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1">// 0
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// 1
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="err">，&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1">// 3
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;strong>定义链接字符串函数&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 函数唯一正式声明了的参数是一个字符串，该参数指定一个字符作为衔接点来连接字符串
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">myConcat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">separa&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">join&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">separa&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">myConcat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;, &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;red&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;orange&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;blue&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// &amp;#34;red, orange, blue&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">myConcat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;; &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;elephant&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;lion&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;snake&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// &amp;#34;elephant; lion; snake&amp;#34;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">myConcat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;. &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;one&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;two&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;three&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;four&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;five&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// &amp;#34;one. two. three. four. five&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;strong>传递参数使用&lt;/strong>
+&lt;ul>
+&lt;li>可以借助 arguments 将参数从一个函数传递到另一个函数&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 通过在 foo 函数内部调用 apply 方法，用 foo 函数的参数传递给 bar 函数，这样就实现了借用参数的妙用
+&lt;/span>&lt;span class="c1">// 使用 apply 将 foo 的参数传递给 bar
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">foo&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">bar&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">bar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">c&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">c&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">foo&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//1 2 3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="htmlcollection">&lt;code>HTMLCollection&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>HTML DOM 对象的一个接口，这个接口包含了获取到的 &lt;strong>DOM 元素集合&lt;/strong>，返回的类型是类数组对象，如果用 typeof 来判断的话，它返回的是 &amp;lsquo;object&amp;rsquo;。它是及时更新的，当文档中的 DOM 变化时，它也会随之变化, 自动更新。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">elem1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">elem2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// document.forms 是一个 HTMLCollection
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">elem1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forms&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">elem2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forms&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">elem1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">elem2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">elem1&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// object
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">elem1&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// [object HTMLFormElement]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="nodelist">&lt;code>NodeList&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>NodeList 对象是&lt;strong>节点的集合&lt;/strong>，通常是由 &lt;code>querySlector&lt;/code> 返回的。NodeList 不是一个数组，也是一种类数组。虽然 NodeList 不是一个数组，但是&lt;strong>可以使用 &lt;code>for...of&lt;/code>(values) 来迭代&lt;/strong>。在一些情况下，NodeList 是一个&lt;strong>实时集合&lt;/strong>，也就是说，如果文档中的节点树发生变化，NodeList 也会随之变化。我们还是利用代码来理解一下 Nodelist 这种类数组。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">list&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelectorAll&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;input[type=checkbox]&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">checkbox&lt;/span> &lt;span class="k">of&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">checkbox&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">checked&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">list&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">list&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// object
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">list&lt;/span>&lt;span class="p">));&lt;/span> &lt;span class="c1">// [object NodeList]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="类数组转换成数组">类数组转换成数组&lt;/h4>
+&lt;ol>
+&lt;li>类数组借用数组方法转数组
+&lt;ul>
+&lt;li>类数组因为不是真正的数组，所以没有数组类型上自带的那些方法&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">arrayLike&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="mi">0&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;java&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="mi">1&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;script&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nx">length&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="c1">// 借用 array.push 为此对像添加值
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLike&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;jack&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;lily&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">arrayLike&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// &amp;#39;object&amp;#39;
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arrayLike&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// {0: &amp;#34;java&amp;#34;, 1: &amp;#34;script&amp;#34;, 2: &amp;#34;jack&amp;#34;, 3: &amp;#34;lily&amp;#34;, length: 4}
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">slice&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// let args = [].slice.call(arguments); // 这样写也是一样效果
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">sum&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">sum&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 3
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">concat&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">([],&lt;/span> &lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">sum&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">sum&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ol start="2">
+&lt;li>ES6 的方法转数组
+&lt;ul>
+&lt;li>ES6 新增的 &lt;strong>&lt;code>Array.from&lt;/code>&lt;/strong> 方法以及&lt;strong>展开运算符的方法&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">sum&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">sum&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 3
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">let&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[...&lt;/span>&lt;span class="nx">arguments&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">sum&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">sum&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 3
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">sum&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">sum&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">sum&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nx">cur&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 316;
+flex-basis: 758px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/arrayLike.png" data-size="1492x472">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/arrayLike.png"
+width="1492"
+height="472"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/arrayLike_hu1072fb5a60a682281e41e1170ef4afde_163647_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/arrayLike_hu1072fb5a60a682281e41e1170ef4afde_163647_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="array like">
+&lt;/a>
+&lt;figcaption>array like&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://muyiy.cn/question/" target="_blank" rel="noopener"
+>前端进阶&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 145</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/</link><pubDate>Tue, 08 Feb 2022 20:47:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/frontend-145-cover.jpg" alt="Featured image of post 毎日のフロントエンド 145" />&lt;h1 id="第一百四十五日">第一百四十五日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-表单属性typehidden">&lt;strong>Question:&lt;/strong> 表单属性&lt;code>type=&amp;quot;hidden&amp;quot;&lt;/code>&lt;/h3>
 &lt;ul>
