@@ -1,0 +1,326 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 147</title>
+<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  147">
+<meta property="og:description" content="frontend 每日一练">
+<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2022-02-10T12:56:13+09:00"><meta property="article:modified_time" content="2022-02-10T12:56:13+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/frontend-147-cover.jpg">
+<meta name=twitter:title content="毎日のフロントエンド  147">
+<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/frontend-147-cover.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/frontend-147-cover_huf8b323232ba975938502496fd4982152_211812_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/frontend-147-cover_huf8b323232ba975938502496fd4982152_211812_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/frontend-147-cover_huf8b323232ba975938502496fd4982152_211812_1600x0_resize_q75_box.jpg 1600w" width=800 height=510 loading=lazy alt="Featured image of post 毎日のフロントエンド  147">
+</a>
+</div>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/html/>
+HTML
+</a>
+<a href=/categories/css/>
+CSS
+</a>
+<a href=/categories/tips/>
+Tips
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/>毎日のフロントエンド 147</a>
+</h2>
+<h3 class=article-subtitle>
+frontend 每日一练
+</h3>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Feb 10, 2022</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 2 分钟
+</time>
+</div>
+</footer>
+</div>
+</header>
+<section class=article-content>
+<h1 id=第一百四十六日>第一百四十六日</h1>
+<h2 id=html>HTML</h2>
+<h3 id=question-本地存储的生命周期><strong>Question:</strong> 本地存储的生命周期</h3>
+<ul>
+<li><code>cookie</code>: expire 和 max-age 都能控制数据的存储时间。expire 是一个绝对的过期时间，max-age 是文档被访问之后的存活时间（是相对时间）。默认是 session (一次会话)</li>
+<li><code>sessionStorage</code>: 当会话被关闭后（浏览器、标签页被关闭），就会被清除。与 localStorage 用法一样</li>
+<li><code>localStorage</code>: 除非被主动清除，不然永久储存在浏览器中</li>
+<li><code>IndexedDB</code>: 没有过期时间，除非主动清除</li>
+</ul>
+<h2 id=css>CSS</h2>
+<h3 id=question-background-attachment属性><strong>Question:</strong> <code>background-attachment</code>属性</h3>
+<ul>
+<li><code>background-attachment: fixed / scroll / local</code>： 设置背景图像是否固定或者随着页面的其余部分滚动。
+<ul>
+<li><code>fixed</code>: 背景图片不会随着页面的滚动而滚动</li>
+<li><code>scroll</code>: 背景图片随着页面的滚动而滚动，<strong>默认</strong></li>
+<li><code>local</code>: 背景图片会随着元素内容的滚动而滚动</li>
+<li><code>inherit</code>: 指定 background-attachment 的设置应该从父元素继承。</li>
+</ul>
+</li>
+</ul>
+<h2 id=tips>Tips</h2>
+<h3 id=数组扁平化>数组扁平化</h3>
+<blockquote>
+<p>数组的扁平化其实就是将一个嵌套多层的数组 array（嵌套可以是任何层数）转换为只有一层的数组。</p>
+</blockquote>
+<h4 id=方法一普通的递归实现>方法一：普通的递归实现</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// 方法1
+</span><span class=c1>// 在遍历过程中发现数组元素还是数组的时候进行递归操作，
+</span><span class=c1>// 把数组的结果通过数组的 concat 方法拼接到最后要返回的 result 数组上，那么最后输出的结果就是扁平化后的数组。
+</span><span class=c1></span><span class=kd>var</span> <span class=nx>a</span> <span class=o>=</span> <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=p>[</span><span class=mi>2</span><span class=p>,</span> <span class=p>[</span><span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>]]];</span>
+<span class=kd>function</span> <span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kd>let</span> <span class=nx>result</span> <span class=o>=</span> <span class=p>[];</span>
+  <span class=k>for</span> <span class=p>(</span><span class=kd>let</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=nx>arr</span><span class=p>.</span><span class=nx>length</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=nb>Array</span><span class=p>.</span><span class=nx>isArray</span><span class=p>(</span><span class=nx>arr</span><span class=p>[</span><span class=nx>i</span><span class=p>]))</span> <span class=p>{</span>
+      <span class=nx>result</span> <span class=o>=</span> <span class=nx>result</span><span class=p>.</span><span class=nx>concat</span><span class=p>(</span><span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>[</span><span class=nx>i</span><span class=p>]));</span>
+    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+      <span class=nx>result</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>arr</span><span class=p>[</span><span class=nx>i</span><span class=p>]);</span>
+    <span class=p>}</span>
+  <span class=p>}</span>
+  <span class=k>return</span> <span class=nx>result</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=nx>flatten</span><span class=p>(</span><span class=nx>a</span><span class=p>);</span> <span class=c1>//  [1, 2, 3, 4，5]
+</span></code></pre></div><h4 id=方法二利用-reduce-函数迭代递归>方法二：利用 <code>reduce</code> 函数迭代(递归)</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// 方法2
+</span><span class=c1></span><span class=kd>var</span> <span class=nx>arr</span> <span class=o>=</span> <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=p>[</span><span class=mi>2</span><span class=p>,</span> <span class=p>[</span><span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>]]];</span>
+<span class=kd>function</span> <span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=nx>arr</span><span class=p>.</span><span class=nx>reduce</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>prev</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>{</span>
+    <span class=k>return</span> <span class=nx>prev</span><span class=p>.</span><span class=nx>concat</span><span class=p>(</span><span class=nb>Array</span><span class=p>.</span><span class=nx>isArray</span><span class=p>(</span><span class=nx>next</span><span class=p>)</span> <span class=o>?</span> <span class=nx>flatten</span><span class=p>(</span><span class=nx>next</span><span class=p>)</span> <span class=o>:</span> <span class=nx>next</span><span class=p>);</span>
+  <span class=p>},</span> <span class=p>[]);</span>
+<span class=p>}</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>));</span> <span class=c1>//  [1, 2, 3, 4，5]
+</span></code></pre></div><h4 id=方法三扩展运算符实现>方法三：扩展运算符实现</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// 方法3
+</span><span class=c1>// 先用数组的 some 方法把数组中仍然是组数的项过滤出来，然后执行 concat 操作，利用 ES6 的展开运算符，将其拼接到原数组中，最后返回原数组
+</span><span class=c1></span><span class=kd>var</span> <span class=nx>arr</span> <span class=o>=</span> <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=p>[</span><span class=mi>2</span><span class=p>,</span> <span class=p>[</span><span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>]]];</span>
+<span class=kd>function</span> <span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>while</span> <span class=p>(</span><span class=nx>arr</span><span class=p>.</span><span class=nx>some</span><span class=p>((</span><span class=nx>item</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nb>Array</span><span class=p>.</span><span class=nx>isArray</span><span class=p>(</span><span class=nx>item</span><span class=p>)))</span> <span class=p>{</span>
+    <span class=nx>arr</span> <span class=o>=</span> <span class=p>[].</span><span class=nx>concat</span><span class=p>(...</span><span class=nx>arr</span><span class=p>);</span>
+  <span class=p>}</span>
+  <span class=k>return</span> <span class=nx>arr</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>));</span> <span class=c1>//  [1, 2, 3, 4，5]
+</span></code></pre></div><h4 id=方法四split-和-tostring-共同处理>方法四：<code>split</code> 和 <code>toString</code> 共同处理</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>//数组会默认带一个 toString 的方法，所以可以把数组直接转换成逗号分隔的字符串，然后再用 split 方法把字符串重新转换为数组
+</span><span class=c1></span><span class=kd>var</span> <span class=nx>arr</span> <span class=o>=</span> <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=p>[</span><span class=mi>2</span><span class=p>,</span> <span class=p>[</span><span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>]]];</span>
+<span class=kd>function</span> <span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=nx>arr</span><span class=p>.</span><span class=nx>toString</span><span class=p>().</span><span class=nx>split</span><span class=p>(</span><span class=s1>&#39;,&#39;</span><span class=p>);</span>
+<span class=p>}</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>));</span> <span class=c1>//  [1, 2, 3, 4]
+</span></code></pre></div><h4 id=方法五调用-es6-中的-flat>方法五：调用 ES6 中的 flat</h4>
+<ul>
+<li><code>arr.flat([depth])</code>
+<ul>
+<li>depth 是 flat 的参数，depth 是可以传递数组的展开深度（默认不填、数值是 1），即展开一层数组</li>
+<li>参数也可以传进 <code>Infinity</code>，代表不论多少层都要展开</li>
+<li>对数组的嵌套层数不确定的时候，最好直接使用 Infinity，可以达到扁平化</li>
+</ul>
+</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// 方法5
+</span><span class=c1></span><span class=kd>var</span> <span class=nx>arr</span> <span class=o>=</span> <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=p>[</span><span class=mi>2</span><span class=p>,</span> <span class=p>[</span><span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>]]];</span>
+<span class=kd>function</span> <span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>return</span> <span class=nx>arr</span><span class=p>.</span><span class=nx>flat</span><span class=p>(</span><span class=kc>Infinity</span><span class=p>);</span>
+<span class=p>}</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>));</span> <span class=c1>//  [1, 2, 3, 4，5]
+</span></code></pre></div><h4 id=方法六正则和-json-方法共同处理>方法六：正则和 JSON 方法共同处理</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// 将 JSON.stringify 的方法先转换为字符串，然后通过正则表达式过滤掉字符串中的数组的方括号，最后再利用 JSON.parse 把它转换成数组
+</span><span class=c1></span>
+<span class=c1>// 方法 6
+</span><span class=c1></span><span class=kd>let</span> <span class=nx>arr</span> <span class=o>=</span> <span class=p>[</span><span class=mi>1</span><span class=p>,</span> <span class=p>[</span><span class=mi>2</span><span class=p>,</span> <span class=p>[</span><span class=mi>3</span><span class=p>,</span> <span class=p>[</span><span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>]]],</span> <span class=mi>6</span><span class=p>];</span>
+<span class=kd>function</span> <span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kd>let</span> <span class=nx>str</span> <span class=o>=</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>(</span><span class=nx>arr</span><span class=p>);</span>
+  <span class=nx>str</span> <span class=o>=</span> <span class=nx>str</span><span class=p>.</span><span class=nx>replace</span><span class=p>(</span><span class=sr>/(\[|\])/g</span><span class=p>,</span> <span class=s1>&#39;&#39;</span><span class=p>);</span>
+  <span class=nx>str</span> <span class=o>=</span> <span class=s1>&#39;[&#39;</span> <span class=o>+</span> <span class=nx>str</span> <span class=o>+</span> <span class=s1>&#39;]&#39;</span><span class=p>;</span>
+  <span class=k>return</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>parse</span><span class=p>(</span><span class=nx>str</span><span class=p>);</span>
+<span class=p>}</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>flatten</span><span class=p>(</span><span class=nx>arr</span><span class=p>));</span> <span class=c1>//  [1, 2, 3, 4，5]
+</span></code></pre></div><hr>
+<p><figure class=gallery-image style=flex-grow:275;flex-basis:661px>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/array_flat.png data-size=2288x830>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/array_flat.png width=2288 height=830 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/array_flat_hu1752ee69d1918762c6d9902de330c4c7_540768_480x0_resize_box_3.png 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/array_flat_hu1752ee69d1918762c6d9902de330c4c7_540768_1024x0_resize_box_3.png 1024w" loading=lazy alt="array flat">
+</a>
+<figcaption>array flat</figcaption>
+</figure></p>
+<h2 id=reference>Reference</h2>
+<p><a class=link href=https://github.com/haizlin/fe-interview/blob/master/category/history.md target=_blank rel=noopener>haizlin/fe-interview</a></p>
+<p><a class=link href=https://muyiy.cn/question/ target=_blank rel=noopener>前端进阶</a></p>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split target=_blank rel=noopener>String.prototype.split() - JavaScript | MDN</a></p>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/frontend-146-cover.46f90167dd77449c983ebb4d9e317f9e_hue0b2c8b1e6178d98421791daf43c3786_116564_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-RvkBZ913RJyYPrtNnjF/ng==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 146</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/frontend-145-cover.089db8cd7701422a47b289c7738932ad_hu68f0f93869ebf28349a854e1121082ee_160531_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-CJ24zXcBQipHsonHc4kyrQ==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 145</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-140/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-140/frontend-140-cover.ee8e98ffdcb3fe92173445304bde2cea_hudacb39a34caa67171d9f3db75d854ff6_103747_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-7o6Y/9yz/pIXNEUwS94s6g==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 140</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/frontend-137-cover.a5241d30fa3cf690a83e56d59310c4f7_hu877fc1cfdbfc30ae78fcb26bc049245c_249798_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-pSQdMPo89pCoPlbVkxDE9w==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 137</h2>
+</div>
+</a>
+</article>
+<article class=has-image>
+<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/>
+<div class=article-image>
+<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/frontend-136-cover.463c2de98ae7f2614dafdd1c89934b50_hu82c25fa98cd4e9a8103220017be4b8cb_227181_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-Rjwt6Yrn8mFNr90ciZNLUA==">
+</div>
+<div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 136</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 -
+2022 技術の手帳
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#html>HTML</a>
+<ol>
+<li><a href=#question-本地存储的生命周期><strong>Question:</strong> 本地存储的生命周期</a></li>
+</ol>
+</li>
+<li><a href=#css>CSS</a>
+<ol>
+<li><a href=#question-background-attachment属性><strong>Question:</strong> <code>background-attachment</code>属性</a></li>
+</ol>
+</li>
+<li><a href=#tips>Tips</a>
+<ol>
+<li><a href=#数组扁平化>数组扁平化</a>
+<ol>
+<li><a href=#方法一普通的递归实现>方法一：普通的递归实现</a></li>
+<li><a href=#方法二利用-reduce-函数迭代递归>方法二：利用 <code>reduce</code> 函数迭代(递归)</a></li>
+<li><a href=#方法三扩展运算符实现>方法三：扩展运算符实现</a></li>
+<li><a href=#方法四split-和-tostring-共同处理>方法四：<code>split</code> 和 <code>toString</code> 共同处理</a></li>
+<li><a href=#方法五调用-es6-中的-flat>方法五：调用 ES6 中的 flat</a></li>
+<li><a href=#方法六正则和-json-方法共同处理>方法六：正则和 JSON 方法共同处理</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href=#reference>Reference</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
