@@ -1,4 +1,235 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 12 Feb 2022 16:50:12 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 149</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-149/</link><pubDate>Sat, 12 Feb 2022 16:50:12 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-149/</guid><description>&lt;h1 id="第一百四十日">第一百四十日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 13 Feb 2022 15:12:49 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 150</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-150/</link><pubDate>Sun, 13 Feb 2022 15:12:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-150/</guid><description>&lt;h1 id="第一百五十日">第一百五十日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="question-html5-如何使某个页面元素或整个页面可编辑">&lt;strong>Question:&lt;/strong> HTML5 如何使某个页面元素或整个页面可编辑&lt;/h3>
+&lt;ul>
+&lt;li>让某个元素可以编辑，可以使用 &lt;code>contenteditable&lt;/code> 属性&lt;/li>
+&lt;li>让整个页面可编辑可以使用 &lt;code>document.designMode&lt;/code> 属性&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="question-什么时候用-transition什么时候使用-animation">&lt;strong>Question:&lt;/strong> 什么时候用 transition？什么时候使用 animation&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>transition&lt;/code> 相当于是个过度动画，需要又过度效果才会触发。一般用来做元素的放大缩小、平移旋转等简单的操作
+&lt;ul>
+&lt;li>&lt;code>transition&lt;/code> 只执行一次，当需要执行多次时，一般会利用 &lt;code>:hover&lt;/code> 等时机或者使用 javaScript 改变类名进行控制。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>animation&lt;/code> 需要自己设定关键帧，可以做相对复杂的操作，比如延迟、循环播放等。一般在需要比较复杂的情况才会使用 animation&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="sort排序算法实现原理">&lt;code>sort&lt;/code>排序算法实现原理&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>arr.sort([compareFunction])&lt;/code> 数组已原地排序，并且不进行复制&lt;/li>
+&lt;li>&lt;code>compareFunction&lt;/code> 用来指定按某种顺序进行排列的函数，如果省略不写，元素按照&lt;strong>转换为字符串的各个字符的 &lt;code>Unicode&lt;/code> 位点进行排序&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">months&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;March&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;Jan&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;Feb&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;Dec&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">months&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">sort&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">months&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// [&amp;#34;Dec&amp;#34;, &amp;#34;Feb&amp;#34;, &amp;#34;Jan&amp;#34;, &amp;#34;March&amp;#34;]
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">array1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">30&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">21&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">100000&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">array1&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">sort&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="c1">// [1, 100000, 21, 30, 4]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>如果指明了 compareFunction 参数 ，那么数组会按照调用该函数的返回值排序，即 a 和 b 是两个将要被比较的元素：
+&lt;ul>
+&lt;li>如果 &lt;code>compareFunction（a, b)&lt;/code>小于 0，那么 a 会被排列到 b 之前；&lt;/li>
+&lt;li>如果 &lt;code>compareFunction（a, b)&lt;/code>等于 0，a 和 b 的相对位置不变；&lt;/li>
+&lt;li>如果 &lt;code>compareFunction（a, b)&lt;/code>大于 0，b 会被排列到 a 之前。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>&lt;code>sort&lt;/code> 源码分析&lt;/p>
+&lt;ul>
+&lt;li>如果要排序的元素个数是 n 的时候，那么就会有以下几种情况：
+&lt;ol>
+&lt;li>当 n&amp;lt;=10 时，采用插入排序；&lt;/li>
+&lt;li>当 n&amp;gt;10 时，采用三路快速排序；&lt;/li>
+&lt;li>10&amp;lt;n &amp;lt;=1000，采用中位数作为哨兵元素；&lt;/li>
+&lt;li>n&amp;gt;1000，每隔 200~215 个元素挑出一个元素，放到一个新数组中，然后对它排序，找到中间位置的数，以此作为中位数。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>为什么元素个数少的时候要采用插入排序？&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>虽然插入排序理论上是平均时间复杂度为 &lt;code>O(n^2)&lt;/code> 的算法，快速排序是一个平均 &lt;code>O(nlogn)&lt;/code> 级别的算法。但是，这只是理论上平均的时间复杂度估算，但是它们也有最好的时间复杂度情况，而&lt;strong>插入排序&lt;/strong>在最好的情况下时间复杂度是 &lt;code>O(n)&lt;/code>。&lt;/li>
+&lt;li>当 n 足够小的时候，快速排序 nlogn 的优势会越来越小。倘若插入排序的 n 足够小，那么就会超过快排。&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>为什么要选择哨兵元素&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>快速排序的性能瓶颈在于递归的深度，最坏的情况是每次的哨兵都是最小元素或者最大元素&lt;/li>
+&lt;li>进行 partition（一边是小于哨兵的元素，另一边是大于哨兵的元素）时，就会有一边是空的。这么排下去，递归的层数就达到了 n , 而每一层的复杂度是 O(n)，因此快排这时候会退化成 O(n^2) 级别&lt;/li>
+&lt;li>让哨兵元素尽可能地处于数组的中间位置，让最大或者最小的情况尽可能少&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// 官方实现的 sort 排序算法的代码基本结构
+&lt;/span>&lt;span class="c1">// 时间复杂度是根据数据量的大小，从而进行变化的
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">ArraySort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">comparefn&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">CHECK_OBJECT_COERCIBLE&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;Array.prototype.sort&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">TO_OBJECT&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">length&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">TO_LENGTH&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">InnerArraySort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">length&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">comparefn&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">InnerArraySort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">array&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">length&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">comparefn&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 比较函数未传入
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">IS_CALLABLE&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">comparefn&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">comparefn&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="nx">_IsSmi&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="nx">_IsSmi&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">y&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="nx">SmiLexicographicCompare&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">y&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">TO_STRING&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">y&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">TO_STRING&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">y&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nx">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">else&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">y&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">InsertionSort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">from&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">to&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 插入排序
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">to&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">element&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="nx">from&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">j&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">tmp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">order&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">comparefn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">tmp&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">element&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">order&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">tmp&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">element&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">GetThirdIndex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">from&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">to&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 元素个数大于1000时寻找哨兵元素
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">t_array&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">InternalArray&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">increment&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">200&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">((&lt;/span>&lt;span class="nx">to&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">from&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="mi">15&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">from&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">to&lt;/span> &lt;span class="o">-=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">from&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">to&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">+=&lt;/span> &lt;span class="nx">increment&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">t_array&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">j&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]];&lt;/span>
+&lt;span class="nx">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">t_array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">sort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">comparefn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">third_index&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">t_array&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">t_array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">third_index&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">QuickSort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">from&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">to&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 快速排序实现
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">//哨兵位置
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">third_index&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">to&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">InsertionSort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">from&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">to&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 数据量小，使用插入排序，速度较快
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">to&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">third_index&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">GetThirdIndex&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">from&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">to&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 小于1000 直接取中点
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">third_index&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">((&lt;/span>&lt;span class="nx">to&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">from&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;gt;&amp;gt;&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// 下面开始快排
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">var&lt;/span> &lt;span class="nx">v0&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">v1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">to&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">v2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">third_index&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">c01&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">comparefn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">c01&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">tmp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">v0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">v0&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">v1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">v1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">tmp&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">c02&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">comparefn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">c02&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">tmp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">v0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">v0&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">v2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">v2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">v1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">v1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">tmp&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">c12&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">comparefn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">c12&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">tmp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">v1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">v1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">v2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">v2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">tmp&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">from&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">v0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">to&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">v2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">pivot&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">v1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">low_end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">high_start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">to&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">third_index&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">low_end&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">low_end&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">pivot&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">partition&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">low_end&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">high_start&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">element&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">order&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">comparefn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">element&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">pivot&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">order&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">low_end&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">low_end&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">element&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">low_end&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">order&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">do&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">high_start&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">high_start&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">break&lt;/span> &lt;span class="nx">partition&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">top_elem&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">high_start&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">order&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">comparefn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">top_elem&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">pivot&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">order&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">high_start&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">high_start&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">element&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">order&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">element&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">low_end&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;span class="nx">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">low_end&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">element&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">low_end&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// 快排的核心思路，递归调用快速排序方法
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">to&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">high_start&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">low_end&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">from&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">QuickSort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">high_start&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">to&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">to&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">low_end&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">QuickSort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">from&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">low_end&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">from&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">high_start&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>稳定性定义：排序前后两个相等的数相对位置不变，则算法稳定。&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 621;
+flex-basis: 1491px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-150/sorts.png" data-size="2572x414">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-150/sorts.png"
+width="2572"
+height="414"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-150/sorts_hu1fdc7e30f5ad03db98ba164875c3f174_255117_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-150/sorts_hu1fdc7e30f5ad03db98ba164875c3f174_255117_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="快速排序&amp;插入排序">
+&lt;/a>
+&lt;figcaption>快速排序&amp;amp;插入排序&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/contenteditable" target="_blank" rel="noopener"
+>contenteditable - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/designMode" target="_blank" rel="noopener"
+>Document.designMode - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank" rel="noopener"
+>Array.prototype.sort() - JavaScript | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 149</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-149/</link><pubDate>Sat, 12 Feb 2022 16:50:12 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-149/</guid><description>&lt;h1 id="第一百四十九日">第一百四十九日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-整个页面中的内容设置成只读不可编辑的状态">&lt;strong>Question:&lt;/strong> 整个页面中的内容设置成只读，不可编辑的状态&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="nt">body&lt;/span> &lt;span class="p">{&lt;/span>
