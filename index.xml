@@ -1,4 +1,345 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 17 Feb 2022 16:45:01 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 154</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-154/</link><pubDate>Thu, 17 Feb 2022 16:45:01 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-154/</guid><description>&lt;h1 id="第一百五十四日">第一百五十四日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 18 Feb 2022 10:51:40 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 155</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-155/</link><pubDate>Fri, 18 Feb 2022 10:51:40 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-155/</guid><description>&lt;h1 id="第一百五十五日">第一百五十五日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="html5-有哪些存储类型">HTML5 有哪些存储类型&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>cookie&lt;/code>: 最大 4k, 基本无兼容问题, 所有同源 tab 共享, 每次请求都携带, key-value 存储, value 只存字符串&lt;/li>
+&lt;li>&lt;code>sessionStorage&lt;/code> 无大小限制, 只在当前 tab 有效, tab 关闭即失效, key-value 存储, value 只存字符串&lt;/li>
+&lt;li>&lt;code>localStorage&lt;/code> 最大 5M-10M, 所有同源 tab 共享, 能持久化存储, key-value 存储, value 只存字符串&lt;/li>
+&lt;li>&lt;code>indexDB&lt;/code> key-value 存储,value 可以任意类型, 同源, 支持事务, 最大 250M, 兼容 ie10&lt;/li>
+&lt;li>&lt;code>webSQL&lt;/code> 支持版本,事务,支持 sql 语句, 不兼容 ie&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;p>&lt;a class="link" href="https://cssguidelin.es/#the-importance-of-a-styleguide" target="_blank" rel="noopener"
+>CSS Guidelines (2.2.5) – High-level advice and guidelines for writing sane, manageable, scalable CSS&lt;/a>&lt;/p>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="实现一个promise">实现一个&lt;code>Promise&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>Promise/A+&lt;/code> 规范&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>promise&lt;/code>：是一个具有 then 方法的对象或者函数，它的行为符合该规范。&lt;/li>
+&lt;li>&lt;code>thenable&lt;/code>：是一个定义了 then 方法的对象或者函数。&lt;/li>
+&lt;li>&lt;code>value&lt;/code>：可以是任何一个合法的 JavaScript 的值（包括 undefined、thenable 或 promise）。&lt;/li>
+&lt;li>&lt;code>exception&lt;/code>：是一个异常，是在 Promise 里面可以用 throw 语句抛出来的值。&lt;/li>
+&lt;li>&lt;code>reason&lt;/code>：是一个 Promise 里 reject 之后返回的拒绝原因。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Promise&lt;/code> 状态描述&lt;/p>
+&lt;ol>
+&lt;li>一个 Promise 有三种状态：&lt;code>pending&lt;/code>、&lt;code>fulfilled&lt;/code> 和 &lt;code>rejected&lt;/code>。&lt;/li>
+&lt;li>当状态为 pending 状态时，即可以转换为 fulfilled 或者 rejected 其中之一。&lt;/li>
+&lt;li>当状态为 fulfilled 状态时，就不能转换为其他状态了，必须返回一个不能再改变的值。&lt;/li>
+&lt;li>当状态为 rejected 状态时，同样也不能转换为其他状态，必须有一个原因的值也不能改变。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="then-方法">&lt;code>then&lt;/code> 方法&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>Promise&lt;/code> 必须拥有一个 &lt;code>then&lt;/code> 方法来&lt;strong>访问它的值或者拒绝原因&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>promise.then(onFulfilled, onRejected)&lt;/code>&lt;/li>
+&lt;li>onFulfilled 和 onRejected 都是可选参数&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>onFulfilled&lt;/code> 和 &lt;code>onRejected&lt;/code> 特性&lt;/p>
+&lt;ul>
+&lt;li>如果 onFulfilled 是函数，则当 Promise 执行结束之后必须被调用，最终返回值为 value，其调用次数不可超过一次&lt;/li>
+&lt;li>onRejected 除了最后返回的是 reason 外，其他方面和 onFulfilled 在规范上的表述基本一样&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>then 方法其实可以被一个 Promise 调用多次，且必须返回一个 Promise 对象&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="第一步构造函数">第一步：构造函数&lt;/h4>
+&lt;ul>
+&lt;li>Promise 构造函数接受一个 executor 函数，executor 函数执行完同步或者异步操作后，调用它的两个参数 resolve 和 reject&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">executor&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">self&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;pending&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// Promise当前的状态
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// Promise的值
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onResolvedCallback&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span> &lt;span class="c1">// Promise resolve时的回调函数集
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onRejectedCallback&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span> &lt;span class="c1">// Promise reject时的回调函数集
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">executor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 执行executor并传入相应的参数
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="第二步-完善-resolve-和-reject-两个函数">第二步： 完善 &lt;code>resolve&lt;/code> 和 &lt;code>reject&lt;/code> 两个函数&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">executor&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">self&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;pending&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// Promise当前的状态
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// Promise的值
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onResolvedCallback&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span> &lt;span class="c1">// Promise resolve时的回调函数集
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onRejectedCallback&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span> &lt;span class="c1">// Promise reject时的回调函数集
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// 由于 onResolveCallback 和 onRejectedCallback 这两个是数组，需要通过循环来执行
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">resolve&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;pending&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;resolved&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onResolvedCallback&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onResolvedCallback&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">](&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;pending&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;rejected&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">reason&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onRejectedCallback&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onRejectedCallbacki&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 考虑到执行过程中有可能出错，所以我们用try/catch块给包起
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">executor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 执行executor
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="第三步-实现-then-方法">第三步： 实现 &lt;code>then&lt;/code> 方法&lt;/h4>
+&lt;ul>
+&lt;li>then 方法是 Promise 执行完之后可以拿到 value 或者 reason 的方法，并且还要保持 then 执行之后，返回的依旧是一个 Promise 方法，还要支持多次调用&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="c1">// then方法接收两个参数onResolved和onRejected，分别为Promise成功或失败后的回调
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Promise&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">onResolved&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">onRejected&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">self&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">promise2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// 根据标准，如果then的参数不是function，则需要忽略它
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">onResolved&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">onResolved&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">onResolved&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="nx">onRejected&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">onRejected&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">onRejected&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;resolved&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 如果promise1的状态已经确定并且是resolved
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 调用onResolved，考虑到有可能throw，所以还需要将其包在try/catch块里
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">onResolved&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 如果onResolved的返回值是一个Promise对象，直接取它的结果作为promise2的结果
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">resolve&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 否则，以它的返回值作为promise2的结果
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 如果出错，以捕获到的错误作为promise2的结果
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// 此处与前一个if块的逻辑几乎相同，区别在于所调用的是onRejected函数
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;rejected&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">onRejected&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">x&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;pending&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 如果当前的Promise还处于pending状态，
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 并不能确定调用onResolved还是onRejected，只能等到Promise的状态确定后，才能确定如何处理
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onResolvedCallback&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">onResolved&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">x&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onRejectedCallback&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">onRejected&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">x&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>在 Promise/A+ 规范中，onResolved 和 onRejected 这两项函数需要异步调用&lt;/li>
+&lt;/ul>
+&lt;h4 id="完成版">完成版&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">module&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">exports&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">executor&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">self&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;pending&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onResolvedCallback&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onRejectedCallback&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">resolve&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 异步执行所有的回调函数
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;pending&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;resolved&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onResolvedCallback&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onResolvedCallback&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">](&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 异步执行所有的回调函数
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;pending&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;rejected&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">reason&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onRejectedCallback&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onRejectedCallback&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">](&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">executor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">resolvePromise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">then&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">thenCalledOrThrow&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">TypeError&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Chaining cycle detected for promise!&amp;#39;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;pending&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">x&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">resolvePromise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">},&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">x&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">return&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="kc">null&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;object&amp;#39;&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">then&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">then&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">then&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">rs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">y&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">thenCalledOrThrow&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">thenCalledOrThrow&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">resolvePromise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">y&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">},&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">rj&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">r&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">thenCalledOrThrow&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">thenCalledOrThrow&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">r&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">resolve&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">thenCalledOrThrow&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">thenCalledOrThrow&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">resolve&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">x&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nb">Promise&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">onResolved&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">onRejected&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">self&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">promise2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">onResolved&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;span class="k">typeof&lt;/span> &lt;span class="nx">onResolved&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span>
+&lt;span class="o">?&lt;/span> &lt;span class="nx">onResolved&lt;/span>
+&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nx">onRejected&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;span class="k">typeof&lt;/span> &lt;span class="nx">onRejected&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span>
+&lt;span class="o">?&lt;/span> &lt;span class="nx">onRejected&lt;/span>
+&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">r&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">throw&lt;/span> &lt;span class="nx">r&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;resolved&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 异步执行onResolved
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">onResolved&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">resolvePromise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;rejected&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 异步执行onRejected
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">onRejected&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">resolvePromise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">status&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;pending&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 这里之所以没有异步执行，是因为这些函数必然会被resolve或reject调用，
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="c1">// 而resolve或reject函数里的内容已是异步执行，构造函数里的定义
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onResolvedCallback&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">onResolved&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">resolvePromise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">r&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">r&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="nx">self&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onRejectedCallback&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">onRejected&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">reason&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">resolvePromise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">promise2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">r&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">reject&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">r&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="p">}));&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="nb">Promise&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">catch&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">onRejected&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">then&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">onRejected&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;span class="c1">// 最后这个是测试用的，后面会说
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="nb">Promise&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">deferred&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">defer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">dfd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;span class="nx">dfd&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">promise&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">resolve&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">dfd&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">resolve&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">resolve&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="nx">dfd&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">reject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">reject&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">});&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="nx">dfd&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.jianshu.com/p/11494478a7e9" target="_blank" rel="noopener"
+>微信红包算法(js)&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/promises-aplus/promises-tests" target="_blank" rel="noopener"
+>promises-aplus/promises-tests: Compliances tests for Promises/A+&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 154</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-154/</link><pubDate>Thu, 17 Feb 2022 16:45:01 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-154/</guid><description>&lt;h1 id="第一百五十四日">第一百五十四日&lt;/h1>
 &lt;h2 id="javascript">JavaScript&lt;/h2>
 &lt;h3 id="并行和并发同步和异步阻塞和非阻塞">并行和并发、同步和异步、阻塞和非阻塞&lt;/h3>
 &lt;ul>
