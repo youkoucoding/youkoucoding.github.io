@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 18 Feb 2022 10:51:40 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 155</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-155/</link><pubDate>Fri, 18 Feb 2022 10:51:40 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-155/</guid><description>&lt;h1 id="第一百五十五日">第一百五十五日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 19 Feb 2022 15:08:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 156</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-156/</link><pubDate>Sat, 19 Feb 2022 15:08:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-156/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="bordernone和border0px区别">&lt;code>border:none&lt;/code>和&lt;code>border:0px&lt;/code>区别&lt;/h3>
+&lt;ul>
+&lt;li>从&lt;code>border: 10px;&lt;/code>过渡到&lt;code>border: none;&lt;/code>，是不会有动画的&lt;/li>
+&lt;li>从&lt;code>border: 10px;&lt;/code>过渡到&lt;code>border: 0px;&lt;/code>，是可以有动画的&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="javascript-的内存管理">&lt;code>JavaScript&lt;/code> 的内存管理&lt;/h3>
+&lt;ul>
+&lt;li>基本类型：这些类型在内存中会占据固定的内存空间，它们的值都保存在栈空间中，直接可以通过值来访问这些；&lt;/li>
+&lt;li>引用类型：由于引用类型值大小不固定（比如上面的对象可以添加属性等），栈内存中存放地址指向堆内存中的对象，是通过引用来访问的&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>栈内存中的基本类型，可以通过操作系统直接处理；而堆内存中的引用类型，正是由于可以经常变化，大小不固定，因此需要 JavaScript 的引擎通过垃圾回收机制来处理。&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="chrome-内存回收机制">Chrome 内存回收机制&lt;/h4>
+&lt;p>Chrome 的 JavaScript 引擎 V8 将堆内存分为两类 新生代的回收机制和老生代的回收机制&lt;/p>
+&lt;h4 id="内存泄漏与优化">内存泄漏与优化&lt;/h4>
+&lt;ul>
+&lt;li>内存泄漏的场景：
+&lt;ul>
+&lt;li>过多的缓存未释放&lt;/li>
+&lt;li>闭包太多未释放&lt;/li>
+&lt;li>定时器或者回调太多未释放&lt;/li>
+&lt;li>太多无效的 DOM 未释放&lt;/li>
+&lt;li>全局变量太多未被发现&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>减少不必要的全局变量，使用严格模式避免意外创建全局变量&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">function&lt;/span> &lt;span class="nx">foo&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// 全局变量=&amp;gt; window.bar
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">bar&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;默认this指向全局&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="c1">// 没有声明变量，实际上是全局变量=&amp;gt;window.bar
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="nx">bar&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;全局变量&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">foo&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>在你使用完数据后，及时解除引用（闭包中的变量，DOM 引用，定时器清除）&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">var&lt;/span> &lt;span class="nx">someResource&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">getData&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;span class="nx">setInterval&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="kd">var&lt;/span> &lt;span class="nx">node&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Node&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">node&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">node&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">innerHTML&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">JSON&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">stringify&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">someResource&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;span class="c1">// 定时器也没有清除，可以清除掉
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="c1">// node、someResource 存储了大量数据，无法回收
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">},&lt;/span> &lt;span class="mi">1000&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>组织好代码逻辑，避免死循环等造成浏览器卡顿、崩溃的问题&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 155</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-155/</link><pubDate>Fri, 18 Feb 2022 10:51:40 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-155/</guid><description>&lt;h1 id="第一百五十五日">第一百五十五日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="html5-有哪些存储类型">HTML5 有哪些存储类型&lt;/h3>
 &lt;ul>
