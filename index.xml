@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 21 Feb 2022 21:20:02 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 158</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-158/</link><pubDate>Mon, 21 Feb 2022 21:20:02 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-158/</guid><description>&lt;h1 id="第一百五十八日">第一百五十八日&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 22 Feb 2022 23:06:50 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 159</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-159/</link><pubDate>Tue, 22 Feb 2022 23:06:50 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-159/</guid><description>&lt;h1 id="第一百五十九日">第一百五十九日&lt;/h1>
+&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="html-实现下拉提示">html 实现下拉提示&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/datalist" target="_blank" rel="noopener"
+>datalist - HTML（超文本标记语言） | MDN&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">label&lt;/span> &lt;span class="na">for&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;favorite_team&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Favorite Team:&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">label&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- 注意input的list属性与datalist的id属性进行绑定 --&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text&amp;#34;&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;team&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;favorite_team&amp;#34;&lt;/span> &lt;span class="na">list&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;team_list&amp;#34;&lt;/span> &lt;span class="na">autocomplete&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;off&amp;#34;&lt;/span>&lt;span class="p">/&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">datalist&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;team_list&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- 指定了value值之后，value和innerHTML类似于标题与副标题之间的关系，选中后input的值是value --&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">option&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;A&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Aus Tigers&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">option&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">option&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;B&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Detroit Lions&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">option&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">option&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;C&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Detroit Pistons&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">option&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">option&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;D&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Detroit Red Wings&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">option&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">option&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;E&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Detroit Tigers&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">option&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">datalist&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">datalist&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="两端对齐">两端对齐&lt;/h3>
+&lt;ul>
+&lt;li>对于文字，利用 &lt;code>text-align-last:justify;&lt;/code> or &lt;code>:before&lt;/code> 模拟成多行然后 &lt;code>text-align: justify&lt;/code>&lt;/li>
+&lt;li>子元素的两端对齐，用 float 或 &lt;code>flex&lt;/code> 或 &lt;code>grid&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="attribute-和-property-区别">&lt;code>attribute&lt;/code> 和 &lt;code>property&lt;/code> 区别&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>attribute&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>元素在 HTML 中的键值对&lt;/li>
+&lt;li>attribute 会始终保持 html 代码中的初始值(除了 href)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>property&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>attribute 在对应的 JS DOM 节点上的对象属性&lt;/li>
+&lt;li>Property 是可以变化的(跟随用户操作).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 221;
+flex-basis: 532px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-159/tips.png" data-size="1092x492">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-159/tips.png"
+width="1092"
+height="492"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-159/tips_hubfc6070b526bbabf34ec7f297d762870_212994_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-159/tips_hubfc6070b526bbabf34ec7f297d762870_212994_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt=" attribute vs property ">
+&lt;/a>
+&lt;figcaption>attribute vs property&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/70671215" target="_blank" rel="noopener"
+>详解 HTML attribute 和 DOM property&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 158</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-158/</link><pubDate>Mon, 21 Feb 2022 21:20:02 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-158/</guid><description>&lt;h1 id="第一百五十八日">第一百五十八日&lt;/h1>
 &lt;h2 id="tips">Tips&lt;/h2>
 &lt;h3 id="v8-引擎">V8 引擎&lt;/h3>
 &lt;h4 id="v8-引擎执行-js-代码都要经过哪些阶段">V8 引擎执行 JS 代码都要经过哪些阶段&lt;/h4>
