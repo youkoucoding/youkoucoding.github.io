@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 23 Feb 2022 17:07:08 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 160</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-160/</link><pubDate>Wed, 23 Feb 2022 17:07:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-160/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 24 Feb 2022 16:52:49 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 161</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-161/</link><pubDate>Thu, 24 Feb 2022 16:52:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-161/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="html-调用摄像头">HTML 调用摄像头&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>window.navigator.getUserMedia()&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>接收三个参数，第一个是视频或者音频以及分辨率{video:true}第二个是成功回调，第三个是失败回调&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>window.navigator.mediaDevices.getUserMedia()&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>也是三个参数，参数格式和上文一样，区别在于这个 api 是基于 promise 实现的&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript-nodejs">JavaScript Nodejs&lt;/h2>
+&lt;h3 id="processnexttick">&lt;code>Process.nextTick&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>process.nextTick(callback[, ...args])&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>第一个参数是 callback 回调函数，第二个参数是 args 调用 callback 时额外传的参数，是可选参数&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Process.nextTick&lt;/code> 是微任务 也是异步 API 的一部分&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Process.nextTick&lt;/code> 的运行逻辑：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Process.nextTick&lt;/code> 会将 &lt;code>callback&lt;/code> 添加到“next tick queue”；&lt;/li>
+&lt;li>“next tick queue”会在当前 JavaScript stack 执行完成后，下一次 event loop 开始执行前按照 FIFO 出队；&lt;/li>
+&lt;li>如果递归调用 Process.nextTick 可能会导致一个无限循环，需要去适时终止递归。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>根据代码执行顺序，&lt;code>Process.nextTick&lt;/code> 是在每一次的事件循环最后执行的。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kd">let&lt;/span> &lt;span class="nx">bar&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;span class="kd">function&lt;/span> &lt;span class="nx">someAsyncApiCall&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">callback&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">process&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">nextTick&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">callback&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="nx">someAsyncApiCall&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;bar&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">bar&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 1
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">});&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>bar = 1;&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/MediaDevices/getUserMedia" target="_blank" rel="noopener"
+>MediaDevices.getUserMedia() - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903902123393032" target="_blank" rel="noopener"
+>你未必知道的 49 个 CSS 知识点&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/issues/1252" target="_blank" rel="noopener"
+>一些 css 技巧&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 160</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-160/</link><pubDate>Wed, 23 Feb 2022 17:07:08 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-160/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="第一行和第二行的颜色分别是什么">第一行和第二行的颜色分别是什么&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;span class="p">.&lt;/span>&lt;span class="nc">red&lt;/span> &lt;span class="p">{&lt;/span>
