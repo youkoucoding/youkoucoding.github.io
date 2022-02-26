@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 25 Feb 2022 10:13:29 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 162</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-162/</link><pubDate>Fri, 25 Feb 2022 10:13:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-162/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 26 Feb 2022 10:35:29 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 163</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-163/</link><pubDate>Sat, 26 Feb 2022 10:35:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-163/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="xpath和dom区别">&lt;code>xpath&lt;/code>和&lt;code>dom&lt;/code>区别&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>xpath&lt;/code>是一门在 XML 文档中查找信息的语言&lt;/li>
+&lt;li>&lt;code>DOM&lt;/code>是文档对象类型。
+&lt;ul>
+&lt;li>W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。
+&lt;ul>
+&lt;li>核心 DOM - 针对任何结构化文档的标准模型&lt;/li>
+&lt;li>XML DOM - 针对 XML 文档的标准模型&lt;/li>
+&lt;li>HTML DOM - 针对 HTML 文档的标准模型&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="创建一个-worker-线程">创建一个 &lt;code>worker&lt;/code> 线程&lt;/h3>
+&lt;ul>
+&lt;li>webworker 基本流程，新建一个 worker，然后 postMessage 来传递数据，onmessage 接收数据并执行函数&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="kr">const&lt;/span> &lt;span class="nx">worker&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Worker&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;a.js&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">worker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">postMessage&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Hello World&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="nx">worker&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onmessage&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;span class="p">};&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tips">Tips&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>在做响应式网站的话，优先做移动端的网页，再去适配桌面端，这样移动端用的代码量少，有助于提高性能&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>async&lt;/code> 属性。立即请求文件，但不阻塞渲染引擎，而是文件加载完毕后阻塞渲染引擎并立即执行文件内容。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>defer&lt;/code> 属性。立即请求文件，但不阻塞渲染引擎，等到解析完 HTML 之后再执行文件内容。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>HTML5&lt;/code> 标准 type 属性，对应值为“module”。让浏览器按照 ECMA Script 6 标准将文件当作模块进行解析，默认阻塞效果同 defer，也可以配合 async 在请求完成后立即执行。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>link&lt;/code> 标签：通过预处理提升渲染速度&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>dns-prefetch&lt;/code>。当 link 标签的 rel 属性值为“dns-prefetch”时，浏览器会对某个域名预先进行 DNS 解析并缓存。这样，当浏览器在请求同域名资源的时候，能省去从域名查询 IP 的过程，从而减少时间损耗&lt;/li>
+&lt;li>&lt;code>preconnect&lt;/code>。让浏览器在一个 HTTP 请求正式发给服务器前预先执行一些操作，这包括 DNS 解析、TLS 协商、TCP 握手，通过消除往返延迟来为用户节省时间&lt;/li>
+&lt;li>&lt;code>prefetch/preload&lt;/code>。两个值都是让浏览器预先下载并缓存某个资源，但不同的是，prefetch 可能会在浏览器忙时被忽略，而 preload 则是一定会被预先下载&lt;/li>
+&lt;li>&lt;code>prerender&lt;/code>。浏览器不仅会加载资源，还会解析执行页面，进行预渲染&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 184;
+flex-basis: 441px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-163/link-preformance.png" data-size="1748x950">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-163/link-preformance.png"
+width="1748"
+height="950"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-163/link-preformance_hufd1b58afb4daf7b5d8c1ae5eddec93dd_208218_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-163/link-preformance_hufd1b58afb4daf7b5d8c1ae5eddec93dd_208218_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="标签的性能优化">
+&lt;/a>
+&lt;figcaption>&lt;!-- raw HTML omitted -->&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>搜索优化
+&lt;ul>
+&lt;li>&lt;code>meta&lt;/code> 标签：提取关键信息
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://ogp.me/" target="_blank" rel="noopener"
+>The Open Graph protocol&lt;/a>&lt;/li>
+&lt;li>&lt;code>content&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>link&lt;/code> 标签：减少重复:&lt;code>rel=&amp;quot;canonical&amp;quot;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Worker/Worker" target="_blank" rel="noopener"
+>Worker() - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.ruanyifeng.com/blog/2018/07/web-worker.html" target="_blank" rel="noopener"
+>Web Worker 使用教程 - 阮一峰的网络日志&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/Performance/dns-prefetch" target="_blank" rel="noopener"
+>dns-prefetch - Web 性能 | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 162</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-162/</link><pubDate>Fri, 25 Feb 2022 10:13:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-162/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="output">&lt;code>output&lt;/code>&lt;/h3>
 &lt;ul>
 &lt;li>定义表单输出&lt;/li>
