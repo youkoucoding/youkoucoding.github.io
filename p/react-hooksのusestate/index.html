@@ -1,7 +1,6 @@
 <!doctype html><html lang=zh-cn>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Reactコアhooksの解説"><title>React HooksのUseState</title>
-<link rel=canonical href=https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Reactコアhooksの解説"><title>React HooksのUseState</title><link rel=canonical href=https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="React HooksのUseState">
 <meta property="og:description" content="Reactコアhooksの解説">
 <meta property="og:url" content="https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/">
@@ -11,182 +10,106 @@
 <meta name=twitter:description content="Reactコアhooksの解説"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://youkoucoding.github.io/p/react-hooks%E3%81%AEusestate/hooks-cover.jpg">
 <link rel="shortcut icon" href=/img/site-icon.png>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+</head><body class="article-page has-toc">
+<script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
 <div class="container main-container flex
 extended">
 <div id=article-toolbar>
 <a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
 <span>返回</span>
 </a>
-</div>
-<main class="main full-width">
+</div><main class="main full-width">
 <article class="has-image main-article">
 <header class=article-header>
 <div class=article-image>
 <a href=/p/react-hooks%E3%81%AEusestate/>
 <img src=/p/react-hooks%E3%81%AEusestate/hooks-cover_hu159474c7d83af7f6a0599b815240c53c_1979727_800x0_resize_q75_box.jpg srcset="/p/react-hooks%E3%81%AEusestate/hooks-cover_hu159474c7d83af7f6a0599b815240c53c_1979727_800x0_resize_q75_box.jpg 800w, /p/react-hooks%E3%81%AEusestate/hooks-cover_hu159474c7d83af7f6a0599b815240c53c_1979727_1600x0_resize_q75_box.jpg 1600w" width=800 height=601 loading=lazy alt="Featured image of post React HooksのUseState">
 </a>
-</div>
-<div class=article-details>
+</div><div class=article-details>
 <header class=article-category>
 <a href=/categories/react-hooks/>
 React Hooks
 </a>
-</header>
-<h2 class=article-title>
+</header><h2 class=article-title>
 <a href=/p/react-hooks%E3%81%AEusestate/>React HooksのUseState</a>
-</h2>
-<h3 class=article-subtitle>
+</h2><h3 class=article-subtitle>
 Reactコアhooksの解説
-</h3>
-<footer class=article-time>
+</h3><footer class=article-time>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published>Sep 29, 2021</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>
 阅读时长: 1 分钟
 </time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h1 id=usestate-让函数组建具有维持状态的能力>useState: 让函数组建具有维持状态的能力</h1>
-<h2 id=example>Example</h2>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kr>import</span> <span class=nx>React</span><span class=p>,</span> <span class=p>{</span> <span class=nx>useState</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;react&#39;</span><span class=p>;</span>
-
-<span class=kr>const</span> <span class=nx>Example</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
-  <span class=kr>const</span> <span class=p>[</span><span class=nx>count</span><span class=p>,</span> <span class=nx>setCount</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=mi>0</span><span class=p>);</span>
-
-  <span class=k>return</span> <span class=p>(</span>
-    <span class=o>&lt;</span><span class=nx>div</span><span class=o>&gt;</span>
-      <span class=o>&lt;</span><span class=nx>p</span><span class=o>&gt;</span><span class=p>{</span><span class=nx>count</span><span class=p>}</span><span class=o>&lt;</span><span class=err>/p&gt;</span>
-      <span class=o>&lt;</span><span class=nx>button</span> <span class=nx>onClick</span><span class=o>=</span><span class=p>{()</span> <span class=p>=&gt;</span> <span class=nx>setCount</span><span class=p>(</span><span class=nx>count</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)}</span><span class=o>&gt;+&lt;</span><span class=err>/button&gt;</span>
-    <span class=o>&lt;</span><span class=err>/div&gt;</span>
-  <span class=p>);</span>
-<span class=p>};</span>
-</code></pre></div><h2 id=usage>Usage</h2>
-<ol>
+</div></footer></div></header><section class=article-content>
+<h1 id=usestate-让函数组建具有维持状态的能力>useState: 让函数组建具有维持状态的能力</h1><h2 id=example>Example</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>import</span> <span class=nx>React</span><span class=p>,</span> <span class=p>{</span> <span class=nx>useState</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;react&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>Example</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>count</span><span class=p>,</span> <span class=nx>setCount</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=o>&lt;</span><span class=nx>div</span><span class=o>&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=o>&lt;</span><span class=nx>p</span><span class=o>&gt;</span><span class=p>{</span><span class=nx>count</span><span class=p>}</span><span class=o>&lt;</span><span class=err>/p&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=o>&lt;</span><span class=nx>button</span> <span class=nx>onClick</span><span class=o>=</span><span class=p>{()</span> <span class=p>=&gt;</span> <span class=nx>setCount</span><span class=p>(</span><span class=nx>count</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)}</span><span class=o>&gt;+&lt;</span><span class=err>/button&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=o>&lt;</span><span class=err>/div&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></div><h2 id=usage>Usage</h2><ol>
 <li>
-<p><code>useState(initialState)</code> 参数 <code>initialState</code> 是创建 state 的初始值， 它可以是<strong>任意类型</strong></p>
-</li>
+<p><code>useState(initialState)</code> 参数 <code>initialState</code> 是创建 state 的初始值， 它可以是<strong>任意类型</strong></p></li><li>
+<p><code>useState()</code>的返回值是一个有着两个元素的数组。 第一个数组元素用来读取 <code>state</code> 的值， 第二个则是用来设置这个 state 的值的函数。 <code>state</code>为只读变量， 且必须通过<code>setCount</code>来设置 <code>state</code></p></li><li>
+<p>如果要创建多个 state， 需要多次调用<code>useState</code></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=p>[</span><span class=nx>age</span><span class=p>,</span> <span class=nx>setAge</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=mi>99</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=p>[</span><span class=nx>fruit</span><span class=p>,</span> <span class=nx>setFruit</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=s1>&#39;banana&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=p>[</span><span class=nx>todos</span><span class=p>,</span> <span class=nx>setTodos</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>([{</span> <span class=nx>text</span><span class=o>:</span> <span class=s1>&#39;react hooks&#39;</span> <span class=p>}]);</span>
+</span></span></code></pre></div></li></ol><h2 id=principles>Principles</h2><ol>
 <li>
-<p><code>useState()</code>的返回值是一个有着两个元素的数组。 第一个数组元素用来读取 <code>state</code> 的值， 第二个则是用来设置这个 state 的值的函数。 <code>state</code>为只读变量， 且必须通过<code>setCount</code>来设置 <code>state</code></p>
-</li>
-<li>
-<p>如果要创建多个 state， 需要多次调用<code>useState</code></p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=p>[</span><span class=nx>age</span><span class=p>,</span> <span class=nx>setAge</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=mi>99</span><span class=p>);</span>
-<span class=kr>const</span> <span class=p>[</span><span class=nx>fruit</span><span class=p>,</span> <span class=nx>setFruit</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=s1>&#39;banana&#39;</span><span class=p>);</span>
-<span class=kr>const</span> <span class=p>[</span><span class=nx>todos</span><span class=p>,</span> <span class=nx>setTodos</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>([{</span> <span class=nx>text</span><span class=o>:</span> <span class=s1>&#39;react hooks&#39;</span> <span class=p>}]);</span>
-</code></pre></div></li>
-</ol>
-<h2 id=principles>Principles</h2>
-<ol>
-<li>
-<p><code>useState</code>中的 set 与 <code>class</code> 组件中 <code>setState</code> 类似， 但是 class 组件中的 state 只有一个，因此在类组件中，一般采用<strong>对象作为一个 state</strong>； <code>useState</code>可以多次创建，更加语义化。</p>
-</li>
-<li>
-<p><code>state</code>中<strong>永远不要保存可以通过计算得到的值。</strong></p>
-<ul>
-<li><strong>从 props 传递过来的值</strong>。 sometimes props 传递过来的值无法直接使用，而是需要通过一定的计算后再在 UI 上展示， 比如排序等。 此时， 在需要使用此数据的时候都重新排序，或者， 利用缓存机制， 而不是将结果直接置入<code>state</code></li>
-<li><strong>从<code>URL</code>中读取的值</strong>。 例如，有时需要读取 url 中的参数，作为组件的一部分状态。 此时， 应在需要的时候读取，而不是存入 state</li>
-<li><strong><code>cookies</code> <code>localStorage</code>中读取的值</strong>，应每次都去读取。</li>
-</ul>
-</li>
-</ol>
-</section>
-<footer class=article-footer>
+<p><code>useState</code>中的 set 与 <code>class</code> 组件中 <code>setState</code> 类似， 但是 class 组件中的 state 只有一个，因此在类组件中，一般采用<strong>对象作为一个 state</strong>； <code>useState</code>可以多次创建，更加语义化。</p></li><li>
+<p><code>state</code>中<strong>永远不要保存可以通过计算得到的值。</strong></p><ul>
+<li><strong>从 props 传递过来的值</strong>。 sometimes props 传递过来的值无法直接使用，而是需要通过一定的计算后再在 UI 上展示， 比如排序等。 此时， 在需要使用此数据的时候都重新排序，或者， 利用缓存机制， 而不是将结果直接置入<code>state</code></li><li><strong>从<code>URL</code>中读取的值</strong>。 例如，有时需要读取 url 中的参数，作为组件的一部分状态。 此时， 应在需要的时候读取，而不是存入 state</li><li><strong><code>cookies</code> <code>localStorage</code>中读取的值</strong>，应每次都去读取。</li></ul></li></ol></section><footer class=article-footer>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title>相关文章</h2>
-<div class=related-contents>
+</section></footer></article><aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2><div class=related-contents>
 <div class="flex article-list--tile">
 <article class=has-image>
 <a href=/p/react-hooks%E3%81%AEuseeffect/>
 <div class=article-image>
 <img src=/p/react-hooks%E3%81%AEuseeffect/hooks-cover.e655c9928e32d1644a6bb8a886a1e01f_hu159474c7d83af7f6a0599b815240c53c_1979727_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-5lXJko4y0WRKa7iohqHgHw==">
-</div>
-<div class=article-details>
-<h2 class=article-title>React HooksのUseEffect</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<footer class=site-footer>
+</div><div class=article-details>
+<h2 class=article-title>React HooksのUseEffect</h2></div></a>
+</article></div></div></aside><footer class=site-footer>
 <section class=copyright>
 &copy;
 2021 -
 2022 技術の手帳
-</section>
-<section class=powerby>
+</section><section class=powerby>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
 Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
+</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div><div class=pswp__scroll-wrap>
 <div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
 <div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 <div class=pswp__preloader>
 <div class=pswp__preloader__icn>
 <div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
 </button>
 <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
 </button>
 <div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
+<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main><aside class="sidebar right-sidebar sticky">
 <section class="widget archives">
 <div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title">目录</h2>
-<div class=widget--toc>
+</div><h2 class="widget-title section-title">目录</h2><div class=widget--toc>
 <nav id=TableOfContents>
 <ol>
-<li><a href=#example>Example</a></li>
-<li><a href=#usage>Usage</a></li>
-<li><a href=#principles>Principles</a></li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<li><a href=#example>Example</a></li><li><a href=#usage>Usage</a></li><li><a href=#principles>Principles</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
+</body></html>

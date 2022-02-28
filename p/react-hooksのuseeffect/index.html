@@ -1,7 +1,6 @@
 <!doctype html><html lang=zh-cn>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Reactコアhooksの解説, useEffect, Dependencies, eslint"><title>React HooksのUseEffect</title>
-<link rel=canonical href=https://youkoucoding.github.io/p/react-hooks%E3%81%AEuseeffect/>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Reactコアhooksの解説, useEffect, Dependencies, eslint"><title>React HooksのUseEffect</title><link rel=canonical href=https://youkoucoding.github.io/p/react-hooks%E3%81%AEuseeffect/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="React HooksのUseEffect">
 <meta property="og:description" content="Reactコアhooksの解説, useEffect, Dependencies, eslint">
 <meta property="og:url" content="https://youkoucoding.github.io/p/react-hooks%E3%81%AEuseeffect/">
@@ -11,311 +10,187 @@
 <meta name=twitter:description content="Reactコアhooksの解説, useEffect, Dependencies, eslint"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://youkoucoding.github.io/p/react-hooks%E3%81%AEuseeffect/hooks-cover.jpg">
 <link rel="shortcut icon" href=/img/site-icon.png>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+</head><body class="article-page has-toc">
+<script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
 <div class="container main-container flex
 extended">
 <div id=article-toolbar>
 <a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
 <span>返回</span>
 </a>
-</div>
-<main class="main full-width">
+</div><main class="main full-width">
 <article class="has-image main-article">
 <header class=article-header>
 <div class=article-image>
 <a href=/p/react-hooks%E3%81%AEuseeffect/>
 <img src=/p/react-hooks%E3%81%AEuseeffect/hooks-cover_hu159474c7d83af7f6a0599b815240c53c_1979727_800x0_resize_q75_box.jpg srcset="/p/react-hooks%E3%81%AEuseeffect/hooks-cover_hu159474c7d83af7f6a0599b815240c53c_1979727_800x0_resize_q75_box.jpg 800w, /p/react-hooks%E3%81%AEuseeffect/hooks-cover_hu159474c7d83af7f6a0599b815240c53c_1979727_1600x0_resize_q75_box.jpg 1600w" width=800 height=601 loading=lazy alt="Featured image of post React HooksのUseEffect">
 </a>
-</div>
-<div class=article-details>
+</div><div class=article-details>
 <header class=article-category>
 <a href=/categories/react-hooks/>
 React Hooks
 </a>
-</header>
-<h2 class=article-title>
+</header><h2 class=article-title>
 <a href=/p/react-hooks%E3%81%AEuseeffect/>React HooksのUseEffect</a>
-</h2>
-<h3 class=article-subtitle>
+</h2><h3 class=article-subtitle>
 Reactコアhooksの解説, useEffect, Dependencies, eslint
-</h3>
-<footer class=article-time>
+</h3><footer class=article-time>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published>Sep 30, 2021</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>
 阅读时长: 3 分钟
 </time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h1 id=usestate-执行副作用>useState: 执行副作用</h1>
-<h3 id=副作用的定义>副作用的定义</h3>
-<p>通常，副作用是指一段和当前执行结果无关的代码。比如说要修改函数外部的某个变凉，或者发起一个请求等。 在函数组建本次执行中，useEffect 中代码的执行是不影响渲染出来的 UI。</p>
-<p>Side effects are all the operations that affect your componet and can&rsquo;t be done during rendering. Things like fetching data, subscriptions or manually changing the DOM are all examples of side effects.</p>
-<h3 id=usage>Usage</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=nx>useEffect</span><span class=p>(</span><span class=nx>callback</span><span class=p>,</span> <span class=nx>dependencies</span><span class=p>);</span>
-</code></pre></div><ul>
+</div></footer></div></header><section class=article-content>
+<h1 id=usestate-执行副作用>useState: 执行副作用</h1><h3 id=副作用的定义>副作用的定义</h3><p>通常，副作用是指一段和当前执行结果无关的代码。比如说要修改函数外部的某个变凉，或者发起一个请求等。 在函数组建本次执行中，useEffect 中代码的执行是不影响渲染出来的 UI。</p><p>Side effects are all the operations that affect your componet and can&rsquo;t be done during rendering. Things like fetching data, subscriptions or manually changing the DOM are all examples of side effects.</p><h3 id=usage>Usage</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=nx>useEffect</span><span class=p>(</span><span class=nx>callback</span><span class=p>,</span> <span class=nx>dependencies</span><span class=p>);</span>
+</span></span></code></pre></div><ul>
 <li>
-<p><code>callback</code>, 要执行的回调函数；</p>
-</li>
+<p><code>callback</code>, 要执行的回调函数；</p></li><li>
+<p><code>dependencies</code> 可选的依赖项数组。可选， 如果没有依赖项，callback 在函数组建<strong>每次</strong>执行完成之后都执行;如果依赖项是空数组，则只在第一渲染时实行回调函数； 如果指定依赖项，则在依赖项变化时才执行 callback</p></li><li>
+<p><strong><code>useEffect</code></strong> 是每次组件 render 结束后，判断依赖项并执行。</p></li></ul><ol>
+<li><strong>No dependencies array:</strong> the function runs after <strong>every render</strong></li><li><strong>Empty dependencies array:</strong> the function runs only after the <strong>first render</strong> <em>(use this for the stuff it&rsquo;s doing will never get stale)</em></li><li><strong>Dependencies array with some values:</strong> the function runs only if any of those values change</li><li>此外，<code>useEffect</code> 允许<strong>返回一个函数</strong>，用与在组件销毁时，做一些清理操作，防止内存泄漏。 例如，移除监听事件。 类似于 类组件中的 <code>componentWillUnmount</code></li></ol><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kd>function</span> <span class=nx>MyComponent</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>React</span><span class=p>.</span><span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// I need to do this just once, after the first render
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=p>},</span> <span class=p>[]);</span>
+</span></span><span class=line><span class=cl>  <span class=nx>React</span><span class=p>.</span><span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// But this other thing needs to be done after every render
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=p>});</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>...</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>import</span> <span class=nx>React</span><span class=p>,</span> <span class=p>{</span> <span class=nx>useState</span><span class=p>,</span> <span class=nx>useEffect</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;react&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>BlogView</span><span class=p>({</span> <span class=nx>id</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// local state to preserve the blog content
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=kr>const</span> <span class=p>[</span><span class=nx>blog</span><span class=p>,</span> <span class=nx>setBlog</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=kc>null</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// useEffect 的 callback 要避免直接使用 async， 需要进行封装
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kr>const</span> <span class=nx>doAsynv</span> <span class=o>=</span> <span class=kr>async</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=c1>// 当 ID 发生变化时，将当前博客清除， 以保持内容的一致性
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nx>setBlog</span><span class=p>(</span><span class=kc>null</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      <span class=c1>// 发起请求，获取数据
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=kr>const</span> <span class=nx>res</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=s1>&#39;/blog-content/${id}&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=c1>// 将数据存入 state
+</span></span></span><span class=line><span class=cl><span class=c1></span>      <span class=nx>setBlog</span><span class=p>(</span><span class=kr>await</span> <span class=nx>res</span><span class=p>.</span><span class=nx>text</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>};</span>
+</span></span><span class=line><span class=cl>    <span class=nx>doAsync</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span> <span class=p>[</span><span class=nx>id</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>isLoading</span> <span class=o>=</span> <span class=o>!</span><span class=nx>blog</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;{</span><span class=nx>isLoading</span> <span class=o>?</span> <span class=s1>&#39;loading...&#39;</span> <span class=o>:</span> <span class=nx>blog</span><span class=p>}&lt;/</span><span class=nt>div</span><span class=p>&gt;;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><blockquote>
+<p><strong>Attention</strong>: If you use the dependencies array, make sure it includes all values from the component scope (such as props and state) that change over time and that are used by the effect. If you&rsquo;ve forgotten a value or thinked that you don&rsquo;t need it in the array, you will produce bugs, because your code will reference stale values from previous renders.</p></blockquote><h2 id=something-more-about-useeffect>Something More about useEffect</h2><ul>
 <li>
-<p><code>dependencies</code> 可选的依赖项数组。可选， 如果没有依赖项，callback 在函数组建<strong>每次</strong>执行完成之后都执行;如果依赖项是空数组，则只在第一渲染时实行回调函数； 如果指定依赖项，则在依赖项变化时才执行 callback</p>
-</li>
+<p>使用多个 <code>useEffect</code>, 可以实现关注点分离，即将不相关的逻辑分离到不同的 <code>useEffect</code> 中</p></li><li>
+<p>函数适合放在 effect 内部还是外部？</p><ul>
 <li>
-<p><strong><code>useEffect</code></strong> 是每次组件 render 结束后，判断依赖项并执行。</p>
-</li>
-</ul>
-<ol>
-<li><strong>No dependencies array:</strong> the function runs after <strong>every render</strong></li>
-<li><strong>Empty dependencies array:</strong> the function runs only after the <strong>first render</strong> <em>(use this for the stuff it&rsquo;s doing will never get stale)</em></li>
-<li><strong>Dependencies array with some values:</strong> the function runs only if any of those values change</li>
-<li>此外，<code>useEffect</code> 允许<strong>返回一个函数</strong>，用与在组件销毁时，做一些清理操作，防止内存泄漏。 例如，移除监听事件。 类似于 类组件中的 <code>componentWillUnmount</code></li>
-</ol>
-<hr>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=kd>function</span> <span class=nx>MyComponent</span><span class=p>()</span> <span class=p>{</span>
-  <span class=nx>React</span><span class=p>.</span><span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=c1>// I need to do this just once, after the first render
-</span><span class=c1></span>  <span class=p>},</span> <span class=p>[]);</span>
-  <span class=nx>React</span><span class=p>.</span><span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=c1>// But this other thing needs to be done after every render
-</span><span class=c1></span>  <span class=p>});</span>
-  <span class=k>return</span> <span class=p>...</span>
-<span class=p>}</span>
-</code></pre></div><hr>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=kr>import</span> <span class=nx>React</span><span class=p>,</span> <span class=p>{</span> <span class=nx>useState</span><span class=p>,</span> <span class=nx>useEffect</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;react&#39;</span><span class=p>;</span>
-
-<span class=kd>function</span> <span class=nx>BlogView</span><span class=p>({</span> <span class=nx>id</span> <span class=p>})</span> <span class=p>{</span>
-  <span class=c1>// local state to preserve the blog content
-</span><span class=c1></span>  <span class=kr>const</span> <span class=p>[</span><span class=nx>blog</span><span class=p>,</span> <span class=nx>setBlog</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=kc>null</span><span class=p>);</span>
-
-  <span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=c1>// useEffect 的 callback 要避免直接使用 async， 需要进行封装
-</span><span class=c1></span>    <span class=kr>const</span> <span class=nx>doAsynv</span> <span class=o>=</span> <span class=kr>async</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
-      <span class=c1>// 当 ID 发生变化时，将当前博客清除， 以保持内容的一致性
-</span><span class=c1></span>      <span class=nx>setBlog</span><span class=p>(</span><span class=kc>null</span><span class=p>);</span>
-
-      <span class=c1>// 发起请求，获取数据
-</span><span class=c1></span>      <span class=kr>const</span> <span class=nx>res</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=s1>&#39;/blog-content/${id}&#39;</span><span class=p>);</span>
-      <span class=c1>// 将数据存入 state
-</span><span class=c1></span>      <span class=nx>setBlog</span><span class=p>(</span><span class=kr>await</span> <span class=nx>res</span><span class=p>.</span><span class=nx>text</span><span class=p>);</span>
-    <span class=p>};</span>
-    <span class=nx>doAsync</span><span class=p>();</span>
-  <span class=p>},</span> <span class=p>[</span><span class=nx>id</span><span class=p>]);</span>
-
-  <span class=kr>const</span> <span class=nx>isLoading</span> <span class=o>=</span> <span class=o>!</span><span class=nx>blog</span><span class=p>;</span>
-  <span class=k>return</span> <span class=p>&lt;</span><span class=nt>div</span><span class=p>&gt;{</span><span class=nx>isLoading</span> <span class=o>?</span> <span class=s1>&#39;loading...&#39;</span> <span class=o>:</span> <span class=nx>blog</span><span class=p>}&lt;/</span><span class=nt>div</span><span class=p>&gt;;</span>
-<span class=p>}</span>
-</code></pre></div><blockquote>
-<p><strong>Attention</strong>: If you use the dependencies array, make sure it includes all values from the component scope (such as props and state) that change over time and that are used by the effect. If you&rsquo;ve forgotten a value or thinked that you don&rsquo;t need it in the array, you will produce bugs, because your code will reference stale values from previous renders.</p>
-</blockquote>
-<h2 id=something-more-about-useeffect>Something More about useEffect</h2>
-<ul>
+<p>推荐的方案:函数在 <code>useEffect</code> 内部, 如下：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kd>function</span> <span class=nx>ProductPage</span><span class=p>({</span> <span class=nx>productId</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>product</span><span class=p>,</span> <span class=nx>setProduct</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=kc>null</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 把这个函数移动到 effect 内部后，我们可以清楚地看到它用到的值。
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kr>async</span> <span class=kd>function</span> <span class=nx>fetchProduct</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=kr>const</span> <span class=nx>response</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=s1>&#39;http://myapi/product/&#39;</span> <span class=o>+</span> <span class=nx>productId</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=kr>const</span> <span class=nx>json</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>      <span class=nx>setProduct</span><span class=p>(</span><span class=nx>json</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>fetchProduct</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span> <span class=p>[</span><span class=nx>productId</span><span class=p>]);</span> <span class=c1>// ✅ 有效，只用到了 productId
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></div></li><li>
+<p>如果无法 把一个函数移动到 effect 内部，还有一些其他办法：</p><ol>
+<li>尝试把那个函数移动到组件之外</li><li>如果所调用的方法是一个纯计算，并且可以在渲染时调用，可以在 <code>useEffect</code> 之外调用， 让 useEffect 依赖它的返回值</li><li><code>useCallback</code></li></ol></li></ul></li></ul><h2 id=dependencies-of-hooks>Dependencies of Hooks</h2><p>Hooks 中依赖项的工作机制：</p><p>Hooks 提供了监听某个数据变化的能力，这个变化可能会触发组件的刷新， 创建副作用， 更新缓存等。要监听变化的数据，就是指定 hooks 的依赖项。</p><p>指定依赖项的注意点：</p><ol>
+<li>依赖项中指定的变量，一定要在 回调函数 中用到；</li><li>依赖项一般是一个<strong>常量数组</strong>， 而不是一个变量；</li><li><code>React</code>会使用 <em>浅比较</em> 来对比依赖项是否发生变化，所以要特别注意数组或者说对象类型（各种引用类型）。 例如： 如果是每次创建一个新的饮用类型，即使值和原来比没有变化， 也会被认为是依赖项发生了变化。
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>const</span> <span class=nx>Todo</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=c1>// 这里的todos是在函数内部创建的， 实际上每次运行都会产生新的数组。
+</span></span></span><span class=line><span class=cl><span class=c1>// 在依赖比较时， 被认为是发生了新的变化。
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=kr>const</span> <span class=nx>todos</span> <span class=o>=</span> <span class=p>[{</span> <span class=nx>text</span><span class=o>:</span> <span class=s1>&#39;learn something&#39;</span> <span class=p>}];</span>
+</span></span><span class=line><span class=cl>  <span class=nx>useEffect</span><span class=p>(()</span><span class=o>=</span><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;todos has changed~&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>},[</span><span class=nx>todos</span><span class=p>])</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></div></li><li><strong>React 会确保 setState 函数的标识是稳定的，并且不会在组件重新渲染时发生变化</strong>。这就是为什么可以安全地从 <code>useEffect</code> 或 <code>useCallback</code> 的依赖列表中省略 <code>setState</code>。(React guarantees that setState function identity is stable and won’t change on re-renders. This is why it’s safe to omit from the useEffect or useCallback dependency list.)</li></ol><h2 id=hooks-使用规则>Hooks 使用规则</h2><ol>
 <li>
-<p>使用多个 <code>useEffect</code>, 可以实现关注点分离，即将不相关的逻辑分离到不同的 <code>useEffect</code> 中</p>
-</li>
-<li>
-<p>函数适合放在 effect 内部还是外部？</p>
-<ul>
-<li>
-<p>推荐的方案:函数在 <code>useEffect</code> 内部, 如下：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=kd>function</span> <span class=nx>ProductPage</span><span class=p>({</span> <span class=nx>productId</span> <span class=p>})</span> <span class=p>{</span>
-  <span class=kr>const</span> <span class=p>[</span><span class=nx>product</span><span class=p>,</span> <span class=nx>setProduct</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=kc>null</span><span class=p>);</span>
-
-  <span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=c1>// 把这个函数移动到 effect 内部后，我们可以清楚地看到它用到的值。
-</span><span class=c1></span>    <span class=kr>async</span> <span class=kd>function</span> <span class=nx>fetchProduct</span><span class=p>()</span> <span class=p>{</span>
-      <span class=kr>const</span> <span class=nx>response</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=s1>&#39;http://myapi/product/&#39;</span> <span class=o>+</span> <span class=nx>productId</span><span class=p>);</span>
-      <span class=kr>const</span> <span class=nx>json</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>();</span>
-      <span class=nx>setProduct</span><span class=p>(</span><span class=nx>json</span><span class=p>);</span>
-    <span class=p>}</span>
-
-    <span class=nx>fetchProduct</span><span class=p>();</span>
-  <span class=p>},</span> <span class=p>[</span><span class=nx>productId</span><span class=p>]);</span> <span class=c1>// ✅ 有效，只用到了 productId
-</span><span class=c1></span><span class=p>}</span>
-</code></pre></div></li>
-<li>
-<p>如果无法 把一个函数移动到 effect 内部，还有一些其他办法：</p>
-<ol>
-<li>尝试把那个函数移动到组件之外</li>
-<li>如果所调用的方法是一个纯计算，并且可以在渲染时调用，可以在 <code>useEffect</code> 之外调用， 让 useEffect 依赖它的返回值</li>
-<li><code>useCallback</code></li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id=dependencies-of-hooks>Dependencies of Hooks</h2>
-<p>Hooks 中依赖项的工作机制：</p>
-<p>Hooks 提供了监听某个数据变化的能力，这个变化可能会触发组件的刷新， 创建副作用， 更新缓存等。要监听变化的数据，就是指定 hooks 的依赖项。</p>
-<p>指定依赖项的注意点：</p>
-<ol>
-<li>依赖项中指定的变量，一定要在 回调函数 中用到；</li>
-<li>依赖项一般是一个<strong>常量数组</strong>， 而不是一个变量；</li>
-<li><code>React</code>会使用 <em>浅比较</em> 来对比依赖项是否发生变化，所以要特别注意数组或者说对象类型（各种引用类型）。 例如： 如果是每次创建一个新的饮用类型，即使值和原来比没有变化， 也会被认为是依赖项发生了变化。
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=kr>const</span> <span class=nx>Todo</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
-<span class=c1>// 这里的todos是在函数内部创建的， 实际上每次运行都会产生新的数组。
-</span><span class=c1>// 在依赖比较时， 被认为是发生了新的变化。
-</span><span class=c1></span>  <span class=kr>const</span> <span class=nx>todos</span> <span class=o>=</span> <span class=p>[{</span> <span class=nx>text</span><span class=o>:</span> <span class=s1>&#39;learn something&#39;</span> <span class=p>}];</span>
-  <span class=nx>useEffect</span><span class=p>(()</span><span class=o>=</span><span class=p>{</span>
-    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;todos has changed~&#34;</span><span class=p>);</span>
-  <span class=p>},[</span><span class=nx>todos</span><span class=p>])</span>
-<span class=p>};</span>
-</code></pre></div></li>
-<li><strong>React 会确保 setState 函数的标识是稳定的，并且不会在组件重新渲染时发生变化</strong>。这就是为什么可以安全地从 <code>useEffect</code> 或 <code>useCallback</code> 的依赖列表中省略 <code>setState</code>。(React guarantees that setState function identity is stable and won’t change on re-renders. This is why it’s safe to omit from the useEffect or useCallback dependency list.)</li>
-</ol>
-<h2 id=hooks-使用规则>Hooks 使用规则</h2>
-<ol>
-<li>
-<p><strong>只能在函数组建的顶级作用域中使用</strong>，不能在循环，条件判断，或者嵌套函数中执行，必须在顶层</p>
-<ul>
+<p><strong>只能在函数组建的顶级作用域中使用</strong>，不能在循环，条件判断，或者嵌套函数中执行，必须在顶层</p><ul>
 <li>Hooks 在组件的多次渲染之间，必须按顺序执行。即：
 <ol>
-<li>所有 Hooks 都必须被执行到。（不能将 hooks 放在可能的 return 之后）</li>
-<li>Hooks 必须按顺序执行</li>
-</ol>
-</li>
-</ul>
-</li>
+<li>所有 Hooks 都必须被执行到。（不能将 hooks 放在可能的 return 之后）</li><li>Hooks 必须按顺序执行</li></ol></li></ul></li><li>
+<p><strong>只能在函数组件或者其他 Hooks 中使用</strong></p><ul>
 <li>
-<p><strong>只能在函数组件或者其他 Hooks 中使用</strong></p>
-<ul>
-<li>
-<p>如果必须在类组件使用，可以： <strong>利用高阶组件模式，将 Hooks 封装成高阶组件</strong>, 例程如下：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=kr>import</span> <span class=nx>React</span> <span class=nx>from</span> <span class=s1>&#39;react&#39;</span><span class=p>;</span>
-<span class=kr>import</span> <span class=p>{</span> <span class=nx>useWindowSize</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;./hooks/useWindowSize&#39;</span><span class=p>;</span>
-
-<span class=kr>export</span> <span class=kr>const</span> <span class=nx>withWindowSize</span> <span class=o>=</span> <span class=p>(</span><span class=nx>Component</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=p>(</span><span class=nx>props</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=kr>const</span> <span class=nx>windowSize</span> <span class=o>=</span> <span class=nx>useWindowSize</span><span class=p>();</span>
-    <span class=k>return</span> <span class=p>&lt;</span><span class=nt>Component</span> <span class=na>windowSize</span><span class=o>=</span><span class=p>{</span><span class=nx>windowSize</span><span class=p>}</span> <span class=p>{</span><span class=na>...props</span><span class=p>}</span> <span class=p>/&gt;;</span>
-  <span class=p>};</span>
-<span class=p>};</span>
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=c1>// 使用以上高阶组件
-</span><span class=c1></span><span class=kr>import</span> <span class=nx>React</span> <span class=nx>from</span> <span class=s1>&#39;react&#39;</span><span class=p>;</span>
-<span class=kr>import</span> <span class=p>{</span> <span class=nx>withWindowSize</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;./withWindowSize&#39;</span><span class=p>;</span>
-
-<span class=kr>class</span> <span class=nx>MyComp</span> <span class=p>{</span>
-  <span class=nx>render</span><span class=p>()</span> <span class=p>{</span>
-    <span class=kr>const</span> <span class=nx>windowSize</span> <span class=o>=</span> <span class=k>this</span><span class=p>.</span><span class=nx>props</span><span class=p>;</span>
-  <span class=p>}</span>
-<span class=p>}</span>
-
-<span class=c1>// 通过windowSize 高阶组件， 给MyComp 添加 windowSize 属性
-</span><span class=c1></span><span class=kr>export</span> <span class=k>default</span> <span class=nx>withWindowSize</span><span class=p>(</span><span class=nx>MyComp</span><span class=p>);</span>
-</code></pre></div></li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<p><strong><code>eslint-plugin-react-hooks</code></strong> 专门用来检查 hooks 是否被正确使用 <a class=link href=https://www.npmjs.com/package/eslint-plugin-react-hooks target=_blank rel=noopener>eslint-plugin-react-hooks - npm</a></p>
-</blockquote>
-<h2 id=reference>Reference</h2>
-<p><a class=link href="https://dev.to/francodalessio/understanding-react-s-useeffect-hook-lbg#:~:text=The%20useEffect%20Hook,-Plain%20and%20simple&text=Side%20effects%20are%20all%20the,likely%20done%20in%20the%20past." target=_blank rel=noopener>Understanding React&rsquo;s useEffect Hook - DEV Community</a></p>
-<p><a class=link href=https://juejin.cn/post/6844904056876433415 target=_blank rel=noopener>javascript 浅比较和深比较 - 掘金</a></p>
-<p><a class=link href=http://zoeice.com/react-hook-useEffect/ target=_blank rel=noopener>React Hook(useEffect) | Zoeice</a></p>
-</section>
-<footer class=article-footer>
+<p>如果必须在类组件使用，可以： <strong>利用高阶组件模式，将 Hooks 封装成高阶组件</strong>, 例程如下：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>import</span> <span class=nx>React</span> <span class=nx>from</span> <span class=s1>&#39;react&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=p>{</span> <span class=nx>useWindowSize</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;./hooks/useWindowSize&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>export</span> <span class=kr>const</span> <span class=nx>withWindowSize</span> <span class=o>=</span> <span class=p>(</span><span class=nx>Component</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span><span class=nx>props</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>windowSize</span> <span class=o>=</span> <span class=nx>useWindowSize</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=p>&lt;</span><span class=nt>Component</span> <span class=na>windowSize</span><span class=o>=</span><span class=p>{</span><span class=nx>windowSize</span><span class=p>}</span> <span class=p>{</span><span class=na>...props</span><span class=p>}</span> <span class=p>/&gt;;</span>
+</span></span><span class=line><span class=cl>  <span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=c1>// 使用以上高阶组件
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>import</span> <span class=nx>React</span> <span class=nx>from</span> <span class=s1>&#39;react&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=p>{</span> <span class=nx>withWindowSize</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;./withWindowSize&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>class</span> <span class=nx>MyComp</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>render</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>windowSize</span> <span class=o>=</span> <span class=k>this</span><span class=p>.</span><span class=nx>props</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// 通过windowSize 高阶组件， 给MyComp 添加 windowSize 属性
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>export</span> <span class=k>default</span> <span class=nx>withWindowSize</span><span class=p>(</span><span class=nx>MyComp</span><span class=p>);</span>
+</span></span></code></pre></div></li></ul></li></ol><blockquote>
+<p><strong><code>eslint-plugin-react-hooks</code></strong> 专门用来检查 hooks 是否被正确使用 <a class=link href=https://www.npmjs.com/package/eslint-plugin-react-hooks target=_blank rel=noopener>eslint-plugin-react-hooks - npm</a></p></blockquote><h2 id=reference>Reference</h2><p><a class=link href="https://dev.to/francodalessio/understanding-react-s-useeffect-hook-lbg#:~:text=The%20useEffect%20Hook,-Plain%20and%20simple&text=Side%20effects%20are%20all%20the,likely%20done%20in%20the%20past." target=_blank rel=noopener>Understanding React&rsquo;s useEffect Hook - DEV Community</a></p><p><a class=link href=https://juejin.cn/post/6844904056876433415 target=_blank rel=noopener>javascript 浅比较和深比较 - 掘金</a></p><p><a class=link href=http://zoeice.com/react-hook-useEffect/ target=_blank rel=noopener>React Hook(useEffect) | Zoeice</a></p></section><footer class=article-footer>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title>相关文章</h2>
-<div class=related-contents>
+</section></footer></article><aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2><div class=related-contents>
 <div class="flex article-list--tile">
 <article class=has-image>
 <a href=/p/react-hooks%E3%81%AEusestate/>
 <div class=article-image>
 <img src=/p/react-hooks%E3%81%AEusestate/hooks-cover.e655c9928e32d1644a6bb8a886a1e01f_hu159474c7d83af7f6a0599b815240c53c_1979727_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-5lXJko4y0WRKa7iohqHgHw==">
-</div>
-<div class=article-details>
-<h2 class=article-title>React HooksのUseState</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<footer class=site-footer>
+</div><div class=article-details>
+<h2 class=article-title>React HooksのUseState</h2></div></a>
+</article></div></div></aside><footer class=site-footer>
 <section class=copyright>
 &copy;
 2021 -
 2022 技術の手帳
-</section>
-<section class=powerby>
+</section><section class=powerby>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
 Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
+</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div><div class=pswp__scroll-wrap>
 <div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
 <div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 <div class=pswp__preloader>
 <div class=pswp__preloader__icn>
 <div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
 </button>
 <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
 </button>
 <div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
+<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main><aside class="sidebar right-sidebar sticky">
 <section class="widget archives">
 <div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title">目录</h2>
-<div class=widget--toc>
+</div><h2 class="widget-title section-title">目录</h2><div class=widget--toc>
 <nav id=TableOfContents>
 <ol>
 <li>
 <ol>
-<li><a href=#副作用的定义>副作用的定义</a></li>
-<li><a href=#usage>Usage</a></li>
-</ol>
-</li>
-<li><a href=#something-more-about-useeffect>Something More about useEffect</a></li>
-<li><a href=#dependencies-of-hooks>Dependencies of Hooks</a></li>
-<li><a href=#hooks-使用规则>Hooks 使用规则</a></li>
-<li><a href=#reference>Reference</a></li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<li><a href=#副作用的定义>副作用的定义</a></li><li><a href=#usage>Usage</a></li></ol></li><li><a href=#something-more-about-useeffect>Something More about useEffect</a></li><li><a href=#dependencies-of-hooks>Dependencies of Hooks</a></li><li><a href=#hooks-使用规则>Hooks 使用规则</a></li><li><a href=#reference>Reference</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
+</body></html>

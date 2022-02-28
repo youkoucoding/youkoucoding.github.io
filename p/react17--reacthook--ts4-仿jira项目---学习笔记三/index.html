@@ -1,0 +1,183 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="知识点： RESTful API Design"><title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（三）</title><link rel=canonical href=https://youkoucoding.github.io/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="React17 + ReactHook + TS4 仿Jira项目---学习笔记（三）">
+<meta property="og:description" content="知识点： RESTful API Design">
+<meta property="og:url" content="https://youkoucoding.github.io/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/">
+<meta property="og:site_name" content="技術の手帳">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-09-10T18:02:49+09:00"><meta property="article:modified_time" content="2021-09-10T18:02:49+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/restful-design.jpg">
+<meta name=twitter:title content="React17 + ReactHook + TS4 仿Jira项目---学习笔记（三）">
+<meta name=twitter:description content="知识点： RESTful API Design"><meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://youkoucoding.github.io/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/restful-design.jpg">
+<link rel="shortcut icon" href=/img/site-icon.png>
+</head><body class="article-page has-toc">
+<script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div><main class="main full-width">
+<article class="has-image main-article">
+<header class=article-header>
+<div class=article-image>
+<a href=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/>
+<img src=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/restful-design_hu2eb9b4a82207ed27ffff0ff503057274_1353210_800x0_resize_q75_box.jpg srcset="/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/restful-design_hu2eb9b4a82207ed27ffff0ff503057274_1353210_800x0_resize_q75_box.jpg 800w, /p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/restful-design_hu2eb9b4a82207ed27ffff0ff503057274_1353210_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post React17 + ReactHook + TS4 仿Jira项目---学习笔记（三）">
+</a>
+</div><div class=article-details>
+<header class=article-category>
+<a href=/categories/react/>
+React
+</a>
+<a href=/categories/typescript/>
+TypeScript
+</a>
+<a href=/categories/restful-api/>
+RESTful API
+</a>
+</header><h2 class=article-title>
+<a href=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89/>React17 + ReactHook + TS4 仿Jira项目---学习笔记（三）</a>
+</h2><h3 class=article-subtitle>
+知识点： RESTful API Design
+</h3><footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Sep 10, 2021</time>
+</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+阅读时长: 1 分钟
+</time>
+</div></footer></div></header><section class=article-content>
+<h1 id=知识点五-restful-api-设计>知识点五： Restful API 设计</h1><h2 id=1-endpoint>1. Endpoint</h2><p>表示 <code>API</code> 的具体地址</p><p>在 RESTful 架构中，每个网址代表一种资源（resource），所以网址中 <strong>不能有动词，只能有名词</strong>，而且所用的名词往往与数据库的表格名对应。一般来说，数据库中的表都是同种记录的"集合"（collection），所以 API 中的名词也应该使用复数。</p><pre tabindex=0><code># Example 应使用 HTTPs 协议
+
+https://api.example.com/v1/books
+
+https://api.example.com/v1/movies
+</code></pre><h2 id=2-http-method>2. HTTP METHOD</h2><p>对于资源的具体操作，应由 HTTP 动词表示。</p><pre tabindex=0><code># 常用方法, (对应 SQL 语句)
+
+GET（SELECT）：从服务器取出资源（一项或多项）。
+POST（CREATE）：在服务器新建一个资源。
+PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）。
+PATCH（UPDATE）：在服务器更新资源（客户端提供改变的属性）。
+DELETE（DELETE）：从服务器删除资源。
+</code></pre><pre tabindex=0><code># 具体的使用实例
+GET /zoos：列出所有动物园
+POST /zoos：新建一个动物园
+GET /zoos/ID：获取某个指定动物园的信息
+PUT /zoos/ID：更新某个指定动物园的信息（提供该动物园的全部信息）
+PATCH /zoos/ID：更新某个指定动物园的信息（提供该动物园的部分信息）
+DELETE /zoos/ID：删除某个动物园
+GET /zoos/ID/animals：列出某个指定动物园的所有动物
+DELETE /zoos/ID/animals/ID：删除某个指定动物园的指定动物
+</code></pre><h2 id=3-filtering>3. Filtering</h2><p>如果记录数量很大，服务器不可能将全部数据返回，此时，<code>API</code> 应提供参数，用于过滤返回结果。</p><pre tabindex=0><code># 以下是一些常用参数
+
+?limit=10：指定返回记录的数量
+?offset=10：指定返回记录的开始位置。
+?page=2&amp;per_page=100：指定第几页，以及每页的记录数。
+?sortby=name&amp;order=asc：指定返回结果按照哪个属性排序，以及排序顺序。
+?animal_type_id=1：指定筛选条件
+</code></pre><blockquote>
+<p>参数的设计允许存在冗余，例如：<code>GET /zoo/ID/animals</code> 等价于 <code>GET /animals?zoo_id=ID</code></p></blockquote><h2 id=4-status-code>4. Status Code</h2><pre tabindex=0><code># 服务器向用户返回的状态码和提示信息,常用状态码如下：
+200 OK - [GET]：服务器成功返回用户请求的数据，该操作是幂等的（Idempotent）。
+201 CREATED - [POST/PUT/PATCH]：用户新建或修改数据成功。
+202 Accepted - [*]：表示一个请求已经进入后台排队（异步任务）
+204 NO CONTENT - [DELETE]：用户删除数据成功。
+400 INVALID REQUEST - [POST/PUT/PATCH]：用户发出的请求有错误，服务器没有进行新建或修改数据的操作，该操作是幂等的。
+401 Unauthorized - [*]：表示用户没有权限（令牌、用户名、密码错误）。
+403 Forbidden - [*] 表示用户得到授权（与401错误相对），但是访问是被禁止的。
+404 NOT FOUND - [*]：用户发出的请求针对的是不存在的记录，服务器没有进行操作，该操作是幂等的。
+406 Not Acceptable - [GET]：用户请求的格式不可得（比如用户请求JSON格式，但是只有XML格式）。
+410 Gone -[GET]：用户请求的资源被永久删除，且不会再得到的。
+422 Unprocesable entity - [POST/PUT/PATCH] 当创建一个对象时，发生一个验证错误。
+500 INTERNAL SERVER ERROR - [*]：服务器发生错误，用户将无法判断发出的请求是否成功。
+</code></pre><blockquote>
+<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Glossary/Idempotent target=_blank rel=noopener>幂等 - 术语表 | MDN</a></p></blockquote><blockquote>
+<p><a class=link href=https://developer.mozilla.org/en-US/docs/Web/HTTP/Status target=_blank rel=noopener>HTTP response status codes - HTTP | MDN</a></p></blockquote><h2 id=5-error-handling>5. Error Handling</h2><pre tabindex=0><code>#  如果状态码是4xx，就应该向用户返回出错信息。
+{
+    error: &#34;Invalid API key&#34;
+}
+</code></pre><h2 id=6-返回结果的规范>6. 返回结果的规范</h2><pre tabindex=0><code>GET /collection：返回资源对象的列表（数组）
+GET /collection/resource：返回单个资源对象
+POST /collection：返回新生成的资源对象
+PUT /collection/resource：返回完整的资源对象
+PATCH /collection/resource：返回完整的资源对象
+DELETE /collection/resource：返回一个空文档
+</code></pre><h2 id=7-hypermedia-api-hateoas>7. Hypermedia API (HATEOAS)</h2><p>RESTful API 最好做到 Hypermedia，即返回结果中提供链接，连向其他 API 方法，使得用户不查文档，也知道下一步应该做什么。</p><pre tabindex=0><code># 比如，当用户向api.example.com的根目录发出请求，会得到这样一个文档。
+{&#34;link&#34;: {
+  &#34;rel&#34;:   &#34;collection https://www.example.com/zoos&#34;,
+  &#34;href&#34;:  &#34;https://api.example.com/zoos&#34;,
+  &#34;title&#34;: &#34;List of zoos&#34;,
+  &#34;type&#34;:  &#34;application/vnd.yourformat+json&#34;
+}}
+</code></pre><p>Hypermedia API 的设计被称为 HATEOAS。Github 的 API 就是这种设计，访问 <a class=link href=https://api.github.com/ target=_blank rel=noopener>https://api.github.com</a> 会得到一个所有可用 API 的网址列表。</p><h2 id=reference>Reference</h2><p><a class=link href=https://www.ruanyifeng.com/blog/2014/05/restful_api.html target=_blank rel=noopener>RESTful API 设计指南</a></p></section><footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section></footer></article><aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2><div class=related-contents>
+<div class="flex article-list--tile">
+<article class=has-image>
+<a href=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/>
+<div class=article-image>
+<img src=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%9B%9B/_hu51089687c1fc9d12fc6b9e54035b4415_553553_90fb3b1a26db07bc1cbe3a919a5e3a37.jpg width=250 height=150 loading=lazy data-key data-hash="md5-E2FwCBKyEAikxxRrGxmK0w==">
+</div><div class=article-details>
+<h2 class=article-title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（四）</h2></div></a>
+</article><article class=has-image>
+<a href=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/>
+<div class=article-image>
+<img src=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C/cover-api.b89eee8a30367aeaea2ecfd7c578cefb_hud4b58edf642f350337f29ff97407729b_1122407_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-uJ7uijA2eurqLs/XxXjO+w==">
+</div><div class=article-details>
+<h2 class=article-title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（二）</h2></div></a>
+</article><article class=has-image>
+<a href=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/>
+<div class=article-image>
+<img src=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/liftup-cover.e43b244f464470c1358bf2587fc9db84_hu13e64fc3938bf48c35bf882b9c49b497_2861451_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-5DskT0ZEcME1i/JYf8nbhA==">
+</div><div class=article-details>
+<h2 class=article-title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（六）</h2></div></a>
+</article><article class=has-image>
+<a href=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%94/>
+<div class=article-image>
+<img src=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%94/throttle-cover.689c9e4cdea4b9e0b382f6f3c24b6f34_huce846bc90c63bb66fde6ebec9b941b5a_4551878_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-aJyeTN6kueCzgvbzwktvNA==">
+</div><div class=article-details>
+<h2 class=article-title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（五）</h2></div></a>
+</article><article class=has-image>
+<a href=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/>
+<div class=article-image>
+<img src=/p/react17--reacthook--ts4-%E4%BB%BFjira%E9%A1%B9%E7%9B%AE---%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/react-jira-cover.f35a158e545cb9f3d52a367692e597aa_hu6fb94db3450be5959357d7afb44e190b_2444740_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-81oVjlRcufPVKjZ2kuWXqg==">
+</div><div class=article-details>
+<h2 class=article-title>React17 + ReactHook + TS4 仿Jira项目---学习笔记（一）</h2></div></a>
+</article></div></div></aside><footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 -
+2022 技術の手帳
+</section><section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div><div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main><aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div><h2 class="widget-title section-title">目录</h2><div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#1-endpoint>1. Endpoint</a></li><li><a href=#2-http-method>2. HTTP METHOD</a></li><li><a href=#3-filtering>3. Filtering</a></li><li><a href=#4-status-code>4. Status Code</a></li><li><a href=#5-error-handling>5. Error Handling</a></li><li><a href=#6-返回结果的规范>6. 返回结果的规范</a></li><li><a href=#7-hypermedia-api-hateoas>7. Hypermedia API (HATEOAS)</a></li><li><a href=#reference>Reference</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
+</body></html>

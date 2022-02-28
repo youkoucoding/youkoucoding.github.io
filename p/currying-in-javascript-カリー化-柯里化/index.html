@@ -3,8 +3,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Currying in JavaSctipt Functional programming is a style of programming that attempts to pass functions as arguments(callbacks) and return functions without side-effects(changes to the program&amp;rsquo;s state).
 So many languages adopted this programming style. Javascript, Haskell, Erlang, Clojure, and Scala are the most popular among them.
 And with its ability to pass the return functions, it brought so many conscepts: Pure Functions, Currying, Higher-Order functions.
-What is Currying? Currying is a process in functionnal programming in which we can transform a function with multiple arguments into a sequence of nesting functions."><title>Currying in JavaScript (カリー化 & 柯里化)</title>
-<link rel=canonical href=https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/>
+What is Currying? Currying is a process in functionnal programming in which we can transform a function with multiple arguments into a sequence of nesting functions."><title>Currying in JavaScript (カリー化 & 柯里化)</title><link rel=canonical href=https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Currying in JavaScript (カリー化 & 柯里化)">
 <meta property="og:description" content="Currying in JavaSctipt Functional programming is a style of programming that attempts to pass functions as arguments(callbacks) and return functions without side-effects(changes to the program&amp;rsquo;s state).
 So many languages adopted this programming style. Javascript, Haskell, Erlang, Clojure, and Scala are the most popular among them.
@@ -20,329 +19,196 @@ And with its ability to pass the return functions, it brought so many conscepts:
 What is Currying? Currying is a process in functionnal programming in which we can transform a function with multiple arguments into a sequence of nesting functions."><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/currying-cover.png">
 <link rel="shortcut icon" href=/img/site-icon.png>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+</head><body class="article-page has-toc">
+<script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
 <div class="container main-container flex
 extended">
 <div id=article-toolbar>
 <a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
 <span>返回</span>
 </a>
-</div>
-<main class="main full-width">
+</div><main class="main full-width">
 <article class="has-image main-article">
 <header class=article-header>
 <div class=article-image>
 <a href=/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/>
 <img src=/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/currying-cover_hue1762bd7bcdba537e8cb251ce52f9c58_32211_800x0_resize_box_3.png srcset="/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/currying-cover_hue1762bd7bcdba537e8cb251ce52f9c58_32211_800x0_resize_box_3.png 800w, /p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/currying-cover_hue1762bd7bcdba537e8cb251ce52f9c58_32211_1600x0_resize_box_3.png 1600w" width=800 height=237 loading=lazy alt="Featured image of post Currying in JavaScript (カリー化 & 柯里化)">
 </a>
-</div>
-<div class=article-details>
+</div><div class=article-details>
 <header class=article-category>
 <a href=/categories/javascript/>
 Javascript
 </a>
-</header>
-<h2 class=article-title>
+</header><h2 class=article-title>
 <a href=/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/>Currying in JavaScript (カリー化 & 柯里化)</a>
-</h2>
-<footer class=article-time>
+</h2><footer class=article-time>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published>Oct 09, 2021</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>
 阅读时长: 4 分钟
 </time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h1 id=currying-in-javasctipt>Currying in JavaSctipt</h1>
-<p>Functional programming is a style of programming that attempts to pass functions as arguments(callbacks) and return functions without side-effects(changes to the program&rsquo;s state).</p>
-<p>So many languages adopted this programming style. <code>Javascript</code>, <code>Haskell</code>, <code>Erlang</code>, <code>Clojure</code>, and <code>Scala</code> are the most popular among them.</p>
-<p>And with its ability to pass the return functions, it brought so many conscepts: <strong>Pure Functions</strong>, <strong>Currying</strong>, <strong>Higher-Order functions</strong>.</p>
-<h2 id=what-is-currying>What is Currying?</h2>
-<p>Currying is a <strong>process</strong> in functionnal programming in which we can transform a function with multiple arguments into a sequence of nesting functions. It returns a new functon that expects the next argument inline.</p>
-<p>Currying doesn&rsquo;t call a function. It just transforms it.</p>
-<p>只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数。</p>
-<p>It keeps returning a new function (that expects the current argument) until all the arguments are exhausted. The arguments are kept <code>alive</code>(via <code>closure</code>) and all are used in execution when the final function tin the currying chain is returnd and executed.</p>
-<pre tabindex=0><code>Currying is the process of turning a function with mutiple arity(the number of arguments of operator taken by a function) into a function with less arity.
-</code></pre><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>fn</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>)</span> <span class=p>{}</span> <span class=c1>// 2-arity function
-</span></code></pre></div><p><strong>SO, currying transforms a function with multiple arguments into a sequence/series of functions each taking <em>single argument</em>.</strong></p>
-<p>Currying is a transformation of functions that translates a function from callbale as <code>f(a, b, c)</code> into callable as <code>f(a)(b)(c)</code>.</p>
-<p>Example:</p>
-<p>We&rsquo;ll create a helper function <code>curry(fn)</code> that performs currying for a two-argument <code>fn</code>. In other words, <code>curry(fn)</code> for two-argument <code>fn(a, b)</code> translates it into a function that runs as <code>fn(a)(b)</code>:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// curry(fn) does the currying transform
-</span><span class=c1></span><span class=kd>function</span> <span class=nx>curry</span><span class=p>(</span><span class=nx>fn</span><span class=p>)</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>a</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>b</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>return</span> <span class=nx>fn</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>);</span>
-    <span class=p>};</span>
-  <span class=p>};</span>
-<span class=p>}</span>
-
-<span class=c1>//usage
-</span><span class=c1></span><span class=kd>function</span> <span class=nx>sum</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>)</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=nx>a</span> <span class=o>+</span> <span class=nx>b</span><span class=p>;</span>
-<span class=p>}</span>
-
-<span class=kd>let</span> <span class=nx>curriedSum</span> <span class=o>=</span> <span class=nx>curry</span><span class=p>(</span><span class=nx>sum</span><span class=p>);</span>
-
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>curriedSum</span><span class=p>(</span><span class=mi>1</span><span class=p>)(</span><span class=mi>2</span><span class=p>));</span> <span class=c1>// 3
-</span></code></pre></div><p>As you see the implementation is straightforward: <strong>Just two wrapper</strong></p>
-<ul>
+</div></footer></div></header><section class=article-content>
+<h1 id=currying-in-javasctipt>Currying in JavaSctipt</h1><p>Functional programming is a style of programming that attempts to pass functions as arguments(callbacks) and return functions without side-effects(changes to the program&rsquo;s state).</p><p>So many languages adopted this programming style. <code>Javascript</code>, <code>Haskell</code>, <code>Erlang</code>, <code>Clojure</code>, and <code>Scala</code> are the most popular among them.</p><p>And with its ability to pass the return functions, it brought so many conscepts: <strong>Pure Functions</strong>, <strong>Currying</strong>, <strong>Higher-Order functions</strong>.</p><h2 id=what-is-currying>What is Currying?</h2><p>Currying is a <strong>process</strong> in functionnal programming in which we can transform a function with multiple arguments into a sequence of nesting functions. It returns a new functon that expects the next argument inline.</p><p>Currying doesn&rsquo;t call a function. It just transforms it.</p><p>只传递给函数一部分参数来调用它，让它返回一个函数去处理剩下的参数。</p><p>It keeps returning a new function (that expects the current argument) until all the arguments are exhausted. The arguments are kept <code>alive</code>(via <code>closure</code>) and all are used in execution when the final function tin the currying chain is returnd and executed.</p><pre tabindex=0><code>Currying is the process of turning a function with mutiple arity(the number of arguments of operator taken by a function) into a function with less arity.
+</code></pre><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>fn</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>)</span> <span class=p>{}</span> <span class=c1>// 2-arity function
+</span></span></span></code></pre></div><p><strong>SO, currying transforms a function with multiple arguments into a sequence/series of functions each taking <em>single argument</em>.</strong></p><p>Currying is a transformation of functions that translates a function from callbale as <code>f(a, b, c)</code> into callable as <code>f(a)(b)(c)</code>.</p><p>Example:</p><p>We&rsquo;ll create a helper function <code>curry(fn)</code> that performs currying for a two-argument <code>fn</code>. In other words, <code>curry(fn)</code> for two-argument <code>fn(a, b)</code> translates it into a function that runs as <code>fn(a)(b)</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// curry(fn) does the currying transform
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>function</span> <span class=nx>curry</span><span class=p>(</span><span class=nx>fn</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>a</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>b</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> <span class=nx>fn</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>};</span>
+</span></span><span class=line><span class=cl>  <span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>//usage
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>function</span> <span class=nx>sum</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>a</span> <span class=o>+</span> <span class=nx>b</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>curriedSum</span> <span class=o>=</span> <span class=nx>curry</span><span class=p>(</span><span class=nx>sum</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>curriedSum</span><span class=p>(</span><span class=mi>1</span><span class=p>)(</span><span class=mi>2</span><span class=p>));</span> <span class=c1>// 3
+</span></span></span></code></pre></div><p>As you see the implementation is straightforward: <strong>Just two wrapper</strong></p><ul>
 <li>
-<p>The result of <code>curry(fn)</code> is a wrapper <code>function(a)</code></p>
-</li>
+<p>The result of <code>curry(fn)</code> is a wrapper <code>function(a)</code></p></li><li>
+<p>When it is called like <code>curriedSum(1)</code>, the argument is saved in the Lexical Environment<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>, and a new wrapper is returned <code>function(b)</code></p></li></ul><ul>
+<li>Then this wrapper is called with <code>2</code> as an argument, and it passes the call to the original <code>sum</code>.</li></ul><h4 id=_lodash><code>_lodash</code></h4><p>More advanced implementations of currying, such as <code>_.curry</code> from <strong>lodash</strong> library, return a wrapper that allows a function to be called both normally and partially:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>sum</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>a</span> <span class=o>+</span> <span class=nx>b</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// using _.curry from lodash library
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>let</span> <span class=nx>curriedSum</span> <span class=o>=</span> <span class=nx>_</span><span class=p>.</span><span class=nx>curry</span><span class=p>(</span><span class=nx>sum</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>curriedSum</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>));</span> <span class=c1>// 3, still callable normally
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>curriedSum</span><span class=p>(</span><span class=mi>1</span><span class=p>)(</span><span class=mi>2</span><span class=p>));</span> <span class=c1>// 3, called partially
+</span></span></span></code></pre></div><h3 id=what-for>What for?</h3><p>For instance, we have the logging function <code>log(date, importance, message)</code> that formats and outputs the information. In real projects such functions have many useful features like sending logs over the network, here we&rsquo;ll just use <code>alert</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>log</span><span class=p>(</span><span class=nx>date</span><span class=p>,</span> <span class=nx>importance</span><span class=p>,</span> <span class=nx>message</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>alert</span><span class=p>(</span><span class=sb>`[</span><span class=si>${</span><span class=nx>date</span><span class=p>.</span><span class=nx>getHours</span><span class=p>()</span><span class=si>}</span><span class=sb>:</span><span class=si>${</span><span class=nx>date</span><span class=p>.</span><span class=nx>getMinutes</span><span class=p>()</span><span class=si>}</span><span class=sb>][</span><span class=si>${</span><span class=nx>importance</span><span class=si>}</span><span class=sb>]</span><span class=si>${</span><span class=nx>message</span><span class=si>}</span><span class=sb>`</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// curry it
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>log</span> <span class=o>=</span> <span class=nx>_</span><span class=p>.</span><span class=nx>curry</span><span class=p>(</span><span class=nx>log</span><span class=p>);</span>
+</span></span></code></pre></div><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// how it works
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=nx>log</span><span class=p>(</span><span class=k>new</span> <span class=nb>Date</span><span class=p>(),</span> <span class=s1>&#39;DEBUG&#39;</span><span class=p>,</span> <span class=s1>&#39;some bugs&#39;</span><span class=p>);</span> <span class=c1>// log(a, b, c)
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=nx>log</span><span class=p>(</span><span class=k>new</span> <span class=nb>Date</span><span class=p>())(</span><span class=s1>&#39;DEBUG&#39;</span><span class=p>)(</span><span class=s1>&#39;some bugs&#39;</span><span class=p>);</span> <span class=c1>//log(a)(b)(c)
+</span></span></span></code></pre></div><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// Usage
+</span></span></span><span class=line><span class=cl><span class=c1>// logNow will be the partial of log with fixed first argument
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>let</span> <span class=nx>logNow</span> <span class=o>=</span> <span class=nx>log</span><span class=p>(</span><span class=k>new</span> <span class=nb>Date</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// use it
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>logNow</span><span class=p>(</span><span class=s1>&#39;INFO&#39;</span><span class=p>,</span> <span class=s1>&#39;message&#39;</span><span class=p>);</span> <span class=c1>// [HH:mm] INFO message
+</span></span></span></code></pre></div><p>Now <code>logNow</code> is <code>log</code> with first argument, in other words &ldquo;partially applied function&rdquo; or &ldquo;partial&rdquo; for short.</p><p>We can go further and make a convenience function for current debug logs:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>let</span> <span class=nx>debugNow</span> <span class=o>=</span> <span class=nx>logNow</span><span class=p>(</span><span class=s1>&#39;DEBUG&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>debugNow</span><span class=p>(</span><span class=s1>&#39;message&#39;</span><span class=p>);</span> <span class=c1>// [HH:mm] DEBUG message
+</span></span></span></code></pre></div><ol>
+<li>We didn&rsquo;t lose anyhing after currying: <code>log</code> is still callable normally</li><li>We can easily generate partial functions such as for today log.</li></ol><h3 id=advanced-curry-implementation>Advanced curry implementation</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>curry</span><span class=p>(</span><span class=nx>func</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=kd>function</span> <span class=nx>curried</span><span class=p>(...</span><span class=nx>args</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>args</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;=</span> <span class=nx>func</span><span class=p>.</span><span class=nx>length</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> <span class=nx>func</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=k>this</span><span class=p>,</span> <span class=nx>args</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>return</span> <span class=kd>function</span> <span class=p>(...</span><span class=nx>args2</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>curried</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=k>this</span><span class=p>,</span> <span class=nx>args</span><span class=p>.</span><span class=nx>concat</span><span class=p>(</span><span class=nx>args2</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>      <span class=p>};</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// usage
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>sum</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>,</span> <span class=nx>c</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>a</span> <span class=o>+</span> <span class=nx>b</span> <span class=o>+</span> <span class=nx>c</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>curriedSum</span> <span class=o>=</span> <span class=nx>curry</span><span class=p>(</span><span class=nx>sum</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>alert</span><span class=p>(</span><span class=nx>curriedSum</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>));</span> <span class=c1>// 6, still callable normally
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>alert</span><span class=p>(</span><span class=nx>curriedSum</span><span class=p>(</span><span class=mi>1</span><span class=p>)(</span><span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>));</span> <span class=c1>// 6, currying of 1st arg
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>alert</span><span class=p>(</span><span class=nx>curriedSum</span><span class=p>(</span><span class=mi>1</span><span class=p>)(</span><span class=mi>2</span><span class=p>)(</span><span class=mi>3</span><span class=p>));</span> <span class=c1>// 6, full currying
+</span></span></span></code></pre></div><blockquote>
+<p><code>Function.length</code>: The <code>length</code> property indicates the number of parameters expected by the function.</p></blockquote><ol>
+<li>If passed <code>args</code> count is the same or more than the orignal function has in its definition (<code>func.length</code>), then just pass the call to it using <code>func.apply</code></li><li>Otherwise, get a partial: we don&rsquo;t call <code>func</code> just yet. Instead, another wrapper is returned, that will re-apply <code>curried</code> providing previous arguments together with the new ones.</li></ol><p>Thenm if we call it, again we&rsquo;ll get either a new partial (if not enough arguments) or, finally, the result.</p><h2 id=when>When</h2><p>Currying comes in handy when you want to:</p><ol>
 <li>
-<p>When it is called like <code>curriedSum(1)</code>, the argument is saved in the Lexical Environment<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>, and a new wrapper is returned <code>function(b)</code></p>
-</li>
-</ul>
-<ul>
-<li>Then this wrapper is called with <code>2</code> as an argument, and it passes the call to the original <code>sum</code>.</li>
-</ul>
-<h4 id=_lodash><code>_lodash</code></h4>
-<p>More advanced implementations of currying, such as <code>_.curry</code> from <strong>lodash</strong> library, return a wrapper that allows a function to be called both normally and partially:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>sum</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>)</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=nx>a</span> <span class=o>+</span> <span class=nx>b</span><span class=p>;</span>
-<span class=p>}</span>
-
-<span class=c1>// using _.curry from lodash library
-</span><span class=c1></span><span class=kd>let</span> <span class=nx>curriedSum</span> <span class=o>=</span> <span class=nx>_</span><span class=p>.</span><span class=nx>curry</span><span class=p>(</span><span class=nx>sum</span><span class=p>);</span>
-
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>curriedSum</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>));</span> <span class=c1>// 3, still callable normally
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>curriedSum</span><span class=p>(</span><span class=mi>1</span><span class=p>)(</span><span class=mi>2</span><span class=p>));</span> <span class=c1>// 3, called partially
-</span></code></pre></div><h3 id=what-for>What for?</h3>
-<p>For instance, we have the logging function <code>log(date, importance, message)</code> that formats and outputs the information. In real projects such functions have many useful features like sending logs over the network, here we&rsquo;ll just use <code>alert</code>:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>log</span><span class=p>(</span><span class=nx>date</span><span class=p>,</span> <span class=nx>importance</span><span class=p>,</span> <span class=nx>message</span><span class=p>)</span> <span class=p>{</span>
-  <span class=nx>alert</span><span class=p>(</span><span class=sb>`[</span><span class=si>${</span><span class=nx>date</span><span class=p>.</span><span class=nx>getHours</span><span class=p>()</span><span class=si>}</span><span class=sb>:</span><span class=si>${</span><span class=nx>date</span><span class=p>.</span><span class=nx>getMinutes</span><span class=p>()</span><span class=si>}</span><span class=sb>][</span><span class=si>${</span><span class=nx>importance</span><span class=si>}</span><span class=sb>]</span><span class=si>${</span><span class=nx>message</span><span class=si>}</span><span class=sb>`</span><span class=p>);</span>
-<span class=p>}</span>
-</code></pre></div><hr>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// curry it
-</span><span class=c1></span><span class=nx>log</span> <span class=o>=</span> <span class=nx>_</span><span class=p>.</span><span class=nx>curry</span><span class=p>(</span><span class=nx>log</span><span class=p>);</span>
-</code></pre></div><hr>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// how it works
-</span><span class=c1></span>
-<span class=nx>log</span><span class=p>(</span><span class=k>new</span> <span class=nb>Date</span><span class=p>(),</span> <span class=s1>&#39;DEBUG&#39;</span><span class=p>,</span> <span class=s1>&#39;some bugs&#39;</span><span class=p>);</span> <span class=c1>// log(a, b, c)
-</span><span class=c1></span>
-<span class=nx>log</span><span class=p>(</span><span class=k>new</span> <span class=nb>Date</span><span class=p>())(</span><span class=s1>&#39;DEBUG&#39;</span><span class=p>)(</span><span class=s1>&#39;some bugs&#39;</span><span class=p>);</span> <span class=c1>//log(a)(b)(c)
-</span></code></pre></div><hr>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// Usage
-</span><span class=c1>// logNow will be the partial of log with fixed first argument
-</span><span class=c1></span><span class=kd>let</span> <span class=nx>logNow</span> <span class=o>=</span> <span class=nx>log</span><span class=p>(</span><span class=k>new</span> <span class=nb>Date</span><span class=p>());</span>
-
-<span class=c1>// use it
-</span><span class=c1></span><span class=nx>logNow</span><span class=p>(</span><span class=s1>&#39;INFO&#39;</span><span class=p>,</span> <span class=s1>&#39;message&#39;</span><span class=p>);</span> <span class=c1>// [HH:mm] INFO message
-</span></code></pre></div><p>Now <code>logNow</code> is <code>log</code> with first argument, in other words &ldquo;partially applied function&rdquo; or &ldquo;partial&rdquo; for short.</p>
-<p>We can go further and make a convenience function for current debug logs:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>let</span> <span class=nx>debugNow</span> <span class=o>=</span> <span class=nx>logNow</span><span class=p>(</span><span class=s1>&#39;DEBUG&#39;</span><span class=p>);</span>
-
-<span class=nx>debugNow</span><span class=p>(</span><span class=s1>&#39;message&#39;</span><span class=p>);</span> <span class=c1>// [HH:mm] DEBUG message
-</span></code></pre></div><ol>
-<li>We didn&rsquo;t lose anyhing after currying: <code>log</code> is still callable normally</li>
-<li>We can easily generate partial functions such as for today log.</li>
-</ol>
-<h3 id=advanced-curry-implementation>Advanced curry implementation</h3>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>curry</span><span class=p>(</span><span class=nx>func</span><span class=p>)</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=kd>function</span> <span class=nx>curried</span><span class=p>(...</span><span class=nx>args</span><span class=p>)</span> <span class=p>{</span>
-    <span class=k>if</span> <span class=p>(</span><span class=nx>args</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;=</span> <span class=nx>func</span><span class=p>.</span><span class=nx>length</span><span class=p>)</span> <span class=p>{</span>
-      <span class=k>return</span> <span class=nx>func</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=k>this</span><span class=p>,</span> <span class=nx>args</span><span class=p>);</span>
-    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-      <span class=k>return</span> <span class=kd>function</span> <span class=p>(...</span><span class=nx>args2</span><span class=p>)</span> <span class=p>{</span>
-        <span class=k>return</span> <span class=nx>curried</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=k>this</span><span class=p>,</span> <span class=nx>args</span><span class=p>.</span><span class=nx>concat</span><span class=p>(</span><span class=nx>args2</span><span class=p>));</span>
-      <span class=p>};</span>
-    <span class=p>}</span>
-  <span class=p>};</span>
-<span class=p>}</span>
-
-<span class=c1>// usage
-</span><span class=c1></span>
-<span class=kd>function</span> <span class=nx>sum</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>,</span> <span class=nx>c</span><span class=p>)</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=nx>a</span> <span class=o>+</span> <span class=nx>b</span> <span class=o>+</span> <span class=nx>c</span><span class=p>;</span>
-<span class=p>}</span>
-
-<span class=kd>let</span> <span class=nx>curriedSum</span> <span class=o>=</span> <span class=nx>curry</span><span class=p>(</span><span class=nx>sum</span><span class=p>);</span>
-
-<span class=nx>alert</span><span class=p>(</span><span class=nx>curriedSum</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>));</span> <span class=c1>// 6, still callable normally
-</span><span class=c1></span><span class=nx>alert</span><span class=p>(</span><span class=nx>curriedSum</span><span class=p>(</span><span class=mi>1</span><span class=p>)(</span><span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>));</span> <span class=c1>// 6, currying of 1st arg
-</span><span class=c1></span><span class=nx>alert</span><span class=p>(</span><span class=nx>curriedSum</span><span class=p>(</span><span class=mi>1</span><span class=p>)(</span><span class=mi>2</span><span class=p>)(</span><span class=mi>3</span><span class=p>));</span> <span class=c1>// 6, full currying
-</span></code></pre></div><blockquote>
-<p><code>Function.length</code>: The <code>length</code> property indicates the number of parameters expected by the function.</p>
-</blockquote>
-<ol>
-<li>If passed <code>args</code> count is the same or more than the orignal function has in its definition (<code>func.length</code>), then just pass the call to it using <code>func.apply</code></li>
-<li>Otherwise, get a partial: we don&rsquo;t call <code>func</code> just yet. Instead, another wrapper is returned, that will re-apply <code>curried</code> providing previous arguments together with the new ones.</li>
-</ol>
-<p>Thenm if we call it, again we&rsquo;ll get either a new partial (if not enough arguments) or, finally, the result.</p>
-<h2 id=when>When</h2>
-<p>Currying comes in handy when you want to:</p>
-<ol>
-<li>
-<p>Write little code modules that can be reused and configured with ease, much like what we do with npm.</p>
-</li>
-<li>
-<p>Avoid frequently calling a function with the same argument.</p>
-</li>
-</ol>
-<h2 id=summary>Summary</h2>
-<p><em>Currying</em> is a transform that makes <code>fn(a,b,c)</code> callbale as <code>fn(a)(b)(c)</code>. JavaScript implementations usually both keep the function callable normally and return the partial if the arguments count is not enough.</p>
-<p><em>Currying</em> allows us to easily get partials. As we&rsquo;ve seen in the logging example, after currying the three argement unniversal function <code>log(date, importance, message)</code> gives us partials when called with one argument or two arguments(<code>log(date, importance)</code>).</p>
-<h2 id=reference>Reference</h2>
-<p><a class=link href=https://javascript.info/currying-partials target=_blank rel=noopener>Currying</a></p>
-<p><a class=link href=https://kenju.gitbooks.io/js_step-up-to-intermediate/content/content/part03/currying.html target=_blank rel=noopener>カリー化</a></p>
-<p><a class=link href=https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch4.html#%E4%B8%8D%E4%BB%85%E4%BB%85%E6%98%AF%E5%8F%8C%E5%85%B3%E8%AF%AD%E5%92%96%E5%96%B1 target=_blank rel=noopener>柯里化（curry） · 函数式编程指北</a></p>
-<section class=footnotes role=doc-endnotes>
+<p>Write little code modules that can be reused and configured with ease, much like what we do with npm.</p></li><li>
+<p>Avoid frequently calling a function with the same argument.</p></li></ol><h2 id=summary>Summary</h2><p><em>Currying</em> is a transform that makes <code>fn(a,b,c)</code> callbale as <code>fn(a)(b)(c)</code>. JavaScript implementations usually both keep the function callable normally and return the partial if the arguments count is not enough.</p><p><em>Currying</em> allows us to easily get partials. As we&rsquo;ve seen in the logging example, after currying the three argement unniversal function <code>log(date, importance, message)</code> gives us partials when called with one argument or two arguments(<code>log(date, importance)</code>).</p><h2 id=reference>Reference</h2><p><a class=link href=https://javascript.info/currying-partials target=_blank rel=noopener>Currying</a></p><p><a class=link href=https://kenju.gitbooks.io/js_step-up-to-intermediate/content/content/part03/currying.html target=_blank rel=noopener>カリー化</a></p><p><a class=link href=https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch4.html#%E4%B8%8D%E4%BB%85%E4%BB%85%E6%98%AF%E5%8F%8C%E5%85%B3%E8%AF%AD%E5%92%96%E5%96%B1 target=_blank rel=noopener>柯里化（curry） · 函数式编程指北</a></p><section class=footnotes role=doc-endnotes>
 <hr>
 <ol>
 <li id=fn:1 role=doc-endnote>
-<p><a class=link href=https://amnsingh.medium.com/lexical-environment-the-hidden-part-to-understand-closures-71d60efac0e0 target=_blank rel=noopener>Lexical Environment — The hidden part to understand Closures | by Amandeep Singh | Medium</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
-</section>
-<footer class=article-footer>
+<p><a class=link href=https://amnsingh.medium.com/lexical-environment-the-hidden-part-to-understand-closures-71d60efac0e0 target=_blank rel=noopener>Lexical Environment — The hidden part to understand Closures | by Amandeep Singh | Medium</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></section></section><footer class=article-footer>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title>相关文章</h2>
-<div class=related-contents>
+</section></footer></article><aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2><div class=related-contents>
 <div class="flex article-list--tile">
 <article class=has-image>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/>
 <div class=article-image>
 <img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/frontend-146-cover.46f90167dd77449c983ebb4d9e317f9e_hue0b2c8b1e6178d98421791daf43c3786_116564_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-RvkBZ913RJyYPrtNnjF/ng==">
-</div>
-<div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 146</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
+</div><div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 146</h2></div></a>
+</article><article class=has-image>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/>
 <div class=article-image>
 <img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-145/frontend-145-cover.089db8cd7701422a47b289c7738932ad_hu68f0f93869ebf28349a854e1121082ee_160531_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-CJ24zXcBQipHsonHc4kyrQ==">
-</div>
-<div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 145</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
+</div><div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 145</h2></div></a>
+</article><article class=has-image>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-143/>
 <div class=article-image>
 <img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-143/frontend-143-cover.ff6261937fd1abf76950b8fa6fd580ac_hub5ff91482f7006c574bb1ca0b7779d46_136776_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-/2Jhk3/Rq/dpULj6b9WArA==">
-</div>
-<div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 143</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
+</div><div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 143</h2></div></a>
+</article><article class=has-image>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-142/>
 <div class=article-image>
 <img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-142/frontend-142-cover.a1c74efd1fd882eb8f6427705d2136db_hu2974f661a4bae9137b5b0766e2533a56_172941_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-ocdO/R/YguuPZCdwXSE22w==">
-</div>
-<div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 142</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
+</div><div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 142</h2></div></a>
+</article><article class=has-image>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-141/>
 <div class=article-image>
 <img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-141/frontend-141-cover.898cea5f2227d767bb287f261ba8ea1f_hu02142ec927471619b0a253a5e59d37ed_175778_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-iYzqXyIn12e7KH8mG6jqHw==">
-</div>
-<div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 141</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<footer class=site-footer>
+</div><div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 141</h2></div></a>
+</article></div></div></aside><footer class=site-footer>
 <section class=copyright>
 &copy;
 2021 -
 2022 技術の手帳
-</section>
-<section class=powerby>
+</section><section class=powerby>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
 Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
+</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div><div class=pswp__scroll-wrap>
 <div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
 <div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 <div class=pswp__preloader>
 <div class=pswp__preloader__icn>
 <div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
 </button>
 <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
 </button>
 <div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
+<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main><aside class="sidebar right-sidebar sticky">
 <section class="widget archives">
 <div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title">目录</h2>
-<div class=widget--toc>
+</div><h2 class="widget-title section-title">目录</h2><div class=widget--toc>
 <nav id=TableOfContents>
 <ol>
 <li><a href=#what-is-currying>What is Currying?</a>
 <ol>
 <li>
 <ol>
-<li><a href=#_lodash><code>_lodash</code></a></li>
-</ol>
-</li>
-<li><a href=#what-for>What for?</a></li>
-<li><a href=#advanced-curry-implementation>Advanced curry implementation</a></li>
-</ol>
-</li>
-<li><a href=#when>When</a></li>
-<li><a href=#summary>Summary</a></li>
-<li><a href=#reference>Reference</a></li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<li><a href=#_lodash><code>_lodash</code></a></li></ol></li><li><a href=#what-for>What for?</a></li><li><a href=#advanced-curry-implementation>Advanced curry implementation</a></li></ol></li><li><a href=#when>When</a></li><li><a href=#summary>Summary</a></li><li><a href=#reference>Reference</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
+</body></html>

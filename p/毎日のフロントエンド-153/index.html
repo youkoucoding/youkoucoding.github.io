@@ -1,7 +1,6 @@
 <!doctype html><html lang=zh-cn>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 153</title>
-<link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 153</title><link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  153">
 <meta property="og:description" content="frontend 每日一练">
 <meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/">
@@ -10,17 +9,15 @@
 <meta name=twitter:title content="毎日のフロントエンド  153">
 <meta name=twitter:description content="frontend 每日一练">
 <link rel="shortcut icon" href=/img/site-icon.png>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+</head><body class="article-page has-toc">
+<script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
 <div class="container main-container flex
 extended">
 <div id=article-toolbar>
 <a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
 <span>返回</span>
 </a>
-</div>
-<main class="main full-width">
+</div><main class="main full-width">
 <article class=main-article>
 <header class=article-header>
 <div class=article-details>
@@ -34,490 +31,321 @@ CSS
 <a href=/categories/tips/>
 Tips
 </a>
-</header>
-<h2 class=article-title>
+</header><h2 class=article-title>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/>毎日のフロントエンド 153</a>
-</h2>
-<h3 class=article-subtitle>
+</h2><h3 class=article-subtitle>
 frontend 每日一练
-</h3>
-<footer class=article-time>
+</h3><footer class=article-time>
 <div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published>Feb 16, 2022</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>
 阅读时长: 4 分钟
 </time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h1 id=第一百五十三日>第一百五十三日</h1>
-<h2 id=html>HTML</h2>
-<h3 id=单词标志缩写>单词标志缩写</h3>
-<ul>
-<li><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/abbr target=_blank rel=noopener><code>&lt;abbr></code> - HTML（超文本标记语言） | MDN</a></li>
-</ul>
-<h2 id=css>CSS</h2>
-<h3 id=背景裁剪>背景裁剪</h3>
-<ul>
+</div></footer></div></header><section class=article-content>
+<h1 id=第一百五十三日>第一百五十三日</h1><h2 id=html>HTML</h2><h3 id=单词标志缩写>单词标志缩写</h3><ul>
+<li><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/abbr target=_blank rel=noopener><code>&lt;abbr></code> - HTML（超文本标记语言） | MDN</a></li></ul><h2 id=css>CSS</h2><h3 id=背景裁剪>背景裁剪</h3><ul>
 <li>background-clip`:
 <ul>
-<li><code>border-box</code>: 默认,背景延伸至边框外沿,但是在边框的下层</li>
-<li><code>padding-box</code>: 背景延伸至 padding 的外沿</li>
-<li><code>content-box</code>: 背景延伸至内容的外沿</li>
-<li><code>text</code>: 背景剪裁成文字的样式</li>
-</ul>
-</li>
-</ul>
-<h2 id=tips>Tips</h2>
-<h3 id=异步编程>异步编程</h3>
-<h4 id=什么是同步>什么是同步</h4>
-<p>所谓的同步就是在执行某段代码时，在该代码没有得到返回结果之前，其他代码暂时是无法执行的，但是一旦执行完成拿到返回值之后，就可以执行其他代码了。换句话说，在此段代码执行完未返回结果之前，会阻塞之后的代码执行，这样的情况称为同步。</p>
-<h4 id=什么是异步>什么是异步</h4>
-<p>所谓异步就是当某一代码执行异步过程调用发出后，这段代码不会立刻得到返回结果。而是在异步调用发出之后，一般通过回调函数处理这个调用之后拿到结果。异步调用发出后，不会影响阻塞后面的代码执行，这样的情形称为异步。</p>
-<h4 id=promise><code>Promise</code></h4>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>read</span><span class=p>(</span><span class=nx>url</span><span class=p>)</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=nx>fs</span><span class=p>.</span><span class=nx>readFile</span><span class=p>(</span><span class=nx>url</span><span class=p>,</span> <span class=s1>&#39;utf8&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>err</span><span class=p>,</span> <span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-      <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=nx>reject</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
-      <span class=nx>resolve</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
-    <span class=p>});</span>
-  <span class=p>});</span>
-<span class=p>}</span>
-<span class=c1>// 通过 Promise.all 可以实现多个异步并行执行，同一时刻获取最终结果的问题
-</span><span class=c1></span><span class=nb>Promise</span><span class=p>.</span><span class=nx>all</span><span class=p>([</span><span class=nx>read</span><span class=p>(</span><span class=nx>A</span><span class=p>),</span> <span class=nx>read</span><span class=p>(</span><span class=nx>B</span><span class=p>),</span> <span class=nx>read</span><span class=p>(</span><span class=nx>C</span><span class=p>)])</span>
-  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
-  <span class=p>})</span>
-  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>err</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>err</span><span class=p>));</span>
-</code></pre></div><ul>
+<li><code>border-box</code>: 默认,背景延伸至边框外沿,但是在边框的下层</li><li><code>padding-box</code>: 背景延伸至 padding 的外沿</li><li><code>content-box</code>: 背景延伸至内容的外沿</li><li><code>text</code>: 背景剪裁成文字的样式</li></ul></li></ul><h2 id=tips>Tips</h2><h3 id=异步编程>异步编程</h3><h4 id=什么是同步>什么是同步</h4><p>所谓的同步就是在执行某段代码时，在该代码没有得到返回结果之前，其他代码暂时是无法执行的，但是一旦执行完成拿到返回值之后，就可以执行其他代码了。换句话说，在此段代码执行完未返回结果之前，会阻塞之后的代码执行，这样的情况称为同步。</p><h4 id=什么是异步>什么是异步</h4><p>所谓异步就是当某一代码执行异步过程调用发出后，这段代码不会立刻得到返回结果。而是在异步调用发出之后，一般通过回调函数处理这个调用之后拿到结果。异步调用发出后，不会影响阻塞后面的代码执行，这样的情形称为异步。</p><h4 id=promise><code>Promise</code></h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>read</span><span class=p>(</span><span class=nx>url</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>fs</span><span class=p>.</span><span class=nx>readFile</span><span class=p>(</span><span class=nx>url</span><span class=p>,</span> <span class=s1>&#39;utf8&#39;</span><span class=p>,</span> <span class=p>(</span><span class=nx>err</span><span class=p>,</span> <span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=nx>reject</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=nx>resolve</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>});</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=c1>// 通过 Promise.all 可以实现多个异步并行执行，同一时刻获取最终结果的问题
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nb>Promise</span><span class=p>.</span><span class=nx>all</span><span class=p>([</span><span class=nx>read</span><span class=p>(</span><span class=nx>A</span><span class=p>),</span> <span class=nx>read</span><span class=p>(</span><span class=nx>B</span><span class=p>),</span> <span class=nx>read</span><span class=p>(</span><span class=nx>C</span><span class=p>)])</span>
+</span></span><span class=line><span class=cl>  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>})</span>
+</span></span><span class=line><span class=cl>  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>err</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>err</span><span class=p>));</span>
+</span></span></code></pre></div><ul>
 <li>
-<p>简单来说<code>Promise</code>就是一个容器，里面保存着某个未来才会结束的事件（通常是异步操作）的结果。从语法上说，<code>Promise</code> 是一个对象，从它可以获取异步操作的消息</p>
-</li>
-<li>
-<p><code>Promise</code> 内部的状态流转情况：（Promise 对象在被创建出来时是待定的状态）(内部状态改变之后不可逆)</p>
-<ol>
-<li>待定（<code>pending</code>）：初始状态，既没有被完成，也没有被拒绝。</li>
-<li>已完成（<code>fulfilled</code>）：操作成功完成。</li>
-<li>已拒绝（<code>rejected</code>）：操作失败。</li>
-</ol>
-</li>
-</ul>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>let</span> <span class=nx>readFilePromise</span> <span class=o>=</span> <span class=p>(</span><span class=nx>filename</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=nx>fs</span><span class=p>.</span><span class=nx>readFile</span><span class=p>(</span><span class=nx>filename</span><span class=p>,</span> <span class=p>(</span><span class=nx>err</span><span class=p>,</span> <span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-      <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>reject</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
-      <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-        <span class=nx>resolve</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
-      <span class=p>}</span>
-    <span class=p>});</span>
-  <span class=p>});</span>
-<span class=p>};</span>
-<span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;1.json&#39;</span><span class=p>).</span><span class=nx>then</span><span class=p>((</span><span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;2.json&#39;</span><span class=p>);</span>
-<span class=p>});</span>
-</code></pre></div><ul>
-<li>回调函数不是直接声明的，而是通过后面的 then 方法传入的，即延迟传入，这就是回调函数延迟绑定</li>
-</ul>
-<hr>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;1.json&#39;</span><span class=p>)</span>
-  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;2.json&#39;</span><span class=p>);</span>
-  <span class=p>})</span>
-  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;3.json&#39;</span><span class=p>);</span>
-  <span class=p>})</span>
-  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;4.json&#39;</span><span class=p>);</span>
-  <span class=p>})</span>
-  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>err</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=c1>// xxx Promise 采用了错误冒泡
-</span><span class=c1></span>  <span class=p>});</span>
-</code></pre></div><hr>
-<h5 id=promise-的静态方法><code>Promise</code> 的静态方法</h5>
-<ol>
+<p>简单来说<code>Promise</code>就是一个容器，里面保存着某个未来才会结束的事件（通常是异步操作）的结果。从语法上说，<code>Promise</code> 是一个对象，从它可以获取异步操作的消息</p></li><li>
+<p><code>Promise</code> 内部的状态流转情况：（Promise 对象在被创建出来时是待定的状态）(内部状态改变之后不可逆)</p><ol>
+<li>待定（<code>pending</code>）：初始状态，既没有被完成，也没有被拒绝。</li><li>已完成（<code>fulfilled</code>）：操作成功完成。</li><li>已拒绝（<code>rejected</code>）：操作失败。</li></ol></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>let</span> <span class=nx>readFilePromise</span> <span class=o>=</span> <span class=p>(</span><span class=nx>filename</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>fs</span><span class=p>.</span><span class=nx>readFile</span><span class=p>(</span><span class=nx>filename</span><span class=p>,</span> <span class=p>(</span><span class=nx>err</span><span class=p>,</span> <span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>reject</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>resolve</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>});</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;1.json&#39;</span><span class=p>).</span><span class=nx>then</span><span class=p>((</span><span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;2.json&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>});</span>
+</span></span></code></pre></div><ul>
+<li>回调函数不是直接声明的，而是通过后面的 then 方法传入的，即延迟传入，这就是回调函数延迟绑定</li></ul><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;1.json&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;2.json&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>})</span>
+</span></span><span class=line><span class=cl>  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;3.json&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>})</span>
+</span></span><span class=line><span class=cl>  <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;4.json&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>})</span>
+</span></span><span class=line><span class=cl>  <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>err</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// xxx Promise 采用了错误冒泡
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=p>});</span>
+</span></span></code></pre></div><hr>
+<h5 id=promise-的静态方法><code>Promise</code> 的静态方法</h5><ol>
 <li><code>all</code> 方法
 <ul>
-<li>语法： <code>Promise.all（iterable）</code></li>
-<li>参数： 一个可迭代对象，如 <code>Array</code>。</li>
-<li>描述： 此方法对于汇总多个 promise 的结果很有用，在 ES6 中可以将多个 Promise.all 异步请求并行操作，返回结果一般有下面两种情况。
+<li>语法： <code>Promise.all（iterable）</code></li><li>参数： 一个可迭代对象，如 <code>Array</code>。</li><li>描述： 此方法对于汇总多个 promise 的结果很有用，在 ES6 中可以将多个 Promise.all 异步请求并行操作，返回结果一般有下面两种情况。
 <ul>
-<li>当所有结果成功返回时按照请求顺序返回成功。</li>
-<li>当其中有一个失败方法时，则进入失败方法。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>//1.获取轮播数据列表
-</span><span class=c1></span><span class=kd>function</span> <span class=nx>getBannerList</span><span class=p>()</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=nx>setTimeout</span><span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
-      <span class=nx>resolve</span><span class=p>(</span><span class=s1>&#39;轮播数据&#39;</span><span class=p>);</span>
-    <span class=p>},</span> <span class=mi>300</span><span class=p>);</span>
-  <span class=p>});</span>
-<span class=p>}</span>
-<span class=c1>//2.获取店铺列表
-</span><span class=c1></span><span class=kd>function</span> <span class=nx>getStoreList</span><span class=p>()</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=nx>setTimeout</span><span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
-      <span class=nx>resolve</span><span class=p>(</span><span class=s1>&#39;店铺数据&#39;</span><span class=p>);</span>
-    <span class=p>},</span> <span class=mi>500</span><span class=p>);</span>
-  <span class=p>});</span>
-<span class=p>}</span>
-<span class=c1>//3.获取分类列表
-</span><span class=c1></span><span class=kd>function</span> <span class=nx>getCategoryList</span><span class=p>()</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=nx>setTimeout</span><span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
-      <span class=nx>resolve</span><span class=p>(</span><span class=s1>&#39;分类数据&#39;</span><span class=p>);</span>
-    <span class=p>},</span> <span class=mi>700</span><span class=p>);</span>
-  <span class=p>});</span>
-<span class=p>}</span>
-<span class=kd>function</span> <span class=nx>initLoad</span><span class=p>()</span> <span class=p>{</span>
-  <span class=nb>Promise</span><span class=p>.</span><span class=nx>all</span><span class=p>([</span><span class=nx>getBannerList</span><span class=p>(),</span> <span class=nx>getStoreList</span><span class=p>(),</span> <span class=nx>getCategoryList</span><span class=p>()])</span>
-    <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>res</span><span class=p>);</span>
-    <span class=p>})</span>
-    <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>err</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
-    <span class=p>});</span>
-<span class=p>}</span>
-<span class=nx>initLoad</span><span class=p>();</span>
-</code></pre></div><ol start=2>
-<li><code>allSettled</code> 方法</li>
-</ol>
-<ul>
-<li>Promise.allSettled 的语法及参数跟 Promise.all 类似，其参数接受一个 Promise 的数组，返回一个新的 Promise。唯一的不同在于，执行完之后不会失败，也就是说当 Promise.allSettled 全部处理完成后，我们可以拿到每个 Promise 的状态，而不管其是否处理成功。</li>
-</ul>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>resolved</span> <span class=o>=</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=mi>2</span><span class=p>);</span>
-<span class=kr>const</span> <span class=nx>rejected</span> <span class=o>=</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>reject</span><span class=p>(</span><span class=o>-</span><span class=mi>1</span><span class=p>);</span>
-<span class=kr>const</span> <span class=nx>allSettledPromise</span> <span class=o>=</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>allSettled</span><span class=p>([</span><span class=nx>resolved</span><span class=p>,</span> <span class=nx>rejected</span><span class=p>]);</span>
-<span class=nx>allSettledPromise</span><span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>results</span><span class=p>)</span> <span class=p>{</span>
-  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>results</span><span class=p>);</span>
-<span class=p>});</span>
-<span class=c1>// 返回结果：
-</span><span class=c1>// [
-</span><span class=c1>//    { status: &#39;fulfilled&#39;, value: 2 },
-</span><span class=c1>//    { status: &#39;rejected&#39;, reason: -1 }
-</span><span class=c1>// ]
-</span></code></pre></div><blockquote>
-<p>返回的是一个数组，记录传进来的参数中每个 Promise 的返回值</p>
-</blockquote>
-<ol start=3>
+<li>当所有结果成功返回时按照请求顺序返回成功。</li><li>当其中有一个失败方法时，则进入失败方法。</li></ul></li></ul></li></ol><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>//1.获取轮播数据列表
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>function</span> <span class=nx>getBannerList</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>setTimeout</span><span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>resolve</span><span class=p>(</span><span class=s1>&#39;轮播数据&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span> <span class=mi>300</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=c1>//2.获取店铺列表
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>function</span> <span class=nx>getStoreList</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>setTimeout</span><span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>resolve</span><span class=p>(</span><span class=s1>&#39;店铺数据&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span> <span class=mi>500</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=c1>//3.获取分类列表
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>function</span> <span class=nx>getCategoryList</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>setTimeout</span><span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>resolve</span><span class=p>(</span><span class=s1>&#39;分类数据&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span> <span class=mi>700</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>initLoad</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nb>Promise</span><span class=p>.</span><span class=nx>all</span><span class=p>([</span><span class=nx>getBannerList</span><span class=p>(),</span> <span class=nx>getStoreList</span><span class=p>(),</span> <span class=nx>getCategoryList</span><span class=p>()])</span>
+</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=nx>then</span><span class=p>((</span><span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>res</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>})</span>
+</span></span><span class=line><span class=cl>    <span class=p>.</span><span class=k>catch</span><span class=p>((</span><span class=nx>err</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=nx>initLoad</span><span class=p>();</span>
+</span></span></code></pre></div><ol start=2>
+<li><code>allSettled</code> 方法</li></ol><ul>
+<li>Promise.allSettled 的语法及参数跟 Promise.all 类似，其参数接受一个 Promise 的数组，返回一个新的 Promise。唯一的不同在于，执行完之后不会失败，也就是说当 Promise.allSettled 全部处理完成后，我们可以拿到每个 Promise 的状态，而不管其是否处理成功。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>resolved</span> <span class=o>=</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=mi>2</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>rejected</span> <span class=o>=</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>reject</span><span class=p>(</span><span class=o>-</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>allSettledPromise</span> <span class=o>=</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>allSettled</span><span class=p>([</span><span class=nx>resolved</span><span class=p>,</span> <span class=nx>rejected</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl><span class=nx>allSettledPromise</span><span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>results</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>results</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=c1>// 返回结果：
+</span></span></span><span class=line><span class=cl><span class=c1>// [
+</span></span></span><span class=line><span class=cl><span class=c1>//    { status: &#39;fulfilled&#39;, value: 2 },
+</span></span></span><span class=line><span class=cl><span class=c1>//    { status: &#39;rejected&#39;, reason: -1 }
+</span></span></span><span class=line><span class=cl><span class=c1>// ]
+</span></span></span></code></pre></div><blockquote>
+<p>返回的是一个数组，记录传进来的参数中每个 Promise 的返回值</p></blockquote><ol start=3>
 <li><code>any</code> 方法
 <ul>
-<li>语法： Promise.any（iterable）</li>
-<li>参数： iterable 可迭代的对象，例如 Array。</li>
-<li>描述： any 方法返回一个 Promise，只要参数 Promise 实例有一个变成 fulfilled 状态，最后 any 返回的实例就会变成 fulfilled 状态；如果所有参数 Promise 实例都变成 rejected 状态，包装实例就会变成 rejected 状态。</li>
-</ul>
-</li>
-</ol>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>const</span> <span class=nx>resolved</span> <span class=o>=</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=mi>2</span><span class=p>);</span>
-<span class=kr>const</span> <span class=nx>rejected</span> <span class=o>=</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>reject</span><span class=p>(</span><span class=o>-</span><span class=mi>1</span><span class=p>);</span>
-<span class=kr>const</span> <span class=nx>anyPromise</span> <span class=o>=</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>any</span><span class=p>([</span><span class=nx>resolved</span><span class=p>,</span> <span class=nx>rejected</span><span class=p>]);</span>
-<span class=nx>anyPromise</span><span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>results</span><span class=p>)</span> <span class=p>{</span>
-  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>results</span><span class=p>);</span>
-<span class=p>});</span>
-<span class=c1>// 返回结果：
-</span><span class=c1>// 2
-</span></code></pre></div><ol start=4>
+<li>语法： Promise.any（iterable）</li><li>参数： iterable 可迭代的对象，例如 Array。</li><li>描述： any 方法返回一个 Promise，只要参数 Promise 实例有一个变成 fulfilled 状态，最后 any 返回的实例就会变成 fulfilled 状态；如果所有参数 Promise 实例都变成 rejected 状态，包装实例就会变成 rejected 状态。</li></ul></li></ol><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>resolved</span> <span class=o>=</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>resolve</span><span class=p>(</span><span class=mi>2</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>rejected</span> <span class=o>=</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>reject</span><span class=p>(</span><span class=o>-</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>anyPromise</span> <span class=o>=</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>any</span><span class=p>([</span><span class=nx>resolved</span><span class=p>,</span> <span class=nx>rejected</span><span class=p>]);</span>
+</span></span><span class=line><span class=cl><span class=nx>anyPromise</span><span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>results</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>results</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=c1>// 返回结果：
+</span></span></span><span class=line><span class=cl><span class=c1>// 2
+</span></span></span></code></pre></div><ol start=4>
 <li>race 方法
 <ul>
-<li>语法： <code>Promise.race(iterable)</code></li>
-<li>参数： iterable 可迭代的对象，例如 Array。</li>
-<li>描述： race 方法返回一个 Promise，只要参数的 Promise 之中有一个实例率先改变状态，则 race 方法的返回状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给 race 方法的回调函数。</li>
-</ul>
-</li>
-</ol>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>//请求某个图片资源
-</span><span class=c1></span><span class=kd>function</span> <span class=nx>requestImg</span><span class=p>()</span> <span class=p>{</span>
-  <span class=kd>var</span> <span class=nx>p</span> <span class=o>=</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>{</span>
-    <span class=kd>var</span> <span class=nx>img</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Image</span><span class=p>();</span>
-    <span class=nx>img</span><span class=p>.</span><span class=nx>onload</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
-      <span class=nx>resolve</span><span class=p>(</span><span class=nx>img</span><span class=p>);</span>
-    <span class=p>};</span>
-    <span class=nx>img</span><span class=p>.</span><span class=nx>src</span> <span class=o>=</span> <span class=s1>&#39;http://www.somesite.com/img/flexible/logo/pc/result.png&#39;</span><span class=p>;</span>
-  <span class=p>});</span>
-  <span class=k>return</span> <span class=nx>p</span><span class=p>;</span>
-<span class=p>}</span>
-<span class=c1>//延时函数，用于给请求计时
-</span><span class=c1></span><span class=kd>function</span> <span class=nx>timeout</span><span class=p>()</span> <span class=p>{</span>
-  <span class=kd>var</span> <span class=nx>p</span> <span class=o>=</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>setTimeout</span><span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
-      <span class=nx>reject</span><span class=p>(</span><span class=s1>&#39;图片请求超时&#39;</span><span class=p>);</span>
-    <span class=p>},</span> <span class=mi>5000</span><span class=p>);</span>
-  <span class=p>});</span>
-  <span class=k>return</span> <span class=nx>p</span><span class=p>;</span>
-<span class=p>}</span>
-<span class=nb>Promise</span><span class=p>.</span><span class=nx>race</span><span class=p>([</span><span class=nx>requestImg</span><span class=p>(),</span> <span class=nx>timeout</span><span class=p>()])</span>
-  <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>results</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>results</span><span class=p>);</span>
-  <span class=p>})</span>
-  <span class=p>.</span><span class=k>catch</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>reason</span><span class=p>)</span> <span class=p>{</span>
-    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>reason</span><span class=p>);</span>
-  <span class=p>});</span>
-</code></pre></div><p><figure class=gallery-image style=flex-grow:305;flex-basis:733px>
+<li>语法： <code>Promise.race(iterable)</code></li><li>参数： iterable 可迭代的对象，例如 Array。</li><li>描述： race 方法返回一个 Promise，只要参数的 Promise 之中有一个实例率先改变状态，则 race 方法的返回状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给 race 方法的回调函数。</li></ul></li></ol><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>//请求某个图片资源
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>function</span> <span class=nx>requestImg</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>var</span> <span class=nx>p</span> <span class=o>=</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nx>img</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>Image</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=nx>img</span><span class=p>.</span><span class=nx>onload</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>resolve</span><span class=p>(</span><span class=nx>img</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>};</span>
+</span></span><span class=line><span class=cl>    <span class=nx>img</span><span class=p>.</span><span class=nx>src</span> <span class=o>=</span> <span class=s1>&#39;http://www.somesite.com/img/flexible/logo/pc/result.png&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=c1>//延时函数，用于给请求计时
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>function</span> <span class=nx>timeout</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>var</span> <span class=nx>p</span> <span class=o>=</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>setTimeout</span><span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>reject</span><span class=p>(</span><span class=s1>&#39;图片请求超时&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span> <span class=mi>5000</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>p</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=nb>Promise</span><span class=p>.</span><span class=nx>race</span><span class=p>([</span><span class=nx>requestImg</span><span class=p>(),</span> <span class=nx>timeout</span><span class=p>()])</span>
+</span></span><span class=line><span class=cl>  <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>results</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>results</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>})</span>
+</span></span><span class=line><span class=cl>  <span class=p>.</span><span class=k>catch</span><span class=p>(</span><span class=kd>function</span> <span class=p>(</span><span class=nx>reason</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>reason</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span></code></pre></div><p><figure class=gallery-image style=flex-grow:305;flex-basis:733px>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/promise-method.png data-size=1620x530>
 <img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/promise-method.png width=1620 height=530 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/promise-method_hu556e4881d3e6f9d6f5c6c4cce9c1b6ff_263776_480x0_resize_box_3.png 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/promise-method_hu556e4881d3e6f9d6f5c6c4cce9c1b6ff_263776_1024x0_resize_box_3.png 1024w" loading=lazy alt="promise method">
 </a>
-<figcaption>promise method</figcaption>
-</figure></p>
-<hr>
-<h4 id=generator><code>Generator</code></h4>
-<ul>
-<li><code>Generator</code>（生成器）是 ES6 的新关键词</li>
-<li>Generator 是一个带星号的“函数”（它并不是真正的函数），可以配合 yield 关键字来暂停或者执行函数</li>
-</ul>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span><span class=o>*</span> <span class=nx>gen</span><span class=p>()</span> <span class=p>{</span>
-  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;enter&#39;</span><span class=p>);</span>
-  <span class=kd>let</span> <span class=nx>a</span> <span class=o>=</span> <span class=k>yield</span> <span class=mi>1</span><span class=p>;</span>
-  <span class=kd>let</span> <span class=nx>b</span> <span class=o>=</span> <span class=k>yield</span> <span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=mi>2</span><span class=p>;</span>
-  <span class=p>})();</span>
-  <span class=k>return</span> <span class=mi>3</span><span class=p>;</span>
-<span class=p>}</span>
-<span class=kd>var</span> <span class=nx>g</span> <span class=o>=</span> <span class=nx>gen</span><span class=p>();</span> <span class=c1>// 阻塞住，不会执行任何语句
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>g</span><span class=p>.</span><span class=nx>next</span><span class=p>());</span> <span class=c1>// 每当执行一次 next 方法，Generator 函数会执行到下一个存在 yield 关键词的位置。
-</span><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>g</span><span class=p>.</span><span class=nx>next</span><span class=p>());</span>
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>g</span><span class=p>.</span><span class=nx>next</span><span class=p>());</span>
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>g</span><span class=p>.</span><span class=nx>next</span><span class=p>());</span>
-<span class=c1>// output:
-</span><span class=c1>// { value: 1, done: false }
-</span><span class=c1>// { value: 2, done: false }
-</span><span class=c1>// { value: 3, done: true }
-</span><span class=c1>// { value: undefined, done: true }
-</span></code></pre></div><ol>
-<li>调用 gen() 后，程序会阻塞住，不会执行任何语句。</li>
-<li>调用 g.next() 后，程序继续执行，直到遇到 yield 关键词时执行暂停。</li>
-<li>一直执行 next 方法，最后返回一个对象，其存在两个属性：value 和 done。</li>
-</ol>
-<h5 id=thunk><code>thunk</code></h5>
-<blockquote>
-<p>基本思路都是接收一定的参数，会生产出定制化的函数，最后使用定制化的函数去完成想要实现的功能。</p>
-</blockquote>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>let</span> <span class=nx>isType</span> <span class=o>=</span> <span class=p>(</span><span class=nx>type</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=p>(</span><span class=nx>obj</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=k>return</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>toString</span><span class=p>.</span><span class=nx>call</span><span class=p>(</span><span class=nx>obj</span><span class=p>)</span> <span class=o>===</span> <span class=sb>`[object </span><span class=si>${</span><span class=nx>type</span><span class=si>}</span><span class=sb>]`</span><span class=p>;</span>
-  <span class=p>};</span>
-<span class=p>};</span>
-
-<span class=kd>let</span> <span class=nx>isString</span> <span class=o>=</span> <span class=nx>isType</span><span class=p>(</span><span class=s1>&#39;String&#39;</span><span class=p>);</span>
-<span class=kd>let</span> <span class=nx>isArray</span> <span class=o>=</span> <span class=nx>isType</span><span class=p>(</span><span class=s1>&#39;Array&#39;</span><span class=p>);</span>
-<span class=nx>isString</span><span class=p>(</span><span class=s1>&#39;123&#39;</span><span class=p>);</span> <span class=c1>// true
-</span><span class=c1></span><span class=nx>isArray</span><span class=p>([</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>]);</span> <span class=c1>// true
-</span></code></pre></div><hr>
-<h4 id=asyncawait><code>async/await</code></h4>
-<blockquote>
-<p><code>async</code> 是 <code>Generator</code> 函数的语法糖</p>
-</blockquote>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>function</span> <span class=nx>testWait</span><span class=p>()</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=nx>setTimeout</span><span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
-      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;testWait&#39;</span><span class=p>);</span>
-      <span class=nx>resolve</span><span class=p>();</span>
-    <span class=p>},</span> <span class=mi>1000</span><span class=p>);</span>
-  <span class=p>});</span>
-<span class=p>}</span>
-<span class=kr>async</span> <span class=kd>function</span> <span class=nx>testAwaitUse</span><span class=p>()</span> <span class=p>{</span>
-  <span class=kr>await</span> <span class=nx>testWait</span><span class=p>();</span>
-  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;hello&#39;</span><span class=p>);</span>
-  <span class=k>return</span> <span class=mi>123</span><span class=p>;</span>
-  <span class=c1>// 输出顺序：testWait，hello
-</span><span class=c1></span>  <span class=c1>// 第十行如果不使用await输出顺序：hello , testWait
-</span><span class=c1></span><span class=p>}</span>
-<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>testAwaitUse</span><span class=p>());</span>
-</code></pre></div><hr>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=c1>// readFilePromise 依旧返回 Promise 对象
-</span><span class=c1></span><span class=kr>const</span> <span class=nx>readFilePromise</span> <span class=o>=</span> <span class=p>(</span><span class=nx>filename</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-    <span class=nx>fs</span><span class=p>.</span><span class=nx>readFile</span><span class=p>(</span><span class=nx>filename</span><span class=p>,</span> <span class=p>(</span><span class=nx>err</span><span class=p>,</span> <span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
-      <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
-        <span class=nx>reject</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
-      <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-        <span class=nx>resolve</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
-      <span class=p>}</span>
-    <span class=p>});</span>
-  <span class=p>}).</span><span class=nx>then</span><span class=p>((</span><span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>res</span><span class=p>);</span>
-<span class=p>};</span>
-<span class=c1>// 这里把 Generator的 * 换成 async，把 yield 换成 await
-</span><span class=c1></span><span class=kr>const</span> <span class=nx>gen</span> <span class=o>=</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
-  <span class=kr>const</span> <span class=nx>data1</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;1.txt&#39;</span><span class=p>);</span>
-  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data1</span><span class=p>.</span><span class=nx>toString</span><span class=p>());</span>
-  <span class=kr>const</span> <span class=nx>data2</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;2.txt&#39;</span><span class=p>);</span>
-  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data2</span><span class=p>.</span><span class=nx>toString</span><span class=p>);</span>
-<span class=p>};</span>
-</code></pre></div><ul>
+<figcaption>promise method</figcaption></figure></p><hr>
+<h4 id=generator><code>Generator</code></h4><ul>
+<li><code>Generator</code>（生成器）是 ES6 的新关键词</li><li>Generator 是一个带星号的“函数”（它并不是真正的函数），可以配合 yield 关键字来暂停或者执行函数</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span><span class=o>*</span> <span class=nx>gen</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;enter&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=kd>let</span> <span class=nx>a</span> <span class=o>=</span> <span class=k>yield</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=kd>let</span> <span class=nx>b</span> <span class=o>=</span> <span class=k>yield</span> <span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>})();</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=mi>3</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kd>var</span> <span class=nx>g</span> <span class=o>=</span> <span class=nx>gen</span><span class=p>();</span> <span class=c1>// 阻塞住，不会执行任何语句
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>g</span><span class=p>.</span><span class=nx>next</span><span class=p>());</span> <span class=c1>// 每当执行一次 next 方法，Generator 函数会执行到下一个存在 yield 关键词的位置。
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>g</span><span class=p>.</span><span class=nx>next</span><span class=p>());</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>g</span><span class=p>.</span><span class=nx>next</span><span class=p>());</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>g</span><span class=p>.</span><span class=nx>next</span><span class=p>());</span>
+</span></span><span class=line><span class=cl><span class=c1>// output:
+</span></span></span><span class=line><span class=cl><span class=c1>// { value: 1, done: false }
+</span></span></span><span class=line><span class=cl><span class=c1>// { value: 2, done: false }
+</span></span></span><span class=line><span class=cl><span class=c1>// { value: 3, done: true }
+</span></span></span><span class=line><span class=cl><span class=c1>// { value: undefined, done: true }
+</span></span></span></code></pre></div><ol>
+<li>调用 gen() 后，程序会阻塞住，不会执行任何语句。</li><li>调用 g.next() 后，程序继续执行，直到遇到 yield 关键词时执行暂停。</li><li>一直执行 next 方法，最后返回一个对象，其存在两个属性：value 和 done。</li></ol><h5 id=thunk><code>thunk</code></h5><blockquote>
+<p>基本思路都是接收一定的参数，会生产出定制化的函数，最后使用定制化的函数去完成想要实现的功能。</p></blockquote><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>let</span> <span class=nx>isType</span> <span class=o>=</span> <span class=p>(</span><span class=nx>type</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span><span class=nx>obj</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>toString</span><span class=p>.</span><span class=nx>call</span><span class=p>(</span><span class=nx>obj</span><span class=p>)</span> <span class=o>===</span> <span class=sb>`[object </span><span class=si>${</span><span class=nx>type</span><span class=si>}</span><span class=sb>]`</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>isString</span> <span class=o>=</span> <span class=nx>isType</span><span class=p>(</span><span class=s1>&#39;String&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>isArray</span> <span class=o>=</span> <span class=nx>isType</span><span class=p>(</span><span class=s1>&#39;Array&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=nx>isString</span><span class=p>(</span><span class=s1>&#39;123&#39;</span><span class=p>);</span> <span class=c1>// true
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>isArray</span><span class=p>([</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>]);</span> <span class=c1>// true
+</span></span></span></code></pre></div><hr>
+<h4 id=asyncawait><code>async/await</code></h4><blockquote>
+<p><code>async</code> 是 <code>Generator</code> 函数的语法糖</p></blockquote><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>testWait</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>setTimeout</span><span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;testWait&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=nx>resolve</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span> <span class=mi>1000</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kr>async</span> <span class=kd>function</span> <span class=nx>testAwaitUse</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>await</span> <span class=nx>testWait</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;hello&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=mi>123</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// 输出顺序：testWait，hello
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=c1>// 第十行如果不使用await输出顺序：hello , testWait
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>testAwaitUse</span><span class=p>());</span>
+</span></span></code></pre></div><hr>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// readFilePromise 依旧返回 Promise 对象
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>readFilePromise</span> <span class=o>=</span> <span class=p>(</span><span class=nx>filename</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=k>new</span> <span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span> <span class=nx>reject</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>fs</span><span class=p>.</span><span class=nx>readFile</span><span class=p>(</span><span class=nx>filename</span><span class=p>,</span> <span class=p>(</span><span class=nx>err</span><span class=p>,</span> <span class=nx>data</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>reject</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>resolve</span><span class=p>(</span><span class=nx>data</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>});</span>
+</span></span><span class=line><span class=cl>  <span class=p>}).</span><span class=nx>then</span><span class=p>((</span><span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>res</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=c1>// 这里把 Generator的 * 换成 async，把 yield 换成 await
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>gen</span> <span class=o>=</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>data1</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;1.txt&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data1</span><span class=p>.</span><span class=nx>toString</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>data2</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>readFilePromise</span><span class=p>(</span><span class=s1>&#39;2.txt&#39;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data2</span><span class=p>.</span><span class=nx>toString</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></div><ul>
 <li>async 函数对 Generator 函数的改进:
 <ol>
-<li>内置执行器：Generator 函数的执行必须靠执行器，因为不能一次性执行完成，所以之后才有了开源的 co 函数库。但是，async 函数和正常的函数一样执行，也不用 co 函数库，也不用使用 next 方法，而 async 函数自带执行器，会自动执行。</li>
-<li>适用性更好：co 函数库有条件约束，yield 命令后面只能是 Thunk 函数或 Promise 对象，但是 async 函数的 await 关键词后面，可以不受约束。</li>
-<li>可读性更好：async 和 await，比起使用 * 号和 yield，语义更清晰明了。</li>
-</ol>
-</li>
-</ul>
-<blockquote>
-<p>sync 函数 返回的结果直接是 Promise 对象，比较方便让开发者继续往后处理。而之前 Generator 并不会自动执行，需要通过 next 方法控制，最后返回的也并不是 Promise 对象，而是需要通过 co 函数库来实现最后返回 Promise 对象。</p>
-</blockquote>
-<hr>
+<li>内置执行器：Generator 函数的执行必须靠执行器，因为不能一次性执行完成，所以之后才有了开源的 co 函数库。但是，async 函数和正常的函数一样执行，也不用 co 函数库，也不用使用 next 方法，而 async 函数自带执行器，会自动执行。</li><li>适用性更好：co 函数库有条件约束，yield 命令后面只能是 Thunk 函数或 Promise 对象，但是 async 函数的 await 关键词后面，可以不受约束。</li><li>可读性更好：async 和 await，比起使用 * 号和 yield，语义更清晰明了。</li></ol></li></ul><blockquote>
+<p>sync 函数 返回的结果直接是 Promise 对象，比较方便让开发者继续往后处理。而之前 Generator 并不会自动执行，需要通过 next 方法控制，最后返回的也并不是 Promise 对象，而是需要通过 co 函数库来实现最后返回 Promise 对象。</p></blockquote><hr>
 <p><figure class=gallery-image style=flex-grow:254;flex-basis:611px>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/async-await.png data-size=1666x654>
 <img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/async-await.png width=1666 height=654 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/async-await_hu94c59199e358c9b5856d426207be07e4_396142_480x0_resize_box_3.png 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/async-await_hu94c59199e358c9b5856d426207be07e4_396142_1024x0_resize_box_3.png 1024w" loading=lazy alt=async/await>
 </a>
-<figcaption>async/await</figcaption>
-</figure></p>
-<hr>
+<figcaption>async/await</figcaption></figure></p><hr>
 <p><figure class=gallery-image style=flex-grow:316;flex-basis:758px>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/async.png data-size=1916x606>
 <img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/async.png width=1916 height=606 srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/async_hu5d0f1f75507c686ae447c24353425ea5_259021_480x0_resize_box_3.png 480w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-153/async_hu5d0f1f75507c686ae447c24353425ea5_259021_1024x0_resize_box_3.png 1024w" loading=lazy alt=异步>
 </a>
-<figcaption>异步</figcaption>
-</figure></p>
-<h2 id=reference>Reference</h2>
-<p><a class=link href=https://github.com/haizlin/fe-interview/blob/master/category/history.md target=_blank rel=noopener>haizlin/fe-interview</a></p>
-<p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip target=_blank rel=noopener>background-clip - CSS（层叠样式表） | MDN</a></p>
-</section>
-<footer class=article-footer>
+<figcaption>异步</figcaption></figure></p><h2 id=reference>Reference</h2><p><a class=link href=https://github.com/haizlin/fe-interview/blob/master/category/history.md target=_blank rel=noopener>haizlin/fe-interview</a></p><p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip target=_blank rel=noopener>background-clip - CSS（层叠样式表） | MDN</a></p></section><footer class=article-footer>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title>相关文章</h2>
-<div class=related-contents>
+</section></footer></article><aside class=related-contents--wrapper>
+<h2 class=section-title>相关文章</h2><div class=related-contents>
 <div class="flex article-list--tile">
 <article>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-159/>
 <div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 159</h2>
-</div>
-</a>
-</article>
-<article>
+<h2 class=article-title>毎日のフロントエンド 159</h2></div></a>
+</article><article>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-158/>
 <div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 158</h2>
-</div>
-</a>
-</article>
-<article>
+<h2 class=article-title>毎日のフロントエンド 158</h2></div></a>
+</article><article>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-157/>
 <div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 157</h2>
-</div>
-</a>
-</article>
-<article>
+<h2 class=article-title>毎日のフロントエンド 157</h2></div></a>
+</article><article>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-155/>
 <div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 155</h2>
-</div>
-</a>
-</article>
-<article class=has-image>
+<h2 class=article-title>毎日のフロントエンド 155</h2></div></a>
+</article><article class=has-image>
 <a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/>
 <div class=article-image>
 <img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-147/frontend-147-cover.8a6e39468a7ca3a3b475037d06f604c1_huf8b323232ba975938502496fd4982152_211812_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-im45Rop8o6O0dQN9BvYEwQ==">
-</div>
-<div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 147</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<footer class=site-footer>
+</div><div class=article-details>
+<h2 class=article-title>毎日のフロントエンド 147</h2></div></a>
+</article></div></div></aside><footer class=site-footer>
 <section class=copyright>
 &copy;
 2021 -
 2022 技術の手帳
-</section>
-<section class=powerby>
+</section><section class=powerby>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
 Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
+</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div><div class=pswp__scroll-wrap>
 <div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
 <div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 <div class=pswp__preloader>
 <div class=pswp__preloader__icn>
 <div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
 </button>
 <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
 </button>
 <div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
+<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main><aside class="sidebar right-sidebar sticky">
 <section class="widget archives">
 <div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title">目录</h2>
-<div class=widget--toc>
+</div><h2 class="widget-title section-title">目录</h2><div class=widget--toc>
 <nav id=TableOfContents>
 <ol>
 <li><a href=#html>HTML</a>
 <ol>
-<li><a href=#单词标志缩写>单词标志缩写</a></li>
-</ol>
-</li>
-<li><a href=#css>CSS</a>
+<li><a href=#单词标志缩写>单词标志缩写</a></li></ol></li><li><a href=#css>CSS</a>
 <ol>
-<li><a href=#背景裁剪>背景裁剪</a></li>
-</ol>
-</li>
-<li><a href=#tips>Tips</a>
+<li><a href=#背景裁剪>背景裁剪</a></li></ol></li><li><a href=#tips>Tips</a>
 <ol>
 <li><a href=#异步编程>异步编程</a>
 <ol>
-<li><a href=#什么是同步>什么是同步</a></li>
-<li><a href=#什么是异步>什么是异步</a></li>
-<li><a href=#promise><code>Promise</code></a></li>
-<li><a href=#generator><code>Generator</code></a></li>
-<li><a href=#asyncawait><code>async/await</code></a></li>
-</ol>
-</li>
-</ol>
-</li>
-<li><a href=#reference>Reference</a></li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<li><a href=#什么是同步>什么是同步</a></li><li><a href=#什么是异步>什么是异步</a></li><li><a href=#promise><code>Promise</code></a></li><li><a href=#generator><code>Generator</code></a></li><li><a href=#asyncawait><code>async/await</code></a></li></ol></li></ol></li><li><a href=#reference>Reference</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
+</body></html>
