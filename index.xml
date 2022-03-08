@@ -1,4 +1,152 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 04 Mar 2022 14:28:14 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 169</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-169/</link><pubDate>Fri, 04 Mar 2022 14:28:14 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-169/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 08 Mar 2022 12:00:12 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 170</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-170/</link><pubDate>Tue, 08 Mar 2022 12:00:12 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-170/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="单闭合标签和双闭合标签">单闭合标签和双闭合标签&lt;/h3>
+&lt;ul>
+&lt;li>单标签如&lt;code>&amp;lt;meta /&amp;gt;&lt;/code>，只需将标签名申明一遍的，按照标准，结尾应该有&lt;code>/&lt;/code>&lt;/li>
+&lt;li>双标签如&lt;code>&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&lt;/code>,标签名需在首位各写一遍&lt;/li>
+&lt;li>区别：单标签与双标签都有属性，但是双标签有内容，也就是&lt;code>innerHTML&lt;/code>&lt;/li>
+&lt;li>常见的单标签：&lt;code>&amp;lt;br /&amp;gt;&lt;/code>, &lt;code>&amp;lt;hr /&amp;gt;&lt;/code>, &lt;code>&amp;lt;area /&amp;gt;&lt;/code>, &lt;code>&amp;lt;base /&amp;gt;&lt;/code>, &lt;code>&amp;lt;img /&amp;gt;&lt;/code>, &lt;code>&amp;lt;input /&amp;gt;&lt;/code>, &lt;code>&amp;lt;link /&amp;gt;&lt;/code>, &lt;code>&amp;lt;meta /&amp;gt;&lt;/code>, &lt;code>&amp;lt;basefont /&amp;gt;&lt;/code>, &lt;code>&amp;lt;param /&amp;gt;&lt;/code>, &lt;code>&amp;lt;col /&amp;gt;&lt;/code>, &lt;code>&amp;lt;frame /&amp;gt;&lt;/code>, &lt;code>&amp;lt;embed /&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="更改表单的单选框或下拉框的默认样式">更改表单的单选框或下拉框的默认样式&lt;/h3>
+&lt;ul>
+&lt;li>下拉框
+&lt;ul>
+&lt;li>&lt;code>select&lt;/code>可以通过&lt;code>appearance:none;&lt;/code>去除默认样式，然后进行自定义，但是&lt;code>option&lt;/code>标签不能通过 CSS 自定义，所以最佳方案是自定义标签重写 select&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>单选框
+&lt;ul>
+&lt;li>隐藏&lt;code>input&lt;/code>标签，自定义标签通过&lt;code>checked&lt;/code>伪类进行实现&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="浏览器渲染页面的流程和步骤">浏览器渲染页面的流程和步骤&lt;/h3>
+&lt;h4 id="从-html-到-dom">从 HTML 到 DOM&lt;/h4>
+&lt;ol>
+&lt;li>
+&lt;p>字节流解码&lt;/p>
+&lt;ul>
+&lt;li>浏览器通过 HTTP 协议接收到的文档内容是字节数据&lt;/li>
+&lt;li>当浏览器得到字节数据后，通过“编码嗅探算法”来确定字符编码，然后根据字符编码将字节流数据进行解码，生成字符数据，也就是编写的代码&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>输入流预处理&lt;/p>
+&lt;ul>
+&lt;li>通过上一步解码得到的字符流数据在进入解析环节之前还需要进行一些预处理操作。比如将换行符转换成统一的格式，最终生成规范化的字符流数据，这个把字符数据进行统一格式化的过程称之为“输入流预处理”。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>令牌化&lt;/p>
+&lt;ul>
+&lt;li>第一步是将字符数据转化成令牌（Token）
+&lt;ul>
+&lt;li>使用了一种类似状态机的算法，即每次接收一个或多个输入流中的字符；&lt;/li>
+&lt;li>然后根据当前状态和这些字符来更新下一个状态，也就是说在不同的状态下接收同样的字符数据可能会产生不同的结果，比如当接收到“body”字符串时，在标签打开状态会解析成标签，在标签关闭状态则会解析成文本节点。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>html 代码的标记过程如下：
+&lt;ul>
+&lt;li>初始化为“数据状态”（Data State）；&lt;/li>
+&lt;li>匹配到字符 &amp;lt;，状态切换到 “标签打开状态”（Tag Open State）；&lt;/li>
+&lt;li>匹配到字符 !，状态切换至 “标签声明打开状态”（Markup Declaration Open State），后续 7 个字符可以组成字符串 DOCTYPE，跳转到 “DOCTYPE 状态”（DOCTYPE State）；&lt;/li>
+&lt;li>匹配到字符为空格，当前状态切换至 “DOCTYPE 名称之前状态”（Before DOCTYPE Name State）；&lt;/li>
+&lt;li>匹配到字符串 html，创建一个新的 DOCTYPE 标记，标记的名字为 “html” ，然后当前状态切换至 “DOCTYPE 名字状态”（DOCTYPE Name State）；&lt;/li>
+&lt;li>匹配到字符 &amp;gt;，跳转到 “数据状态” 并且释放当前的 DOCTYPE 标记；&lt;/li>
+&lt;li>匹配到字符 &amp;lt;，切换到 “标签打开状态”；&lt;/li>
+&lt;li>匹配到字符 h，创建一个新的起始标签标记，设置标记的标签名为空，当前状态切换至 “标签名称状态”（Tag Name State）；&lt;/li>
+&lt;li>从字符 h 开始解析，将解析的字符一个一个添加到创建的起始标签标记的标签名中，直到匹配到字符 &amp;gt;，此时当前状态切换至 “数据状态” 并释放当前标记，当前标记的标签名为 “html” 。&lt;/li>
+&lt;li>解析后续的 的方式与 一致，创建并释放对应的起始标签标记，解析完毕后，当前状态处于 “数据状态” ；&lt;/li>
+&lt;li>匹配到字符串 “标记” ，针对每一个字符，创建并释放一个对应的字符标记，解析完毕后，当前状态仍然处于 “数据状态” ；&lt;/li>
+&lt;li>匹配到字符 &amp;lt;，进入 “标签打开状态” ；&lt;/li>
+&lt;li>匹配到字符 /，进入 “结束标签打开状态”（End Tag Open State）；&lt;/li>
+&lt;li>匹配到字符 b，创建一个新的结束标签标记，设置标记的标签名为空，当前状态切换至“标签名称状态”（Tag Name State）；&lt;/li>
+&lt;li>重新从字符 b 开始解析，将解析的字符一个一个添加到创建的结束标签标记的标签名中，直到匹配到字符 &amp;gt;，此时当前状态切换至 “数据状态” 并释放当前标记，当前标记的标签名为 “body”；&lt;/li>
+&lt;li>解析 的方式与 一样；&lt;/li>
+&lt;li>所有的 html 标签和文本解析完成后，状态切换至 “数据状态” ，一旦匹配到文件结束标志符（EOF），则释放 EOF 标记。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>遇到 script 标签时的处理
+&lt;ul>
+&lt;li>内联代码，也就是在 script 标签中直接写代码，那么解析过程会暂停，执行权限会转给 JavaScript 脚本引擎，待 JavaScript 脚本执行完成之后再交由渲染引擎继续解析&lt;/li>
+&lt;li>有一种情况例外，那就是脚本内容中调用了改变 DOM 结构的 document.write() 函数，此时渲染引擎会回到第二步，将这些代码加入字符流，重新进行解析。&lt;/li>
+&lt;li>如果遇到的是外链脚本，那么渲染引擎根据标签属性来执行对应的操作。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;ol start="4">
+&lt;li>构建 DOM 树
+&lt;ul>
+&lt;li>浏览器在创建解析器的同时会创建一个 Document 对象。在树构建阶段，Document 会作为根节点被不断地修改和扩充。标记步骤产生的令牌会被送到树构建器进行处理。HTML 5 标准中定义了每类令牌对应的 DOM 元素，当树构建器接收到某个令牌时就会创建该令牌对应的 DOM 元素并将该元素插入到 DOM 树中。&lt;/li>
+&lt;li>为了纠正元素标签嵌套错位的问题和处理未关闭的元素标签，树构建器创建的新 DOM 元素还会被插入到一个开放元素栈中。&lt;/li>
+&lt;li>树构建算法也可以采用状态机的方式来描述:
+&lt;ol>
+&lt;li>进入初始状态 “initial” 模式；&lt;/li>
+&lt;li>树构建器接收到 DOCTYPE 令牌后，树构建器会创建一个 DocumentType 节点附加到 Document 节点上，DocumentType 节点的 name 属性为 DOCTYPE 令牌的名称，切换到 “before html” 模式；&lt;/li>
+&lt;li>接收到令牌 html 后，树构建器创建一个 html 元素并将该元素作为 Document 的子节点插入到 DOM 树中和开放元素栈中，切换为 “before head” 模式；&lt;/li>
+&lt;li>虽然没有接收到 head 令牌，但仍然会隐式地创建 head 元素并加到 DOM 树和开放元素栈中，切换到“in head”模式；&lt;/li>
+&lt;li>将开放元素栈中的 head 元素弹出，进入 “after head”模式；&lt;/li>
+&lt;li>接收到 body 令牌后，会创建一个 body 元素插入到 DOM 树中同时压入开放元素栈中，当前状态切换为 “in body” 模式；&lt;/li>
+&lt;li>接收到字符令牌，创建 Text 节点，节点值为字符内容“标记”，将 Text 节点作为 body 元素节点插入到 DOM 树中；&lt;/li>
+&lt;li>接收到结束令牌 body，将开放元素栈中的 body 元素弹出，切换至 “after body” 模式；&lt;/li>
+&lt;li>接收到结束令牌 html，将开放元素栈中的 html 元素弹出，切换至 “after after body” 模式；&lt;/li>
+&lt;li>接收到 EOF 令牌，树构建器停止构建，html 文档解析过程完成。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;ul>
+&lt;li>从 CSS 到 CSSOM
+&lt;ul>
+&lt;li>渲染引擎除了解析 HTML 之外，也需要解析 CSS&lt;/li>
+&lt;li>CSS 解析的过程与 HTML 解析过程步骤一致，最终也会生成树状结构&lt;/li>
+&lt;li>与 DOM 树不同的是，CSSOM 树的节点具有继承特性，也就是会先继承父节点样式作为当前样式，然后再进行补充或覆盖&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;ol start="5">
+&lt;li>构建渲染树
+&lt;ul>
+&lt;li>DOM 树包含的结构内容与 CSSOM 树包含的样式规则都是独立的，为了更方便渲染，先需要将它们合并成一棵渲染树。&lt;/li>
+&lt;li>这个过程会从 DOM 树的根节点开始遍历，然后在 CSSOM 树上找到每个节点对应的样式。&lt;/li>
+&lt;li>遍历过程中会自动忽略那些不需要渲染的节点（比如脚本标记、元标记等）以及不可见的节点（比如设置了“display:none”样式）。同时也会将一些需要显示的伪类元素加到渲染树中。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>布局
+&lt;ul>
+&lt;li>生成了渲染树之后，就可以进入布局阶段了，布局就是计算元素的大小及位置&lt;/li>
+&lt;li>计算元素布局是一个比较复杂的操作，因为需要考虑的因素有很多，包括字体大小、换行位置等，这些因素会影响段落的大小和形状，进而影响下一个段落的位置。&lt;/li>
+&lt;li>布局完成后会输出对应的“盒模型”，它会精确地捕获每个元素的确切位置和大小，将所有相对值都转换为屏幕上的绝对像素。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>绘制
+&lt;ul>
+&lt;li>绘制就是将渲染树中的每个节点转换成屏幕上的实际像素的过程。得到布局树这份“施工图”之后，渲染引擎并不能立即绘制，因为还不知道绘制顺序，如果没有弄清楚绘制顺序，那么很可能会导致页面被错误地渲染。(例如，对于使用 z-index 属性的元素（如遮罩层）如果未按照正确的顺序绘制，则将导致渲染结果和预期不符（失去遮罩作用）。)&lt;/li>
+&lt;li>绘制过程中的第一步就是遍历布局树，生成绘制记录，然后渲染引擎会根据绘制记录去绘制相应的内容。&lt;/li>
+&lt;li>动画效果的情况，只需要考虑空间维度，生成不同的图层，然后再把这些图层进行合成，最终成为我们看到的页面。当然这个绘制过程并不是静态不变的，会随着页面滚动不断合成新的图形。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;blockquote>
+&lt;p>字节 → 字符 → 令牌 → 树 → 页面&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>浏览器进行 CSS 选择器匹配时，是从右向左进行的，所以可以推知是自下而上&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 169</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-169/</link><pubDate>Fri, 04 Mar 2022 14:28:14 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-169/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="data-uri">&lt;code>Data URI&lt;/code>&lt;/h3>
 &lt;ul>
 &lt;li>概念：把小文件直接嵌入文档的方案&lt;/li>
