@@ -1,45 +1,5 @@
-<!doctype html><html lang=zh-cn>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 172</title><link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-172/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  172">
-<meta property="og:description" content="frontend 每日一练">
-<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-172/">
-<meta property="og:site_name" content="技術の手帳">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2022-03-10T20:42:49+09:00"><meta property="article:modified_time" content="2022-03-10T20:42:49+09:00">
-<meta name=twitter:title content="毎日のフロントエンド  172">
-<meta name=twitter:description content="frontend 每日一练">
-<link rel="shortcut icon" href=/img/site-icon.png>
-</head><body class="article-page has-toc">
-<script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span>返回</span>
-</a>
-</div><main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/tips/>
-Tips
-</a>
-</header><h2 class=article-title>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-172/>毎日のフロントエンド 172</a>
-</h2><h3 class=article-subtitle>
-frontend 每日一练
-</h3><footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Mar 10, 2022</time>
-</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-阅读时长: 3 分钟
-</time>
-</div></footer></div></header><section class=article-content>
-<h2 id=tips>Tips</h2><h3 id=函数为什么是一等公民>函数为什么是一等公民</h3><blockquote>
-<p>据类型与函数是很多高级语言中最重要的两个概念，前者用来存储数据，后者用来存储代码。JavaScript 中的函数相对于数据类型而言更加复杂，它可以有属性，也可以被赋值给一个变量，还可以作为参数被传递&mldr;&mldr;正是这些强大特性让它成了 JavaScript 的“一等公民”</p></blockquote><h4 id=this-关键字><code>this</code> 关键字</h4><ul>
-<li><code>this</code> 指向的应该是一个对象，更具体地说是函数执行的“上下文对象”</li><li>这个对象指向的是“调用它”的对象，如果调用它的不是对象或对象不存在，则会指向全局对象（严格模式下为 undefined）</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>fn</span><span class=p>()</span> <span class=p>{</span>
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 172</title><link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-172/><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  172"><meta property="og:description" content="frontend 每日一练"><meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-172/"><meta property="og:site_name" content="技術の手帳"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2022-03-10T20:42:49+09:00"><meta property="article:modified_time" content="2022-03-10T20:42:49+09:00"><meta name=twitter:title content="毎日のフロントエンド  172"><meta name=twitter:description content="frontend 每日一练"><link rel="shortcut icon" href=/img/site-icon.png></head><body class="article-page has-toc"><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+extended"><div id=article-toolbar><a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span>返回</span></a></div><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/tips/>Tips</a></header><h2 class=article-title><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-172/>毎日のフロントエンド 172</a></h2><h3 class=article-subtitle>frontend 每日一练</h3><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Mar 10, 2022</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 3 分钟</time></div></footer></div></header><section class=article-content><h2 id=tips>Tips</h2><h3 id=函数为什么是一等公民>函数为什么是一等公民</h3><blockquote><p>据类型与函数是很多高级语言中最重要的两个概念，前者用来存储数据，后者用来存储代码。JavaScript 中的函数相对于数据类型而言更加复杂，它可以有属性，也可以被赋值给一个变量，还可以作为参数被传递&mldr;&mldr;正是这些强大特性让它成了 JavaScript 的“一等公民”</p></blockquote><h4 id=this-关键字><code>this</code> 关键字</h4><ul><li><code>this</code> 指向的应该是一个对象，更具体地说是函数执行的“上下文对象”</li><li>这个对象指向的是“调用它”的对象，如果调用它的不是对象或对象不存在，则会指向全局对象（严格模式下为 undefined）</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>fn</span><span class=p>()</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>);</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>fn2</span><span class=p>()</span> <span class=p>{</span>
@@ -47,17 +7,13 @@ frontend 每日一练
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=kd>var</span> <span class=nx>obj</span> <span class=o>=</span> <span class=p>{</span> <span class=nx>fn2</span> <span class=p>};</span>
 </span></span><span class=line><span class=cl><span class=nx>obj</span><span class=p>.</span><span class=nx>fn2</span><span class=p>();</span> <span class=c1>// ?
-</span></span></span></code></pre></div><ul>
-<li>调用函数 fn() 的是函数 fn2() 而不是 obj。虽然 fn2() 作为 obj 的属性调用，但 <strong>fn2()中的 this 指向并不会传递给函数 fn()</strong>， 所以答案也是 window（Node.js 下是 global）</li></ul><hr>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>var</span> <span class=nx>dx</span> <span class=o>=</span> <span class=p>{</span>
+</span></span></span></code></pre></div><ul><li>调用函数 fn() 的是函数 fn2() 而不是 obj。虽然 fn2() 作为 obj 的属性调用，但 <strong>fn2()中的 this 指向并不会传递给函数 fn()</strong>， 所以答案也是 window（Node.js 下是 global）</li></ul><hr><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>var</span> <span class=nx>dx</span> <span class=o>=</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=nx>arr</span><span class=o>:</span> <span class=p>[</span><span class=mi>1</span><span class=p>],</span>
 </span></span><span class=line><span class=cl><span class=p>};</span>
 </span></span><span class=line><span class=cl><span class=nx>dx</span><span class=p>.</span><span class=nx>arr</span><span class=p>.</span><span class=nx>forEach</span><span class=p>(</span><span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>);</span>
 </span></span><span class=line><span class=cl><span class=p>});</span> <span class=c1>// ?
-</span></span></span></code></pre></div><ul>
-<li><code>forEach</code>，它有两个参数，第一个是回调函数，第二个是 this 指向的对象，这里只传入了回调函数，第二个参数没有传入，默认为 undefined，所以正确答案应该是输出全局对象。</li><li>类似的，需要传入 this 指向的函数还有：<code>every()</code>、<code>find()</code>、<code>findIndex()</code>、<code>map()</code>、<code>some()</code></li></ul><hr>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>class</span> <span class=nx>B</span> <span class=p>{</span>
+</span></span></span></code></pre></div><ul><li><code>forEach</code>，它有两个参数，第一个是回调函数，第二个是 this 指向的对象，这里只传入了回调函数，第二个参数没有传入，默认为 undefined，所以正确答案应该是输出全局对象。</li><li>类似的，需要传入 this 指向的函数还有：<code>every()</code>、<code>find()</code>、<code>findIndex()</code>、<code>map()</code>、<code>some()</code></li></ul><hr><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>class</span> <span class=nx>B</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=nx>fn</span><span class=p>()</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>  <span class=p>}</span>
@@ -65,37 +21,26 @@ frontend 每日一练
 </span></span><span class=line><span class=cl><span class=kd>var</span> <span class=nx>b</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>B</span><span class=p>();</span>
 </span></span><span class=line><span class=cl><span class=kd>var</span> <span class=nx>fun</span> <span class=o>=</span> <span class=nx>b</span><span class=p>.</span><span class=nx>fn</span><span class=p>;</span>
 </span></span><span class=line><span class=cl><span class=nx>fun</span><span class=p>();</span> <span class=c1>// ?
-</span></span></span></code></pre></div><ul>
-<li>ES6 下的 class 内部默认采用的是严格模式，实际上面代码的类定义部分可以理解为下面的形式</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>class</span> <span class=nx>B</span> <span class=p>{</span>
+</span></span></span></code></pre></div><ul><li>ES6 下的 class 内部默认采用的是严格模式，实际上面代码的类定义部分可以理解为下面的形式</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>class</span> <span class=nx>B</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=s1>&#39;use strict&#39;</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>  <span class=nx>fn</span><span class=p>()</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>  <span class=p>}</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span></code></pre></div><ul>
-<li>而严格模式下不会指定全局对象为默认调用对象，所以答案是 <code>undefined</code>。</li></ul><hr>
-<ul>
-<li>ES6 新加入的箭头函数不会创建自己的 this，它只会从自己的作用域链的上一层继承 this。可以简单地理解为箭头函数的 this 继承自上层的 this，但在全局环境下定义仍会指向全局对象。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>var</span> <span class=nx>arrow</span> <span class=o>=</span> <span class=p>{</span>
+</span></span></code></pre></div><ul><li>而严格模式下不会指定全局对象为默认调用对象，所以答案是 <code>undefined</code>。</li></ul><hr><ul><li>ES6 新加入的箭头函数不会创建自己的 this，它只会从自己的作用域链的上一层继承 this。可以简单地理解为箭头函数的 this 继承自上层的 this，但在全局环境下定义仍会指向全局对象。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>var</span> <span class=nx>arrow</span> <span class=o>=</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=nx>fn</span><span class=o>:</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>  <span class=p>},</span>
 </span></span><span class=line><span class=cl><span class=p>};</span>
 </span></span><span class=line><span class=cl><span class=nx>arrow</span><span class=p>.</span><span class=nx>fn</span><span class=p>();</span> <span class=c1>// ?
-</span></span></span></code></pre></div><ul>
-<li>虽然通过对象 arrow 来调用箭头函数 fn()，<strong>this 指向不是 arrow 对象，而是全局对象</strong></li><li>如果要让 fn() 箭头函数指向 arrow 对象，还需要再加一层函数，让箭头函数的上层 this 指向 arrow 对象。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>var</span> <span class=nx>arrow</span> <span class=o>=</span> <span class=p>{</span>
+</span></span></span></code></pre></div><ul><li>虽然通过对象 arrow 来调用箭头函数 fn()，<strong>this 指向不是 arrow 对象，而是全局对象</strong></li><li>如果要让 fn() 箭头函数指向 arrow 对象，还需要再加一层函数，让箭头函数的上层 this 指向 arrow 对象。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>var</span> <span class=nx>arrow</span> <span class=o>=</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=nx>fn</span><span class=p>()</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>a</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>this</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>    <span class=nx>a</span><span class=p>();</span>
 </span></span><span class=line><span class=cl>  <span class=p>},</span>
 </span></span><span class=line><span class=cl><span class=p>};</span>
 </span></span><span class=line><span class=cl><span class=nx>arrow</span><span class=p>.</span><span class=nx>fn</span><span class=p>();</span> <span class=c1>// arrow
-</span></span></span></code></pre></div><hr>
-<ul>
-<li>
-<p>箭头函数和普通函数相比，有以下几个区别，在开发中应特别注意：</p><ul>
-<li>不绑定 arguments 对象，也就是说在箭头函数内访问 arguments 对象会报错；</li><li>不能用作构造器，也就是说不能通过关键字 new 来创建实例；</li><li>默认不会创建 prototype 原型属性；</li><li>不能用作 Generator() 函数，不能使用 yeild 关键字。</li></ul></li><li>
-<p>函数的转换</p><ul>
-<li>不定参数的求和处理</li></ul></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>add</span><span class=p>(</span><span class=mi>1</span><span class=p>);</span> <span class=c1>// 1
+</span></span></span></code></pre></div><hr><ul><li><p>箭头函数和普通函数相比，有以下几个区别，在开发中应特别注意：</p><ul><li>不绑定 arguments 对象，也就是说在箭头函数内访问 arguments 对象会报错；</li><li>不能用作构造器，也就是说不能通过关键字 new 来创建实例；</li><li>默认不会创建 prototype 原型属性；</li><li>不能用作 Generator() 函数，不能使用 yeild 关键字。</li></ul></li><li><p>函数的转换</p><ul><li>不定参数的求和处理</li></ul></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>add</span><span class=p>(</span><span class=mi>1</span><span class=p>);</span> <span class=c1>// 1
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>add</span><span class=p>(</span><span class=mi>1</span><span class=p>)(</span><span class=mi>2</span><span class=p>);</span> <span class=c1>// 3
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>add</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>)(</span><span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>)(</span><span class=mi>6</span><span class=p>);</span> <span class=c1>// 21
 </span></span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>add</span><span class=p>(...</span><span class=nx>args</span><span class=p>)</span> <span class=p>{</span>
@@ -109,28 +54,18 @@ frontend 每日一练
 </span></span><span class=line><span class=cl>  <span class=p>};</span>
 </span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=nx>fn</span><span class=p>;</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span></code></pre></div><ul>
-<li><code>toString()</code> 函数会在打印函数的时候调用，比如 console.log</li><li><code>valueOf()</code> 会在获取函数原始值时调用，比如加法操作。</li></ul><hr>
-<h4 id=原型>原型</h4><blockquote>
-<p>原型是 JavaScript 的重要特性之一，可以让对象从其他对象继承功能特性，原型是 JavaScript 的重要特性之一，可以让对象从其他对象继承功能特性</p></blockquote><h5 id=什么是原型和原型链>什么是原型和原型链？</h5><ul>
-<li>原型就是对象的属性，<strong>包括被称为隐式原型的 <code>proto</code> 属性 和 被称为显式原型的 <code>prototype</code> 属性。</strong></li></ul><hr>
-<ul>
-<li>隐式原型通常在创建实例的时候就会自动指向构造函数的显式原型。例如，在下面的示例代码中，当创建对象 a 时，a 的隐式原型会指向构造函数 Object() 的显式原型。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>var</span> <span class=nx>a</span> <span class=o>=</span> <span class=p>{};</span>
+</span></span></code></pre></div><ul><li><code>toString()</code> 函数会在打印函数的时候调用，比如 console.log</li><li><code>valueOf()</code> 会在获取函数原始值时调用，比如加法操作。</li></ul><hr><h4 id=原型>原型</h4><blockquote><p>原型是 JavaScript 的重要特性之一，可以让对象从其他对象继承功能特性，原型是 JavaScript 的重要特性之一，可以让对象从其他对象继承功能特性</p></blockquote><h5 id=什么是原型和原型链>什么是原型和原型链？</h5><ul><li>原型就是对象的属性，<strong>包括被称为隐式原型的 <code>proto</code> 属性 和 被称为显式原型的 <code>prototype</code> 属性。</strong></li></ul><hr><ul><li>隐式原型通常在创建实例的时候就会自动指向构造函数的显式原型。例如，在下面的示例代码中，当创建对象 a 时，a 的隐式原型会指向构造函数 Object() 的显式原型。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>var</span> <span class=nx>a</span> <span class=o>=</span> <span class=p>{};</span>
 </span></span><span class=line><span class=cl><span class=nx>a</span><span class=p>.</span><span class=nx>__proto__</span> <span class=o>===</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>prototype</span><span class=p>;</span> <span class=c1>// true
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>var</span> <span class=nx>b</span> <span class=o>=</span> <span class=k>new</span> <span class=nb>Object</span><span class=p>();</span>
 </span></span><span class=line><span class=cl><span class=nx>b</span><span class=p>.</span><span class=nx>__proto__</span> <span class=o>===</span> <span class=nx>a</span><span class=p>.</span><span class=nx>__proto__</span><span class=p>;</span> <span class=c1>// true
-</span></span></span></code></pre></div><hr>
-<ul>
-<li><strong>显式原型</strong>是内置函数（比如 Date() 函数）的默认属性，在自定义函数时（箭头函数除外）也会默认生成，生成的显式原型对象只有一个属性 constructor ，该属性指向函数自身。</li><li>通常配合 new 关键字一起使用，当通过 new 关键字创建函数实例时，<strong>会将实例的隐式原型指向构造函数的显式原型。</strong></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>fn</span><span class=p>()</span> <span class=p>{}</span>
+</span></span></span></code></pre></div><hr><ul><li><strong>显式原型</strong>是内置函数（比如 Date() 函数）的默认属性，在自定义函数时（箭头函数除外）也会默认生成，生成的显式原型对象只有一个属性 constructor ，该属性指向函数自身。</li><li>通常配合 new 关键字一起使用，当通过 new 关键字创建函数实例时，<strong>会将实例的隐式原型指向构造函数的显式原型。</strong></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>fn</span><span class=p>()</span> <span class=p>{}</span>
 </span></span><span class=line><span class=cl><span class=nx>fn</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>constructor</span> <span class=o>===</span> <span class=nx>fn</span><span class=p>;</span> <span class=c1>// true
 </span></span></span></code></pre></div><h5 id=new-操作符实现了什么><code>new</code> 操作符实现了什么？</h5><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>F</span><span class=p>(</span><span class=nx>init</span><span class=p>)</span> <span class=p>{}</span>
 </span></span><span class=line><span class=cl><span class=kd>var</span> <span class=nx>f</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>F</span><span class=p>(</span><span class=nx>args</span><span class=p>);</span>
-</span></span></code></pre></div><ol>
-<li>创建一个临时的空对象，命名为 fn，让对象 fn 的隐式原型指向函数 F 的显式原型；</li><li>执行函数 F()，将 this 指向对象 fn，并传入参数 args，得到执行结果 result；</li><li>判断上一步的执行结果 result，如果 result 为非空对象，则返回 result，否则返回 fn。</li></ol><p>即：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>var</span> <span class=nx>fn</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>create</span><span class=p>(</span><span class=nx>F</span><span class=p>.</span><span class=nx>prototype</span><span class=p>);</span>
+</span></span></code></pre></div><ol><li>创建一个临时的空对象，命名为 fn，让对象 fn 的隐式原型指向函数 F 的显式原型；</li><li>执行函数 F()，将 this 指向对象 fn，并传入参数 args，得到执行结果 result；</li><li>判断上一步的执行结果 result，如果 result 为非空对象，则返回 result，否则返回 fn。</li></ol><p>即：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>var</span> <span class=nx>fn</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>create</span><span class=p>(</span><span class=nx>F</span><span class=p>.</span><span class=nx>prototype</span><span class=p>);</span>
 </span></span><span class=line><span class=cl><span class=kd>var</span> <span class=nx>obj</span> <span class=o>=</span> <span class=nx>F</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=nx>fn</span><span class=p>,</span> <span class=nx>args</span><span class=p>);</span>
 </span></span><span class=line><span class=cl><span class=kd>var</span> <span class=nx>f</span> <span class=o>=</span> <span class=nx>obj</span> <span class=o>&amp;&amp;</span> <span class=k>typeof</span> <span class=nx>obj</span> <span class=o>===</span> <span class=s1>&#39;object&#39;</span> <span class=o>?</span> <span class=nx>obj</span> <span class=o>:</span> <span class=nx>fn</span><span class=p>;</span>
-</span></span></code></pre></div><h5 id=怎么通过原型链实现多层继承>怎么通过原型链实现多层继承？</h5><ul>
-<li>假设构造函数 B() 需要继承构造函数 A()，就可以通过将函数 B() 的显式原型指向一个函数 A() 的实例，然后再对 B 的显式原型进行扩展。那么通过函数 B() 创建的实例，既能访问用函数 B() 的属性 b，也能访问函数 A() 的属性 a，从而实现了多层继承。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>A</span><span class=p>()</span> <span class=p>{}</span>
+</span></span></code></pre></div><h5 id=怎么通过原型链实现多层继承>怎么通过原型链实现多层继承？</h5><ul><li>假设构造函数 B() 需要继承构造函数 A()，就可以通过将函数 B() 的显式原型指向一个函数 A() 的实例，然后再对 B 的显式原型进行扩展。那么通过函数 B() 创建的实例，既能访问用函数 B() 的属性 b，也能访问函数 A() 的属性 a，从而实现了多层继承。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>A</span><span class=p>()</span> <span class=p>{}</span>
 </span></span><span class=line><span class=cl><span class=nx>A</span><span class=p>.</span><span class=nx>prototype</span><span class=p>.</span><span class=nx>a</span> <span class=o>=</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=s1>&#39;a&#39;</span><span class=p>;</span>
 </span></span><span class=line><span class=cl><span class=p>};</span>
@@ -142,37 +77,11 @@ frontend 每日一练
 </span></span><span class=line><span class=cl><span class=kd>var</span> <span class=nx>c</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>B</span><span class=p>();</span>
 </span></span><span class=line><span class=cl><span class=nx>c</span><span class=p>.</span><span class=nx>b</span><span class=p>();</span> <span class=c1>// &#39;b&#39;
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>c</span><span class=p>.</span><span class=nx>a</span><span class=p>();</span> <span class=c1>// &#39;a&#39;
-</span></span></span></code></pre></div><hr>
-<h4 id=typeof><code>typeof</code></h4><table>
-<thead>
-<tr>
-<th>类型</th><th>结果</th></tr></thead><tbody>
-<tr>
-<td>Undefined</td><td>&ldquo;undefined&rdquo;</td></tr><tr>
-<td>Boolean</td><td>&ldquo;boolean&rdquo;</td></tr><tr>
-<td>Number</td><td>&ldquo;number&rdquo;</td></tr><tr>
-<td>BigInt</td><td>&ldquo;bigint&rdquo;</td></tr><tr>
-<td>String</td><td>&ldquo;string&rdquo;</td></tr><tr>
-<td>Symbol</td><td>&ldquo;symbol&rdquo;</td></tr><tr>
-<td>函数对象</td><td>&ldquo;function&rdquo;</td></tr><tr>
-<td>其他对象及 null</td><td>&ldquo;object&rdquo;</td></tr></tbody></table><h4 id=instanceof><code>instanceof</code></h4><ul>
-<li>用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上。例如，在表达式 left instanceof right 中，会沿着 left 的原型链查找，看看是否存在 right 的 prototype 对象</li></ul><p><code>left.__proto__.__proto__... =?= right.prototype</code></p><hr>
-<h4 id=作用域>作用域</h4><ul>
-<li>
-<p>作用域是指赋值、取值操作的执行范围，通过作用域机制可以有效地防止变量、函数的重复定义，以及控制它们的可访问性</p></li><li>
-<p>在浏览器端和 Node.js 端作用域的处理有所不同</p><ul>
-<li>比如对于全局作用域，浏览器会自动将未主动声明的变量提升到全局作用域</li><li>Node.js 则需要显式的挂载到 global 对象上。</li><li>比如在 ES6 之前，浏览器不提供模块级别的作用域，</li><li>Node.js 的 CommonJS 模块机制就提供了模块级别的作用域。但在类型上，可以分为全局作用域（window/global）、块级作用域（let、const、try/catch）、模块作用域（ES6 Module、CommonJS）及函数作用域。</li></ul></li></ul><hr>
-<ul>
-<li>对于使用 var 关键字声明的变量以及创建命名函数的时候，JavaScript 在解释执行的时候都会将其声明内容<strong>提升到作用域顶部</strong>，这种机制称为“命名提升”。</li><li>变量的命名提升允许在<strong>同（子）级作用域中</strong>，在变量声明之前进行引用，但要注意，得到的是未赋值的变量。而且仅限 var 关键字声明的变量，对于 let 和 const 在定义之前引用会报错。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 方式1
+</span></span></span></code></pre></div><hr><h4 id=typeof><code>typeof</code></h4><table><thead><tr><th>类型</th><th>结果</th></tr></thead><tbody><tr><td>Undefined</td><td>&ldquo;undefined&rdquo;</td></tr><tr><td>Boolean</td><td>&ldquo;boolean&rdquo;</td></tr><tr><td>Number</td><td>&ldquo;number&rdquo;</td></tr><tr><td>BigInt</td><td>&ldquo;bigint&rdquo;</td></tr><tr><td>String</td><td>&ldquo;string&rdquo;</td></tr><tr><td>Symbol</td><td>&ldquo;symbol&rdquo;</td></tr><tr><td>函数对象</td><td>&ldquo;function&rdquo;</td></tr><tr><td>其他对象及 null</td><td>&ldquo;object&rdquo;</td></tr></tbody></table><h4 id=instanceof><code>instanceof</code></h4><ul><li>用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上。例如，在表达式 left instanceof right 中，会沿着 left 的原型链查找，看看是否存在 right 的 prototype 对象</li></ul><p><code>left.__proto__.__proto__... =?= right.prototype</code></p><hr><h4 id=作用域>作用域</h4><ul><li><p>作用域是指赋值、取值操作的执行范围，通过作用域机制可以有效地防止变量、函数的重复定义，以及控制它们的可访问性</p></li><li><p>在浏览器端和 Node.js 端作用域的处理有所不同</p><ul><li>比如对于全局作用域，浏览器会自动将未主动声明的变量提升到全局作用域</li><li>Node.js 则需要显式的挂载到 global 对象上。</li><li>比如在 ES6 之前，浏览器不提供模块级别的作用域，</li><li>Node.js 的 CommonJS 模块机制就提供了模块级别的作用域。但在类型上，可以分为全局作用域（window/global）、块级作用域（let、const、try/catch）、模块作用域（ES6 Module、CommonJS）及函数作用域。</li></ul></li></ul><hr><ul><li>对于使用 var 关键字声明的变量以及创建命名函数的时候，JavaScript 在解释执行的时候都会将其声明内容<strong>提升到作用域顶部</strong>，这种机制称为“命名提升”。</li><li>变量的命名提升允许在<strong>同（子）级作用域中</strong>，在变量声明之前进行引用，但要注意，得到的是未赋值的变量。而且仅限 var 关键字声明的变量，对于 let 和 const 在定义之前引用会报错。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// 方式1
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>var</span> <span class=nx>f</span> <span class=o>=</span> <span class=kd>function</span><span class=p>()</span> <span class=p>{...}</span>
 </span></span><span class=line><span class=cl><span class=c1>// 方式2
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>function</span> <span class=nx>f</span><span class=p>()</span> <span class=p>{...}</span>
-</span></span></code></pre></div><ul>
-<li>两种方式对于调用函数方式以及返回结果而言是没有区别的，但根据命名提升的规则，可以得知:
-<ul>
-<li>方式 1 创建了一个匿名函数，让变量 f 指向它，这里会发生变量的命名提升；</li><li>如果在定义函数之前调用会报错，而方式 2 则不会。</li></ul></li></ul><h4 id=闭包>闭包</h4><ul>
-<li>在函数内部访问外部函数作用域时就会产生闭包。</li><li>它允许将函数与其所操作的某些数据（环境）关联起来。这种关联不只是跨作用域引用，也可以实现数据与函数的隔离。</li></ul><hr>
-<p>题目：修复下列代码</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=k>for</span> <span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=mi>5</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
+</span></span></code></pre></div><ul><li>两种方式对于调用函数方式以及返回结果而言是没有区别的，但根据命名提升的规则，可以得知:<ul><li>方式 1 创建了一个匿名函数，让变量 f 指向它，这里会发生变量的命名提升；</li><li>如果在定义函数之前调用会报错，而方式 2 则不会。</li></ul></li></ul><h4 id=闭包>闭包</h4><ul><li>在函数内部访问外部函数作用域时就会产生闭包。</li><li>它允许将函数与其所操作的某些数据（环境）关联起来。这种关联不只是跨作用域引用，也可以实现数据与函数的隔离。</li></ul><hr><p>题目：修复下列代码</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=k>for</span> <span class=p>(</span><span class=kd>var</span> <span class=nx>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;</span> <span class=mi>5</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=nx>setTimeout</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>i</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>  <span class=p>},</span> <span class=mi>1000</span> <span class=o>*</span> <span class=nx>i</span><span class=p>);</span>
@@ -191,69 +100,11 @@ frontend 每日一练
 </span></span></span><span class=line><span class=cl><span class=cm>	}, 1000 * i)
 </span></span></span><span class=line><span class=cl><span class=cm>}
 </span></span></span><span class=line><span class=cl><span class=cm> */</span>
-</span></span></code></pre></div><h2 id=reference>Reference</h2><p><a class=link href=https://github.com/haizlin/fe-interview/blob/master/category/history.md target=_blank rel=noopener>haizlin/fe-interview</a></p><p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf target=_blank rel=noopener>Object.prototype.valueOf() - JavaScript | MDN</a></p></section><footer class=article-footer>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section></footer></article><aside class=related-contents--wrapper>
-<h2 class=section-title>相关文章</h2><div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-161/>
-<div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 161</h2></div></a>
-</article><article>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-160/>
-<div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 160</h2></div></a>
-</article><article>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-159/>
-<div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 159</h2></div></a>
-</article><article>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-158/>
-<div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 158</h2></div></a>
-</article><article>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-157/>
-<div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 157</h2></div></a>
-</article></div></div></aside><footer class=site-footer>
-<section class=copyright>
-&copy;
+</span></span></code></pre></div><h2 id=reference>Reference</h2><p><a class=link href=https://github.com/haizlin/fe-interview/blob/master/category/history.md target=_blank rel=noopener>haizlin/fe-interview</a></p><p><a class=link href=https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf target=_blank rel=noopener>Object.prototype.valueOf() - JavaScript | MDN</a></p></section><footer class=article-footer><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title>相关文章</h2><div class=related-contents><div class="flex article-list--tile"><article><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-173/><div class=article-details><h2 class=article-title>毎日のフロントエンド 173</h2></div></a></article><article><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-161/><div class=article-details><h2 class=article-title>毎日のフロントエンド 161</h2></div></a></article><article><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-160/><div class=article-details><h2 class=article-title>毎日のフロントエンド 160</h2></div></a></article><article><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-159/><div class=article-details><h2 class=article-title>毎日のフロントエンド 159</h2></div></a></article><article><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-158/><div class=article-details><h2 class=article-title>毎日のフロントエンド 158</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
 2021 -
-2022 技術の手帳
-</section><section class=powerby>
-Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div><div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 技術の手帳</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main><aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div><h2 class="widget-title section-title">目录</h2><div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#tips>Tips</a>
-<ol>
-<li><a href=#函数为什么是一等公民>函数为什么是一等公民</a>
-<ol>
-<li><a href=#this-关键字><code>this</code> 关键字</a></li><li><a href=#原型>原型</a></li><li><a href=#typeof><code>typeof</code></a></li><li><a href=#instanceof><code>instanceof</code></a></li><li><a href=#作用域>作用域</a></li><li><a href=#闭包>闭包</a></li></ol></li></ol></li><li><a href=#reference>Reference</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
-</body></html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#tips>Tips</a><ol><li><a href=#函数为什么是一等公民>函数为什么是一等公民</a><ol><li><a href=#this-关键字><code>this</code> 关键字</a></li><li><a href=#原型>原型</a></li><li><a href=#typeof><code>typeof</code></a></li><li><a href=#instanceof><code>instanceof</code></a></li><li><a href=#作用域>作用域</a></li><li><a href=#闭包>闭包</a></li></ol></li></ol></li><li><a href=#reference>Reference</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

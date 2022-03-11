@@ -1,57 +1,7 @@
-<!doctype html><html lang=zh-cn>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 101</title><link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  101">
-<meta property="og:description" content="frontend 每日一练">
-<meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/">
-<meta property="og:site_name" content="技術の手帳">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-12-26T17:44:12+09:00"><meta property="article:modified_time" content="2021-12-26T17:44:12+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover.jpg">
-<meta name=twitter:title content="毎日のフロントエンド  101">
-<meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover.jpg">
-<link rel="shortcut icon" href=/img/site-icon.png>
-</head><body class="article-page has-toc">
-<script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span>返回</span>
-</a>
-</div><main class="main full-width">
-<article class="has-image main-article">
-<header class=article-header>
-<div class=article-image>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/>
-<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover_hu929d3b5e830f80545cd76d6972e83096_6462711_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover_hu929d3b5e830f80545cd76d6972e83096_6462711_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover_hu929d3b5e830f80545cd76d6972e83096_6462711_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド  101">
-</a>
-</div><div class=article-details>
-<header class=article-category>
-<a href=/categories/html/>
-HTML
-</a>
-<a href=/categories/css/>
-CSS
-</a>
-<a href=/categories/javascript/>
-Javascript
-</a>
-</header><h2 class=article-title>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/>毎日のフロントエンド 101</a>
-</h2><h3 class=article-subtitle>
-frontend 每日一练
-</h3><footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Dec 26, 2021</time>
-</div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-阅读时长: 1 分钟
-</time>
-</div></footer></div></header><section class=article-content>
-<h1 id=第一百零一日>第一百零一日</h1><h2 id=html>HTML</h2><h3 id=question-accesskey举例说明它有什么运用场景><strong>Question:</strong> <code>accesskey</code>，举例说明它有什么运用场景</h3><ul>
-<li>毎日のフロントエンド 80</li></ul><h2 id=css>CSS</h2><h3 id=question-前端二倍图的理解移动端使用二倍图比一倍图有什么好处><strong>Question:</strong> 前端二倍图的理解？移动端使用二倍图比一倍图有什么好处</h3><ul>
-<li>一倍图：当这个比率为 1:1 时，使用 1 个设备像素显示 1 个 CSS 像素。</li><li>二倍图：当这个比率为 2:1 时，使用 4 个设备像素显示 1 个 CSS 像素，</li><li>三倍图：当这个比率为 3:1 时，使用 9（3*3）个设备像素显示 1 个 CSS 像素。</li></ul><h2 id=javascript>JavaScript</h2><h3 id=question-防抖和节流-again><strong>Question:</strong> 防抖和节流 again</h3><ul>
-<li>防抖：动作绑定事件，动作发生后一定时间后触发事件，在这段时间内，如果该动作又发生，则重新等待一定时间再触发事件。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>debounce</span><span class=p>(</span><span class=nx>func</span><span class=p>,</span> <span class=nx>time</span><span class=p>)</span> <span class=p>{</span>
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="frontend 每日一练"><title>毎日のフロントエンド 101</title><link rel=canonical href=https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="毎日のフロントエンド  101"><meta property="og:description" content="frontend 每日一练"><meta property="og:url" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/"><meta property="og:site_name" content="技術の手帳"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-12-26T17:44:12+09:00"><meta property="article:modified_time" content="2021-12-26T17:44:12+09:00"><meta property="og:image" content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover.jpg"><meta name=twitter:title content="毎日のフロントエンド  101"><meta name=twitter:description content="frontend 每日一练"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover.jpg"><link rel="shortcut icon" href=/img/site-icon.png></head><body class="article-page has-toc"><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+extended"><div id=article-toolbar><a href=https://youkoucoding.github.io/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span>返回</span></a></div><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/><img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover_hu929d3b5e830f80545cd76d6972e83096_6462711_800x0_resize_q75_box.jpg srcset="/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover_hu929d3b5e830f80545cd76d6972e83096_6462711_800x0_resize_q75_box.jpg 800w, /p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover_hu929d3b5e830f80545cd76d6972e83096_6462711_1600x0_resize_q75_box.jpg 1600w" width=800 height=533 loading=lazy alt="Featured image of post 毎日のフロントエンド  101"></a></div><div class=article-details><header class=article-category><a href=/categories/html/>HTML</a>
+<a href=/categories/css/>CSS</a>
+<a href=/categories/javascript/>Javascript</a></header><h2 class=article-title><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/>毎日のフロントエンド 101</a></h2><h3 class=article-subtitle>frontend 每日一练</h3><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Dec 26, 2021</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading>阅读时长: 1 分钟</time></div></footer></div></header><section class=article-content><h1 id=第一百零一日>第一百零一日</h1><h2 id=html>HTML</h2><h3 id=question-accesskey举例说明它有什么运用场景><strong>Question:</strong> <code>accesskey</code>，举例说明它有什么运用场景</h3><ul><li>毎日のフロントエンド 80</li></ul><h2 id=css>CSS</h2><h3 id=question-前端二倍图的理解移动端使用二倍图比一倍图有什么好处><strong>Question:</strong> 前端二倍图的理解？移动端使用二倍图比一倍图有什么好处</h3><ul><li>一倍图：当这个比率为 1:1 时，使用 1 个设备像素显示 1 个 CSS 像素。</li><li>二倍图：当这个比率为 2:1 时，使用 4 个设备像素显示 1 个 CSS 像素，</li><li>三倍图：当这个比率为 3:1 时，使用 9（3*3）个设备像素显示 1 个 CSS 像素。</li></ul><h2 id=javascript>JavaScript</h2><h3 id=question-防抖和节流-again><strong>Question:</strong> 防抖和节流 again</h3><ul><li>防抖：动作绑定事件，动作发生后一定时间后触发事件，在这段时间内，如果该动作又发生，则重新等待一定时间再触发事件。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>debounce</span><span class=p>(</span><span class=nx>func</span><span class=p>,</span> <span class=nx>time</span><span class=p>)</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=kd>let</span> <span class=nx>timer</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=nx>clearTimeout</span><span class=p>(</span><span class=nx>timer</span><span class=p>);</span>
@@ -60,8 +10,7 @@ frontend 每日一练
 </span></span><span class=line><span class=cl>    <span class=p>},</span> <span class=nx>time</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>  <span class=p>};</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span></code></pre></div><ul>
-<li>节流： 动作绑定事件，动作发生后一段时间后触发事件，在这段时间内，如果动作又发生，则无视该动作，直到事件执行完后，才能重新触发。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>throtte</span><span class=p>(</span><span class=nx>func</span><span class=p>,</span> <span class=nx>time</span><span class=p>)</span> <span class=p>{</span>
+</span></span></code></pre></div><ul><li>节流： 动作绑定事件，动作发生后一段时间后触发事件，在这段时间内，如果动作又发生，则无视该动作，直到事件执行完后，才能重新触发。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kd>function</span> <span class=nx>throtte</span><span class=p>(</span><span class=nx>func</span><span class=p>,</span> <span class=nx>time</span><span class=p>)</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=kd>let</span> <span class=nx>activeTime</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>current</span> <span class=o>=</span> <span class=nb>Date</span><span class=p>.</span><span class=nx>now</span><span class=p>();</span>
@@ -71,100 +20,19 @@ frontend 每日一练
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl>  <span class=p>};</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span></code></pre></div><h3 id=question-模块化-again><strong>Question:</strong> 模块化 again</h3><h4 id=commonjs><code>CommonJS</code></h4><ul>
-<li>特点: <code>require</code>、<code>module.exports</code>、<code>exports</code></li><li>CommonJS 一般用在服务端或者 Node 用来同步加载模块，它对于模块的依赖发生在代码运行阶段，<strong>不适合在浏览器端做异步加载</strong>。 exports 实际上是一个对 module.exports 的引用:</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>exports</span><span class=p>.</span><span class=nx>add</span> <span class=o>=</span> <span class=kd>function</span> <span class=nx>add</span><span class=p>()</span> <span class=p>{</span>
+</span></span></code></pre></div><h3 id=question-模块化-again><strong>Question:</strong> 模块化 again</h3><h4 id=commonjs><code>CommonJS</code></h4><ul><li>特点: <code>require</code>、<code>module.exports</code>、<code>exports</code></li><li>CommonJS 一般用在服务端或者 Node 用来同步加载模块，它对于模块的依赖发生在代码运行阶段，<strong>不适合在浏览器端做异步加载</strong>。 exports 实际上是一个对 module.exports 的引用:</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>exports</span><span class=p>.</span><span class=nx>add</span> <span class=o>=</span> <span class=kd>function</span> <span class=nx>add</span><span class=p>()</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=cm>/* 方法 */</span>
 </span></span><span class=line><span class=cl><span class=p>};</span>
 </span></span><span class=line><span class=cl><span class=c1>// 等同于
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>module</span><span class=p>.</span><span class=nx>exports</span><span class=p>.</span><span class=nx>add</span> <span class=o>=</span> <span class=kd>function</span> <span class=nx>add</span><span class=p>()</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>  <span class=cm>/* 方法 */</span>
 </span></span><span class=line><span class=cl><span class=p>};</span>
-</span></span></code></pre></div><h4 id=esmodule><code>ESModule</code></h4><ul>
-<li><code>import</code>、<code>export</code> <strong>ES6 模块化不是对象</strong></li><li><code>import</code>会在 JavaScript 引擎<strong>静态分析</strong>，在编译时就引入模块代码，而并非在代码运行时加载，因此也不适合异步加载。 在 HTML 中如果要引入模块需要使用</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>script</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;module&#34;</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;./module.js&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
-</span></span></code></pre></div><ul>
-<li>ESModule 的优势：</li></ul><ol>
-<li>可以用静态分析工具检测出哪些模块没有被调用过： 通过静态分析可以在打包时去掉这些未曾使用过的模块，以减小打包资源体积。</li><li>模块变量类型检查。 ES6 Module 的静态模块结构有助于确保模块之间传递的值或接口类型是正确的。</li><li>编译器优化。在 CommonJS 等动态模块系统中，无论采用哪种方式，本质上导入的都是一个对象，而 ES6 Module 支持直接导入变量，减少了引用层级，程序效率更高。</li></ol><h4 id=commonjs-esm差异><code>CommonJS</code> <code>ESM</code>差异</h4><ol>
-<li>CommonJS 模块引用后是一个值的拷贝，而 ESModule 引用后是一个值的动态映射，并且这个映射是只读的。
-<ul>
-<li>CommonJS 模块输出的是值的拷贝，一旦输出之后，无论模块内部怎么变化，都无法影响之前的引用。</li><li>ESModule 是引擎会在遇到 import 后生成一个引用链接，在脚本真正执行时才会根据这个引用链接去模块里面取值，模块内部的原始值变了 import 加载的模块也会变。</li></ul></li><li>CommonJS 运行时加载，ESModule 编译阶段引用。
-<ul>
-<li>CommonJS 在引入时是加载整个模块，生成一个对象，然后再从这个生成的对象上读取方法和属性。</li><li>ESModule 不是对象，而是通过 export 暴露出要输出的代码块，在 import 时使用静态命令的方法引用指定的输出代码块，并在 import 语句处执行这个要输出的代码，而不是直接加载整个模块。</li></ul></li></ol><h2 id=reference>Reference</h2><p><a class=link href=https://github.com/haizlin/fe-interview target=_blank rel=noopener>haizlin/fe-interview</a></p><p><a class=link href=https://muyiy.cn/ target=_blank rel=noopener>前端进阶</a></p><p><a class=link href=https://www.processon.com/view/link/5c8409bbe4b02b2ce492286a#map target=_blank rel=noopener>模块化 | ProcessOn 免费在线作图,在线流程图,在线思维导图</a></p></section><footer class=article-footer>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section></footer></article><aside class=related-contents--wrapper>
-<h2 class=section-title>相关文章</h2><div class=related-contents>
-<div class="flex article-list--tile">
-<article class=has-image>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/>
-<div class=article-image>
-<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/frontend-146-cover.46f90167dd77449c983ebb4d9e317f9e_hue0b2c8b1e6178d98421791daf43c3786_116564_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-RvkBZ913RJyYPrtNnjF/ng==">
-</div><div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 146</h2></div></a>
-</article><article class=has-image>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-140/>
-<div class=article-image>
-<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-140/frontend-140-cover.ee8e98ffdcb3fe92173445304bde2cea_hudacb39a34caa67171d9f3db75d854ff6_103747_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-7o6Y/9yz/pIXNEUwS94s6g==">
-</div><div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 140</h2></div></a>
-</article><article class=has-image>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/>
-<div class=article-image>
-<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/frontend-137-cover.a5241d30fa3cf690a83e56d59310c4f7_hu877fc1cfdbfc30ae78fcb26bc049245c_249798_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-pSQdMPo89pCoPlbVkxDE9w==">
-</div><div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 137</h2></div></a>
-</article><article class=has-image>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/>
-<div class=article-image>
-<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/frontend-136-cover.463c2de98ae7f2614dafdd1c89934b50_hu82c25fa98cd4e9a8103220017be4b8cb_227181_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-Rjwt6Yrn8mFNr90ciZNLUA==">
-</div><div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 136</h2></div></a>
-</article><article class=has-image>
-<a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/>
-<div class=article-image>
-<img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/frontend-135-cover.e6c39ee3fc5483c5e08daa274468f110_hu642cd4cab85d82630eb8e1cb0f35bf61_190723_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-5sOe4/xUg8XgjaonRGjxEA==">
-</div><div class=article-details>
-<h2 class=article-title>毎日のフロントエンド 135</h2></div></a>
-</article></div></div></aside><footer class=site-footer>
-<section class=copyright>
-&copy;
+</span></span></code></pre></div><h4 id=esmodule><code>ESModule</code></h4><ul><li><code>import</code>、<code>export</code> <strong>ES6 模块化不是对象</strong></li><li><code>import</code>会在 JavaScript 引擎<strong>静态分析</strong>，在编译时就引入模块代码，而并非在代码运行时加载，因此也不适合异步加载。 在 HTML 中如果要引入模块需要使用</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>script</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;module&#34;</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;./module.js&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span></code></pre></div><ul><li>ESModule 的优势：</li></ul><ol><li>可以用静态分析工具检测出哪些模块没有被调用过： 通过静态分析可以在打包时去掉这些未曾使用过的模块，以减小打包资源体积。</li><li>模块变量类型检查。 ES6 Module 的静态模块结构有助于确保模块之间传递的值或接口类型是正确的。</li><li>编译器优化。在 CommonJS 等动态模块系统中，无论采用哪种方式，本质上导入的都是一个对象，而 ES6 Module 支持直接导入变量，减少了引用层级，程序效率更高。</li></ol><h4 id=commonjs-esm差异><code>CommonJS</code> <code>ESM</code>差异</h4><ol><li>CommonJS 模块引用后是一个值的拷贝，而 ESModule 引用后是一个值的动态映射，并且这个映射是只读的。<ul><li>CommonJS 模块输出的是值的拷贝，一旦输出之后，无论模块内部怎么变化，都无法影响之前的引用。</li><li>ESModule 是引擎会在遇到 import 后生成一个引用链接，在脚本真正执行时才会根据这个引用链接去模块里面取值，模块内部的原始值变了 import 加载的模块也会变。</li></ul></li><li>CommonJS 运行时加载，ESModule 编译阶段引用。<ul><li>CommonJS 在引入时是加载整个模块，生成一个对象，然后再从这个生成的对象上读取方法和属性。</li><li>ESModule 不是对象，而是通过 export 暴露出要输出的代码块，在 import 时使用静态命令的方法引用指定的输出代码块，并在 import 语句处执行这个要输出的代码，而不是直接加载整个模块。</li></ul></li></ol><h2 id=reference>Reference</h2><p><a class=link href=https://github.com/haizlin/fe-interview target=_blank rel=noopener>haizlin/fe-interview</a></p><p><a class=link href=https://muyiy.cn/ target=_blank rel=noopener>前端进阶</a></p><p><a class=link href=https://www.processon.com/view/link/5c8409bbe4b02b2ce492286a#map target=_blank rel=noopener>模块化 | ProcessOn 免费在线作图,在线流程图,在线思维导图</a></p></section><footer class=article-footer><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title>相关文章</h2><div class=related-contents><div class="flex article-list--tile"><article class=has-image><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/><div class=article-image><img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-146/frontend-146-cover.46f90167dd77449c983ebb4d9e317f9e_hue0b2c8b1e6178d98421791daf43c3786_116564_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-RvkBZ913RJyYPrtNnjF/ng=="></div><div class=article-details><h2 class=article-title>毎日のフロントエンド 146</h2></div></a></article><article class=has-image><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-140/><div class=article-image><img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-140/frontend-140-cover.ee8e98ffdcb3fe92173445304bde2cea_hudacb39a34caa67171d9f3db75d854ff6_103747_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-7o6Y/9yz/pIXNEUwS94s6g=="></div><div class=article-details><h2 class=article-title>毎日のフロントエンド 140</h2></div></a></article><article class=has-image><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/><div class=article-image><img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-137/frontend-137-cover.a5241d30fa3cf690a83e56d59310c4f7_hu877fc1cfdbfc30ae78fcb26bc049245c_249798_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-pSQdMPo89pCoPlbVkxDE9w=="></div><div class=article-details><h2 class=article-title>毎日のフロントエンド 137</h2></div></a></article><article class=has-image><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/><div class=article-image><img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-136/frontend-136-cover.463c2de98ae7f2614dafdd1c89934b50_hu82c25fa98cd4e9a8103220017be4b8cb_227181_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-Rjwt6Yrn8mFNr90ciZNLUA=="></div><div class=article-details><h2 class=article-title>毎日のフロントエンド 136</h2></div></a></article><article class=has-image><a href=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/><div class=article-image><img src=/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-135/frontend-135-cover.e6c39ee3fc5483c5e08daa274468f110_hu642cd4cab85d82630eb8e1cb0f35bf61_190723_250x150_fill_q75_box_smart1.jpg width=250 height=150 loading=lazy data-key data-hash="md5-5sOe4/xUg8XgjaonRGjxEA=="></div><div class=article-details><h2 class=article-title>毎日のフロントエンド 135</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
 2021 -
-2022 技術の手帳
-</section><section class=powerby>
-Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div><div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 技術の手帳</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.2.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main><aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div><h2 class="widget-title section-title">目录</h2><div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#html>HTML</a>
-<ol>
-<li><a href=#question-accesskey举例说明它有什么运用场景><strong>Question:</strong> <code>accesskey</code>，举例说明它有什么运用场景</a></li></ol></li><li><a href=#css>CSS</a>
-<ol>
-<li><a href=#question-前端二倍图的理解移动端使用二倍图比一倍图有什么好处><strong>Question:</strong> 前端二倍图的理解？移动端使用二倍图比一倍图有什么好处</a></li></ol></li><li><a href=#javascript>JavaScript</a>
-<ol>
-<li><a href=#question-防抖和节流-again><strong>Question:</strong> 防抖和节流 again</a></li><li><a href=#question-模块化-again><strong>Question:</strong> 模块化 again</a>
-<ol>
-<li><a href=#commonjs><code>CommonJS</code></a></li><li><a href=#esmodule><code>ESModule</code></a></li><li><a href=#commonjs-esm差异><code>CommonJS</code> <code>ESM</code>差异</a></li></ol></li></ol></li><li><a href=#reference>Reference</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
-</body></html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#html>HTML</a><ol><li><a href=#question-accesskey举例说明它有什么运用场景><strong>Question:</strong> <code>accesskey</code>，举例说明它有什么运用场景</a></li></ol></li><li><a href=#css>CSS</a><ol><li><a href=#question-前端二倍图的理解移动端使用二倍图比一倍图有什么好处><strong>Question:</strong> 前端二倍图的理解？移动端使用二倍图比一倍图有什么好处</a></li></ol></li><li><a href=#javascript>JavaScript</a><ol><li><a href=#question-防抖和节流-again><strong>Question:</strong> 防抖和节流 again</a></li><li><a href=#question-模块化-again><strong>Question:</strong> 模块化 again</a><ol><li><a href=#commonjs><code>CommonJS</code></a></li><li><a href=#esmodule><code>ESModule</code></a></li><li><a href=#commonjs-esm差异><code>CommonJS</code> <code>ESM</code>差异</a></li></ol></li></ol></li><li><a href=#reference>Reference</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

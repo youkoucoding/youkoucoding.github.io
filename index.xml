@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 10 Mar 2022 20:42:49 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 172</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-172/</link><pubDate>Thu, 10 Mar 2022 20:42:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-172/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 11 Mar 2022 15:40:11 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 173</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-173/</link><pubDate>Fri, 11 Mar 2022 15:40:11 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-173/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="html-的标签区分大小写">HTML 的标签区分大小写&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>DOCTYPE 声明, 不区分大小写&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;!DOCTYPE html&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;lt;!doctype html&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;lt;!DOCTYPE HTML&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;lt;!Doctype html&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>HTML 文档中的标签名和属性名都是大小写&lt;strong>不敏感&lt;/strong>的&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>HTML 中属性的名字是大小写不敏感的，而&lt;strong>属性的值则默认是大小写敏感的&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>下述列表中的属性的值是大小写不敏感的:
+&lt;ul>
+&lt;li>&lt;code>accept&lt;/code> &lt;code>accept-charset&lt;/code> &lt;code>align&lt;/code> &lt;code>alink&lt;/code> &lt;code>axis&lt;/code> &lt;code>bgcolor&lt;/code> &lt;code>charset&lt;/code> &lt;code>checked&lt;/code> &lt;code>clear&lt;/code> &lt;code>codetype&lt;/code> &lt;code>color&lt;/code> &lt;code>compact&lt;/code> &lt;code>declare&lt;/code> &lt;code>defer&lt;/code> &lt;code>dir&lt;/code>&lt;/li>
+&lt;li>&lt;code>direction&lt;/code> &lt;code>disabled&lt;/code> &lt;code>enctype&lt;/code> &lt;code>face&lt;/code> &lt;code>frame&lt;/code> &lt;code>hreflang&lt;/code> &lt;code>http-equiv&lt;/code> &lt;code>lang&lt;/code> &lt;code>language&lt;/code> &lt;code>link&lt;/code> &lt;code>media&lt;/code> &lt;code>method&lt;/code> &lt;code>multiple&lt;/code> &lt;code>nohref&lt;/code>&lt;/li>
+&lt;li>&lt;code>noresize&lt;/code> &lt;code>noshade&lt;/code> &lt;code>nowrap&lt;/code> &lt;code>readonly&lt;/code> &lt;code>rel&lt;/code> &lt;code>rev&lt;/code> &lt;code>rules&lt;/code> &lt;code>scope&lt;/code> &lt;code>scrolling&lt;/code> &lt;code>selected&lt;/code> &lt;code>shape&lt;/code> &lt;code>target&lt;/code> &lt;code>text&lt;/code> &lt;code>type (视情况而定)&lt;/code> &lt;code>valign&lt;/code> &lt;code>valuetype&lt;/code> &lt;code>vlink&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>XML 文档中的标签名和属性名都是大小写敏感的。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>大小写不敏感&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>meta 标签中的 name&lt;/li>
+&lt;li>meta 标签中的 http-equiv&lt;/li>
+&lt;li>http-equiv=&amp;ldquo;X-UA-Compatible&amp;rdquo;&lt;/li>
+&lt;li>&lt;code>&amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;&lt;/code> 或者 &lt;code>&amp;lt;meta http-equiv=&amp;quot;content-type&amp;quot; content=&amp;quot;text/html; charset=utf-8&amp;quot;&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="字体图标">字体图标&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://fontawesome.com/" target="_blank" rel="noopener"
+>Font Awesome&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>矢量（无限缩放、高清）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>CSS 样式（通用、灵活）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>体积更小（快速）&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000005614532" target="_blank" rel="noopener"
+>图标字体(IconFont)制作&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000006944194" target="_blank" rel="noopener"
+>字体图标(font-icon)，你还有什么理由不使用它？&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 172</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-172/</link><pubDate>Thu, 10 Mar 2022 20:42:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-172/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
 &lt;h3 id="函数为什么是一等公民">函数为什么是一等公民&lt;/h3>
 &lt;blockquote>
 &lt;p>据类型与函数是很多高级语言中最重要的两个概念，前者用来存储数据，后者用来存储代码。JavaScript 中的函数相对于数据类型而言更加复杂，它可以有属性，也可以被赋值给一个变量，还可以作为参数被传递&amp;hellip;&amp;hellip;正是这些强大特性让它成了 JavaScript 的“一等公民”&lt;/p>
