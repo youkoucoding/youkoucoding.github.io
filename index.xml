@@ -1,4 +1,122 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 11 Mar 2022 15:40:11 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 173</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-173/</link><pubDate>Fri, 11 Mar 2022 15:40:11 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-173/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 12 Mar 2022 21:13:25 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 174</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-174/</link><pubDate>Sat, 12 Mar 2022 21:13:25 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-174/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="imginput标签它们是行内元素还是块级元素">&lt;code>img&lt;/code>、&lt;code>input&lt;/code>标签它们是行内元素还是块级元素&lt;/h3>
+&lt;ul>
+&lt;li>属于行内元素，也是替换元素（行内块元素）
+&lt;ul>
+&lt;li>简单的说行内元素、也就是 &lt;code>display:inline;&lt;/code> 的元素，行内块元素是 &lt;code>display:inline-block&lt;/code> 的元素，典型的有 input&lt;/li>
+&lt;li>行内元素，只有设置左右的 margin 和 padding，不能设置高宽，它的高度取决于内部文字的行高。宽度取决于内部文字的多少。&lt;/li>
+&lt;li>行内块元素和块级元素的属性基本一致。可以设高宽、边距。不同在于它允许左右存在元素。而块级元素就算只有 1px 也不允许有元素和它共享一行。&lt;/li>
+&lt;li>比如：&lt;code>button&lt;/code>、&lt;code>input&lt;/code>、 &lt;code>textarea&lt;/code>、&lt;code>select&lt;/code>、 &lt;code>img&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="css3-和-css-的区别">css3 和 css 的区别&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>CSS: Css stands for Cascading style sheet. Its main objective is to provide styling and fashion to the web page. CSS provides color, layout, background, font and border properties. CSS features allow better content accessibility, enhanced flexibility, and control, as well as the specification of the characteristics of presentation.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>CSS3: CSS3 stands for Cascading style sheet level 3, which is the advanced version of CSS. It is used for structuring, styling, and formatting web pages. Several new features have been added to CSS3 and it is supported by all modern web browsers. The most important feature of CSS3 is the splitting of CSS standards into separate modules that are simpler to learn and use.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>CSS&lt;/th>
+&lt;th>CSS3&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>CSS is capable of positioning texts and objects. CSS is somehow backward compatible with CSS3.&lt;/td>
+&lt;td>On the other hand, CSS3 is capable of making the web page more attractive and take less time to create it. If you write CSS3 code in CSS, it will be invalid.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>Responsive designing is not supported in CSS&lt;/td>
+&lt;td>CSS3 is the latest version, hence it supports responsive design.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>CSS cannot be split into modules.&lt;/td>
+&lt;td>Whereas, CSS3 can be breakdown into modules.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>Using CSS, we cannot build 3D animation and transformation.&lt;/td>
+&lt;td>But in CSS3 we can perform all kinds of animation and transformations as it supports animation and 3D transformations.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>CSS is very slow as compared to CSS3&lt;/td>
+&lt;td>Whereas, CSS3 is faster than CSS.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>In CSS we have a good collection of unique color schemas and standard color.&lt;/td>
+&lt;td>Whereas, CSS3 has a good collection of HSL RGBA, HSLA, and gradient colors.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>7&lt;/td>
+&lt;td>In CSS we can only use single text blocks.&lt;/td>
+&lt;td>But in CSS3 we can use multi-column text blocks&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>8&lt;/td>
+&lt;td>CSS does not support media queries.&lt;/td>
+&lt;td>But CSS3 supports media queries&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>9&lt;/td>
+&lt;td>CSS codes are not supported by all types of modern browsers.&lt;/td>
+&lt;td>Being the latest version, CSS3 codes are supported by all modern browsers.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>10&lt;/td>
+&lt;td>In CSS, designers have to manually develop rounded gradients and corners.&lt;/td>
+&lt;td>But CSS3 provide codes for setting rounded gradients and corners&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>11&lt;/td>
+&lt;td>There is no special effect like shadowing text, text animation, etc. in CSS. The animation was coded in jQuery and JavaScript.&lt;/td>
+&lt;td>CSS3 has many advance features like text shadows, visual effects, and a wide range of font style and color.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>12&lt;/td>
+&lt;td>In CSS, the user can add background colors to list items and lists, set images for the list items, etc.&lt;/td>
+&lt;td>Whereas, CSS3 list has a special display property defined in it. Even list items also have counter reset properties.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>New features of CSS3:
+&lt;ul>
+&lt;li>&lt;strong>Combinator&lt;/strong>: CSS3 has a new General sibling combinator which matches up with sibling elements via the tilde (&lt;code>~&lt;/code>) combinator.&lt;/li>
+&lt;li>&lt;strong>CSS Selectors&lt;/strong>: CSS3 selectors are much advanced in comparison to simple selectors offered by CSS, and are termed as a sequence of easy to use and simple selectors.&lt;/li>
+&lt;li>&lt;strong>Pseudo-elements&lt;/strong>: Plenty of new pseudo-elements have been added to CSS3 to give easy styling in depth. Even a new convention of double colons &lt;code>::&lt;/code> is also added.&lt;/li>
+&lt;li>&lt;strong>Border Style&lt;/strong>: The latest CSS3 also has new border styling features like border-radius, image-slice, image-source, and values for “width stretch”, etc.&lt;/li>
+&lt;li>&lt;strong>Background style properties&lt;/strong>: New features like background-clip, size, style, and origin properties have been added to CSS3.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="断点续传的原理">断点续传的原理&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>206&lt;/code> &lt;code>Partial Content&lt;/code> 状态码&lt;/li>
+&lt;li>客户端使用请求头 Range 告知自己需要的数据范围；服务器使用响应头 &lt;code>Content-Range&lt;/code> 说明返回的数据范围和数据长度。&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Range_requests" target="_blank" rel="noopener"
+>HTTP 请求范围 - HTTP | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/206" target="_blank" rel="noopener"
+>206 Partial Content - HTTP | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.geeksforgeeks.org/difference-between-css-and-css3/" target="_blank" rel="noopener"
+>Difference between CSS and CSS3 - GeeksforGeeks&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 173</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-173/</link><pubDate>Fri, 11 Mar 2022 15:40:11 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-173/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="html-的标签区分大小写">HTML 的标签区分大小写&lt;/h3>
 &lt;ul>
 &lt;li>
