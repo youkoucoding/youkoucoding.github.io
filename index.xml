@@ -1,4 +1,317 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 16 Mar 2022 12:33:45 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 178</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-178/</link><pubDate>Wed, 16 Mar 2022 12:33:45 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-178/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 18 Mar 2022 17:03:46 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 180</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-180/</link><pubDate>Fri, 18 Mar 2022 17:03:46 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-180/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="track标签">&lt;code>track&lt;/code>标签&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>track&lt;/code>元素可以为使用&lt;code>video&lt;/code>元素播放的视频或使用&lt;code>audio&lt;/code>元素播放的音频添加字幕。写在&lt;code>video&lt;/code>或&lt;code>audio&lt;/code>元素内部。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>如果使用标记描述媒体文件，则标记必须被书写在标记之后。track 元素是一个空元素，其开始标记与结束标记之间不包含任何内容。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>属性&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>default&lt;/code>：默认轨道。（值：default）。default 属性用于通知浏览器在用户没有选择使用其他字幕文件的时候可以使用当前 track 文件&lt;/li>
+&lt;li>&lt;code>kind&lt;/code>：文本轨道的文本类型（值：captions、chapters、descriptions、metadata、subtitles）。kind 属性用于指定字幕文件(即用于存放字幕、章节标题、说明文字或元数据的文件) 的种类。可以对 kind 属性指定的属性值为 subtitles、captions、descriptions、chapters 与 metadata&lt;/li>
+&lt;li>&lt;code>label&lt;/code>：文本轨道的标签和标题（值：text）。&lt;/li>
+&lt;li>&lt;code>src&lt;/code>：轨道文件的 URL，必选属性（值：URL）。src 属性用于指定字幕文件的存放路径，该属性是一个必须使用的属性。src 属性的属性值可以是一个绝对 URL 路径，也可以是一个相对 URL 路径。&lt;/li>
+&lt;li>&lt;code>srclang&lt;/code>：轨道文本数据的语言。（值：language_code ）。srclang 属性用于指定字幕文件的语言。例如，srclang=&amp;ldquo;en&amp;rdquo; 和 srclang=&amp;ldquo;zh-cn&amp;quot;分别表示字幕文件为英语和汉语。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="用-css-画一个圆">用 css 画一个圆&lt;/h3>
+&lt;p>&lt;code>&amp;lt;div class=&amp;quot;circle&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code>&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>border-radius&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">cirlce&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">gray&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>&lt;code>clip-path&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">circle&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">gray&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">clip-path&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">circle&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>&lt;code>svg background&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">circle&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">url&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;data:image/svg+xml,%3Csvg xmlns=&amp;#39;http://www.w3.org/2000/svg&amp;#39;%3E%3Ccircle cx=&amp;#39;50%25&amp;#39; cy=&amp;#39;50%25&amp;#39; r=&amp;#39;50%25&amp;#39; fill=&amp;#39;gray&amp;#39;/%3E%3C/svg%3E&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>&lt;code>radial-gradient&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">circle&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">radial-gradient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">gray&lt;/span> &lt;span class="mi">70&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">transparent&lt;/span> &lt;span class="mi">70&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
+&lt;li>&lt;code>font&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">circle&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">after&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;●&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">font-size&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="err">//字体实际大小&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">line-height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="6">
+&lt;li>&lt;code>mix-blend-mode&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">circle&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">gray&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">circle&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="nd">after&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="kt">vw&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">mix-blend-mode&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">lighten&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">radial-gradient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mh">#000&lt;/span> &lt;span class="mi">70&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mh">#fff&lt;/span> &lt;span class="mi">70&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="http-协议概览">HTTP 协议概览&lt;/h3>
+&lt;h4 id="http09">&lt;code>HTTP/0.9&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>协议定义了客户端发起请求、服务端响应请求的通信模式。请求报文内容只有 1 行，为 GET 加上请求的文件路径。服务端收到请求后返回一个以 ASCII 字符流编码的 HTML 文档。&lt;/li>
+&lt;/ul>
+&lt;h4 id="http10">&lt;code>HTTP/1.0&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>最核心的改变是增加了头部设定，头部内容以键值对的形式设置。&lt;/li>
+&lt;li>请求头部通过 &lt;code>Accept&lt;/code> 字段来告诉服务端可以接收的文件类型&lt;/li>
+&lt;li>响应头部再通过 &lt;code>Content-Type&lt;/code> 字段来告诉浏览器返回文件的类型。&lt;/li>
+&lt;li>其他很多功能也可以依靠头部字段实现，比如缓存、认证信息。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>HTTP/1.0 每进行一次通信，都需要经历建立连接、传输数据和断开连接三个阶段。当一个页面引用了较多的外部文件时，这个建立连接和断开连接的过程就会增加大量网络开销。&lt;/li>
+&lt;/ul>
+&lt;h4 id="http11">&lt;code>HTTP/1.1&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>HTTP/1.1 版本增加了一个创建持久连接的方法。主要实现是当一个连接传输完成时，并不是马上进行关闭，而是继续复用它传输其他请求的数据，这个连接保持到浏览器或者服务器要求断开连接为止。&lt;/li>
+&lt;/ul>
+&lt;h5 id="tcp-是怎样建立断开连接的">TCP 是怎样建立/断开连接的&lt;/h5>
+&lt;h6 id="三次握手">三次握手&lt;/h6>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>第一次握手&lt;/strong>：刚开始客户端处于 CLOSED 的状态，服务端处于 LISTEN 状态。客户端给服务端发送一个 SYN 报文，并指明客户端的初始化序列号 ISN，此时客户端处于 SYN_SEND 状态。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>第二次握手&lt;/strong>：当服务器收到客户端的 SYN 报文之后，会以自己的 SYN 报文作为应答，并且也指定了自己的初始化序列号 ISN。同时会把客户端的 ISN + 1 作为 ACK 的值，表示自己已经收到了客户端的 SYN，此时服务器处于 SYN_REVD 的状态。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>第三次握手&lt;/strong>：当客户端收到 SYN 报文之后，会发送一个 ACK 报文，当然，也同样把服务器的 ISN + 1 作为 ACK 的值，表示已经收到了服务端的 SYN 报文，此时客户端处于 ESTABLISHED 状态。服务器收到 ACK 报文之后，也处于 ESTABLISHED 状态，此时，双方成功建立起了连接。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>第一次握手成功让服务端知道了客户端具有发送能力，第二次握手成功让客户端知道了服务端具有接收和发送能力，但此时服务端并不知道客户端是否接收到了自己发送的消息，所以第三次握手就起到了这个作用。经过三次通信后，服务端和客户端都确认了双方的接收和发送能力。&lt;/p>
+&lt;/blockquote>
+&lt;h6 id="四次挥手">四次挥手&lt;/h6>
+&lt;blockquote>
+&lt;p>当客户端和服务端断开连接时要发送四次数据，这个过程称之为四次挥手&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>第一次挥手&lt;/strong>：在挥手之前服务端与客户端都处于 ESTABLISHED 状态。客户端发送一个 FIN 报文，用来关闭客户端到服务器的数据传输，此时客户端处于 FIN_WAIT_1 状态。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>第二次挥手&lt;/strong>：当服务端收到 FIN 之后，会发送 ACK 报文，并且把客户端的序列号值加 1 作为 ACK 报文的序列号值，表明已经收到客户端的报文了，此时服务端处于 CLOSE_WAIT 状态。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>第三次挥手&lt;/strong>：如果服务端同意关闭连接，则会向客户端发送一个 FIN 报文，并且指定一个序列号，此时服务端处于 LAST_ACK 的状态。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>第四次挥手&lt;/strong>：当客户端收到 ACK 之后，处于 FIN_WAIT_2 状态。待收到 FIN 报文时发送一个 ACK 报文作为应答，并且把服务端的序列号值 +1 作为自己 ACK 报文的序列号值，此时客户端处于 TIME_WAIT 状态。等待一段时间后会进入 CLOSED 状态，当服务端收到 ACK 报文之后，也会变为 CLOSED 状态，此时连接正式关闭。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>为什么建立连接只通信了三次，而断开连接却用了四次？
+&lt;ul>
+&lt;li>因为当服务端收到客户端的 FIN 报文后，发送的 ACK 报文只是用来应答的，并不表示服务端也希望立即关闭连接。&lt;/li>
+&lt;li>当只有服务端把所有的报文都发送完了，才会发送 FIN 报文，告诉客户端可以断开连接了，因此在断开连接时需要四次挥手。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="http2">&lt;code>HTTP/2&lt;/code>&lt;/h4>
+&lt;blockquote>
+&lt;p>HTTP/1.1 虽然通过长连接减少了大量创建/断开连接造成的性能消耗，但由于它的并发能力受到限制，所以传输性能还有很大提升空间。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>为什么说 HTTP/1.1 的并发能力受限？
+&lt;ul>
+&lt;li>浏览器为了减轻服务器的压力，限制了同一个域下的 HTTP 连接数，即 6 ~ 8 个，所以在 HTTP/1.1 下很容易看到资源文件等待加载的情况，&lt;strong>对应优化的方式就是使用多个域名来加载图片资源；&lt;/strong>&lt;/li>
+&lt;li>HTTP/1.1 本身的问题，虽然 HTTP/1.1 中使用持久连接时，多个请求能共用一个 TCP 连接，但在一个连接中同一时刻只能处理一个请求，在当前的请求没有结束之前，其他的请求只能处于阻塞状态，这种情况被称为 “队头阻塞” 。&lt;/li>
+&lt;li>&lt;em>2015 年正式发布的 HTTP/2 中新增了一个二进制分帧的机制来提升传输效率&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>
+&lt;p>HTTP/2 将默认不再使用 ASCII 编码传输，而是改为二进制数据。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>客户端在发送请求时会将每个请求的内容封装成不同的带有编号的二进制帧，然后将这些帧同时发送给服务端。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>服务端接收到数据之后，会将相同编号的帧合并为完整的请求信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>服务端返回结果、客户端接收结果也遵循这个帧的拆分与组合的过程。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>受益于二进制分帧，对于同一个域，客户端只需要与服务端建立一个连接即可完成通信需求，&lt;em>也不再受限于浏览器的连接数限制了&lt;/em>，这种利用一个连接来发送多个请求的方式称为“多路复用”。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>HTTP/2 也增加了一些其他的功能，比如通过压缩头部信息来减少传输体积，以及通过服务推送来减少客户端请求。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="http3">&lt;code>HTTP/3&lt;/code>&lt;/h4>
+&lt;blockquote>
+&lt;p>HTTP/2 也并非完美，考虑一种情况，如果客户端或服务端在通信时出现数据包丢失，或者任何一方的网络出现中断，那么整个 TCP 连接就会暂停。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>HTTP/2 由于采用二进制分帧进行多路复用，通常只使用一个 TCP 连接进行传输，在丢包或网络中断的情况下后面的所有数据都被阻塞。但对于 HTTP/1.1 来说，可以开启多个 TCP 连接，任何一个 TCP 出现问题都不会影响其他 TCP 连接，剩余的 TCP 连接还可以正常传输数据。这种情况下 HTTP/2 的表现就不如 HTTP/1 了&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>2018 年 HTTP/3 将底层依赖的 TCP 改成 UDP，从而彻底解决了这个问题。UDP 相对于 TCP 而言最大的特点是传输数据时不需要建立连接，可以同时发送多个数据包，所以传输效率很高，缺点就是没有确认机制来保证对方一定能收到数据。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>协议版本&lt;/th>
+&lt;th>解决的核心问题&lt;/th>
+&lt;th>解决方式&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>0.9&lt;/td>
+&lt;td>HTML 文件传输&lt;/td>
+&lt;td>确立了客户端请求、服务端响应的通信流程&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1.0&lt;/td>
+&lt;td>不同类型文件传输&lt;/td>
+&lt;td>设立头部字段&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1.1&lt;/td>
+&lt;td>创建/断开 TCP 连接开销大&lt;/td>
+&lt;td>建立长连接进行复用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>并发数有限&lt;/td>
+&lt;td>二进制分帧&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>TCP 丢包阻塞&lt;/td>
+&lt;td>采用 UDP 协议&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/track" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;track&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 179</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-179/</link><pubDate>Thu, 17 Mar 2022 22:28:57 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-179/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="进程process与线程thread">进程（&lt;code>Process&lt;/code>）与线程（&lt;code>Thread&lt;/code>）&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>进程&lt;/strong>是操作系统进行资源分配和调度的基本单位&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>线程&lt;/strong>是操作系统进行运算的最小单位&lt;/p>
+&lt;ul>
+&lt;li>一个程序至少有一个进程，一个进程至少有一个线程&lt;/li>
+&lt;li>线程需要由进程来启动和管理。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>进程是操作系统资源分配的基本单位，这里隐含的意思就是，不同进程之间的资源是独享的，不可以相互访问。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>多线程没有分配独立的资源，线程之间数据都是共享的，也就意味着创建线程的成本更小，因为不需要分配额外的存储空间。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>多线程更轻量，多进程更安全更稳定&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="浏览器架构">浏览器架构&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>浏览器进程&lt;/p>
+&lt;ul>
+&lt;li>浏览器的主进程负责界⾯显⽰（地址栏、导航栏、书签等）、处理用户事件、管理⼦进程等。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>GPU 进程&lt;/p>
+&lt;ul>
+&lt;li>处理来自其他进程的 GPU 任务，比如来自渲染进程或扩展程序进程的 CSS3 动画效果，来自浏览器进程的界面绘制等。&lt;/li>
+&lt;li>还有一个重要的特性，那就是可以利用 GPU 硬件来加速渲染，包括 Canvas 绘制、CSS3 转换（Transitions）、CSS3 变换（Transforms）、WebGL 等。具体原理就是如果 DOM 元素使用了这些属性，GPU 进程就会在合成层的时候对它进行单独处理，提升到一个独立的层进行绘制，这样就能避免重新布局和重新绘制。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Network Service 进程&lt;/p>
+&lt;ul>
+&lt;li>负责⻚⾯的⽹络资源加载，比如在地址栏输入一个网页地址，网络进程会将请求后得到的资源交给渲染进程处理。本来只是浏览器主进程的一个模块，现在为了将浏览器进程进行“服务化”，被抽取出来，成了一个单独的进程。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>V8 代理解析工具进程&lt;/p>
+&lt;ul>
+&lt;li>Chrome 支持使用 JavaScript 来写连接代理服务器脚本，称为 pac 代理脚本&lt;/li>
+&lt;li>由于 pac 代理脚本是用 JavaScript 编写的，要能够解析 pac 代理脚本就必须要用到 JavaScript 脚本引擎，直接在浏览器主进程中引入 JavaScript 引擎并不符合进程“服务化”的设计理念，所以就把这个解析功能独立成一个进程&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>渲染进程&lt;/p>
+&lt;ul>
+&lt;li>浏览器会为每个标签页单独启动一个渲染进程，所以它和上述进程不同，并不是唯一的。&lt;/li>
+&lt;li>渲染进程的任务是将 HTML、CSS 和 JavaScript 转化为⽤户可以与之交互的网页，每个渲染进程都会启动单独的渲染引擎线程和 JavaScript 引擎线程。&lt;/li>
+&lt;li>除此之外还包括事件触发线程，负责接收事件，并将回调函数放入 JavaScript 引擎线程的事件队列中，以及负责处理定时任务的定时器线程。&lt;/li>
+&lt;li>这种设计保障了程序与系统的安全性，可以通过操作系统提供的权限机制来为每个渲染进程建立一个沙箱运行环境，从而防止恶意破坏用户系统或影响其他标签页的行为。&lt;/li>
+&lt;li>保障了渲染进程的稳定性，因为如果某个标签页失去响应，用户可以关掉这个标签页，此时其他标签页依然运行着，可以正常使用。如果所有标签页都运行在同一进程上，那么当某个失去响应，所有标签页都会失去响应&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>扩展程序进程&lt;/p>
+&lt;ul>
+&lt;li>主要是负责插件的运⾏，和渲染进程一样，也不是唯一的，浏览器会为每个插件都启动一个进程。这样的设计也是从安全性和稳定性考虑&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>进程的服务化
+&lt;ul>
+&lt;li>Chrome 官方团队在 2016 年 提出了&lt;a class="link" href="https://docs.google.com/document/d/15I7sQyQo6zsqXVNAlVd520tdGaS8FCicZHrN0yRu-oU/edit#heading=h.cyhu8vkfrzar" target="_blank" rel="noopener"
+>面向服务的设计模型&lt;/a>，在系统资源允许的情况下，将浏览器主进程的各种模块拆分成独⽴的服务，每个服务在独立的进程中运行。通过高内聚、低耦合的结构让 Chrome 变得更稳定更安全。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://docs.google.com/document/d/15I7sQyQo6zsqXVNAlVd520tdGaS8FCicZHrN0yRu-oU/edit#heading=h.cyhu8vkfrzar" target="_blank" rel="noopener"
+>Chrome Service Model&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 178</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-178/</link><pubDate>Wed, 16 Mar 2022 12:33:45 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-178/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="requestanimationframe">&lt;code>requestAnimationFrame&lt;/code>&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>requestAnimationFrame&lt;/code> 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率&lt;/li>
