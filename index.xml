@@ -1,4 +1,265 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 20 Mar 2022 14:04:20 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 182</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-182/</link><pubDate>Sun, 20 Mar 2022 14:04:20 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-182/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 21 Mar 2022 15:15:07 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 183</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-183/</link><pubDate>Mon, 21 Mar 2022 15:15:07 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-183/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="output-标签">&lt;code>&amp;lt;output&amp;gt;&lt;/code> 标签&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;output&amp;gt;&lt;/code> 标签表示计算或用户操作的结果。&lt;/li>
+&lt;li>属性
+&lt;ul>
+&lt;li>&lt;code>for&lt;/code>其它影响计算结果的标签的 ID，可以多个。&lt;/li>
+&lt;li>&lt;code>form&lt;/code>与当前标签有关联的 form（从属的表单）。该属性的值必须是当前文档内的表单元素的 ID。如果未指明该属性，output 标签必须是一个 form 的后代标签。该属性的用处在于可以让 output 标签脱离 form 标签，存在于一个网页文档的任意位置。&lt;/li>
+&lt;li>&lt;code>name&lt;/code> 属性&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">form&lt;/span> &lt;span class="na">oninput&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;result.value=parseInt(a.value)+parseInt(b.value)&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;range&amp;#34;&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;b&amp;#34;&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;50&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span> + &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">input&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;number&amp;#34;&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;a&amp;#34;&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;10&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span> =
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">output&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;result&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">output&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">form&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="去除图片自带的边距">去除图片自带的边距&lt;/h3>
+&lt;ul>
+&lt;li>图片以及所有其他 &lt;code>inline-block&lt;/code> 元素之间都会有 4px 的间距，直接在父元素 &lt;code>font-size: 0&lt;/code> 去除。&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="函数返回多个值方法">函数返回多个值方法&lt;/h3>
+&lt;ul>
+&lt;li>函数 return expression, 这个表达式应该是一个具体的值,这个具体的值可以是一个承载多个值的复杂值, 诸如 Array,Object, Map,Set 等方式来实现&lt;/li>
+&lt;/ul>
+&lt;h3 id="amdcmd和commonjs">&lt;code>AMD&lt;/code>、&lt;code>CMD&lt;/code>和&lt;code>CommonJS&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>AMD,CMD 和 CommonJs 是 es6 之前推出的模块化方案&lt;/p>
+&lt;ol>
+&lt;li>CommonJs 用在服务端&lt;/li>
+&lt;li>AMD,CMD 用在浏览器环境&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>CommonJs 是由 node 推广使用的&lt;/p>
+&lt;ul>
+&lt;li>导出 &lt;code>module.exports&lt;/code>，导入 &lt;code>require&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>AMD 是 RequireJS 在推广过程中对模块定义的规范化&lt;/p>
+&lt;ul>
+&lt;li>异步加载模块，模块的加载不影响后面语句的执行&lt;/li>
+&lt;li>所有依赖这些模块的语句，都定义到一个回调函数中，等依赖模块全部加载完成后，执行回调函数&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">define&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s1">&amp;#39;回调函数的依赖模块&amp;#39;&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 回调函数，依赖模块的语句
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">define&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s1">&amp;#39;./a&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;./b&amp;#39;&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="c1">// 依赖刚开始就要去加载，加载依赖是异步加载
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// a b 依赖加载完成后，才去执行回调中语句
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">doSomething&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">b&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">doSomething&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>CMD 是&lt;code>SeaJS&lt;/code>在推广过程中对模块定义的规范化
+&lt;ul>
+&lt;li>采用就近依赖，同步加载。即在用到依赖的地方，才去加载依赖。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">define&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">require&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">exports&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">module&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./a&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 依赖等用的时候才去加载，加载依赖是同步加载
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">doSomething&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">b&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./b&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">b&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">doSomething&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// ...
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="浏览器的同源策略same-origin-policy">浏览器的同源策略（Same Origin Policy）&lt;/h3>
+&lt;ul>
+&lt;li>源（Origin）是由 URL 中&lt;strong>协议&lt;/strong>、&lt;strong>主机名（域名 domain）&lt;/strong> 以及 &lt;strong>端口&lt;/strong>共同组成的部分。&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>同源策略在保障安全的同时也带来了不少问题，比如 iframe 中的子页面与父页面无法通信，浏览器与其他服务端无法交互数据。所以我们需要一些跨域方案来解决这些问题。&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="请求跨域解决方案">请求跨域解决方案&lt;/h4>
+&lt;h5 id="1-跨域资源共享">1. 跨域资源共享&lt;/h5>
+&lt;ul>
+&lt;li>跨域资源共享（&lt;code>CORS&lt;/code>，Cross-Origin Resource Sharing）是浏览器为 AJAX 请求设置的一种跨域机制，让其可以在服务端允许的情况下进行跨域访问。&lt;/li>
+&lt;li>主要通过 HTTP 响应头来告诉浏览器服务端是否允许当前域的脚本进行跨域访问。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>
+&lt;p>跨域资源共享将 AJAX 请求分成了两类：&lt;strong>简单请求&lt;/strong>和&lt;strong>非简单请求&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>其中简单请求符合下面 2 个特征：
+&lt;ul>
+&lt;li>请求方法为 &lt;code>GET&lt;/code>、&lt;code>POST&lt;/code>、&lt;code>HEAD&lt;/code>&lt;/li>
+&lt;li>&lt;strong>请求头只能使用&lt;/strong>下面的字段：&lt;code>Accept&lt;/code>（浏览器能够接受的响应内容类型）、&lt;code>Accept-Language&lt;/code>（浏览器能够接受的自然语言列表）、&lt;code>Content-Type&lt;/code> （请求对应的类型，只限于 text/plain、multipart/form-data、application/x-www-form-urlencoded）、&lt;code>Content-Language&lt;/code>（浏览器希望采用的自然语言）、&lt;code>Save-Data&lt;/code>（浏览器是否希望减少数据传输量）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>任意一条要求不符合的即为非简单请求&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>简单请求，处理流程:&lt;/p>
+&lt;ul>
+&lt;li>浏览器发出简单请求的时候，会在请求头部增加一个 Origin 字段，对应的值为当前请求的源信息；&lt;/li>
+&lt;li>当服务端收到请求后，会根据请求头字段 Origin 做出判断后返回相应的内容&lt;/li>
+&lt;li>浏览器收到响应报文后会根据响应头部字段 &lt;code>Access-Control-Allow-Origin&lt;/code> 进行判断，这个字段值为服务端允许跨域请求的源，其中通配符“*”表示允许所有跨域请求。如果头部信息没有包含 &lt;code>Access-Control-Allow-Origin&lt;/code> 字段或者响应的头部字段 &lt;code>Access-Control-Allow-Origin&lt;/code> 不允许当前源的请求，则会抛出错误。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>当处理非简单的请求时，浏览器会先发出一个预检请求（&lt;code>Preflight&lt;/code>）。&lt;/p>
+&lt;ul>
+&lt;li>这个预检请求为 OPTIONS 方法，并会添加了 1 个请求头部字段 Access-Control-Request-Method，值为跨域请求所使用的请求方法。&lt;/li>
+&lt;li>在服务端收到预检请求后，除了在响应头部添加 &lt;code>Access-Control-Allow-Origin&lt;/code> 字段之外，至少还会添加 &lt;code>Access-Control-Allow-Methods&lt;/code> 字段来告诉浏览器服务端允许的请求方法，并返回 204(&lt;code>No Content&lt;/code>) 状态码。&lt;/li>
+&lt;li>浏览器得到预检请求响应的头部字段之后，会判断当前请求服务端是否在服务端许可范围之内，如果在则继续发送跨域请求，反之则直接报错。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="2-jsonp">2. &lt;code>JSONP&lt;/code>&lt;/h5>
+&lt;blockquote>
+&lt;p>&lt;code>JSONP&lt;/code>（JSON with Padding）的大概意思就是用 JSON 数据来填充， 把 JSON 数据填充到一个回调函数中，依赖的是 &lt;strong>script 标签跨域引用 js 文件不会受到浏览器同源策略的限制&lt;/strong>。&lt;/p>
+&lt;/blockquote>
+&lt;p>具体实现方式&lt;/p>
+&lt;ol>
+&lt;li>全局声明一个用来处理返回值的函数 fn，该函数参数为请求的返回结果。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">fn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">result&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">result&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>将函数名与其他参数一并写入 URL 中&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;http://www.b.com?callback=fn&amp;amp;params=...&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>创建一个 script 标签，把 URL 赋值给 script 的 src&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">script&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;script&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">script&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">setAttribute&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;type&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;text/javascript&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">script&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">src&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">body&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">appendChild&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">script&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>当服务器接收到请求后，解析 URL 参数并进行对应的逻辑处理，得到结果后将其写成回调函数的形式并返回给浏览器&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fn&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">list&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
+&lt;li>在浏览器收到请求返回的 js 脚本之后会立即执行文件内容，即在控制台打印传入的数据内容&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>JSONP 问题：
+&lt;ul>
+&lt;li>只能发送 GET 请求，限制了参数大小和类型；&lt;/li>
+&lt;li>请求过程无法终止，导致弱网络下处理超时请求比较麻烦；&lt;/li>
+&lt;li>无法捕获服务端返回的异常信息。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="3-websocket">3. &lt;code>Websocket&lt;/code>&lt;/h5>
+&lt;blockquote>
+&lt;p>Websocket 是 HTML5 规范提出的一个应用层的全双工协议，适用于浏览器与服务器进行实时通信场景。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 在 a 网站直接创建一个 WebSocket 连接，连接到 b 网站即可
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 然后调用 WebScoket 实例 ws 的 send() 函数向服务端发送消息
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 监听实例 ws 的 onmessage 事件得到响应内容。
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">ws&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">WebSocket&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;ws://b.com&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">ws&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onopen&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// ws.send(...);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">ws&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">onmessage&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// console.log(e.data);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="4-代理转发">4. 代理转发&lt;/h5>
+&lt;ul>
+&lt;li>
+&lt;p>跨域是为了突破浏览器的同源策略限制，既然同源策略只存在于浏览器，在服务端进行跨域，比如设置代理转发。这种在服务端设置的代理称为“&lt;strong>反向代理&lt;/strong>”，用户是无感知的。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>另一种在客户端使用的代理称为“&lt;strong>正向代理&lt;/strong>”，主要用来代理客户端发送请求，用户使用时必须配置代理服务器的网址，比如常用的 VPN 工具就属于正向代理。&lt;/p>
+&lt;ul>
+&lt;li>当浏览器发起前缀为 /api 的请求时都会被转发到 http://localhost:3000 这个网址，然后将响应结果返回给浏览器。对于浏览器而言还是请求当前网站，但实际上已经被服务端转发。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// webpack.config.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// webpack-dev-server 配置代理的示例代码
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">module&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">exports&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//...
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="nx">devServer&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">proxy&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;/api&amp;#39;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;http://localhost:3000&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>or&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 在 Nginx 服务器上配置同样的转发规则
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 通过 location 指令匹配路径，然后通过 proxy_pass 指令指向代理地址即可
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">location&lt;/span> &lt;span class="o">/&lt;/span>&lt;span class="nx">api&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">proxy_pass&lt;/span> &lt;span class="nx">http&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="c1">//localhost:3000;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="页面跨域解决方案">页面跨域解决方案&lt;/h4>
+&lt;blockquote>
+&lt;p>除了浏览器请求跨域之外，页面之间也会有跨域需求，例如使用 iframe 时父子页面之间进行通信&lt;/p>
+&lt;/blockquote>
+&lt;h5 id="1-postmessage">1. &lt;code>postMessage&lt;/code>&lt;/h5>
+&lt;ul>
+&lt;li>
+&lt;p>HTML5 新函数 &lt;code>postMessage()&lt;/code> 用来实现父子页面之间通信，而且不论这两个页面是否同源&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>父页面向子页面发消息&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// https://example.com
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">child&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://child.example.com&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">child&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">postMessage&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;hi&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;https://child.example.com&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>&lt;code>window.open()&lt;/code> 函数打开了子页面，然后调用 &lt;code>child.postMessage()&lt;/code> 函数发送了字符串数据“hi”给子页面&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在子页面中，只需要监听“message”事件即可得到父页面的数据&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// https://child.example.com
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s1">&amp;#39;message&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">e&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">data&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>父页面也可以监听“message”事件来接收子页面发送的数据。子页面发送数据时则要通过 window.opener 对象来调用 postMessage() 函数&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// https://child.example.com
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">opener&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">postMessage&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;hello&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;https://example.com&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="2-改域">2. 改域&lt;/h5>
+&lt;ul>
+&lt;li>对于主域名相同，子域名不同的情况，可以通过修改 &lt;code>document.domain&lt;/code> 的值来进行跨域。如果将其设置为其当前域的父域，则这个较短的父域将用于后续源检查。
+&lt;ul>
+&lt;li>只能把 document.domain 设置成更高级的父域才有效果&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/output" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;output&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://rxjs.dev/guide/overview" target="_blank" rel="noopener"
+>RxJS - Introduction&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://requirejs.org/" target="_blank" rel="noopener"
+>RequireJS&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/seajs/seajs" target="_blank" rel="noopener"
+>seajs/seajs: A Module Loader for the Web&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage" target="_blank" rel="noopener"
+>window.postMessage - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/domain" target="_blank" rel="noopener"
+>Document.domain - Web API 接口参考 | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 182</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-182/</link><pubDate>Sun, 20 Mar 2022 14:04:20 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-182/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="meter-标签">&lt;code>&amp;lt;meter&amp;gt;&lt;/code> 标签&lt;/h3>
 &lt;blockquote>
 &lt;p>&lt;code>&amp;lt;meter&amp;gt;&lt;/code>标签是 HTML 5 中的新标签&lt;/p>
