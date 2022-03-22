@@ -1,4 +1,233 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 21 Mar 2022 15:15:07 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 183</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-183/</link><pubDate>Mon, 21 Mar 2022 15:15:07 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-183/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 22 Mar 2022 14:27:44 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 184</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-184/</link><pubDate>Tue, 22 Mar 2022 14:27:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-184/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="下拉选项进行分组">下拉选项进行分组&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">select&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;alpha&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">optgroup&lt;/span> &lt;span class="na">label&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;A&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">option&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>AA&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">option&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">option&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>BB&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">option&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">option&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;3&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>CC&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">option&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">optgroup&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">optgroup&lt;/span> &lt;span class="na">label&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;a&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">option&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>aa&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">option&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">option&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>bb&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">option&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">option&lt;/span> &lt;span class="na">value&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;3&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>cc&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">option&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">optgroup&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">select&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="translate-方法">&lt;code>translate()&lt;/code> 方法&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>translate()&lt;/code> CSS 函数在水平和/或垂直方向上重新定位元素
+&lt;ul>
+&lt;li>&lt;code>transform: translate(x,y,z)&lt;/code> 控制元素往三个轴方向平移
+&lt;ul>
+&lt;li>x 是屏幕左上角往右的方向&lt;/li>
+&lt;li>y 是屏幕左上角往下的方向&lt;/li>
+&lt;li>z 是屏幕到人眼的方向&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="前后端沟通">前后端沟通&lt;/h3>
+&lt;h4 id="rpc远程过程调用">RPC—远程过程调用&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>RPC&lt;/code>（Remote Procedure Call，远程过程调用）常用于后端服务进程之间的通信。&lt;/li>
+&lt;li>“远程”指的是不同服务器上的进程，“过程调用”里的“过程”可以理解为“函数”，这种接口设计和函数命名很相似，名称为动宾结构短语&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>GET /getUsers
+POST /deleteUser
+POST /createUser
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>RPC 风格和平常编写模块的思路很像，提供了一个函数作为接口，供其他模块调用。是站在后端工程师的视角而设置的：为了像在本地调用一个函数那样调用远程的代码。
+&lt;ul>
+&lt;li>&lt;strong>紧耦合&lt;/strong>：当前端工程师需要获取或修改某个数据时，他有可能需要先调用接口 A ，再调用接口 B，这种调用需要对系统非常熟悉，让前端工程师熟悉后端逻辑和代码显然是难以办到的。&lt;/li>
+&lt;li>&lt;strong>冗余&lt;/strong>：把执行动作写在 URL 上实际是冗余的，因为 HTTP 的 Method 头部可以表示不同的动作行为。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="rest表现层状态转换">REST—表现层状态转换&lt;/h4>
+&lt;h5 id="表现层">表现层&lt;/h5>
+&lt;ul>
+&lt;li>资源指的是一个实体信息，一个文本文件、一段 JSON 数据都可以称为资源。&lt;/li>
+&lt;li>一个资源可以有不同的呈现形式，比如一份数据可以是 XML 格式，也可以是 JSON 格式，这种呈现形式叫作“表现层（&lt;code>Representation&lt;/code>）&lt;/li>
+&lt;/ul>
+&lt;h5 id="状态转移">状态转移&lt;/h5>
+&lt;ul>
+&lt;li>HTTP 本身是无状态的，因此，如果客户端想要操作服务器，则必须通过某种手段让服务器发生“状态转移（State Transfer）”。而这种转移是建立在表现层之上的，即“表现层状态转移”。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;blockquote>
+&lt;p>REST 的核心要点有两个，那就是&lt;strong>资源&lt;/strong>和&lt;strong>方法&lt;/strong>。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>REST 的 URL 指向某个或某类资源，所以不再是类似 RPC 的动宾结构，而是&lt;strong>名词&lt;/strong>。
+&lt;ul>
+&lt;li>通常，当 URL 的路径以 ID 结尾则表示指代某个资源，无 ID 则指向一类资源。&lt;/li>
+&lt;li>路径分隔符表示资源之间的嵌套关系。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>/orgs
+/orgs/123asdf12d
+/orgs/ss1212sdf/users
+/orgs/ss1212sdf/users/111asdl234l
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>要进行状态转移的时候，使用的是 HTTP 默认的语义化头部 Method 字段&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>GET（SELECT）：获取资源
+POST（CREATE）：新建一个资源
+PUT（UPDATE）：更新资源
+DELETE（DELETE）：从服务器删除资源
+&lt;/code>&lt;/pre>&lt;hr>
+&lt;ul>
+&lt;li>REST 的低耦合、高度语义化的设计风格比较适合前后端通信，也存在 3 个不足
+&lt;ul>
+&lt;li>&lt;strong>弱约束&lt;/strong>。REST 定义请求路径和方法，但对非常重要的请求体和响应体并没有给出规范和约束。这就意味着需要借助工具来重新定义和校验这些内容，而不同工具之间的定义格式和校验方式都不相同，给工程师带来了一定的学习负担。&lt;/li>
+&lt;li>&lt;strong>接口松散&lt;/strong>。 REST 风格的数据粒度一般都非常小，前端要进行复杂查询的时候可能会涉及多个 API 查询，那么会产生多个网络请求，很容易造成性能问题。通常的解决方案是通过类似 API 网关的中转服务器来实现对接口的聚合和缓存。&lt;/li>
+&lt;li>&lt;strong>数据冗余&lt;/strong>。前端对网络请求性能是比较敏感的，所以传输的数据量尽可能小，但 REST API 在设计好之后，返回的字段值是固定的。所以很容易出现这样一个场景，对于后端工程师而言，为了减少代码修改，会尽可能地在返回结果中添加更多的字段；对于前端工程师而言，使用数据的场景往往是多变的，即使是调用同一个 API，在不同场景下也只会用到某些特定的字段。所以不可避免地产生数据冗余，从而造成带宽浪费，影响用户体验。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="graphql--图表查询语言">GraphQL — 图表查询语言&lt;/h4>
+&lt;blockquote>
+&lt;p>从 API 的提供者，到 API 数据，再到 API 的使用者(GraphQL)&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>GraphQL（Graph Query Language） 是图表查询语言，在 REST 规范中，请求路径表示资源之间的嵌套关系，那么很容易形成树型结构&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 247;
+flex-basis: 594px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-184/restful-style.png" data-size="1654x668">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-184/restful-style.png"
+width="1654"
+height="668"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-184/restful-style_hu2cf190e91acbd3af0b87edab30d8719d_112020_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-184/restful-style_hu2cf190e91acbd3af0b87edab30d8719d_112020_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="REST 风格的树结构 API">
+&lt;/a>
+&lt;figcaption>REST 风格的树结构 API&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>GraphQL 中不同类型之间的关联关系通过图来表示。下面是一张通过 GraphQL 工具生成的示例图，描述了不同类型之间的关系。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 108;
+flex-basis: 260px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-184/graphql.png" data-size="1600x1474">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-184/graphql.png"
+width="1600"
+height="1474"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-184/graphql_hu5a30064841376e22c64a97904870c9f2_621866_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-184/graphql_hu5a30064841376e22c64a97904870c9f2_621866_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="GraphQL Voyager 示例图">
+&lt;/a>
+&lt;figcaption>GraphQL Voyager 示例图&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;blockquote>
+&lt;p>GraphQL 核心概念其实就两个：&lt;strong>查询语句&lt;/strong>和&lt;strong>模式&lt;/strong>，分别对应 API 的&lt;strong>调用者&lt;/strong>和&lt;strong>提供者&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;h5 id="别名aliases">别名（&lt;code>Aliases&lt;/code>）&lt;/h5>
+&lt;ul>
+&lt;li>使用 GraphQL，只需要修改查询的别名即可。&lt;/li>
+&lt;/ul>
+&lt;h5 id="片段fragments">片段（Fragments）&lt;/h5>
+&lt;ul>
+&lt;li>如果在查询中有重复的数据结构，可以通过片段来对它们进行抽象。&lt;/li>
+&lt;/ul>
+&lt;h5 id="内省introspection">内省（Introspection）&lt;/h5>
+&lt;ul>
+&lt;li>调用 REST API 非常依赖文档，但 GraphQL 则不需要，因为它提供了一个内省系统来描述后端定义的类型。
+&lt;ul>
+&lt;li>可以先通过查询 &lt;code>_schema&lt;/code> 字段来向 GraphQL 询问哪些类型是可用的。因为每个查询的根类型总是有 &lt;code>_schema&lt;/code> 字段的&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>后端的模式与 Mongoose 及 JSON-Schema 的模式有些类似，都是通过声明数据类型来定义数据结构的。
+&lt;ul>
+&lt;li>数据类型又可以分为默认的标量类型，如 Int、String 及自定义的对象类型。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-graphql" data-lang="graphql">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">type&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">User&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="py">id&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">ID&lt;/span>&lt;span class="p">!&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="py">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">String&lt;/span>&lt;span class="p">!&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="py">books&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nc">Book&lt;/span>&lt;span class="p">!]!&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>定义了一个 User 类型，包含 3 个字段：ID 类型的 id 字段，String 类型的 name 字段以及 Book 类型列表 的 books 字段。其中 ID 和 String 为标量类型，Book 为对象类型，惊叹号表示字段值不能为 null。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>GraphQL 的类型声明和 TypeScript 的类型定义除了在写法上有些类似，在一些高级功能上也有异曲同工之处，比如联合类型和接口定义。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-graphql" data-lang="graphql">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">union&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">Owner&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="py">User&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="py">Organization&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">interface&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">Member&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="py">id&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">ID&lt;/span>&lt;span class="p">!&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="py">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">String&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">type&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">User&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">implements&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">Member&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">...&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">type&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">Organization&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">implements&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">Member&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">...&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>定义好模式之后，实现数据操作。在 GraphQL 中这一部分逻辑称为解析器（&lt;code>Resolver&lt;/code>），解析器与类型相对应，下面是类型定义以及对应的解析器&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-graphql" data-lang="graphql">&lt;span class="line">&lt;span class="cl">&lt;span class="py">const&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kd">schema&lt;/span>&lt;span class="py">Str&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="err">`&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">type&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">Hero&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="py">id&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">String&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="py">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">String&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="c"># 根类型&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="kd">type&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">Query&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="py">hero&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="py">id&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">String&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="py">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nc">String&lt;/span>&lt;span class="p">):&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nc">Hero&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="err">`&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="py">const&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="py">resolver&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="py">hero&lt;/span>&lt;span class="p">({&lt;/span>&lt;span class="py">id&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="err">&amp;#39;&lt;/span>&lt;span class="py">hello&lt;/span>&lt;span class="err">&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="py">name&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="err">&amp;#39;&lt;/span>&lt;span class="py">world&lt;/span>&lt;span class="err">&amp;#39;&lt;/span>&lt;span class="p">})&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="py">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="py">id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="err">&amp;amp;&amp;amp;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="py">name&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="py">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="kd">...&lt;/span>&lt;span class="py">data&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="py">hero&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="py">id&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="py">name&lt;/span>&lt;span class="p">}]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="py">return&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="py">data&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="py">hero&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ul>
+&lt;li>&lt;strong>高聚合&lt;/strong>。GraphQL 提倡将系统所有请求路径都聚合在一起形成一个统一的地址，并使用 POST 方法来提交查询语句，比如 GitHub 使用的请求地址就是：https://api.github.com/graphql。&lt;/li>
+&lt;li>&lt;strong>无冗余&lt;/strong>。后端会根据查询语句来返回值，不会出现冗余字段。&lt;/li>
+&lt;li>&lt;strong>类型校验&lt;/strong>。由于有模式的存在，可以轻松实现对响应结果及查询语句进行校验。&lt;/li>
+&lt;li>&lt;strong>代码即文档&lt;/strong>。内省功能可以直接查询模式，无须查询文档也可以通过命名及描述信息来进行查询。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;blockquote>
+&lt;p>GraphQL 提供了一种基于特定语言的查询模式，让前端可以随心所欲地获得想要的数据类型，是相当友好的；而对于后端而言，把数据的查询结果编写成 REST API 还是 GraphQL 的解析器，工作量相差不大，最大的问题是带来的收益可能无法抵消学习和改造成本。这在很大程度上增加了 GraphQL 的推广难度&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>GraphQL 的大多数实际使用场景分为两类，一类是前端工程师主导的新项目，后端采用 Node.js 来实现，用 GraphQL 来替代 REST；&lt;/li>
+&lt;li>另一类就是将 Node.js 服务器作为中转服务器，为前端提供一个 GraphQL 查询，但实际上仍然是调用后端的 REST API 来获取数据。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;blockquote>
+&lt;p>RPC 风格，了解即可；对于 REST API，需要重点理解它通过路径指向资源，以及利用 HTTP 方法来指代动作的特性；对于 GraphQL，应该从 API 调用者和 API 提供者两个角度来分别学习查询语句和模式。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/hoppscotch/hoppscotch" target="_blank" rel="noopener"
+>hoppscotch/hoppscotch: 👽 Open source API development ecosystem - https://hoppscotch.io&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/optgroup" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;optgroup&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform" target="_blank" rel="noopener"
+>transform - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function/translate" target="_blank" rel="noopener"
+>translate() - CSS（层叠样式表） | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 183</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-183/</link><pubDate>Mon, 21 Mar 2022 15:15:07 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-183/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="output-标签">&lt;code>&amp;lt;output&amp;gt;&lt;/code> 标签&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>&amp;lt;output&amp;gt;&lt;/code> 标签表示计算或用户操作的结果。&lt;/li>
