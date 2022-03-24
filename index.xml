@@ -1,4 +1,291 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 23 Mar 2022 14:28:43 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 185</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-185/</link><pubDate>Wed, 23 Mar 2022 14:28:43 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-185/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 24 Mar 2022 14:22:03 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 186</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-186/</link><pubDate>Thu, 24 Mar 2022 14:22:03 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-186/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="如何实现浏览器桌面通知">如何实现浏览器桌面通知&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>Websocket&lt;/code> Desktop Notification&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">Notification&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">requestPermission&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">perm&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">perm&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;granted&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">notification&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Notification&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;通知&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">dir&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;auto&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">lang&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;hi&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">tag&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;testTag&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">icon&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;https://static.cnblogs.com/images/adminlogo.gif&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">body&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;content&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="相邻兄选择器">相邻兄选择器&lt;/h3>
+&lt;ul>
+&lt;li>相邻兄弟选择器 (&lt;code>+&lt;/code>) 介于两个选择器之间，当第二个元素紧跟在第一个元素之后，并且两个元素都是属于同一个父元素的子元素，则第二个元素将被选中&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-CSS" data-lang="CSS">&lt;span class="line">&lt;span class="cl">&lt;span class="c">/* 图片后面紧跟着的段落将被选中 */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">img&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="nt">p&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">font-style&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">bold&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="组件通信---状态管理">组件通信 - 状态管理&lt;/h3>
+&lt;h4 id="全局状态">全局状态&lt;/h4>
+&lt;ul>
+&lt;li>父子组件通信
+&lt;ul>
+&lt;li>父组件通过 prop(s) 属性向子组件传参，子组件通过自定义事件来向父组件发送消息&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>状态管理库&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>状态管理库具有 3 个特点：&lt;strong>可预测&lt;/strong>、&lt;strong>中心化&lt;/strong>、&lt;strong>可调式&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;h4 id="其他组件通信方式">其他组件通信方式&lt;/h4>
+&lt;ol>
+&lt;li>全局上下文&lt;/li>
+&lt;li>事件监听&lt;/li>
+&lt;/ol>
+&lt;h3 id="代码编译之webpack">代码编译之&lt;code>webpack&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>webpack 有两个执行入口，分别是:
+&lt;ul>
+&lt;li>通过命令行调用的 &lt;code>bin/webpack.js&lt;/code>&lt;/li>
+&lt;li>以及直接在代码中引用的 &lt;code>lib/webpack.js&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-JavaScript" data-lang="JavaScript">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// lib/webpack.js 部分源码
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">webpack&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">((&lt;/span> &lt;span class="nx">options&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">callback&lt;/span> &lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">validateSchema&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">webpackOptionsSchema&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">options&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compiler&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">createCompiler&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">callback&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">run&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">stats&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">close&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">err2&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">callback&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nx">err2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">stats&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>webpack()&lt;/code> 函数内部有 3 个重要的操作：&lt;strong>校验配置项&lt;/strong>、&lt;strong>创建编译器&lt;/strong>、&lt;strong>执行编译&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;h4 id="校验配置项">校验配置项&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>校验配置项是通过调用 &lt;code>validateSchema()&lt;/code> 函数来实现的，这个函数的内部是调用的 schema-utils 模块的 &lt;code>validate ()&lt;/code> 函数 ，&lt;code>validate()&lt;/code> 函数支持通过 JSONSchema 规则来校验 json 对象。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>JSONSchema 规则保存在 schemas/WebpackOptions.json 文件中，对应代码中的 webpackOptionsSchema 变量。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>JSONSchema，它是通过 JSON 文件来描述 JSON 文件 ，可以用来校验 JSON 对象&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;code>validateSchema()&lt;/code> 函数通过 &lt;code>JSONSchema&lt;/code> 对 &lt;code>options&lt;/code> 进行校验，如果不符合配置规则，则退出并在控制台输出格式化的错误信息。这样就能避免因为选项参数不正确而导致程序运行出错。&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="创建编译器">创建编译器&lt;/h4>
+&lt;ul>
+&lt;li>创建编译器操作是在 &lt;code>compiler.compile()&lt;/code> 函数中调用 &lt;code>createCompiler()&lt;/code> 函数来实现的，该函数会返回一个 Compiler 实例。createCompiler() 函数源码如下：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// lib/webpack.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">createCompiler&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">rawOptions&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">getNormalizedWebpackOptions&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">rawOptions&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">applyWebpackOptionsBaseDefaults&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">compiler&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Compiler&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">context&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">options&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">new&lt;/span> &lt;span class="nx">NodeEnvironmentPlugin&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">infrastructureLogging&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">options&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">infrastructureLogging&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}).&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">compiler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nb">Array&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isArray&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">plugins&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">plugin&lt;/span> &lt;span class="k">of&lt;/span> &lt;span class="nx">options&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">plugins&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">plugin&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;function&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">plugin&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">compiler&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">plugin&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">compiler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">applyWebpackOptionsDefaults&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hooks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">environment&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hooks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">afterEnvironment&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">new&lt;/span> &lt;span class="nx">WebpackOptionsApply&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">process&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hooks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">initialize&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>在 createCompiler() 函数内部，首先会通过 &lt;code>getNormalizedWebpackOptions()&lt;/code> 函数将默认的配置参数与自定义的配置参数 rawOptions 进行合成，赋值给变量 options。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>applyWebpackOptionsBaseDefaults()&lt;/code> 函数则将程序当前执行路径赋值给 options.context 属性。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>经过以上处理之后，变量 options 才会作为参数传递给类 Compiler 来生成实例。在构造函数中，实例的很多属性进行了初始化操作，其中比较重要的是 hooks 属性。下面是截取的部分源码：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// lib/Compiler.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">context&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hooks&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">freeze&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">initialize&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">shouldEmit&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncBailHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compilation&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">done&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AsyncSeriesHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;stats&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">afterDone&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;stats&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">additionalPass&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AsyncSeriesHook&lt;/span>&lt;span class="p">([]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">beforeRun&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AsyncSeriesHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compiler&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">run&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AsyncSeriesHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compiler&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">emit&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AsyncSeriesHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compilation&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">assetEmitted&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AsyncSeriesHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;file&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;info&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">afterEmit&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AsyncSeriesHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compilation&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">thisCompilation&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compilation&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;params&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compilation&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compilation&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;params&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">normalModuleFactory&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;normalModuleFactory&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">contextModuleFactory&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;contextModuleFactory&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">beforeCompile&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AsyncSeriesHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;params&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compile&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;params&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">make&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AsyncParallelHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compilation&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">finishMake&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AsyncSeriesHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compilation&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">afterCompile&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AsyncSeriesHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compilation&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">watchRun&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AsyncSeriesHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compiler&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">failed&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;error&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">invalid&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;filename&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;changeTime&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">watchClose&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">infrastructureLog&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncBailHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;origin&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;args&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">environment&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">afterEnvironment&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">afterPlugins&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compiler&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">afterResolvers&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;compiler&amp;#34;&lt;/span>&lt;span class="p">]),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">entryOption&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncBailHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s2">&amp;#34;context&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;entry&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>为了防止 hooks 属性被修改，这里使用 &lt;code>Object.freeze()&lt;/code> 函数来创建对象。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>object.freeze()&lt;/code> 函数冻结一个对象。
+&lt;ul>
+&lt;li>一个被冻结的对象再也不能被修改了；&lt;/li>
+&lt;li>冻结了一个对象则不能向这个对象添加新的属性，不能删除已有属性，不能修改该对象已有属性的可枚举性、可配置性、可写性，以及不能修改已有属性的值。&lt;/li>
+&lt;li>冻结一个对象后该对象的原型也不能被修改&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>一共创建了 4 种类型的&lt;code>hook&lt;/code>，它们的名称和作用如下：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>&lt;code>SyncHook&lt;/code>&lt;/strong>，当 hook 触发时，会依次调用 hook 队列中的回调函数；&lt;/li>
+&lt;li>&lt;strong>&lt;code>SyncBailHook&lt;/code>&lt;/strong>，当 hook 触发时，会依次调用 hook 队列中的回调函数，如果遇到有返回值的函数则停止继续调用；&lt;/li>
+&lt;li>&lt;strong>&lt;code>AsyncSeriesHook&lt;/code>&lt;/strong>，如果 hook 队列中有异步回调函数，则会等其执行完成后再执行剩余的回调函数；&lt;/li>
+&lt;li>&lt;strong>&lt;code>AsyncParallelHook&lt;/code>&lt;/strong> 可以异步执行钩子队列中的所有异步回调函数&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>下面一段代码是 hook 函数的简单用法。通过 new 关键字创建 hook 实例，然后调用 &lt;code>tap()&lt;/code> 函数来监听 hook，向 hook 的队列中添加一个回调函数 。 当执行 &lt;code>hook.call()&lt;/code> 函数时，会依次调用队列中的回调函数，并将参数传递给这些回调函数 。 需要注意的是， 参数的数量必须与实例化的数组长度一致。在下面的例子中，只能传递 1 个参数。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://www.npmjs.com/package/tapable" target="_blank" rel="noopener"
+>tapable - npm&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">SyncHook&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;tapable&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">hook&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">SyncHook&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s1">&amp;#39;whatever&amp;#39;&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">hook&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">tap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;1&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">arg1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">arg1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">hook&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;lagou&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 调用插件（plugin）的 apply() 函数的写法在 webpack 中很常见
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 主要作用就是监听 compiler hook事件，或者说是向hook队列中插入一个回调函数
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 当对应的hook事件触发时调用
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// lib/webpack.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">new&lt;/span> &lt;span class="nx">NodeEnvironmentPlugin&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">infrastructureLogging&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">options&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">infrastructureLogging&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}).&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">compiler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>初始化完成后会调用 3 个 hook 事件&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// lib/webpack.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">compiler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hooks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">environment&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">compiler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hooks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">afterEnvironment&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">new&lt;/span> &lt;span class="nx">WebpackOptionsApply&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">process&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">options&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">compiler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">compiler&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hooks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">initialize&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>process() 函数会根据不同的执行环境引入一些默认的插件并调用它的 apply() 函数，比如 Node 环境下会引入下面的插件：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// lib/WebpackOptionsApply.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">NodeTemplatePlugin&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./node/NodeTemplatePlugin&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">ReadFileCompileWasmPlugin&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./node/ReadFileCompileWasmPlugin&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">ReadFileCompileAsyncWasmPlugin&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./node/ReadFileCompileAsyncWasmPlugin&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">NodeTargetPlugin&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;./node/NodeTargetPlugin&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">new&lt;/span> &lt;span class="nx">NodeTemplatePlugin&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">asyncChunkLoading&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">options&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">target&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="s1">&amp;#39;async-node&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}).&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">compiler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">new&lt;/span> &lt;span class="nx">ReadFileCompileWasmPlugin&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">mangleImports&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">options&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">optimization&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">mangleWasmImports&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}).&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">compiler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">new&lt;/span> &lt;span class="nx">ReadFileCompileAsyncWasmPlugin&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">compiler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">new&lt;/span> &lt;span class="nx">NodeTargetPlugin&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">compiler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">new&lt;/span> &lt;span class="nx">LoaderTargetPlugin&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;node&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">apply&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">compiler&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ul>
+&lt;li>创建编译器步骤的主要逻辑:
+&lt;ul>
+&lt;li>首先会将配置参数进行修改，比如加入一些默认配置项；&lt;/li>
+&lt;li>然后创建一个编译器实例 compiler，这个实例的构造函数会初始化一些 hook；&lt;/li>
+&lt;li>最后就是调用插件的 apply() 函数来监听 hook，同时也会主动触发一些 hook 事件&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="执行编译">执行编译&lt;/h4>
+&lt;ul>
+&lt;li>调用 &lt;code>compiler.compile()&lt;/code> 函数进入编译阶段&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// compile() 函数的部分代码
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// lib/Compiler.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">compile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">callback&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">newCompilationParams&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hooks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">beforeCompile&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">callAsync&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">params&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="nx">callback&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hooks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">compile&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">params&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">compilation&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">newCompilation&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">params&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hooks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">make&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">callAsync&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">compilation&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>首先是触发了 &lt;code>compiler.hooks.compile&lt;/code> hook，触发后，一些插件将进行初始化操作，为编译做好准备，比如 LoaderTargetPlugin 插件将会加载需要的加载器。&lt;/li>
+&lt;li>调用 &lt;code>newCompilation()&lt;/code> 函数则会创建了一个 Compilation 实例。
+&lt;ul>
+&lt;li>这里的 Compilation 和前面创建的 Compiler 是有区别的：Compiler 是全局唯一的，包含了配置参数、加载器、插件这些信息，它会一直存在 webpack 的生命周期中；而 Compilation 包含了当前模块的信息，只是代表一次编译过程。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>在创建 compilation 完成后会触发 compiler.hooks.thisCompilation 和 compiler.hooks.compilation，激活 JavaScriptModulesPlugin 插件的监听函数，从而加载 JavaScript 的解析模块 acorn&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// lib/Compiler.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">newCompilation&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">params&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">compilation&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">createCompilation&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compilation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fileTimestamps&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">fileTimestamps&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compilation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">contextTimestamps&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">contextTimestamps&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compilation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compilation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">records&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">records&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">compilation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">compilationDependencies&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">params&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">compilationDependencies&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hooks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">thisCompilation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">compilation&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">params&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">hooks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">compilation&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">compilation&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">params&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">compilation&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>在 &lt;code>compiler.compile()&lt;/code> 函数中触发 &lt;code>compiler.hooks.make&lt;/code> 标志着编译操作正式开始&lt;/li>
+&lt;li>模块构建完成后，通过 &lt;code>acorn&lt;/code> 生成模块代码的抽象语法树，根据抽象语法树分析这个模块是否还有依赖的模块，如果有则继续解析每个依赖的模块，直到所有依赖解析完成，最后合并生成输出文件。这个过程和编译器执行过程类似&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/notification" target="_blank" rel="noopener"
+>notification - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator" target="_blank" rel="noopener"
+>相邻兄弟选择器 - CSS（层叠样式表） | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 185</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-185/</link><pubDate>Wed, 23 Mar 2022 14:28:43 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-185/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
 &lt;h3 id="onload和domcontentloaded哪个先执行">&lt;code>onload&lt;/code>和&lt;code>domcontentloaded&lt;/code>哪个先执行&lt;/h3>
 &lt;ul>
 &lt;li>当初始的 HTML 文档被完全加载和解析完成之后，&lt;code>DOMContentLoaded&lt;/code> 事件被触发，而&lt;strong>无需等待样式表、图像和子框架的完全加载&lt;/strong>。&lt;/li>
