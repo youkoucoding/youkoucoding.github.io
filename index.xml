@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 25 Mar 2022 14:19:54 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 187</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-187/</link><pubDate>Fri, 25 Mar 2022 14:19:54 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-187/</guid><description>&lt;h2 id="javascript">JavaScript&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 26 Mar 2022 17:20:33 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 188</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-188/</link><pubDate>Sat, 26 Mar 2022 17:20:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-188/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="png-格式">PNG 格式&lt;/h3>
+&lt;h4 id="什么是-png">什么是 PNG&lt;/h4>
+&lt;ul>
+&lt;li>PNG 的全称叫便携式网络图型（Portable Network Graphics）是目前最流行的网络传输和展示的图片格式，原因有如下几点：
+&lt;ul>
+&lt;li>&lt;em>无损压缩&lt;/em>：PNG 图片采取了基于 LZ77 派生算法对文件进行压缩，使得它压缩比率更高，生成的文件体积更小，并且不损失数据。&lt;/li>
+&lt;li>&lt;em>体积小&lt;/em>：它利用特殊的编码方法标记重复出现的数据，使得同样格式的图片，PNG 图片文件的体积更小。网络通讯中因受带宽制约，在保证图片清晰、逼真的前提下，优先选择 PNG 格式的图片。&lt;/li>
+&lt;li>&lt;em>支持透明效果&lt;/em>：PNG 支持对原图像定义 256 个透明层次，使得图像的边缘能与任何背景平滑融合，这种功能是 GIF 和 JPEG 没有的。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="png-类型">PNG 类型&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>PNG 8&lt;/code>：PNG 8 中的 8，其实指的是 8bits，相当于用 2^8（2 的 8 次方）大小来存储一张图片的颜色种类，2^8 等于 256，也就是说 PNG 8 能存储 256 种颜色，一张图片如果颜色种类很少，将它设置成 PNG 8 得图片类型是非常适合的。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>PNG 24&lt;/code>：PNG 24 中的 24，相当于 3 乘以 8 等于 24，就是用三个 8bits 分别去表示 R（红）、G（绿）、B（蓝）。R(0~255),G(0~255),B(0~255)，可以表达 256 乘以 256 乘以 256=16777216 种颜色的图片，这样 PNG 24 就能比 PNG 8 表示色彩更丰富的图片。但是所占用的空间相对就更大了。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>PNG 32&lt;/code>：PNG 32 中的 32，相当于 PNG 24 加上 8bits 的透明颜色通道，就相当于 R（红）、G（绿）、B（蓝）、A（透明）。R(0~255),G(0~255),B(0~255),A(0~255)。比 PNG 24 多了一个 A（透明），也就是说 PNG 32 能表示跟 PNG 24 一样多的色彩，并且还支持 256 种透明的颜色，能表示更加丰富的图片颜色类型。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>
+&lt;p>png8 和 png24 的根本区别，不是颜色位的区别，而是存储方式不同。 “PNG8”是指 8 位索引色位图，“PNG24”是 24 位索引色位图&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>png8 有 1 位的布尔透明通道（要么完全透明，要么完全不透明，不支持半透明），png24 则有 8 位（256 阶）的布尔透明通道（所谓半透明）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>保存什么样的格式：&lt;/p>
+&lt;ul>
+&lt;li>色彩丰富的、大的图片 &lt;code>jpg&lt;/code>&lt;/li>
+&lt;li>尺寸小的，色彩不丰富的和背景透明的 &lt;code>gif&lt;/code> 或者 &lt;code>png8&lt;/code>&lt;/li>
+&lt;li>半透明&lt;code>png24&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="css-给一个元素加边框">css 给一个元素加边框&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">:&lt;/span>&lt;span class="nd">scope&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="kc">black&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">0&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">black&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/*不影响布局,无限叠加*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">outline&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="kc">black&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/*不支持圆角*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-image&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">url&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;data:image/svg+xml,%3Csvg xmlns=&amp;#39;http://www.w3.org/2000/svg&amp;#39;%3E%3Crect width=&amp;#39;100%25&amp;#39; height=&amp;#39;100%25&amp;#39; stroke=&amp;#39;%23000&amp;#39; fill=&amp;#39;transparent&amp;#39;/%3E%3C/svg%3E&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-clip&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">content-box&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c">/*形成透明边框*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">padding&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-image&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">linear-gradient&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">red&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">black&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="stoppropagation-和-preventdefault-区别">&lt;code>stopPropagation()&lt;/code> 和 &lt;code>preventDefault()&lt;/code> 区别&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>stopPropagation()&lt;/code> &lt;strong>阻止事件冒泡&lt;/strong>，即冒泡事件到当前元素处就终止了，不会继续向上级元素传递。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>preventDefault()&lt;/code> &lt;strong>阻止默认事件&lt;/strong>，例如：在 a 标签的 click 事件中执行了该方法，则不会进行默认的链接跳转。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:scope" target="_blank" rel="noopener"
+>&lt;code>:scope&lt;/code> - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Event/stopPropagation" target="_blank" rel="noopener"
+>event.stopPropagation - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Event/preventDefault" target="_blank" rel="noopener"
+>event.preventDefault - Web API 接口参考 | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 187</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-187/</link><pubDate>Fri, 25 Mar 2022 14:19:54 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-187/</guid><description>&lt;h2 id="javascript">JavaScript&lt;/h2>
 &lt;h3 id="filereader">&lt;code>FileReader&lt;/code>&lt;/h3>
 &lt;ul>
 &lt;li>FileReader 对象允许 Web 应用程序&lt;strong>异步读取&lt;/strong>存储在用户计算机上的文件（或原始数据缓冲区）的内容，使用 File 或 Blob 对象指定要读取的文件或数据&lt;/li>
