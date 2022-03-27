@@ -1,4 +1,162 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 26 Mar 2022 17:20:33 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 188</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-188/</link><pubDate>Sat, 26 Mar 2022 17:20:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-188/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 27 Mar 2022 14:26:42 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 189</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-189/</link><pubDate>Sun, 27 Mar 2022 14:26:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-189/</guid><description>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="将-html-页面生成为图片">将 html 页面生成为图片&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/niklasvh/html2canvas/" target="_blank" rel="noopener"
+>niklasvh/html2canvas: Screenshots with JavaScript&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="x-frame-options">&lt;code>X-Frame-Options&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>X-Frame-Options&lt;/code> HTTP &lt;strong>响应头&lt;/strong>是用来给浏览器 指示允许一个页面 可否在 &lt;code>&amp;lt;frame&amp;gt;&lt;/code>, &lt;code>&amp;lt;iframe&amp;gt;&lt;/code>, &lt;code>&amp;lt;embed&amp;gt;&lt;/code> 或者 &lt;code>&amp;lt;object&amp;gt;&lt;/code> 中展现的标记。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">X&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">Frame&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">Options&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">deny&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">X&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">Frame&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">Options&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">sameorigin&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">X&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">Frame&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">Options&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">allow&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="nx">from&lt;/span> &lt;span class="nx">https&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="c1">//example.com/
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>deny&lt;/code>表示该页面不允许在 frame 中展示，即便是在相同域名的页面中嵌套也不允许。&lt;/li>
+&lt;li>&lt;code>sameorigin&lt;/code> 表示该页面可以在相同域名页面的 frame 中展示。&lt;/li>
+&lt;li>&lt;code>allow-from uri&lt;/code> 表示该页面可以在指定来源的 frame 中展示。&lt;/li>
+&lt;/ul>
+&lt;h3 id="referer">&lt;code>Referer&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>Referer&lt;/code> &lt;strong>请求头&lt;/strong>包含了当前请求页面的来源页面的地址，即表示当前页面是通过此来源页面里的链接进入的。&lt;/li>
+&lt;li>服务端一般使用 Referer 请求头识别访问来源，可能会以此进行统计分析、日志记录以及缓存优化&lt;/li>
+&lt;/ul>
+&lt;h3 id="nodejs-实现原理">Node.js 实现原理&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>Node.js 的依赖模块&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>acorn&lt;/code>：前面的课程中已经提过，用 JavaScript 编写的轻量级 JavaScript 解析器。&lt;/li>
+&lt;li>&lt;code>acorn-plugins&lt;/code>：acorn 的扩展模块，让 acorn 支持 ES6 特性解析，比如类声明。&lt;/li>
+&lt;li>&lt;code>brotli&lt;/code>：C 语言编写的 Brotli 压缩算法。&lt;/li>
+&lt;li>&lt;code>cares&lt;/code>：应该写为“c-ares”，C 语言编写的用来处理异步 DNS 请求。&lt;/li>
+&lt;li>&lt;code>histogram&lt;/code>：C 语言编写，实现柱状图生成功能。&lt;/li>
+&lt;li>&lt;code>icu-small&lt;/code>：C 语言编写，为 Node.js 定制的 ICU（International Components for Unicode）库，包括一些用来操作 Unicode 的函数。&lt;/li>
+&lt;li>&lt;code>llhttp&lt;/code>：C 语言编写，轻量级的 http 解析器。&lt;/li>
+&lt;li>&lt;code>nghttp2/nghttp3/ngtcp2&lt;/code>：处理 HTTP/2、HTTP/3、TCP/2 协议。&lt;/li>
+&lt;li>&lt;code>node-inspect&lt;/code>：让 Node.js 程序支持 CLI debug 调试模式。&lt;/li>
+&lt;li>&lt;code>npm&lt;/code>：JavaScript 编写的 Node.js 模块管理器。&lt;/li>
+&lt;li>&lt;code>openssl&lt;/code>：C 语言编写，加密相关的模块，在 tls 和 crypto 模块中都有使用。&lt;/li>
+&lt;li>&lt;strong>&lt;code>uv&lt;/code>&lt;/strong>：C 语言编写，采用非阻塞型的 I/O 操作，为 Node.js 提供了访问系统资源的能力。&lt;/li>
+&lt;li>&lt;code>uvwasi&lt;/code>：C 语编写，实现 WASI 系统调用 API。&lt;/li>
+&lt;li>&lt;strong>&lt;code>v8&lt;/code>&lt;/strong>：C 语言编写，JavaScript 引擎。&lt;/li>
+&lt;li>&lt;code>zlib&lt;/code>：用于快速压缩，Node.js 使用 zlib 创建同步、异步和数据流压缩、解压接口。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h4 id="libuv">libuv&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>浏览器的其他线程实现异步，Node.js 中，异步实现主要依赖于 &lt;code>libuv&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>libuv&lt;/code> 是一个用 C 编写的支持多平台的异步 I/O 库，主要解决 I/O 操作容易引起阻塞的问题。最开始是专门为 Node.js 使用而开发的，但后来也被 Luvit、Julia、pyuv 等其他模块使用。下图是 libuv 的结构图。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 241;
+flex-basis: 579px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-189/libuv.png" data-size="1416x586">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-189/libuv.png"
+width="1416"
+height="586"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-189/libuv_hub9f7cfc0c2b90009a1ee55d863d556d1_137762_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-189/libuv_hub9f7cfc0c2b90009a1ee55d863d556d1_137762_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="libuv结构图">
+&lt;/a>
+&lt;figcaption>libuv结构图&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>左侧部分为网络 I/O 模块，在不同平台下有不同的实现机制，Linux 系统下通过 &lt;code>epoll&lt;/code> 实现，OSX 和其他 BSD 系统采用 KQueue，SunOS 系统采用 Event ports，Windows 系统采用的是 IOCP&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>右边部分包括文件 I/O 模块、DNS 模块和用户代码，通过线程池来实现异步操作。文件 I/O 与网络 I/O 不同，libuv 没有依赖于系统底层的 API，而是在全局线程池中执行阻塞的文件 I/O 操作。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="processnexttick-和-promise">&lt;code>process.nextTick&lt;/code> 和 &lt;code>Promise&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>虽然 &lt;code>process.nextTick&lt;/code> 和 &lt;code>Promise&lt;/code> 都是异步 API，但并不属于事件轮询的一部分，它们都有各自的任务队列，&lt;strong>在事件轮询的每个步骤完成后执行。&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>当我们使用这两个异步 API 的时候要注意，如果在传入的回调函数中执行长任务或递归，则会导致事件轮询被阻塞，从而“饿死”I/O 操作。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>下面的代码就是通过递归调用 prcoess.nextTick 而导致 fs.readFile 的回调函数无法执行的例子&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">fs&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">readFile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;config.json&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">data&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">traverse&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">process&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">nextTick&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">traverse&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>要解决这个问题，可以使用 &lt;code>setImmediate&lt;/code> 来替代，因为 &lt;code>setImmediate&lt;/code> 会&lt;strong>在事件轮询中执行回调函数队列。&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;code>process.nextTick&lt;/code> 任务队列优先级比 &lt;code>Promise&lt;/code> 任务队列更高，具体的原因可以参看下面的代码：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// lib/internal/process/task_queues.js
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">function&lt;/span> &lt;span class="nx">processTicksAndRejections&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">tock&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">do&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">((&lt;/span>&lt;span class="nx">tock&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">queue&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">shift&lt;/span>&lt;span class="p">()))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">asyncId&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">tock&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">async_id_symbol&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">emitBefore&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">asyncId&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">tock&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">trigger_async_id_symbol&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">tock&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">callback&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">tock&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">callback&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">tock&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">args&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">callback&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">args&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">tock&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">switch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">callback&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">callback&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">callback&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">case&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">callback&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">default&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">callback&lt;/span>&lt;span class="p">(...&lt;/span>&lt;span class="nx">args&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">finally&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">destroyHooksExist&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="nx">emitDestroy&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">asyncId&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">emitAfter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">asyncId&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">runMicrotasks&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">queue&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">isEmpty&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="nx">processPromiseRejections&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">setHasTickScheduled&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">setHasRejectionToWarn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>从 &lt;code>processTicksAndRejections()&lt;/code> 函数中可以看出，首先通过 while 循环取出 queue 队列的回调函数，而这个 queue 队列中的回调函数就是通过 process.nextTick 来添加的。当 while 循环结束后才调用 runMicrotasks() 函数执行 Promise 的回调函数。&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Referer" target="_blank" rel="noopener"
+>Referer - HTTP | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://beefproject.com/" target="_blank" rel="noopener"
+>BeEF - The Browser Exploitation Framework Project&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://cloud.tencent.com/developer/article/1373483" target="_blank" rel="noopener"
+>各种 IO 复用模式之 select，poll，epoll，kqueue，iocp 分析 - 云+社区 - 腾讯云&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 188</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-188/</link><pubDate>Sat, 26 Mar 2022 17:20:33 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-188/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="png-格式">PNG 格式&lt;/h3>
 &lt;h4 id="什么是-png">什么是 PNG&lt;/h4>
 &lt;ul>
