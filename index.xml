@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 27 Mar 2022 14:26:42 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 189</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-189/</link><pubDate>Sun, 27 Mar 2022 14:26:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-189/</guid><description>&lt;h2 id="javascript">JavaScript&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 28 Mar 2022 10:54:51 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 190</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-190/</link><pubDate>Mon, 28 Mar 2022 10:54:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-190/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="颜色中f00-的每一位分别表示什么为什么会有三位和六位的表示">颜色中&lt;code>#F00&lt;/code> 的每一位分别表示什么？为什么会有三位和六位的表示&lt;/h3>
+&lt;ul>
+&lt;li>颜色可以使用红-绿-蓝（red-green-blue (RGB)）模式的两种方式被定义：
+&lt;ul>
+&lt;li>十六进制符号 &lt;code>#RRGGBB&lt;/code> 和 &lt;code>#RGB&lt;/code>&lt;/li>
+&lt;li>三位数的 RGB 符号（#RGB）和 六位数的形式（#RRGGBB）是相等的。
+&lt;ul>
+&lt;li>&lt;code>#f03&lt;/code> 和 &lt;code>#ff0033&lt;/code> 代表同样的颜色&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="原生-js-实现类似getelementsbyclassname的方法不使用queryselectorall">原生 js 实现类似&lt;code>getElementsByClassName&lt;/code>的方法，不使用&lt;code>querySelectorAll&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">getElementsByClassName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">className&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">tags&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementsByTagName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;*&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">tempTags&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">len&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">tags&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">len&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">tag&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">tags&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">tag&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">classList&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">contains&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">className&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nx">tempTags&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">tag&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">tempTags&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="heading">&lt;/h3>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/getElementsByTagName" target="_blank" rel="noopener"
+>Document.getElementsByTagName() - Web API 接口参考 | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 189</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-189/</link><pubDate>Sun, 27 Mar 2022 14:26:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-189/</guid><description>&lt;h2 id="javascript">JavaScript&lt;/h2>
 &lt;h3 id="将-html-页面生成为图片">将 html 页面生成为图片&lt;/h3>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://github.com/niklasvh/html2canvas/" target="_blank" rel="noopener"
