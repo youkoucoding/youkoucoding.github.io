@@ -33,10 +33,6 @@ function getElementsByClassName(className) {
 }
 ```
 
-## Tips
-
-###
-
 ## Reference
 
 [haizlin/fe-interview](https://github.com/haizlin/fe-interview/blob/master/category/history.md)
