@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 28 Mar 2022 10:54:51 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 190</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-190/</link><pubDate>Mon, 28 Mar 2022 10:54:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-190/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 29 Mar 2022 17:36:42 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 191</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-191/</link><pubDate>Tue, 29 Mar 2022 17:36:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-191/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="举例-css-有哪些简写的属性和属性值">举例 css 有哪些简写的属性和属性值&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">border&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">solid&lt;/span> &lt;span class="nt">1px&lt;/span> &lt;span class="nt">red&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">border-style&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">solid&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">border-width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">1px&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">border-color&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">red&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">animation&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">fadeIn&lt;/span> &lt;span class="nt">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">5s&lt;/span> &lt;span class="nt">forward&lt;/span> &lt;span class="nt">ease-in&lt;/span> &lt;span class="nt">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">2s&lt;/span> &lt;span class="nt">infinite&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">animation-name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">fadeIn&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">animation-duration&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">5s&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">animation-fill-mode&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">forward&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">animation-timing-function&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">ease-in&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">animation-delay&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">2s&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">animation-iteration-count&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">infinite&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">url&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="nt">images&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nt">foo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">png&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="nt">center&lt;/span> &lt;span class="nt">top&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nt">cover&lt;/span> &lt;span class="nt">no-repeat&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-image&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">url&lt;/span>&lt;span class="o">(&lt;/span>&lt;span class="nt">images&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="nt">foo&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nc">png&lt;/span>&lt;span class="o">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-position-x&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">center&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-position-y&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">top&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-size&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">cover&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-repeat&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">no-repeat&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">flex&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">1&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">flex&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">1&lt;/span> &lt;span class="nt">1&lt;/span> &lt;span class="nt">0&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">flex-grow&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">1&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">flex-shrink&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">1&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">flex-basis&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">0&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="atob和btoa">&lt;code>atob&lt;/code>和&lt;code>btoa&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>btoa&lt;/code>：binary to ascii；(base64 的&lt;strong>编码&lt;/strong>)&lt;/li>
+&lt;li>&lt;code>atob&lt;/code>：ascii to binary;（base64 的&lt;strong>解码&lt;/strong>）&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>无法用于 Unicode 字符&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Define the string
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">string&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;Hello World!&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Encode the String
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">encodedString&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">btoa&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">string&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">encodedString&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Outputs: &amp;#34;SGVsbG8gV29ybGQh&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Decode the String
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">decodedString&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">atob&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">encodedString&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">decodedString&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// Outputs: &amp;#34;Hello World!&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/btoa" target="_blank" rel="noopener"
+>WindowOrWorkerGlobalScope.btoa() - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/atob" target="_blank" rel="noopener"
+>WindowOrWorkerGlobalScope.atob() - Web API 接口参考 | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 190</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-190/</link><pubDate>Mon, 28 Mar 2022 10:54:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-190/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="颜色中f00-的每一位分别表示什么为什么会有三位和六位的表示">颜色中&lt;code>#F00&lt;/code> 的每一位分别表示什么？为什么会有三位和六位的表示&lt;/h3>
 &lt;ul>
 &lt;li>颜色可以使用红-绿-蓝（red-green-blue (RGB)）模式的两种方式被定义：
@@ -23,9 +77,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">tempTags&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tips">Tips&lt;/h2>
-&lt;h3 id="heading">&lt;/h3>
-&lt;h2 id="reference">Reference&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
 &lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
 >haizlin/fe-interview&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/getElementsByTagName" target="_blank" rel="noopener"
