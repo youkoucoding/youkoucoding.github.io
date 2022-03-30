@@ -1,4 +1,181 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 29 Mar 2022 17:36:42 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 191</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-191/</link><pubDate>Tue, 29 Mar 2022 17:36:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-191/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 30 Mar 2022 18:42:23 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 192</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/</link><pubDate>Wed, 30 Mar 2022 18:42:23 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="a标签属性relnoopener">&lt;code>&amp;lt;a&amp;gt;&lt;/code>标签属性&lt;code>rel=&amp;quot;noopener&amp;quot;&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>使用&lt;code>targer=_blank&lt;/code>打开一个新的标签页时, 新页面的 window 对象上有一个属性 opener, 它指向的是前一个页面的 window 对象, 因此, 后一个页面就获得了前一个页面的控制权. 甚至在跨域的情况下也可以生效, 可以使用 &lt;code>window.opener.location.replace&lt;/code>更改前一个页面的 url&lt;/li>
+&lt;li>使用 &lt;code>rel=noopener&lt;/code> 可以把 &lt;code>window.opener&lt;/code> 置为空, 旧浏览器可以使用 &lt;code>rel=noreferer&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="继承">继承&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>基于原型进行继承, 对象。每个对象还都拥有一个原型对象，并可以从中继承方法和属性。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>不管是对象，还是函数和数组，它们都是 Object 的实例，也就是说在 JavaScript 中，除了原始类型以外，其余都是对象&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>JavaScript 的函数是对象&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="__proto__prototype和prototype">&lt;code>__proto__&lt;/code>(&lt;code>[[Prototype]]&lt;/code>)和&lt;code>prototype&lt;/code>&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>__proto__&lt;/code>属性指向&lt;strong>对象的原型对象&lt;/strong>，对于函数来说，它的原型对象便是&lt;code>prototype&lt;/code>。函数的原型对象 prototype 有以下特点：
+&lt;ul>
+&lt;li>默认情况下，所有函数的原型对象（prototype）都拥有 constructor 属性，该属性指向与之关联的构造函数；&lt;/li>
+&lt;li>函数的原型对象（prototype）同样拥有自己的原型对象，用&lt;code>__proto__&lt;/code>属性表示。前面说过，函数是 Object 的实例，因此 Person.prototype 的原型对象为 Object.prototype (&lt;code>Person.prototype.__proto__ === Object.prototype&lt;/code> true)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 733;
+flex-basis: 1760px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/constructor-prototype.png" data-size="1452x198">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/constructor-prototype.png"
+width="1452"
+height="198"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/constructor-prototype_hua8a846db5366d66c80d6353137f88f75_64675_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/constructor-prototype_hua8a846db5366d66c80d6353137f88f75_64675_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="prototype、__proto__和 constructor 三个属性的关系">
+&lt;/a>
+&lt;figcaption>prototype、__proto__和 constructor 三个属性的关系&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>在 JavaScript 中，&lt;code>__proto__&lt;/code>属性指向对象的原型对象；&lt;/li>
+&lt;li>对于函数来说，每个函数都有一个 prototype 属性，该属性为该函数的原型对象。&lt;/li>
+&lt;/ul>
+&lt;h4 id="使用-prototype-和-__proto__-实现继承">使用 &lt;code>prototype&lt;/code> 和 &lt;code>__proto__&lt;/code> 实现继承&lt;/h4>
+&lt;ul>
+&lt;li>对象的属性值可以为任意类型
+&lt;ul>
+&lt;li>因此，属性的值同样可以为另外一个对象，这意味着 JavaScript 可以这么做：通过将对象 A 的&lt;code>__proto__&lt;/code>属性赋值为对象 B，即 A.&lt;code>__proto__&lt;/code> = B，此时使用 A.&lt;code>__proto__&lt;/code>便可以访问 B 的属性和方法。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>var lily = new Person(&amp;quot;Lily&amp;quot;);&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>上述这段代码在运行时，JavaScript 引擎通过将 Person 的原型对象 prototype 赋值给实例对象 lily 的&lt;code>__proto__&lt;/code>属性，实现了 lily 对 Person 的继承，即执行了以下代码：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 实际上 JavaScript 引擎执行了以下代码
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">lily&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">lily&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">__proto__&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">Person&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">lily&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;Lily&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>lily 作为 Person 的实例对象，它的&lt;code>__proto__&lt;/code>指向了 Person 的原型对象，即 &lt;code>Person.prototype&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 274;
+flex-basis: 658px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/constructor.png" data-size="1855x676">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/constructor.png"
+width="1855"
+height="676"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/constructor_hu464718c352205830f3d29f044b3015f2_52774_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/constructor_hu464718c352205830f3d29f044b3015f2_52774_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="关系图">
+&lt;/a>
+&lt;figcaption>关系图&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>构造函数和 constructor 属性、原型对象（prototype）和&lt;code>__proto__&lt;/code>、实例对象之间的关系:&lt;/p>
+&lt;ol>
+&lt;li>每个函数的原型对象（Person.prototype）都拥有 constructor 属性，指向该原型对象的构造函数（Person）；&lt;/li>
+&lt;li>使用构造函数（new Person()）可以创建对象，创建的对象称为实例对象（lily）；&lt;/li>
+&lt;li>实例对象通过将&lt;code>__proto__&lt;/code>属性指向构造函数的原型对象（Person.prototype），实现了该原型对象的继承。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>__proto__&lt;/code>和 prototype 的关系&lt;/p>
+&lt;ul>
+&lt;li>每个对象都有&lt;code>__proto__&lt;/code>属性来标识自己所继承的原型对象，但只有函数才有 prototype 属性；&lt;/li>
+&lt;li>对于函数来说，每个函数都有一个 prototype 属性，该属性为该函数的原型对象；&lt;/li>
+&lt;li>通过将实例对象的&lt;code>__proto__&lt;/code>属性赋值为其构造函数的原型对象 prototype，JavaScript 可以使用构造函数创建对象的方式，来实现继承。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 334;
+flex-basis: 802px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/prototype-chain.png" data-size="2266x678">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/prototype-chain.png"
+width="2266"
+height="678"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/prototype-chain_hu0b67f72d41183a826ac648159444d363_62184_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/prototype-chain_hu0b67f72d41183a826ac648159444d363_62184_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="原型链">
+&lt;/a>
+&lt;figcaption>原型链&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>在 JavaScript 中，是通过遍历原型链的方式，来访问对象的方法和属性- 当 JavaScript 试图访问一个对象的属性时，会基于原型链进行查找。查找的过程是这样的：
+&lt;ul>
+&lt;li>首先会优先在该对象上搜寻。如果找不到，还会依次层层向上搜索该对象的原型对象、该对象的原型对象的原型对象等（套娃告警）；&lt;/li>
+&lt;li>JavaScript 中的所有对象都来自 Object，&lt;code>Object.prototype.__proto__ === null&lt;/code>。null 没有原型，并作为这个原型链中的最后一个环节；&lt;/li>
+&lt;li>JavaScript 会遍历访问对象的整个原型链，如果最终依然找不到，此时会认为该对象的属性值为&lt;code>undefined&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 让我们假设我们有一个对象 o, 其有自己的属性 a 和 b：
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">o&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// o 的原型 o.__proto__有属性 b 和 c：
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">o&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">__proto__&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="nx">b&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">c&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 最后, o.__proto__.__proto__ 是 null.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 这就是原型链的末尾，即 null，
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 根据定义，null 没有__proto__.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 综上，整个原型链如下:
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="o">---&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="nx">b&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">c&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="o">---&amp;gt;&lt;/span> &lt;span class="kc">null&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 当我们在获取属性值的时候，就会触发原型链的查找：
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">o&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// o.a =&amp;gt; 1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">o&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">b&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// o.b =&amp;gt; 2
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">o&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">c&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// o.c =&amp;gt; o.__proto__.c =&amp;gt; 4
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">o&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">d&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// o.c =&amp;gt; o.__proto__.d =&amp;gt; o.__proto__.__proto__ == null =&amp;gt; undefined
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>由于通过原型链进行属性的查找，需要层层遍历各个原型对象，此时可能会带来性能问题：
+&lt;ul>
+&lt;li>当试图访问不存在的属性时，会遍历整个原型链；&lt;/li>
+&lt;li>在原型链上查找属性比较耗时，对性能有副作用，这在性能要求苛刻的情况下很重要。&lt;/li>
+&lt;li>当原型链过长时，可以选择进行分解，来避免可能带来的性能问题。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;strong>原型链继承&lt;/strong>方式中引用类型的属性被所有实例共享，无法做到实例私有；&lt;/li>
+&lt;li>&lt;strong>经典继承&lt;/strong>方式可以实现实例属性私有，但要求类型只能通过构造函数来定义；&lt;/li>
+&lt;li>&lt;strong>组合继承&lt;/strong>融合原型链继承和构造函数的优点，它的实现如下：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">Parent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 私有属性，不共享
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 需要复用、共享的方法定义在父类原型上
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">Parent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">speak&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;hello&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">Child&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">Parent&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">call&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 继承方法
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">Child&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">prototype&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Parent&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>以上组合继承模式通过&lt;strong>将共享属性定义在父类原型上&lt;/strong>、&lt;strong>将私有属性通过构造函数赋值的方式&lt;/strong>，实现了按需共享对象和方法，是 JavaScript 中最常用的继承模式。&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;a&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 191</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-191/</link><pubDate>Tue, 29 Mar 2022 17:36:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-191/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="举例-css-有哪些简写的属性和属性值">举例 css 有哪些简写的属性和属性值&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">border&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">solid&lt;/span> &lt;span class="nt">1px&lt;/span> &lt;span class="nt">red&lt;/span>&lt;span class="o">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
