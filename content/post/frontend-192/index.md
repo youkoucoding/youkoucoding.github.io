@@ -3,7 +3,7 @@ title: '毎日のフロントエンド 192'
 date: 2022-03-30T18:42:23+09:00
 description: frontend 每日一练
 categories:
-  - CSS
+  - HTML
   - JavaScript
 ---
 
