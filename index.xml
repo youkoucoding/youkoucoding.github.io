@@ -1,4 +1,112 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 30 Mar 2022 18:42:23 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 192</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/</link><pubDate>Wed, 30 Mar 2022 18:42:23 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 31 Mar 2022 11:01:04 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 193</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-193/</link><pubDate>Thu, 31 Mar 2022 11:01:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-193/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="dlulol三个标签的区别">&lt;code>dl&lt;/code>、&lt;code>ul&lt;/code>、&lt;code>ol&lt;/code>三个标签的区别&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>dl&lt;/code> 标签就是定义列表，英文的单词是 definition list
+&lt;ul>
+&lt;li>definition title &lt;code>dt&lt;/code> 列表的标题 这个标签是必须要的&lt;/li>
+&lt;li>definition description 列表的列表项，如果不需要它，可以不加 &lt;code>dd&lt;/code>&lt;/li>
+&lt;li>&lt;strong>dt、dd 只能在 dl 里面；dl 里面只能有 dt、dd。&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">dl&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">dt&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Firefox&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">dt&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">dd&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> A free, open source, cross-platform, graphical web browser developed by the Mozilla Corporation
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> and hundreds of volunteers.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">dd&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- other terms and definitions --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">dl&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>&lt;code>ul&lt;/code>标签 无序列表 unordered list&lt;/p>
+&lt;ul>
+&lt;li>无序列表中的每一项是 &lt;code>li&lt;/code> 标签 &lt;code>li：list item&lt;/code>，“列表项”的意思&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>ol&lt;/code>标签 有序列表 ol 英文单词：Ordered List&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="为什么-css-的-reset-不建议直接这么写-margin0-padding0">为什么 css 的 reset 不建议直接这么写：&lt;code>*{ margin:0; padding:0;}&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>*&lt;/code>是通配符，需要把所有的标签都遍历一遍，当网站较大时，样式比较多，这样写就大大的加强了网站运行的负载，会使网站加载的时候需要很长一段时间，因此一般大型的网站都有分层次的一套初始化样式&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="脚手架工具-scaffold">脚手架工具 Scaffold&lt;/h3>
+&lt;p>准备工作：&lt;/p>
+&lt;ol>
+&lt;li>首先需要有 package.json，它是 npm 依赖管理体系下的基础配置文件。&lt;/li>
+&lt;li>然后选择使用 npm 或 Yarn 作为包管理器，这会在项目里添加上对应的 lock 文件，来确保在不同环境下部署项目时的依赖稳定性。&lt;/li>
+&lt;li>确定项目技术栈，使用哪一种数据流模块？是否使用 TypeScript？使用哪种 CSS 预处理器？等等。在明确选择后安装相关依赖包并在 src 目录中建立入口源码文件。&lt;/li>
+&lt;li>选择构建工具，目前来说，构建工具的主流选择还是 webpack （除非项目已先锋性地考虑尝试 nobundle 方案），对应项目里就需要增加相关的 webpack 配置文件，可以考虑针对开发/生产环境使用不同配置文件。&lt;/li>
+&lt;li>打通构建流程，通过安装与配置各种 Loader 、插件和其他配置项，来确保开发和生产环境能正常构建代码和预览效果。&lt;/li>
+&lt;li>优化构建流程，针对开发/生产环境的不同特点进行各自优化。例如，开发环境更关注构建效率和调试体验，而生产环境更关注访问性能等。&lt;/li>
+&lt;li>选择和调试辅助工具，例如代码检查工具和单元测试工具，安装相应依赖并调试配置文件。&lt;/li>
+&lt;li>最后是收尾工作，检查各主要环节的脚本是否工作正常，编写说明文档 README.md，将不需要纳入版本管理的文件目录记入 .gitignore 等。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">package.json 1. npm 项目文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">package-lock.json 2. npm 依赖 lock 文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public/ 3. 预设的静态目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">src/ 3. 源代码目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> main.ts 3. 源代码中的初始入口文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> router.ts 3. 源代码中的路由文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> store/ 3. 源代码中的数据流模块目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">webpack/ 4. webpack 配置目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> common.config.js 4. webpack 通用配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dev.config.js 4. webpack 开发环境配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> prod.config.js 4. webpack 生产环境配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.browserlistrc 5. 浏览器兼容描述 browserlist 配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">babel.config.js 5. ES 转换工具 babel 配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">tsconfig.json 5. TypeScript 配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postcss.config.js 5. CSS 后处理工具 postcss 配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.eslintrc 7. 代码检查工具 eslint 配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jest.config.js 7. 单元测试工具 jest 配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">.gitignore 8. Git 忽略配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">README.md 8. 默认文档文件
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ul>
+&lt;li>&lt;code>Create React App&lt;/code> 是 Facebook 官方提供的 React 开发工具集。它包含了 create-react-app 和 react-scripts 两个基础包。其中 create-react-app 用于选择脚手架创建项目，而 react-scripts 则作为所创建项目中的运行时依赖包，提供了封装后的项目启动、编译、测试等基础工具。
+&lt;ul>
+&lt;li>将一个项目开发运行时的各种配置细节完全封装在了一个 react-scripts 依赖包中，这大大降低了开发者，尤其是对 webpack 等构建工具不太熟悉的开发者上手开发项目的学习成本，也降低了开发者自行管理各配置依赖包的版本所需的额外测试成本。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;code>Vue CLI&lt;/code> 工具在设计上吸取了 CRA 工具的教训，在保留了创建项目开箱即用的优点的同时，提供了用于覆盖修改原有配置的自定义构建配置文件和其他工具配置文件。&lt;/li>
+&lt;li>在创建项目的流程中，Vue CLI 也提供了通过用户交互自行选择的一些定制化选项，例如是否集成路由、TypeScript 等，使开发者更有可能依据这些选项来生成更适合自己的初始化项目，降低了开发者寻找模板或单独配置的成本。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://vitejs.dev/" target="_blank" rel="noopener"
+>Vite&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h4 id="如何了解一个脚手架">如何了解一个脚手架&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>webpack loaders&lt;/code>&lt;/li>
+&lt;li>&lt;code>webpack plugins&lt;/code>&lt;/li>
+&lt;li>&lt;code>webpack.optimize&lt;/code>&lt;/li>
+&lt;li>&lt;code>webpack resolve&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="如何定制一个脚手架模板">如何定制一个脚手架模板&lt;/h4>
+&lt;ol>
+&lt;li>为项目引入新的通用特性。&lt;/li>
+&lt;li>针对构建环节的 webpack 配置优化，来提升开发环境的效率和生产环境的性能等。&lt;/li>
+&lt;li>定制符合团队内部规范的代码检测规则配置。&lt;/li>
+&lt;li>定制单元测试等辅助工具模块的配置项。&lt;/li>
+&lt;li>定制符合团队内部规范的目录结构与通用业务模块，例如业务组件库、辅助工具类、页面模板等。&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/dl" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;dl&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://css-tricks.com/utilizing-the-underused-but-semantically-awesome-definition-list/" target="_blank" rel="noopener"
+>Utilizing the Underused (But Semantically Awesome) Definition List | CSS-Tricks - CSS-Tricks&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://dutzi.party/react-fast-refresh/" target="_blank" rel="noopener"
+>Adding &lt;!-- raw HTML omitted -->React Fast Refresh&lt;!-- raw HTML omitted --> to Your Create React App Project | Things I&amp;rsquo;ve Learnt&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 192</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/</link><pubDate>Wed, 30 Mar 2022 18:42:23 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-192/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="a标签属性relnoopener">&lt;code>&amp;lt;a&amp;gt;&lt;/code>标签属性&lt;code>rel=&amp;quot;noopener&amp;quot;&lt;/code>&lt;/h3>
 &lt;ul>
 &lt;li>使用&lt;code>targer=_blank&lt;/code>打开一个新的标签页时, 新页面的 window 对象上有一个属性 opener, 它指向的是前一个页面的 window 对象, 因此, 后一个页面就获得了前一个页面的控制权. 甚至在跨域的情况下也可以生效, 可以使用 &lt;code>window.opener.location.replace&lt;/code>更改前一个页面的 url&lt;/li>
