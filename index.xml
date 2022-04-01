@@ -113,15 +113,78 @@ alt="npm安装流程图">
 &lt;/li>
 &lt;/ul>
 &lt;h5 id="2-npm-config">2. &lt;code>npm config&lt;/code>&lt;/h5>
-&lt;blockquote>
-&lt;p>高效率在本地调试以验证包的可用性
-使用&lt;code>npm link&lt;/code>可以将模块链接到对应的业务项目中运行。&lt;/p>
-&lt;/blockquote>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">npm&lt;/span> &lt;span class="nx">config&lt;/span> &lt;span class="nx">set&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">author&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="s2">&amp;#34;Lucas&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">npm&lt;/span> &lt;span class="nx">config&lt;/span> &lt;span class="nx">set&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">author&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">email&lt;/span> &lt;span class="s2">&amp;#34;lucasXXXXXX@gmail.com&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">npm&lt;/span> &lt;span class="nx">config&lt;/span> &lt;span class="nx">set&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">author&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">url&lt;/span> &lt;span class="s2">&amp;#34;lucasXXXXX.com&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">npm&lt;/span> &lt;span class="nx">config&lt;/span> &lt;span class="nx">set&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">license&lt;/span> &lt;span class="s2">&amp;#34;MIT&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="3-npm-link">3. &lt;code>npm link&lt;/code>&lt;/h5>
+&lt;blockquote>
+&lt;p>高效率在本地调试以验证包的可用性
+使用&lt;code>npm link&lt;/code>可以将模块链接到对应的业务项目中运行。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>npm link 能够在工程上解决依赖包在任何一个真实项目中进行调试的问题，并且操作起来更加方便快捷&lt;/li>
+&lt;/ul>
+&lt;h4 id="npx-的作用">npx 的作用&lt;/h4>
+&lt;blockquote>
+&lt;p>npx 由 npm v5.2 版本引入，解决了 npm 的一些使用快速开发、调试，以及项目内使用全局模块&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;code>npx&lt;/code>可以直接执行 &lt;code>node_modules/.bin&lt;/code> 文件夹下的文件。在运行命令时，npx 可以自动去 node_modules/.bin 路径和环境变量 $PATH 里面检查命令是否存在，而不需要再在 package.json 中定义相关的 script&lt;/li>
+&lt;li>npx 另一个更实用的好处是：&lt;strong>npx 执行模块时会优先安装依赖，但是在安装执行后便删除此依赖，这就避免了全局安装模块带来的问题。&lt;/strong>&lt;/li>
+&lt;li>npx 会将 create-react-app 下载到一个临时目录，使用以后再删除：&lt;code>npx create-react-app own-project&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="npm-多源镜像和企业级部署私服原理">npm 多源镜像和企业级部署私服原理&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>npm 中的源（registry），是一个查询服务&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>以 npmjs.org 为例，它的查询服务网址是 &lt;a class="link" href="https://registry.npmjs.org/" target="_blank" rel="noopener"
+>&lt;code>https://registry.npmjs.org/&lt;/code>&lt;/a>。这个网址后跟上模块名，就会得到一个 JSON 对象，里面是该模块所有版本的信息。 &lt;a class="link" href="https://registry.npmjs.org/react" target="_blank" rel="noopener"
+>react 模块所有版本的信息&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>可以通过 &lt;code>npm config set&lt;/code> 命令来设置安装源或者某个 scope 对应的安装源&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>需要使用多个安装源的项目时, 就可以通过 &lt;code>npm-preinstall&lt;/code> 的钩子，通过 npm 脚本，在安装公共依赖前自动进行源切换：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;scripts&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;preinstall&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;node ./bin/preinstall.js&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// preinstall.js 脚本内容，具体逻辑为通过 node.js 执行npm config set命令
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39; child_process&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">exec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;npm config get registry&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">error&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">stdout&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">stderr&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="nx">stdout&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toString&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">match&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/registry\.x\.com/&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">exec&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;npm config set @xscope:registry https://xxx.com/npm/&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ul>
+&lt;li>3 种工具来搭建 npm 私服: nexus、verdaccio 以及 cnpm&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="npm-配置作用优先级">npm 配置作用优先级&lt;/h3>
+&lt;ul>
+&lt;li>优先级从左到右依次降低&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 546;
+flex-basis: 1311px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-194/npm-config.png" data-size="1240x227">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-194/npm-config.png"
+width="1240"
+height="227"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-194/npm-config_hu63f48aae48e10e056dd31955b49d84b9_54473_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-194/npm-config_hu63f48aae48e10e056dd31955b49d84b9_54473_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="npm配置优先级">
+&lt;/a>
+&lt;figcaption>npm配置优先级&lt;/figcaption>
+&lt;/figure>&lt;/p>
 &lt;h2 id="reference">Reference&lt;/h2>
 &lt;p>&lt;a class="link" href="https://www.npmjs.com/package/pacote" target="_blank" rel="noopener"
 >pacote - npm&lt;/a>&lt;/p>
@@ -136,7 +199,11 @@ alt="npm安装流程图">
 &lt;p>&lt;a class="link" href="https://nodejs.org/dist/latest-v16.x/docs/api/process.html#processcwd" target="_blank" rel="noopener"
 >Process | Node.js v16.14.2 Documentation&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://docs.npmjs.com/cli/v8/commands/npm-config" target="_blank" rel="noopener"
->npm-config | npm Docs&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 193</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-193/</link><pubDate>Thu, 31 Mar 2022 11:01:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-193/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+>npm-config | npm Docs&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.npmjs.com/package/npx" target="_blank" rel="noopener"
+>npx - npm&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.npmjs.com/package/nrm" target="_blank" rel="noopener"
+>nrm - npm&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 193</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-193/</link><pubDate>Thu, 31 Mar 2022 11:01:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-193/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="dlulol三个标签的区别">&lt;code>dl&lt;/code>、&lt;code>ul&lt;/code>、&lt;code>ol&lt;/code>三个标签的区别&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>dl&lt;/code> 标签就是定义列表，英文的单词是 definition list
