@@ -1,4 +1,142 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 31 Mar 2022 11:01:04 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 193</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-193/</link><pubDate>Thu, 31 Mar 2022 11:01:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-193/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 01 Apr 2022 21:20:27 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 194</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-194/</link><pubDate>Fri, 01 Apr 2022 21:20:27 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-194/</guid><description>&lt;h2 id="npm">npm&lt;/h2>
+&lt;h3 id="npm-内部机制和核心原理">npm 内部机制和核心原理&lt;/h3>
+&lt;blockquote>
+&lt;p>Bring the best of open source to you, your team and your company.&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="npm-的安装机制">npm 的安装机制&lt;/h4>
+&lt;ul>
+&lt;li>Ruby 的 Gem、Python 的 pip 都是全局安装，但是 npm 的安装机制秉承了不同的设计哲学：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 200;
+flex-basis: 480px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-194/npm-process.png" data-size="1240x620">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-194/npm-process.png"
+width="1240"
+height="620"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-194/npm-process_hu71e7aa4e48b9064f66ce3a147ffed360_157335_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-194/npm-process_hu71e7aa4e48b9064f66ce3a147ffed360_157335_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="npm安装流程图">
+&lt;/a>
+&lt;figcaption>npm安装流程图&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>npm install&lt;/code> 执行之后，首先，检查并获取 npm 配置，这里的优先级为：
+&lt;ul>
+&lt;li>项目级的 .npmrc 文件 &amp;gt; 用户级的 .npmrc 文件&amp;gt; 全局级的 .npmrc 文件 &amp;gt; npm 内置的 .npmrc 文件&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>然后检查项目中是否有 &lt;code>package-lock.json&lt;/code> 文件&lt;/li>
+&lt;li>如果有，则检查 &lt;code>package-lock.json&lt;/code> 和 &lt;code>package.json&lt;/code> 中声明的依赖是否一致：
+&lt;ul>
+&lt;li>一致，直接使用 package-lock.json 中的信息，从缓存或网络资源中加载依赖；&lt;/li>
+&lt;li>不一致，按照 npm 版本进行处理（不同 npm 版本处理会有不同，具体处理方式如图所示）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>如果没有，则根据 package.json 递归构建依赖树。然后按照构建好的依赖树下载完整的依赖资源，在下载时就会检查是否存在相关资源缓存：
+&lt;ul>
+&lt;li>存在，则将缓存内容解压到 node_modules 中；&lt;/li>
+&lt;li>否则就先从 npm 远程仓库下载包，校验包的完整性，并添加到缓存，同时解压到 node_modules&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>最后生成 package-lock.json&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>构建依赖树时，当前依赖项目不管其是直接依赖还是子依赖的依赖，都应该按照扁平化原则，优先将其放置在 node_modules 根目录（最新版本 npm 规范）
+&lt;ul>
+&lt;li>在这个过程中，遇到相同模块就判断已放置在依赖树中的模块版本是否符合新模块的版本范围，如果符合则跳过；&lt;/li>
+&lt;li>不符合则在当前模块的 node_modules 下放置该模块（最新版本 npm 规范）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>同一个项目团队，应该保证 npm 版本的一致&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h4 id="npm-缓存机制">npm 缓存机制&lt;/h4>
+&lt;p>&lt;code>npm config get cache&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>当 npm install 执行时，通过&lt;a class="link" href="https://www.npmjs.com/package/pacote" target="_blank" rel="noopener"
+>pacote&lt;/a>把相应的包解压在对应的 node_modules 下面&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>npm 在下载依赖时，先下载到缓存当中，再解压到项目 node_modules 下&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>pacote 依赖 &lt;a class="link" href="https://github.com/npm/npm-registry-fetch#npm-registry-fetch" target="_blank" rel="noopener"
+>npm-registry-fetch&lt;/a>来下载包，npm-registry-fetch 可以通过设置 cache 属性，在给定的路径下根据 &lt;a class="link" href="https://datatracker.ietf.org/doc/rfc7234/" target="_blank" rel="noopener"
+>IETF RFC 7234&lt;/a> 生成缓存数据。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在每次安装资源时，根据 package-lock.json 中存储的 integrity、version、name 信息生成一个唯一的 key，这个 key 能够对应到 index-v5 目录下的缓存记录。如果发现有缓存资源，就会找到 tar 包的 hash，根据 hash 再去找缓存的 tar 包，并再次通过 pacote 把对应的二进制文件解压到相应的项目 node_modules 下面，省去了网络下载资源的开销&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>这里提到的缓存策略是从 npm &lt;code>v5&lt;/code> 版本开始的&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;h4 id="常用技巧">常用技巧&lt;/h4>
+&lt;h5 id="1-自定义-npm-init">1. 自定义 &lt;code>npm init&lt;/code>&lt;/h5>
+&lt;ul>
+&lt;li>npm init 命令就是调用 shell 脚本输出一个初始化的 package.json 文件
+&lt;ul>
+&lt;li>为了实现更加灵活的自定义功能，可以使用 &lt;code>prompt()&lt;/code> 方法，获取用户输入并动态产生的内容：&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">desc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">prompt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;请输入项目描述&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;项目描述...&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">module&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">exports&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">key&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;value&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">prompt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;name?&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">process&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">cwd&lt;/span>&lt;span class="p">().&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;/&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">pop&lt;/span>&lt;span class="p">()),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">version&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">prompt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;version?&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;0.0.1&amp;#39;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">description&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">desc&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">main&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;index.js&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">repository&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">prompt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;github repository url&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">run&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;touch README.md&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">run&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;git init&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">run&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;git add README.md&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">run&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;git commit -m &amp;#34;first commit&amp;#34;&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">run&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`git remote add origin &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">run&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;git push -u origin master&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>假设该脚本名为 &lt;code>.npm-init.js&lt;/code>，执行下述命令来确保 npm init 所对应的脚本指向正确的文件：
+&lt;ul>
+&lt;li>&lt;code>npm config set init-module ~\.npm-init.js&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="2-npm-config">2. &lt;code>npm config&lt;/code>&lt;/h5>
+&lt;blockquote>
+&lt;p>高效率在本地调试以验证包的可用性
+使用&lt;code>npm link&lt;/code>可以将模块链接到对应的业务项目中运行。&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">npm&lt;/span> &lt;span class="nx">config&lt;/span> &lt;span class="nx">set&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">author&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span> &lt;span class="s2">&amp;#34;Lucas&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">npm&lt;/span> &lt;span class="nx">config&lt;/span> &lt;span class="nx">set&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">author&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">email&lt;/span> &lt;span class="s2">&amp;#34;lucasXXXXXX@gmail.com&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">npm&lt;/span> &lt;span class="nx">config&lt;/span> &lt;span class="nx">set&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">author&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">url&lt;/span> &lt;span class="s2">&amp;#34;lucasXXXXX.com&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">npm&lt;/span> &lt;span class="nx">config&lt;/span> &lt;span class="nx">set&lt;/span> &lt;span class="nx">init&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">license&lt;/span> &lt;span class="s2">&amp;#34;MIT&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="3-npm-link">3. &lt;code>npm link&lt;/code>&lt;/h5>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.npmjs.com/package/pacote" target="_blank" rel="noopener"
+>pacote - npm&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/npm/npm-registry-fetch#npm-registry-fetch" target="_blank" rel="noopener"
+>npm/npm-registry-fetch: like fetch() but for the npm registry&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://datatracker.ietf.org/doc/rfc7234/" target="_blank" rel="noopener"
+>RFC 7234 - Hypertext Transfer Protocol (HTTP/1.1): Caching&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://docs.npmjs.com/cli/v8" target="_blank" rel="noopener"
+>npm CLI | npm Docs&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://docs.npmjs.com/cli/v8/commands/npm-init" target="_blank" rel="noopener"
+>npm-init | npm Docs&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://nodejs.org/dist/latest-v16.x/docs/api/process.html#processcwd" target="_blank" rel="noopener"
+>Process | Node.js v16.14.2 Documentation&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://docs.npmjs.com/cli/v8/commands/npm-config" target="_blank" rel="noopener"
+>npm-config | npm Docs&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 193</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-193/</link><pubDate>Thu, 31 Mar 2022 11:01:04 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-193/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="dlulol三个标签的区别">&lt;code>dl&lt;/code>、&lt;code>ul&lt;/code>、&lt;code>ol&lt;/code>三个标签的区别&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>dl&lt;/code> 标签就是定义列表，英文的单词是 definition list
