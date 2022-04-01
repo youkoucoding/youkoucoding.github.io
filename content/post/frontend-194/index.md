@@ -84,9 +84,6 @@ module.exports = {
 
 ##### 2. `npm config`
 
-> 高效率在本地调试以验证包的可用性
-> 使用`npm link`可以将模块链接到对应的业务项目中运行。
-
 ```js
 npm config set init.author.name "Lucas"
 npm config set init.author.email "lucasXXXXXX@gmail.com"
@@ -95,6 +92,54 @@ npm config set init.license "MIT"
 ```
 
 ##### 3. `npm link`
+
+> 高效率在本地调试以验证包的可用性
+> 使用`npm link`可以将模块链接到对应的业务项目中运行。
+
+- npm link 能够在工程上解决依赖包在任何一个真实项目中进行调试的问题，并且操作起来更加方便快捷
+
+#### npx 的作用
+
+> npx 由 npm v5.2 版本引入，解决了 npm 的一些使用快速开发、调试，以及项目内使用全局模块
+
+- `npx`可以直接执行 `node_modules/.bin` 文件夹下的文件。在运行命令时，npx 可以自动去 node_modules/.bin 路径和环境变量 $PATH 里面检查命令是否存在，而不需要再在 package.json 中定义相关的 script
+- npx 另一个更实用的好处是：**npx 执行模块时会优先安装依赖，但是在安装执行后便删除此依赖，这就避免了全局安装模块带来的问题。**
+- npx 会将 create-react-app 下载到一个临时目录，使用以后再删除：`npx create-react-app own-project`
+
+### npm 多源镜像和企业级部署私服原理
+
+- npm 中的源（registry），是一个查询服务
+- 以 npmjs.org 为例，它的查询服务网址是 [`https://registry.npmjs.org/`](https://registry.npmjs.org/)。这个网址后跟上模块名，就会得到一个 JSON 对象，里面是该模块所有版本的信息。 [react 模块所有版本的信息](https://registry.npmjs.org/react)
+
+- 可以通过 `npm config set` 命令来设置安装源或者某个 scope 对应的安装源
+- 需要使用多个安装源的项目时, 就可以通过 `npm-preinstall` 的钩子，通过 npm 脚本，在安装公共依赖前自动进行源切换：
+
+```json
+"scripts": {
+    "preinstall": "node ./bin/preinstall.js"
+}
+```
+
+```js
+//  preinstall.js 脚本内容，具体逻辑为通过 node.js 执行npm config set命令
+require(' child_process').exec('npm config get registry', function (error, stdout, stderr) {
+  if (!stdout.toString().match(/registry\.x\.com/)) {
+    exec('npm config set @xscope:registry https://xxx.com/npm/');
+  }
+});
+```
+
+---
+
+- 3 种工具来搭建 npm 私服: nexus、verdaccio 以及 cnpm
+
+---
+
+### npm 配置作用优先级
+
+- 优先级从左到右依次降低
+
+![npm配置优先级](npm-config.png)
 
 ## Reference
 
@@ -111,3 +156,7 @@ npm config set init.license "MIT"
 [Process | Node.js v16.14.2 Documentation](https://nodejs.org/dist/latest-v16.x/docs/api/process.html#processcwd)
 
 [npm-config | npm Docs](https://docs.npmjs.com/cli/v8/commands/npm-config)
+
+[npx - npm](https://www.npmjs.com/package/npx)
+
+[nrm - npm](https://www.npmjs.com/package/nrm)
