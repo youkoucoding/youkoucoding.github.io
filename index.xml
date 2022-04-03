@@ -1,4 +1,217 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 02 Apr 2022 23:46:45 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 195</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-195/</link><pubDate>Sat, 02 Apr 2022 23:46:45 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-195/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 03 Apr 2022 14:27:21 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 196</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/</link><pubDate>Sun, 03 Apr 2022 14:27:21 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="引用标签">引用标签&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;blockquote&amp;gt;&lt;/code>：块级引用元素&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;blockquote&amp;gt;&lt;/code> 元素（或者 HTML 块级引用元素），代表其中的文字是引用内容。通常在渲染时，这部分的内容会有一定的缩进（注 中说明了如何更改）&lt;/li>
+&lt;li>若引文来源于网络，则可以将原内容的出处 URL 地址设置到 cite 特性上，若要以文本的形式告知读者引文的出处时，可以通过 &lt;code>&amp;lt;cite&amp;gt;&lt;/code> 元素&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;q&amp;gt;&lt;/code>标签, 短引用&lt;/p>
+&lt;ul>
+&lt;li>引用标签 (&lt;code>&amp;lt;q&amp;gt;&lt;/code>) 表示一个封闭的并且是短的行内引用的文本。这个标签是用来引用短的文本，所以不要引入换行符; 对于长的文本的引用使用 &lt;code>&amp;lt;blockquote&amp;gt;&lt;/code> 替代。&lt;/li>
+&lt;li>&lt;code>cite&lt;/code>这个属性的值是 URL，意在指出被引用的文本的源文档或者源信息。这个属性重在解释这个引用的参考或者是上下文。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Everytime Kenny is killed, Stan will announce
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">q&lt;/span> &lt;span class="na">cite&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> Oh my God, &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">q&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips---yarn">Tips - &lt;code>Yarn&lt;/code>&lt;/h2>
+&lt;blockquote>
+&lt;p>Yarn 是一个由 Facebook、Google、Exponent 和 Tilde 构建的新的 JavaScript 包管理器。它的出现是为了解决历史上 npm 的某些不足（比如 npm 对于依赖的完整性和一致性保障，以及 npm 安装速度过慢的问题等），虽然 npm 目前经过版本迭代汲取了 Yarn 一些优势特点（比如一致性安装校验算法等），但依然有必要关注 Yarn 的思想和理念。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>当 npm 还处在 v3 时期时，一个叫作 Yarn 的包管理方案横空出世。2016 年，npm 还没有 &lt;code>package-lock.json&lt;/code> 文件，安装速度很慢，稳定性也较差，而 Yarn 的理念很好地解决了以下问题。
+&lt;ul>
+&lt;li>确定性：通过 yarn.lock 等机制，保证了确定性。即不管安装顺序如何，相同的依赖关系在任何机器和环境下，都可以以相同的方式被安装。（在 npm v5 之前，没有 package-lock.json 机制，只有默认并不会使用的 npm-shrinkwrap.json。）&lt;/li>
+&lt;li>采用模块扁平安装模式：将依赖包的不同版本，按照一定策略，归结为单个版本，以避免创建多个副本造成冗余（npm 目前也有相同的优化）。&lt;/li>
+&lt;li>网络性能更好：Yarn 采用了请求排队的理念，类似并发连接池，能够更好地利用网络资源；同时引入了更好的安装失败时的重试机制。&lt;/li>
+&lt;li>采用缓存机制，实现了离线模式（npm 目前也有类似实现）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://github.com/imsnif/synp" target="_blank" rel="noopener"
+>imsnif/synp: Convert yarn.lock to package-lock.json and vice versa&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Yarn 默认使用 prefer-online 模式，即优先使用网络数据。如果网络数据请求失败，再去请求缓存数据。&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Yarn 所独有的命令：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">yarn import
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yarn licenses
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yarn pack
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yarn why
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">yarn autoclean
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>npm 独有的命令是：&lt;code>npm rebuild&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="yarn-安装机制和背后思想">Yarn 安装机制和背后思想&lt;/h3>
+&lt;ul>
+&lt;li>Yarn 的安装过程主要有以下 5 大步骤：
+&lt;ul>
+&lt;li>检测（checking）→ 解析包（Resolving Packages） → 获取包（Fetching Packages）→ 链接包（Linking Packages）→ 构建包（Building Packages）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="检测包checking">检测包（checking）&lt;/h4>
+&lt;ul>
+&lt;li>这一步主要是检测项目中是否存在一些 npm 相关文件，比如 package-lock.json 等。如果有，会提示用户注意：这些文件的存在可能会导致冲突。在这一步骤中，也会检查系统 OS、CPU 等信息。&lt;/li>
+&lt;/ul>
+&lt;h4 id="解析包resolving-packages">解析包（Resolving Packages）&lt;/h4>
+&lt;ul>
+&lt;li>这一步会解析依赖树中每一个包的版本信息。&lt;/li>
+&lt;li>首先获取当前项目中 package.json 定义的 dependencies、devDependencies、optionalDependencies 的内容，这属于&lt;strong>首层依赖&lt;/strong>。&lt;/li>
+&lt;li>接着采用&lt;strong>遍历首层依赖&lt;/strong>的方式获取依赖包的版本信息，以及递归查找每个依赖下嵌套依赖的版本信息，并将解析过和正在解析的包用一个 &lt;code>Set&lt;/code> 数据结构来存储，这样就能保证同一个版本范围内的包不会被重复解析。
+&lt;ul>
+&lt;li>对于没有解析过的包 A，首次尝试从 yarn.lock 中获取到版本信息，并标记为已解析；&lt;/li>
+&lt;li>如果在 yarn.lock 中没有找到包 A，则向 Registry 发起请求获取满足版本范围的已知最高版本的包信息，获取后将当前包标记为已解析。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>在经过解析包这一步之后，我们就确定了所有依赖的具体版本信息以及下载地址。&lt;/li>
+&lt;/ul>
+&lt;h4 id="获取包fetching-packages">获取包（Fetching Packages）&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>这一步首先需要检查缓存中是否存在当前的依赖包，同时将缓存中不存在的依赖包下载到缓存目录：&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>如何判断缓存中是否存在当前的依赖包？&lt;/p>
+&lt;ul>
+&lt;li>Yarn 会根据 &lt;code>cacheFolder+slug+node_modules+pkg.name&lt;/code> 生成一个 path，判断系统中是否存在该 path，如果存在证明已经有缓存，不用重新下载。这个 path 也就是依赖包缓存的具体路径。&lt;/li>
+&lt;li>对于没有命中缓存的包，Yarn 会维护一个 fetch 队列，按照规则进行网络请求。&lt;/li>
+&lt;li>如果下载包地址是一个 file 协议，或者是相对路径，就说明其指向一个本地目录，此时调用 Fetch From Local 从离线缓存中获取包；&lt;/li>
+&lt;li>否则调用 Fetch From External 获取包。最终获取结果使用 fs.createWriteStream 写入到缓存目录下。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 581;
+flex-basis: 1395px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/fetch-package.png" data-size="1558x268">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/fetch-package.png"
+width="1558"
+height="268"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/fetch-package_hu789557e4ceed312203bb1bc247cb45cf_153328_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/fetch-package_hu789557e4ceed312203bb1bc247cb45cf_153328_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="获取包的流程">
+&lt;/a>
+&lt;figcaption>获取包的流程&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h4 id="链接包linking-packages">链接包（Linking Packages）&lt;/h4>
+&lt;ul>
+&lt;li>上一步是将依赖下载到缓存目录，这一步是将项目中的依赖复制到项目 node_modules 下，同时遵循扁平化原则。&lt;/li>
+&lt;li>在复制依赖前，Yarn 会先解析 peerDependencies，如果找不到符合 peerDependencies 的包，则进行 warning 提示，并最终拷贝依赖到项目中。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 532;
+flex-basis: 1278px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/link-package.png" data-size="1534x288">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/link-package.png"
+width="1534"
+height="288"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/link-package_hu2727eb15b436daf688a9a59f37ea80ab_121612_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/link-package_hu2727eb15b436daf688a9a59f37ea80ab_121612_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="链接包的流程">
+&lt;/a>
+&lt;figcaption>链接包的流程&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h4 id="构建包building-packages">构建包（Building Packages）&lt;/h4>
+&lt;ul>
+&lt;li>如果依赖包中存在二进制包需要进行编译，会在这一步进行。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="依赖管理困境">依赖管理困境&lt;/h3>
+&lt;ul>
+&lt;li>项目依赖树的层级非常深，不利于调试和排查问题；&lt;/li>
+&lt;li>依赖树的不同分支里，可能存在同样版本的相同依赖。比如直接依赖 A 和 B，但 A 和 B 都依赖相同版本的模块 C，那么 C 会重复出现在 A 和 B 依赖的 node_modules 中&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>这种重复问题使得安装结果浪费了较大的空间资源，也使得安装过程过慢，甚至会因为目录层级太深导致文件路径太长，最终在 Windows 系统下删除 node_modules 文件夹出现失败情况。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>npm v3 之后，node_modules 的结构改成了扁平结构&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 189;
+flex-basis: 454px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/npm-version-change.png" data-size="1120x592">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/npm-version-change.png"
+width="1120"
+height="592"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/npm-version-change_hu4a345310e35e6fe23c2f021a273d7e38_85345_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/npm-version-change_hu4a345310e35e6fe23c2f021a273d7e38_85345_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="npm 不同版本的安装结构图">
+&lt;/a>
+&lt;figcaption>npm 不同版本的安装结构图&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>当项目新添加了 C 依赖，而它依赖另一个版本的 B v2.0。这时候版本要求不一致导致冲突，B v2.0 没办法放在项目平铺目录下的 node_moduls 文件当中，npm v3 会把 C 依赖的 B v2.0 安装在 C 的 node_modules 下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 249;
+flex-basis: 598px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/npm-version-change-two.png" data-size="1560x626">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/npm-version-change-two.png"
+width="1560"
+height="626"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/npm-version-change-two_hu902793a3fb43f8f907430891b9c0db7f_131013_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/npm-version-change-two_hu902793a3fb43f8f907430891b9c0db7f_131013_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="npm 不同版本的安装结构图">
+&lt;/a>
+&lt;figcaption>npm 不同版本的安装结构图&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>B v1.0 出现在项目顶层 node_modules，而不是 B v2.0 出现在 node_modules 顶层
+&lt;ul>
+&lt;li>这取决于模块 A 和 C 的安装顺序。因为 A 先安装，所以 A 的依赖 B v1.0 率先被安装在顶层 node_modules 中，接着 C 和 D 依次被安装，C 和 D 的依赖 B v2.0 就不得不安装在 C 和 D 的 node_modules 当中了。因此，&lt;strong>模块的安装顺序可能影响 node_modules 内的文件结构&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&amp;hellip;&amp;hellip;&lt;/p>
+&lt;hr>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>明显看到出现了较多重复的依赖模块 B v2.0。我们可以删除 node_modules，重新安装，利用 npm 的依赖分析能力，得到一个更清爽的结构&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>更优雅的方式是使用 npm dedupe 命令&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>实际上，Yarn 在安装依赖时会自动执行 &lt;code>dedupe&lt;/code> 命令(删除重复)。整个优化的安装过程，就是上一讲提到的扁平化安装模式，也是需要掌握的&lt;strong>关键内容&lt;/strong>。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;blockquote&amp;gt;&lt;/code>：块级引用元素 - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/cite" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;cite&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;q&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes" target="_blank" rel="noopener"
+>全局属性 - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 195</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-195/</link><pubDate>Sat, 02 Apr 2022 23:46:45 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-195/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="html-支持的数学符号有哪些">html 支持的数学符号有哪些&lt;/h3>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://www.runoob.com/tags/html-symbols.html" target="_blank" rel="noopener"
