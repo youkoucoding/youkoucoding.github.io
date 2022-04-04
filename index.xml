@@ -1,4 +1,110 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 03 Apr 2022 14:27:21 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 196</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/</link><pubDate>Sun, 03 Apr 2022 14:27:21 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 04 Apr 2022 16:21:24 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 197</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-197/</link><pubDate>Mon, 04 Apr 2022 16:21:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-197/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="举例说明a作用">举例说明&lt;code>&amp;lt;a&amp;gt;&lt;/code>作用&lt;/h3>
+&lt;ul>
+&lt;li>打开链接
+&lt;ul>
+&lt;li>当前页面打开 &lt;code>&amp;lt;a href=&amp;quot;https://www.github.com&amp;quot;&amp;gt;test&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;li>新标签页打开 &lt;code>&amp;lt;a target=&amp;quot;_blank&amp;quot; href=&amp;quot;https://www.github.com&amp;quot;&amp;gt;test&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>文件下载
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;a href=&amp;quot;https://codeload.github.com/vkboo/vue-svg-board/zip/master&amp;quot; download=&amp;quot;vue-board-svg-name&amp;quot;&amp;gt;vue-board-svg&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>利用 URL Scheme 打开 app
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;a href=&amp;quot;imeituan://xxx.xxx.xxx&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>mailto &amp;amp; telto
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;a href=&amp;quot;mailto:xxx@site.com&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>锚点
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;a href=&amp;quot;#content&amp;quot;&amp;gt;go to content&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;lt;section id=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;/section&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="段落的首行缩进">段落的首行缩进&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>text-indent&lt;/code>属性
+&lt;ul>
+&lt;li>能定义一个&lt;strong>块元素&lt;/strong>首行文本内容之前的缩进量&lt;/li>
+&lt;li>长度值：px em rem&lt;/li>
+&lt;li>百分比：取决于包含块的 width&lt;/li>
+&lt;li>关键字：
+&lt;ul>
+&lt;li>&lt;code>each-line&lt;/code>：文本缩进会影响第一行，以及使用强制断行后的第一行；&lt;/li>
+&lt;li>&lt;code>hanging&lt;/code>：该值会对所有的行进行反转缩进：除了第一行之外的所有的行都会被缩进，看起来就像第一行设置了一个负的缩进值。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>全局值：&lt;code>inherit&lt;/code> &lt;code>initial&lt;/code> &lt;code>unset&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="c">/* &amp;lt;length&amp;gt; 长度值 */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">text-indent&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">3mm&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">text-indent&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">40px&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">/* &amp;lt;percentage&amp;gt;百分比值取决于其包含块（containing block）的宽度*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">text-indent&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">15&lt;/span>&lt;span class="o">%;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">/* 关键字 */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">text-indent&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">5em&lt;/span> &lt;span class="nt">each-line&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">text-indent&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">5em&lt;/span> &lt;span class="nt">hanging&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">text-indent&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">5em&lt;/span> &lt;span class="nt">hanging&lt;/span> &lt;span class="nt">each-line&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">/* 全局值 */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">text-indent&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">inherit&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">text-indent&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">initial&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">text-indent&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">unset&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h4 id="找出一段话里面出现频率最多的单词">找出一段话里面出现频率最多的单词&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">mostOftenWord&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">para&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">para&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sr">/\W+/&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nx">reduce&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nx">acc&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">word&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nx">word&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">word&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">toLowerCase&lt;/span>&lt;span class="p">()),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">(&lt;/span>&lt;span class="nx">acc&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">word&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">acc&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">word&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">||&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">acc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">$&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">time&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">acc&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">word&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="p">((&lt;/span>&lt;span class="nx">acc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">$&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">word&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">word&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">acc&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">$&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">time&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">acc&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">word&lt;/span>&lt;span class="p">]),&lt;/span> &lt;span class="nx">acc&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">acc&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> &lt;span class="nx">$&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">word&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">time&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">).&lt;/span>&lt;span class="nx">$&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// test
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">mostOftenWord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;I have a pen, I have an apple, Uh! apple pen. Pen pineapple apple pen pen.&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// {word: &amp;#39;pen&amp;#39;, time: 4}
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>tips:&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>(',' + para).split(/\W+/)&lt;/code>
+&lt;ul>
+&lt;li>&lt;code>\W&lt;/code> 元字符用于查找&lt;strong>非单词字符&lt;/strong> &lt;code>\w&lt;/code> 元字符用于查找&lt;strong>单词字符&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>arrow function
+&lt;ul>
+&lt;li>&lt;code>(param1, param2, …, paramN) =&amp;gt; expression&lt;/code> //相当于：&lt;code>(param1, param2, …, paramN) =&amp;gt;{ return expression; }&lt;/code>&lt;/li>
+&lt;li>&lt;code>,&lt;/code> comma operator 逗号操作符 对它的每个操作数求值（从左到右），并返回最后一个操作数的值
+&lt;ul>
+&lt;li>上述回调函数，利用逗号运算符，依次对三个表达式进行计算，并计算返回最后一个表达式的值&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split" target="_blank" rel="noopener"
+>String.prototype.split() - JavaScript | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_Operator" target="_blank" rel="noopener"
+>逗号操作符 - JavaScript | MDN&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 196</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/</link><pubDate>Sun, 03 Apr 2022 14:27:21 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-196/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="引用标签">引用标签&lt;/h3>
 &lt;ul>
 &lt;li>
