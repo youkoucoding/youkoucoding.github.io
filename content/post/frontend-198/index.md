@@ -127,6 +127,36 @@ div::first-letter {
 
 - optionalDependencies 表示可选依赖，就是说即使对应依赖项安装失败了，也不会影响整个安装过程。一般很少使用到它，也不建议使用，因为大概率会增加项目的不确定性和复杂性。
 
+---
+
+#### npm 最佳实操建议
+
+1. 优先使用 npm v5.4.2 以上的 npm 版本，以保证 npm 的最基本先进性和稳定性。
+
+2. 项目的第一次搭建使用 npm install 安装依赖包，并提交 package.json、package-lock.json，而不提交 node_modules 目录。
+
+3. 其他项目成员首次 checkout/clone 项目代码后，执行一次 npm install 安装依赖包。
+
+4. 对于升级依赖包的需求：
+
+   - 依靠 npm update 命令升级到新的小版本；
+   - 依靠 npm install @ 升级大版本；
+   - 也可以手动修改 package.json 中版本号，并执行 npm install 来升级版本；
+   - 本地验证升级后新版本无问题，提交新的 package.json、package-lock.json 文件。
+
+5. 对于降级依赖包的需求：执行 npm install @ 命令，验证没问题后，提交新的 package.json、package-lock.json 文件。
+
+6. 删除某些依赖：
+
+   - 执行 npm uninstall 命令，验证没问题后，提交新的 package.json、package-lock.json 文件；
+   - 或者手动操作 package.json，删除依赖，执行 npm install 命令，验证没问题后，提交新的 package.json、package-lock.json 文件。
+
+7. 任何团队成员提交 package.json、package-lock.json 更新后，其他成员应该拉取代码后，执行 npm install 更新依赖。
+
+8. 任何团队成员提交 package.json、package-lock.json 更新后，其他成员应该拉取代码后，执行 npm install 更新依赖。
+
+9. 如果 package-lock.json 出现冲突或问题，建议将本地的 package-lock.json 文件删除，引入远程的 package-lock.json 文件和 package.json，再执行 npm install 命令。
+
 ## Reference
 
 [haizlin/fe-interview](https://github.com/haizlin/fe-interview/blob/master/category/history.md)
