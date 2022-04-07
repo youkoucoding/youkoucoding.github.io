@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Apr 2022 22:53:47 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 198</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-198/</link><pubDate>Tue, 05 Apr 2022 22:53:47 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-198/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Apr 2022 21:48:28 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 199</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-199/</link><pubDate>Thu, 07 Apr 2022 21:48:28 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-199/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="在页面中插入-tab-符号制表符">在页面中插入 TAB 符号（制表符）&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">pre&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="ni">&amp;amp;#x0009;&lt;/span>test test
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">pre&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>&amp;lt;pre&amp;gt;&lt;/code> 元素表示预定义格式文本。在该元素中的文本通常按照原文件中的编排，以等宽字体的形式展现出来，文本中的空白符（比如空格和换行符）都会显示出来。(紧跟在 &lt;code>&amp;lt;pre&amp;gt;&lt;/code> 开始标签后的换行符也会被省略)&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="border-radius-50-vs-100">Border-radius 50% vs 100%&lt;/h3>
+&lt;h4 id="border-radius-的工作原理">border-radius 的工作原理&lt;/h4>
+&lt;blockquote>
+&lt;p>如果所有圆角的半径都被设置成了 100%，浏览器会根据图形的实际情况做一些计算，保证圆角能够刚好适应图形。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>W3C 对于重合曲线有这样的规范：
+&lt;ul>
+&lt;li>如果两个相邻的角的半径和超过了对应的盒子的边的长度，那么浏览器要重新计算保证它们不会重合。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>一个正方形：如果左上角的圆角半径被设置成了 100%，那么圆角就会从这个方形左下角跨到右上角，相当于把圆角半径设置成为 150px（也就是方形的大小）。如果同时把右上角的圆角半径也设置成为 100%，则两个相邻圆角合起来就有 200%。这种情况自然是不允许出现的，所以浏览器就会重新就算，匀出空间给右边的圆角，同时缩放两个圆角的半径直到它们可以刚好符合这个方形，所以半径就变成了 50%&lt;/li>
+&lt;li>&lt;code>Border-radius:100%&lt;/code>浏览器会对其他的圆角应用相同的计算，计算的结果是每个圆角的半径变成了 50%，所以成了一个圆形&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;code>Border-radius:50%&lt;/code>: 建议使用 &lt;code>border-radius:50%&lt;/code>来避免浏览器进行不必要的计算&lt;/li>
+&lt;/ul>
+&lt;h2 id="typescript-tips">TypeScript Tips&lt;/h2>
+&lt;h3 id="tip-1">Tip 1&lt;/h3>
+&lt;ul>
+&lt;li>Derive a union type from an object&lt;/li>
+&lt;li>从一个对象中，派生出一个联合类型&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">fruitCounts&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">apple&lt;/span>: &lt;span class="kt">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">peach&lt;/span>: &lt;span class="kt">2&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">banana&lt;/span>: &lt;span class="kt">3&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 从以上对象，得到一下类型
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">type&lt;/span> &lt;span class="nx">SingleFruitCount&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">apple&lt;/span>: &lt;span class="kt">number&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">banana&lt;/span>: &lt;span class="kt">number&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">peach&lt;/span>: &lt;span class="kt">3&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 应用方式，如下：
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">singleFruitCount&lt;/span>: &lt;span class="kt">SingleFruitCount&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">banana&lt;/span>: &lt;span class="kt">20&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>solution&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// mapping type
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">type&lt;/span> &lt;span class="nx">FruitCounts&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">fruitCounts&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">type&lt;/span> &lt;span class="nx">SingleFruitCount&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="nx">K&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="k">keyof&lt;/span> &lt;span class="nx">FruitCounts&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="nx">K2&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">K&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kt">number&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}[&lt;/span>&lt;span class="k">keyof&lt;/span> &lt;span class="nx">FruitCounts&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.typescriptlang.org/play?#code/MYewdgzgLgBAZgJwK4EsoGERLFCMC8MA3gLABQMMAhgA40A2ApgFwwCMANOZTY1cAAtWAJi4UYAIyphpVVgGYxAXwDc5clACevGADFkaTNlwEYW3iDjwDGLDggqY6sucYwAyijABzJvtS2xqak4gDaANIwXjAA1oyalno2RvYAuqwhlJQRwlFgMOHpMGBIALYSjAhq4qrkSqFxCVb&amp;#43;hna4qdXOoJCwEF6&amp;#43;jC2BOKyePn7JbcHckrIyIgAMyipAA" target="_blank" rel="noopener"
+>Playground&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.endmemo.com/unicode/ascii.php" target="_blank" rel="noopener"
+>Unicode ASCII List &amp;ndash; EndMemo&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/pre" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;pre&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.youtube.com/watch?v=JSaMl2OKjfQ" target="_blank" rel="noopener"
+>Fluent 2014: Lea Verou, &amp;ldquo;The Humble Border-Radius&amp;rdquo; - YouTube&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 198</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-198/</link><pubDate>Tue, 05 Apr 2022 22:53:47 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-198/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="css-实现段落首字母或首字放大效果">CSS 实现段落首字母或首字放大效果&lt;/h3>
 &lt;ol>
 &lt;li>&lt;code>::first-letter&lt;/code> 伪元素&lt;/li>
