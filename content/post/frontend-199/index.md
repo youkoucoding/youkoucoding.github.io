@@ -1,10 +1,9 @@
 ---
 title: '毎日のフロントエンド 199'
-date: 2022-04-05T22:53:47+09:00
 date: 2022-04-07T21:48:28+09:00
 description: frontend 每日一练
 categories:
-  - HTMl
+  - HTML
   - CSS
   - TypeScript Tips
 ---
