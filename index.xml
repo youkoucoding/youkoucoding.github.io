@@ -1,4 +1,297 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 08 Apr 2022 22:18:38 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 200</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-200/</link><pubDate>Fri, 08 Apr 2022 22:18:38 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-200/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 09 Apr 2022 17:15:55 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 201</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-201/</link><pubDate>Sat, 09 Apr 2022 17:15:55 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-201/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="p-p会换两行">&lt;code>&amp;lt;p&amp;gt; &amp;lt;/p&amp;gt;&lt;/code>会换两行&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">p&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">block&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">margin-block-start&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">margin-block-end&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">em&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">margin-inline-start&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">margin-inline-end&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>以上为&lt;code>p&lt;/code>的用户代理
+&lt;ul>
+&lt;li>默认上下 &lt;code>margin&lt;/code> 为 &lt;code>1em&lt;/code>，所以等效于两行字那么高。&lt;/li>
+&lt;li>&lt;code>margin-block-start /end&lt;/code>等效于上下外边距&lt;/li>
+&lt;li>&lt;code>margin-inline-start/end&lt;/code>等效于左右外边距&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="伪类focus-within的用法">伪类&lt;code>:focus-within&lt;/code>的用法&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>:focus-within&lt;/code> 是一个 CSS 伪类 ，表示一个元素获得焦点，或，该元素的后代元素获得焦点。换句话说，元素自身或者它的某个后代匹配 :focus 伪类。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="c">/* 当 &amp;lt;div&amp;gt; 的某个后代获得焦点时，匹配 &amp;lt;div&amp;gt; */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">div&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">focus-within&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">cyan&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="object-与-map-的异同及使用场景">&lt;code>Object&lt;/code> 与 &lt;code>Map&lt;/code> 的异同及使用场景&lt;/h3>
+&lt;h4 id="map">Map&lt;/h4>
+&lt;ul>
+&lt;li>Map 是一种数据结构（是一种抽象的数据结构类型），数据一对对进行存储，其中包含键以及映射到该键的值。并且由于&lt;strong>键的唯一性，因此不存在重复的键值对。&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Map 中的键和值可以是任何数据类型，不仅限于字符串或整数&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h4 id="object">Object&lt;/h4>
+&lt;ul>
+&lt;li>JavaScript 中的常规对象是一种字典类型的数据结构——这意味着它依然遵循与 Map 类型相同键值对的存储结构。&lt;/li>
+&lt;li>Object 中的 key，或者我们可以称之为&lt;strong>属性&lt;/strong>，同样是独一无二的并且对应着一个单独的 value。&lt;/li>
+&lt;li>JavaScript 中的 Object 拥有&lt;strong>内置原型(prototype)&lt;/strong>&lt;/li>
+&lt;li>JavaScript 中几乎所有对象都是 Object 实例，包括 Map&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>Object 和 Map 的本质都是以键值对的方式存储数据，但实质上他们之间存在很大的区别：
+&lt;ul>
+&lt;li>键：
+&lt;ul>
+&lt;li>&lt;code>Object&lt;/code>遵循普通的字典规则，键必须是单一类型，并且只能是&lt;strong>整数&lt;/strong>、&lt;strong>字符串&lt;/strong>或是**&lt;code>Symbol&lt;/code>类型**。&lt;/li>
+&lt;li>&lt;code>Map&lt;/code> 中，&lt;code>key&lt;/code> 可以为&lt;strong>任意数据类型&lt;/strong>（包括&lt;code>Object&lt;/code>, &lt;code>Array&lt;/code> 等）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>元素顺序：Map 会保留所有元素的顺序，而 Object 并不会保证属性的顺序。&lt;/li>
+&lt;li>继承：Map 是 Object 的实例对象，而 Object 显然不可能是 Map 的实例对象。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">map&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Map&lt;/span>&lt;span class="p">([&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">map&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//true
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span> &lt;span class="k">instanceof&lt;/span> &lt;span class="nx">Map&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//false
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="如何创建">如何创建&lt;/h4>
+&lt;h5 id="map-1">&lt;code>Map&lt;/code>&lt;/h5>
+&lt;ul>
+&lt;li>创建 Map 只有一种方式，使用其内置的构造函数以及&lt;code>new&lt;/code>。 &lt;code>Map([iterable])&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">map&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Map&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">//Empty Map
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">map&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Map&lt;/span>&lt;span class="p">([&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">]);&lt;/span> &lt;span class="c1">// map = {1=&amp;gt;2, 2=&amp;gt;3}
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="object-1">&lt;code>Object&lt;/code>&lt;/h5>
+&lt;ol>
+&lt;li>直接定义&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span> &lt;span class="c1">//空对象
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Test object&amp;#39;&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//2 keys here: id maps to 1, and name maps to &amp;#34;Test object&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>使用构造方法&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">//空对象
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>&lt;code>Object.prototype.create()&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">null&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//空对象
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>希望继承某个原型对象，而无需定义它的构造函数，如下：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">Vehicle&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;General&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">display&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">type&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">Car&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Vehicle&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//创建一个继承自 Vehicle 的对象 Car
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">Car&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;Car&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//重写 type 属性
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">Car&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">display&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">//Car
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">Vehicle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">display&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">//General
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>尽量避免使用构造函数的方式:
+&lt;ul>
+&lt;li>构造函数会写更多代码&lt;/li>
+&lt;li>性能更差&lt;/li>
+&lt;li>更加混乱更容易引起程序错误&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="访问元素">访问元素&lt;/h4>
+&lt;h5 id="map-2">&lt;code>Map&lt;/code>&lt;/h5>
+&lt;ul>
+&lt;li>Map，获取元素要通过方法&lt;code>Map.prototype.get(key)&lt;/code>实现&lt;/li>
+&lt;li>Object 类似，要获取到值必须先知道所对应的 key/property，不过使用不同的语法：&lt;code>Object.&amp;lt;key&amp;gt;&lt;/code> or &lt;code>Object[‘key’]&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;id&amp;#39;&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="c1">//1
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>判断 Map 中是否存在某个 key &lt;code>map.has(1);//return boolean value: true/false&lt;/code>&lt;/li>
+&lt;li>Object 需要一些额外的判断:&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">var&lt;/span> &lt;span class="nx">isExist&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// or
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">isExist&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;id&amp;#39;&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 该方法会检查继承的属性
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>可以使用&lt;code>Object.prototype.hasOwnProperty()&lt;/code>判断 Object 中是否存在特定的 key，它的返回值为 true/false，并且&lt;strong>只会检查对象上的非继承属性。&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h4 id="插入">插入&lt;/h4>
+&lt;ul>
+&lt;li>Map 支持通过 &lt;code>Map.prototype.set()&lt;/code>方法插入元素，该方法接收两个参数：&lt;code>key&lt;/code>，&lt;code>value&lt;/code>。如果传入已存在的 key，则将会重写该 key 所对应的 value&lt;/li>
+&lt;li>Object 添加属性可以使用下面的方法&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;gender&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;female&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//{id: 1, name: &amp;#34;test&amp;#34;, gender: &amp;#34;female&amp;#34;}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">gender&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">male&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 重写已存在的属性
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//{id: 1, name: &amp;#34;test&amp;#34;, gender: &amp;#34;male&amp;#34;}
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="删除">删除&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>Object&lt;/code>并没有提供删除元素的内置方法，可以使用 &lt;code>delete&lt;/code> 语法：&lt;/p>
+&lt;ul>
+&lt;li>delete 会完全删除 Object 上某个特有的属性&lt;/li>
+&lt;li>&lt;code>obj[key] = undefined&lt;/code>, 只会改变这个 key 所对应的 value 为 undefined，而该属性仍然保留在对象中, 在使用 &lt;code>for...in...&lt;/code>循环时&lt;strong>仍然会遍历到该属性的 &lt;code>key&lt;/code>&lt;/strong>。&lt;/li>
+&lt;li>&lt;code>delete&lt;/code>操作符的返回值为&lt;code>true/false&lt;/code>，但其返回值的依据与预想情况有所差异：
+&lt;ul>
+&lt;li>对于所有情况都返回 true&lt;/li>
+&lt;li>除非属性是一个&lt;code>non-configurable&lt;/code>属性，否则在非严格模式返回 false，严格模式下将抛出异常&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Map&lt;/code> 有更多内置的删除元素方式&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>delete(key)&lt;/code>用于从 Map 中删除特定 key 所对应的 value，该方法返回一个布尔值
+&lt;ul>
+&lt;li>如果目标对象中存在指定的 key 并成功删除，则返回 true；&lt;/li>
+&lt;li>如果对象中不存在该 key 则返回 false。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>clear()&lt;/code> 清空 Map 中所有元素(Object 要实现 Map 的 clear()方法，需要遍历这个对象的属性，逐个删除)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>Object 和 Map 删除元素的方法也相似。其中删除某个元素的时间复杂度为 O(1)，清空元素的时间复杂度为 O(n)，n 为 Object 和 Map 的大小。&lt;/li>
+&lt;/ul>
+&lt;h4 id="获取大小">获取大小&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>Map&lt;/code>的一个优点是它可以自动更新其大小，可以通过以下方式获得：&lt;code>map.size&lt;/code>&lt;/li>
+&lt;li>&lt;code>Object&lt;/code>，需要通过&lt;code>Object.keys()&lt;/code>方法计算其大小，该方法&lt;strong>返回一个包含所有 key 的数组。&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="迭代">迭代&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Map 有内置的迭代器，Object 没有内置的迭代器&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 判断某种类型是否可迭代，可以通过以下方式实现
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// typeof &amp;lt;obj&amp;gt;[Symbol.iterator] === “function”
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">Symbol&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">iterator&lt;/span>&lt;span class="p">]);&lt;/span> &lt;span class="c1">//undefined
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">Symbol&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">iterator&lt;/span>&lt;span class="p">]);&lt;/span> &lt;span class="c1">//function
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
+&lt;ul>
+&lt;li>&lt;code>Map&lt;/code>，所有元素可以通过&lt;code>for...of&lt;/code>方法遍历：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//For map: { 2 =&amp;gt; 3, 4 =&amp;gt; 5 }
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">item&lt;/span> &lt;span class="k">of&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//Array[2,3]
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">//Array[4,5]
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//Or
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">value&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="k">of&lt;/span> &lt;span class="nx">map&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`key: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">, value: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//key: 2, value: 3
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">//key: 4, value: 5
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>Map&lt;/code>内置的 forEach()方法&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">map&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">key&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`key: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">, value: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">value&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//key: 2, value: 3
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//key: 4, value: 5
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>Object&lt;/code>，使用&lt;code>for...in&lt;/code>方法&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//{id: 1, name: &amp;#34;test&amp;#34;}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">key&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`key: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">, value: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">//key: id, value: 1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">//key: name, value: test
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>Object&lt;/code> 使用&lt;code>Object.keys(obj)&lt;/code>只能获取所有 key 并进行遍历&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sb">`key: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">, value: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//key: id, value: 1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//key: name, value: test
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="应用场景">应用场景&lt;/h4>
+&lt;ul>
+&lt;li>Map 相对于 Object 有很多优点，依然存在某些使用 Object 会更好的场景:
+&lt;ul>
+&lt;li>如果知道所有的&lt;code>key&lt;/code>，它们都为&lt;strong>字符串&lt;/strong>或&lt;strong>整数&lt;/strong>（或是&lt;strong>Symbol 类型&lt;/strong>），需要一个简单的结构去存储这些数据，Object 是一个非常好的选择。构建一个 Object 并通过知道的特定 key 获取元素的性能要优于 Map（字面量 vs 构造函数，直接获取 vs get()方法）&lt;/li>
+&lt;li>如果需要在对象中保持自己独有的逻辑和属性，只能使用 Object&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Map并不能实现这样的数据结构
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">var&lt;/span> &lt;span class="nx">obj&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;It&amp;#39;s Me!&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">print&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="sb">`Object Id: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">id&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">, with Name: &lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="sb">`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">print&lt;/span>&lt;span class="p">());&lt;/span> &lt;span class="c1">//Object Id: 1, with Name: It&amp;#39;s Me.
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>JSON 直接支持 Object，但尚未支持 Map。因此，在某些必须使用 JSON 的情况下，应将 Object 视为首选。&lt;/li>
+&lt;li>Map 是一个纯哈希结构，而 Object 不是（它拥有自己的内部逻辑）。使用 delete 对 Object 的属性进行删除操作存在很多性能问题。所以，&lt;strong>针对于存在大量增删操作的场景，使用 Map 更合适。&lt;/strong>&lt;/li>
+&lt;li>不同于 Object，Map 会保留所有元素的顺序。Map 结构是在基于可迭代的基础上构建的，所以如果考虑到元素迭代或顺序，使用 Map 更好，它能够确保在所有浏览器中的迭代性能。&lt;/li>
+&lt;li>Map 在存储大量数据的场景下表现更好，尤其是在 key 为未知状态，并且所有 key 和所有 value 分别为相同类型的情况下&lt;/li>
+&lt;/ul>
+&lt;h3 id="typescript-tips">TypeScript Tips&lt;/h3>
+&lt;ul>
+&lt;li>Decode some URL search params &lt;strong>AT THE TYPE LEVEL&lt;/strong>
+&lt;ul>
+&lt;li>用类型解码 URL 搜索参数, 转化为一个对象&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">Union&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="kr">from&lt;/span> &lt;span class="s1">&amp;#39;ts-toolbelt&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">query&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sb">`/home?a=foo&amp;amp;b=bar`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//convert to below
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">obj&lt;/span>: &lt;span class="kt">Union.Merge&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">QueryParams&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">a&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;foo&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">b&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;bar&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Solution&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">Union&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="kr">from&lt;/span> &lt;span class="s1">&amp;#39;ts-toolbelt&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">query&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sb">`/home?a=foo&amp;amp;b=bar`&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">type&lt;/span> &lt;span class="nx">Query&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">typeof&lt;/span> &lt;span class="nx">query&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">type&lt;/span> &lt;span class="nx">SecondQueryPart&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Split&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Query&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="err">&amp;#39;?&amp;#39;&lt;/span>&lt;span class="p">&amp;gt;[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">type&lt;/span> &lt;span class="nx">QueryElements&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Split&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">SecondQueryPart&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="err">&amp;#39;&amp;amp;&amp;#39;&lt;/span>&lt;span class="p">&amp;gt;;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">type&lt;/span> &lt;span class="nx">QueryParams&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="nx">QueryElement&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">QueryElements&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="kt">number&lt;/span>&lt;span class="p">]]&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="nx">Key&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Split&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">QueryElement&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="err">&amp;#39;=&amp;#39;&lt;/span>&lt;span class="p">&amp;gt;[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]]&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nb">String&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Split&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">QueryElement&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="err">&amp;#39;=&amp;#39;&lt;/span>&lt;span class="p">&amp;gt;[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}[&lt;/span>&lt;span class="nx">QueryElements&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="kt">number&lt;/span>&lt;span class="p">]];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">obj&lt;/span>: &lt;span class="kt">Union.Merge&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">QueryParams&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">a&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;foo&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">b&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;bar&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/:focus-within" target="_blank" rel="noopener"
+>:focus-within - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903792094232584" target="_blank" rel="noopener"
+>Object 与 Map 的异同及使用场景&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://medium.com/front-end-weekly/es6-map-vs-object-what-and-when-b80621932373" target="_blank" rel="noopener"
+>ES6 — Map vs Object — What and when? | by Maya Shavin | Frontend Weekly | Medium&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/millsp/ts-toolbelt/blob/master/sources/String/Split.ts" target="_blank" rel="noopener"
+>ts-toolbelt/Split.ts at master · millsp/ts-toolbelt&lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 200</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-200/</link><pubDate>Fri, 08 Apr 2022 22:18:38 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-200/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="p和br的区别">&lt;code>&amp;lt;p&amp;gt;&lt;/code>和&lt;code>&amp;lt;br&amp;gt;&lt;/code>的区别&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>&amp;lt;p&amp;gt;&lt;/code>块级元素，&lt;code>&amp;lt;br&amp;gt;&lt;/code> 内联元素；&lt;/li>
