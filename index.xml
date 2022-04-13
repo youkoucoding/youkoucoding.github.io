@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 12 Apr 2022 22:27:42 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 204</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-204/</link><pubDate>Tue, 12 Apr 2022 22:27:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-204/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 13 Apr 2022 22:06:42 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 205</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-205/</link><pubDate>Wed, 13 Apr 2022 22:06:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-205/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="picture标签">&lt;code>picture&lt;/code>标签&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;picture&amp;gt; &lt;/code>元素通过包含零或多个 &lt;code>&amp;lt;source&amp;gt;&lt;/code> 元素和一个 &lt;code>&amp;lt;img&amp;gt;&lt;/code> 元素来为不同的显示/设备场景提供图像版本。浏览器会选择最匹配的子 &lt;code>&amp;lt;source&amp;gt;&lt;/code> 元素，如果没有匹配的，就选择 &lt;code>&amp;lt;img&amp;gt;&lt;/code> 元素的 src 属性中的 URL。然后，所选图像呈现在&lt;!-- raw HTML omitted -->元素占据的空间中。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;picture&amp;gt;&lt;/code> 的常见使用场景：&lt;/p>
+&lt;ul>
+&lt;li>艺术指导 (Art direction) —— 针对不同 media 条件裁剪或修改图像&lt;/li>
+&lt;li>遇到所有浏览器都不支持的特定格式时，提供不同的图像格式&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="getelementbyid和queryselector方法的区别">&lt;code>getElementById&lt;/code>和&lt;code>querySelector&lt;/code>方法的区别&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>Document&lt;/code>的方法 &lt;code>getElementById()&lt;/code>返回一个匹配特定 ID 的元素. 由于元素的 ID 在大部分情况下要求是&lt;strong>独一无二&lt;/strong>的，这个方法自然而然地成为了一个&lt;em>高效查找特定元素的方法&lt;/em>。&lt;/li>
+&lt;li>Document 引用的 querySelector()方法返回文档中与指定选择器或选择器组匹配的第一个 Element 对象。 如果找不到匹配项，则返回 null。
+&lt;ul>
+&lt;li>&lt;code>selectors&lt;/code>:包含一个或多个要匹配的选择器的 DOM 字符串 DOMString。 该字符串必须是有效的 CSS 选择器字符串；如果不是，则引发 SYNTAX_ERR 异常。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="typescript">TypeScript&lt;/h3>
+&lt;ul>
+&lt;li>The Looseness of Object.keys can be a real pain point when it comes to use typescript.&lt;/li>
+&lt;li>Use Generics and &lt;code>keyof&lt;/code> keyword to create a tighter version.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">myObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">a&lt;/span>: &lt;span class="kt">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">b&lt;/span>: &lt;span class="kt">2&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">c&lt;/span>: &lt;span class="kt">3&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">myObject&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">myObject&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Solution&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">myObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">a&lt;/span>: &lt;span class="kt">1&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">b&lt;/span>: &lt;span class="kt">2&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">c&lt;/span>: &lt;span class="kt">3&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">objectKeys&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Obj&lt;/span>&lt;span class="p">&amp;gt;(&lt;/span>&lt;span class="nx">obj&lt;/span>: &lt;span class="kt">Obj&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">keyof&lt;/span> &lt;span class="nx">Obj&lt;/span>&lt;span class="p">)[]&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">Object&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">obj&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kr">as&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="k">keyof&lt;/span> &lt;span class="nx">Obj&lt;/span>&lt;span class="p">)[];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">objectKeys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">myObject&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">forEach&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">myObject&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">key&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.typescriptlang.org/play?jsx=0&amp;amp;ts=4.6.2#code/MYewdgzgLgBAtgTwPICMBWBTYsC8MDeAsAFAwwCGAXDAIwA0JZK1ATA6TMNQMzsC&amp;#43;JEqEiwQ6LFADSGBBBh4APKjQA&amp;#43;ABRi01ZQEpqagNYyQAMxi6A2gF15KgoxgAnDFACujsOfHYAdEdka6DoUcobGZpZWANwkfDHEJJoS0gGIyhI6PiYgjgCi5MAAFmphCME4dkQcwhAgADYYPnUgAOZqad5QFv5WOvF8fUA" target="_blank" rel="noopener"
+>Playground Link&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/picture" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;picture&amp;gt;&lt;/code>：picture 元素 - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/img#attr-srcset" target="_blank" rel="noopener"
+>&lt;code>&amp;lt;img&amp;gt;&lt;/code>：图像嵌入元素 - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/getElementById" target="_blank" rel="noopener"
+>document.getElementById - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelector" target="_blank" rel="noopener"
+>document.querySelector() - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.typescriptlang.org/docs/handbook/jsx.html#the-as-operator" target="_blank" rel="noopener"
+>TypeScript: as &lt;/a>&lt;/p></description></item><item><title>毎日のフロントエンド 204</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-204/</link><pubDate>Tue, 12 Apr 2022 22:27:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-204/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
 &lt;h3 id="typescript">TypeScript&lt;/h3>
 &lt;ul>
 &lt;li>Type Helpers - PropsFrom Helper - Get the props&amp;rsquo; type from the other Component&lt;/li>
