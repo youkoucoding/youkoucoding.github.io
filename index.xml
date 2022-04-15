@@ -1,4 +1,164 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Apr 2022 23:39:27 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 206</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-206/</link><pubDate>Thu, 14 Apr 2022 23:39:27 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-206/</guid><description>&lt;h2 id="todo">TODO&lt;/h2></description></item><item><title>毎日のフロントエンド 205</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-205/</link><pubDate>Wed, 13 Apr 2022 22:06:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-205/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Apr 2022 23:39:27 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 206</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-206/</link><pubDate>Thu, 14 Apr 2022 23:39:27 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-206/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="移动端点击-300ms-的延迟出现的原因">移动端点击 300ms 的延迟出现的原因&lt;/h3>
+&lt;ul>
+&lt;li>早期 IOS 为了区分用户是双击缩放还是点击链接行为，于是就有了 300ms 延迟，其他浏览器效仿
+&lt;ul>
+&lt;li>引入&lt;code>fastclick&lt;/code>&lt;/li>
+&lt;li>在&lt;code>meta&lt;/code>禁用浏览器缩放&lt;/li>
+&lt;li>&lt;code>touch&lt;/code>事件模拟&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="元素设置-background-color它的颜色会填充哪些区域">元素设置 background-color,它的颜色会填充哪些区域&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>background&lt;/code>
+&lt;ul>
+&lt;li>填充区域默认为&lt;code>content&lt;/code>、&lt;code>padding&lt;/code>和&lt;code>border&lt;/code>区域&lt;/li>
+&lt;li>该行为由&lt;code>background-clip&lt;/code>属性决定，默认为&lt;code>border-box&lt;/code>
+&lt;ul>
+&lt;li>&lt;code>background-clip&lt;/code> 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>填充区域如下&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">background-clip&lt;/th>
+&lt;th style="text-align:center">margin&lt;/th>
+&lt;th style="text-align:center">border&lt;/th>
+&lt;th style="text-align:center">padding&lt;/th>
+&lt;th style="text-align:center">content&lt;/th>
+&lt;th style="text-align:center">text&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">border-box (默认)&lt;/td>
+&lt;td style="text-align:center">✘&lt;/td>
+&lt;td style="text-align:center">✔&lt;/td>
+&lt;td style="text-align:center">✔&lt;/td>
+&lt;td style="text-align:center">✔&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">padding-box&lt;/td>
+&lt;td style="text-align:center">✘&lt;/td>
+&lt;td style="text-align:center">✘&lt;/td>
+&lt;td style="text-align:center">✔&lt;/td>
+&lt;td style="text-align:center">✔&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">content-box&lt;/td>
+&lt;td style="text-align:center">✘&lt;/td>
+&lt;td style="text-align:center">✘&lt;/td>
+&lt;td style="text-align:center">✘&lt;/td>
+&lt;td style="text-align:center">✔&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">text (webkit)&lt;/td>
+&lt;td style="text-align:center">✘&lt;/td>
+&lt;td style="text-align:center">✘&lt;/td>
+&lt;td style="text-align:center">✘&lt;/td>
+&lt;td style="text-align:center">✘&lt;/td>
+&lt;td style="text-align:center">✔&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="js-获取-dom-元素的方法">js 获取 DOM 元素的方法&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>document.getElementById&lt;/code> - 元素的 ID 在大部分情况下要求是独一无二的，这个方法自然而然地成为了一个高效查找特定元素的方法
+&lt;ul>
+&lt;li>返回一个匹配到 ID 的 DOM Element 对象, 没有找到，则返回 &lt;code>null&lt;/code>&lt;/li>
+&lt;li>仅在 document 下调用&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>document.getElementsByName&lt;/code> - 根据给定的 name (en-US) 返回一个在 (X)HTML document 的节点列表集合
+&lt;ul>
+&lt;li>返回值是一个实时更新的 &lt;code>NodeList&lt;/code> 集合。当文档中有同一个 name 属性的元素被添加或移除时，这个集合会自动更新&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>document.getElementsByClassName&lt;/code>
+&lt;ul>
+&lt;li>返回一个包含了所有指定&lt;strong>类名&lt;/strong>的&lt;strong>子元素的类数组对象&lt;/strong>&lt;/li>
+&lt;li>&lt;code>getElementsByClassName&lt;/code> &lt;strong>可以在任何元素上调用&lt;/strong>，不仅仅是 document。 &lt;em>调用这个方法的元素将作为本次查找的根元素&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>document.getElementsByTagName&lt;/code>
+&lt;ul>
+&lt;li>返回一个包括所有给定标签名称的元素的 HTML 集合 &lt;code>HTMLCollection&lt;/code>&lt;/li>
+&lt;li>整个文件结构都会被搜索，包括根节点&lt;/li>
+&lt;li>返回的 HTML 集合是动态的, 意味着它可以自动更新自己来保持和 DOM 树的同步而不用再次调用 &lt;code>document.getElementsByTagName()&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>document.querySelector&lt;/code>
+&lt;ul>
+&lt;li>文档对象模型 Document 引用的 querySelector()方法返回文档中与指定选择器或选择器组匹配的&lt;strong>第一个 Element 对象&lt;/strong>&lt;/li>
+&lt;li>如果找不到匹配项，则返回 null。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>document.querySelectorAll&lt;/code>
+&lt;ul>
+&lt;li>返回与指定的选择器组匹配的文档中的元素列表 (使用深度优先的先序遍历文档的节点)&lt;/li>
+&lt;li>返回的对象是 NodeList&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>document.body&lt;/code>
+&lt;ul>
+&lt;li>返回当前文档中的&lt;code>&amp;lt;body&amp;gt;&lt;/code>元素或者&lt;code>&amp;lt;frameset&amp;gt;&lt;/code>元素.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>document.documentElement&lt;/code>
+&lt;ul>
+&lt;li>返回文档对象（document）的根元素的&lt;strong>只读属性&lt;/strong>（如 HTML 文档的 &lt;code>&amp;lt;html&amp;gt;&lt;/code> 元素）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://www.jianshu.com/p/67bae6dfca90" target="_blank" rel="noopener"
+>fastclick 的介绍和使用 - 简书&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/ftlabs/fastclick" target="_blank" rel="noopener"
+>ftlabs/fastclick: Polyfill to remove click delays on browsers with touch UIs&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background" target="_blank" rel="noopener"
+>background - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip" target="_blank" rel="noopener"
+>background-clip - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element" target="_blank" rel="noopener"
+>Element - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/NodeList" target="_blank" rel="noopener"
+>NodeList - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLCollection" target="_blank" rel="noopener"
+>HTMLCollection - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelector" target="_blank" rel="noopener"
+>document.querySelector() - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>毎日のフロントエンド 205</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-205/</link><pubDate>Wed, 13 Apr 2022 22:06:42 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-205/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="picture标签">&lt;code>picture&lt;/code>标签&lt;/h3>
 &lt;ul>
 &lt;li>
