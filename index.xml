@@ -1,4 +1,273 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 16 Apr 2022 15:43:37 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 207</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-207/</link><pubDate>Sat, 16 Apr 2022 15:43:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-207/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Apr 2022 14:48:54 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 208</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-208/</link><pubDate>Sun, 17 Apr 2022 14:48:54 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-208/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="font">FONT&lt;/h3>
+&lt;h4 id="字体的分类">字体的分类&lt;/h4>
+&lt;ul>
+&lt;li>字体族，是一系列字体的集合:
+&lt;ul>
+&lt;li>serif(衬线)&lt;/li>
+&lt;li>sans-serif(无衬线)&lt;/li>
+&lt;li>monospace(等宽)&lt;/li>
+&lt;li>fantasy(梦幻)&lt;/li>
+&lt;li>cuisive(草体)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="serif衬线字体-sans-serif无衬线字体">&lt;code>serif&lt;/code>(衬线字体) &lt;code>sans-serif&lt;/code>(无衬线字体)&lt;/h4>
+&lt;ul>
+&lt;li>&lt;code>Serif&lt;/code>的意思是，在字的笔划开始及结束的地方有额外的装饰，而且笔画的粗细会有所不同。衬线字体的风格都比较突出，&lt;strong>常见的衬线字体有 Times New Roman、宋体&lt;/strong>。&lt;/li>
+&lt;li>&lt;code>Sans Serif&lt;/code>字体没有这些额外的装饰，笔划粗细大致差不多，字形端庄，横平竖直，&lt;strong>常见的无衬线字体有 Tahoma、Verdana、Arial、Helvetica、苹方、微软雅黑等等&lt;/strong>&lt;/li>
+&lt;li>&lt;code>monospace&lt;/code>(等宽字体)等宽字体是指字符宽度相同的字体，通常用于编辑器以及技术文章的代码块中，等宽主要针对西文字体，而对于中文每个字都是等宽的，&lt;strong>courier 是最常见的等宽字体&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h4 id="font-family属性">&lt;code>font-family&lt;/code>属性&lt;/h4>
+&lt;ul>
+&lt;li>设置元素的字体，可以同时指定多个，如果浏览器不支持第一个字体，则会尝试下一个，可以设置字体或字体系列。&lt;code>font-family: Arial, sans-serif;&lt;/code>&lt;/li>
+&lt;li>不设置 font-family 则使用浏览器默认字体，如果设置的 font-family 无效，也会 fallback 到&lt;strong>浏览器的默认字体&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h4 id="常见字体">常见字体&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Helvetica&lt;/strong>
+&lt;ul>
+&lt;li>苹果系统支持的一种&lt;strong>西文无衬线字体&lt;/strong>，是苹果生态中最常用的一套西文字体。Helvetica Neue 是 Helvetica 字体改善版，增加了更多不同粗细与宽度的字形&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Arial&lt;/strong>
+&lt;ul>
+&lt;li>是为了与 Helvetica 竞争而设计的无衬线西文字体，表现形式和 Helvetica 类似，在不同系统的浏览器都支持，&lt;em>兼容性非常好&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Tahoma&lt;/strong>
+&lt;ul>
+&lt;li>一种无衬线字体，间距较小，在不同系统的浏览器都支持，兼容性良好，可以解决 Helvetica 和 Arial 所为人诟病的缺点，比如大写的 I 和小写的 L 难以分辨。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>San Francisco&lt;/strong>
+&lt;ul>
+&lt;li>苹果于 2017 年推出一种无衬线字体，也是目前苹果系统的默认西文字体，相比于 Helvetica 字体，San Francisco 的字体风格更加简洁，减少了一些修饰的细节，支持符号的整体居中，比如时间显示，之前的 Helvetica 的冒号是不居中的&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>PingFang SC(苹方-简)&lt;/strong>
+&lt;ul>
+&lt;li>中文无衬线字体，在 2017 年和 San Francisco 一起推出，SC 代表简体，同时还有台湾繁体和香港繁体，整体造型简洁美观，是苹果系统默认的中文字体。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Hiragino Sans GB(冬青黑体)、Heiti SC(黑体)&lt;/strong>
+&lt;ul>
+&lt;li>苹果系统中较早的中文无衬线字体，为了兼容旧版 macOS 系统，我们一般用它们作为苹方字体的 fallback。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Segoe UI&lt;/strong>
+&lt;ul>
+&lt;li>&lt;em>windows 系统&lt;/em>下的一种无衬线西文字体，也是 windows 系统的&lt;strong>默认西文字体&lt;/strong>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Microsoft YaHei(微软雅黑)&lt;/strong>
+&lt;ul>
+&lt;li>Windows 系统默认的中文字体，也是一套无衬线字体。macOS 上的浏览器大都预装微软雅黑，但不包括 safari 浏览器(&lt;em>ios 和 android 系统不支持微软雅黑，所以设置移动端字体时可以忽略微软雅黑&lt;/em>)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Roboto&lt;/strong>
+&lt;ul>
+&lt;li>Android 系统的默认西文字体，也是一种无衬线字体&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Noto Sans (思源黑体)&lt;/strong>
+&lt;ul>
+&lt;li>Android 系统的默认中文无衬线字体，由 google 推出的一款开源字体&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Apple Color Emoji&lt;/strong>
+&lt;ul>
+&lt;li>苹果产品的文字表情，在 Mac 和 iOS 系统都支持&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Segoe UI Emoji&lt;/strong>
+&lt;ul>
+&lt;li>Windows10 系统中的 Emoji 表情，黑描边风格，没有苹果的圆润和质感。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Noto Color Emoji&lt;/strong>
+&lt;ul>
+&lt;li>Google 推出的表情，和苹果的较为类似，更加扁平&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="浏览器默认字体">浏览器默认字体&lt;/h4>
+&lt;blockquote>
+&lt;p>默认字体分为系统默认字体(system-ui)和浏览器默认字体，这两者是不同的&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>当元素没有指定 font-family 或者设置的 font-family 无效时，会 fallback 到浏览器默认字体。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>浏览器默认字体，可在浏览器 setting 里查看&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>通常在 font-family 最后设置&lt;code>sans-serif&lt;/code>指定无衬线字体作为兜底&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="system-ui">system-ui&lt;/h4>
+&lt;ul>
+&lt;li>
+&lt;p>system-ui 是一种通用字体系列，它选择&lt;strong>当前操作系统下的默认系统字体&lt;/strong>，它的优势在于和当前系统使用的字体相匹配，可以让 Web 页面和 App 风格看起来更统一&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>-apple-system&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>-apple-system&lt;/code> 是 system-ui 的兼容写法，只在 ios 和 macOS 上的 safari、Firefox、webview 等环境下支持。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>BlinkMacSystemFont&lt;/p>
+&lt;ul>
+&lt;li>也是 system-ui 的兼容写法，只在 macOS chrome 下支持，主要针对 chrome 53-55 版本&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>在 ios 和 macOS 上，system-ui 指向的中文字体为苹方，西文字体为 San Francisco。android 系统下中文通常为 Noto Sans (思源黑体)，西文字体为 Roboto。windows 系统上一般为微软雅黑，但是在部分 windows 系统上的字体会出现问题，所以 windows 上不建议使用 system-ui&lt;/em>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;ul>
+&lt;li>在现行主流终端设备中，无衬线体比有衬线体更易读，**无衬线体 &lt;code>sans-serif&lt;/code>**更适合作为网页的默认全局字体设置&lt;/li>
+&lt;li>每个系统都会带有无衬线字体，所以 sans-serif 一般放在最后作为兜底，sans-serif 之后的字体都不会生效，除了 Emoji 字体&lt;/li>
+&lt;li>PC 端浏览器可以在设置中指定 sans-serif 字体。&lt;/li>
+&lt;li>移动端浏览器不能在设置中指定 sans-serif 字体，它们会根据 lang 指定的语言环境选择合适的字体，和 system-ui 指定的字体不一定相同。&lt;/li>
+&lt;/ul>
+&lt;h4 id="书写字体规则">书写字体规则&lt;/h4>
+&lt;ol>
+&lt;li>
+&lt;p>不同平台，预置的字体并不相同。比如&lt;strong>Helvetica 和苹方也只有苹果系统内置&lt;/strong>，&lt;strong>微软雅黑只有 windows 系统内置&lt;/strong>(由于安装 Office365 的缘故，Mac 电脑中也会出现微软雅黑字体)，android 和 iOS 系统内置的字体各不相同&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>字体是有版权的，但是如果没有引用外部字体文件（如 Web font 或者内嵌到 App 中），而仅仅是在 CSS 中指定字体名称，不需要购买授权，因为其只是一段声明，表示期望浏览器优先使用某种字体渲染文本。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>中文网站涉及两种文字类型：西文字体和中文字体，西文字体包括英文数字等，不包括中文，但是中文字体一般包括英文和数字，&lt;strong>一般先设置西文字体，后设置中文&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>如果字体包含空格或者是中文，需要加引号&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>大部分字体全名中会包含字体粗细、斜体（italic）、长体（condensed）等具体属性，但一般不建议直接使用，字体的风格应该在 CSS 中通过 font-weight、font-style、font-stretch 等属性指定，由浏览器决定实际渲染的字体&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>font-family 属于&lt;strong>可继承属性&lt;/strong>，全局的 font-family 一般设置在 body 元素上&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;ul>
+&lt;li>&lt;strong>西文在前，中文在后&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>优先使用 &lt;code>system-ui&lt;/code>&lt;/strong>: 让 web 页面和操作系统的风格统一，体验更好&lt;/li>
+&lt;li>&lt;strong>兼顾不同的操作系统&lt;/strong>, 比如都使用无衬线字体
+&lt;ul>
+&lt;li>保证苹果系统中使用更优雅的中文字体，优先声明苹方字体, 对于不支持苹方的低版本 macOS，使用 Hiragino Sans GB(冬青黑体)字体做兜底&lt;/li>
+&lt;li>如果需要兼容不同平台的表情符号，一般在 sans-serif 后添加&amp;quot;Apple Color Emoji&amp;quot;, &amp;ldquo;Segoe UI Emoji&amp;rdquo;, &amp;ldquo;Segoe UI Symbol&amp;rdquo;, &amp;ldquo;Noto Color Emoji&amp;quot;等字体&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>以 serif 或 sans-serif 字体族结尾&lt;/strong>
+&lt;ul>
+&lt;li>一般将 sans-serif 放在字体的后面，&lt;em>非衬线字体在显示器中的显示效果更好&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>简洁实用&lt;/strong>
+&lt;ul>
+&lt;li>字体设置并不是越多越好，在能满足设计需求的情况下尽量简洁。相同系统下中西文字体各有一个 fallback 即可，不需要太多&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h4 id="font-family推荐写法">&lt;code>font-family&lt;/code>推荐写法&lt;/h4>
+&lt;h5 id="移动端-兼容版本ios9android4">移动端 兼容版本：ios9+、android4+&lt;/h5>
+&lt;ul>
+&lt;li>&lt;code>font-family: system-ui, -apple-system, Arial, sans-serif;&lt;/code>
+&lt;ul>
+&lt;li>优先使用 system-ui，使用 Arial 做西文字体的 fallback 是因为它和 Helvetica 字体相似，并且在 ios 和 android 支持性很好。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="pc-端">PC 端&lt;/h5>
+&lt;ol>
+&lt;li>macOS 系统优先使用系统字体&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>&lt;code>font-family: -apple-system, BlinkMacSystemFont, Tahoma, Arial, &amp;quot;Hiragino Sans GB&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, sans-serif;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>指定字体
+&lt;ul>
+&lt;li>&lt;code>font-family: Tahoma, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;Hiragino Sans GB&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, sans-serif;&lt;/code>&lt;/li>
+&lt;li>理由：
+&lt;ul>
+&lt;li>windows 系统电脑屏幕分辨率普遍不高，&lt;code>Tahoma&lt;/code> 字体在小字号下结构清晰端整、阅读辨识容易，在不同操作系统支持性好，所以作为首选字体，如果系统没有预装 Tahoma，则使用 Arial 作为替代。但两者差别不大，Arial 优先级提前也行。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>如想突出 macOS 和 windows 的字体特色，可以在 Tahoma 前面设置 Helvetica 或 Segoe UI 为首选字体&lt;/strong>
+&lt;ul>
+&lt;li>&lt;code>font-family: &amp;quot;Helvetica Neue&amp;quot;, &amp;quot;Segoe UI&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;Hiragino Sans GB&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, sans-serif;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;ul>
+&lt;li>css 的 font-family 权重是高于浏览器默认字体&lt;/li>
+&lt;li>当给某个元素设置了 font-faimily 后，全局默认字体则对这个元素无效，这时也要考虑字体兼容问题，最好指定一个 fallback 字体，并以 sans-serif 结尾&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">div&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">font-faimiy&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;PingFang SC&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">sans-serif&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="typescript">TypeScript&lt;/h3>
+&lt;ul>
+&lt;li>Generics can be &amp;ldquo;Locked in &amp;quot; by function calls, meaning that generics can be &amp;ldquo;curried&amp;rdquo; through functions.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">makeKeyRemove&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">keyRemover&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">makeKeyRemover&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;b&amp;#39;&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">newObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">keyRemover&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">a&lt;/span>: &lt;span class="kt">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>: &lt;span class="kt">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">c&lt;/span>: &lt;span class="kt">3&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Solution&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// the function makeKeyRemover will return a new function that can remove the key of a object
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">export&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">makeKeyRemover&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Key&lt;/span> &lt;span class="na">extends&lt;/span> &lt;span class="na">string&lt;/span>&lt;span class="p">&amp;gt;(&lt;/span>&lt;span class="nx">keys&lt;/span>: &lt;span class="kt">Key&lt;/span>&lt;span class="p">[])&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Obj&lt;/span>&lt;span class="p">&amp;gt;(&lt;/span>&lt;span class="nx">obj&lt;/span>: &lt;span class="kt">Obj&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">Omit&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Obj&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="na">Key&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">{}&lt;/span> &lt;span class="kr">as&lt;/span> &lt;span class="kt">any&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">keyRemover&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">makeKeyRemover&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="s1">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;b&amp;#39;&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">newObject&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">keyRemover&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">a&lt;/span>: &lt;span class="kt">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>: &lt;span class="kt">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">c&lt;/span>: &lt;span class="kt">3&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.typescriptlang.org/play?jsx=0#code/PTAEBcAsFNQMwK4DsDG4CWB7JoC2BDAa2gGloBPAJWl0wDdoAnUAd3QBt3RHpwFGc&amp;#43;UEmgt4yNFhxR84UCnw4etBhBihi5UJjighmAEYAraGgCwAKBTYAznILEyVGvSagAvJdCgAPE9DQAB7g0EgAJjagdozoSADmAHwAFJo2AFygTgDaALoAlB4JXr4A8sbJhkYZZUZ51bjo4D41ADSZFAmFoADexd48fAI9AL56kYrkANzFw9MWltZIdhoU1Cpu7nhEpKsuDIxJWQDk&amp;#43;EdtRwZH&amp;#43;XMLtnIiLDWmcpuaa64H3XoZAIxtBhkAExtFAZADMoGGeUmQA" target="_blank" rel="noopener"
+>Playground Link&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events" target="_blank" rel="noopener"
+>pointer-events - CSS: Cascading Style Sheets | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console" target="_blank" rel="noopener"
+>Console - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000038284125" target="_blank" rel="noopener"
+>Web 字体 font-family&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://www.cssfontstack.com/" target="_blank" rel="noopener"
+>CSS Font Stack: Web Safe and Web Font Family with HTML and CSS code.&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>毎日のフロントエンド 207</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-207/</link><pubDate>Sat, 16 Apr 2022 15:43:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-207/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="filter-滤镜">&lt;code>filter&lt;/code> 滤镜&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>filter&lt;/code> 将模糊或颜色偏移等图形效果应用于元素。滤镜通常用于调整图像、背景和边框的渲染。CSS 标准里包含了一些已实现预定义效果的函数。&lt;/li>
