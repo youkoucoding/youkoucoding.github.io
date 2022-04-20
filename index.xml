@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 18 Apr 2022 23:37:56 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 209</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-209/</link><pubDate>Mon, 18 Apr 2022 23:37:56 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-209/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 20 Apr 2022 21:14:59 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 210</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-210/</link><pubDate>Wed, 20 Apr 2022 21:14:59 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-210/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="linkvisitedhoveractive的执行顺序">&lt;code>:link&lt;/code>、&lt;code>:visited&lt;/code>、&lt;code>:hover&lt;/code>、&lt;code>:active&lt;/code>的执行顺序&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>:link&lt;/code>(未访问链接)，&lt;code>:visited&lt;/code>(已访问的链接)，&lt;code>:hover&lt;/code>(鼠标悬停)，&lt;code>:active&lt;/code>(鼠标按下)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>a&lt;/code>标签伪类 正确的顺序 是：&lt;strong>lvha(:link&amp;ndash;&amp;gt;:visited&amp;ndash;&amp;gt;:hover&amp;ndash;&amp;gt;:active)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;em>同等优先权的样式，写在后边的会覆盖前边&lt;/em>&lt;/li>
+&lt;li>a 标签的伪类结合了不同的动作顺序，动作的触发顺序决定了伪类的顺序必须按 &lt;code>lvha&lt;/code> 来写&lt;/li>
+&lt;li>前 2 者两种状态是&lt;em>常态&lt;/em>，而后 2 者是&lt;em>即时状态&lt;/em>，当即时状态触发时，要覆盖常态，所以&lt;strong>2 个即时状态要放在后边&lt;/strong>&lt;/li>
+&lt;li>在&lt;strong>常态&lt;/strong>下：如果 a 标签被访问过后，就要呈现被访问过的状态，所以 visited 要放在 link 后边；&lt;/li>
+&lt;li>鼠标按下时，伴随着悬停的 a 标签上，所以要想 active 覆盖 hover，就&lt;strong>必须把 active 放后边&lt;/strong>；&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>:link&lt;/code> 和 &lt;code>a&lt;/code> 的样式有可能会冲突&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>当 标签的 href 属性为空的时候，&lt;code>:link&lt;/code> 样式不会生效；当 标签的 href 属性不为空的时候，&lt;code>:link&lt;/code> 样式才会生效，这时候，如果 标签正常样式 和 a：link 冲突了的话，以写在后面的那个为准&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="typescript">TypeScript&lt;/h3>
+&lt;ul>
+&lt;li>Deep Partial&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">type&lt;/span> &lt;span class="nx">DeepPartial&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Thing&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">Thing&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nb">Function&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">?&lt;/span> &lt;span class="nx">Thing&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> : &lt;span class="kt">Thing&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">infer&lt;/span> &lt;span class="na">InferredArrayMember&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">?&lt;/span> &lt;span class="nx">DeepPartialArray&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">InferredArrayMember&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">:&lt;/span> &lt;span class="nx">Thing&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="kt">object&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">?&lt;/span> &lt;span class="nx">DeepPartialObject&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Thing&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">:&lt;/span> &lt;span class="nx">Thing&lt;/span> &lt;span class="o">|&lt;/span> &lt;span class="kc">undefined&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">interface&lt;/span> &lt;span class="nx">DeepPartialArray&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Thing&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nb">Array&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">DeepPartial&lt;/span>&lt;span class="err">&amp;lt;&lt;/span>&lt;span class="na">Thing&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="p">{}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">type&lt;/span> &lt;span class="nx">DeepPartialObject&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Thing&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="nx">Key&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="k">keyof&lt;/span> &lt;span class="nx">Thing&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">?:&lt;/span> &lt;span class="nx">DeepPartial&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Thing&lt;/span>&lt;span class="err">[&lt;/span>&lt;span class="na">Key&lt;/span>&lt;span class="err">]&lt;/span>&lt;span class="p">&amp;gt;;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">interface&lt;/span> &lt;span class="nx">Post&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">comments&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">value&lt;/span>: &lt;span class="kt">string&lt;/span> &lt;span class="p">}[];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">meta&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">description&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Partial&amp;lt;&amp;gt; is one level
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">post&lt;/span>: &lt;span class="kt">Partial&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Post&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">id&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;001&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">meta&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// DeepPartial makes all level properties partial
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kr">const&lt;/span> &lt;span class="nx">post&lt;/span>: &lt;span class="kt">DeepPartial&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Post&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a class="link" href="https://www.typescriptlang.org/play?jsx=0#code/C4TwDgpgBAIhFgAoEMBOwCWyA2AeAKgBYYB2A5gHxQC8URpZUEAHsBCQCYDOUAYgK4kAxpgD2JALAAoKFAD8dYuWmyAXIoZNW7blACCqVMhC5SAMwiooASRIXDEDgaMgAshAC2AI0sUV82HgkNEwcZ2NcW3tUR3C3Tx9UPxkodXpyLTZOHlEvACsIEX8FOAQUdCxsAHl8wuACJUp-NMaoAB8oQQ4IM1JHAG5paVI2VDNkIWhS4Iqwwwj0ykydHjjcafLQvEWKKgBvAF8hqVBIQLKQypqCkQaGKlo9-wBtAGkIEChSKABrD9EzBpyABdOTqDaXHB3chvD7AiiDKQHRHDEijcaTKCIURcYBQJ4pDAcdS41AMRGyISiDwedjALjqPZQABuOH4EBJwDJGQOz2BFKgtOAyEZ-lkJGQtM53LIAtk3S4QjJYDEJGl5P8yOkRyk0gA9HqsZC8FQMDkSNBsBBmRBsNIqSRcVAwDjgFULepNpVcNjcQ98f4ieoAOQABlDAEZgwAafxCkX4g6xpEoqQG84zLaC5B-Hg4bBQK02gtgVCiSAVCA8MDG44Op0u3H4ADuonBQS9UN9wH9BNkQYAROGAEwD5OyeOqQ7jqBUml0hl87X9IA" target="_blank" rel="noopener"
+>Playground Link&lt;/a>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types" target="_blank" rel="noopener"
+>Inferring Within Conditional Types&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>毎日のフロントエンド 209</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-209/</link><pubDate>Mon, 18 Apr 2022 23:37:56 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-209/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
 &lt;h3 id="typescript">TypeScript&lt;/h3>
 &lt;ul>
 &lt;li>A runtime check in a function to the tyoe level.&lt;/li>
