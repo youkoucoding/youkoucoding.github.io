@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Apr 2022 20:15:50 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 213</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-213/</link><pubDate>Sat, 23 Apr 2022 20:15:50 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-213/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 24 Apr 2022 17:21:29 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 214</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-214/</link><pubDate>Sun, 24 Apr 2022 17:21:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-214/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="required属性">&lt;code>required&lt;/code>属性&lt;/h3>
+&lt;ul>
+&lt;li>The Boolean required attribute, if present, indicates that the user must specify a value for the input before the owning form can be submitted.
+&lt;ul>
+&lt;li>If present on any of these input types and elements, the &lt;code>:required&lt;/code> pseudo class will match.&lt;/li>
+&lt;li>If the attribute is not included, the &lt;code>:optional&lt;/code> pseudo class will match.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="文本的竖向排版">文本的竖向排版&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>writing-mode&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="typescript">TypeScript&lt;/h3>
+&lt;ul>
+&lt;li>Use Generics to dynamically specify the number, and type, of arguments to functions&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="kr">type&lt;/span> &lt;span class="nx">Event&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;LOG_IN&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">payload&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">userId&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;SIGN_OUT&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">sendEvent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">eventType&lt;/span>: &lt;span class="kt">Event&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;type&amp;#39;&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="nx">payload?&lt;/span>: &lt;span class="kt">any&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Create a sendEvent function which only asks for a payload if it&amp;rsquo;s present on the event you&amp;rsquo;re sending.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="kr">type&lt;/span> &lt;span class="nx">PEvent&lt;/span> &lt;span class="o">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;LOG_IN&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">payload&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">userId&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">|&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;SIGN_OUT&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">sendEvent&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Type&lt;/span> &lt;span class="na">extends&lt;/span> &lt;span class="na">PEvent&lt;/span>&lt;span class="err">[&amp;#39;&lt;/span>&lt;span class="na">type&lt;/span>&lt;span class="err">&amp;#39;]&lt;/span>&lt;span class="p">&amp;gt;(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">...&lt;/span>&lt;span class="nx">args&lt;/span>: &lt;span class="kt">Extract&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">PEvent&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="na">Type&lt;/span> &lt;span class="p">}&amp;gt;&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">payloads&lt;/span>: &lt;span class="kt">infer&lt;/span> &lt;span class="nx">TPayload&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">?&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="kr">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">Type&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">payload&lt;/span>: &lt;span class="kt">TPayload&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="kr">type&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">Type&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">sendEvent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;SIGN_OUT&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">sendEvent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;LOG_IN&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">userId&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;123&amp;#39;&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">sendEvent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;LOG_IN&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{});&lt;/span> &lt;span class="c1">// error
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">sendEvent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;LOG_IN&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">//error
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.typescriptlang.org/play?jsx=0#code/C4TwDgpgBACgogNwgO2FAvAWAFBSgHygG8c8ypRIAuKAcgBkB5AcQH0BJAOVoG5TyoYAIYgANgHshAExolcAvAFcAzhABO7GVGXA1AS2QBzPvPIBfE&amp;#43;f6E5CyhBq0Ayu2adWjAKoAVXvzwWODgAxuLIOtooUogoaOhQADze4NAQAB7AUcqwMagA2rT2tAC6AHwAFPwAdDVCaobKNHAZakLBwAnwSKgANMQUKTTJkFBmpVDpmchS2UTCYpJaBgBm6lDeMCIS0mZQ-AD8UHn2Qyl989taG1uLxXvyNMeD6ynFOACUGONEgdg4qtNcsBys5XO4vL53iYAdFusCGCwONw&amp;#43;kQoCp1JpHABGABMAGZaKMof8okCQUw2FxaCizFCoAB6ekTNRqcRqEmAuHkxFUumM9Ss9nYGFkgBELjcHh8oveQA" target="_blank" rel="noopener"
+>Playground Link&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/required" target="_blank" rel="noopener"
+>HTML attribute: &lt;code>required&lt;/code> - HTML: HyperText Markup Language | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/writing-mode" target="_blank" rel="noopener"
+>writing-mode - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000040558014" target="_blank" rel="noopener"
+>精读《Typescript infer 关键字》 - SegmentFault 思否&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>毎日のフロントエンド 213</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-213/</link><pubDate>Sat, 23 Apr 2022 20:15:50 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-213/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
 &lt;h3 id="typescript">TypeScript&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>declare global&lt;/code> is super useful too for when you want to allow types to cross module boundaries&lt;/li>
