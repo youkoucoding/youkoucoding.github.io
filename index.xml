@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 28 Apr 2022 23:30:17 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 218</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-218/</link><pubDate>Thu, 28 Apr 2022 23:30:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-218/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 29 Apr 2022 20:46:00 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 219</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-219/</link><pubDate>Fri, 29 Apr 2022 20:46:00 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-219/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="typescript">TypeScript&lt;/h3>
+&lt;ul>
+&lt;li>dynamic elements&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">interface&lt;/span> &lt;span class="nx">Animal&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">interface&lt;/span> &lt;span class="nx">Human&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">firstName&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">lastName&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">getDisplayName&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">item&lt;/span>: &lt;span class="kt">Animal&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">displayName&lt;/span>: &lt;span class="kt">string&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">displayName&lt;/span>: &lt;span class="kt">item.name&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">getDisplayName&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;PATCH&amp;#39;&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Generic Solution&lt;/li>
+&lt;li>当函数在调用的时候前不能确定传入的数据的类型，可用泛型&lt;/li>
+&lt;li>尤其如此例中，需要跟据不同参数类型返回不同的类型&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">interface&lt;/span> &lt;span class="nx">Animal&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">name&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">interface&lt;/span> &lt;span class="nx">Human&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">firstName&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">lastName&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="kr">const&lt;/span> &lt;span class="nx">getDisplayName&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">TItem&lt;/span> &lt;span class="na">extends&lt;/span> &lt;span class="na">Animal&lt;/span> &lt;span class="err">|&lt;/span> &lt;span class="na">Human&lt;/span>&lt;span class="p">&amp;gt;(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">item&lt;/span>: &lt;span class="kt">TItem&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">TItem&lt;/span> &lt;span class="kr">extends&lt;/span> &lt;span class="nx">Human&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">humanName&lt;/span>: &lt;span class="kt">string&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">animalName&lt;/span>: &lt;span class="kt">string&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;name&amp;#39;&lt;/span> &lt;span class="k">in&lt;/span> &lt;span class="nx">item&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">animalName&lt;/span>: &lt;span class="kt">item.name&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">humanName&lt;/span>: &lt;span class="kt">item.firstName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">result1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">getDisplayName&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">name&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Pathc&amp;#39;&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">result2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">getDisplayName&lt;/span>&lt;span class="p">({&lt;/span> &lt;span class="nx">firtName&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Ricky&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">lastName&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s1">&amp;#39;Potter&amp;#39;&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 195;
+flex-basis: 468px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-219/use-generics.jpeg" data-size="1369x702">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-219/use-generics.jpeg"
+width="1369"
+height="702"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-219/use-generics_hue7426f6d754256415127b2da355164d2_62253_480x0_resize_q75_box.jpeg 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-219/use-generics_hue7426f6d754256415127b2da355164d2_62253_1024x0_resize_q75_box.jpeg 1024w"
+loading="lazy"
+alt="when should we use generics">
+&lt;/a>
+&lt;figcaption>when should we use generics&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine" target="_blank" rel="noopener"
+>Navigator.onLine - Web APIs | MDN&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>毎日のフロントエンド 218</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-218/</link><pubDate>Thu, 28 Apr 2022 23:30:17 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-218/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="css-下兼容性的元素水平垂直翻转实现">CSS 下兼容性的元素水平/垂直翻转实现&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="c">/*水平翻转*/&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">flipx&lt;/span> &lt;span class="p">{&lt;/span>
@@ -39,24 +108,29 @@
 &lt;h2 id="tips">Tips&lt;/h2>
 &lt;h3 id="typescript">TypeScript&lt;/h3>
 &lt;ul>
-&lt;li>&lt;strong>Assertion functions inside classes&lt;/strong>&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Assertion functions inside classes&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Here, we assert that the user is logged in and get proper inference on the user&amp;rsquo;s logged in user id&lt;/p>
+&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="nx">createPost&lt;/span>&lt;span class="p">}&lt;/span> &lt;span class="kr">from&lt;/span> &lt;span class="s2">&amp;#34;./createPost&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ts" data-lang="ts">&lt;span class="line">&lt;span class="cl">&lt;span class="kr">import&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">createPost&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="kr">from&lt;/span> &lt;span class="s1">&amp;#39;./createPost&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">export&lt;/span> &lt;span class="kr">class&lt;/span> &lt;span class="nx">SDK&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">Public&lt;/span> &lt;span class="nx">loggedInUserId?&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">){}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">constructor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">public&lt;/span> &lt;span class="nx">loggedInUserId?&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">createPost&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">title&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">createPost&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">title&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">assertUserIsLoggedIn&lt;/span>&lt;span class="p">();&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">createPost&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">loggedInUserId&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">title&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">assertUserIsLoggedIn&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">asserts&lt;/span> &lt;span class="k">this&lt;/span> &lt;span class="k">is&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">assertUserIsLoggedIn&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="k">asserts&lt;/span> &lt;span class="k">this&lt;/span> &lt;span class="k">is&lt;/span> &lt;span class="k">this&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">loggedInUserId&lt;/span>: &lt;span class="kt">string&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">loggedInUserId&lt;/span>&lt;span class="p">){&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;user is not logged in&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">loggedInUserId&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">throw&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nb">Error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;user is not logged in&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
@@ -12891,15 +12965,15 @@ A Side Effect is where your function modifies some state variable outside of its
 >haizlin/fe-interview&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/ryanmcdermott/clean-code-javascript#introduction" target="_blank" rel="noopener"
 >ryanmcdermott/clean-code-javascript: Clean Code concepts adapted for JavaScript&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API" target="_blank" rel="noopener"
 >WebRTC API - Web API 接口参考 | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド 124</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/</link><pubDate>Tue, 18 Jan 2022 17:01:46 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/frontend-124-cover.jpg" alt="Featured image of post 毎日のフロントエンド 124" />&lt;h1 id="第一百二十四日">第一百二十四日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド 124</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/</link><pubDate>Tue, 18 Jan 2022 17:01:46 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-124/frontend-124-cover.jpg" alt="Featured image of post 毎日のフロントエンド 124" />&lt;h1 id="第一百二十四日">第一百二十四日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5规范将元素分为哪几个大类特点">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>规范将元素分为哪几个大类？特点&lt;/h3>
 &lt;p>&lt;figure
@@ -14404,15 +14478,15 @@ arguments. Other &amp;ldquo;falsy&amp;rdquo; values such as &lt;code>''&lt;/code
 >Program your own WYSIWYG editor - with HTML, CSS &amp;amp; JavaScript&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="http://www.ruanyifeng.com/blog/2018/07/web-worker.html" target="_blank" rel="noopener"
 >Web Worker 使用教程 - 阮一峰的网络日志&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://webdeasy.de/en/program-wysiwyg-editor/" target="_blank" rel="noopener"
 >Program your own WYSIWYG editor - with HTML, CSS &amp;amp; JavaScript&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド 119</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/</link><pubDate>Thu, 13 Jan 2022 20:40:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/frontend-119-cover.jpg" alt="Featured image of post 毎日のフロントエンド 119" />&lt;h1 id="第一百一十九日">第一百一十九日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド 119</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/</link><pubDate>Thu, 13 Jan 2022 20:40:37 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-119/frontend-119-cover.jpg" alt="Featured image of post 毎日のフロントエンド 119" />&lt;h1 id="第一百一十九日">第一百一十九日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-富文本">&lt;strong>Question:&lt;/strong> 富文本&lt;/h3>
 &lt;p>富文本格式（Rich Text Format）即 RTF 格式，又称多文本格式，是由微软公司开发的跨平台文档格式。最大的特点是：所见即所得，你把格式调整成什么样子，就会直接显示出什么样的效果。这一点和 words 类似。&lt;/p>
@@ -14551,7 +14625,7 @@ alt="design system">
 &lt;/li>
 &lt;/ul>
 &lt;h5 id="生成骨架屏基本方案">生成骨架屏基本方案&lt;/h5>
-&lt;p>通过 puppeteer&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> 在服务端使用 &lt;code>headless Chrome&lt;/code> 打开开发中的需要生成骨架屏的页面，在等待页面加载渲染完成之后，在保留页面布局样式的前提下，通过对页面中元素进行删减或增添，对已有元素通过层叠样式进行覆盖，这样达到在不改变页面布局下，隐藏图片和文字，通过样式覆盖，使得其展示为灰色块。然后将修改后的 HTML 和 CSS 样式提取出来，这样就可以生成想要的骨架屏了。&lt;/p>
+&lt;p>通过 puppeteer&lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> 在服务端使用 &lt;code>headless Chrome&lt;/code> 打开开发中的需要生成骨架屏的页面，在等待页面加载渲染完成之后，在保留页面布局样式的前提下，通过对页面中元素进行删减或增添，对已有元素通过层叠样式进行覆盖，这样达到在不改变页面布局下，隐藏图片和文字，通过样式覆盖，使得其展示为灰色块。然后将修改后的 HTML 和 CSS 样式提取出来，这样就可以生成想要的骨架屏了。&lt;/p>
 &lt;h5 id="具体生成过程">具体生成过程&lt;/h5>
 &lt;ul>
 &lt;li>
@@ -14782,19 +14856,19 @@ alt="design system">
 >Media accessibility&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/Jocs/jocs.github.io/issues/22" target="_blank" rel="noopener"
 >一种自动化生成骨架屏的方案&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://github.com/puppeteer/puppeteer" target="_blank" rel="noopener"
->puppeteer/puppeteer: Headless Chrome Node.js API&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+>puppeteer/puppeteer: Headless Chrome Node.js API&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://www.npmjs.com/package/jsdom" target="_blank" rel="noopener"
 >jsdom - npm&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド 117</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/</link><pubDate>Tue, 11 Jan 2022 12:05:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/frontend-117-cover.jpg" alt="Featured image of post 毎日のフロントエンド 117" />&lt;h1 id="第一百一十七日">第一百一十七日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド 117</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/</link><pubDate>Tue, 11 Jan 2022 12:05:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-117/frontend-117-cover.jpg" alt="Featured image of post 毎日のフロントエンド 117" />&lt;h1 id="第一百一十七日">第一百一十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-frame-和-iframe-有什么区别">&lt;strong>Question:&lt;/strong> frame 和 iframe 有什么区别&lt;/h3>
 &lt;blockquote>
@@ -15761,15 +15835,15 @@ alt="原型模式">
 >CSS cursor 属性&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://cloud.tencent.com/developer/article/1694166" target="_blank" rel="noopener"
 >设计模式(7)[JS 版]-JavaScript 设计模式之原型模式如何实现&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create" target="_blank" rel="noopener"
 >Object.create() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド 108</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-108/</link><pubDate>Sun, 02 Jan 2022 11:52:07 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-108/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-108/frontend-108-cover.jpg" alt="Featured image of post 毎日のフロントエンド 108" />&lt;h1 id="第一百零八日">第一百零八日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド 108</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-108/</link><pubDate>Sun, 02 Jan 2022 11:52:07 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-108/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-108/frontend-108-cover.jpg" alt="Featured image of post 毎日のフロントエンド 108" />&lt;h1 id="第一百零八日">第一百零八日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-在默认的情况下使用-h1-标签呈现出什么效果">&lt;strong>Question:&lt;/strong> 在默认的情况下，使用 h1 标签呈现出什么效果&lt;/h3>
 &lt;p>&lt;code>h1&lt;/code>标签&lt;/p>
@@ -16559,19 +16633,19 @@ alt="原型模式">
 >前端进阶&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903814332432397" target="_blank" rel="noopener"
 >前端响应式布局原理与方案（详细版） - 掘金&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push#description" target="_blank" rel="noopener"
 >Array.prototype.push() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" target="_blank" rel="noopener"
 >Array.prototype.slice() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド 101</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/</link><pubDate>Sun, 26 Dec 2021 17:44:12 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover.jpg" alt="Featured image of post 毎日のフロントエンド 101" />&lt;h1 id="第一百零一日">第一百零一日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド 101</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/</link><pubDate>Sun, 26 Dec 2021 17:44:12 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-101/frontend-101-cover.jpg" alt="Featured image of post 毎日のフロントエンド 101" />&lt;h1 id="第一百零一日">第一百零一日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-accesskey举例说明它有什么运用场景">&lt;strong>Question:&lt;/strong> &lt;code>accesskey&lt;/code>，举例说明它有什么运用场景&lt;/h3>
 &lt;ul>
@@ -17167,15 +17241,15 @@ alt="原型模式">
 >&lt;code>&amp;lt;sub&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/vertical-align" target="_blank" rel="noopener"
 >vertical-align - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame" target="_blank" rel="noopener"
 >&lt;code>window.requestAnimationFrame&lt;/code> - Web API 接口参考 | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド 95</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-95/</link><pubDate>Mon, 20 Dec 2021 09:20:03 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-95/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-95/frontend-95-cover.jpg" alt="Featured image of post 毎日のフロントエンド 95" />&lt;h1 id="第九十五日">第九十五日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド 95</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-95/</link><pubDate>Mon, 20 Dec 2021 09:20:03 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-95/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-95/frontend-95-cover.jpg" alt="Featured image of post 毎日のフロントエンド 95" />&lt;h1 id="第九十五日">第九十五日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5-标准提供了哪些新的-api">&lt;strong>Question:&lt;/strong> HTML5 标准提供了哪些新的 API&lt;/h3>
 &lt;ol>
@@ -18012,19 +18086,19 @@ loading="lazy"
 >Array.prototype.slice() - JavaScript | MDN&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000005076858" target="_blank" rel="noopener"
 >深入理解 JavaScript 类数组 - SegmentFault 思否&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from" target="_blank" rel="noopener"
 >Array.from() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" target="_blank" rel="noopener"
 >Array.prototype.slice() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド 87</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/</link><pubDate>Sun, 12 Dec 2021 15:34:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/frontend-87-cover.jpg" alt="Featured image of post 毎日のフロントエンド 87" />&lt;h1 id="第八十七日">第八十七日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド 87</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/</link><pubDate>Sun, 12 Dec 2021 15:34:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-87/frontend-87-cover.jpg" alt="Featured image of post 毎日のフロントエンド 87" />&lt;h1 id="第八十七日">第八十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-举例说明如何原样输出-html-代码不被浏览器解析">&lt;strong>Question:&lt;/strong> 举例说明如何原样输出 HTML 代码，不被浏览器解析&lt;/h3>
 &lt;ul>
@@ -18132,27 +18206,27 @@ loading="lazy"
 >lgwebdream/FE-Interview &lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Functions" target="_blank" rel="noopener"
 >函数 - JavaScript | MDN&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/pre" target="_blank" rel="noopener"
 >&lt;code>&amp;lt;pre&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/code" target="_blank" rel="noopener"
 >&lt;code>&amp;lt;code&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:3" role="doc-endnote">
+&lt;li id="fn:3">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea" target="_blank" rel="noopener"
 >&lt;code>&amp;lt;textarea&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:4" role="doc-endnote">
+&lt;li id="fn:4">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/length" target="_blank" rel="noopener"
 >&lt;code>Window.length&lt;/code> - Web APIs | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド 86</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-86/</link><pubDate>Sat, 11 Dec 2021 20:18:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-86/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-86/frontend-86-cover.jpg" alt="Featured image of post 毎日のフロントエンド 86" />&lt;h1 id="第八十六日">第八十六日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド 86</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-86/</link><pubDate>Sat, 11 Dec 2021 20:18:58 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-86/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-86/frontend-86-cover.jpg" alt="Featured image of post 毎日のフロントエンド 86" />&lt;h1 id="第八十六日">第八十六日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5的ruby标签有哪些应用场景">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>的&lt;code>ruby&lt;/code>标签，有哪些应用场景&lt;/h3>
 &lt;p>HTML &lt;code>&amp;lt;ruby&amp;gt;&lt;/code> 元素 被用来展示东亚文字注音或字符注释。&lt;/p>
@@ -18297,7 +18371,7 @@ loading="lazy"
 &lt;h3 id="question-js-延迟加载的方式有哪些">&lt;strong>Question:&lt;/strong> js 延迟加载的方式有哪些&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>&lt;code>defer&lt;/code> 属性&lt;/strong>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
-&lt;li>&lt;strong>&lt;code>async&lt;/code> 属性&lt;/strong>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
+&lt;li>&lt;strong>&lt;code>async&lt;/code> 属性&lt;/strong>&lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/li>
 &lt;li>动态创建 DOM 方式&lt;/li>
 &lt;li>使用 &lt;code>setTimeout&lt;/code> 延迟方法&lt;/li>
 &lt;li>让 JS 最后加载&lt;/li>
@@ -18330,19 +18404,19 @@ loading="lazy"
 >haizlin/fe-interview&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
 >lgwebdream/FE-Interview &lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/script#attr-defer" target="_blank" rel="noopener"
->&lt;code>&amp;lt;script&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+>&lt;code>&amp;lt;script&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push" target="_blank" rel="noopener"
 >Array.prototype.push() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　 84</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/</link><pubDate>Thu, 09 Dec 2021 17:14:12 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/frontend-84-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 84" />&lt;h1 id="第八十四日">第八十四日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　 84</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/</link><pubDate>Thu, 09 Dec 2021 17:14:12 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-84/frontend-84-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 84" />&lt;h1 id="第八十四日">第八十四日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-a标签下的hrefjavascriptvoid0起到了什么作用">&lt;strong>Question:&lt;/strong> &lt;code>a&lt;/code>标签下的&lt;code>href=&amp;quot;javascript:void(0)&amp;quot;&lt;/code>起到了什么作用&lt;/h3>
 &lt;p>当用户点击一个以 &lt;code>javascript:&lt;/code> 开头的&lt;code>URI&lt;/code> 时，它会执行 URI 中的代码，然后用返回的值替换页面内容，除非返回的值是&lt;code>undefined&lt;/code>。&lt;code>void&lt;/code>运算符可用于返回&lt;code>undefined&lt;/code>。&lt;/p>
@@ -18400,15 +18474,15 @@ loading="lazy"
 >lgwebdream/FE-Interview &lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/void" target="_blank" rel="noopener"
 >void 运算符 - JavaScript | MDN&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="noopener"
 >Object.defineProperty() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　 83</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/</link><pubDate>Wed, 08 Dec 2021 17:52:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/frontend-83-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 83" />&lt;h1 id="第八十三日">第八十三日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　 83</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/</link><pubDate>Wed, 08 Dec 2021 17:52:29 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-83/frontend-83-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 83" />&lt;h1 id="第八十三日">第八十三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-在新窗口打开链接的方法是什么那怎么设置全站链接都在新窗口打开">&lt;strong>Question:&lt;/strong> 在新窗口打开链接的方法是什么？那怎么设置全站链接都在新窗口打开&lt;/h3>
 &lt;ol>
@@ -18801,15 +18875,15 @@ alt="encode-decode">
 >CSS 单词换行 and 断词，你真的完全了解吗 | AlloyTeam&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903697424580616" target="_blank" rel="noopener"
 >彻底搞懂 word-wrap、white-space 等 - 掘金&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI" target="_blank" rel="noopener"
 >encodeURI() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　 79</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/</link><pubDate>Sat, 04 Dec 2021 17:26:38 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/frontend-79-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 79" />&lt;h1 id="第七十九日">第七十九日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　 79</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/</link><pubDate>Sat, 04 Dec 2021 17:26:38 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-79/frontend-79-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 79" />&lt;h1 id="第七十九日">第七十九日&lt;/h1>
 &lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="question-说说你对bem规范的理解同时举例说明常见的css规范有哪些">&lt;strong>Question:&lt;/strong> 说说你对&lt;code>BEM&lt;/code>规范的理解，同时举例说明常见的&lt;code>CSS&lt;/code>规范有哪些&lt;/h3>
 &lt;h4 id="bem规范">&lt;code>BEM&lt;/code>规范&lt;/h4>
@@ -19045,63 +19119,63 @@ alt="encode-decode">
 >lgwebdream/FE-Interview &lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/datalist" target="_blank" rel="noopener"
 >datalist - HTML（超文本标记语言） | MDN&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank" rel="noopener"
 >Array.prototype.forEach() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank" rel="noopener"
 >Array.prototype.map() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:3" role="doc-endnote">
+&lt;li id="fn:3">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" target="_blank" rel="noopener"
 >Array.prototype.filter() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:4" role="doc-endnote">
+&lt;li id="fn:4">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some" target="_blank" rel="noopener"
 >Array.prototype.some() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:5" role="doc-endnote">
+&lt;li id="fn:5">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/every" target="_blank" rel="noopener"
 >Array.prototype.every() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:6" role="doc-endnote">
+&lt;li id="fn:6">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" target="_blank" rel="noopener"
 >Array.prototype.reduce() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:7" role="doc-endnote">
+&lt;li id="fn:7">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight" target="_blank" rel="noopener"
 >Array.prototype.reduceRight() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:8" role="doc-endnote">
+&lt;li id="fn:8">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of" target="_blank" rel="noopener"
 >for&amp;hellip;of - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:8" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:9" role="doc-endnote">
+&lt;li id="fn:9">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys" target="_blank" rel="noopener"
 >Object.keys() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:9" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:10" role="doc-endnote">
+&lt;li id="fn:10">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/values" target="_blank" rel="noopener"
 >Object.values() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:10" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:11" role="doc-endnote">
+&lt;li id="fn:11">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames" target="_blank" rel="noopener"
 >Object.getOwnPropertyNames() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:11" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:12" role="doc-endnote">
+&lt;li id="fn:12">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/entries" target="_blank" rel="noopener"
 >Object.entries() - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:12" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:13" role="doc-endnote">
+&lt;li id="fn:13">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in" target="_blank" rel="noopener"
 >for&amp;hellip;in - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:13" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　 77</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-77/</link><pubDate>Thu, 02 Dec 2021 20:41:22 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-77/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-77/frontend-77-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 77" />&lt;h1 id="第七十七日">第七十七日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　 77</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-77/</link><pubDate>Thu, 02 Dec 2021 20:41:22 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-77/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-77/frontend-77-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 77" />&lt;h1 id="第七十七日">第七十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-html5的img标签属性-srcset-和-sizes-的理解都有哪些应用场景">&lt;strong>Question:&lt;/strong> &lt;code>HTML5&lt;/code>的&lt;code>img&lt;/code>标签属性 &lt;code>srcset&lt;/code> 和 &lt;code>sizes&lt;/code> 的理解？都有哪些应用场景？&lt;/h3>
 &lt;p>&lt;code>HTMLImageElement.srcset&lt;/code>, &lt;code>srcset&lt;/code> 的值是一个字符串，用来定义一个或多个图像候选地址，以 &lt;code>,&lt;/code>分割，每个候选地址将在特定条件下得以使用。候选地址包含图片 &lt;code>URL&lt;/code> 和一个可选的宽度描述符和像素密度描述符，该候选地址用来在特定条件下替代原始地址成为 &lt;code>src (en-US)&lt;/code> 的属性。&lt;/p>
@@ -19749,27 +19823,27 @@ alt="encode-decode">
 >如何关闭表单自动填充 - Web 安全 | MDN&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" target="_blank" rel="noopener"
 >Base64 - MDN Web Docs Glossary: Definitions of Web-related terms | MDN&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://zh.wikipedia.org/zh-cn/Uuencode" target="_blank" rel="noopener"
 >Uuencode - 维基百科，自由的百科全书&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://en.wikipedia.org/wiki/BinHex" target="_blank" rel="noopener"
 >BinHex - Wikipedia&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:3" role="doc-endnote">
+&lt;li id="fn:3">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/atob" target="_blank" rel="noopener"
 >WindowOrWorkerGlobalScope.atob() - Web API 接口参考 | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:4" role="doc-endnote">
+&lt;li id="fn:4">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/btoa" target="_blank" rel="noopener"
 >WindowOrWorkerGlobalScope.btoa() - Web API 接口参考 | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　 68</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-68/</link><pubDate>Tue, 23 Nov 2021 12:07:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-68/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-68/frontend-68-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 68" />&lt;h1 id="第六十八日">第六十八日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　 68</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-68/</link><pubDate>Tue, 23 Nov 2021 12:07:51 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-68/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-68/frontend-68-cover.jpg" alt="Featured image of post 毎日のフロントエンド　 68" />&lt;h1 id="第六十八日">第六十八日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说明html5在移动端如何打开-app">&lt;strong>Question:&lt;/strong> 说明&lt;code>HTML5&lt;/code>在移动端如何打开 APP&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="nx">a&lt;/span> &lt;span class="nx">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s1">&amp;#39;zhihu://&amp;#39;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="nx">打开应用&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">/a&amp;gt;&lt;/span>
@@ -21055,19 +21129,19 @@ loading="lazy"
 >haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
 >lgwebdream/FE-Interview &lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" target="_blank" rel="noopener"
 >&lt;code>&amp;lt;form&amp;gt;&lt;/code>: The Form element - HTML: HyperText Markup Language | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" target="_blank" rel="noopener"
 >&lt;code>&amp;lt;input&amp;gt;&lt;/code>: The Input (Form Input) element - HTML: HyperText Markup Language | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　54</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/</link><pubDate>Tue, 09 Nov 2021 11:39:45 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/frontend-54-cover.jpg" alt="Featured image of post 毎日のフロントエンド　54" />&lt;h1 id="第五十四日">第五十四日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　54</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/</link><pubDate>Tue, 09 Nov 2021 11:39:45 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-54/frontend-54-cover.jpg" alt="Featured image of post 毎日のフロントエンド　54" />&lt;h1 id="第五十四日">第五十四日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-了解-html5-的地理定位吗怎么使用">&lt;strong>Question:&lt;/strong> 了解 HTML5 的地理定位吗？怎么使用&lt;/h3>
 &lt;p>&lt;code>Geolocation.getCurrentPosition()&lt;/code> 方法用来获取设备当前位置&lt;/p>
@@ -21123,15 +21197,15 @@ c=1 赋值给了 a， 1+1+10， 10 为函数 a 中块级作用域内定义的&lt
 >haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
 >lgwebdream/FE-Interview &lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments#%E5%89%A9%E4%BD%99%E5%8F%82%E6%95%B0%E3%80%81%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E5%92%8C%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC%E5%8F%82%E6%95%B0" target="_blank" rel="noopener"
 >Arguments 对象 - JavaScript | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　53</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/</link><pubDate>Mon, 08 Nov 2021 19:38:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/frontend-53-cover.jpg" alt="Featured image of post 毎日のフロントエンド　53" />&lt;h1 id="第五十三日">第五十三日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　53</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/</link><pubDate>Mon, 08 Nov 2021 19:38:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-53/frontend-53-cover.jpg" alt="Featured image of post 毎日のフロントエンド　53" />&lt;h1 id="第五十三日">第五十三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-web-workers-能帮我们解决哪些问题">&lt;strong>Question:&lt;/strong> &lt;code>web workers&lt;/code> 能帮我们解决哪些问题&lt;/h3>
 &lt;p>&lt;code>Web Worker&lt;/code> 的作用，就是为 &lt;code>JavaScript&lt;/code> 创造多线程环境，允许主线程创建 &lt;code>Worker&lt;/code> 线程，将一些任务分配给后者运行。在主线程运行的同时，&lt;code>Worker&lt;/code> 线程在后台运行，两者互不干扰。等到 &lt;code>Worker&lt;/code> 线程完成计算任务，再把结果返回给主线程。这样的好处是，一些计算密集型或高延迟的任务，被 Worker 线程负担了，主线程（通常负责 UI 交互）就会很流畅，不会被阻塞或拖慢。&lt;/p>
@@ -21386,15 +21460,15 @@ In the above-shown method, we have improved the performance, but we have lost ac
 >haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
 >lgwebdream/FE-Interview &lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://css-tricks.com/bem-101/" target="_blank" rel="noopener"
 >BEM 101 | CSS-Tricks&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>Append Item to Array in JavaScript</title><link>https://youkoucoding.github.io/p/append-item-to-array-in-javascript/</link><pubDate>Thu, 04 Nov 2021 16:52:18 +0900</pubDate><guid>https://youkoucoding.github.io/p/append-item-to-array-in-javascript/</guid><description>&lt;img src="https://youkoucoding.github.io/p/append-item-to-array-in-javascript/append-item-array-cover.jpg" alt="Featured image of post Append Item to Array in JavaScript" />&lt;h1 id="5-way-to-append-item-to-array-in-javascript">5 Way to Append Item to Array in JavaScript&lt;/h1>
+&lt;/div></description></item><item><title>Append Item to Array in JavaScript</title><link>https://youkoucoding.github.io/p/append-item-to-array-in-javascript/</link><pubDate>Thu, 04 Nov 2021 16:52:18 +0900</pubDate><guid>https://youkoucoding.github.io/p/append-item-to-array-in-javascript/</guid><description>&lt;img src="https://youkoucoding.github.io/p/append-item-to-array-in-javascript/append-item-array-cover.jpg" alt="Featured image of post Append Item to Array in JavaScript" />&lt;h1 id="5-way-to-append-item-to-array-in-javascript">5 Way to Append Item to Array in JavaScript&lt;/h1>
 &lt;p>Here are 5 ways to add an item to the end of an array.&lt;/p>
 &lt;p>&lt;code>push splice length&lt;/code> will mutate the orginal array.&lt;/p>
 &lt;p>Whereas &lt;code>concat&lt;/code> and &lt;code>spread&lt;/code> will not and will instead return a new array.&lt;/p>
@@ -21787,27 +21861,27 @@ alt="react-event">
 >haizlin/fe-interview: HTML/CSS/JavaScript/Vue/React/Nodejs/TypeScript/ECMAScritpt/Webpack/Jquery/小程序/软技能……&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview" target="_blank" rel="noopener"
 >lgwebdream/FE-Interview &lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video" target="_blank" rel="noopener"
 >&lt;code>&amp;lt;video&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio" target="_blank" rel="noopener"
 >&lt;code>&amp;lt;audio&amp;gt;&lt;/code> - HTML（超文本标记语言） | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:3" role="doc-endnote">
+&lt;li id="fn:3">
 &lt;p>&lt;a class="link" href="http://nec.netease.com/standard/css-sort.html" target="_blank" rel="noopener"
 >分类方法 - CSS 规范 - 规范 - NEC : 更好的 CSS 样式解决方案&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:4" role="doc-endnote">
+&lt;li id="fn:4">
 &lt;p>&lt;a class="link" href="https://github.com/lgwebdream/FE-Interview/issues/23" target="_blank" rel="noopener"
 >React 事件绑定原理 · Issue #23 · lgwebdream/FE-Interview&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　46</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/</link><pubDate>Mon, 01 Nov 2021 15:01:13 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/frontend-46-cover.jpg" alt="Featured image of post 毎日のフロントエンド　46" />&lt;h1 id="第四十六日">第四十六日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　46</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/</link><pubDate>Mon, 01 Nov 2021 15:01:13 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-46/frontend-46-cover.jpg" alt="Featured image of post 毎日のフロントエンド　46" />&lt;h1 id="第四十六日">第四十六日&lt;/h1>
 &lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="question-对媒体查询的理解">&lt;strong>Question:&lt;/strong> 对媒体查询的理解&lt;/h3>
 &lt;h4 id="css3中的媒体查询">&lt;code>CSS3&lt;/code>中的媒体查询&lt;/h4>
@@ -22861,15 +22935,15 @@ alt="http-cache-flow-chart">
 >Js 前端模块化规范 &lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000039375332" target="_blank" rel="noopener"
 >Javascript 模块化详解 - SegmentFault 思否&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://requirejs.org/" target="_blank" rel="noopener"
 >RequireJS&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　38</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/</link><pubDate>Sun, 24 Oct 2021 10:07:50 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/frontend-38-cover.jpg" alt="Featured image of post 毎日のフロントエンド　38" />&lt;h1 id="第三十八日">第三十八日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　38</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/</link><pubDate>Sun, 24 Oct 2021 10:07:50 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-38/frontend-38-cover.jpg" alt="Featured image of post 毎日のフロントエンド　38" />&lt;h1 id="第三十八日">第三十八日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说说你对-cookie-和-session-的理解">&lt;strong>Question:&lt;/strong> 说说你对 &lt;code>cookie&lt;/code> 和 &lt;code>session&lt;/code> 的理解&lt;/h3>
 &lt;h4 id="cookie">cookie&lt;/h4>
@@ -23604,19 +23678,19 @@ alt="this-2">
 >What Does &amp;rsquo;this&amp;rsquo; Mean in JavaScript? The this Keyword Explained with Examples&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
 >前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-6/#css" target="_blank" rel="noopener"
 >毎日のフロントエンド　 6 - CSS&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://github.com/getify/You-Dont-Know-JS/issues/1031" target="_blank" rel="noopener"
 >&amp;ldquo;this &amp;amp; object prototypes&amp;rdquo;: Chapter 2 &amp;lsquo;Explicit Binding&amp;rsquo; - question about explicit binding losing the &amp;ldquo;this&amp;rdquo; binding · Issue #1031 · getify/You-Dont-Know-JS&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　32</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/</link><pubDate>Mon, 18 Oct 2021 17:44:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/frontend-31-cover.jpg" alt="Featured image of post 毎日のフロントエンド　32" />&lt;h1 id="第三十二日">第三十二日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　32</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/</link><pubDate>Mon, 18 Oct 2021 17:44:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-32/frontend-31-cover.jpg" alt="Featured image of post 毎日のフロントエンド　32" />&lt;h1 id="第三十二日">第三十二日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-说说对-html-元素的显示优先级的理解">&lt;strong>Question:&lt;/strong> 说说对 &lt;code>HTML&lt;/code> 元素的显示优先级的理解&lt;/h3>
 &lt;p>Day20 类似。&lt;/p>
@@ -24730,19 +24804,19 @@ CSS 预处理器种类繁多，目前&lt;code>Sass&lt;/code>、&lt;code>Less&lt;
 &lt;h2 id="reference">Reference&lt;/h2>
 &lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
 >前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes" target="_blank" rel="noopener"
 >使用数据属性 | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000016231512" target="_blank" rel="noopener"
 > AST 抽象语法树——最基础的 javascript 重点知识 &lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>Currying in JavaScript (カリー化 &amp; 柯里化)</title><link>https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/</link><pubDate>Sat, 09 Oct 2021 15:24:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/</guid><description>&lt;img src="https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/currying-cover.png" alt="Featured image of post Currying in JavaScript (カリー化 &amp; 柯里化)" />&lt;h1 id="currying-in-javasctipt">Currying in JavaSctipt&lt;/h1>
+&lt;/div></description></item><item><title>Currying in JavaScript (カリー化 &amp; 柯里化)</title><link>https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/</link><pubDate>Sat, 09 Oct 2021 15:24:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/</guid><description>&lt;img src="https://youkoucoding.github.io/p/currying-in-javascript-%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96-%E6%9F%AF%E9%87%8C%E5%8C%96/currying-cover.png" alt="Featured image of post Currying in JavaScript (カリー化 &amp; 柯里化)" />&lt;h1 id="currying-in-javasctipt">Currying in JavaSctipt&lt;/h1>
 &lt;p>Functional programming is a style of programming that attempts to pass functions as arguments(callbacks) and return functions without side-effects(changes to the program&amp;rsquo;s state).&lt;/p>
 &lt;p>So many languages adopted this programming style. &lt;code>Javascript&lt;/code>, &lt;code>Haskell&lt;/code>, &lt;code>Erlang&lt;/code>, &lt;code>Clojure&lt;/code>, and &lt;code>Scala&lt;/code> are the most popular among them.&lt;/p>
 &lt;p>And with its ability to pass the return functions, it brought so many conscepts: &lt;strong>Pure Functions&lt;/strong>, &lt;strong>Currying&lt;/strong>, &lt;strong>Higher-Order functions&lt;/strong>.&lt;/p>
@@ -24879,15 +24953,15 @@ CSS 预处理器种类繁多，目前&lt;code>Sass&lt;/code>、&lt;code>Less&lt;
 >カリー化&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch4.html#%E4%B8%8D%E4%BB%85%E4%BB%85%E6%98%AF%E5%8F%8C%E5%85%B3%E8%AF%AD%E5%92%96%E5%96%B1" target="_blank" rel="noopener"
 >柯里化（curry） · 函数式编程指北&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://amnsingh.medium.com/lexical-environment-the-hidden-part-to-understand-closures-71d60efac0e0" target="_blank" rel="noopener"
 >Lexical Environment — The hidden part to understand Closures | by Amandeep Singh | Medium&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　23</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/</link><pubDate>Fri, 08 Oct 2021 22:28:15 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/frontend-23-cover.jpg" alt="Featured image of post 毎日のフロントエンド　23" />&lt;h1 id="第二十三日">第二十三日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　23</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/</link><pubDate>Fri, 08 Oct 2021 22:28:15 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-23/frontend-23-cover.jpg" alt="Featured image of post 毎日のフロントエンド　23" />&lt;h1 id="第二十三日">第二十三日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-关于form标签的-enctype-属性你有哪些了解">&lt;strong>#Question:&lt;/strong> 关于&lt;code>&amp;lt;form&amp;gt;&lt;/code>标签的 &lt;code>enctype&lt;/code> 属性你有哪些了解&lt;/h3>
 &lt;p>&lt;code>form&lt;/code> 标签的 &lt;code>enctype&lt;/code>(是表单提交属性之一) 属性指定将数据回发到服务器时浏览器如果对表单数据进行编码，其有三种编码形式&lt;/p>
@@ -25042,15 +25116,15 @@ alt="result-specificity">
 &lt;h2 id="reference">Reference&lt;/h2>
 &lt;p>&lt;a class="link" href="http://www.h-camel.com/index.html" target="_blank" rel="noopener"
 >前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://en.wikipedia.org/wiki/Media_type" target="_blank" rel="noopener"
 >Media type - Wikipedia&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>JavaScript Tips and Tricks</title><link>https://youkoucoding.github.io/p/javascript-tips-and-tricks/</link><pubDate>Fri, 08 Oct 2021 00:47:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/javascript-tips-and-tricks/</guid><description>&lt;img src="https://youkoucoding.github.io/p/javascript-tips-and-tricks/tip-trick-js.jpg" alt="Featured image of post JavaScript Tips and Tricks" />&lt;h2 id="1-quick-consolelog">1. Quick &lt;code>console.log()&lt;/code>&lt;/h2>
+&lt;/div></description></item><item><title>JavaScript Tips and Tricks</title><link>https://youkoucoding.github.io/p/javascript-tips-and-tricks/</link><pubDate>Fri, 08 Oct 2021 00:47:26 +0900</pubDate><guid>https://youkoucoding.github.io/p/javascript-tips-and-tricks/</guid><description>&lt;img src="https://youkoucoding.github.io/p/javascript-tips-and-tricks/tip-trick-js.jpg" alt="Featured image of post JavaScript Tips and Tricks" />&lt;h2 id="1-quick-consolelog">1. Quick &lt;code>console.log()&lt;/code>&lt;/h2>
 &lt;p>Get rid of writing console.log again and again and make it shorter by using the following code snippet.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">let&lt;/span> &lt;span class="nx">clog&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">bind&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -25273,19 +25347,19 @@ alt="result-specificity">
 >移除会阻止内容呈现的 JavaScript  |  PageSpeed Insights  |  Google Developers&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://levelup.gitconnected.com/all-about-script-87fea475b976" target="_blank" rel="noopener"
 >All about &lt;!-- raw HTML omitted -->. In this article, you’ll learn about… | by Oussema Miled | Level Up Coding&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/issues/74#issuecomment-643983992" target="_blank" rel="noopener"
 >只谈 js 文件和 html dom 标签&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html" target="_blank" rel="noopener"
 >async vs defer attributes - Growing with the Web&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　21</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/</link><pubDate>Wed, 06 Oct 2021 12:26:28 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/frontend-21-cover.jpg" alt="Featured image of post 毎日のフロントエンド　21" />&lt;h1 id="第二十一日">第二十一日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　21</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/</link><pubDate>Wed, 06 Oct 2021 12:26:28 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-21/frontend-21-cover.jpg" alt="Featured image of post 毎日のフロントエンド　21" />&lt;h1 id="第二十一日">第二十一日&lt;/h1>
 &lt;h2 id="html">HTMl&lt;/h2>
 &lt;h3 id="question-谈谈对input元素中readonly和disabled属性的理解">&lt;strong>#Question:&lt;/strong> 谈谈对&lt;code>input&lt;/code>元素中&lt;code>readonly&lt;/code>和&lt;code>disabled&lt;/code>属性的理解&lt;/h3>
 &lt;p>相同点：&lt;/p>
@@ -25323,19 +25397,19 @@ alt="result-specificity">
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
 &lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903721025929223" target="_blank" rel="noopener"
 >CSS 深入理解之 line-height&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#values" target="_blank" rel="noopener"
 >line-height - CSS: Cascading Style Sheets | MDN&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/issues/72#issuecomment-544332674" target="_blank" rel="noopener"
 >中文字符对应编写正则&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　20</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/</link><pubDate>Tue, 05 Oct 2021 11:27:36 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/frontend-20-cover.jpg" alt="Featured image of post 毎日のフロントエンド　20" />&lt;h1 id="第二十日">第二十日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　20</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/</link><pubDate>Tue, 05 Oct 2021 11:27:36 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-20/frontend-20-cover.jpg" alt="Featured image of post 毎日のフロントエンド　20" />&lt;h1 id="第二十日">第二十日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-请描述-html-元素的显示优先级">&lt;strong>#Question:&lt;/strong> 请描述 HTML 元素的显示优先级&lt;/h3>
 &lt;p>在 html 中，帧元素（&lt;code>frameset&lt;/code>）的优先级最高(已不提倡使用)，表单元素比非表单元素的优先级要高。&lt;/p>
@@ -25539,19 +25613,19 @@ alt="result-specificity">
 >前端面试每日 3+1-以前端面试题来驱动学习，提倡每日学习与思考，每天进步一点！&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode" target="_blank" rel="noopener"
 >Strict mode - JavaScript | MDN&lt;/a>&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>&lt;a class="link" href="https://www.zhangxinxu.com/wordpress/2017/05/html-area-map/" target="_blank" rel="noopener"
 >HTML area map 标签及在实际开发中的应用&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li id="fn:2" role="doc-endnote">
+&lt;li id="fn:2">
 &lt;p>&lt;a class="link" href="https://www.runoob.com/js/js-strict.html" target="_blank" rel="noopener"
 >JavaScript 严格模式(use strict) | 菜鸟教程&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>毎日のフロントエンド　17</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/</link><pubDate>Fri, 01 Oct 2021 23:29:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/frontend-17-cover.jpg" alt="Featured image of post 毎日のフロントエンド　17" />&lt;h1 id="第十七日">第十七日&lt;/h1>
+&lt;/div></description></item><item><title>毎日のフロントエンド　17</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/</link><pubDate>Fri, 01 Oct 2021 23:29:44 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/</guid><description>&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-17/frontend-17-cover.jpg" alt="Featured image of post 毎日のフロントエンド　17" />&lt;h1 id="第十七日">第十七日&lt;/h1>
 &lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="question-你认为-table-的作用和优缺点是什么呢">&lt;strong>#Question:&lt;/strong> 你认为 table 的作用和优缺点是什么呢？&lt;/h3>
 &lt;ul>
@@ -28788,15 +28862,15 @@ alt="Photo by Hudai Gayiran on Unsplash">
 &lt;p>X&lt;!-- raw HTML omitted -->n&lt;!-- raw HTML omitted --> + Y&lt;!-- raw HTML omitted -->n&lt;!-- raw HTML omitted --> = Z&lt;!-- raw HTML omitted -->n&lt;!-- raw HTML omitted -->&lt;/p>
 &lt;p>Press &lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->CTRL&lt;!-- raw HTML omitted -->+&lt;!-- raw HTML omitted -->ALT&lt;!-- raw HTML omitted -->+&lt;!-- raw HTML omitted -->Delete&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted --> to end the session.&lt;/p>
 &lt;p>Most &lt;!-- raw HTML omitted -->salamanders&lt;!-- raw HTML omitted --> are nocturnal, and hunt for insects, worms, and other small creatures.&lt;/p>
-&lt;section class="footnotes" role="doc-endnotes">
+&lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
-&lt;li id="fn:1" role="doc-endnote">
+&lt;li id="fn:1">
 &lt;p>The above quote is excerpted from Rob Pike&amp;rsquo;s &lt;a class="link" href="https://www.youtube.com/watch?v=PAAkCSZUG1c" target="_blank" rel="noopener"
 >talk&lt;/a> during Gopherfest, November 18, 2015.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/section></description></item><item><title>Rich Content</title><link>https://youkoucoding.github.io/p/rich-content/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><guid>https://youkoucoding.github.io/p/rich-content/</guid><description>&lt;p>Hugo ships with several &lt;a class="link" href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes" target="_blank" rel="noopener"
+&lt;/div></description></item><item><title>Rich Content</title><link>https://youkoucoding.github.io/p/rich-content/</link><pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate><guid>https://youkoucoding.github.io/p/rich-content/</guid><description>&lt;p>Hugo ships with several &lt;a class="link" href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes" target="_blank" rel="noopener"
 >Built-in Shortcodes&lt;/a> for rich content, along with a &lt;a class="link" href="https://gohugo.io/about/hugo-and-gdpr/" target="_blank" rel="noopener"
 >Privacy Config&lt;/a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p>
 &lt;h2 id="heading">&lt;/h2>
