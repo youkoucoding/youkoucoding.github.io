@@ -57,23 +57,25 @@ categories:
 
 - **Assertion functions inside classes**
 
+- Here, we assert that the user is logged in and get proper inference on the user's logged in user id
+
 ```ts
-import {createPost} from "./createPost";
+import { createPost } from './createPost';
 
 export class SDK {
-  constructor(Public loggedInUserId?: string){}
+  constructor(public loggedInUserId?: string) {}
 
-  createPost(title: string){
+  createPost(title: string) {
     this.assertUserIsLoggedIn();
 
     createPost(this.loggedInUserId, title);
   }
 
-  assertUserIsLoggedIn(): asserts this is & {
+  assertUserIsLoggedIn(): asserts this is this & {
     loggedInUserId: string;
-  }{
-    if(!this.loggedInUserId){
-        throw new Error("user is not logged in")
+  } {
+    if (!this.loggedInUserId) {
+      throw new Error('user is not logged in');
     }
   }
 }
