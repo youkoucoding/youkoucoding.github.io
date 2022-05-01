@@ -1,4 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 30 Apr 2022 20:39:00 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 220</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-220/</link><pubDate>Sat, 30 Apr 2022 20:39:00 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-220/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 01 May 2022 22:26:24 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 221</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-221/</link><pubDate>Sun, 01 May 2022 22:26:24 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-221/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="wbr-和-br-标签的区别">wbr 和 br 标签的区别&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>wbr&lt;/code> (word break opportunity)规定在文本的何处进行添加换行符, wbr 是用来实现连续英文和数字的精准换行的，具体效果是如果宽度足够就不换行，如果宽度不足则在 wbr 元素在的位置进行换行。
+&lt;ul>
+&lt;li>它创建了一个带有换行特性的宽度为 0px 的空格。这个空格的 Unicode 编码是 U+200B，因此这个标签也可以替换为 &lt;code>&amp;amp;#x200b&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>br&lt;/code>是整行换行, 表示必须换行&lt;/li>
+&lt;/ul>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="css-实现左右拉伸拖动">css 实现左右拉伸拖动&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">class&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">resize&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">horizontal&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="git">GIT&lt;/h3>
+&lt;h4 id="场景一添加到一个新的修改到最新的-commit-中">场景一：添加到一个新的修改，到最新的 commit 中&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 添加这个对应的小的修改&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git add .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 提交并且使用两个特殊的参数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># --amend 修改最新的一次 commit，将现在 staged change 直接添加到上一次 commit 去，不生成新的 commit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># --no-edit amend 的提交不修改提交信息&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit --amend --no-edit
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 修改上一次commit的message&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit --amend
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="场景二git-时光机-reflog--reset">场景二：Git 时光机： &lt;code>reflog + reset&lt;/code>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 显示你的 git 操作记录&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># git log 有很大区别，它不仅仅是提交的记录，还有其他git的操作记录&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git reflog
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 会看到一系列的操作记录&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 7b6e4f8 HEAD@{0}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># e7d2c90 HEAD@{1} ...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git reset HEAD@&lt;span class="o">{&lt;/span>index&lt;span class="o">}&lt;/span> &lt;span class="c1"># 这个时候你就会回到对应的状态&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>git reset --hard&lt;/code> 工作区和暂存区以及本地仓库全受影响&lt;/li>
+&lt;li>&lt;code>git reset&lt;/code> 默认，重置本地仓库的同时，还会修改暂存区的内容（工作区修改还在）&lt;/li>
+&lt;li>&lt;code>git reset --sort&lt;/code> 只修改 Head 指针，即&lt;strong>只重置本地仓库&lt;/strong>的记录 (工作区和暂存区的修改都在)&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h4 id="场景三git-后悔药-git-rebase--i-commit-hash-or">场景三：Git 后悔药： &lt;code>git rebase -i &amp;lt;commit-hash&amp;gt;&lt;/code> or:&lt;/h4>
+&lt;ul>
+&lt;li>将某一个 commit 中的文件，修改为：这个 commit 的前一个 commit 中的状态：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git log
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># f9f6f3b commit 3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 2feb45f commit 2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 07a3cb6 commit 1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># commit2 出问题了，我们要恢复某个文件在 commit 1中的内容，先看看它修改了什么&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git show 2feb45f
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">test.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-hello there updated
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">+hello there deleted
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 可以发现它将 test.txt 从 updated 换成了 deleted，我们希望恢复，使用一条命令&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git checkout 07a3cb6&lt;span class="o">[&lt;/span>之前提交的hash，也就是 commit1 的hash&lt;span class="o">]&lt;/span> -- test.txt&lt;span class="o">[&lt;/span>文件的路径&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 这个时候你就会发现 test.txt 恢复到了 hello there updated&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 🎉 一条命令搞定&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>git revert&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># f9f6f3b commit 3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 2feb45f commit 2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 07a3cb6 commit 1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># commit2 出问题了，我们要一次性删除掉对应的提交,找到上面第二条对应的 hash 值&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git revert 2feb45f&lt;span class="o">[&lt;/span>第二条对应的 hash&lt;span class="o">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 这个时候它会创建一个新的 commit，并且弹出提交的对话框，修改保存就可以了。&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/resize" target="_blank" rel="noopener"
+>resize - CSS（层叠样式表） | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://ohshitgit.com/" target="_blank" rel="noopener"
+>Oh Shit, Git!?!&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>毎日のフロントエンド 220</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-220/</link><pubDate>Sat, 30 Apr 2022 20:39:00 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-220/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
 &lt;h3 id="css表达式-attr">&lt;code>CSS&lt;/code>表达式 &lt;code>attr()&lt;/code>&lt;/h3>
 &lt;ul>
 &lt;li>
