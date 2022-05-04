@@ -167,8 +167,6 @@ import * as React from 'react';
 
 ## Reference
 
-- [haizlin/fe-interview](https://github.com/haizlin/fe-interview/blob/master/category/history.md)
-
 - [Use a source map — Firefox Source Docs documentation](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
 
 - [TypeScript: TSConfig Reference - Docs on every TSConfig option](https://www.typescriptlang.org/tsconfig)
