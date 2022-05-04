@@ -1,4 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 03 May 2022 14:30:23 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 223</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-223/</link><pubDate>Tue, 03 May 2022 14:30:23 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-223/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 04 May 2022 23:14:56 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 224</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-224/</link><pubDate>Wed, 04 May 2022 23:14:56 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-224/</guid><description>&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="typeof-nan">&lt;code>typeof NaN&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>typeof NaN&lt;/code> 结果是 &amp;rsquo;number'&lt;/li>
+&lt;li>&lt;code>==&lt;/code> 和 &lt;code>===&lt;/code> 不能被用来判断一个值是否是 NaN。必须使用 &lt;code>Number.isNaN()&lt;/code> 或 &lt;code>isNaN()&lt;/code> 函数。在执行自比较之中：NaN，也只有 NaN，比较之中不等于它自己&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="kc">NaN&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">NaN&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// false
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nb">Number&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="kc">NaN&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="kc">NaN&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// false
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nb">isNaN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">NaN&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nb">isNaN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Number&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="kc">NaN&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">valueIsNaN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">v&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">v&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="nx">v&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">valueIsNaN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// false
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">valueIsNaN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">NaN&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="nx">valueIsNaN&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">Number&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="kc">NaN&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// true
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="函数式编程-tips">函数式编程 Tips&lt;/h3>
+&lt;blockquote>
+&lt;p>在函数式编程中，函数就是一个管道（pipe） 输入一个值，就会输出来一个新的值，没有其他作用&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="函数的合成与柯里化">函数的合成与柯里化&lt;/h4>
+&lt;h5 id="compose">COMPOSE&lt;/h5>
+&lt;ul>
+&lt;li>如果一个值要经过多个函数，才能变成另外一个值，就可以把所有中间步骤合并成一个函数，这叫做&amp;quot;函数的合成&amp;quot;（compose）&lt;/li>
+&lt;li>函数的合成还必须满足结合律&lt;/li>
+&lt;li>函数就像数据的管道（pipe）。那么，函数合成就是将这些管道连了起来，让数据从多个管道中穿过&lt;/li>
+&lt;/ul>
+&lt;h5 id="curry">CURRY&lt;/h5>
+&lt;ul>
+&lt;li>所谓&amp;quot;柯里化&amp;quot;，就是把一个多参数的函数，转化为单参数函数&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://www.ruanyifeng.com/blog/2017/03/ramda.html" target="_blank" rel="noopener"
+>Ramda 函数库参考教程&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://www.ruanyifeng.com/blog/2017/02/fp-tutorial.html" target="_blank" rel="noopener"
+>函数式编程入门教程&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/" target="_blank" rel="noopener"
+>函数式编程指北&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>毎日のフロントエンド 223</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-223/</link><pubDate>Tue, 03 May 2022 14:30:23 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-223/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
 &lt;h3 id="tsconfigjson-配置">&lt;code>tsconfig.json&lt;/code> 配置&lt;/h3>
 &lt;blockquote>
 &lt;p>The presence of a &lt;code>tsconfig.json&lt;/code> file in a directory indicates that the directory is the root of a TypeScript project. The tsconfig.json file specifies the root files and the compiler options required to compile the project.&lt;/p>
@@ -172,10 +223,6 @@
 &lt;/ul>
 &lt;h2 id="reference">Reference&lt;/h2>
 &lt;ul>
-&lt;li>
-&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
->haizlin/fe-interview&lt;/a>&lt;/p>
-&lt;/li>
 &lt;li>
 &lt;p>&lt;a class="link" href="https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html" target="_blank" rel="noopener"
 >Use a source map — Firefox Source Docs documentation&lt;/a>&lt;/p>
