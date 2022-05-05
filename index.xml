@@ -1,4 +1,96 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 04 May 2022 23:14:56 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 224</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-224/</link><pubDate>Wed, 04 May 2022 23:14:56 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-224/</guid><description>&lt;h2 id="javascript">JavaScript&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 May 2022 22:07:05 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 225</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/</link><pubDate>Thu, 05 May 2022 22:07:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="offsetwidthclientwidthscrollwidth-三者的区别">&lt;code>offsetWidth&lt;/code>、&lt;code>clientWidth&lt;/code>、&lt;code>scrollWidth&lt;/code> 三者的区别&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>offsetWidth&lt;/code>: 对象整体的实际宽度，包滚动条等边线，会随对象显示大小的变化而改变&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>offsetWidth = contentWidth + padding * 2 + border * 2 + scrollbar&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 166;
+flex-basis: 399px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/offsetWidth.png" data-size="411x247">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/offsetWidth.png"
+width="411"
+height="247"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/offsetWidth_huc1a42fff79dd709630be6d26574e3c2b_10664_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/offsetWidth_huc1a42fff79dd709630be6d26574e3c2b_10664_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="offsetWidth">
+&lt;/a>
+&lt;figcaption>offsetWidth&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>clientWidth&lt;/code>: 对象内容的可视区的宽度，不包滚动条等边线，会随对象显示大小的变化而改变&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>clientWidth = contentWidth + padding * 2&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 166;
+flex-basis: 399px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/clientWidth.png" data-size="411x247">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/clientWidth.png"
+width="411"
+height="247"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/clientWidth_hu3d221edfeb838bc3b952f30eda1ef530_31960_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/clientWidth_hu3d221edfeb838bc3b952f30eda1ef530_31960_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="clientWidth">
+&lt;/a>
+&lt;figcaption>clientWidth&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>scrollWidth&lt;/code>：对象的实际内容的宽度，不包边线宽度，会随对象中内容超过可视区后而变大&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>scrollWidth = contentWidth + padding * 2&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 159;
+flex-basis: 382px"
+>
+&lt;a href="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/scrollWidth.png" data-size="2366x1484">
+&lt;img src="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/scrollWidth.png"
+width="2366"
+height="1484"
+srcset="https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/scrollWidth_hu88138d924d2be6b7ee102ec402f86541_340167_480x0_resize_box_3.png 480w, https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/scrollWidth_hu88138d924d2be6b7ee102ec402f86541_340167_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="scrollWidth">
+&lt;/a>
+&lt;figcaption>scrollWidth&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/offsetWidth" target="_blank" rel="noopener"
+>HTMLElement.offsetWidth - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/clientWidth" target="_blank" rel="noopener"
+>Element.clientWidth - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/element/scrollWidth" target="_blank" rel="noopener"
+>Element.scrollWidth - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>毎日のフロントエンド 224</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-224/</link><pubDate>Wed, 04 May 2022 23:14:56 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-224/</guid><description>&lt;h2 id="javascript">JavaScript&lt;/h2>
 &lt;h3 id="typeof-nan">&lt;code>typeof NaN&lt;/code>&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>typeof NaN&lt;/code> 结果是 &amp;rsquo;number'&lt;/li>
