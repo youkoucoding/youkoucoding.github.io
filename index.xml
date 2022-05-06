@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 05 May 2022 22:07:05 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 225</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/</link><pubDate>Thu, 05 May 2022 22:07:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 06 May 2022 22:16:05 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 226(227)(228)(229)(230)</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-226227228229230/</link><pubDate>Fri, 06 May 2022 22:16:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-226227228229230/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+&lt;h3 id="html-规范---tips">html 规范 - Tips&lt;/h3>
+&lt;ol>
+&lt;li>标签名和属性推荐用小写&lt;/li>
+&lt;li>标签都需闭合，不管是单标签还是双标签&lt;/li>
+&lt;li>双标签不宜使用单标签闭合方式&lt;/li>
+&lt;li>属性值需双引号&lt;/li>
+&lt;li>img 标签需加上 alt&lt;/li>
+&lt;li>img 标签推荐加上固定宽高&lt;/li>
+&lt;li>html 和 body 标签最好不好&lt;/li>
+&lt;li>部分字符推荐转义，比如 &amp;lt;&lt;/li>
+&lt;li>link 写在 head 内，script 写在 body 内 末尾&lt;/li>
+&lt;li>不推荐使用已废弃的标签和属性名，比如 marquee center 等&lt;/li>
+&lt;li>推荐使用语义化标签&lt;/li>
+&lt;li>&lt;code>meta&lt;/code>里设置有意义的&lt;code>title&lt;/code>，&lt;code>keyword&lt;/code>，&lt;code>description&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="css-规范---tips">css 规范 - Tips&lt;/h3>
+&lt;ol>
+&lt;li>命名规范（连字符-分隔的字符串）&lt;/li>
+&lt;li>文件宽度限制（每行 80 个字符）&lt;/li>
+&lt;li>加注释&lt;/li>
+&lt;li>编写选择器应有助于重用&lt;/li>
+&lt;li>尽量不要加 &lt;code>!important&lt;/code>&lt;/li>
+&lt;li>避免使用 CSS 表达式&lt;/li>
+&lt;li>选择&lt;code>&amp;lt;link&amp;gt;&lt;/code> 舍弃 &lt;code>@import&lt;/code>&lt;/li>
+&lt;li>避免使用滤镜（IE 专有的 AlphaImageLoader 滤镜）&lt;/li>
+&lt;li>把样式表放在顶部 &lt;code>/&lt;/code> 把 CSS 放在外部文件&lt;/li>
+&lt;li>压缩 CSS&lt;/li>
+&lt;/ol>
+&lt;h3 id="不建议使用import">不建议使用&lt;code>@import&lt;/code>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>@import&lt;/code> 属于 CSS，所以导入语句应写在 CSS 中，要注意的是导入语句应写在样式表的开头，否则无法正确导入外部文件；&lt;/li>
+&lt;li>&lt;code>@import&lt;/code> 是 CSS2.1 才出现的概念，所以如果浏览器版本较低，无法正确导入外部样式文件；&lt;/li>
+&lt;li>当 HTML 文件被加载时，&lt;code>&amp;lt;link&amp;gt;&lt;/code> 引用的文件会同时被加载，而 &lt;code>@import&lt;/code> 引用的文件则会等页面全部下载完毕再被加载；&lt;/li>
+&lt;/ul>
+&lt;h2 id="javascript">JavaScript&lt;/h2>
+&lt;h3 id="js-规范---tips">JS 规范 - Tips&lt;/h3>
+&lt;ol>
+&lt;li>尽量使用 const 去定义常量，且采用大写加&lt;code>_&lt;/code>，如 &lt;code>MAX_COUNT = 100&lt;/code>&lt;/li>
+&lt;li>尽量写代码注释；&lt;/li>
+&lt;li>try catch 不确定的代码块；&lt;/li>
+&lt;li>Promise 的 reject 处理；&lt;/li>
+&lt;li>及时清理不用的变量、定时器；&lt;/li>
+&lt;li>switch 语句应使用 break 中断，而不是 return；&lt;/li>
+&lt;li>命名语义化；&lt;/li>
+&lt;li>尽量减少对闭包的使用&lt;/li>
+&lt;li>尽可能使用 if 判断做容错处理；&lt;/li>
+&lt;li>尽量避免使用内置方法或属性名字去定义，如 &lt;code>var self = this;&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>毎日のフロントエンド 225</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/</link><pubDate>Thu, 05 May 2022 22:07:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-225/</guid><description>&lt;h2 id="tips">Tips&lt;/h2>
 &lt;h3 id="offsetwidthclientwidthscrollwidth-三者的区别">&lt;code>offsetWidth&lt;/code>、&lt;code>clientWidth&lt;/code>、&lt;code>scrollWidth&lt;/code> 三者的区别&lt;/h3>
 &lt;ul>
 &lt;li>
