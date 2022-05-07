@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 06 May 2022 22:16:05 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 226(227)(228)(229)(230)</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-226227228229230/</link><pubDate>Fri, 06 May 2022 22:16:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-226227228229230/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技術の手帳</title><link>https://youkoucoding.github.io/</link><description>Recent content on 技術の手帳</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 07 May 2022 20:40:49 +0900</lastBuildDate><atom:link href="https://youkoucoding.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>毎日のフロントエンド 231</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-231/</link><pubDate>Sat, 07 May 2022 20:40:49 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-231/</guid><description>&lt;h2 id="css">CSS&lt;/h2>
+&lt;h3 id="padding和margin是相对于父元素还是子元素">&lt;code>padding&lt;/code>和&lt;code>margin&lt;/code>是相对于父元素还是子元素&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>padding&lt;/code>和&lt;code>margin&lt;/code>被设置为&lt;strong>百分比&lt;/strong>的时候，这个百分比是相对于它们的&lt;strong>包含块元素&lt;/strong>的宽度&lt;/li>
+&lt;/ul>
+&lt;h4 id="包含块">包含块&lt;/h4>
+&lt;blockquote>
+&lt;p>大多数情况下，包含块就是这个元素最近的祖先块元素的内容区，但也不是总是这样&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>包含块有分为&lt;em>根元素包含块&lt;/em>和&lt;em>其他元素&lt;/em>的包含块&lt;/li>
+&lt;/ul>
+&lt;h5 id="根元素包含块">根元素包含块&lt;/h5>
+&lt;ul>
+&lt;li>根元素 html 的包含块是一个矩形,叫做初始化包含块(initial containing block)&lt;/li>
+&lt;li>&lt;code>html&lt;/code>外面还有空间，这个包含 html 的块就被称为初始包含块(initial containing block)，它是作为元素&lt;em>绝对定位&lt;/em>和&lt;em>固定定位&lt;/em>的参照物&lt;/li>
+&lt;li>对于连续媒体设备（continuous media），初始包含块的大小等于视口 viewport 的大小，基点在画布的原点（视口左上角）&lt;/li>
+&lt;li>对于分页媒体（paged media），初始包含块是页面区域（page area）, 初始包含块的 direction 属性与根元素的相同&lt;/li>
+&lt;/ul>
+&lt;h5 id="其他元素的包含块">其他元素的包含块&lt;/h5>
+&lt;ul>
+&lt;li>大多数情况下，包含块就是这个元素&lt;em>最近的祖先块元素的内容区&lt;/em>&lt;/li>
+&lt;li>确定包含块的过程完全依赖于这个包含块的 &lt;code>position&lt;/code> 属性，大致分为下列场景：
+&lt;ol>
+&lt;li>如果 position 属性是 static 或 relative 的话，包含块就是由它的最近的祖先块元素（比如说 inline-block, block 或 list-item 元素）或格式化上下文 BFC(比如说 a table container, flex container, grid container, or the block container itself)的&lt;em>内容区的边缘&lt;/em>组成的&lt;/li>
+&lt;li>如果 position 属性是 absolute 的话，包含块就是由它的最近的 position 的值&lt;em>不是&lt;/em> static （fixed, absolute, relative, or sticky）的祖先元素的内边距区的边缘组成的&lt;/li>
+&lt;li>如果 position 属性是 fixed 的话，包含块就是由 viewport (in the case of continuous media) or the page area (in the case of paged media) 组成的&lt;/li>
+&lt;li>如果 position 属性是 absolute 或 fixed，包含块也可能是由满足以下条件的最近父级元素的内边距区的边缘组成的：
+&lt;ul>
+&lt;li>transform or perspective value other than none&lt;/li>
+&lt;li>will-change value of transform or perspective&lt;/li>
+&lt;li>filter value other than none or a will-change value of filter (only works on Firefox).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="元素包含块的作用">元素包含块的作用&lt;/h5>
+&lt;blockquote>
+&lt;p>元素的尺寸和位置经常受其包含块的影响。对于一个绝对定位的元素来说（他的 position 属性被设定为 absolute 或 fixed），如果它的 width, height, padding, margin, 和 offset 这些属性的值是一个比例值（如百分比等）的话，那这些值的计算值就是由它的包含块计算而来的。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>如果某些属性被赋予一个百分值的话，它的计算值是由这个元素的包含块计算而来的。这些属性包括盒模型属性和偏移属性：
+&lt;ol>
+&lt;li>&lt;code>height&lt;/code>, &lt;code>top&lt;/code>, &lt;code>bottom&lt;/code> 这些属性由包含块的 &lt;code>height&lt;/code> 属性的值来计算它的百分值。如果包含块的 &lt;code>height&lt;/code> 值依赖于它的内容，且包含块的 &lt;code>position&lt;/code> 属性的值被赋予 &lt;code>relative&lt;/code> 或 &lt;code>static&lt;/code> 的话，这些值的计算值为 0&lt;/li>
+&lt;li>&lt;code>width&lt;/code>, &lt;code>left&lt;/code>, &lt;code>right&lt;/code>, &lt;code>padding&lt;/code>, &lt;code>margin&lt;/code>, &lt;code>text-indent&lt;/code>(2018-05-27 修改)这些属性由包含块的 &lt;code>width&lt;/code> 属性的值来计算它的百分值&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="tips">Tips&lt;/h2>
+&lt;h3 id="获取-div-到浏览器窗口的高度">获取 div 到浏览器窗口的高度&lt;/h3>
+&lt;ul>
+&lt;li>&lt;code>domYoffset = element.getBoundingClientRect().y;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/haizlin/fe-interview/blob/master/category/history.md" target="_blank" rel="noopener"
+>haizlin/fe-interview&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://segmentfault.com/a/1190000015653589" target="_blank" rel="noopener"
+>CSS 包含块&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect" target="_blank" rel="noopener"
+>Element.getBoundingClientRect() - Web API 接口参考 | MDN&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>毎日のフロントエンド 226(227)(228)(229)(230)</title><link>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-226227228229230/</link><pubDate>Fri, 06 May 2022 22:16:05 +0900</pubDate><guid>https://youkoucoding.github.io/p/%E6%AF%8E%E6%97%A5%E3%81%AE%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89-226227228229230/</guid><description>&lt;h2 id="html">HTML&lt;/h2>
 &lt;h3 id="html-规范---tips">html 规范 - Tips&lt;/h3>
 &lt;ol>
 &lt;li>标签名和属性推荐用小写&lt;/li>
