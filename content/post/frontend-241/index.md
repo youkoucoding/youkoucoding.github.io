@@ -262,6 +262,118 @@ function handleErrors(response) {
   - message：有关错误详细信息的消息。
   - stack：是用于调试目的的错误的堆栈跟踪。
 
+```js
+const err = new Error('Error while executing the code');
+
+console.log('name:', err.name);
+console.log('message:', err.message);
+console.log('stack:', err.stack);
+
+// name: Error
+// message: Error while executing the code
+// stack: Error: Error while executing the code
+//     at <anonymous>:1:13
+```
+
+##### `EvalError`
+
+- `EvalError` 表示关于全局`eval()`函数的错误，这个异常不再由 JS 抛出，它的存在是为了向后兼容
+
+##### `RangeError`
+
+- 当值超出范围时，将引发`RangeError`
+
+```js
+[].length = -1;
+// ⓧ Uncaught RangeError: Invalid array length
+```
+
+##### `ReferenceError`
+
+- 当引用一个不存在的变量时，将引发 `ReferenceError`
+
+##### `SyntaxError`
+
+- 在 JS 代码中使用任何错误的语法时，都会引发 SyntaxError
+
+##### `TypeError`
+
+- 如果该值不是预期的类型，则抛出 TypeError
+
+```js
+1();
+// ⓧ Uncaught TypeError: 1 is not a function
+
+null.name;
+//ⓧ Uncaught TypeError: Cannot read property 'name' of null
+```
+
+##### `URIError`
+
+- 如果以错误的方式使用全局 URI 方法，则会抛出 URIError
+
+```js
+decodeURI('%%%');
+// ⓧ Uncaught URIError: URI malformed
+```
+
+#### 定义并抛出自定义错误
+
+```js
+class CustomError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'CustomError';
+  }
+}
+
+const err = new CustomError('Custom error while executing the code');
+
+console.log('name:', err.name);
+console.log('message:', err.message);
+
+// name: CustomError
+// message: Custom error while executing the code
+```
+
+- 还可以进一步增强 CustomError 对象以包含错误代码
+
+```js
+class CustomError extends Error {
+  constructor(message, code) {
+    super(message);
+    this.name = 'CustomError';
+    this.code = code;
+  }
+}
+
+const err = new CustomError('Custom error while executing the code', 'ERROR_CODE');
+
+console.log('name:', err.name);
+console.log('message:', err.message);
+console.log('code:', err.code);
+
+// name: CustomError
+// message: Custom error while executing the code
+// code: ERROR_CODE
+```
+
+- 在 try..catch 块中使用它：
+
+```js
+try {
+  try {
+    null.name;
+  } catch (err) {
+    throw new CustomError(err.message, err.name); //message, code
+  }
+} catch (err) {
+  console.log(err.name, err.code, err.message);
+}
+
+// CustomError TypeError Cannot read property 'name' of null
+```
+
 ## Reference
 
 - [haizlin/fe-interview](https://github.com/haizlin/fe-interview/blob/master/category/history.md)
@@ -271,3 +383,7 @@ function handleErrors(response) {
 - [haizlin/fe-interview](https://github.com/haizlin/fe-interview/blob/master/category/history.md)
 
 - [CSS values and units - CSS（层叠样式表） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
+
+- [try...catch - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)
+
+- [try..catch 不能捕获的错误有哪些？注意事项又有哪些？](https://segmentfault.com/a/1190000038245614)
