@@ -7,8 +7,6 @@ categories:
   - JavaScript
 ---
 
-## HTML
-
 ## CSS
 
 ### `* + *{ ... }`
