@@ -196,6 +196,6 @@ query {
 - [fe-interview/history.md](https://github.com/haizlin/fe-interview/blob/master/category/history.md)
 - [`<input>` | MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input)
 - [background-blend-mode - CSS（层叠样式表） | MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-blend-mode)
-- [When to Use What: REST, GraphQL, Webhooks, & gRPC | Nordic APIs |](https://nordicapis.com/when-to-use-what-rest-graphql-webhooks-grpc/)
+- [When to Use What: REST, GraphQL, Webhooks, & gRPC | Nordic APIs](https://nordicapis.com/when-to-use-what-rest-graphql-webhooks-grpc/)
 - [GitHub GraphQL API - GitHub Docs](https://docs.github.com/cn/graphql)
 - [apollographql/apollo-client:  A fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server.](https://github.com/apollographql/apollo-client)
